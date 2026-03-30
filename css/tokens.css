@@ -1,0 +1,72 @@
+/* BazaarSetu Design System — The Digital Courtyard */
+/* Design tokens as CSS custom properties */
+
+:root {
+  /* Primary (Saffron) */
+  --primary: #8f4e00;
+  --on-primary: #ffffff;
+  --primary-container: #ff9933;
+  --on-primary-container: #693800;
+  --primary-fixed: #ffdcc2;
+  --on-primary-fixed: #2e1500;
+  --on-primary-fixed-variant: #6d3a00;
+  --primary-fixed-dim: #ffb77a;
+  --inverse-primary: #ffb77a;
+
+  /* Secondary (Green) */
+  --secondary: #056e00;
+  --on-secondary: #ffffff;
+  --secondary-container: #8dfc75;
+  --on-secondary-container: #067500;
+  --secondary-fixed: #8dfc75;
+  --on-secondary-fixed: #012200;
+  --on-secondary-fixed-variant: #035300;
+  --secondary-fixed-dim: #72de5c;
+
+  /* Tertiary (Blue) */
+  --tertiary: #006685;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #00c0f7;
+  --on-tertiary-container: #004a62;
+  --tertiary-fixed: #bfe9ff;
+  --on-tertiary-fixed: #001f2a;
+  --on-tertiary-fixed-variant: #004d65;
+  --tertiary-fixed-dim: #6cd2ff;
+
+  /* Error */
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+
+  /* Surface */
+  --surface: #f9f9f9;
+  --on-surface: #1a1c1c;
+  --on-surface-variant: #554336;
+  --surface-variant: #e2e2e2;
+  --surface-dim: #dadada;
+  --surface-bright: #f9f9f9;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f3f3f3;
+  --surface-container: #eeeeee;
+  --surface-container-high: #e8e8e8;
+  --surface-container-highest: #e2e2e2;
+  --surface-tint: #8f4e00;
+
+  /* Inverse */
+  --inverse-surface: #2f3131;
+  --inverse-on-surface: #f1f1f1;
+
+  /* Background */
+  --background: #f9f9f9;
+  --on-background: #1a1c1c;
+
+  /* Outline */
+  --outline: #887364;
+  --outline-variant: #dbc2b0;
+
+  /* Typography */
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Inter', sans-serif;
+}

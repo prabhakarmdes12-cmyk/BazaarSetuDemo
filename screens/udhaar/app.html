@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>BazaarSetu - Udhaar Khata</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="../../js/config.js"></script>
+  <link rel="stylesheet" href="../../css/styles.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body">
+
+  <!-- SCREEN: ledger -->
+  <div class="screen" id="ledger">
+    <!-- Top App Bar (Shared Component) -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_32px_0_rgba(85,67,54,0.08)]">
+      <div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+        <div class="flex items-center gap-4">
+          <a href="#home" class="active:scale-95 transition-transform duration-200 text-orange-700">
+            <span class="material-symbols-outlined">arrow_back</span>
+          </a>
+          <div class="flex flex-col">
+            <h1 class="font-plus-jakarta text-lg font-bold tracking-tight text-orange-900">Udhaar Khata</h1>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <button class="active:scale-95 transition-transform duration-200 text-orange-700">
+            <span class="material-symbols-outlined">history</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="pt-24 px-6 max-w-7xl mx-auto space-y-10 pb-32">
+      <!-- Welcome Header (Asymmetric Layout) -->
+      <section class="flex justify-between items-end">
+        <div class="max-w-[70%]">
+          <h2 class="text-3xl font-extrabold tracking-tight text-on-surface mb-1">Namaste Arjun</h2>
+          <p class="text-on-surface-variant font-medium italic">Apni local dukaan, ab online</p>
+        </div>
+        <div class="flex flex-col items-end">
+          <span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Digital Khata</span>
+          <div class="w-12 h-1 w-full bg-primary-container rounded-full"></div>
+        </div>
+      </section>
+      <!-- Summary Card (The Digital Courtyard Core) -->
+      <section class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-primary-container p-8 text-on-primary shadow-2xl">
+        <!-- Decorative Grain/Texture -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay">
+          <img class="w-full h-full object-cover" data-alt="abstract subtle grain texture for background depth and premium material feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDscosVriwrWFOtGfIz_qtLHex6yAwZqExCxgW4RhE6dy3J4m91X267DV2ADV-2YiPnUgjXAHolFO7inbBvxI75m2E4I3rp0llXWQS80EaYbhG_WLqA7w9RogEKFoiTJdOcNJdNOsRLPDk8kejCGpHaVRgle6tUQ7CdXet1BGV0JFPMRlIgaJvTZGHGp5ZAKyu2DnFg1DyOkqY5mMJAOMtsvmTidbBhlSba4JFFnONJhhyEiFaTO3wNyKusqRhZrYP4bnaPmitWVZY"/>
+        </div>
+        <div class="relative z-10 grid grid-cols-2 gap-8">
+          <div class="space-y-1">
+            <p class="text-sm font-medium opacity-90">Bacha hua Udhaar</p>
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold tracking-tighter">&#8377;1,240</span>
+              <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            </div>
+          </div>
+          <div class="space-y-1 text-right">
+            <p class="text-sm font-medium opacity-90">Chukaya hua</p>
+            <div class="flex items-baseline justify-end gap-1">
+              <span class="text-2xl font-bold tracking-tight">&#8377;3,500</span>
+            </div>
+          </div>
+          <div class="col-span-2 pt-4 border-t border-white/20 flex justify-between items-center">
+            <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1 text-xs">
+              <span class="material-symbols-outlined text-xs">schedule</span>
+              <span>Last update: 2 hours ago</span>
+            </div>
+            <a href="#make-payment" class="bg-white text-primary font-bold px-4 py-2 rounded-xl text-sm active:scale-95 transition-all inline-block">Settlement Karo</a>
+          </div>
+        </div>
+      </section>
+      <!-- Ledger List Section -->
+      <section class="space-y-6">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-bold tracking-tight text-on-surface">Udhaar ki list</h3>
+          <button class="text-primary text-sm font-bold flex items-center gap-1">
+            Filter <span class="material-symbols-outlined text-sm">tune</span>
+          </button>
+        </div>
+        <!-- Shop Cards (Bento-lite Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Card 1: Pending (Warm) -->
+          <div class="group bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-primary-container">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex gap-4">
+                <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-inner bg-surface-container">
+                  <img class="w-full h-full object-cover" data-alt="vibrant local vegetable market stall with fresh green produce and warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvXdcmHxGSkrLUamJR9_s2dfwlQ2A4jl_WviqQ2Hq_gYmtT2KKOShzP9IxUMXw6bs_eQjdjSDrz-qbaHyIZOftGxueQm-TKtunxxFKnnD6I6rcERZx6lL_htdSxeD4XNcW_89VD6Ue6k2XIJ9zZzI8dSmoJEdEGk_i-TrnHb51cmUaeD9FOWVtTzCn1lFhPjBMQeZhaUPLkU4Uug7A3lJWFXlhMhOnsC9ORr0R8uBZ7nhEB0Jl1QGxI5-_oMFNCOApDdCOcGXfJv8"/>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg text-on-surface leading-tight">Sharma Fresh Produce</h4>
+                  <div class="flex items-center gap-1 mt-1">
+                    <span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    <p class="text-[12px] font-medium text-on-surface-variant uppercase tracking-wider">Trusted Merchant</p>
+                  </div>
+                </div>
+              </div>
+              <span class="bg-orange-50 text-orange-700 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Pay soon</span>
+            </div>
+            <div class="flex items-center justify-between py-4 bg-surface-container-low rounded-xl px-4 mb-4">
+              <span class="text-sm font-medium text-on-surface-variant">Pending Balance</span>
+              <span class="text-xl font-extrabold text-orange-900 tracking-tight">&#8377;450</span>
+            </div>
+            <a href="#shop-ledger" class="w-full py-3 bg-surface-container-highest text-on-primary-container font-bold rounded-xl active:scale-[0.98] transition-all hover:bg-orange-100 block text-center">Details dekhein</a>
+          </div>
+          <!-- Card 2: Overdue (Urgent) -->
+          <div class="group bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-error">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex gap-4">
+                <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-inner bg-surface-container">
+                  <img class="w-full h-full object-cover" data-alt="interior of a small indian grocery store with stacked grains and spice packets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALIi-SkmSGBqeP0ZvRaG2KDah5fdyK8r6250vTPE1tGsZLOyFVrxYxrcKjxcpLF63GnfItiV2dSKGAZg6gElH_M40b_OPr9tUNlBXTkDBOZMAhS0Kd2JF4-JyOqZxMUmcZLHWzSSOA2o7YCQK9uvVo-rzJBtdU1QtaYyQj-l5u-1vTDQO3tXAnxXkAtCJLNmpI49uL118Cts7CnLTc5SG5ivGWtBTcy_tYB6jl2IvOscu9VdSnZUinJlCJirk41nelvMwQer_Du3g"/>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg text-on-surface leading-tight">Gupta Ji Kirana</h4>
+                  <div class="flex items-center gap-1 mt-1">
+                    <span class="material-symbols-outlined text-[14px] text-on-surface-variant">history_edu</span>
+                    <p class="text-[12px] font-medium text-on-surface-variant uppercase tracking-wider">Since 2018</p>
+                  </div>
+                </div>
+              </div>
+              <span class="bg-error-container text-on-error-container text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Overdue</span>
+            </div>
+            <div class="flex items-center justify-between py-4 bg-error-container/30 rounded-xl px-4 mb-4">
+              <span class="text-sm font-medium text-on-error-container">Pending Balance</span>
+              <span class="text-xl font-extrabold text-error tracking-tight">&#8377;790</span>
+            </div>
+            <a href="#shop-ledger" class="w-full py-3 bg-error text-white font-bold rounded-xl active:scale-[0.98] transition-all shadow-lg shadow-error/20 block text-center">Details dekhein</a>
+          </div>
+          <!-- Card 3: Clear (Success) -->
+          <div class="group bg-surface-container-lowest rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-secondary">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex gap-4">
+                <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-inner bg-surface-container">
+                  <img class="w-full h-full object-cover" data-alt="traditional indian sweets arranged neatly on a brass tray in a shop window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAopfcadk-VrRq07eRCzIrprVyHOAfJNrxhxODXao6zUsYEBOc-BwwNOn0xhsDT8edXw_iwWPEfjuzIt0WvOAarNu8206360RQW5utJjjIHwnqG047jpQiEki4WcnLftcOupChiW0E7Ow0p_uf_MC8nL0SNeUXMnViRXu5WdDaEh-yFIzYFl-olHBbr3e8RVqGoMmplh_IjK7FUdl3-uyYGlwQWspG1kMhfjC9bctskuqY6RDdDXgj0pXN5IPfguv1eADzDfRVwHMQ"/>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg text-on-surface leading-tight">Bikaner Sweets</h4>
+                  <div class="flex items-center gap-1 mt-1">
+                    <span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+                    <p class="text-[12px] font-medium text-on-surface-variant uppercase tracking-wider">Zero Balance</p>
+                  </div>
+                </div>
+              </div>
+              <span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Hisab clear</span>
+            </div>
+            <div class="flex items-center justify-between py-4 bg-secondary-container/20 rounded-xl px-4 mb-4">
+              <span class="text-sm font-medium text-on-secondary-container">Pending Balance</span>
+              <span class="text-xl font-extrabold text-secondary tracking-tight">&#8377;0</span>
+            </div>
+            <button class="w-full py-3 bg-surface-container-high text-on-surface font-bold rounded-xl active:scale-[0.98] transition-all">History dekhein</button>
+          </div>
+        </div>
+      </section>
+      <!-- Trust Badge Section (Asymmetric) -->
+      <section class="py-10">
+        <div class="bg-surface-container-low rounded-[2rem] p-8 flex flex-col md:flex-row items-center gap-8 border border-outline-variant/15">
+          <div class="flex-1 space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface">Safe &amp; Secure Ledger</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Your data is encrypted and backed up daily. No more losing paper diaries or confusing calculations with local shopkeepers.</p>
+            <div class="flex gap-4">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shield</span>
+                <span class="text-xs font-bold uppercase tracking-tight">Bank-Grade</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+                <span class="text-xs font-bold uppercase tracking-tight">Cloud Backup</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative w-full md:w-1/3 aspect-video rounded-2xl overflow-hidden shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500">
+            <img class="w-full h-full object-cover" data-alt="close-up of digital tablet screen showing accounting software with golden light reflecting on glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuxfGR3ACy0WdO6B4R7lf2oeyBim9DiA4TpAtLrDsUtak2PdpnBTG8y279jbYQN4SPaYXc2d8tR5ftuWdHpf2qvbCespFiXc8hy_iNVJ37TOzXLWBsCD9QBStYj5vjcilQkiUNlPFfBM7to0pmty7qGs2GTwGkbqak_vr_Z3GSuKSc01rQvJxtACPvB4wm4maQbKo1xMxMWifuNh6TmtS-JhYWXNzO9LyLLeuiajBm4nXngY9zP4gpxViiTQF3UhvfKlRu1fVbAU4"/>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Bottom Navigation Bar (Shared Component) -->
+    <nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_24px_rgba(0,0,0,0.05)] border-t border-stone-200/15">
+      <a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-1.5 active:scale-90 transition-all duration-200 hover:text-orange-600" href="#home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="font-inter text-[11px] font-medium tracking-wide">Home</span>
+      </a>
+      <a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-100 rounded-2xl px-5 py-1.5 active:scale-90 transition-all duration-200" href="#ledger">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+        <span class="font-inter text-[11px] font-medium tracking-wide">Udhaar</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-1.5 active:scale-90 transition-all duration-200 hover:text-orange-600" href="#order-history">
+        <span class="material-symbols-outlined">receipt_long</span>
+        <span class="font-inter text-[11px] font-medium tracking-wide">Orders</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-1.5 active:scale-90 transition-all duration-200 hover:text-orange-600" href="#profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="font-inter text-[11px] font-medium tracking-wide">Profile</span>
+      </a>
+    </nav>
+    <!-- Floating Action Button -->
+    <a href="#make-payment" class="fixed bottom-28 right-6 w-14 h-14 bg-gradient-to-tr from-primary to-primary-container text-on-primary rounded-2xl shadow-xl flex items-center justify-center active:scale-90 transition-all duration-200 z-40">
+      <span class="material-symbols-outlined text-3xl">add</span>
+    </a>
+  </div>
+
+  <!-- SCREEN: shop-ledger -->
+  <div class="screen" id="shop-ledger">
+    <!-- Top App Bar -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_32px_0_rgba(85,67,54,0.08)] flex items-center justify-between px-6 h-16 w-full">
+      <div class="flex items-center gap-4">
+        <a href="#ledger" class="text-orange-700 dark:text-orange-400 active:scale-95 transition-transform duration-200">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </a>
+        <div class="flex flex-col">
+          <h1 class="font-plus-jakarta text-lg font-bold tracking-tight text-orange-700 dark:text-orange-400">Sharma Fresh Produce</h1>
+          <p class="text-[10px] text-stone-500 font-medium uppercase tracking-widest italic">Detailed Ledger</p>
+        </div>
+      </div>
+      <button class="hover:bg-orange-50 dark:hover:bg-orange-900/20 p-2 rounded-full transition-colors">
+        <span class="material-symbols-outlined text-stone-500">more_vert</span>
+      </button>
+    </header>
+    <main class="pt-24 px-6 max-w-2xl mx-auto pb-32">
+      <!-- Hero Balance Card (Digital Courtyard Asymmetry) -->
+      <section class="relative mb-12">
+        <div class="absolute -right-4 -top-4 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl"></div>
+        <div class="relative bg-gradient-to-br from-primary to-primary-container p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(143,78,0,0.15)] overflow-hidden">
+          <!-- Decorative element -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-[100px]"></div>
+          <div class="flex flex-col gap-1 relative z-10">
+            <span class="text-white/80 font-headline font-semibold text-sm tracking-wide uppercase">Kul Baaki (Balance)</span>
+            <h2 class="text-white font-headline text-5xl font-extrabold tracking-tighter">&#8377;450</h2>
+            <div class="mt-4 flex items-center gap-2 bg-white/20 backdrop-blur-md self-start px-4 py-1.5 rounded-full border border-white/10">
+              <span class="material-symbols-outlined text-sm text-white">schedule</span>
+              <span class="text-white text-xs font-medium">Pending: Sharma ji ka Khata</span>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-end relative z-10">
+            <div>
+              <p class="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-1">Aakhri Payment</p>
+              <p class="text-white font-headline font-medium">&#8377;200 <span class="text-white/60 text-xs ml-1">&bull; 15 Oct</span></p>
+            </div>
+            <span class="material-symbols-outlined text-white/40 text-4xl">receipt_long</span>
+          </div>
+        </div>
+      </section>
+      <!-- Search & Filter Area (Tonal Layering) -->
+      <section class="mb-8 flex items-center gap-3">
+        <div class="flex-1 bg-surface-container-low rounded-2xl px-4 py-3 flex items-center gap-3 transition-all focus-within:ring-2 focus-within:ring-primary/20">
+          <span class="material-symbols-outlined text-on-surface-variant">search</span>
+          <input class="bg-transparent border-none focus:ring-0 p-0 text-sm font-medium w-full placeholder:text-stone-400" placeholder="Samaan ya date dhundhein..." type="text"/>
+        </div>
+        <button class="bg-surface-container-low p-3 rounded-2xl text-on-surface-variant hover:bg-surface-container-highest transition-colors">
+          <span class="material-symbols-outlined">filter_list</span>
+        </button>
+      </section>
+      <!-- Transaction Timeline -->
+      <section class="space-y-10">
+        <!-- Date Group 1 -->
+        <div class="relative">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="h-[2px] flex-1 bg-surface-container"></div>
+            <h3 class="font-headline text-[11px] font-bold text-stone-400 uppercase tracking-[0.2em]">18 October, 2023</h3>
+            <div class="h-[2px] flex-1 bg-surface-container"></div>
+          </div>
+          <!-- Entry 1 -->
+          <div class="group bg-surface-container-lowest p-5 rounded-3xl transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-transparent hover:border-outline-variant/10 flex items-center justify-between">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-600">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+              </div>
+              <div>
+                <p class="font-headline font-bold text-on-surface">Milk, Bread, Eggs</p>
+                <p class="text-xs text-stone-500 font-medium mt-0.5 italic">Udhaar (Purchase)</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="font-headline font-extrabold text-orange-700 text-lg">+&#8377;120</p>
+              <p class="text-[10px] font-bold text-stone-400 tracking-tighter">Balance: &#8377;450</p>
+            </div>
+          </div>
+        </div>
+        <!-- Date Group 2 -->
+        <div class="relative">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="h-[2px] flex-1 bg-surface-container"></div>
+            <h3 class="font-headline text-[11px] font-bold text-stone-400 uppercase tracking-[0.2em]">15 October, 2023</h3>
+            <div class="h-[2px] flex-1 bg-surface-container"></div>
+          </div>
+          <!-- Entry 2 -->
+          <div class="group bg-surface-container-lowest p-5 rounded-3xl transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-transparent hover:border-outline-variant/10 flex items-center justify-between">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+              </div>
+              <div>
+                <p class="font-headline font-bold text-on-surface">Cash Payment</p>
+                <p class="text-xs text-secondary font-medium mt-0.5 italic">Chukaya (Payment)</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="font-headline font-extrabold text-secondary text-lg">-&#8377;200</p>
+              <p class="text-[10px] font-bold text-stone-400 tracking-tighter">Balance: &#8377;330</p>
+            </div>
+          </div>
+        </div>
+        <!-- Date Group 3 -->
+        <div class="relative">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="h-[2px] flex-1 bg-surface-container"></div>
+            <h3 class="font-headline text-[11px] font-bold text-stone-400 uppercase tracking-[0.2em]">12 October, 2023</h3>
+            <div class="h-[2px] flex-1 bg-surface-container"></div>
+          </div>
+          <!-- Entry 3 -->
+          <div class="group bg-surface-container-lowest p-5 rounded-3xl transition-all hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-transparent hover:border-outline-variant/10 flex items-center justify-between">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-600">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+              </div>
+              <div>
+                <p class="font-headline font-bold text-on-surface">Grocery Items</p>
+                <p class="text-xs text-stone-500 font-medium mt-0.5 italic">Udhaar (Purchase)</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="font-headline font-extrabold text-orange-700 text-lg">+&#8377;330</p>
+              <p class="text-[10px] font-bold text-stone-400 tracking-tighter">Balance: &#8377;530</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Decorative Spacer -->
+      <div class="h-24"></div>
+    </main>
+    <!-- Bottom Action Bar (Digital Courtyard Shell) -->
+    <footer class="fixed bottom-0 left-0 w-full z-50 p-6">
+      <div class="max-w-2xl mx-auto bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-[2.5rem] shadow-[0_-8px_40px_rgba(0,0,0,0.08)] border border-stone-100/50 dark:border-stone-800/50 p-4">
+        <div class="flex items-center gap-3">
+          <button class="flex-1 bg-surface-container-highest text-on-surface-variant font-headline font-bold py-4 rounded-2xl active:scale-95 transition-all flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-lg">download</span>
+            Statement
+          </button>
+          <a href="#make-payment" class="flex-[2] bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold py-4 rounded-2xl shadow-[0_12px_24px_rgba(143,78,0,0.25)] active:scale-95 transition-all flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+            Paisa Chukayein
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCREEN: make-payment -->
+  <div class="screen" id="make-payment">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl">
+      <div class="flex items-center justify-between px-6 h-16 w-full max-w-md mx-auto">
+        <div class="flex items-center gap-3">
+          <a href="#shop-ledger" class="hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 p-2 rounded-full inline-flex items-center justify-center">
+            <span class="material-symbols-outlined text-orange-700 dark:text-orange-400">arrow_back</span>
+          </a>
+          <div class="flex flex-col">
+            <h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-orange-600 dark:text-orange-400">Sharma Fresh Produce</h1>
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <span class="text-[10px] font-semibold text-secondary uppercase tracking-wider">Verified Merchant</span>
+            </div>
+          </div>
+        </div>
+        <button class="hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+          <span class="material-symbols-outlined text-zinc-500">info</span>
+        </button>
+      </div>
+    </header>
+    <main class="pt-20 pb-32 max-w-md mx-auto px-6">
+      <!-- Welcome & Balance Section -->
+      <section class="mb-10">
+        <h2 class="font-headline text-2xl font-extrabold text-on-surface mb-1">Make Payment</h2>
+        <p class="text-on-surface-variant text-sm italic">Apni local dukaan, ab online</p>
+        <div class="mt-6 relative overflow-hidden rounded-2xl editorial-gradient p-6 text-white digital-courtyard-shadow">
+          <div class="relative z-10">
+            <p class="font-label text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Payable Balance</p>
+            <h3 class="font-headline text-4xl font-extrabold mb-4">&#8377;450</h3>
+            <div class="flex flex-col gap-2 border-t border-white/20 pt-4">
+              <div class="flex justify-between items-center text-sm">
+                <span class="opacity-80">Pichla Udhaar</span>
+                <span class="font-bold text-lg">&#8377;450.00</span>
+              </div>
+              <div class="flex justify-between items-center text-xs opacity-70 italic">
+                <span>Last Transaction: 12 Oct</span>
+                <span>Invoice #BS-9921</span>
+              </div>
+            </div>
+          </div>
+          <!-- Decorative element -->
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+        </div>
+      </section>
+      <!-- Payment Methods Section -->
+      <section class="mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <h4 class="font-headline font-bold text-lg">Payment Method Chunein</h4>
+          <span class="text-[10px] font-bold text-primary bg-primary-fixed px-2 py-1 rounded-full uppercase">Secure</span>
+        </div>
+        <div class="space-y-4">
+          <!-- UPI Options -->
+          <div class="bg-surface-container-lowest rounded-xl p-4 digital-courtyard-shadow group cursor-pointer border-2 border-primary-container">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+                </div>
+                <div>
+                  <p class="font-bold text-on-surface">UPI Transfer</p>
+                  <p class="text-xs text-on-surface-variant">GPay, PhonePe, Paytm</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-primary">radio_button_checked</span>
+              </div>
+            </div>
+            <div class="mt-4 flex gap-3 pt-4 border-t border-surface-container">
+              <div class="bg-white p-2 rounded-lg shadow-sm border border-outline-variant/20">
+                <img alt="GPay" class="h-4 w-auto grayscale" data-alt="Official logo of Google Pay 2020 version minimalist vector" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKhZxMJ39AXzLpiZyf6QNNiyfAfn8Q2UPtMAojzBU80Feh9aOW5KtFZfku0c0ysAbG0kfV5UzShCPdN8435VClp-Dszqsh0YY1Kqzqm_IMzGLsPjIBiRLDpQQX_kfyLFZomHv-QSKYYQSXmGFI1V5xHF6jYMfbnW7PpVNIooSM52tDL0X-y_E0FVip8nwdT_fCbZKmQrGUtwc0YXLEZMkopW1GG6HpP9F-_rifz_4hF0zU1ZEGpo2BZy9zp7ac8lsSgEX1hVsl-C8"/>
+              </div>
+              <div class="bg-white p-2 rounded-lg shadow-sm border border-outline-variant/20">
+                <img alt="PhonePe" class="h-4 w-auto grayscale" data-alt="Official minimalist icon logo for PhonePe mobile application" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtrEAgIzbDt5yy1pelFrCkuhXvutnuMJu0iq53cPkHCnQyo1trHeiubdYkx-pCXAznPLZpPv9HaSyeDDeLwL7EQJJwSYvlRry_BTi32Cld0dhBs1oNdLMdUi_edeHf8xVwDtzoguuiVdpK8qWdo4IZ0pBujskbCCrm1TWkGv1Xvd7hK-L7riqfXmKZLuodaL7Bb6Ztf1gUlWihLrMQaXzD5kEcJSUosb9Js41-qsL0Ec3Sid90DZt0zJzygso-_GYrvyC-Td8G03Y"/>
+              </div>
+              <div class="bg-white p-2 rounded-lg shadow-sm border border-outline-variant/20">
+                <img alt="Paytm" class="h-4 w-auto grayscale" data-alt="Blue logo of Paytm payment service provider simplified icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_cdNcg5UaWM0CCyUlAhuJ9b3Dj-xJGm2e-8SsvLXn-yARql2dXFdf_d1-wRO6yTQsk3t_QSMaKsMrBmbGIpQDMmRVUHvKJ5bQOfMd3PREBI1QqQl7cle5rbvDiz2nsHTPDol0gpVtQDl67dnKhkgbNR1DipUC9fVGTp6miZpNgDf_HJF_OC6pKqZD5loug5x9SSXtrAaSYknfy--EWO57IOaE-25q8-WEkwd4B1Bqcqk2CHt35xNPVfxwst1_15z1oDin5v2i_Bg"/>
+              </div>
+            </div>
+          </div>
+          <!-- BazaarSetu Wallet -->
+          <div class="bg-surface-container-lowest rounded-xl p-4 digital-courtyard-shadow cursor-pointer hover:bg-surface-container-low transition-all">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center">
+                  <span class="material-symbols-outlined text-zinc-600">account_balance_wallet</span>
+                </div>
+                <div>
+                  <p class="font-bold text-on-surface">BazaarSetu Wallet</p>
+                  <p class="text-xs text-secondary font-semibold">Balance: &#8377;1,240</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant">radio_button_unchecked</span>
+            </div>
+          </div>
+          <!-- Cash at Shop -->
+          <div class="bg-surface-container-lowest rounded-xl p-4 digital-courtyard-shadow cursor-pointer hover:bg-surface-container-low transition-all">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center">
+                  <span class="material-symbols-outlined text-zinc-600">payments</span>
+                </div>
+                <div>
+                  <p class="font-bold text-on-surface">Cash at Shop</p>
+                  <p class="text-xs text-on-surface-variant">Record cash payment manually</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant">radio_button_unchecked</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Trust Badges -->
+      <section class="flex flex-col items-center gap-4 py-6 border-t border-surface-container-high">
+        <div class="flex items-center gap-2 text-on-surface-variant">
+          <span class="material-symbols-outlined text-lg">verified_user</span>
+          <span class="text-xs font-semibold uppercase tracking-widest">Bank-Grade Encryption</span>
+        </div>
+        <div class="flex gap-6 opacity-40 grayscale">
+          <span class="material-symbols-outlined">security</span>
+          <span class="material-symbols-outlined">lock</span>
+          <span class="material-symbols-outlined">account_balance</span>
+        </div>
+      </section>
+    </main>
+    <!-- Fixed Bottom Action & Navbar -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+      <!-- Main Action Button -->
+      <div class="max-w-md mx-auto px-6 mb-4">
+        <a href="#payment-success" class="w-full editorial-gradient py-4 rounded-xl text-white font-headline font-bold text-lg digital-courtyard-shadow active:scale-95 transition-transform duration-150 flex items-center justify-center gap-3">
+          <span>Paisa Chukayein</span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <!-- BottomNavBar -->
+      <nav class="bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-8px_32px_rgba(85,67,54,0.08)]">
+        <div class="max-w-md mx-auto flex justify-around items-center px-4 pb-6 pt-3">
+          <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 opacity-70 hover:text-orange-600 transition-colors" href="#home">
+            <span class="material-symbols-outlined">home</span>
+            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase mt-1">Home</span>
+          </a>
+          <a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/40 text-orange-900 dark:text-orange-100 rounded-2xl px-5 py-2 scale-105 active:scale-90 transition-transform duration-150" href="#ledger">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase mt-1">Udhaar</span>
+          </a>
+          <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 opacity-70 hover:text-orange-600 transition-colors" href="#order-history">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase mt-1">Orders</span>
+          </a>
+          <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 opacity-70 hover:text-orange-600 transition-colors" href="#profile">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase mt-1">Profile</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SCREEN: payment-success -->
+  <div class="screen" id="payment-success">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+      <div class="flex items-center gap-4">
+        <a href="#ledger" class="active:scale-95 transition-transform duration-200 inline-flex items-center justify-center cursor-pointer">
+          <span class="material-symbols-outlined text-orange-600 dark:text-orange-400">arrow_back</span>
+        </a>
+        <h1 class="font-headline font-bold text-lg text-on-surface">Payment Status</h1>
+      </div>
+      <div class="w-10"></div> <!-- Spacer for center-aligned feel -->
+    </header>
+    <main class="flex-grow pt-24 pb-32 px-6 max-w-lg mx-auto w-full">
+      <!-- Success Hero Section -->
+      <section class="flex flex-col items-center text-center space-y-6 mb-12">
+        <!-- Celebratory Icon Container -->
+        <div class="relative">
+          <div class="w-32 h-32 rounded-full bg-primary-container flex items-center justify-center shadow-[0_8px_32px_rgba(255,153,51,0.2)]">
+            <span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          </div>
+          <!-- Decorative Sparkles (Asymmetric Digital Courtyard style) -->
+          <span class="material-symbols-outlined absolute -top-2 -right-2 text-primary-container text-2xl">celebration</span>
+          <span class="material-symbols-outlined absolute bottom-2 -left-4 text-secondary text-xl">stars</span>
+        </div>
+        <div class="space-y-2">
+          <h2 class="font-headline font-extrabold text-3xl tracking-tight text-on-surface">Paisa chuka diya!</h2>
+          <p class="font-label text-on-surface-variant italic text-sm">Apni local dukaan, ab online</p>
+        </div>
+      </section>
+      <!-- Transaction Details Card -->
+      <div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(85,67,54,0.05)] space-y-8 relative overflow-hidden">
+        <!-- Subtle background tonal shift instead of border -->
+        <div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full -mr-16 -mt-16"></div>
+        <div class="flex flex-col items-center gap-1">
+          <span class="font-label text-on-surface-variant text-sm uppercase tracking-widest font-semibold">Total Amount Paid</span>
+          <span class="font-headline font-extrabold text-5xl text-primary">&#8377;450.00</span>
+        </div>
+        <div class="space-y-6">
+          <!-- Merchant Info -->
+          <div class="flex items-center justify-between py-4 border-b border-outline-variant/15">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center overflow-hidden">
+                <img alt="Merchant Logo" class="w-full h-full object-cover" data-alt="Close up of a wooden storefront sign for a local produce market with fresh vegetables in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBozNFtnzVG0cbOzpX0GJbTXDEF5fwvydH7CwQEoWMim0G4eXTLNGQTAvEP5_bmcMZI24YuYVZHOYQYUtRaF2FwcayvLrnGWU0DMgpdTZfmhGzKOZ_YYWbzWsjqDP2eSP4BV3SDuGSifujHFKekhgTR8cS-UjLPY_f7sb_ILY3wCLoyfvonJJP1ZgTHvz5vf1kRJroaJtwZ5a_XOAlFkmC-qanQ8xAViJ4fOpYczrnkzlBxM4dQpJyIAaMmPnmRn1ppRKwuVVMCx10"/>
+              </div>
+              <div>
+                <p class="font-label text-xs text-on-surface-variant">Merchant</p>
+                <p class="font-headline font-bold text-on-surface">Sharma Fresh Produce</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+          </div>
+          <!-- Transaction Metadata -->
+          <div class="grid grid-cols-2 gap-y-6 pt-2">
+            <div>
+              <p class="font-label text-xs text-on-surface-variant mb-1">Payment ID</p>
+              <p class="font-body font-semibold text-sm text-on-surface select-all">BSTU-992834710</p>
+            </div>
+            <div class="text-right">
+              <p class="font-label text-xs text-on-surface-variant mb-1">Timestamp</p>
+              <p class="font-body font-semibold text-sm text-on-surface">24 Oct 2023, 11:42 AM</p>
+            </div>
+            <div>
+              <p class="font-label text-xs text-on-surface-variant mb-1">Method</p>
+              <div class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-xs">account_balance_wallet</span>
+                <p class="font-body font-semibold text-sm text-on-surface">Bazaar Wallet</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="font-label text-xs text-on-surface-variant mb-1">Status</p>
+              <span class="bg-secondary-container/30 text-on-secondary-container text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter">Settled</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Action Section -->
+      <div class="mt-10 space-y-4">
+        <button class="w-full editorial-gradient text-white font-headline font-bold py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-xl">download</span>
+          Receipt Download Karein
+        </button>
+        <a href="#ledger" class="w-full bg-surface-container-highest text-on-primary-container font-headline font-bold py-4 rounded-xl active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-xl">menu_book</span>
+          Udhaar Khata Dekhein
+        </a>
+      </div>
+      <!-- Success Toast Mockup -->
+      <div class="mt-12 bg-on-surface text-surface py-3 px-6 rounded-full flex items-center justify-between shadow-xl">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          <p class="text-sm font-medium">Payment message sent to Sharma Ji</p>
+        </div>
+        <span class="material-symbols-outlined text-surface-variant cursor-pointer">close</span>
+      </div>
+    </main>
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_32px_rgba(85,67,54,0.08)]">
+      <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-500 transition-colors active:scale-90 duration-200" href="#home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="font-['Inter'] text-[11px] font-medium tracking-wide">Home</span>
+      </a>
+      <a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-200" href="#ledger">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+        <span class="font-['Inter'] text-[11px] font-medium tracking-wide">Udhaar</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-500 transition-colors active:scale-90 duration-200" href="#order-history">
+        <span class="material-symbols-outlined">receipt_long</span>
+        <span class="font-['Inter'] text-[11px] font-medium tracking-wide">Orders</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:text-orange-500 transition-colors active:scale-90 duration-200" href="#profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="font-['Inter'] text-[11px] font-medium tracking-wide">Profile</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="../../js/router.js"></script>
+</body>
+</html>

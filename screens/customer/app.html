@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>BazaarSetu - Customer</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="../../js/config.js"></script>
+  <link rel="stylesheet" href="../../css/styles.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body">
+  <div class="screen" id="splash">
+<!-- Digital Courtyard: Main Splash Canvas -->
+<main class="relative w-full max-w-md h-[795px] bg-surface-container-lowest mx-auto rounded-[3rem] shadow-[0_32px_64px_rgba(85,67,54,0.08)] overflow-hidden flex flex-col">
+<!-- Upper Hero Section: Visual Anchors -->
+<section class="relative h-[55%] w-full overflow-hidden">
+<!-- Asymmetric Background Element -->
+<div class="absolute -top-20 -right-20 w-80 h-80 organic-shape editorial-gradient opacity-10"></div>
+<div class="h-full w-full p-8 flex flex-col justify-end items-center relative z-10">
+<!-- Visual Placeholder: Handshake/Marketplace Concept -->
+<div class="relative w-full aspect-square max-h-72 group">
+<!-- Ambient Glow -->
+<div class="absolute inset-0 bg-primary-container/20 blur-[40px] rounded-full scale-75 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Local Indian Marketplace" class="w-full h-full object-cover rounded-[2.5rem] shadow-xl relative z-10 border border-white/20" data-alt="Modern close-up of a local Indian shopkeeper handing fresh organic vegetables to a customer holding a smartphone, warm golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW89uY2tshh3nz-x3iYdmHzqrJeIfVCYyI4_i_DpeiUA3UvN9u_vqDCgcNz2ls2uxyUHhwbN-2fih3_lzTyr2dZB3bBg_eREzgLGnkTPmfK4xYddmeNO--p7S80Xfz4Y7FYsSWOS5elqGjPp6TNvlfhtZaHLg3HdEDVkjR6WzTgRWDcSI8cz4OojMQv4M8lDZDeYVmHBooTZt-fWT7dZlvoKgCxLIe7238dK3OtE6NvZFOJx2SeirfWkfAMk4-4-v92ObgOAyJbwU"/>
+<!-- Floating Interface Badge -->
+<div class="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-outline-variant/20 z-20 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full editorial-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl" data-icon="storefront">storefront</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary tracking-widest uppercase">Verified Shop</p>
+<p class="text-xs font-semibold text-on-surface">Local Merchant</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Section: Branding & Identity -->
+<section class="flex-1 flex flex-col items-center justify-between p-10 text-center">
+<!-- Branding Header -->
+<div class="space-y-4">
+<div class="flex flex-col items-center">
+<h1 class="font-headline font-black text-5xl tracking-tighter text-orange-700 italic">
+                        BazaarSetu
+                    </h1>
+<p class="font-headline italic text-sm font-semibold text-primary mt-2">
+                        'Apni local dukaan, ab online'
+                    </p>
+</div>
+<div class="pt-6">
+<p class="text-on-surface-variant font-medium text-lg leading-relaxed max-w-[240px] mx-auto">
+                        Dukaan se seedha baat karke order karein
+                    </p>
+</div>
+</div>
+<!-- Action Area -->
+<div class="w-full space-y-6">
+<!-- Main CTA -->
+<a href="#login" class="w-full editorial-gradient text-white font-headline font-bold py-5 rounded-xl shadow-[0_12px_24px_rgba(143,78,0,0.2)] active:scale-95 transition-all duration-200 text-lg block text-center">
+                    Aage Badhein
+                </a>
+<!-- Progress/Loading Aesthetic -->
+<div class="flex justify-center gap-2">
+<div class="w-8 h-1.5 rounded-full bg-primary-container"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+</section>
+<!-- Contextual Footer -->
+<footer class="pb-8 text-center">
+<p class="text-[11px] font-label font-medium text-on-surface-variant/60 tracking-widest uppercase">
+                Vocal for Local • Made in Bharat
+            </p>
+</footer>
+</main>
+<!-- Background Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 bg-surface overflow-hidden">
+<div class="absolute top-[10%] -left-[5%] w-[40%] aspect-square rounded-full bg-primary-container/5 blur-[120px]"></div>
+<div class="absolute bottom-[10%] -right-[5%] w-[30%] aspect-square rounded-full bg-secondary-container/5 blur-[100px]"></div>
+</div>
+  </div>
+  <div class="screen" id="login">
+<!-- Top Branding Anchor (Suppressed Shell - Branding only) -->
+<header class="w-full max-w-md px-8 pt-12 pb-8 flex flex-col items-center">
+<div class="flex flex-col items-center space-y-2">
+<span class="text-3xl font-black text-orange-700 italic tracking-tight font-headline">BazaarSetu</span>
+<span class="text-sm font-headline italic font-medium text-on-surface-variant tracking-wide">'Apni local dukaan, ab online'</span>
+</div>
+</header>
+<main class="w-full max-w-md px-8 flex-grow flex flex-col justify-center">
+<!-- Visual Anchor: Asymmetric Editorial Element -->
+<div class="relative w-full mb-12 overflow-hidden rounded-xl bg-surface-container-low aspect-[16/9]">
+<img alt="Vibrant Indian street market scene" class="w-full h-full object-cover opacity-90 scale-105" data-alt="vibrant bustling indian local market with colorful fresh vegetables and warm morning sunlight creating long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABRSq_cClpLAf-kGnbXCDRMts-_U5d5-lqrbFx_rtgNPC1wC1I8tWDCNRHqmy3POXg1eHUCDV4juTCXEQ2RQG2nJHVK7F3B721VUv5pnarlKv-Uj9N4JHC3mB0uDnjf-rybdm7EA-YxjiUdIOs3ZitmhPs8hDPsigpAPS183hwdlaGnSMex4Ndgb3D-B6doovkROrJY-nmVBDnRE1ogGIMJHJb5UnPbhkAyV2aACkVGnV0U06HhIprHpWjSbuw_23BWuGUBjK0Cis"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+<!-- Content Shell -->
+<div class="space-y-8">
+<div class="space-y-2 text-left">
+<h1 class="text-4xl font-extrabold font-headline text-on-surface tracking-tight">Shuru karein</h1>
+<p class="text-on-surface-variant font-medium text-lg">Apna mobile number daalein</p>
+</div>
+<div class="space-y-6">
+<!-- Phone Input Group -->
+<div class="group">
+<label class="block font-label text-sm font-semibold text-on-surface-variant mb-2 ml-1">Mobile number</label>
+<div class="flex items-center space-x-3 bg-surface-container-low rounded-xl px-4 py-4 ring-1 ring-transparent focus-within:ring-primary/30 transition-all duration-300">
+<div class="flex items-center space-x-2 border-r border-outline-variant/30 pr-3">
+<span class="text-base font-bold text-on-surface">+91</span>
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="expand_more">expand_more</span>
+</div>
+<input class="bg-transparent border-none focus:ring-0 p-0 w-full text-lg font-semibold placeholder:text-outline/50 placeholder:font-normal tracking-wider" maxlength="10" placeholder="Mobile number" type="tel"/>
+</div>
+</div>
+<!-- Primary CTA -->
+<a href="#otp" class="w-full py-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white font-headline font-bold text-lg shadow-[0_32px_0_rgba(85,67,54,0.08)] active:scale-[0.98] transition-all duration-200 flex items-center justify-center space-x-2">
+<span>OTP bhejein</span>
+<span class="material-symbols-outlined font-bold" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Social/Alt Login Anchor -->
+<div class="pt-8 flex items-center space-x-4">
+<div class="h-[1px] flex-grow bg-surface-container-highest"></div>
+<span class="text-sm font-medium text-outline">Ya fir inse judiye</span>
+<div class="h-[1px] flex-grow bg-surface-container-highest"></div>
+</div>
+<div class="flex justify-center space-x-6">
+<button class="w-14 h-14 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center hover:bg-surface-container-high transition-colors active:scale-90">
+<img class="w-6 h-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all" data-alt="Google logo icon for login" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDxaJlplcAOWmN-9Cvp5zgwVVMeIi9G5fhjtj949HvO-TJdBu-DAh12GRvvloViyJ8xeMpWivFfs23EmhqEyzSekilRtE7eJg6GPOf3Ise_uUAcZ5UjXKYDJLvvW51e72vjWfMILeNsyfJcWvFY04a8FgxLIsO0AQEAoy1AWZVb46MWxw2KxvY7QBa8lxHF58ZQigeqC9_F7vJfiw8OGA5IfYay3b0egjJ-4G_Dwxb7cIDTCqX6NcCFPQK008hBbnYskynMfsvREY"/>
+</button>
+<button class="w-14 h-14 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center hover:bg-surface-container-high transition-colors active:scale-90">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="mail">mail</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer Disclaimer -->
+<footer class="w-full max-w-md px-8 py-10 text-center">
+<p class="text-xs font-label leading-relaxed text-outline/80 px-4">
+            Continue karke aap hamare 
+            <a class="text-primary font-semibold underline decoration-primary/30 underline-offset-2" href="#">Terms &amp; Conditions</a> 
+            aur 
+            <a class="text-primary font-semibold underline decoration-primary/30 underline-offset-2" href="#">Privacy Policy</a> 
+            ko accept karte hain.
+        </p>
+</footer>
+<!-- Help Floating Trigger -->
+<div class="fixed bottom-8 right-6">
+<button class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+  </div>
+  <div class="screen" id="otp">
+<!-- Top Navigation Shell (Suppressed items, focused on back action) -->
+<header class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_32px_0_rgba(85,67,54,0.08)] flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<a href="#login" class="text-on-surface-variant hover:bg-orange-50 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<div class="text-orange-700 dark:text-orange-500 italic text-2xl font-black font-headline tracking-tight">
+            BazaarSetu
+        </div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-12 max-w-md mx-auto w-full">
+<!-- Hero Section: Editorial Asymmetry -->
+<div class="w-full mb-12 relative">
+<div class="absolute -right-4 -top-8 w-24 h-24 bg-primary-container/10 rounded-full blur-2xl"></div>
+<h1 class="font-headline font-bold text-4xl tracking-tight text-on-surface mb-3 leading-tight">
+                OTP verify karein
+            </h1>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-[280px]">
+                Code aapke phone par bheja gaya hai
+            </p>
+</div>
+<!-- Verification Canvas -->
+<div class="w-full bg-surface-container-lowest rounded-[1.5rem] p-8 shadow-[0_8px_24px_rgba(85,67,54,0.04)]">
+<form action="#home" class="space-y-10">
+<!-- OTP Input Grid -->
+<div class="flex justify-between gap-3 md:gap-4">
+<input class="w-12 h-16 md:w-14 md:h-18 text-center text-2xl font-bold font-headline bg-surface-container-low border-none rounded-xl otp-input-focus transition-all duration-200" maxlength="1" type="text" value="4"/>
+<input class="w-12 h-16 md:w-14 md:h-18 text-center text-2xl font-bold font-headline bg-surface-container-low border-none rounded-xl otp-input-focus transition-all duration-200" maxlength="1" type="text" value="8"/>
+<input class="w-12 h-16 md:w-14 md:h-18 text-center text-2xl font-bold font-headline bg-surface-container-low border-none rounded-xl otp-input-focus transition-all duration-200" maxlength="1" placeholder="·" type="text"/>
+<input class="w-12 h-16 md:w-14 md:h-18 text-center text-2xl font-bold font-headline bg-surface-container-low border-none rounded-xl otp-input-focus transition-all duration-200" maxlength="1" placeholder="·" type="text"/>
+</div>
+<div class="space-y-4">
+<!-- Primary CTA -->
+<a href="#home" class="w-full digital-courtyard-gradient text-white font-headline font-bold py-4 rounded-xl shadow-[0_12px_24px_rgba(143,78,0,0.2)] active:scale-95 transition-transform duration-200 text-lg block text-center">
+                        Verify karein
+                    </a>
+<!-- Resend Link -->
+<div class="w-full text-center py-2 group cursor-pointer">
+<span class="text-on-surface-variant font-label font-medium text-sm group-hover:text-primary transition-colors">
+                            OTP nahi mila? <span class="text-primary font-bold ml-1">OTP dobara bhejein</span>
+</span>
+</div>
+</div>
+</form>
+</div>
+<!-- Security Badge: Tonal Layering -->
+<div class="mt-12 flex items-center gap-3 px-6 py-3 bg-surface-container rounded-full">
+<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-xs font-label font-semibold text-on-surface-variant tracking-wider uppercase">Secure Transaction Portal</span>
+</div>
+<!-- Footer Tagline -->
+<div class="mt-auto pt-20 pb-8 text-center">
+<p class="font-headline text-on-surface-variant/40 italic font-medium text-sm">
+                'Apni local dukaan, ab online'
+            </p>
+</div>
+</main>
+<!-- Contextual Decorative Elements (Digital Courtyard Style) -->
+<div class="fixed bottom-0 left-0 -z-10 w-full h-1/2 overflow-hidden pointer-events-none opacity-20">
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary-container rounded-full blur-3xl"></div>
+<div class="absolute -bottom-48 -right-24 w-80 h-80 bg-secondary-container rounded-full blur-3xl"></div>
+</div>
+<!-- Empty shell as requested for spacing/context logic but not rendering full nav for focus screen -->
+  </div>
+  <div class="screen" id="home">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-[0_32px_0_rgba(85,67,54,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-orange-600 dark:text-orange-400 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="flex flex-col">
+<span class="text-2xl font-black text-orange-700 dark:text-orange-500 italic font-headline">BazaarSetu</span>
+<span class="text-[10px] italic font-medium text-on-surface-variant tracking-wider">'Apni local dukaan, ab online'</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors text-orange-600">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pb-32">
+<!-- Hero Greeting -->
+<section class="pt-8 pb-6">
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Namaste 👋</h1>
+<p class="text-on-surface-variant font-medium">Welcome back to your digital courtyard.</p>
+</section>
+<!-- Search Bar -->
+<section class="mb-8">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-5 pl-12 pr-4 focus:ring-2 focus:ring-primary/30 transition-all text-on-surface placeholder:text-stone-400 shadow-sm" placeholder="Kya chahiye? (milk, bread...)" type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-bold text-sm active:scale-95 transition-transform">
+                    Search
+                </button>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="mb-10">
+<div class="flex overflow-x-auto gap-3 pb-4 no-scrollbar">
+<button class="whitespace-nowrap px-6 py-2.5 bg-orange-700 text-white rounded-full font-semibold shadow-md active:scale-95 transition-all">Sab</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-white border border-outline-variant/30 text-on-surface-variant rounded-full font-medium hover:bg-surface-container-low transition-all">Grocery</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-white border border-outline-variant/30 text-on-surface-variant rounded-full font-medium hover:bg-surface-container-low transition-all">Daily use</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-white border border-outline-variant/30 text-on-surface-variant rounded-full font-medium hover:bg-surface-container-low transition-all">Vegetables</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-white border border-outline-variant/30 text-on-surface-variant rounded-full font-medium hover:bg-surface-container-low transition-all">Fruits</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-white border border-outline-variant/30 text-on-surface-variant rounded-full font-medium hover:bg-surface-container-low transition-all">Dairy</button>
+</div>
+</section>
+<!-- Featured Banner -->
+<section class="mb-12">
+<div class="relative h-48 rounded-[2rem] overflow-hidden bg-gradient-to-br from-primary to-primary-container p-8 flex flex-col justify-center">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="vibrant local indian grocery store aisle with colorful packaging and organized shelves in warm evening light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO-TstSaBb3wfU3VfxbMuTYoitpw2y9i41UHhNWd9yr2tr-x1yvq4jux8jSnf3wF-zlzVIc37Ti6thucTZuXj2MgKM8DYVO52-yRv1xt_KhJG0SJ8uZ3u_Fx2GmL3lbKn234GQaNYINoB3Gu1Cd2eGLUALIqf5GurSsWv3Ag4nvMuT4HSl8tT10ZYk8fGFgptdvXApS8YDP9gVrO9FiZtyHlHr1_kpfM2UgwEbnKBdyUyaVP_rWyjsHzkFPy5LHzk1g6rUxmANOjQ"/>
+<div class="relative z-10">
+<span class="bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full">Local Pride</span>
+<h2 class="text-white text-3xl font-black mt-3 leading-tight">Support your neighborhood <br/>merchants today.</h2>
+</div>
+</div>
+</section>
+<!-- Main Content: Shops -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-2xl font-extrabold tracking-tight text-on-surface">Aapke paas ki dukaan</h3>
+<p class="text-sm text-on-surface-variant">Handpicked stores in your vicinity</p>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                    View All <span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Shop Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Shop Card 1 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative h-48 mb-4 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="friendly traditional indian grocery store storefront with sacks of grains and colorful produce displayed outside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0-i8H1fQCh8YmGDUb0eCo2CxiLzHqt5DfvGFzhToagtCFnylb4_DTQnik_F5zPKAA8D1VmdyaDYoRBg2pqD_Ob-XdZlYsw4PcldjU8hGt1p1j0OPsvkf11MZZi9ORbzJaP2zzDbHpcQtW5A57hdNWhZyU2OP3-y0nfYDGs2SC9UK_9yELUh1FZD5l3p7wAmPJj6EhGzQai0Z42jUDK3O4TKLH-SdG-wHuFaZJv8FmJiXslYMWWovwNdE0ZlQR-8STkUKd7jNf45o"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-secondary/90 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md">Open</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline font-bold text-lg text-on-surface">Sharma General Store</h4>
+<div class="flex items-center gap-1 bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.8</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="distance">distance</span>
+                            0.8 km
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                            15-20 min
+                        </div>
+</div>
+<a href="#shop-products" class="mt-auto w-full bg-surface-container-high py-3 rounded-lg font-bold text-sm hover:bg-primary-container hover:text-white transition-colors block text-center">Browse Items</a>
+</div>
+<!-- Shop Card 2 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="relative h-48 mb-4 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="modern local indian dairy shop with fresh milk containers and bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl1_XnjaO--EKsxW0xHdzfDwuBXVgt3Qpza6Uf1f9oHdV15SkQ9P7vY6gJ0xYEa_c17bVmO8Zs-F7eGOIbJ7mQO_pE6M6Mn5BpRe7bKEJGjv3QBxf-ULnXKpVDO9VbCjQuMKf8XtCp44rF4cKLZPivBaKho_9I-H5hZ_n-VfDV9cDAXay5olA8R2ZTuHe5puvX_GyoCc1dNW4W5f5S3j1uHr2BAhzz_8aRSPjeAvJemHoWBZCjzWqyF_TyaX6DkeAfhYRkZ_OHfg8"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-secondary/90 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md">Open</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline font-bold text-lg text-on-surface">Krishna Milk Dairy</h4>
+<div class="flex items-center gap-1 bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.5</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="distance">distance</span>
+                            1.2 km
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                            10 min
+                        </div>
+</div>
+<a href="#shop-products" class="mt-auto w-full bg-surface-container-high py-3 rounded-lg font-bold text-sm hover:bg-primary-container hover:text-white transition-colors block text-center">Browse Items</a><button class="mt-auto w-full bg-surface-container-high py-3 rounded-lg font-bold text-sm hover:bg-primary-container hover:text-white transition-colors">Browse Items</button>
+</div>
+<!-- Shop Card 3 (Closed State) -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all duration-300 flex flex-col opacity-80">
+<div class="relative h-48 mb-4 overflow-hidden rounded-xl grayscale">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="local grocery market stall at night with shutter partially down" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAyBCv-cFaDCXImrS1kMWn_D6rIf7MPvrQ4YpVjh8zxzy7Kn8IJo-o9QgMjxxduhyBa3E3AEuttTgmNmKk4Xk0O0j5ED4P9d_4wz0dPhLIeobmbE8fuInSeNeA_QyN9964WUmEaatU2EDyO5YC-tC4IXIb1fPv9YPj4tc36kVmqjoDLi8f_cyggZZZqiUpSw0fUTuUOoDEB-pl3D4t8inf4rZFqnBAu66_4XZrySZhsUJHEe8p0FN0yypzIBXtu0UNHIXCYBqH930"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-stone-500/90 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md">Band Hai</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline font-bold text-lg text-on-surface">Gupta Ji Ki Dukaan</h4>
+<div class="flex items-center gap-1 bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.2</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="distance">distance</span>
+                            2.5 km
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="history">history</span>
+                            Opens at 9 AM
+                        </div>
+</div>
+<button class="mt-auto w-full bg-surface-container-high py-3 rounded-lg font-bold text-sm text-stone-400 cursor-not-allowed">Currently Closed</button>
+</div>
+</div>
+<!-- Empty State (Hidden by default, shown when no results) -->
+<div class="hidden flex-col items-center justify-center py-20 text-center">
+<div class="w-24 h-24 bg-surface-container-low rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-stone-300" data-icon="storefront_off">storefront</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-2">Abhi koi dukaan available nahi hai</h3>
+<p class="text-on-surface-variant max-w-xs mx-auto">Hamare network mein naye stores jud rahe hain. Kripya thodi der baad dekhen.</p>
+</div>
+</section>
+<!-- Promotion Section -->
+<section class="mt-16 bg-surface-container-low rounded-[2rem] p-10 flex flex-col md:flex-row items-center gap-10">
+<div class="flex-1 text-center md:text-left">
+<h3 class="text-3xl font-black mb-4 leading-tight">Kya aapki apni dukaan hai?</h3>
+<p class="text-on-surface-variant text-lg mb-8">BazaarSetu par aaj hi apni dukaan register karein aur online order lena shuru karein.</p>
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all">Switch to Vendor</button>
+</div>
+<div class="flex-1 w-full max-w-md">
+<div class="relative aspect-square rounded-[2rem] overflow-hidden rotate-3 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="happy indian shop owner holding a digital tablet and smiling inside his well stocked grocery store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPFqGe-tws6SOpVxcLvwsomnJQzWvVvPDvWapTWIF_kKJMlh3AduHdRc7JLenUeyAH_bLomRY9ftY-xna9jeMwrn-xjY4pWP7C7_7QfCh3WDVIcpg_Bmmc8LLleNuvoCxBZ9F4Ef42FaLlxzKCPwWaU0ZmWKVC9OI1DgQeEaGQNDqJE_XpU7mF8XOwNdyEWqXobTnSjmO27itpFkDmIdLJDBSD_httyc8qdKGEa78yavQaUQ3FGl4lwmxgA7mdhuwujECu0uOpAH8"/>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md rounded-t-[24px] border-t border-stone-100 dark:border-stone-800 shadow-[0_-8px_24px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center px-4 pb-6 pt-3 max-w-7xl mx-auto">
+<!-- Discovery (Active) -->
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-200 rounded-xl px-5 py-2 active:scale-90 transition-all duration-200" href="#home">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-inter text-[11px] font-medium tracking-wide mt-1">Discovery</span>
+</a>
+<!-- Orders -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-300 active:scale-90 transition-all duration-200" href="#order-history">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-inter text-[11px] font-medium tracking-wide mt-1">Orders</span>
+</a>
+<!-- Chat -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-300 active:scale-90 transition-all duration-200" href="#shop-chat">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-inter text-[11px] font-medium tracking-wide mt-1">Chat</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-300 active:scale-90 transition-all duration-200" href="#profile">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-medium tracking-wide mt-1">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action Button (Optional) -->
+<a href="#cart" class="fixed bottom-28 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full shadow-[0_16px_32px_rgba(85,67,54,0.2)] flex items-center justify-center z-40 active:scale-90 transition-transform"><span class="material-symbols-outlined">shopping_cart</span></a>
+  </div>
+  <div class="screen" id="shop-products">
+<!-- Top Navigation Shell -->
+<header class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-[0_32px_0_rgba(85,67,54,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<a href="#home" class="active:scale-95 transition-transform duration-200 text-on-surface-variant"><span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span></a>
+<div class="flex flex-col">
+<h1 class="font-headline font-bold text-lg tracking-tight text-on-surface">Sharma General Store</h1>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">Trusted Dukaan</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto pb-32">
+<!-- Store Hero Visual Section -->
+<section class="px-6 pt-6 pb-4">
+<div class="relative w-full h-48 rounded-xl overflow-hidden shadow-sm">
+<img alt="Sharma General Store Interior" class="w-full h-full object-cover" data-alt="Interior of a well-organized local Indian general store with shelves stocked with colorful grocery items and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuzwzld1fSYnpcgjeBHLb-KUveSeka9NQ1cCfScZROVEP-kSuFwtCFQzPU7i46r6P7FXeadZV9V59t7EVs7hpuz5bsTnEcJwgRgM409KmeQWfdk9XEqOLGwuddSpNqzqmHethQGWg4u9YANh8twhHpDxFzh8-Xqr-c1GOGcdNVsQcOep9VU7amgYzTmxOzxuM_-4tnF64WYtpHXmwxgtle2MsGSDV63coUGmMjJjGPiCRhGxWPP-7jyEQOmNrE7l53TT4j5oyiNJQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-end items-end p-4">
+<p class="text-white text-sm font-medium italic">"Apni local dukaan, ab online"</p>
+</div>
+</div>
+</section>
+<!-- Tabs Navigation -->
+<nav class="px-6 py-2 sticky top-[72px] bg-surface z-40">
+<div class="flex gap-2 p-1 bg-surface-container-low rounded-xl">
+<button class="flex-1 py-3 px-4 rounded-lg bg-white shadow-sm flex items-center justify-center gap-2 font-headline font-semibold text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_bag">shopping_bag</span>
+                    🛍️ Products
+                </button>
+<a href="#shop-chat" class="flex-1 py-3 px-4 rounded-lg flex items-center justify-center gap-2 font-headline font-medium text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+                    💬 Chat
+                </a>
+</div>
+</nav>
+<!-- Product Listing Section -->
+<section class="px-6 mt-8">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="font-headline font-extrabold text-2xl text-on-surface tracking-tight">Available samaan</h2>
+<p class="text-on-surface-variant text-sm mt-1">Fresh stock from your neighborhood favorite</p>
+</div>
+<button class="text-primary font-bold text-xs flex items-center gap-1 bg-primary-fixed px-3 py-1.5 rounded-full">
+                    Filters <span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+</button>
+</div>
+<!-- Bento-ish Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Product Card 1: Mother Dairy Milk -->
+<div class="group bg-surface-container-lowest rounded-md p-4 flex flex-col gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-transparent hover:border-primary/10 transition-all active:scale-[0.98]">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="Mother Dairy Milk 1L" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A fresh carton of full cream milk on a clean white background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhF8kFKmODau2OC8TodE3VdySEWRYw_fetCvxXJiH_CW3i0vkKrqXl3aNeOSKqAOGvs5FpfjyUfWqG7GQi_6RgrGr6C3p3Ac8yhZWOLNIYnpyRObtIB7L3vYONYExPgxHxwNiKDYh1IUwBAUTD_eXfNIBKCxOh7rebgGcghXVN2RwzLvexYer9FQeABMKbT7yx0isz-bacRCwBto4fFv2rKobWIpf6l1ihTRCDpjtbdScN50DtSayUlWZio3iljhOebewPhfghbqg"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Mother Dairy Milk 1L</h3>
+<p class="text-on-surface-variant text-xs mt-1">Full Cream • Freshly Sourced</p>
+</div>
+<span class="font-headline font-black text-lg text-primary">₹66</span>
+</div>
+<button class="w-full bg-saffron-gradient text-white font-headline font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                        Add to bag
+                    </button>
+</div>
+<!-- Product Card 2: Aashirvaad Atta -->
+<div class="group bg-surface-container-lowest rounded-md p-4 flex flex-col gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-transparent hover:border-primary/10 transition-all active:scale-[0.98]">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="Aashirvaad Atta 5kg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A large sack of whole wheat flour next to a bowl of grain in a bright, clean kitchen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfmR19n5M5mPLqVGtfkRzPCPxsqqw6wELG7VhnohIKWVXyoAKIyKuXnw2WC26-G1SeWkgWudCZvODW8ymoyKvcVhkVz6jCUUal4rzPD7BozvpmkpkRTKAUuSWUtdyEWBWRAeUXLdttE9BXuuf3G6D51cwiLRtLEGUJiilijMvQFOWjD7FEX6idYllWYXMSzoLwiqdbDhaWHMXrTO3mZmmc4F19_q978I8qLHMNbUNj122JGQysWXj_YtwsHvPRV1dbZ-BwCxNp7Lc"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Aashirvaad Atta 5kg</h3>
+<p class="text-on-surface-variant text-xs mt-1">Whole Wheat • Shuddh Chakki</p>
+</div>
+<span class="font-headline font-black text-lg text-primary">₹240</span>
+</div>
+<button class="w-full bg-saffron-gradient text-white font-headline font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                        Add to bag
+                    </button>
+</div>
+<!-- Product Card 3: Britannia Marie Gold -->
+<div class="group bg-surface-container-lowest rounded-md p-4 flex flex-col gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-transparent hover:border-primary/10 transition-all active:scale-[0.98]">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="Britannia Marie Gold 250g" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Crispy golden tea biscuits stacked neatly on a wooden board with warm afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_SZa8ov7jU-fiFbJi_ThnEwP5ZjpL-Zg1jX0yrVFK4KyzoAnp_1JycP2bIusT9otYsDF20LwQ_ocMlz1eXg83AaaO-AtM2C5BlZYa4QT_zdCGRDGnLlE4X2XvGx_HnTAgJrO0-BYbjEYDvlvUJsnchjRfzcYSgd0fkxicq4tsTAo_-rV_eyfE7dLwNp1_sssvKA8ZoCibGRDeZxBPmWN77I4RuIOtKQZB_7s8EV6CkPbN7u_r52s-1d7Bby7JgAXByefaDahRSAg"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Britannia Marie Gold 250g</h3>
+<p class="text-on-surface-variant text-xs mt-1">Tea Time Special • Low Fat</p>
+</div>
+<span class="font-headline font-black text-lg text-primary">₹35</span>
+</div>
+<button class="w-full bg-saffron-gradient text-white font-headline font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                        Add to bag
+                    </button>
+</div>
+<!-- Product Card 4: Tata Salt -->
+<div class="group bg-surface-container-lowest rounded-md p-4 flex flex-col gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-transparent hover:border-primary/10 transition-all active:scale-[0.98]">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="Tata Salt 1kg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close up of fine white table salt pouring from a shaker on a dark textured surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSThHK7ENH3TuFMj-Ykrra56-tdItAHWuf6S2ez6s4fNoyUVCgkju04fSR6Dq7yO9zOtLz-BShq7F_hiUVRAz7s3SM-6AYlVQ_cmL5fgQ3zMRgLIjiS0RZyljoeMqvd0GmlAlFDTaWJkoD5X-QT7pWNHcxeQS_gtxSdBMmx_jjAb4V3DYofoFzZyJfL42lQiqZUzthSuOWEMYkQa9F3y0G8mUaLZSlIrJqSTyYbzqnwrTieyhbKQBZm4a2N2D3brbu3jAX14f2d8M"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Tata Salt 1kg</h3>
+<p class="text-on-surface-variant text-xs mt-1">Iodized • Desh Ka Namak</p>
+</div>
+<span class="font-headline font-black text-lg text-primary">₹28</span>
+</div>
+<button class="w-full bg-saffron-gradient text-white font-headline font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                        Add to bag
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Merchant Section (Digital Courtyard Style) -->
+<section class="px-6 mt-20 mb-12">
+<div class="bg-primary-fixed/30 rounded-[32px] p-8 relative overflow-hidden">
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-xl flex-shrink-0">
+<img alt="Shop Owner" class="w-full h-full object-cover" data-alt="A friendly middle-aged Indian shopkeeper smiling warmly in front of his local grocery store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcd595B-Wiv3X7w4TEHOJVHqJfiw8WRrjN8SJytEjVz3XJ8HcXv7shTvoBmURorFBZqp74nytlkNFHaFEmntvlfyoo-VS5zqznQiRGT1tq9KdtDKjA1Ogj0jauOsigeNyVVo41ffVZpo3WRrElRDq9S25V2Ml2o8F0sxvlareMvR8yi5gRT7pWKy9hd8IkJL-v7U7u_q1LktvADE-MIh1JGKZha5925amWJX_Hr9k-S8fic_XLAe4igjUlyUdan0PzJ1D1sx0rcwY"/>
+</div>
+<div class="text-center md:text-left">
+<h3 class="font-headline font-extrabold text-2xl text-on-primary-fixed">Meet Mr. Sharma</h3>
+<p class="text-on-primary-fixed-variant mt-2 max-w-md leading-relaxed">"Serving this community for over 25 years with honesty and fresh supplies. Now bringing our personalized service to your doorstep via BazaarSetu."</p>
+</div>
+<div class="md:ml-auto">
+<button class="bg-white text-primary font-bold px-6 py-3 rounded-xl shadow-sm hover:shadow-md transition-shadow active:scale-95">
+                            Know our story
+                        </button>
+</div>
+</div>
+<!-- Decorative Circle -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl"></div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50">
+<div class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md rounded-t-[24px] shadow-[0_-8px_24px_rgba(0,0,0,0.05)] border-t border-stone-100 dark:border-stone-800 flex justify-around items-center px-4 pb-6 pt-3 max-w-7xl mx-auto">
+<!-- Discovery (Active) -->
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-200 rounded-xl px-5 py-2 active:scale-90 transition-all duration-200" href="#home">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Discovery</span>
+</a>
+<!-- Orders -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 active:scale-90 transition-all duration-200 hover:text-orange-600 dark:hover:text-orange-300" href="#order-history">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Orders</span>
+</a>
+<!-- Chat -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 active:scale-90 transition-all duration-200 hover:text-orange-600 dark:hover:text-orange-300" href="#shop-chat">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Chat</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 active:scale-90 transition-all duration-200 hover:text-orange-600 dark:hover:text-orange-300" href="#profile">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Profile</span>
+</a>
+</div>
+</nav>
+  </div>
+  <div class="screen" id="shop-chat">
+<!-- TopAppBar - Fixed Header -->
+<header class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md font-headline font-bold text-lg tracking-tight docked full-width top-0 sticky z-50 shadow-[0_32px_0_rgba(85,67,54,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<a href="#home" class="material-symbols-outlined text-stone-500 active:scale-95 transition-transform duration-200">arrow_back</a>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-orange-700 dark:text-orange-500 italic text-2xl font-black">BazaarSetu</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-500 active:scale-95 transition-transform duration-200" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-stone-500 active:scale-95 transition-transform duration-200" data-icon="menu">menu</span>
+</div>
+</div>
+</header>
+<!-- Shop Identity Section -->
+<section class="bg-surface-container-low px-6 pt-8 pb-4">
+<div class="max-w-4xl mx-auto flex items-end gap-6">
+<div class="relative">
+<div class="w-24 h-24 rounded-2xl overflow-hidden shadow-lg bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Modern Indian grocery store interior with neatly organized shelves, warm lighting, and traditional wooden accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByqJY1xJlHwSkwXotUHVX8YZ3xvv_l0EEoeic0HBzhR9AfepE9q4JmU2nofdwEld7B701LuBIF5SDzJnbveISFQhcVO9zTRMICjAIIDtY1lNCT9P_gal_EQElteZFecBJglIEzx7-eDZxLlKqgEDuJSEVhu0RL6MNgMpytWHhM85ru8ilSXMQ4w1OUeQqFfrF4sTkhnty6LJky_5QY0j4dy8Cz82TVJHkDtqYrT6Tj_MldR9iL7-lHqsQiJ4J2cnMYm1P8cBMAGm0"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-secondary text-white p-1 rounded-full border-4 border-surface-container-low">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 pb-2">
+<h1 class="font-headline font-extrabold text-3xl text-on-surface tracking-tight">Sharma General Store</h1>
+<div class="flex items-center gap-3 mt-1">
+<span class="text-secondary font-semibold text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+                        Trusted Partner
+                    </span>
+<span class="text-on-surface-variant text-sm italic">'Apni local dukaan, ab online'</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Tabs -->
+<nav class="bg-surface-container-low px-6 border-b border-outline-variant/10">
+<div class="max-w-4xl mx-auto flex gap-8">
+<button class="py-4 text-stone-500 font-semibold border-b-2 border-transparent transition-all hover:text-orange-600">
+                🛍️ Products
+            </button>
+<button class="py-4 text-orange-700 dark:text-orange-400 font-bold border-b-2 border-orange-600">
+                💬 Chat
+            </button>
+</div>
+</nav>
+<!-- Chat Canvas Area -->
+<main class="flex-1 flex flex-col max-w-4xl mx-auto w-full px-6 py-8 overflow-hidden">
+<!-- System Message / Info Card -->
+<div class="mb-8">
+<div class="bg-primary-fixed/30 rounded-xl p-4 flex gap-4 items-start border border-primary-fixed">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="info">info</span>
+<p class="text-on-primary-fixed-variant text-sm font-medium leading-relaxed">
+                    Dukaan se seedha baat karke order karein. Yahan se aap order discuss kar sakte hain.
+                </p>
+</div>
+</div>
+<!-- Message History -->
+<div class="flex-1 space-y-6 overflow-y-auto no-scrollbar pb-10">
+<!-- Merchant Message (Incoming) -->
+<div class="flex items-start gap-3 max-w-[85%]">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">store</span>
+</div>
+<div>
+<div class="bg-surface-container-lowest rounded-2xl rounded-tl-none p-4 shadow-sm border border-outline-variant/10">
+<p class="text-on-surface font-medium">Namaste! Aap kya lena chahte hain?</p>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-1 ml-1 font-medium">10:45 AM</span>
+</div>
+</div>
+</div>
+<!-- Bottom Controls Floating Area -->
+<div class="mt-auto pt-4 space-y-4">
+<!-- Quick Action Chips -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+<button class="flex-shrink-0 bg-primary-fixed text-on-primary-fixed font-medium px-4 py-2 rounded-full text-sm hover:bg-primary-container transition-colors active:scale-95 duration-200">
+                    Milk
+                </button>
+<button class="flex-shrink-0 bg-primary-fixed text-on-primary-fixed font-medium px-4 py-2 rounded-full text-sm hover:bg-primary-container transition-colors active:scale-95 duration-200">
+                    Bread
+                </button>
+<button class="flex-shrink-0 bg-primary-fixed text-on-primary-fixed font-medium px-4 py-2 rounded-full text-sm hover:bg-primary-container transition-colors active:scale-95 duration-200">
+                    Atta
+                </button>
+<button class="flex-shrink-0 bg-primary-fixed text-on-primary-fixed font-medium px-4 py-2 rounded-full text-sm hover:bg-primary-container transition-colors active:scale-95 duration-200">
+                    Chai Patti
+                </button>
+<button class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant font-medium px-4 py-2 rounded-full text-sm active:scale-95 transition-all">
+                    + Order list
+                </button>
+</div>
+<!-- Message Input -->
+<div class="bg-white rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.05)] p-2 flex items-center gap-2 border border-outline-variant/20">
+<button class="p-3 text-stone-500 hover:bg-stone-50 rounded-xl transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+<input class="flex-1 border-none focus:ring-0 text-on-surface placeholder:text-stone-400 bg-transparent py-3" placeholder="Message likhein..." type="text"/>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white w-12 h-12 rounded-xl flex items-center justify-center active:scale-90 transition-all shadow-md">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar - Execution based on JSON -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md rounded-t-[24px] border-t border-stone-100 dark:border-stone-800 z-50 shadow-[0_-8px_24px_rgba(0,0,0,0.05)]">
+<a href="#home" class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-300 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Discovery</span>
+</a>
+<a href="#order-history" class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-300 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Orders</span>
+</a>
+<!-- Active Tab: Chat (Closest match to current page context) -->
+<a href="#shop-chat" class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-200 rounded-xl px-5 py-2 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Chat</span>
+</a>
+<a href="#profile" class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-300 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-medium tracking-wide">Profile</span>
+</a>
+</nav>
+<!-- Add space for BottomNavBar -->
+<div class="h-24"></div>
+  </div>
+  <div class="screen" id="cart">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_32px_0_rgba(85,67,54,0.08)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<a href="#home" class="text-orange-600 dark:text-orange-400 active:scale-95 transition-transform duration-200"><span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span></a>
+<h1 class="font-plus-jakarta-sans font-bold text-lg tracking-tight text-on-surface">Aapka cart</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-plus-jakarta-sans font-extrabold text-orange-700 dark:text-orange-500 italic">BazaarSetu</span>
+<button class="text-orange-600 dark:text-orange-400 active:scale-95 transition-transform duration-200 p-2 hover:bg-orange-50 dark:hover:bg-stone-800 rounded-full">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-4 max-w-2xl mx-auto space-y-8">
+<!-- Store Identity Header -->
+<section class="flex items-center justify-between bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="storefront">storefront</span>
+<h2 class="text-xl font-bold text-on-surface">Sharma General Store</h2>
+</div>
+<p class="text-sm text-on-surface-variant font-medium italic opacity-80">'Apni local dukaan, ab online'</p>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                VERIFIED
+            </div>
+</section>
+<!-- Cart Items List -->
+<section class="space-y-6">
+<!-- Item 1 -->
+<div class="grid grid-cols-[100px_1fr] gap-6 bg-surface-container-low p-4 rounded-xl items-center relative overflow-hidden">
+<div class="w-[100px] h-[100px] rounded-xl overflow-hidden bg-white">
+<img alt="Milk bottle" class="w-full h-full object-cover" data-alt="close-up of a fresh glass milk bottle on a clean white surface with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHKvzQ50YIc3ufOAkG_6N0vDx1MES2CrHEtmtN4ziloK0UkorMoAlceS38am6jIEEB45r7g5gsxE6uFBvKr5Zrr9L2Zb3MIGOKwUjPlRUOXcrCaPmoORn_H6-KvaKDz3BPMIAZ5ncTZ0qsBbCJmSG4LYz0CewffkNiC98MoknA1gs-buPn3kcOXDhPdg43niPad-ytlQP98iJaHxeJMJrlcpdR_9FxVmr2ZDWR19vPUompBHhEmwj6uWG9Hm7b90PaUkTcgSgBnIA"/>
+</div>
+<div class="flex flex-col justify-between h-full py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-on-surface">Mother Dairy Milk 1L</h3>
+<p class="text-sm text-on-surface-variant">Fresh Full Cream</p>
+</div>
+<span class="font-bold text-on-surface">₹66</span>
+</div>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center bg-surface-container-highest rounded-lg overflow-hidden">
+<button class="px-3 py-1 hover:bg-primary-fixed transition-colors"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="px-3 font-bold text-sm">1</span>
+<button class="px-3 py-1 hover:bg-primary-fixed transition-colors"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="grid grid-cols-[100px_1fr] gap-6 bg-surface-container-low p-4 rounded-xl items-center relative overflow-hidden">
+<div class="w-[100px] h-[100px] rounded-xl overflow-hidden bg-white">
+<img alt="Flour bag" class="w-full h-full object-cover" data-alt="artisanal flour sack spilling onto a rustic wooden table with warm cinematic lighting and grain textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVwuKZDVJNr7u4J5ASRfeIy419DX09u9wWyOXSekT8M4NuU1CDEqAQ3MBxUAzuIcj2V28wVnaMi4UpMfaeNmAgfMHky7O7h39sknBMKn1tvHTI8sFq6FlIGtJhUv7GMXq7axJyqV1in0lBXBBBeIRva0jJs3-T7XxW0ZtZyeN3g85yZ_YTY3sY6HbfeEVjygJSnKQkKyESh37SXTSZO7YyHABwPzIh8_1inYI6wrBSERu6KaMswZsh7OzBr8VnFKhC8jvKO8yj7uc"/>
+</div>
+<div class="flex flex-col justify-between h-full py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-on-surface">Aashirvaad Atta 5kg</h3>
+<p class="text-sm text-on-surface-variant">Whole Wheat Chakki Atta</p>
+</div>
+<span class="font-bold text-on-surface">₹240</span>
+</div>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center bg-surface-container-highest rounded-lg overflow-hidden">
+<button class="px-3 py-1 hover:bg-primary-fixed transition-colors"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="px-3 font-bold text-sm">1</span>
+<button class="px-3 py-1 hover:bg-primary-fixed transition-colors"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bill Summary -->
+<section class="bg-surface-container-low rounded-2xl p-6 space-y-4">
+<h3 class="font-bold text-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="receipt">receipt</span>
+                Bill details
+            </h3>
+<div class="space-y-3">
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span>Items total</span>
+<span>₹306</span>
+</div>
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span>Delivery partner fee</span>
+<span class="text-secondary font-medium">FREE</span>
+</div>
+<div class="h-px bg-outline-variant/20 my-2"></div>
+<div class="flex justify-between items-center">
+<span class="text-base font-bold text-on-surface">Total amount</span>
+<span class="text-xl font-extrabold text-on-surface">₹306</span>
+</div>
+</div>
+</section>
+<!-- Trust Badge Section -->
+<section class="flex gap-4 p-4 border border-outline-variant/10 rounded-xl bg-white">
+<div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-orange-600" data-icon="security" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-on-surface">Safe and Trusted</h4>
+<p class="text-xs text-on-surface-variant">Your order is protected by BazaarSetu's local trust guarantee.</p>
+</div>
+</section>
+</main>
+<!-- Checkout Action Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-white/90 dark:bg-stone-900/90 backdrop-blur-xl px-6 pt-4 pb-8 shadow-[0_-8px_24px_rgba(85,67,54,0.1)] flex flex-col gap-4 z-40">
+<div class="flex justify-between items-center mb-2">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase">PAYING</span>
+<span class="text-lg font-extrabold text-on-surface">₹306</span>
+</div>
+<div class="flex items-center gap-1 text-secondary text-sm font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+                100% Secure
+            </div>
+</div>
+<a href="#order-confirm" class="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+            Order karein
+            <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md rounded-t-3xl z-50 pointer-events-none opacity-0 md:opacity-100 md:pointer-events-auto">
+<a href="#home" class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Bazaar</span>
+</a>
+<a href="#order-history" class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Orders</span>
+</a>
+<a href="#profile" class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Account</span>
+</a>
+<a href="#shop-chat" class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Help</span>
+</a>
+<!-- TopAppBar (Suppressed for focused Transactional Success state, but keeping a minimal brand anchor if needed. Per rules: Suppression preferred for Transactional.) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full shadow-[0_32px_0_rgba(85,67,54,0.08)]">
+<div class="flex items-center gap-3">
+<a href="#home" class="text-stone-500 hover:bg-orange-50 p-2 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+<div class="flex flex-col">
+<span class="font-plus-jakarta-sans font-extrabold text-orange-700 italic leading-none">BazaarSetu</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider text-stone-500 italic mt-0.5">Apni local dukaan, ab online</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-stone-500" data-icon="shopping_basket">shopping_basket</span>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-24 pb-32">
+<!-- Visual Success Element -->
+<div class="relative w-full max-w-sm mb-12">
+<!-- Digital Courtyard: Asymmetric Layering -->
+<div class="absolute -top-8 -left-4 w-32 h-32 bg-primary-fixed opacity-40 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-8 -right-4 w-40 h-40 bg-secondary-fixed opacity-20 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center">
+<!-- Illustration Placeholder with Tonal Layering -->
+<div class="w-64 h-64 rounded-xl bg-surface-container-low flex items-center justify-center overflow-hidden mb-8 shadow-[0_32px_0_rgba(85,67,54,0.04)]">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90" data-alt="Illustration of a happy Indian shopkeeper standing proudly in front of a colorful village market stall with fresh produce and warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQIR3STloBTvrM6-uiLiAHe8LYle7yq67XExgef2Zh9R8lOyjMm7u_X1_5NSkZhVCQpui6Jxq04ZQEuUHtTXiIqUVCJV7PuxrY1U9YUV888a9wO1Az_jcvt_TYzakCcinYOIIciNNqADI7vYJJEqCJcOs300COztT6cZuMgotpIsUrmhH70N6b7UNd6VfcMCzLpCloq0kxWsdA-kcFhw64bQSQYjQsZ_Nowyouh4Fnad7obC_ADU01d_e0IoEA1rPnw6q1d8HhqTM"/>
+</div>
+<!-- Success Badge -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-20">
+<div class="bg-secondary p-4 rounded-full shadow-lg scale-110">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Typography Content -->
+<div class="text-center max-w-md w-full">
+<h1 class="font-headline font-extrabold text-3xl text-on-background tracking-tight mb-2">Order confirm ho gaya 🎉</h1>
+<p class="text-on-surface-variant font-medium text-lg mb-8">Dukaan aapka order prepare kar rahi hai</p>
+<!-- Order Info Chip -->
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full mb-12">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="tag">tag</span>
+<span class="font-label font-bold text-on-surface text-sm">Order ID: #BS-9874</span>
+</div>
+<!-- Bento Card for Store Details (Editorial Pattern) -->
+<div class="bg-surface-container-low rounded-xl p-6 text-left mb-12 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-white shadow-sm flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of fresh organic vegetables in a wooden crate at a local Indian vegetable market" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkKou3KWlXqt-oiqAKA0DsCmvfPitdgrwSiJhRVlQ5IAVS9NJazYamGV4U-f3L3RvWTX19tEGK1Wzm4Apz50_ob1du_3ZvQPMVECJQrMJ73qM09cA2eFx0R12B3-gVzPBR-WDaGzH732hZOZptC_n6m-RlW5TOlJTPyObjYYrPwtnRoXBOvaJ08rJA8rbjzWzlwpqz-ucUU2WfFu8mmiSZmBMXwgn4W5OPO_IfoPfXwOxjB9s3gdPnENGqrveoLeQoz9Ru-vE4dkg"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-1 block">Preparing at</span>
+<h3 class="font-headline font-bold text-on-surface leading-tight">Sharma Grocery Store</h3>
+<p class="text-on-surface-variant text-xs flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                        Sector 14, Marketplace
+                    </p>
+</div>
+</div>
+<!-- Primary CTA -->
+<a href="#order-status" class="w-full courtyard-gradient py-5 rounded-xl shadow-[0_32px_0_rgba(85,67,54,0.08)] active:scale-[0.98] transition-all flex items-center justify-center gap-3 block text-center">
+<span class="material-symbols-outlined text-white" data-icon="local_shipping" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="text-white font-headline font-bold text-lg">Order track karein</span>
+</a>
+<a href="#home" class="mt-6 w-full py-4 text-on-surface-variant font-headline font-bold hover:bg-surface-container-low transition-colors rounded-xl block text-center">
+                Bazaar wapas chalo
+            </a>
+</div>
+</main>
+<!-- Bottom Navigation (Suppressed per Transactional Flow Rules, but keeping semantic structure ready if user leaves this screen) -->
+<!-- Not visible as it's a success confirmation page, prioritizing the content canvas. -->
+  </div>
+  <div class="screen" id="order-status">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_32px_0_rgba(85,67,54,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<a href="#home" class="text-orange-600 dark:text-orange-400 active:scale-95 transition-transform duration-200"><span class="material-symbols-outlined">arrow_back</span></a>
+<div>
+<h1 class="font-headline font-bold text-lg tracking-tight text-on-surface">Aapka order</h1>
+<p class="font-headline font-extrabold text-orange-700 dark:text-orange-500 italic text-xs">Apni local dukaan, ab online</p>
+</div>
+</div>
+<button class="text-orange-600 dark:text-orange-400 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">shopping_basket</span>
+</button>
+</div>
+</header>
+<main class="mt-24 px-6 space-y-8">
+<!-- Order Header & Status Announcement -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-6">
+<div class="relative z-10 flex flex-col gap-2">
+<span class="inline-flex w-fit px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label text-[10px] font-bold tracking-widest uppercase">
+                    Order ID: #BZ-8821
+                </span>
+<h2 class="font-headline text-2xl font-bold text-on-surface leading-tight mt-2">Sharma General Store</h2>
+<p class="text-on-surface-variant font-body">Dukaan ne aapka order accept kar liya hai!</p>
+</div>
+<!-- Decorative asymmetrical element -->
+<div class="absolute -right-4 -bottom-4 w-32 h-32 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+</section>
+<!-- Stepper / Progress Flow -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<div class="relative flex flex-col gap-8">
+<!-- Vertical Line -->
+<div class="absolute left-4 top-4 bottom-4 w-0.5 bg-surface-container-highest"></div>
+<div class="absolute left-4 top-4 h-1/3 w-0.5 digital-courtyard-gradient"></div>
+<!-- Step 1: Pending (Completed Style) -->
+<div class="flex gap-6 items-start relative">
+<div class="z-10 w-8 h-8 rounded-full digital-courtyard-gradient flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline font-bold text-on-surface">Pending</h3>
+<p class="text-sm text-on-surface-variant">Dukaan dekh rahi hai</p>
+</div>
+</div>
+<!-- Step 2: Accepted (Active Style) -->
+<div class="flex gap-6 items-start relative step-active">
+<div class="z-10 w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shrink-0 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline font-bold text-primary">Accepted</h3>
+<p class="text-sm text-on-primary-container">Order accept ho gaya</p>
+<span class="mt-2 text-[10px] font-bold text-secondary uppercase tracking-tighter">Current Status</span>
+</div>
+</div>
+<!-- Step 3: Preparing -->
+<div class="flex gap-6 items-start relative">
+<div class="z-10 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-sm">nest_eco_leaf</span>
+</div>
+<div class="flex flex-col opacity-60">
+<h3 class="font-headline font-bold text-on-surface">Preparing</h3>
+<p class="text-sm text-on-surface-variant">Tayaar ho raha hai</p>
+</div>
+</div>
+<!-- Step 4: Completed -->
+<div class="flex gap-6 items-start relative">
+<div class="z-10 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-sm">celebration</span>
+</div>
+<div class="flex flex-col opacity-60">
+<h3 class="font-headline font-bold text-on-surface">Completed</h3>
+<p class="text-sm text-on-surface-variant">Order complete ho gaya</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Summary & Merchant Details Bento Style -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Merchant Quick Info -->
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between">
+<div class="flex items-center gap-4">
+<img alt="Sharma General Store storefront" class="w-16 h-16 rounded-xl object-cover" data-alt="Close up of a friendly Indian merchant in a small neighborhood shop with colorful spice packets in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKpQDYQekc1iGH1XM-NHzktHBlmg4tPO3fa5Rn64i2c4yYURjziZzURUk_ByHi1n7OyYYdrbWWrthLQyuPisDfrcwSpc1i6nHFSYKdTEp5X4A1P54GQFiV4SIA0xA9PRdj89lek7HXwiCgW1vRfGB7frJA3aS5suXGidvGUU5vA-oz1KurFohFNEcD5E6sW6gbXQuaikB9cLLFtVxc3iH3Uq7iaUtD_LwtaLMd-jUgnC4duCQPGe2hag_caEMob2jFlNDZmivXjQQ"/>
+<div>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Merchant</p>
+<h4 class="font-headline font-bold text-on-surface">Mr. Sharma</h4>
+</div>
+</div>
+<div class="mt-6 flex gap-2">
+<button class="flex-1 bg-surface-container-highest text-on-surface font-label py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">call</span>
+                        Call
+                    </button>
+<button class="flex-1 bg-surface-container-highest text-on-surface font-label py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        Track
+                    </button>
+</div>
+</div>
+<!-- Summary Card -->
+<div class="bg-white rounded-xl p-6 shadow-sm border border-outline-variant/15">
+<h4 class="font-headline font-bold text-on-surface mb-4">Order Summary</h4>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Aashirvaad Atta (5kg)</span>
+<span class="font-bold text-on-surface">₹320.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Fortune Mustard Oil (1L)</span>
+<span class="font-bold text-on-surface">₹165.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Amul Butter (100g)</span>
+<span class="font-bold text-on-surface">₹58.00</span>
+</div>
+<div class="pt-4 mt-4 border-t border-dashed border-outline-variant/30 flex justify-between items-center">
+<span class="font-headline font-bold text-on-surface">Total Bill</span>
+<span class="font-headline font-extrabold text-primary text-xl tracking-tight">₹543.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Help Section -->
+<section class="flex flex-col items-center gap-4 py-8">
+<p class="text-sm text-on-surface-variant italic font-medium">'Apni local dukaan, ab online'</p>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+                    Need help?
+                </div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md z-50 rounded-t-3xl shadow-[0_-8px_24px_rgba(85,67,54,0.05)]">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-400 active:scale-90 transition-all duration-200" href="#home">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Bazaar</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-200" href="#order-history">
+<span class="material-symbols-outlined" data-icon="receipt_long" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-400 active:scale-90 transition-all duration-200" href="#shop-chat">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-orange-600 dark:hover:text-orange-400 active:scale-90 transition-all duration-200" href="#profile">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-inter text-[10px] font-medium uppercase tracking-wider">Help</span>
+</a>
+</nav>
+  </div>
+  <div class="screen" id="order-history">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 custom-shadow">
+<div class="flex items-center gap-4">
+<a href="#home" class="flex items-center justify-center p-2 rounded-full hover:bg-zinc-100 transition-transform active:scale-95 duration-200"><span class="material-symbols-outlined text-orange-600" data-icon="arrow_back">arrow_back</span></a>
+<h1 class="headline-font font-bold text-xl tracking-tight text-on-surface">Aapke Orders</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-zinc-100 transition-colors">
+<span class="material-symbols-outlined text-zinc-500" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-5 max-w-2xl mx-auto min-h-screen">
+<!-- Filter/Status Chips (Editorial Style) -->
+<div class="flex gap-3 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<button class="bg-primary-fixed text-on-primary-fixed px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap active:scale-95 transition-all">Sabhi Orders</button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap active:scale-95 transition-all">Pichle Mahine</button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap active:scale-95 transition-all">Active</button>
+</div>
+<!-- Order List -->
+<div class="space-y-6">
+<!-- Order Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/15 relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up of a rustic Indian vegetable vendor stall with fresh green chilies and red tomatoes in baskets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhp7KIKFK-vSVo7krfmCzYrwBrNFSeG6JCAJXpgP81QKhRC0cMUzFhH2neoQTtgR-2Icp1OZPpWT1mHl8E4iIPqwT2dyGEKN_l8ij6s8ElpxV56uB8B5JPkvW4mQe-L3HjnLuocSb7lsipGhe18_I4c1muJWNiEPIWZSmuGHoSC5HAEtj6OSJrQALQ2KMM3fAKTmGZ-o1gi35m_tzTYzvo-AC-e9AKccS6hjI-4WoCqN1MJeiof0W89Gr_wiNeMJkK6M3tg526oqM"/>
+</div>
+<div>
+<h3 class="headline-font font-bold text-lg text-on-surface">Sharma Fresh Produce</h3>
+<div class="flex items-center gap-2 text-zinc-500 text-xs mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span>
+<span>12 Oct, 2023 • 10:30 AM</span>
+</div>
+</div>
+</div>
+<div class="bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">DELIVERED</div>
+</div>
+<div class="flex items-center justify-between py-4 border-y border-zinc-100/50">
+<div class="space-y-1">
+<p class="text-zinc-500 text-xs">Items</p>
+<p class="font-semibold text-on-surface">3 items</p>
+</div>
+<div class="text-right space-y-1">
+<p class="text-zinc-500 text-xs">Total Amount</p>
+<p class="font-bold text-xl text-on-surface">₹250</p>
+</div>
+</div>
+<div class="mt-5 flex gap-3">
+<button class="flex-1 bg-surface-container-high text-on-surface font-semibold py-3 rounded-xl active:scale-95 transition-all text-sm">Details Dekhein</button>
+<button class="flex-[1.5] bg-gradient-to-br from-primary to-primary-container text-white font-bold py-3 rounded-xl shadow-lg shadow-orange-700/10 active:scale-95 transition-all text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="rebase_edit">rebase_edit</span>
+                        Repeat karein
+                    </button>
+</div>
+</div>
+<!-- Order Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/15 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Interior of a traditional Indian grocery store with shelves stacked with colorful spice packets and grains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNZifL_bi-SiGjLgKQdfAD7-lhM1n2mtPLsolWVgQ9diFBxFjJoYiDZSglNzsMagh3yBjDEtfnqxALEkzTlFgmIvOyvqi4VZyvf-RGE4G8id_WF1Ww5UItinJsrYDA711uLymdUDJFQy1rDzwGxrPPaJrwBJ1wPVVQgJN8JXz2xwzQDum9KuWi4dF33VtKe1G9gnBBpgQbMIYjNt9S-xsKSHNZjmULGCH_sU_uSyyd7p_qecleicAJjh3Wqnxlz2iErh6XkHl1P_c"/>
+</div>
+<div>
+<h3 class="headline-font font-bold text-lg text-on-surface">Gupta Ji Kirana</h3>
+<div class="flex items-center gap-2 text-zinc-500 text-xs mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span>
+<span>08 Oct, 2023 • 06:15 PM</span>
+</div>
+</div>
+</div>
+<div class="bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">DELIVERED</div>
+</div>
+<div class="flex items-center justify-between py-4 border-y border-zinc-100/50">
+<div class="space-y-1">
+<p class="text-zinc-500 text-xs">Items</p>
+<p class="font-semibold text-on-surface">8 items</p>
+</div>
+<div class="text-right space-y-1">
+<p class="text-zinc-500 text-xs">Total Amount</p>
+<p class="font-bold text-xl text-on-surface">₹1,140</p>
+</div>
+</div>
+<div class="mt-5 flex gap-3">
+<button class="flex-1 bg-surface-container-high text-on-surface font-semibold py-3 rounded-xl active:scale-95 transition-all text-sm">Details Dekhein</button>
+<button class="flex-[1.5] bg-gradient-to-br from-primary to-primary-container text-white font-bold py-3 rounded-xl shadow-lg shadow-orange-700/10 active:scale-95 transition-all text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="rebase_edit">rebase_edit</span>
+                        Repeat karein
+                    </button>
+</div>
+</div>
+<!-- Order Card 3 (Asymmetric Accent) -->
+<div class="bg-surface-container-low rounded-xl p-5 shadow-sm border-l-4 border-orange-500 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Vibrant array of Indian sweets like laddoos and barfis arranged in a glass display case with golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN4aRYTHMHEblf5-3EMjX-hVvFaKYzIWxWcv-kA_EMEHBHjB18_7cHuPEqdqM4JN3LyO738kD0YDcuSaIFfzbtQKk-8kHGDqhQ2RKD5V2hUlAbOCcP85rtdH7TvNU7RN1WaNBKLExmGQJ8ud97iCvqxCbX79utH7T6vqQZ7pI3x4j31nJV0uJ6dc5VncW6phRwV449ABTAoL0fqMjoXZkh9-jbqM4wltp-jdbXhMvTHDyUXcL9WWKWXVqTRDyQi089htZesaW-i4o"/>
+</div>
+<div>
+<h3 class="headline-font font-bold text-lg text-on-surface">Bikaner Sweets</h3>
+<div class="flex items-center gap-2 text-zinc-500 text-xs mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="calendar_today">calendar_today</span>
+<span>01 Oct, 2023 • 12:00 PM</span>
+</div>
+</div>
+</div>
+<div class="bg-zinc-200 text-zinc-600 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">CANCELLED</div>
+</div>
+<div class="flex items-center justify-between py-4 border-y border-zinc-100/50">
+<div class="space-y-1">
+<p class="text-zinc-500 text-xs">Items</p>
+<p class="font-semibold text-on-surface">2 items</p>
+</div>
+<div class="text-right space-y-1">
+<p class="text-zinc-500 text-xs">Total Amount</p>
+<p class="font-bold text-xl text-on-surface">₹480</p>
+</div>
+</div>
+<div class="mt-5">
+<button class="w-full bg-surface-container-highest text-on-surface font-semibold py-3 rounded-xl active:scale-95 transition-all text-sm">Details Dekhein</button>
+</div>
+</div>
+</div>
+<!-- Footer Tagline -->
+<div class="mt-12 text-center pb-12">
+<p class="headline-font italic text-sm text-zinc-400">Apni local dukaan, ab online</p>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl flex justify-around items-center px-4 pb-6 pt-3 z-50 rounded-t-[1.5rem] nav-shadow border-t border-zinc-100">
+<a href="#home" class="flex flex-col items-center justify-center text-zinc-500 px-5 py-2 transition-colors hover:text-orange-500 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_SANS'] font-medium text-[10px] uppercase tracking-widest mt-1">Ghar</span>
+</a>
+<a href="#order-history" class="flex flex-col items-center justify-center bg-orange-100 text-orange-700 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="receipt_long" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-['Plus_Jakarta_SANS'] font-medium text-[10px] uppercase tracking-widest mt-1">Orders</span>
+</a>
+<a href="#shop-chat" class="flex flex-col items-center justify-center text-zinc-500 px-5 py-2 transition-colors hover:text-orange-500 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-['Plus_Jakarta_SANS'] font-medium text-[10px] uppercase tracking-widest mt-1">Chat</span>
+</a>
+<a href="#profile" class="flex flex-col items-center justify-center text-zinc-500 px-5 py-2 transition-colors hover:text-orange-500 active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_SANS'] font-medium text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<!-- Background Decoration (Digital Courtyard Vibe) -->
+<div class="fixed top-0 right-0 -z-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+  </div>
+  <div class="screen" id="profile">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_32px_0_rgba(85,67,54,0.08)]">
+<div class="flex items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<a href="#home" class="mr-4 text-[#8f4e00] dark:text-[#ff9933] active:scale-95 transition-transform duration-200"><span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span></a>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-xl tracking-tight text-[#8f4e00] dark:text-[#ff9933]">Mera Profile</h1>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-screen-md mx-auto">
+<!-- Hero Profile Section: Editorial Asymmetry -->
+<section class="relative mb-12">
+<div class="flex items-center gap-6">
+<div class="relative">
+<!-- Profile Picture with Ambient Shadow -->
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-surface-container-lowest shadow-[0_12px_32px_rgba(85,67,54,0.12)]">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a friendly smiling young Indian man with a warm expression, soft natural sunlight, outdoor garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl3IO77R2mMdZhDOH5x7mpWvJJK7irTR1YznAEU-BGZhL26LB8L8t3cRYe_e5nSnbnT619QU9JaTH4wo21OpSt2RZvl_qkiQ6rOy6p4QxqAnbHSE1U8YkSaDqCQo_ic7QikJR-IV5VBMt4gK-o1KoiRl4JRtpTqeBbBjpDRvE2uAMYa7vAlpe3u_gdRhTnX2NStkkOv6BcFCPqKAVijL_GYyC1ASoheN-AS_JbIrJ6Ix-UXrDpHir0gEnHEM3E8RKnjmP2xFAh-kc"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary-container text-white p-1.5 rounded-full border-2 border-surface shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'wght' 700;">verified</span>
+</div>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline font-extrabold text-3xl text-on-surface tracking-tight leading-tight">Namaste, Arjun</h2>
+<p class="font-label text-on-surface-variant text-base flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-sm">call</span>
+                        7900XXXXXX
+                    </p>
+<div class="mt-3 inline-flex items-center px-3 py-1 bg-secondary-container/30 text-secondary font-semibold text-xs rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-1">star</span>
+                        Premium Member
+                    </div>
+</div>
+</div>
+</section>
+<!-- Digital Courtyard: Menu Items -->
+<!-- The "No-Line" Rule: Separation via tonal surface shifts -->
+<section class="bg-surface-container-low rounded-[2rem] p-4 mb-8">
+<div class="space-y-3">
+<!-- Mere Orders -->
+<a class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl hover:bg-orange-50 dark:hover:bg-orange-900/20 active:scale-98 transition-all duration-200 group" href="#order-history">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div>
+<span class="font-headline font-bold text-on-surface text-lg block">Mere Orders</span>
+<span class="font-body text-xs text-on-surface-variant">Check status of your deliveries</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<!-- Saved Addresses -->
+<a class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl hover:bg-orange-50 active:scale-98 transition-all duration-200 group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<span class="font-headline font-bold text-on-surface text-lg block">Bachaya hua pata (Saved Addresses)</span>
+<span class="font-body text-xs text-on-surface-variant">Manage your delivery locations</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<!-- Digital Ledger -->
+<a class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl hover:bg-orange-50 active:scale-98 transition-all duration-200 group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<span class="font-headline font-bold text-on-surface text-lg block">Mera Khata (Digital Ledger/Balance)</span>
+<span class="font-body text-xs text-on-surface-variant">₹ 1,240 available balance</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<!-- Help & Support -->
+<a class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl hover:bg-orange-50 active:scale-98 transition-all duration-200 group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</div>
+<div>
+<span class="font-headline font-bold text-on-surface text-lg block">Madad aur Support (Help)</span>
+<span class="font-body text-xs text-on-surface-variant">24/7 customer assistance</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<!-- About -->
+<a class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl hover:bg-orange-50 active:scale-98 transition-all duration-200 group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+</div>
+<div>
+<span class="font-headline font-bold text-on-surface text-lg block">BazaarSetu ke baare mein</span>
+<span class="font-body text-xs text-on-surface-variant">Version 2.4.0</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Brand Promise -->
+<div class="text-center mb-12">
+<p class="font-headline font-bold text-primary italic text-sm tracking-wide">
+                'Apni local dukaan, ab online'
+            </p>
+</div>
+<!-- Logout Section -->
+<div class="mb-12">
+<button class="w-full flex items-center justify-center gap-3 py-4 bg-error-container text-on-error-container font-headline font-bold text-lg rounded-2xl active:scale-95 transition-transform duration-200 shadow-sm">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md rounded-t-3xl z-50 shadow-[0_-8px_32px_rgba(85,67,54,0.08)] border-t border-stone-100/10">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#8f4e00] dark:hover:text-[#ff9933] active:scale-90 transition-all duration-200" href="#home">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-widest">Home</span>
+</a>
+<!-- Orders -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#8f4e00] dark:hover:text-[#ff9933] active:scale-90 transition-all duration-200" href="#order-history">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-widest">Orders</span>
+</a>
+<!-- Chat -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#8f4e00] dark:hover:text-[#ff9933] active:scale-90 transition-all duration-200" href="#shop-chat">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-widest">Chat</span>
+</a>
+<!-- Profile (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#ff9933] text-white rounded-2xl px-4 py-2 scale-105 active:scale-90 transition-all duration-200" href="#profile">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+  </div>
+  <div class="screen" id="notifications">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full flex items-center px-6 h-16 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl z-50 shadow-[0_32px_0_0_rgba(85,67,54,0.08)]">
+<div class="flex items-center gap-4">
+<a href="#home" class="material-symbols-outlined text-[#8f4e00] dark:text-[#ff9933] hover:bg-stone-100 dark:hover:bg-stone-800 p-2 rounded-full transition-colors active:scale-95 duration-200">arrow_back</a>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-xl tracking-tight text-[#8f4e00] dark:text-[#ff9933]">
+                Naye Updates
+            </h1>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Today's Section -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline font-bold text-lg text-on-surface-variant">Aaj</h2>
+<span class="text-xs font-label uppercase tracking-widest text-outline">3 New</span>
+</div>
+<div class="space-y-6">
+<!-- Notification 1: New Order -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/10 flex gap-4 transition-all hover:shadow-md">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">package_2</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-on-surface">Naya order aaya hai</h3>
+<span class="text-[10px] font-medium text-outline uppercase tracking-tighter">Abhi</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 font-body leading-relaxed">Ek naya order #BS-8829 receive hua hai. Kripya details check karein.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-sm bg-primary-fixed/30 px-4 py-2 rounded-lg hover:bg-primary-fixed transition-colors active:scale-95 duration-200" href="#order-history">
+                            View Order
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Notification 2: Message -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-outline-variant/10 flex gap-4 transition-all hover:shadow-md">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center shadow-lg shadow-tertiary-container/20">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-on-surface">Customer ne message bheja</h3>
+<span class="text-[10px] font-medium text-outline uppercase tracking-tighter">10 min pehle</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-3 font-body">
+<span class="font-bold text-on-surface">Arjun Kumar:</span> "Bhaiya, kya ye saman aaj delivery ho jayega?"
+                        </p>
+<div class="flex gap-3">
+<button class="text-white text-sm font-bold bg-gradient-to-br from-primary to-primary-container px-6 py-2 rounded-lg shadow-md active:scale-95 transition-all">
+                                Reply
+                            </button>
+<button class="text-on-surface-variant text-sm font-bold bg-surface-container-high px-6 py-2 rounded-lg active:scale-95 transition-all">
+                                Mark Read
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Earlier Section -->
+<section class="mb-12">
+<h2 class="font-headline font-bold text-lg text-on-surface-variant mb-6">Pehle</h2>
+<div class="space-y-4">
+<!-- Notification 3: Order Completed -->
+<div class="bg-surface-container-low p-5 rounded-xl flex gap-4 opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shadow-lg shadow-secondary-container/20">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-on-surface">Order complete ho gaya</h3>
+<span class="text-[10px] font-medium text-outline uppercase tracking-tighter">Kal, 4:30 PM</span>
+</div>
+<p class="text-sm text-on-surface-variant font-body">Order #BS-8812 successfully deliver ho chuka hai. Mubarak ho!</p>
+</div>
+</div>
+<!-- Featured Image Card (Editorial Element) -->
+<div class="relative overflow-hidden rounded-2xl bg-primary-fixed h-48 flex items-end p-6 group">
+<img alt="Indian Bazaar Scene" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="vibrant indian fruit market with stacks of oranges and colorful produce under warm golden sunlight narrow street atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdoLUIFsqwaMn3T-T7JZQ-0RMyn4nQMU5e1w_gSD_PSHzuvUQ_fLugHRGkfGL65KswVbj5z9V5vCvrXKZtPP6oEmdpqcmK3IYjR-012up0-dI6XdLDZdLCrFU3r-Z3vc0lxn3C_VS-L0hhEQHX3MJS5ew7upkIMiUDSFXFuTIKmibCDZofl7BnMM7vXjaEXKzaAQBP2IpZSiRj4UjIP-c_H1fB9OqHETjtnj9BbClObs1L3JB1HzanJb23zLf_kwPgoeSV5QVQnDg"/>
+<div class="relative z-10">
+<h4 class="font-headline font-extrabold text-2xl text-on-primary-fixed leading-tight mb-1">Digital Dukaan Badhao</h4>
+<p class="font-label text-on-primary-fixed-variant italic text-sm italic">Apni local dukaan, ab online</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-t-[1.5rem] shadow-[0_-8px_32px_rgba(85,67,54,0.08)]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#8f4e00] dark:hover:text-[#ff9933] transition-all active:scale-90 duration-200" href="#home">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<!-- Orders -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#8f4e00] dark:hover:text-[#ff9933] transition-all active:scale-90 duration-200" href="#order-history">
+<span class="material-symbols-outlined mb-1">receipt_long</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Orders</span>
+</a>
+<!-- Updates (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-[#ff9933] text-white rounded-2xl px-4 py-2 scale-105 active:scale-90 duration-200 transition-transform" href="#notifications">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Updates</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#8f4e00] dark:hover:text-[#ff9933] transition-all active:scale-90 duration-200" href="#profile">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+  </div>
+  <script src="../../js/router.js"></script>
+</body>
+</html>

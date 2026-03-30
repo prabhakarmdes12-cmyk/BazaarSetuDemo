@@ -1,0 +1,70 @@
+/* BazaarSetu — Tailwind Config */
+/* Single source of truth, loaded once per flow file */
+
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-dim": "#dadada",
+        "primary-fixed": "#ffdcc2",
+        "outline": "#887364",
+        "surface": "#f9f9f9",
+        "surface-container-lowest": "#ffffff",
+        "background": "#f9f9f9",
+        "on-secondary": "#ffffff",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#004a62",
+        "on-tertiary-fixed-variant": "#004d65",
+        "inverse-on-surface": "#f1f1f1",
+        "on-secondary-fixed": "#012200",
+        "on-primary": "#ffffff",
+        "on-secondary-container": "#067500",
+        "on-secondary-fixed-variant": "#035300",
+        "secondary-fixed-dim": "#72de5c",
+        "error": "#ba1a1a",
+        "on-primary-fixed-variant": "#6d3a00",
+        "surface-container-highest": "#e2e2e2",
+        "on-primary-container": "#693800",
+        "on-background": "#1a1c1c",
+        "surface-container": "#eeeeee",
+        "primary": "#8f4e00",
+        "surface-container-high": "#e8e8e8",
+        "tertiary": "#006685",
+        "tertiary-fixed": "#bfe9ff",
+        "secondary-container": "#8dfc75",
+        "tertiary-fixed-dim": "#6cd2ff",
+        "on-surface-variant": "#554336",
+        "secondary": "#056e00",
+        "on-tertiary": "#ffffff",
+        "primary-fixed-dim": "#ffb77a",
+        "on-tertiary-fixed": "#001f2a",
+        "primary-container": "#ff9933",
+        "surface-variant": "#e2e2e2",
+        "surface-tint": "#8f4e00",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "inverse-primary": "#ffb77a",
+        "tertiary-container": "#00c0f7",
+        "surface-bright": "#f9f9f9",
+        "outline-variant": "#dbc2b0",
+        "on-surface": "#1a1c1c",
+        "inverse-surface": "#2f3131",
+        "on-primary-fixed": "#2e1500",
+        "secondary-fixed": "#8dfc75",
+        "surface-container-low": "#f3f3f3"
+      },
+      fontFamily: {
+        "headline": ["Plus Jakarta Sans"],
+        "body": ["Inter"],
+        "label": ["Inter"]
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+    },
+  },
+};

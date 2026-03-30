@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>BazaarSetu - Design Demo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="js/config.js"></script>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <style>
+    body {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .role-card {
+      background: var(--surface-container-lowest);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(85,67,54,0.06);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: var(--on-surface);
+      border: 2px solid transparent;
+    }
+    .role-card:hover {
+      box-shadow: 0 16px 48px rgba(85,67,54,0.12);
+      transform: translateY(-4px);
+      border-color: rgba(143,78,0,0.15);
+    }
+    .role-card:active {
+      transform: translateY(0) scale(0.98);
+    }
+    .role-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body">
+
+  <main class="w-full max-w-3xl mx-auto px-6 py-12">
+    <!-- Branding -->
+    <div class="text-center mb-16">
+      <h1 class="font-headline font-black text-5xl text-orange-700 italic tracking-tight mb-3">BazaarSetu</h1>
+      <p class="font-headline italic text-lg font-semibold text-primary">'Apni local dukaan, ab online'</p>
+      <p class="text-on-surface-variant mt-4 text-base">Design Demo — Select a user flow to explore</p>
+    </div>
+
+    <!-- Role Selection Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Customer -->
+      <a href="screens/customer/app.html#splash" class="role-card">
+        <div class="role-icon editorial-gradient text-white">
+          <span class="material-symbols-outlined" style="font-size: 2rem;">person</span>
+        </div>
+        <h2 class="font-headline font-extrabold text-xl mb-1">Customer</h2>
+        <p class="text-on-surface-variant text-sm mb-3">Browse shops, order products</p>
+        <div class="flex gap-2 flex-wrap justify-center">
+          <span class="text-[10px] font-bold bg-primary-fixed text-on-primary-fixed px-2 py-1 rounded-full">12 screens</span>
+          <span class="text-[10px] font-bold bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-full">Splash → Home → Cart → Order</span>
+        </div>
+      </a>
+
+      <!-- Vendor -->
+      <a href="screens/vendor/app.html#dashboard" class="role-card">
+        <div class="role-icon bg-gradient-to-br from-secondary to-secondary-container text-white">
+          <span class="material-symbols-outlined" style="font-size: 2rem;">storefront</span>
+        </div>
+        <h2 class="font-headline font-extrabold text-xl mb-1">Vendor</h2>
+        <p class="text-on-surface-variant text-sm mb-3">Manage your store, orders, payouts</p>
+        <div class="flex gap-2 flex-wrap justify-center">
+          <span class="text-[10px] font-bold bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full">15 screens</span>
+          <span class="text-[10px] font-bold bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-full">Dashboard → Inventory → Chat → Payouts</span>
+        </div>
+      </a>
+
+      <!-- Admin -->
+      <a href="screens/admin/app.html#overview" class="role-card">
+        <div class="role-icon bg-gradient-to-br from-tertiary to-tertiary-container text-white">
+          <span class="material-symbols-outlined" style="font-size: 2rem;">admin_panel_settings</span>
+        </div>
+        <h2 class="font-headline font-extrabold text-xl mb-1">Admin</h2>
+        <p class="text-on-surface-variant text-sm mb-3">Platform oversight & management</p>
+        <div class="flex gap-2 flex-wrap justify-center">
+          <span class="text-[10px] font-bold bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded-full">5 screens</span>
+          <span class="text-[10px] font-bold bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-full">Overview → Shops → Orders → Settings</span>
+        </div>
+      </a>
+
+      <!-- Udhaar Khata -->
+      <a href="screens/udhaar/app.html#ledger" class="role-card">
+        <div class="role-icon bg-gradient-to-br from-primary to-primary-container text-white">
+          <span class="material-symbols-outlined" style="font-size: 2rem;">account_balance_wallet</span>
+        </div>
+        <h2 class="font-headline font-extrabold text-xl mb-1">Udhaar Khata</h2>
+        <p class="text-on-surface-variant text-sm mb-3">Digital credit ledger</p>
+        <div class="flex gap-2 flex-wrap justify-center">
+          <span class="text-[10px] font-bold bg-primary-fixed text-on-primary-fixed px-2 py-1 rounded-full">4 screens</span>
+          <span class="text-[10px] font-bold bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-full">Ledger → Detail → Payment → Success</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-16">
+      <p class="text-on-surface-variant/50 text-xs font-label tracking-widest uppercase">Vocal for Local &bull; Made in Bharat</p>
+    </div>
+  </main>
+
+</body>
+</html>
