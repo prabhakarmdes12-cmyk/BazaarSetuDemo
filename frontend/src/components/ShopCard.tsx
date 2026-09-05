@@ -11,7 +11,10 @@ interface ShopCardProps {
   image: string;
   rating: number;
   distance?: number;
+  roadDistance?: number;
   isDeliverable?: boolean;
+  canPickup?: boolean;
+  drivingEtaMinutes?: number;
   isOpen: boolean;
   openStatusText?: string;
   href?: string;
@@ -29,12 +32,16 @@ export default function ShopCard({
   image,
   rating,
   distance,
+  roadDistance,
   isDeliverable,
+  canPickup,
+  drivingEtaMinutes,
   isOpen,
   openStatusText,
   href,
 }: ShopCardProps) {
   const eta = estimateEtaMinutes(distance);
+  const displayDistance = roadDistance ?? distance;
 
   const cardContent = (
     <Card className={`@container p-4 flex flex-col group-hover:shadow-leaf-glow transition-shadow duration-300 ${!isOpen ? 'opacity-80' : ''}`}>
@@ -84,11 +91,15 @@ export default function ShopCard({
         <div className={`mb-4 rounded-xl px-3 py-2.5 text-xs font-extrabold ${
           isDeliverable
             ? 'bg-emerald-500/10 text-emerald-700'
-            : 'bg-amber-500/10 text-amber-800'
+            : canPickup !== false
+              ? 'bg-amber-500/10 text-amber-800'
+              : 'bg-surface-container-high text-on-surface-variant'
         }`}>
           {isDeliverable
-            ? `⚡ 10 mins${distance != null ? ` (${distance.toFixed(1)} km away)` : ' • Delivery available'}`
-            : `⚠️ ${distance != null ? `${distance.toFixed(1)} km away • ` : ''}🛍️ Self-Pickup Only`}
+            ? `⚡ 10 mins${displayDistance != null ? ` (${displayDistance.toFixed(1)} km drive)` : ' • Delivery available'}`
+            : canPickup !== false
+              ? `🛍️ Self-Pickup Available${displayDistance != null ? ` • ${displayDistance.toFixed(1)} km drive` : ''}${drivingEtaMinutes != null ? ` • ~${drivingEtaMinutes} min` : ''}`
+              : `⚠️ ${displayDistance != null ? `${displayDistance.toFixed(1)} km away • ` : ''}Outside pickup range`}
         </div>
       )}
 

@@ -69,16 +69,37 @@ describe('E2E smoke — core marketplace journey', () => {
 
     const nearShop = await request(app).get('/api/shops?lat=25.005&lng=85&pincode=999999');
     const nearResult = nearShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(nearResult.canDeliver).toBe(true);
     expect(nearResult.isDeliverable).toBe(true);
+    expect(nearResult.canPickup).toBe(true);
     expect(nearResult.distance).toBeGreaterThan(0);
+    expect(nearResult.roadDistance).toBeCloseTo(nearResult.distance * 1.3);
+    expect(nearResult.drivingEtaMinutes).toBe(
+      Math.round(10 + (nearResult.distance / 30) * 60),
+    );
+
+    const pickupShop = await request(app).get('/api/shops?lat=25.1&lng=85&pincode=999999');
+    const pickupResult = pickupShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(pickupResult.canDeliver).toBe(false);
+    expect(pickupResult.canPickup).toBe(true);
 
     const pinShop = await request(app).get('/api/shops?lat=26&lng=86&pincode=826004');
     const pinResult = pinShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(pinResult.canDeliver).toBe(true);
     expect(pinResult.isDeliverable).toBe(true);
+    expect(pinResult.canPickup).toBe(false);
 
     const farShop = await request(app).get('/api/shops?lat=26&lng=86&pincode=999999');
     const farResult = farShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(farResult.canDeliver).toBe(false);
     expect(farResult.isDeliverable).toBe(false);
+    expect(farResult.canPickup).toBe(false);
+
+    const noCoordinatesShop = await request(app).get('/api/shops?pincode=999999');
+    const noCoordinatesResult = noCoordinatesShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(noCoordinatesResult.canDeliver).toBe(false);
+    expect(noCoordinatesResult.canPickup).toBe(true);
+    expect(noCoordinatesResult.drivingEtaMinutes).toBeUndefined();
 
     const guestProducts = await request(app).get(`/api/products/shop/${shopId}`);
     expect(guestProducts.body.data.some((p: { id: string }) => p.id === productId)).toBe(true);

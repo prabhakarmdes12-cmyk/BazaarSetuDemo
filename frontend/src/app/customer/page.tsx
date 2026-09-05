@@ -765,7 +765,10 @@ export default function CustomerHomePage() {
                     image={shop.image}
                     rating={shop.rating}
                     distance={shop.distance}
+                    roadDistance={shop.roadDistance}
                     isDeliverable={shop.isDeliverable}
+                    canPickup={shop.canPickup}
+                    drivingEtaMinutes={shop.drivingEtaMinutes}
                     isOpen={shop.isActive}
                     href={`/customer/shop/${shop.id}`}
                   />

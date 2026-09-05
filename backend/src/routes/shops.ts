@@ -55,12 +55,23 @@ router.get('/', optionalAuth, async (req: AuthRequest, res: Response) => {
       const distance = hasCoordinates
         ? getDistanceKm(parsedLat, parsedLng, shop.lat, shop.lng)
         : undefined;
-      const shopPins = shop.serviceablePincodes
+      const roadDistance = distance !== undefined ? distance * 1.3 : undefined;
+
+      // Delivery is governed by the vendor's tight logistics radius or an
+      // explicitly serviceable PIN code.
+      const shopPins = (shop.serviceablePincodes || '')
         .split(',')
         .map((pin: string) => pin.trim())
         .filter(Boolean);
-      const isDeliverable = (distance !== undefined && distance * 1.3 <= shop.deliveryRadiusKm)
+      const canDeliver = (roadDistance !== undefined && roadDistance <= (shop.deliveryRadiusKm || 3.5))
         || (pincode !== undefined && shopPins.includes(pincode));
+
+      // Pickup remains useful well beyond the delivery zone, but is capped at
+      // a realistic customer commute. Without coordinates we keep pickup open.
+      const canPickup = distance !== undefined ? distance <= 50 : true;
+      const drivingEtaMinutes = distance !== undefined
+        ? Math.round(10 + (distance / 30) * 60)
+        : undefined;
 
       return {
         id: shop.id,
@@ -82,7 +93,11 @@ router.get('/', optionalAuth, async (req: AuthRequest, res: Response) => {
         freeDeliveryAbove: shop.freeDeliveryAbove,
         isFavorite: favoriteSet.has(shop.id),
         distance,
-        isDeliverable,
+        roadDistance,
+        canDeliver,
+        canPickup,
+        drivingEtaMinutes,
+        isDeliverable: canDeliver,
         createdAt: shop.createdAt.toISOString(),
       };
     });
