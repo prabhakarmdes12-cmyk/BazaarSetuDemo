@@ -17,6 +17,13 @@ export default function OrderStatusPage() {
   const { token } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
+  const [repeating, setRepeating] = useState(false);
+  const [cancelling, setCancelling] = useState(false);
+  const [disputeOpen, setDisputeOpen] = useState(false);
+  const [disputeReason, setDisputeReason] = useState('Missing item in pack');
+  const [disputeDetails, setDisputeDetails] = useState('');
+  const [disputeSubmitting, setDisputeSubmitting] = useState(false);
+  const [disputeSuccess, setDisputeSuccess] = useState(false);
   const orderId = params.id as string;
 
   useEffect(() => {
@@ -33,6 +40,57 @@ export default function OrderStatusPage() {
       setLoading(false);
     }
   }, [token, orderId]);
+
+    const handleRepeatOrder = async () => {
+    if (!order || !token) return;
+    setRepeating(true);
+    try {
+      const res = await api.post<{ success: boolean; data: any }>(`/api/orders/repeat/${order.id}`, {}, token);
+      if (res.success) {
+        router.push('/customer/cart');
+      }
+    } catch (err) {
+      console.error('Failed to repeat order:', err);
+    }
+    setRepeating(false);
+  };
+
+  const handleCancelOrder = async () => {
+    if (!order || !token) return;
+    if (!confirm('Kya aap sach mein yeh order cancel karna chahte hain?')) return;
+    setCancelling(true);
+    try {
+      const res = await api.post<{ success: boolean; data: any }>(`/api/orders/${order.id}/cancel`, { reason: 'Customer ne cancel kiya' }, token);
+      if (res.success) {
+        setOrder({ ...order, status: 'rejected', cancelReason: 'Customer ne cancel kiya' });
+      }
+    } catch (err) {
+      console.error('Failed to cancel order:', err);
+    }
+    setCancelling(false);
+  };
+
+  const handleDisputeSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!order || !token) return;
+    setDisputeSubmitting(true);
+    try {
+      const res = await api.post<{ success: boolean }>(`/api/orders/${order.id}/dispute`, {
+        reason: disputeReason,
+        details: disputeDetails,
+      }, token);
+      if (res.success) {
+        setDisputeSuccess(true);
+        setTimeout(() => {
+          setDisputeOpen(false);
+          setDisputeSuccess(false);
+        }, 2000);
+      }
+    } catch (err) {
+      console.error('Failed to report issue:', err);
+    }
+    setDisputeSubmitting(false);
+  };
 
   const currentStep = order ? getStepIndex(order.status) : -1;
   const isRejected = order?.status === 'rejected';

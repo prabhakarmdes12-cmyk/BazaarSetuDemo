@@ -178,6 +178,11 @@ model Order {
   deliveryPincode     String?
   deliveryLat         Float?
   deliveryLng         Float?
+  fulfilmentMode      String?  @default("DELIVERY")
+  pickupOtp           String?
+  cancelReason        String?
+  disputeReason       String?
+  disputeStatus       String?
   publicToken          String?  @unique
   conversationDraftId  String?  @unique
   createdAt            DateTime @default(now())

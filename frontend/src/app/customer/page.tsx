@@ -183,6 +183,8 @@ export default function CustomerHomePage() {
   const [shops, setShops] = useState<Shop[]>([]);
   const [products, setProducts] = useState<Product[]>(FALLBACK_PILOT_PRODUCTS);
   const [loading, setLoading] = useState(true);
+  const [pastOrders, setPastOrders] = useState<any[]>([]);
+  const [repeatingId, setRepeatingId] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [activeCategory, setActiveCategory] = useState('Sab');
   const [cartCount, setCartCount] = useState(0);

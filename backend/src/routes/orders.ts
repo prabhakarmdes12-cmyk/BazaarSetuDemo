@@ -3,7 +3,7 @@ import { randomBytes } from 'crypto';
 import { AuthRequest, authenticateToken, requireRole } from '../middleware/auth';
 import { validate } from '../middleware/validate';
 import { getPagination } from '../middleware/pagination';
-import { createOrderSchema, updateOrderStatusSchema } from '../validators';
+import { createOrderSchema, updateOrderStatusSchema, cancelOrderSchema, disputeOrderSchema } from '../validators';
 import { prisma } from '../lib/prisma';
 import { appendChitigramMessage, CHITIGRAM_TYPES } from '../lib/chitigram';
 import { queueOperationalEvent } from '../lib/operationalEvents';
@@ -257,7 +257,12 @@ router.get('/my', authenticateToken, async (req: AuthRequest, res: Response) => 
       deliveryAddress: order.deliveryAddress ?? null,
       deliveryPincode: order.deliveryPincode ?? null,
       deliveryLat: order.deliveryLat ?? null,
-      deliveryLng: order.deliveryLng ?? null,
+              deliveryLng: order.deliveryLng ?? null,
+        fulfilmentMode: order.fulfilmentMode || 'DELIVERY',
+        pickupOtp: order.pickupOtp ?? null,
+        cancelReason: order.cancelReason ?? null,
+        disputeReason: order.disputeReason ?? null,
+        disputeStatus: order.disputeStatus ?? null,
       createdAt: order.createdAt.toISOString(),
       updatedAt: order.updatedAt.toISOString(),
     }));
@@ -301,7 +306,12 @@ router.get('/vendor', authenticateToken, requireRole('vendor'), async (req: Auth
       deliveryAddress: order.deliveryAddress ?? null,
       deliveryPincode: order.deliveryPincode ?? null,
       deliveryLat: order.deliveryLat ?? null,
-      deliveryLng: order.deliveryLng ?? null,
+              deliveryLng: order.deliveryLng ?? null,
+        fulfilmentMode: order.fulfilmentMode || 'DELIVERY',
+        pickupOtp: order.pickupOtp ?? null,
+        cancelReason: order.cancelReason ?? null,
+        disputeReason: order.disputeReason ?? null,
+        disputeStatus: order.disputeStatus ?? null,
       createdAt: order.createdAt.toISOString(),
       updatedAt: order.updatedAt.toISOString(),
     }));
@@ -446,7 +456,12 @@ router.get('/:id', authenticateToken, async (req: AuthRequest, res: Response) =>
         deliveryAddress: order.deliveryAddress ?? null,
         deliveryPincode: order.deliveryPincode ?? null,
         deliveryLat: order.deliveryLat ?? null,
-        deliveryLng: order.deliveryLng ?? null,
+                deliveryLng: order.deliveryLng ?? null,
+        fulfilmentMode: order.fulfilmentMode || 'DELIVERY',
+        pickupOtp: order.pickupOtp ?? null,
+        cancelReason: order.cancelReason ?? null,
+        disputeReason: order.disputeReason ?? null,
+        disputeStatus: order.disputeStatus ?? null,
         timeline,
         createdAt: order.createdAt.toISOString(),
         updatedAt: order.updatedAt.toISOString(),
@@ -542,6 +557,64 @@ router.patch('/:id/status', authenticateToken, requireRole('vendor'), validate(u
     res.json({ success: true, data: { id: updated.id, status: updated.status } });
   } catch (err) {
     res.status(500).json({ success: false, message: 'Failed to update order' });
+  }
+});
+
+// Customer cancel order (only while pending)
+router.post('/:id/cancel', authenticateToken, validate(cancelOrderSchema), async (req: AuthRequest, res: Response) => {
+  try {
+    const order = await prisma.order.findUnique({ where: { id: req.params.id } });
+    if (!order) return res.status(404).json({ success: false, message: 'Order not found' });
+    if (order.customerId !== req.userId) return res.status(403).json({ success: false, message: 'Not authorized' });
+
+    if (order.status !== 'pending') {
+      return res.status(400).json({ success: false, message: 'Order can only be cancelled while pending acceptance' });
+    }
+
+    const cancelReason = req.body.reason || 'CANCELLED_BY_CUSTOMER';
+    const updated = await prisma.order.update({
+      where: { id: req.params.id },
+      data: { status: 'rejected', cancelReason },
+    });
+
+    await queueOperationalEvent({
+      eventType: 'BAZAAR.ORDER_CANCELLED',
+      shopId: order.shopId,
+      customerId: order.customerId,
+      orderId: order.id,
+      payload: { reason: cancelReason, by: 'CUSTOMER' },
+    });
+
+    res.json({ success: true, data: updated, message: 'Order cancel ho gaya' });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Failed to cancel order' });
+  }
+});
+
+// Customer dispute / Sahayata report
+router.post('/:id/dispute', authenticateToken, validate(disputeOrderSchema), async (req: AuthRequest, res: Response) => {
+  try {
+    const order = await prisma.order.findUnique({ where: { id: req.params.id } });
+    if (!order) return res.status(404).json({ success: false, message: 'Order not found' });
+    if (order.customerId !== req.userId) return res.status(403).json({ success: false, message: 'Not authorized' });
+
+    const disputeReason = req.body.reason;
+    const updated = await prisma.order.update({
+      where: { id: req.params.id },
+      data: { disputeReason, disputeStatus: 'OPEN' },
+    });
+
+    await queueOperationalEvent({
+      eventType: 'BAZAAR.ORDER_DISPUTED',
+      shopId: order.shopId,
+      customerId: order.customerId,
+      orderId: order.id,
+      payload: { reason: disputeReason, details: req.body.details },
+    });
+
+    res.json({ success: true, data: updated, message: 'Sahayata request darj kar li gayi hai. Hamari team jald sampark karegi.' });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Failed to register dispute' });
   }
 });
 

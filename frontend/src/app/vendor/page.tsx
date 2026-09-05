@@ -54,6 +54,31 @@ export default function VendorDashboard() {
     } catch (err) { console.error(err); }
   };
 
+    const handleRejectOrder = async (orderId: string) => {
+    const reason = prompt('Order reject karne ka kaaran likhein (e.g. Out of stock, Dukaan band):', 'Out of stock');
+    if (!reason) return;
+    try {
+      await api.patch(`/api/orders/${orderId}/status`, { status: 'rejected', reason }, token || undefined);
+      await loadData();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleVerifyPickupOtp = async (orderId: string) => {
+    const otp = prompt('Customer ka 4-digit Pickup OTP darj karein:');
+    if (!otp) return;
+    try {
+      const res = await api.patch<{ success: boolean; message?: string }>(`/api/orders/${orderId}/status`, { status: 'completed', otp: otp.trim() }, token || undefined);
+      if (!res.success && res.message) {
+        alert(res.message);
+      }
+      await loadData();
+    } catch (err: any) {
+      alert(err.message || 'OTP verification failed');
+    }
+  };
+
   const pendingOrders = orders.filter((o) => ['pending', 'accepted', 'preparing', 'ready', 'out_for_delivery', 'pickup'].includes(o.status));
 
   const quickActions = [

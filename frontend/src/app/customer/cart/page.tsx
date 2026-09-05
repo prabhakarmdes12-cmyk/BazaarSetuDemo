@@ -41,6 +41,7 @@ export default function CartPage() {
   const [payment, setPayment] = useState<PaymentMethod>('DIRECT_UPI');
   const [addressOpen, setAddressOpen] = useState(false);
   const [paymentOpen, setPaymentOpen] = useState(false);
+  const [fulfilmentMode, setFulfilmentMode] = useState<'DELIVERY' | 'PICKUP'>('DELIVERY');
 
   // Restore the saved default address on mount so a repeat buyer never retypes it.
   useEffect(() => {
@@ -381,11 +382,11 @@ export default function CartPage() {
           </a>
         ) : (
           <button
-            onClick={() => (address ? setPaymentOpen(true) : setAddressOpen(true))}
+            onClick={() => ((fulfilmentMode === 'PICKUP' || address) ? setPaymentOpen(true) : setAddressOpen(true))}
             disabled={ordering}
             className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3 disabled:opacity-50 min-h-[44px]"
           >
-            {ordering ? 'Order ho raha hai...' : address ? 'Order karein' : 'Address chunein'}
+            {ordering ? 'Order ho raha hai...' : (fulfilmentMode === 'PICKUP' || address) ? 'Order karein' : 'Address chunein'}
             <Icon name="chevron_right" />
           </button>
         )}

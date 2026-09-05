@@ -125,6 +125,11 @@ export interface Order {
   deliveryPincode?: string;
   deliveryLat?: number;
   deliveryLng?: number;
+  fulfilmentMode?: 'DELIVERY' | 'PICKUP';
+  pickupOtp?: string;
+  cancelReason?: string;
+  disputeReason?: string;
+  disputeStatus?: string;
   createdAt: string;
   updatedAt: string;
 }

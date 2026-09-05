@@ -60,12 +60,24 @@ export const createOrderSchema = z.object({
   deliveryPincode: z.string().regex(/^\d{6}$/, 'Invalid PIN code').optional(),
   deliveryLat: z.number().min(-90).max(90).optional(),
   deliveryLng: z.number().min(-180).max(180).optional(),
+  fulfilmentMode: z.enum(['DELIVERY', 'PICKUP']).optional(),
 });
 
 const allowedOrderStatuses = ['pending', 'accepted', 'preparing', 'ready', 'out_for_delivery', 'pickup', 'completed', 'rejected'];
 
 export const updateOrderStatusSchema = z.object({
   status: z.string().refine((value) => allowedOrderStatuses.includes(value.toLowerCase()), 'Invalid order status'),
+  reason: z.string().optional(),
+  otp: z.string().optional(),
+});
+
+export const cancelOrderSchema = z.object({
+  reason: z.string().optional(),
+});
+
+export const disputeOrderSchema = z.object({
+  reason: z.string().min(1, 'Dispute reason is required'),
+  details: z.string().optional(),
 });
 
 // === Chats ===
