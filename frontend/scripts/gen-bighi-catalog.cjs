@@ -315,7 +315,7 @@ const CATALOG = {
     { n: 'Toilet Paper Roll', brands: ['Origami', 'Selpak', 'Premier'], packs: [['6 rolls', 0.55], ['12 rolls', 1]], p: 220 },
     { n: 'Tissue Paper Box', brands: ['Origami', 'Premier'], packs: [['100 pulls', 0.3], ['2 pack', 0.55], ['4 pack', 1]], p: 130 },
     { n: 'Kitchen Roll Towel', brands: ['Origami', 'Scott'], packs: [['2 rolls', 0.5], ['4 rolls', 1]], p: 130 },
-    { n: 'Garbage Bags', brands: ['Origami', 'Mint Fresh'], packs: [['30 bags small', 0.7], ['30 bags large', 1]], p: 120 },
+    { n: 'Garbage Bags', brands: ['Origami', 'Mint Fresh', 'Shalimar'], packs: [['30 bags small', 0.7], ['30 bags medium', 0.85], ['30 bags large', 1]], p: 120 },
     { n: 'Aluminium Foil', brands: ['Hindalco', 'Reynolds'], packs: [['9 m', 0.4], ['25 m roll', 1]], p: 95 },
     { n: 'Cling Wrap', brands: ['Reynolds', 'Oddy'], packs: [['30 m roll', 1]], p: 80 },
     { n: 'Broom / Phool Jhadu', brands: ['Monkey 555', 'Local'], packs: [['1 pc', 1]], p: 70 },
