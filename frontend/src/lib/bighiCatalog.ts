@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 527 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 552 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27762,7 +27762,32 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00952": "/catalog/items/instant/ready-to-eat-curry-300g.jpg",
   "bb-00979": "/catalog/items/instant/ready-to-eat-curry-300g.jpg",
   "bb-01005": "/catalog/items/instant/instant-upma-mix-180g.jpg",
-  "bb-00946": "/catalog/items/instant/instant-upma-mix-180g.jpg"
+  "bb-00946": "/catalog/items/instant/instant-upma-mix-180g.jpg",
+  "bb-00822": "/catalog/items/tea/chocolate-health-drink-500g.jpg",
+  "bb-00854": "/catalog/items/tea/chocolate-health-drink-500g.jpg",
+  "bb-00836": "/catalog/items/tea/chocolate-health-drink-500g.jpg",
+  "bb-00856": "/catalog/items/tea/milk-mix-powder-400g.jpg",
+  "bb-00819": "/catalog/items/tea/milk-mix-powder-400g.jpg",
+  "bb-00862": "/catalog/items/tea/milk-mix-powder-400g.jpg",
+  "bb-00858": "/catalog/items/tea/green-tea-25-bags.jpg",
+  "bb-00910": "/catalog/items/tea/green-tea-25-bags.jpg",
+  "bb-00874": "/catalog/items/tea/green-tea-25-bags.jpg",
+  "bb-00817": "/catalog/items/tea/filter-coffee-beans-200g.jpg",
+  "bb-00869": "/catalog/items/tea/filter-coffee-beans-200g.jpg",
+  "bb-00886": "/catalog/items/tea/filter-coffee-beans-200g.jpg",
+  "bb-00888": "/catalog/items/tea/cardamom-tea-250g.jpg",
+  "bb-00915": "/catalog/items/tea/cardamom-tea-250g.jpg",
+  "bb-00528": "/catalog/items/biscuits/sweet-salty-biscuit-200g.jpg",
+  "bb-00582": "/catalog/items/biscuits/sweet-salty-biscuit-200g.jpg",
+  "bb-00543": "/catalog/items/biscuits/digestive-biscuits-250g.jpg",
+  "bb-00568": "/catalog/items/biscuits/digestive-biscuits-250g.jpg",
+  "bb-00608": "/catalog/items/biscuits/digestive-biscuits-250g.jpg",
+  "bb-00577": "/catalog/items/biscuits/chocolate-cream-biscuit-120g.jpg",
+  "bb-00555": "/catalog/items/biscuits/chocolate-cream-biscuit-120g.jpg",
+  "bb-00550": "/catalog/items/biscuits/cream-wafers-75g.jpg",
+  "bb-00557": "/catalog/items/biscuits/cream-wafers-75g.jpg",
+  "bb-00562": "/catalog/items/biscuits/khari-biscuit-200g.jpg",
+  "bb-00570": "/catalog/items/biscuits/khari-biscuit-200g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
