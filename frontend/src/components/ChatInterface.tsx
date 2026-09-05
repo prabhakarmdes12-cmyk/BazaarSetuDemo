@@ -10,6 +10,7 @@ interface ChatInterfaceProps {
   messages: Message[];
   onSendMessage: (content: string) => void;
   onSendProduct: (product: { name: string; price: number; unit: string; image?: string }) => void;
+  onSendVoiceNote?: (audio: Blob, meta: { mimeType: string; durationMs: number }) => Promise<void> | void;
   onAddToCart?: (product: Product) => void;
   onTyping?: () => void;
   onStopTyping?: () => void;
@@ -23,6 +24,7 @@ export default function ChatInterface({
   messages,
   onSendMessage,
   onSendProduct,
+  onSendVoiceNote,
   onAddToCart,
   onTyping,
   onStopTyping,
@@ -36,8 +38,14 @@ export default function ChatInterface({
   const [productName, setProductName] = useState('');
   const [productPrice, setProductPrice] = useState('');
   const [productUnit, setProductUnit] = useState('kg');
+  const [isRecording, setIsRecording] = useState(false);
+  const [isUploadingVoice, setIsUploadingVoice] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const mediaStreamRef = useRef<MediaStream | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
+  const recordingStartedAtRef = useRef<number>(0);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -50,6 +58,60 @@ export default function ChatInterface({
       return () => clearTimeout(timer);
     }
   }, [messages.length, onMarkRead]);
+
+  useEffect(() => () => {
+    mediaRecorderRef.current?.stop?.();
+    mediaStreamRef.current?.getTracks().forEach((track) => track.stop());
+  }, []);
+
+  const handleVoiceToggle = async () => {
+    if (!onSendVoiceNote || isUploadingVoice) return;
+
+    if (isRecording) {
+      mediaRecorderRef.current?.stop();
+      return;
+    }
+
+    if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
+      window.alert('Voice recording is not supported in this browser.');
+      return;
+    }
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const preferredType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') ? 'audio/webm;codecs=opus' : 'audio/webm';
+      const recorder = new MediaRecorder(stream, { mimeType: preferredType });
+      audioChunksRef.current = [];
+      mediaStreamRef.current = stream;
+      mediaRecorderRef.current = recorder;
+      recordingStartedAtRef.current = Date.now();
+
+      recorder.ondataavailable = (event) => {
+        if (event.data.size > 0) audioChunksRef.current.push(event.data);
+      };
+      recorder.onstop = async () => {
+        const durationMs = Date.now() - recordingStartedAtRef.current;
+        const mimeType = recorder.mimeType || preferredType;
+        const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
+        mediaStreamRef.current?.getTracks().forEach((track) => track.stop());
+        mediaStreamRef.current = null;
+        mediaRecorderRef.current = null;
+        setIsRecording(false);
+        setIsUploadingVoice(true);
+        try {
+          await onSendVoiceNote(audioBlob, { mimeType, durationMs });
+        } finally {
+          setIsUploadingVoice(false);
+        }
+      };
+
+      recorder.start();
+      setIsRecording(true);
+    } catch (err) {
+      console.error('Voice recording failed:', err);
+      setIsRecording(false);
+    }
+  };
 
   const handleSend = () => {
     const trimmed = input.trim();
@@ -114,28 +176,50 @@ export default function ChatInterface({
     });
   }
 
+  const getMessagePayload = (msg: Message) => (msg.payload || {}) as {
+    audioUrl?: string;
+    transcript?: string;
+    transcriptionConfidence?: number;
+    requiresManualReview?: boolean;
+    duration?: number;
+    startedAt?: string;
+    endedAt?: string | null;
+    status?: string;
+    draftId?: string;
+    items?: Array<{ requestedName?: string; quantity?: number; unit?: string; availabilityStatus?: string; catalogPrice?: number; quotedPrice?: number }>;
+    subtotal?: number;
+    deliveryFee?: number;
+    finalTotal?: number;
+    totalAmount?: number;
+    amount?: number;
+  };
+
   const renderCommerceMessage = (msg: Message) => {
-    const payload = (msg.payload || {}) as {
-      draftId?: string;
-      items?: Array<{ requestedName?: string; quantity?: number; unit?: string; availabilityStatus?: string; catalogPrice?: number; quotedPrice?: number }>;
-      subtotal?: number;
-      deliveryFee?: number;
-      finalTotal?: number;
-      totalAmount?: number;
-      amount?: number;
-      status?: string;
-    };
+    const payload = getMessagePayload(msg);
     const isCommerce = String(msg.type).startsWith('BAZAAR.') || String(msg.type).startsWith('CHITIGRAM.');
     if (!isCommerce) return null;
 
     const label = String(msg.type).replace('BAZAAR.', '').replace('CHITIGRAM.', '').replace(/_/g, ' ');
+    const isCallRecord = msg.type === 'CHITIGRAM.CALL_RECORD';
     return (
       <div className="space-y-2 rounded-2xl bg-primary-fixed/70 border border-primary/20 p-3 text-on-primary-fixed shadow-sm">
         <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-primary">
-          <Icon name={msg.type === 'CHITIGRAM.CALL_RECORD' ? 'call' : 'shopping_bag'} size="sm" />
+          <Icon name={isCallRecord ? 'call' : 'shopping_bag'} size="sm" />
           {label}
         </div>
-        <p className="text-sm whitespace-pre-wrap break-words">{msg.content}</p>
+        {isCallRecord ? (
+          <div className="rounded-xl bg-surface-container-lowest/80 p-3 text-sm">
+            <div className="flex items-center justify-between gap-3">
+              <span className="font-bold">{payload.status || 'CALL'}</span>
+              <span className="text-on-surface-variant">{payload.duration || 0}s</span>
+            </div>
+            <p className="mt-1 text-xs text-on-surface-variant">
+              {payload.startedAt ? new Date(payload.startedAt).toLocaleString('en-IN') : new Date(msg.createdAt).toLocaleString('en-IN')}
+            </p>
+          </div>
+        ) : (
+          <p className="text-sm whitespace-pre-wrap break-words">{msg.content}</p>
+        )}
         {Array.isArray(payload.items) && payload.items.length > 0 && (
           <div className="space-y-1 rounded-xl bg-surface-container-lowest/80 p-2">
             {payload.items.slice(0, 6).map((item, index) => (
@@ -153,6 +237,33 @@ export default function ChatInterface({
             <span>Total</span>
             <span>₹{payload.finalTotal || payload.totalAmount || payload.amount}</span>
           </div>
+        )}
+      </div>
+    );
+  };
+
+  const renderVoiceMessage = (msg: Message) => {
+    const payload = getMessagePayload(msg);
+    if (msg.type !== 'VOICE_ORDER' && !payload.audioUrl) return null;
+
+    return (
+      <div className="space-y-2 rounded-2xl border border-secondary/20 bg-secondary-container/30 p-3">
+        <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-secondary">
+          <Icon name="mic" size="sm" />
+          Voice grocery order
+        </div>
+        {payload.audioUrl && (
+          <audio controls src={payload.audioUrl} className="w-full h-9" preload="metadata">
+            <track kind="captions" />
+          </audio>
+        )}
+        <p className="text-sm whitespace-pre-wrap break-words">
+          {payload.transcript || msg.content || 'Voice note received — transcription pending'}
+        </p>
+        {payload.requiresManualReview && (
+          <p className="rounded-lg bg-warning-container/40 px-2 py-1 text-[11px] font-semibold text-on-surface-variant">
+            Transcription ambiguous — merchant can play the original audio.
+          </p>
         )}
       </div>
     );
@@ -194,12 +305,13 @@ export default function ChatInterface({
                   : msg.senderRole;
               const isOwnMessage = senderRole === currentUserRole;
               const showReadStatus = isOwnMessage && msg.isRead !== undefined;
+              const voiceMessage = renderVoiceMessage(msg);
               const commerceMessage = renderCommerceMessage(msg);
 
               return (
                 <div key={msg.id} className={`flex ${isOwnMessage ? 'justify-end' : 'justify-start'} mb-1.5`}>
                   <div className={isOwnMessage ? 'chat-bubble-vendor' : 'chat-bubble-customer'}>
-                    {commerceMessage || (msg.type === 'PRODUCT' && msg.product ? (
+                    {voiceMessage || commerceMessage || (msg.type === 'PRODUCT' && msg.product ? (
                       <div className="space-y-2">
                         <p className="text-xs text-on-surface-variant mb-1">
                           {isOwnMessage ? 'Product share kiya' : 'Product aaya'}
@@ -295,7 +407,20 @@ export default function ChatInterface({
               <Icon name="add" size="sm" />
             </button>
           )}
-          <input type="text" placeholder="Message likhein..." value={input}
+          {onSendVoiceNote && currentUserRole === 'customer' && (
+            <button
+              type="button"
+              onClick={handleVoiceToggle}
+              disabled={isUploadingVoice}
+              aria-label={isRecording ? 'Stop voice order recording' : 'Record voice order'}
+              className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors disabled:opacity-50 ${
+                isRecording ? 'bg-error text-white animate-pulse' : 'bg-secondary-container text-secondary'
+              }`}
+            >
+              <Icon name={isUploadingVoice ? 'hourglass_top' : isRecording ? 'stop' : 'mic'} size="sm" />
+            </button>
+          )}
+          <input type="text" placeholder={isRecording ? 'Recording voice order...' : 'Message likhein...'} value={input}
             onChange={handleInputChange} onKeyDown={handleKeyDown} className="input-field !py-2.5 text-sm" />
           <button onClick={handleSend} disabled={!input.trim()}
             className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center flex-shrink-0 hover:bg-primary-dark transition-colors disabled:opacity-50">

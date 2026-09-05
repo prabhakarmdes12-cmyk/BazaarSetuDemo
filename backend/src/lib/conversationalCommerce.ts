@@ -8,6 +8,7 @@ export const ACTIVE_DRAFT_STATUSES = [
   'MERCHANT_REVIEW',
   'CHANGES_PROPOSED',
   'FINAL_QUOTE',
+  'NEEDS_OPERATOR_ASSIST',
 ];
 
 export interface DraftItemLike {

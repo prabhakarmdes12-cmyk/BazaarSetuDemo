@@ -1,4 +1,7 @@
 import { Router, Response } from 'express';
+import fs from 'fs/promises';
+import path from 'path';
+import { randomUUID } from 'crypto';
 import { prisma } from '../lib/prisma';
 import { appendChitigramMessage, CHITIGRAM_TYPES, formatChatMessage } from '../lib/chitigram';
 import { ACTIVE_DRAFT_STATUSES, formatDraft, summarizeDraftItems } from '../lib/conversationalCommerce';
@@ -7,11 +10,13 @@ import {
   ExistingDraftItem,
   ParsedBasketItem,
   itemMatchesTerm,
-  parseShopBotCommand,
+  parseShoppingIntent,
 } from '../lib/shopBotEngine';
 import { AuthRequest, optionalAuth } from '../middleware/auth';
 import { validate } from '../middleware/validate';
 import { shopBotParseSchema } from '../validators';
+import { parseMultipartForm } from '../lib/multipart';
+import { transcribeVoiceOrder } from '../lib/transcription';
 
 const router = Router();
 
@@ -23,7 +28,7 @@ function toExistingItems(items: Array<{
   unit: string;
   matchedProductId?: string | null;
 }>): ExistingDraftItem[] {
-  return items.map((item) => ({
+  return items.map((item: any) => ({
     id: item.id,
     rawText: item.rawText,
     requestedName: item.requestedName,
@@ -179,7 +184,7 @@ function draftItemCreateData(item: ParsedBasketItem, sourceMessageId?: string) {
 }
 
 async function createOrIncrementItem(draftId: string, item: ParsedBasketItem, existingItems: ExistingDraftItem[], sourceMessageId: string) {
-  const existing = existingItems.find((draftItem) => {
+  const existing = existingItems.find((draftItem: any) => {
     if (item.matchedProductId && draftItem.matchedProductId === item.matchedProductId) return true;
     return itemMatchesTerm(draftItem, item.requestedName);
   });
@@ -211,7 +216,7 @@ async function createOrIncrementItem(draftId: string, item: ParsedBasketItem, ex
 }
 
 async function setItemQuantity(draftId: string, item: ParsedBasketItem, existingItems: ExistingDraftItem[], sourceMessageId: string) {
-  const existing = existingItems.find((draftItem) => itemMatchesTerm(draftItem, item.requestedName));
+  const existing = existingItems.find((draftItem: any) => itemMatchesTerm(draftItem, item.requestedName));
   if (!existing) {
     await prisma.draftItem.create({ data: { draftId, ...draftItemCreateData(item, sourceMessageId) } });
     return;
@@ -237,7 +242,7 @@ async function setItemQuantity(draftId: string, item: ParsedBasketItem, existing
 async function applyCommand(input: {
   draftId: string;
   sourceMessageId: string;
-  command: ReturnType<typeof parseShopBotCommand>;
+  command: ReturnType<typeof parseShoppingIntent>;
   existingItems: ExistingDraftItem[];
 }) {
   const { draftId, sourceMessageId, command, existingItems } = input;
@@ -249,16 +254,16 @@ async function applyCommand(input: {
 
   if (command.intent === 'REMOVE_ITEM') {
     const ids = existingItems
-      .filter((item) => command.removeTerms.some((term) => itemMatchesTerm(item, term)))
-      .map((item) => item.id);
+      .filter((item: any) => command.removeTerms.some((term: any) => itemMatchesTerm(item, term)))
+      .map((item: any) => item.id);
     if (ids.length > 0) await prisma.draftItem.deleteMany({ where: { id: { in: ids } } });
     return;
   }
 
   if (command.intent === 'CHANGE_BRAND' && command.changeBrand) {
     const removeIds = existingItems
-      .filter((item) => itemMatchesTerm(item, command.changeBrand!.from))
-      .map((item) => item.id);
+      .filter((item: any) => itemMatchesTerm(item, command.changeBrand!.from))
+      .map((item: any) => item.id);
     if (removeIds.length > 0) await prisma.draftItem.deleteMany({ where: { id: { in: removeIds } } });
     await prisma.draftItem.create({ data: { draftId, ...draftItemCreateData(command.changeBrand.to, sourceMessageId) } });
     return;
@@ -302,9 +307,212 @@ async function applyCommand(input: {
   }
 }
 
+
+interface ProcessShopBotMessageInput {
+  customerId: string;
+  shopId: string;
+  conversationId: string;
+  message: string;
+  locale?: 'hi-IN' | 'en-IN' | 'hinglish';
+  clientActionId?: string;
+  messageType?: string;
+  messagePayload?: Record<string, unknown>;
+  eventTypeOverride?: string;
+}
+
+function buildParseResponsePayload(input: {
+  command: ReturnType<typeof parseShoppingIntent>;
+  formattedDraft: ReturnType<typeof formatDraft>;
+  draftId: string;
+  chatId: string;
+  status: string;
+  extras?: Record<string, unknown>;
+}) {
+  const { command, formattedDraft, draftId, chatId, status, extras } = input;
+  return {
+    intent: command.intent,
+    items: formattedDraft.items.map((item: any) => ({
+      rawText: item.rawText,
+      requestedName: item.requestedName,
+      quantity: item.quantity,
+      unit: item.unit,
+      brandPreference: item.brandPreference,
+      matchedProductId: item.matchedProductId,
+      matchConfidence: item.matchConfidence,
+      catalogPrice: item.catalogPrice,
+      availabilityStatus: item.availabilityStatus,
+      requiresClarification: item.requiresClarification,
+    })),
+    unresolvedQuestions: formattedDraft.unresolvedQuestions,
+    basketAction: command.basketAction,
+    draftId,
+    chatId,
+    status,
+    chitigramType: CHITIGRAM_TYPES.BASKET_PROPOSAL,
+    totalEstimate: formattedDraft.totalEstimate,
+    draft: formattedDraft,
+    ...(extras || {}),
+  };
+}
+
+async function processShopBotMessage(input: ProcessShopBotMessageInput, io?: { to: (room: string) => { emit: (event: string, data: unknown) => void } }) {
+  const { customerId, shopId, conversationId, message, clientActionId, messageType = 'TEXT', messagePayload } = input;
+
+  const conversation = await ensureConversation(customerId, shopId, conversationId);
+  if ('error' in conversation) {
+    return { error: conversation.error } as const;
+  }
+
+  if (clientActionId) {
+    const existingDraft = await prisma.conversationDraft.findUnique({
+      where: { clientActionId },
+      include: {
+        items: true,
+        adjustments: true,
+        chat: {
+          include: {
+            customer: { select: { name: true, phone: true } },
+            shop: { select: { name: true, phone: true, ownerId: true, upiId: true } },
+          },
+        },
+      },
+    });
+    if (existingDraft) {
+      const formattedDraft = formatDraft(existingDraft);
+      const replayCommand = parseShoppingIntent(message, [], toExistingItems(existingDraft.items), false);
+      return {
+        payload: buildParseResponsePayload({
+          command: { ...replayCommand, basketAction: 'IDEMPOTENT_REPLAY' },
+          formattedDraft,
+          draftId: existingDraft.id,
+          chatId: existingDraft.chatId,
+          status: existingDraft.status,
+          extras: messagePayload,
+        }),
+      } as const;
+    }
+  }
+
+  const customerMessage = await prisma.message.create({
+    data: {
+      chatId: conversation.chat.id,
+      senderId: customerId,
+      senderRole: 'CUSTOMER',
+      type: messageType,
+      content: message,
+      productData: messagePayload ? JSON.stringify(messagePayload) : '',
+    },
+  });
+  await prisma.chat.update({ where: { id: conversation.chat.id }, data: { updatedAt: new Date() } });
+  io?.to(`chat:${conversation.chat.id}`).emit('new_message', formatChatMessage(customerMessage));
+
+  const products = await prisma.product.findMany({ where: { shopId }, orderBy: { createdAt: 'desc' } });
+  const draft = parseDraftPayload(await getOrCreateDraft(conversation.chat.id, customerId, shopId, message, clientActionId));
+  const command = parseShoppingIntent(
+    message,
+    products,
+    toExistingItems(draft.items),
+    draft.adjustments.some((adjustment: { status: string }) => adjustment.status === 'PROPOSED'),
+  );
+
+  await applyCommand({
+    draftId: draft.id,
+    sourceMessageId: customerMessage.id,
+    command,
+    existingItems: toExistingItems(draft.items),
+  });
+
+  if (command.items.length === 0 && /(sasta|cheap|budget|economical)/i.test(message) && /(accha|acha|achha|good|quality|best)/i.test(message)) {
+    await prisma.draftItem.updateMany({
+      where: { draftId: draft.id, availabilityStatus: { in: ['NEEDS_MERCHANT_CHECK', 'AVAILABLE'] } },
+      data: { brandPreference: 'economical_quality' },
+    });
+  }
+
+  await prisma.conversationDraft.update({
+    where: { id: draft.id },
+    data: { rawMessage: message },
+  });
+
+  const freshDraft = await prisma.conversationDraft.findUnique({
+    where: { id: draft.id },
+    include: {
+      items: true,
+      adjustments: true,
+      chat: {
+        include: {
+          customer: { select: { name: true, phone: true } },
+          shop: { select: { name: true, phone: true, ownerId: true, upiId: true } },
+        },
+      },
+    },
+  });
+
+  if (!freshDraft) throw new Error('Draft not found after parse');
+
+  const formattedDraft = formatDraft(freshDraft);
+  const payload = buildParseResponsePayload({
+    command,
+    formattedDraft,
+    draftId: freshDraft.id,
+    chatId: freshDraft.chatId,
+    status: freshDraft.status,
+    extras: messagePayload,
+  });
+
+  if (freshDraft.status !== 'CANCELLED') {
+    await appendChitigramMessage(
+      {
+        chatId: freshDraft.chatId,
+        senderId: 'SHOP_BOT',
+        senderRole: 'SHOP_BOT',
+        type: CHITIGRAM_TYPES.BASKET_PROPOSAL,
+        content: `Shop Bot ne basket draft update kiya:\n${summarizeDraftItems(freshDraft.items)}`,
+        payload: {
+          draftId: freshDraft.id,
+          items: formattedDraft.items,
+          totalEstimate: formattedDraft.totalEstimate,
+          ...(messagePayload?.audioUrl ? { audioUrl: messagePayload.audioUrl, transcript: messagePayload.transcript } : {}),
+        },
+      },
+      io,
+    );
+  }
+
+  await queueOperationalEvent({
+    eventType: input.eventTypeOverride || (freshDraft.status === 'CANCELLED'
+      ? 'BAZAAR.BASKET_DRAFT_CANCELLED'
+      : command.intent === 'CONFIRM_BASKET'
+        ? 'BAZAAR.BASKET_CONFIRMED'
+        : 'BAZAAR.BASKET_DRAFT_UPDATED'),
+    shopId,
+    customerId,
+    conversationId: freshDraft.chatId,
+    payload: {
+      draftId: freshDraft.id,
+      intent: command.intent,
+      itemsCount: formattedDraft.items.length,
+      totalEstimate: formattedDraft.totalEstimate,
+      unresolvedQuestions: formattedDraft.unresolvedQuestions,
+      ...(messagePayload?.audioUrl ? { audioUrl: messagePayload.audioUrl, transcript: messagePayload.transcript } : {}),
+    },
+  });
+
+  return { payload } as const;
+}
+
+function extensionFromMime(mimeType: string, filename: string): string {
+  const existing = path.extname(filename || '').toLowerCase();
+  if (existing) return existing;
+  if (mimeType.includes('mpeg') || mimeType.includes('mp3')) return '.mp3';
+  if (mimeType.includes('wav')) return '.wav';
+  if (mimeType.includes('ogg')) return '.ogg';
+  return '.webm';
+}
+
 router.post('/parse', optionalAuth, validate(shopBotParseSchema), async (req: AuthRequest, res: Response) => {
   try {
-    const { customerId, shopId, conversationId, message, clientActionId } = req.body as {
+    const { customerId, shopId, conversationId, message, locale, clientActionId } = req.body as {
       customerId: string;
       shopId: string;
       conversationId: string;
@@ -317,172 +525,98 @@ router.post('/parse', optionalAuth, validate(shopBotParseSchema), async (req: Au
       return res.status(403).json({ success: false, message: 'Token customer does not match request customerId' });
     }
 
-    const conversation = await ensureConversation(customerId, shopId, conversationId);
-    if ('error' in conversation) {
-      const conversationError = conversation.error;
-      return res.status(conversationError!.status).json({ success: false, message: conversationError!.message });
+    const result = await processShopBotMessage({ customerId, shopId, conversationId, message, locale, clientActionId }, req.app.locals.io);
+    if ('error' in result) {
+      return res.status(result.error!.status).json({ success: false, message: result.error!.message });
     }
 
-    if (clientActionId) {
-      const existingDraft = await prisma.conversationDraft.findUnique({
-        where: { clientActionId },
-        include: {
-          items: true,
-          adjustments: true,
-          chat: {
-            include: {
-              customer: { select: { name: true, phone: true } },
-              shop: { select: { name: true, phone: true, ownerId: true, upiId: true } },
-            },
-          },
-        },
-      });
-      if (existingDraft) {
-        const formattedDraft = formatDraft(existingDraft);
-        const payload = {
-          intent: 'ADD_ITEM' as const,
-          items: formattedDraft.items.map((item) => ({
-            rawText: item.rawText,
-            requestedName: item.requestedName,
-            quantity: item.quantity,
-            unit: item.unit,
-            brandPreference: item.brandPreference,
-            matchedProductId: item.matchedProductId,
-            matchConfidence: item.matchConfidence,
-            catalogPrice: item.catalogPrice,
-            availabilityStatus: item.availabilityStatus,
-            requiresClarification: item.requiresClarification,
-          })),
-          unresolvedQuestions: formattedDraft.unresolvedQuestions,
-          basketAction: 'IDEMPOTENT_REPLAY',
-          draftId: existingDraft.id,
-          chatId: existingDraft.chatId,
-          status: existingDraft.status,
-          totalEstimate: formattedDraft.totalEstimate,
-          draft: formattedDraft,
-        };
-        return res.json({ success: true, data: payload, ...payload });
-      }
-    }
-
-    const customerMessage = await prisma.message.create({
-      data: {
-        chatId: conversation.chat.id,
-        senderId: customerId,
-        senderRole: 'CUSTOMER',
-        type: 'TEXT',
-        content: message,
-      },
-    });
-    await prisma.chat.update({ where: { id: conversation.chat.id }, data: { updatedAt: new Date() } });
-    req.app.locals.io?.to(`chat:${conversation.chat.id}`).emit('new_message', formatChatMessage(customerMessage));
-
-    const products = await prisma.product.findMany({ where: { shopId }, orderBy: { createdAt: 'desc' } });
-    const draft = parseDraftPayload(await getOrCreateDraft(conversation.chat.id, customerId, shopId, message, clientActionId));
-    const command = parseShopBotCommand(
-      message,
-      products,
-      toExistingItems(draft.items),
-      draft.adjustments.some((adjustment: { status: string }) => adjustment.status === 'PROPOSED'),
-    );
-
-    await applyCommand({
-      draftId: draft.id,
-      sourceMessageId: customerMessage.id,
-      command,
-      existingItems: toExistingItems(draft.items),
-    });
-
-    if (command.items.length === 0 && /(sasta|cheap|budget|economical)/i.test(message) && /(accha|acha|achha|good|quality|best)/i.test(message)) {
-      await prisma.draftItem.updateMany({
-        where: { draftId: draft.id, availabilityStatus: { in: ['NEEDS_MERCHANT_CHECK', 'AVAILABLE'] } },
-        data: { brandPreference: 'economical_quality' },
-      });
-    }
-
-    await prisma.conversationDraft.update({
-      where: { id: draft.id },
-      data: { rawMessage: message },
-    });
-
-    const freshDraft = await prisma.conversationDraft.findUnique({
-      where: { id: draft.id },
-      include: {
-        items: true,
-        adjustments: true,
-        chat: {
-          include: {
-            customer: { select: { name: true, phone: true } },
-            shop: { select: { name: true, phone: true, ownerId: true, upiId: true } },
-          },
-        },
-      },
-    });
-
-    if (!freshDraft) {
-      return res.status(500).json({ success: false, message: 'Draft not found after parse' });
-    }
-
-    const formattedDraft = formatDraft(freshDraft);
-    const payload = {
-      intent: command.intent,
-      items: formattedDraft.items.map((item) => ({
-        rawText: item.rawText,
-        requestedName: item.requestedName,
-        quantity: item.quantity,
-        unit: item.unit,
-        brandPreference: item.brandPreference,
-        matchedProductId: item.matchedProductId,
-        matchConfidence: item.matchConfidence,
-        catalogPrice: item.catalogPrice,
-        availabilityStatus: item.availabilityStatus,
-        requiresClarification: item.requiresClarification,
-      })),
-      unresolvedQuestions: formattedDraft.unresolvedQuestions,
-      basketAction: command.basketAction,
-      draftId: freshDraft.id,
-      chatId: freshDraft.chatId,
-      status: freshDraft.status,
-      totalEstimate: formattedDraft.totalEstimate,
-      draft: formattedDraft,
-    };
-
-    if (freshDraft.status !== 'CANCELLED') {
-      await appendChitigramMessage(
-        {
-          chatId: freshDraft.chatId,
-          senderId: 'SHOP_BOT',
-          senderRole: 'SHOP_BOT',
-          type: CHITIGRAM_TYPES.BASKET_PROPOSAL,
-          content: `Shop Bot ne basket draft update kiya:\n${summarizeDraftItems(freshDraft.items)}`,
-          payload: { draftId: freshDraft.id, items: formattedDraft.items, totalEstimate: formattedDraft.totalEstimate },
-        },
-        req.app.locals.io,
-      );
-    }
-
-    await queueOperationalEvent({
-      eventType: freshDraft.status === 'CANCELLED'
-        ? 'BAZAAR.BASKET_DRAFT_CANCELLED'
-        : command.intent === 'CONFIRM_BASKET'
-          ? 'BAZAAR.BASKET_CONFIRMED'
-          : 'BAZAAR.BASKET_DRAFT_UPDATED',
-      shopId,
-      customerId,
-      conversationId: freshDraft.chatId,
-      payload: {
-        draftId: freshDraft.id,
-        intent: command.intent,
-        itemsCount: formattedDraft.items.length,
-        totalEstimate: formattedDraft.totalEstimate,
-        unresolvedQuestions: formattedDraft.unresolvedQuestions,
-      },
-    });
-
-    return res.json({ success: true, data: payload, ...payload });
+    return res.json({ success: true, data: result.payload, ...result.payload });
   } catch (err) {
     console.error('Shop Bot parse error:', err);
     return res.status(500).json({ success: false, message: 'Failed to parse shop bot message' });
+  }
+});
+
+router.post('/voice-order', optionalAuth, async (req: AuthRequest, res: Response) => {
+  try {
+    if (!String(req.headers['content-type'] || '').includes('multipart/form-data')) {
+      return res.status(415).json({ success: false, message: 'multipart/form-data audio upload required' });
+    }
+
+    const form = await parseMultipartForm(req, 15 * 1024 * 1024);
+    const { fields } = form;
+    const audio = form.files.find((file: any) => ['audio', 'file', 'voice', 'voiceOrder'].includes(file.fieldName)) || form.files[0];
+
+    const customerId = fields.customerId;
+    const shopId = fields.shopId;
+    const conversationId = fields.conversationId || fields.chatId;
+    const locale = (fields.locale || 'hinglish') as 'hi-IN' | 'en-IN' | 'hinglish';
+    const clientActionId = fields.clientActionId;
+
+    if (!customerId || !shopId || !conversationId) {
+      return res.status(400).json({ success: false, message: 'customerId, shopId and conversationId are required' });
+    }
+    if (!audio || audio.buffer.length === 0) {
+      return res.status(400).json({ success: false, message: 'Audio file is required' });
+    }
+    if (req.userId && req.userId !== customerId && req.userRole !== 'admin') {
+      return res.status(403).json({ success: false, message: 'Token customer does not match request customerId' });
+    }
+
+    const uploadDir = path.join(process.cwd(), 'uploads', 'voice-orders');
+    await fs.mkdir(uploadDir, { recursive: true });
+    const ext = extensionFromMime(audio.mimeType, audio.filename);
+    const safeFileName = `voice_${Date.now()}_${randomUUID()}${ext}`;
+    const audioPath = path.join(uploadDir, safeFileName);
+    await fs.writeFile(audioPath, audio.buffer);
+    const audioUrl = `/uploads/voice-orders/${safeFileName}`;
+
+    const transcription = await transcribeVoiceOrder({
+      audioPath,
+      audioBuffer: audio.buffer,
+      mimeType: audio.mimeType,
+      fields,
+    });
+    const transcript = transcription.transcript || 'Voice note received. Transcript unavailable; merchant manual review needed.';
+
+    const result = await processShopBotMessage(
+      {
+        customerId,
+        shopId,
+        conversationId,
+        message: transcript,
+        locale,
+        clientActionId,
+        messageType: 'VOICE_ORDER',
+        messagePayload: {
+          audioUrl,
+          transcript: transcription.transcript,
+          transcriptionConfidence: transcription.confidence,
+          transcriptionProvider: transcription.provider,
+          requiresManualReview: transcription.requiresManualReview,
+          originalFilename: audio.filename,
+          mimeType: audio.mimeType,
+        },
+        eventTypeOverride: 'BAZAAR.VOICE_ORDER_RECEIVED',
+      },
+      req.app.locals.io,
+    );
+
+    if ('error' in result) {
+      return res.status(result.error!.status).json({ success: false, message: result.error!.message });
+    }
+
+    const payload = {
+      ...result.payload,
+      audioUrl,
+      transcript: transcription.transcript,
+      transcription,
+    };
+    return res.json({ success: true, data: payload, ...payload });
+  } catch (err) {
+    console.error('Voice order error:', err);
+    const message = err instanceof Error ? err.message : 'Failed to process voice order';
+    return res.status(400).json({ success: false, message });
   }
 });
 

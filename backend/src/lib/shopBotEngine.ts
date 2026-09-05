@@ -416,7 +416,7 @@ function parseAddItems(message: string, products: CatalogueProduct[]): ParsedBas
     .filter((item) => item.requestedName && item.requestedName !== 'Custom Item');
 }
 
-export function parseShopBotCommand(
+export function parseShoppingIntent(
   message: string,
   products: CatalogueProduct[],
   existingItems: ExistingDraftItem[] = [],
@@ -468,6 +468,8 @@ export function parseShopBotCommand(
 
   return { intent, items: parseAddItems(message, products), removeTerms: [], basketAction: 'ADD_ITEMS_TO_DRAFT' };
 }
+
+export const parseShopBotCommand = parseShoppingIntent;
 
 export function buildUnresolvedQuestions(items: ParsedBasketItem[]): string[] {
   return items

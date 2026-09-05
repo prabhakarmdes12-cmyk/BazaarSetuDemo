@@ -74,7 +74,7 @@ router.get('/vendor/list', authenticateToken, requireRole('vendor'), async (req:
       orderBy: { updatedAt: 'desc' },
     });
 
-    const formatted = chats.map((chat) => ({
+    const formatted = chats.map((chat: any) => ({
       id: chat.id,
       customerId: chat.customerId,
       shopId: chat.shopId,
@@ -107,7 +107,7 @@ router.get('/vendor', authenticateToken, requireRole('vendor'), async (req: Auth
       orderBy: { updatedAt: 'desc' },
     });
 
-    const formatted = chats.map((chat) => ({
+    const formatted = chats.map((chat: any) => ({
       id: chat.id,
       customerId: chat.customerId,
       shopId: chat.shopId,

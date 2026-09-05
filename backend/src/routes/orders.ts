@@ -14,7 +14,7 @@ const STATUS_ORDER = ['pending', 'accepted', 'preparing', 'ready', 'out_for_deli
 
 function buildTimeline(status: string, createdAt: Date, updatedAt: Date) {
   const currentIndex = STATUS_ORDER.indexOf(status);
-  return STATUS_ORDER.map((s, index) => ({
+  return STATUS_ORDER.map((s: any, index: any) => ({
     status: s,
     reached: index <= currentIndex,
     timestamp:
@@ -40,7 +40,7 @@ router.post('/', authenticateToken, validate(createOrderSchema), async (req: Aut
       return res.status(400).json({ success: false, message: 'Cart is empty' });
     }
 
-    const totalAmount = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const totalAmount = cart.items.reduce((sum: any, item: any) => sum + item.price * item.quantity, 0);
 
     const order = await prisma.order.create({
       data: {
@@ -50,7 +50,7 @@ router.post('/', authenticateToken, validate(createOrderSchema), async (req: Aut
         status: 'pending',
         publicToken: randomBytes(16).toString('hex'),
         items: {
-          create: cart.items.map((item) => ({
+          create: cart.items.map((item: any) => ({
             productId: item.productId,
             productName: item.product.name,
             quantity: item.quantity,
@@ -148,7 +148,7 @@ router.post('/repeat/:orderId', authenticateToken, async (req: AuthRequest, res:
       include: { items: { include: { product: true } }, shop: { select: { name: true } } },
     });
 
-    const totalAmount = updatedCart!.items.reduce((s, i) => s + i.price * i.quantity, 0);
+    const totalAmount = updatedCart!.items.reduce((s: any, i: any) => s + i.price * i.quantity, 0);
 
     res.json({
       success: true,
@@ -157,7 +157,7 @@ router.post('/repeat/:orderId', authenticateToken, async (req: AuthRequest, res:
           id: updatedCart!.id,
           shopId: updatedCart!.shopId,
           shopName: updatedCart!.shop.name,
-          items: updatedCart!.items.map((i) => ({
+          items: updatedCart!.items.map((i: any) => ({
             id: i.id, cartId: i.cartId, productId: i.productId,
             product: { id: i.product.id, name: i.product.name, price: i.product.price, unit: i.product.unit, image: i.product.image, isAvailable: i.product.isAvailable },
             quantity: i.quantity, price: i.price,
@@ -187,13 +187,13 @@ router.get('/my', authenticateToken, async (req: AuthRequest, res: Response) => 
       prisma.order.count({ where: { customerId: req.userId } }),
     ]);
 
-    const formatted = orders.map((order) => ({
+    const formatted = orders.map((order: any) => ({
       id: order.id,
       customerId: order.customerId,
       shopId: order.shopId,
       shopName: order.shop.name,
       publicToken: order.publicToken,
-      items: order.items.map((item) => ({
+      items: order.items.map((item: any) => ({
         id: item.id, orderId: item.orderId, productId: item.productId,
         productName: item.productName, quantity: item.quantity, price: item.price,
       })),
@@ -227,12 +227,12 @@ router.get('/vendor', authenticateToken, requireRole('vendor'), async (req: Auth
       prisma.order.count({ where: { shopId: shop.id } }),
     ]);
 
-    const formatted = orders.map((order) => ({
+    const formatted = orders.map((order: any) => ({
       id: order.id,
       customerId: order.customerId,
       shopId: order.shopId,
       customerName: order.customer.name,
-      items: order.items.map((item) => ({
+      items: order.items.map((item: any) => ({
         id: item.id, orderId: item.orderId, productId: item.productId,
         productName: item.productName, quantity: item.quantity, price: item.price,
       })),
@@ -269,15 +269,15 @@ router.get('/vendor/summary', authenticateToken, requireRole('vendor'), async (r
     ]);
 
     const todayRevenue = todayOrders
-      .filter((o) => o.status === 'completed')
-      .reduce((s, o) => s + o.totalAmount, 0);
+      .filter((o: any) => o.status === 'completed')
+      .reduce((s: any, o: any) => s + o.totalAmount, 0);
 
-    const pendingCount = todayOrders.filter((o) => ['pending', 'accepted', 'preparing', 'ready', 'out_for_delivery', 'pickup'].includes(o.status)).length;
-    const completedToday = todayOrders.filter((o) => o.status === 'completed').length;
+    const pendingCount = todayOrders.filter((o: any) => ['pending', 'accepted', 'preparing', 'ready', 'out_for_delivery', 'pickup'].includes(o.status)).length;
+    const completedToday = todayOrders.filter((o: any) => o.status === 'completed').length;
 
     // Top products
     const productMap = new Map<string, { name: string; qty: number; revenue: number }>();
-    allOrders.flatMap((o) => o.items).forEach((item) => {
+    allOrders.flatMap((o: any) => o.items).forEach((item: any) => {
       const existing = productMap.get(item.productName) || { name: item.productName, qty: 0, revenue: 0 };
       existing.qty += item.quantity;
       existing.revenue += item.price * item.quantity;
@@ -285,10 +285,10 @@ router.get('/vendor/summary', authenticateToken, requireRole('vendor'), async (r
     });
 
     const topProducts = Array.from(productMap.values())
-      .sort((a, b) => b.qty - a.qty)
+      .sort((a: any, b: any) => b.qty - a.qty)
       .slice(0, 5);
 
-    const totalRevenue = allOrders.reduce((s, o) => s + o.totalAmount, 0);
+    const totalRevenue = allOrders.reduce((s: any, o: any) => s + o.totalAmount, 0);
 
     res.json({
       success: true,
@@ -323,7 +323,7 @@ router.get('/public/:publicToken', async (req: Request, res: Response) => {
         upiId: order.shop.upiId,
         totalAmount: order.totalAmount,
         status: order.status,
-        items: order.items.map((item) => ({
+        items: order.items.map((item: any) => ({
           productName: item.productName,
           quantity: item.quantity,
           price: item.price,
@@ -372,7 +372,7 @@ router.get('/:id', authenticateToken, async (req: AuthRequest, res: Response) =>
         shopAddress: order.shop.address,
         shopPhone: order.shop.phone,
         publicToken: order.publicToken,
-        items: order.items.map((item) => ({
+        items: order.items.map((item: any) => ({
           id: item.id, orderId: item.orderId, productId: item.productId,
           productName: item.productName, quantity: item.quantity, price: item.price,
         })),

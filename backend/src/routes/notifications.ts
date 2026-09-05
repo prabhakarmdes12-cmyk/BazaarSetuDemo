@@ -19,7 +19,7 @@ router.get('/', authenticateToken, async (req: AuthRequest, res: Response) => {
       prisma.notification.count({ where: { userId: req.userId } }),
     ]);
 
-    const formatted = notifications.map((n) => ({
+    const formatted = notifications.map((n: any) => ({
       id: n.id,
       type: n.type,
       title: n.title,

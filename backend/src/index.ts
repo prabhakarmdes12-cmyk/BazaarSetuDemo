@@ -30,6 +30,7 @@ import { requestLog } from './middleware/requestLog';
 import { errorHandler } from './middleware/errorHandler';
 import { validateEnv, getCorsOrigins } from './lib/config';
 import { prisma } from './lib/prisma';
+import { startMerchantSlaService } from './services/slaService';
 
 // Fail fast on missing production env vars (chiti-console pattern).
 validateEnv();
@@ -122,6 +123,10 @@ app.use(errorHandler);
 
 // Socket.io
 setupSocketHandlers(io, prisma);
+
+if (process.env.NODE_ENV !== 'test') {
+  startMerchantSlaService(io);
+}
 
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'test') {

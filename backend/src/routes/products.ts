@@ -15,7 +15,7 @@ router.get('/shop/:shopId', optionalAuth, async (req: AuthRequest, res: Response
       orderBy: { createdAt: 'desc' },
     });
 
-    const formatted = products.map((p) => ({
+    const formatted = products.map((p: any) => ({
       id: p.id,
       shopId: p.shopId,
       name: p.name,
@@ -43,7 +43,7 @@ router.get('/shops/:shopId/products', optionalAuth, async (req: AuthRequest, res
       orderBy: { createdAt: 'desc' },
     });
 
-    const formatted = products.map((p) => ({
+    const formatted = products.map((p: any) => ({
       id: p.id,
       shopId: p.shopId,
       name: p.name,
@@ -78,7 +78,7 @@ router.get('/vendor', authenticateToken, requireRole('vendor'), async (req: Auth
       skip: offset,
     });
 
-    const formatted = products.map((p) => ({
+    const formatted = products.map((p: any) => ({
       id: p.id,
       shopId: p.shopId,
       name: p.name,

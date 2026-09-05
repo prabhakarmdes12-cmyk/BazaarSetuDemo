@@ -7,6 +7,7 @@ import ChatInterface from '@/components/ChatInterface';
 import { Icon } from '@/components/ui';
 import { useAuth } from '@/hooks/useAuth';
 import { useSocket } from '@/hooks/useSocket';
+import { useChitiConnectCall } from '@/hooks/useChitiConnectCall';
 import { Message, Product } from '@/types';
 import { api } from '@/lib/api';
 
@@ -91,6 +92,30 @@ export default function VendorChatPage() {
     return cleanup;
   }, [onMessage]);
 
+  const refreshChatMessages = useCallback(async () => {
+    if (!token || !chatId) return;
+    const res = await api.get<{ success: boolean; data: { messages: Message[]; customerName: string } }>(
+      `/api/chats/${chatId}`,
+      token,
+    );
+    if (res.success) {
+      setMessages(res.data.messages || []);
+      setCustomerName(res.data.customerName || 'Customer');
+    }
+  }, [chatId, token]);
+
+  const chitiCall = useChitiConnectCall({ token, chatId, onRecorded: refreshChatMessages });
+
+  const handleCallCustomer = () => {
+    if (chitiCall.status === 'LIVE') {
+      chitiCall.endCall('ENDED');
+    } else if (chitiCall.status === 'RINGING') {
+      chitiCall.endCall('NO_ANSWER');
+    } else {
+      chitiCall.startCall();
+    }
+  };
+
   const handleSendMessage = useCallback(
     (content: string) => {
       sendMessage(chatId, content);
@@ -118,6 +143,27 @@ export default function VendorChatPage() {
   return (
     <AppShell topNavTitle={customerName} showBack showNav={false} role="vendor">
       <div className="flex flex-col h-[calc(100vh-60px)]">
+        <div className="mx-3 mt-3 flex items-center justify-between rounded-2xl bg-surface-container-lowest p-3 shadow-sm">
+          <div>
+            <p className="text-[11px] font-bold uppercase tracking-wider text-primary">Chiti-Connect</p>
+            <p className="text-xs text-on-surface-variant">
+              {chitiCall.status === 'RINGING' ? 'Ringing customer...' : chitiCall.status === 'LIVE' ? 'Live voice call' : 'WebRTC voice bridge ready'}
+            </p>
+          </div>
+          <button
+            onClick={handleCallCustomer}
+            disabled={!token || !chatId}
+            className={`rounded-full px-4 py-2 text-xs font-bold active:scale-95 transition-all disabled:opacity-50 ${
+              chitiCall.status === 'LIVE'
+                ? 'bg-error text-white'
+                : chitiCall.status === 'RINGING'
+                  ? 'bg-warning-container text-on-surface animate-pulse'
+                  : 'bg-primary text-on-primary'
+            }`}
+          >
+            {chitiCall.status === 'RINGING' ? 'RINGING' : chitiCall.status === 'LIVE' ? 'END CALL' : 'CALL CUSTOMER'}
+          </button>
+        </div>
         {requestCard && (
           <div className="mx-3 mt-3 rounded-3xl border border-primary/20 bg-primary-fixed/60 p-4 shadow-sm">
             <div className="flex items-start justify-between gap-3">

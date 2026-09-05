@@ -21,7 +21,7 @@ export async function deleteUserData(tx: Prisma.TransactionClient, userId: strin
   // 2. Shops owned by this user (vendor case).
   const shopIds = (
     await tx.shop.findMany({ where: { ownerId: userId }, select: { id: true } })
-  ).map((s) => s.id);
+  ).map((s: any) => s.id);
   const anyShop = shopIds.length > 0;
 
   // 3. Favourites: shops the user favourited, plus favourites of owned shops.
@@ -36,7 +36,7 @@ export async function deleteUserData(tx: Prisma.TransactionClient, userId: strin
       where: anyShop ? { OR: [{ customerId: userId }, { shopId: { in: shopIds } }] } : { customerId: userId },
       select: { id: true },
     })
-  ).map((c) => c.id);
+  ).map((c: any) => c.id);
   if (chatIds.length > 0) {
     await tx.message.deleteMany({ where: { chatId: { in: chatIds } } });
     await tx.chat.deleteMany({ where: { id: { in: chatIds } } });

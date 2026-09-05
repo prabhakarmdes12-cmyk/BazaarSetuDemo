@@ -53,6 +53,7 @@ export interface Chat {
 export type MessageType =
   | 'TEXT'
   | 'PRODUCT'
+  | 'VOICE_ORDER'
   | 'BAZAAR.BASKET_PROPOSAL'
   | 'BAZAAR.SUBSTITUTION'
   | 'BAZAAR.FINAL_QUOTE'

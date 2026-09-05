@@ -41,7 +41,7 @@ router.post('/link-bank', authenticateToken, requireRole('vendor'), validate(lin
     const { accountNumber, ifsc, bankName, holderName } = req.body;
 
     const existingAccounts = await prisma.bankAccount.findMany({ where: { vendorId: req.userId! } });
-    const existing = existingAccounts.find((a) => decryptSecret(a.accountNumber) === accountNumber);
+    const existing = existingAccounts.find((a: any) => decryptSecret(a.accountNumber) === accountNumber);
 
     let account: Awaited<ReturnType<typeof prisma.bankAccount.create>>;
     if (existing) {
@@ -107,14 +107,14 @@ router.get('/', authenticateToken, requireRole('vendor'), async (req: AuthReques
         paidOut,
         availableForPayout,
         razorpayXConfigured: isRazorpayXConfigured(),
-        banks: banks.map((b) => ({
+        banks: banks.map((b: any) => ({
           id: b.id,
           bankName: b.bankName,
           holderName: b.holderName,
           masked: maskAccountNumber(decryptSecret(b.accountNumber)),
           isPrimary: b.isPrimary,
         })),
-        recentPayouts: recentPayouts.map((p) => ({
+        recentPayouts: recentPayouts.map((p: any) => ({
           id: p.id,
           amount: p.amount,
           status: p.status,
@@ -235,7 +235,7 @@ router.get('/history', authenticateToken, requireRole('vendor'), async (req: Aut
     res.json({
       success: true,
       data: {
-        payouts: payouts.map((p) => ({
+        payouts: payouts.map((p: any) => ({
           id: p.id,
           amount: p.amount,
           status: p.status,

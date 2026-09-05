@@ -31,7 +31,7 @@ router.get('/:shopId', authenticateToken, async (req: AuthRequest, res: Response
       });
     }
 
-    const totalAmount = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const totalAmount = cart.items.reduce((sum: any, item: any) => sum + item.price * item.quantity, 0);
 
     res.json({
       success: true,
@@ -40,7 +40,7 @@ router.get('/:shopId', authenticateToken, async (req: AuthRequest, res: Response
         customerId: cart.customerId,
         shopId: cart.shopId,
         shopName: cart.shop.name,
-        items: cart.items.map((item) => ({
+        items: cart.items.map((item: any) => ({
           id: item.id,
           cartId: item.cartId,
           productId: item.productId,
@@ -78,7 +78,7 @@ router.get('/', authenticateToken, async (req: AuthRequest, res: Response) => {
     });
 
     // Return the first non-empty cart or empty state
-    const cart = carts.find((c) => c.items.length > 0);
+    const cart = carts.find((c: any) => c.items.length > 0);
     if (!cart) {
       return res.json({
         success: true,
@@ -86,7 +86,7 @@ router.get('/', authenticateToken, async (req: AuthRequest, res: Response) => {
       });
     }
 
-    const totalAmount = cart.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const totalAmount = cart.items.reduce((sum: any, item: any) => sum + item.price * item.quantity, 0);
 
     res.json({
       success: true,
@@ -95,7 +95,7 @@ router.get('/', authenticateToken, async (req: AuthRequest, res: Response) => {
         customerId: cart.customerId,
         shopId: cart.shopId,
         shopName: cart.shop.name,
-        items: cart.items.map((item) => ({
+        items: cart.items.map((item: any) => ({
           id: item.id,
           cartId: item.cartId,
           productId: item.productId,

@@ -43,7 +43,7 @@ router.get('/', authenticateToken, async (req: AuthRequest, res: Response) => {
       prisma.favoriteShop.count({ where: { userId: req.userId } }),
     ]);
 
-    const shops = favorites.map((f) => ({
+    const shops = favorites.map((f: any) => ({
       id: f.shop.id,
       ownerId: f.shop.ownerId,
       name: f.shop.name,

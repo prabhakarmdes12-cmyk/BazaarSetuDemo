@@ -158,7 +158,7 @@ router.get('/me', authenticateToken, async (req: AuthRequest, res: Response) => 
 // DPDP: erase the authenticated user's account and all their personal data.
 router.delete('/account', authenticateToken, async (req: AuthRequest, res: Response) => {
   try {
-    await prisma.$transaction(async (tx) => {
+    await prisma.$transaction(async (tx: any) => {
       await deleteUserData(tx, req.userId as string);
     });
     res.json({

@@ -8,8 +8,9 @@ import AppShell from '@/components/AppShell';
 import ChatInterface from '@/components/ChatInterface';
 import { useAuth } from '@/hooks/useAuth';
 import { useSocket } from '@/hooks/useSocket';
+import { useChitiConnectCall } from '@/hooks/useChitiConnectCall';
 import { Shop, Product, Message } from '@/types';
-import { api } from '@/lib/api';
+import { api, API_URL } from '@/lib/api';
 import { addToGuestCart, guestCartCount } from '@/lib/guestCart';
 import { track } from '@/lib/analytics';
 
@@ -104,6 +105,14 @@ export default function ShopPage() {
     return () => { cleanup1(); cleanup2(); };
   }, [onTyping, onStopTyping, chatId, user?.id]);
 
+  const refreshChatMessages = useCallback(async () => {
+    if (!chatId || !token) return;
+    const refreshed = await api.get<{ success: boolean; data: { messages: Message[] } }>(`/api/chats/${chatId}`, token);
+    if (refreshed.success) setMessages(refreshed.data.messages || []);
+  }, [chatId, token]);
+
+  const chitiCall = useChitiConnectCall({ token, chatId, onRecorded: refreshChatMessages });
+
   const handleSendMessage = useCallback(async (content: string) => {
     if (!chatId) return;
 
@@ -125,8 +134,7 @@ export default function ShopPage() {
           token,
         );
         if (parsed.success) {
-          const refreshed = await api.get<{ success: boolean; data: { messages: Message[] } }>(`/api/chats/${chatId}`, token);
-          if (refreshed.success) setMessages(refreshed.data.messages || []);
+          await refreshChatMessages();
           return;
         }
       } catch (err) {
@@ -135,7 +143,27 @@ export default function ShopPage() {
     }
 
     sendMessage(chatId, content);
-  }, [chatId, sendMessage, shopId, token, user?.id]);
+  }, [chatId, refreshChatMessages, sendMessage, shopId, token, user?.id]);
+
+  const handleSendVoiceNote = useCallback(async (audio: Blob, meta: { mimeType: string; durationMs: number }) => {
+    if (!chatId || !token || !user?.id) return;
+    const formData = new FormData();
+    formData.append('customerId', user.id);
+    formData.append('shopId', shopId);
+    formData.append('conversationId', chatId);
+    formData.append('locale', 'hinglish');
+    formData.append('durationMs', String(meta.durationMs));
+    formData.append('clientActionId', `${chatId}:voice:${Date.now()}`);
+    formData.append('audio', audio, `voice-order-${Date.now()}.webm`);
+
+    const response = await fetch(`${API_URL}/api/shop-bot/voice-order`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+      body: formData,
+    });
+    if (!response.ok) throw new Error('Voice order upload failed');
+    await refreshChatMessages();
+  }, [chatId, refreshChatMessages, shopId, token, user?.id]);
 
   const handleSendProduct = useCallback((product: { name: string; price: number; unit: string; image?: string }) => {
     if (!chatId) return;
@@ -145,6 +173,21 @@ export default function ShopPage() {
   const handleTyping = useCallback(() => { if (chatId) sendTyping(chatId); }, [chatId, sendTyping]);
   const handleStopTyping = useCallback(() => { if (chatId) sendStopTyping(chatId); }, [chatId, sendStopTyping]);
   const handleMarkRead = useCallback(() => { if (chatId) markRead(chatId); }, [chatId, markRead]);
+
+  const handleCallShop = () => {
+    if (!token) {
+      router.push('/login');
+      return;
+    }
+    setActiveTab('chat');
+    if (chitiCall.status === 'LIVE') {
+      chitiCall.endCall('ENDED');
+    } else if (chitiCall.status === 'RINGING') {
+      chitiCall.endCall('NO_ANSWER');
+    } else {
+      chitiCall.startCall();
+    }
+  };
 
   const handleAddToCart = async (product: Product) => {
     if (!token) {
@@ -193,16 +236,21 @@ export default function ShopPage() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            {shop?.phone && (
-              <a
-                href={`tel:${shop.phone}`}
-                className="flex items-center gap-1 rounded-full bg-primary text-on-primary px-3 py-2 text-xs font-bold active:scale-95 transition-transform"
-                aria-label="Call shop"
-              >
-                <Icon name="call" size="sm" />
-                CALL SHOP
-              </a>
-            )}
+            <button
+              onClick={handleCallShop}
+              disabled={!token || !chatId}
+              className={`flex items-center gap-1 rounded-full px-3 py-2 text-xs font-bold active:scale-95 transition-transform disabled:opacity-50 ${
+                chitiCall.status === 'LIVE'
+                  ? 'bg-error text-white'
+                  : chitiCall.status === 'RINGING'
+                    ? 'bg-warning-container text-on-surface animate-pulse'
+                    : 'bg-primary text-on-primary'
+              }`}
+              aria-label="Call shop via Chiti-Connect"
+            >
+              <Icon name={chitiCall.status === 'LIVE' ? 'call_end' : 'call'} size="sm" />
+              {chitiCall.status === 'RINGING' ? 'RINGING' : chitiCall.status === 'LIVE' ? 'LIVE' : 'CALL SHOP'}
+            </button>
             <button className="active:scale-95 transition-transform text-primary" aria-label="Notifications">
               <Icon name="notifications" />
             </button>
@@ -341,6 +389,7 @@ export default function ShopPage() {
               messages={messages}
               onSendMessage={handleSendMessage}
               onSendProduct={handleSendProduct}
+              onSendVoiceNote={handleSendVoiceNote}
               onAddToCart={handleAddToCart}
               onTyping={handleTyping}
               onStopTyping={handleStopTyping}

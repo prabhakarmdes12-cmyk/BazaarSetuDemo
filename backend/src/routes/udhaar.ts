@@ -22,11 +22,11 @@ interface EntryLike {
 // days (DSO proxy) for a single ledger.
 function computeDso(entries: EntryLike[]): { avgDays: number; sampleCount: number; oldestCreditAgeDays: number } {
   const credits = entries
-    .filter((e) => e.type === 'CREDIT')
-    .sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+    .filter((e: any) => e.type === 'CREDIT')
+    .sort((a: any, b: any) => a.createdAt.getTime() - b.createdAt.getTime());
   const payments = entries
-    .filter((e) => e.type === 'PAYMENT')
-    .sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+    .filter((e: any) => e.type === 'PAYMENT')
+    .sort((a: any, b: any) => a.createdAt.getTime() - b.createdAt.getTime());
 
   const daysList: number[] = [];
   let paymentIndex = 0;
@@ -50,7 +50,7 @@ function computeDso(entries: EntryLike[]): { avgDays: number; sampleCount: numbe
 
   if (daysList.length === 0) return { avgDays: 0, sampleCount: 0, oldestCreditAgeDays };
   return {
-    avgDays: daysList.reduce((s, d) => s + d, 0) / daysList.length,
+    avgDays: daysList.reduce((s: any, d: any) => s + d, 0) / daysList.length,
     sampleCount: daysList.length,
     oldestCreditAgeDays,
   };
@@ -77,7 +77,7 @@ router.get('/:shopId', authenticateToken, async (req: AuthRequest, res: Response
         balance: ledger.totalDue - ledger.totalPaid,
         creditLimit: ledger.creditLimit,
         lastRemindedAt: ledger.lastRemindedAt ? ledger.lastRemindedAt.toISOString() : null,
-        entries: ledger.entries.map((e) => ({
+        entries: ledger.entries.map((e: any) => ({
           id: e.id,
           type: e.type,
           amount: e.amount,
@@ -157,7 +157,7 @@ router.post('/vendor/:customerId/pay', authenticateToken, requireRole('vendor'),
       });
     }
 
-    const payment = await prisma.$transaction(async (tx) => {
+    const payment = await prisma.$transaction(async (tx: any) => {
       const entry = await tx.udharEntry.create({
         data: { ledgerId: ledger.id, type: 'PAYMENT', amount, note: `Paid via ${method}` },
       });
@@ -258,7 +258,7 @@ router.get('/vendor/all', authenticateToken, requireRole('vendor'), async (req: 
       orderBy: { lastUpdated: 'desc' },
     });
 
-    const formatted = ledgers.map((l) => {
+    const formatted = ledgers.map((l: any) => {
       const balance = l.totalDue - l.totalPaid;
       return {
         id: l.id,
@@ -291,22 +291,22 @@ router.get('/vendor/summary', authenticateToken, requireRole('vendor'), async (r
       include: { entries: { select: { type: true, amount: true, createdAt: true } } },
     });
 
-    const totalDue = ledgers.reduce((s, l) => s + l.totalDue, 0);
-    const totalPaid = ledgers.reduce((s, l) => s + l.totalPaid, 0);
+    const totalDue = ledgers.reduce((s: any, l: any) => s + l.totalDue, 0);
+    const totalPaid = ledgers.reduce((s: any, l: any) => s + l.totalPaid, 0);
     const outstanding = totalDue - totalPaid;
 
-    const active = ledgers.filter((l) => l.totalDue - l.totalPaid > 0);
-    const dsoAgg = active.map((l) => computeDso(l.entries));
-    const weightedSamples = dsoAgg.reduce((s, d) => s + d.sampleCount, 0);
+    const active = ledgers.filter((l: any) => l.totalDue - l.totalPaid > 0);
+    const dsoAgg = active.map((l: any) => computeDso(l.entries));
+    const weightedSamples = dsoAgg.reduce((s: any, d: any) => s + d.sampleCount, 0);
     const dsoDays = weightedSamples
-      ? dsoAgg.reduce((s, d) => s + d.avgDays * d.sampleCount, 0) / weightedSamples
+      ? dsoAgg.reduce((s: any, d: any) => s + d.avgDays * d.sampleCount, 0) / weightedSamples
       : 0;
-    const overdueCount = dsoAgg.filter((d) => d.oldestCreditAgeDays > OVERDUE_DAYS).length;
+    const overdueCount = dsoAgg.filter((d: any) => d.oldestCreditAgeDays > OVERDUE_DAYS).length;
 
-    const limitBase = ledgers.filter((l) => l.creditLimit > 0);
+    const limitBase = ledgers.filter((l: any) => l.creditLimit > 0);
     const creditUtilization = limitBase.length
-      ? (limitBase.reduce((s, l) => s + (l.totalDue - l.totalPaid), 0) /
-          limitBase.reduce((s, l) => s + l.creditLimit, 0)) *
+      ? (limitBase.reduce((s: any, l: any) => s + (l.totalDue - l.totalPaid), 0) /
+          limitBase.reduce((s: any, l: any) => s + l.creditLimit, 0)) *
         100
       : 0;
 
@@ -360,7 +360,7 @@ router.get('/vendor/payments', authenticateToken, requireRole('vendor'), async (
     res.json({
       success: true,
       data: {
-        payments: payments.map((p) => ({
+        payments: payments.map((p: any) => ({
           id: p.id,
           amount: p.amount,
           method: p.method,
@@ -411,7 +411,7 @@ router.get('/vendor/:customerId', authenticateToken, requireRole('vendor'), asyn
         lastRemindedAt: ledger.lastRemindedAt ? ledger.lastRemindedAt.toISOString() : null,
         dsoDays: Math.round(dso.avgDays * 10) / 10,
         oldestCreditAgeDays: Math.round(dso.oldestCreditAgeDays * 10) / 10,
-        entries: ledger.entries.map((e) => ({
+        entries: ledger.entries.map((e: any) => ({
           id: e.id,
           type: e.type,
           amount: e.amount,

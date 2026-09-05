@@ -16,12 +16,12 @@ router.get('/mine', authenticateToken, async (req: AuthRequest, res: Response) =
     if (!user) return res.status(404).json({ success: false, message: 'User not found' });
 
     const referrals = user.referralsReferrer;
-    const joinedCount = referrals.filter((r) => r.status === 'joined').length;
-    const rewardedCount = referrals.filter((r) => r.status === 'rewarded').length;
-    const pendingCount = referrals.filter((r) => r.status === 'pending').length;
+    const joinedCount = referrals.filter((r: any) => r.status === 'joined').length;
+    const rewardedCount = referrals.filter((r: any) => r.status === 'rewarded').length;
+    const pendingCount = referrals.filter((r: any) => r.status === 'pending').length;
     const rewardAmount = referrals
-      .filter((r) => r.status === 'rewarded')
-      .reduce((s, r) => s + r.rewardAmount, 0);
+      .filter((r: any) => r.status === 'rewarded')
+      .reduce((s: any, r: any) => s + r.rewardAmount, 0);
 
     res.json({
       success: true,

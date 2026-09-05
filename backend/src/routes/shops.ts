@@ -43,9 +43,9 @@ router.get('/', optionalAuth, async (req: AuthRequest, res: Response) => {
       prisma.shop.count({ where: { isActive: true } }),
     ]);
 
-    const favoriteSet = new Set(favorites.map((f) => f.shopId));
+    const favoriteSet = new Set(favorites.map((f: any) => f.shopId));
 
-    let formattedShops = shops.map((shop) => ({
+    let formattedShops = shops.map((shop: any) => ({
       id: shop.id,
       ownerId: shop.ownerId,
       ownerName: shop.owner.name,
@@ -66,9 +66,9 @@ router.get('/', optionalAuth, async (req: AuthRequest, res: Response) => {
     }));
 
     if (sort === 'distance' && lat && lng) {
-      formattedShops.sort((a, b) => (a.distance || 999) - (b.distance || 999));
+      formattedShops.sort((a: any, b: any) => (a.distance || 999) - (b.distance || 999));
     } else {
-      formattedShops.sort((a, b) => b.rating - a.rating);
+      formattedShops.sort((a: any, b: any) => b.rating - a.rating);
     }
 
     res.json({ success: true, data: formattedShops, total, limit, offset });
@@ -177,7 +177,7 @@ router.get('/:id/products', optionalAuth, async (req: AuthRequest, res: Response
       orderBy: { createdAt: 'desc' },
     });
 
-    const formatted = products.map((p) => ({
+    const formatted = products.map((p: any) => ({
       id: p.id, shopId: p.shopId, name: p.name, description: p.description,
       price: p.price, image: p.image, category: p.category, unit: p.unit,
       isAvailable: p.isAvailable, createdAt: p.createdAt.toISOString(),
