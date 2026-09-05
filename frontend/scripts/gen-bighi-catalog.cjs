@@ -327,11 +327,12 @@ const CATALOG = {
     { n: 'Mop with Refill', brands: ['Scotch-Brite', 'Gala'], packs: [['1 set', 1]], p: 350 },
   ],
   personal: [
-    { n: 'Germ Protection Soap', brands: ['Dettol Original', 'Lifebuoy', 'Savlon'], packs: [['75 g', 0.4], ['125 g', 0.65], ['4 pack', 1]], p: 180 },
+    { n: 'Germ Protection Soap', brands: ['Dettol Original', 'Lifebuoy', 'Savlon'], packs: [['75 g', 0.4], ['125 g', 0.65], ['3 pack', 0.8], ['4 pack', 1]], p: 180 },
     { n: 'Beauty Bathing Bar', brands: ['Dove Cream Bar', 'Pears', 'Lux'], packs: [['100 g', 0.35], ['3 pack', 0.8], ['4 pack', 1]], p: 130 },
     { n: 'Anti-Dandruff Shampoo', brands: ['Head & Shoulders', 'Clinic Plus', 'Dove'], packs: [['180 ml', 0.55], ['340 ml', 0.8], ['650 ml', 1]], p: 300 },
     { n: 'Shampoo', brands: ['Sunsilk', 'Dove', 'Clinic Plus'], packs: [['180 ml', 0.5], ['340 ml', 0.8], ['650 ml', 1]], p: 260 },
     { n: 'Strong Teeth Toothpaste', brands: ['Colgate Strong Teeth', 'Pepsodent', 'Sensodyne'], packs: [['100 g', 0.4], ['200 g', 0.7], ['300 g', 1]], p: 110 },
+    { n: 'Cooling Gel Toothpaste', brands: ['Colgate MaxFresh', 'Close Up', 'Pepsodent'], packs: [['80 g', 0.6], ['150 g', 1]], p: 105 },
     { n: 'Toothbrush', brands: ['Colgate', 'Oral-B', 'Sensodyne'], packs: [['1 pc', 0.3], ['4 pack soft', 1]], p: 60 },
     { n: 'Manual Razor', brands: ['Gillette', '7 O’clock'], packs: [['1 razor', 0.5], ['4 cartridge', 1]], p: 120 },
     { n: 'Shaving Cream', brands: ['Gillette', 'Old Spice'], packs: [['70 g', 0.45], ['196 g', 1]], p: 90 },
