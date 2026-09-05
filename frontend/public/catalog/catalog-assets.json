@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 84,
-  "totalSkus": 160,
+  "totalAssets": 94,
+  "totalSkus": 183,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -1713,7 +1713,7 @@
       "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 48291,
+      "bytes": 48184,
       "verified": true
     },
     "bb-01280": {
@@ -1724,7 +1724,7 @@
       "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 48291,
+      "bytes": 48184,
       "verified": true
     },
     "bb-01311": {
@@ -1735,7 +1735,7 @@
       "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 48291,
+      "bytes": 48184,
       "verified": true
     },
     "bb-01329": {
@@ -1746,7 +1746,7 @@
       "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49277,
+      "bytes": 49368,
       "verified": true
     },
     "bb-01281": {
@@ -1757,7 +1757,7 @@
       "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49277,
+      "bytes": 49368,
       "verified": true
     },
     "bb-01312": {
@@ -1768,7 +1768,260 @@
       "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49277,
+      "bytes": 49368,
+      "verified": true
+    },
+    "bb-01294": {
+      "skuId": "bb-01294",
+      "name": "Johnson’s Baby Wipes",
+      "unit": "72 wipes pack",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-gentle-wipes-72.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47771,
+      "verified": true
+    },
+    "bb-01326": {
+      "skuId": "bb-01326",
+      "name": "Pampers Baby Wipes",
+      "unit": "72 wipes pack",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-gentle-wipes-72.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47771,
+      "verified": true
+    },
+    "bb-01309": {
+      "skuId": "bb-01309",
+      "name": "MamyPoko Baby Wipes",
+      "unit": "72 wipes pack",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-gentle-wipes-72.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47771,
+      "verified": true
+    },
+    "bb-01318": {
+      "skuId": "bb-01318",
+      "name": "Nestle Cerelac Infant Cereal",
+      "unit": "300 g",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/infant-wheat-apple-cereal-300g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64301,
+      "verified": true
+    },
+    "bb-01321": {
+      "skuId": "bb-01321",
+      "name": "Nestum Infant Cereal",
+      "unit": "300 g",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/infant-wheat-apple-cereal-300g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64301,
+      "verified": true
+    },
+    "bb-01271": {
+      "skuId": "bb-01271",
+      "name": "Himalaya Baby Soap",
+      "unit": "75 g",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-gentle-soap-75g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39820,
+      "verified": true
+    },
+    "bb-01290": {
+      "skuId": "bb-01290",
+      "name": "Johnson’s Baby Soap",
+      "unit": "75 g",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-gentle-soap-75g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39820,
+      "verified": true
+    },
+    "bb-01345": {
+      "skuId": "bb-01345",
+      "name": "Sebamed Baby Soap",
+      "unit": "75 g",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-gentle-soap-75g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39820,
+      "verified": true
+    },
+    "bb-01674": {
+      "skuId": "bb-01674",
+      "name": "Dolo 650 Paracetamol 500mg Tablets",
+      "unit": "10 tablets",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/paracetamol-strip-15.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62743,
+      "verified": true
+    },
+    "bb-01662": {
+      "skuId": "bb-01662",
+      "name": "Crocin Paracetamol 500mg Tablets",
+      "unit": "10 tablets",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/paracetamol-strip-15.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62743,
+      "verified": true
+    },
+    "bb-01660": {
+      "skuId": "bb-01660",
+      "name": "Calpol Paracetamol 500mg Tablets",
+      "unit": "10 tablets",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/paracetamol-strip-15.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62743,
+      "verified": true
+    },
+    "bb-01302": {
+      "skuId": "bb-01302",
+      "name": "Limcee Chewable Vitamin C Tablets",
+      "unit": "20 tablets",
+      "categoryId": "baby",
+      "path": "/catalog/items/pharma/vitamin-c-chewable-15.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67019,
+      "verified": true
+    },
+    "bb-01304": {
+      "skuId": "bb-01304",
+      "name": "Limcee Vitamin C Tablets",
+      "unit": "20 tablets",
+      "categoryId": "baby",
+      "path": "/catalog/items/pharma/vitamin-c-chewable-15.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67019,
+      "verified": true
+    },
+    "bb-01738": {
+      "skuId": "bb-01738",
+      "name": "Zandu Pain Relief Balm",
+      "unit": "9 ml",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/pain-relief-balm-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61223,
+      "verified": true
+    },
+    "bb-01647": {
+      "skuId": "bb-01647",
+      "name": "Amrutanjan Pain Relief Balm",
+      "unit": "9 ml",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/pain-relief-balm-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61223,
+      "verified": true
+    },
+    "bb-01729": {
+      "skuId": "bb-01729",
+      "name": "Tiger Balm Pain Relief Balm",
+      "unit": "9 ml",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/pain-relief-balm-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61223,
+      "verified": true
+    },
+    "bb-01250": {
+      "skuId": "bb-01250",
+      "name": "Dettol Antiseptic Liquid",
+      "unit": "125 ml",
+      "categoryId": "baby",
+      "path": "/catalog/items/pharma/antiseptic-liquid-100ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 32286,
+      "verified": true
+    },
+    "bb-01242": {
+      "skuId": "bb-01242",
+      "name": "Band-Aid Antiseptic Bandage",
+      "unit": "20 strips",
+      "categoryId": "baby",
+      "path": "/catalog/items/pharma/adhesive-bandages-10.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45536,
+      "verified": true
+    },
+    "bb-01248": {
+      "skuId": "bb-01248",
+      "name": "Dettol Antiseptic Bandage",
+      "unit": "20 strips",
+      "categoryId": "baby",
+      "path": "/catalog/items/pharma/adhesive-bandages-10.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45536,
+      "verified": true
+    },
+    "bb-01683": {
+      "skuId": "bb-01683",
+      "name": "Eno Antacid Fruit Salt Sachet",
+      "unit": "5 g sachet",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/fruit-salt-sachet-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54944,
+      "verified": true
+    },
+    "bb-01690": {
+      "skuId": "bb-01690",
+      "name": "Gelusil Antacid Fruit Salt Sachet",
+      "unit": "5 g sachet",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/fruit-salt-sachet-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54944,
+      "verified": true
+    },
+    "bb-00812": {
+      "skuId": "bb-00812",
+      "name": "Glucon-D Glucose Energy Powder",
+      "unit": "200 g",
+      "categoryId": "tea",
+      "path": "/catalog/items/pharma/glucose-energy-powder-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68937,
+      "verified": true
+    },
+    "bb-00810": {
+      "skuId": "bb-00810",
+      "name": "Electrol Glucose Energy Powder",
+      "unit": "200 g",
+      "categoryId": "tea",
+      "path": "/catalog/items/pharma/glucose-energy-powder-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68937,
       "verified": true
     }
   }

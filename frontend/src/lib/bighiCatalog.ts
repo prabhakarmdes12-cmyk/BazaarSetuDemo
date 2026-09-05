@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 160 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 183 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25823,7 +25823,30 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01311": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
   "bb-01329": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
   "bb-01281": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
-  "bb-01312": "/catalog/items/baby/baby-diaper-pants-l-30.jpg"
+  "bb-01312": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+  "bb-01294": "/catalog/items/baby/baby-gentle-wipes-72.jpg",
+  "bb-01326": "/catalog/items/baby/baby-gentle-wipes-72.jpg",
+  "bb-01309": "/catalog/items/baby/baby-gentle-wipes-72.jpg",
+  "bb-01318": "/catalog/items/baby/infant-wheat-apple-cereal-300g.jpg",
+  "bb-01321": "/catalog/items/baby/infant-wheat-apple-cereal-300g.jpg",
+  "bb-01271": "/catalog/items/baby/baby-gentle-soap-75g.jpg",
+  "bb-01290": "/catalog/items/baby/baby-gentle-soap-75g.jpg",
+  "bb-01345": "/catalog/items/baby/baby-gentle-soap-75g.jpg",
+  "bb-01674": "/catalog/items/pharma/paracetamol-strip-15.jpg",
+  "bb-01662": "/catalog/items/pharma/paracetamol-strip-15.jpg",
+  "bb-01660": "/catalog/items/pharma/paracetamol-strip-15.jpg",
+  "bb-01302": "/catalog/items/pharma/vitamin-c-chewable-15.jpg",
+  "bb-01304": "/catalog/items/pharma/vitamin-c-chewable-15.jpg",
+  "bb-01738": "/catalog/items/pharma/pain-relief-balm-50g.jpg",
+  "bb-01647": "/catalog/items/pharma/pain-relief-balm-50g.jpg",
+  "bb-01729": "/catalog/items/pharma/pain-relief-balm-50g.jpg",
+  "bb-01250": "/catalog/items/pharma/antiseptic-liquid-100ml.jpg",
+  "bb-01242": "/catalog/items/pharma/adhesive-bandages-10.jpg",
+  "bb-01248": "/catalog/items/pharma/adhesive-bandages-10.jpg",
+  "bb-01683": "/catalog/items/pharma/fruit-salt-sachet-pack.jpg",
+  "bb-01690": "/catalog/items/pharma/fruit-salt-sachet-pack.jpg",
+  "bb-00812": "/catalog/items/pharma/glucose-energy-powder-500g.jpg",
+  "bb-00810": "/catalog/items/pharma/glucose-energy-powder-500g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
