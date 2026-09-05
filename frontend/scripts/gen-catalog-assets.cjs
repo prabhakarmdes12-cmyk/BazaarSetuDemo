@@ -403,6 +403,25 @@ const SKU_ASSET_ROWS = [
   ['personal', "Pepsodent Strong Teeth Toothpaste", "200 g", 'personal/colgate-strong-teeth-200g.jpg'],
   ['personal', "Colgate MaxFresh Cooling Gel Toothpaste", "150 g", 'personal/colgate-maxfresh-gel-150g.jpg'],
   ['personal', "Pepsodent Cooling Gel Toothpaste", "150 g", 'personal/colgate-maxfresh-gel-150g.jpg'],
+  // Batch 4 group E/F/G: oral care, hair care, grooming, laundry
+  ['personal', "Close Up Cooling Gel Toothpaste", "150 g", 'personal/close-up-red-gel-150g.jpg'],
+  ['personal', "Sensodyne Sensitivity Relief Toothpaste", "75 g", 'personal/sensodyne-sensitive-75g.jpg'],
+  ['personal', "Colgate Sensitive Sensitivity Relief Toothpaste", "75 g", 'personal/sensodyne-sensitive-75g.jpg'],
+  ['personal', "Vantej Sensitivity Relief Toothpaste", "75 g", 'personal/sensodyne-sensitive-75g.jpg'],
+  ['personal', "Parachute Coconut Hair Oil", "200 ml", 'personal/parachute-coconut-oil-200ml.jpg'],
+  ['personal', "Parachute Coconut Hair Oil", "500 ml", 'personal/parachute-coconut-oil-500ml.jpg'],
+  ['personal', "Clinic Plus Shampoo", "175 ml", 'personal/clinic-plus-shampoo-175ml.jpg'],
+  ['personal', "Clinic Plus Anti-Dandruff Shampoo", "340 ml", 'personal/head-shoulders-shampoo-180ml.jpg'],
+  ['personal', "Head & Shoulders Anti-Dandruff Shampoo", "340 ml", 'personal/head-shoulders-shampoo-180ml.jpg'],
+  ['personal', "Sunsilk Shampoo", "180 ml", 'personal/sunsilk-shampoo-180ml.jpg'],
+  ['personal', "Dove Shampoo", "180 ml", 'personal/sunsilk-shampoo-180ml.jpg'],
+  ['personal', "Gillette Presto Manual Razor", "5 razor pack", 'personal/gillette-presto-razor-5-pack.jpg'],
+  ['household', "Surf Excel Top-Load Detergent", "4 kg", 'household/surf-excel-easy-wash-1kg.jpg'],
+  ['household', "Ghadi Top-Load Detergent", "1 kg", 'household/surf-excel-easy-wash-1kg.jpg'],
+  ['household', "Ariel Top-Load Detergent", "1 kg", 'household/surf-excel-easy-wash-1kg.jpg'],
+  ['household', "Surf Excel Matic Detergent Powder", "2 kg", 'household/surf-excel-matic-1kg.jpg'],
+  ['household', "Ariel Matic Detergent Powder", "2 kg", 'household/surf-excel-matic-1kg.jpg'],
+  ['household', "Tide Matic Detergent Powder", "2 kg", 'household/surf-excel-matic-1kg.jpg'],
 ];
 
 const EXPECTED_PX = 600;
