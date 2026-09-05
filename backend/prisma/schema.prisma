@@ -173,6 +173,11 @@ model Order {
   shop        Shop     @relation(fields: [shopId], references: [id])
   totalAmount          Float
   status               String   @default("pending")
+  paymentMethod       String?  @default("COD")
+  deliveryAddress     String?
+  deliveryPincode     String?
+  deliveryLat         Float?
+  deliveryLng         Float?
   publicToken          String?  @unique
   conversationDraftId  String?  @unique
   createdAt            DateTime @default(now())
