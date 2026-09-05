@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 86 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 114 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25749,7 +25749,35 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01559": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
   "bb-01580": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
   "bb-01600": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
-  "bb-00434": "/catalog/items/dryfruits/roasted-chana-sattu-500g.jpg"
+  "bb-00434": "/catalog/items/dryfruits/roasted-chana-sattu-500g.jpg",
+  "bb-00247": "/catalog/items/dryfruits/poha-chooda-500g.jpg",
+  "bb-00222": "/catalog/items/dryfruits/poha-chooda-500g.jpg",
+  "bb-01632": "/catalog/items/dryfruits/almonds-badam-200g.jpg",
+  "bb-01562": "/catalog/items/dryfruits/almonds-badam-200g.jpg",
+  "bb-01602": "/catalog/items/dryfruits/almonds-badam-200g.jpg",
+  "bb-01635": "/catalog/items/dryfruits/cashew-kaju-200g.jpg",
+  "bb-01569": "/catalog/items/dryfruits/cashew-kaju-200g.jpg",
+  "bb-01609": "/catalog/items/dryfruits/cashew-kaju-200g.jpg",
+  "bb-01641": "/catalog/items/dryfruits/kishmish-raisins-200g.jpg",
+  "bb-01586": "/catalog/items/dryfruits/kishmish-raisins-200g.jpg",
+  "bb-01618": "/catalog/items/dryfruits/kishmish-raisins-200g.jpg",
+  "bb-00276": "/catalog/items/staples/besan-gram-flour-1kg.jpg",
+  "bb-00181": "/catalog/items/staples/besan-gram-flour-1kg.jpg",
+  "bb-00213": "/catalog/items/staples/besan-gram-flour-1kg.jpg",
+  "bb-00425": "/catalog/items/spices/haldi-turmeric-200g.jpg",
+  "bb-00385": "/catalog/items/spices/haldi-turmeric-200g.jpg",
+  "bb-00298": "/catalog/items/spices/haldi-turmeric-200g.jpg",
+  "bb-00377": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
+  "bb-00344": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
+  "bb-00316": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
+  "bb-00380": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
+  "bb-00347": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
+  "bb-00319": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
+  "bb-00382": "/catalog/items/spices/garam-masala-100g.jpg",
+  "bb-00349": "/catalog/items/spices/garam-masala-100g.jpg",
+  "bb-00321": "/catalog/items/spices/garam-masala-100g.jpg",
+  "bb-00391": "/catalog/items/spices/chicken-meat-masala-100g.jpg",
+  "bb-00353": "/catalog/items/spices/chicken-meat-masala-100g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

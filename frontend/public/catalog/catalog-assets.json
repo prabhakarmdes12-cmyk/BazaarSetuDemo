@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 55,
-  "totalSkus": 86,
+  "totalAssets": 65,
+  "totalSkus": 114,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -294,7 +294,7 @@
       "path": "/catalog/items/staples/chakki-atta-5kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 61147,
+      "bytes": 61114,
       "verified": true
     },
     "bb-00201": {
@@ -305,7 +305,7 @@
       "path": "/catalog/items/staples/chakki-atta-10kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 67599,
+      "bytes": 67540,
       "verified": true
     },
     "bb-00236": {
@@ -316,7 +316,7 @@
       "path": "/catalog/items/staples/chakki-atta-5kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 61147,
+      "bytes": 61114,
       "verified": true
     },
     "bb-00237": {
@@ -327,7 +327,7 @@
       "path": "/catalog/items/staples/chakki-atta-10kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 67599,
+      "bytes": 67540,
       "verified": true
     },
     "bb-00238": {
@@ -338,7 +338,7 @@
       "path": "/catalog/items/staples/classic-basmati-rice-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 57136,
+      "bytes": 57109,
       "verified": true
     },
     "bb-00209": {
@@ -349,7 +349,7 @@
       "path": "/catalog/items/staples/classic-basmati-rice-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 57136,
+      "bytes": 57109,
       "verified": true
     },
     "bb-00290": {
@@ -360,7 +360,7 @@
       "path": "/catalog/items/staples/toor-arhar-dal-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64368,
+      "bytes": 64243,
       "verified": true
     },
     "bb-00232": {
@@ -371,7 +371,7 @@
       "path": "/catalog/items/staples/toor-arhar-dal-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64368,
+      "bytes": 64243,
       "verified": true
     },
     "bb-00362": {
@@ -921,7 +921,7 @@
       "path": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 62582,
+      "bytes": 62555,
       "verified": true
     },
     "bb-01580": {
@@ -932,7 +932,7 @@
       "path": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 62582,
+      "bytes": 62555,
       "verified": true
     },
     "bb-01600": {
@@ -943,7 +943,7 @@
       "path": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 62582,
+      "bytes": 62555,
       "verified": true
     },
     "bb-00434": {
@@ -954,7 +954,315 @@
       "path": "/catalog/items/dryfruits/roasted-chana-sattu-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 62156,
+      "bytes": 62069,
+      "verified": true
+    },
+    "bb-00247": {
+      "skuId": "bb-00247",
+      "name": "Local Poha Flattened Rice",
+      "unit": "500 g",
+      "categoryId": "staples",
+      "path": "/catalog/items/dryfruits/poha-chooda-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59643,
+      "verified": true
+    },
+    "bb-00222": {
+      "skuId": "bb-00222",
+      "name": "Fortune Poha Flattened Rice",
+      "unit": "500 g",
+      "categoryId": "staples",
+      "path": "/catalog/items/dryfruits/poha-chooda-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59643,
+      "verified": true
+    },
+    "bb-01632": {
+      "skuId": "bb-01632",
+      "name": "Vedaka Almonds California",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/almonds-badam-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 55494,
+      "verified": true
+    },
+    "bb-01562": {
+      "skuId": "bb-01562",
+      "name": "Happilo Almonds California",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/almonds-badam-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 55494,
+      "verified": true
+    },
+    "bb-01602": {
+      "skuId": "bb-01602",
+      "name": "Nutraj Almonds California",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/almonds-badam-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 55494,
+      "verified": true
+    },
+    "bb-01635": {
+      "skuId": "bb-01635",
+      "name": "Vedaka Cashew Whole W240",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/cashew-kaju-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52295,
+      "verified": true
+    },
+    "bb-01569": {
+      "skuId": "bb-01569",
+      "name": "Happilo Cashew Whole W240",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/cashew-kaju-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52295,
+      "verified": true
+    },
+    "bb-01609": {
+      "skuId": "bb-01609",
+      "name": "Nutraj Cashew Whole W240",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/cashew-kaju-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52295,
+      "verified": true
+    },
+    "bb-01641": {
+      "skuId": "bb-01641",
+      "name": "Vedaka Raisins Kishmish",
+      "unit": "250 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/kishmish-raisins-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67384,
+      "verified": true
+    },
+    "bb-01586": {
+      "skuId": "bb-01586",
+      "name": "Happilo Raisins Kishmish",
+      "unit": "250 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/kishmish-raisins-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67384,
+      "verified": true
+    },
+    "bb-01618": {
+      "skuId": "bb-01618",
+      "name": "Nutraj Raisins Kishmish",
+      "unit": "250 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/kishmish-raisins-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67384,
+      "verified": true
+    },
+    "bb-00276": {
+      "skuId": "bb-00276",
+      "name": "Tata Sampann Besan Gram Flour",
+      "unit": "1 kg",
+      "categoryId": "staples",
+      "path": "/catalog/items/staples/besan-gram-flour-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64246,
+      "verified": true
+    },
+    "bb-00181": {
+      "skuId": "bb-00181",
+      "name": "24 Mantra Besan Gram Flour",
+      "unit": "1 kg",
+      "categoryId": "staples",
+      "path": "/catalog/items/staples/besan-gram-flour-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64246,
+      "verified": true
+    },
+    "bb-00213": {
+      "skuId": "bb-00213",
+      "name": "Fortune Besan Gram Flour",
+      "unit": "1 kg",
+      "categoryId": "staples",
+      "path": "/catalog/items/staples/besan-gram-flour-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64246,
+      "verified": true
+    },
+    "bb-00425": {
+      "skuId": "bb-00425",
+      "name": "Tata Haldi / Turmeric Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/haldi-turmeric-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54731,
+      "verified": true
+    },
+    "bb-00385": {
+      "skuId": "bb-00385",
+      "name": "MDH Haldi / Turmeric Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/haldi-turmeric-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54731,
+      "verified": true
+    },
+    "bb-00298": {
+      "skuId": "bb-00298",
+      "name": "24 Mantra Haldi / Turmeric Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/haldi-turmeric-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54731,
+      "verified": true
+    },
+    "bb-00377": {
+      "skuId": "bb-00377",
+      "name": "MDH Deggi Mirch Chilli Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64782,
+      "verified": true
+    },
+    "bb-00344": {
+      "skuId": "bb-00344",
+      "name": "Everest Deggi Mirch Chilli Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64782,
+      "verified": true
+    },
+    "bb-00316": {
+      "skuId": "bb-00316",
+      "name": "Catch Deggi Mirch Chilli Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64782,
+      "verified": true
+    },
+    "bb-00380": {
+      "skuId": "bb-00380",
+      "name": "MDH Dhania / Coriander Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64218,
+      "verified": true
+    },
+    "bb-00347": {
+      "skuId": "bb-00347",
+      "name": "Everest Dhania / Coriander Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64218,
+      "verified": true
+    },
+    "bb-00319": {
+      "skuId": "bb-00319",
+      "name": "Catch Dhania / Coriander Powder",
+      "unit": "200 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64218,
+      "verified": true
+    },
+    "bb-00382": {
+      "skuId": "bb-00382",
+      "name": "MDH Garam Masala",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/garam-masala-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67490,
+      "verified": true
+    },
+    "bb-00349": {
+      "skuId": "bb-00349",
+      "name": "Everest Garam Masala",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/garam-masala-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67490,
+      "verified": true
+    },
+    "bb-00321": {
+      "skuId": "bb-00321",
+      "name": "Catch Garam Masala",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/garam-masala-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67490,
+      "verified": true
+    },
+    "bb-00391": {
+      "skuId": "bb-00391",
+      "name": "MDH Kitchen King Masala",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/chicken-meat-masala-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64525,
+      "verified": true
+    },
+    "bb-00353": {
+      "skuId": "bb-00353",
+      "name": "Everest Kitchen King Masala",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/spices/chicken-meat-masala-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64525,
       "verified": true
     }
   }
