@@ -1,0 +1,180 @@
+{
+  "$schema": "chiti/catalog-assets@1",
+  "generatedAt": "2026-09-05",
+  "pilot": "dhanbad-quick-commerce",
+  "spec": {
+    "dimensions": "600x600",
+    "format": "jpg",
+    "background": "#F8FAFC studio sweep with contact shadow",
+    "root": "/catalog/items/[category]/[sku-slug].jpg"
+  },
+  "totalAssets": 10,
+  "totalSkus": 15,
+  "items": {
+    "bb-00022": {
+      "skuId": "bb-00022",
+      "name": "Amul Taaza Fresh Toned Milk",
+      "unit": "500 ml pouch",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/amul-taaza-toned-milk-500ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52315,
+      "verified": true
+    },
+    "bb-00009": {
+      "skuId": "bb-00009",
+      "name": "Amul Gold Full Cream Milk",
+      "unit": "1 L pouch",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/amul-gold-full-cream-milk-1l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 56367,
+      "verified": true
+    },
+    "bb-00003": {
+      "skuId": "bb-00003",
+      "name": "Amul Butter",
+      "unit": "100 g pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/salted-butter-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 65776,
+      "verified": true
+    },
+    "bb-00004": {
+      "skuId": "bb-00004",
+      "name": "Amul Butter",
+      "unit": "500 g pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/salted-butter-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50377,
+      "verified": true
+    },
+    "bb-00055": {
+      "skuId": "bb-00055",
+      "name": "Mother Dairy Butter",
+      "unit": "100 g pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/salted-butter-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 65776,
+      "verified": true
+    },
+    "bb-00056": {
+      "skuId": "bb-00056",
+      "name": "Mother Dairy Butter",
+      "unit": "500 g pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/salted-butter-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50377,
+      "verified": true
+    },
+    "bb-00014": {
+      "skuId": "bb-00014",
+      "name": "Amul Masti Fresh Curd / Dahi",
+      "unit": "400 g tub",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49789,
+      "verified": true
+    },
+    "bb-00059": {
+      "skuId": "bb-00059",
+      "name": "Mother Dairy Fresh Curd / Dahi",
+      "unit": "400 g tub",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49789,
+      "verified": true
+    },
+    "bb-00011": {
+      "skuId": "bb-00011",
+      "name": "Amul Malai Paneer",
+      "unit": "200 g pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44643,
+      "verified": true
+    },
+    "bb-00037": {
+      "skuId": "bb-00037",
+      "name": "Gowardhan Malai Paneer",
+      "unit": "200 g pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44643,
+      "verified": true
+    },
+    "bb-00066": {
+      "skuId": "bb-00066",
+      "name": "Mother Dairy Malai Paneer",
+      "unit": "200 g pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44643,
+      "verified": true
+    },
+    "bb-00109": {
+      "skuId": "bb-00109",
+      "name": "Desi Tomato",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/desi-tomato-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58181,
+      "verified": true
+    },
+    "bb-00129": {
+      "skuId": "bb-00129",
+      "name": "Hybrid Potato",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/hybrid-potato-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 40208,
+      "verified": true
+    },
+    "bb-00138": {
+      "skuId": "bb-00138",
+      "name": "Red Onion",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/red-onion-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60623,
+      "verified": true
+    },
+    "bb-00116": {
+      "skuId": "bb-00116",
+      "name": "Fresh Coriander Bunch",
+      "unit": "100 g bunch",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/fresh-coriander-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 73924,
+      "verified": true
+    }
+  }
+}

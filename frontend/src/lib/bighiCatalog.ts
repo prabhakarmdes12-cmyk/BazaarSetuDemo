@@ -25657,6 +25657,30 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
   "beauty": "/catalog/beauty.jpg"
 };
 
+/**
+ * Per-SKU studio pack shots from the Central Product Asset Repository
+ * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
+ * verified manifest public/catalog/catalog-assets.json — 15 SKUs in batch 1.
+ * Takes precedence over the category photo.
+ */
+export const BIGHI_SKU_IMAGES: Record<string, string> = {
+  "bb-00022": "/catalog/items/dairy/amul-taaza-toned-milk-500ml.jpg",
+  "bb-00009": "/catalog/items/dairy/amul-gold-full-cream-milk-1l.jpg",
+  "bb-00003": "/catalog/items/dairy/salted-butter-100g.jpg",
+  "bb-00004": "/catalog/items/dairy/salted-butter-500g.jpg",
+  "bb-00055": "/catalog/items/dairy/salted-butter-100g.jpg",
+  "bb-00056": "/catalog/items/dairy/salted-butter-500g.jpg",
+  "bb-00014": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
+  "bb-00059": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
+  "bb-00011": "/catalog/items/dairy/malai-paneer-200g.jpg",
+  "bb-00037": "/catalog/items/dairy/malai-paneer-200g.jpg",
+  "bb-00066": "/catalog/items/dairy/malai-paneer-200g.jpg",
+  "bb-00109": "/catalog/items/vegetables/desi-tomato-1kg.jpg",
+  "bb-00129": "/catalog/items/vegetables/hybrid-potato-1kg.jpg",
+  "bb-00138": "/catalog/items/vegetables/red-onion-1kg.jpg",
+  "bb-00116": "/catalog/items/vegetables/fresh-coriander-100g.jpg"
+};
+
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
 
 /**
@@ -25664,7 +25688,7 @@ const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
  * each SKU from the compact per-category maps above.
  */
 export const BIGHI_CATALOG: BighiProduct[] = RAW_CATALOG.map((p) => {
-  const image = BIGHI_CATEGORY_IMAGES[p.categoryId];
+  const image = BIGHI_SKU_IMAGES[p.id] || BIGHI_CATEGORY_IMAGES[p.categoryId];
   return {
     ...p,
     ...(image ? { image } : {}),
@@ -25706,6 +25730,11 @@ export const BIGHI_TOTAL_SKUS = 2111;
 /** Photo for a SKU's category, or undefined → CatalogTile shows the icon plate. */
 export function bighiImageFor(categoryId: string): string | undefined {
   return BIGHI_CATEGORY_IMAGES[categoryId];
+}
+
+/** Best available photo for a SKU: its own pack shot, else its category photo. */
+export function bighiImageForSku(id: string, categoryId: string): string | undefined {
+  return BIGHI_SKU_IMAGES[id] || BIGHI_CATEGORY_IMAGES[categoryId];
 }
 
 export function isBighiEssential(id: string): boolean {

@@ -47,7 +47,9 @@ const bighiToProduct = (b: BighiProduct): Product => ({
   description: '',
   price: b.price,
   mrp: b.mrp,
-  image: '',
+  // Studio pack shot from the Central Product Asset Repository (falls back to
+  // the category photo inside bighiCatalog, else '' → icon plate).
+  image: b.image || '',
   category: b.category,
   unit: b.unit,
   isAvailable: true,
@@ -165,7 +167,7 @@ export default function VendorProductsPage() {
         try {
           await api.post(
             '/api/products',
-            { name: b.name, price: b.price, unit: b.unit, category: b.category, description: b.unit },
+            { name: b.name, price: b.price, unit: b.unit, category: b.category, description: b.unit, image: b.image || '' },
             token,
           );
           await loadProducts();
@@ -192,7 +194,7 @@ export default function VendorProductsPage() {
         try {
           await api.post(
             '/api/products',
-            { name: b.name, price: b.price, unit: b.unit, category: b.category, description: b.unit },
+            { name: b.name, price: b.price, unit: b.unit, category: b.category, description: b.unit, image: b.image || '' },
             token,
           );
         } catch {
