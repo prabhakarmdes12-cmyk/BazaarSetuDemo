@@ -578,7 +578,7 @@ export default function CustomerHomePage() {
 
       {/* Floating Blinkit-Style Cart Bar */}
       {cartCount > 0 && (
-        <div className="fixed bottom-6 left-0 right-0 z-50 px-4 pointer-events-none animate-in fade-in slide-in-from-bottom-5 duration-300">
+        <div className="fixed bottom-28 sm:bottom-8 left-0 right-0 z-50 px-4 pointer-events-none animate-in fade-in slide-in-from-bottom-5 duration-300">
           <div className="max-w-xl mx-auto pointer-events-auto">
             <div className="leaf-gradient text-white rounded-2xl p-4 shadow-editorial-lg flex items-center justify-between border border-emerald-400/30">
               <div className="flex items-center gap-3">

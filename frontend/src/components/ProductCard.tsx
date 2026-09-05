@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Product } from '@/types';
 import { Icon } from '@/components/ui';
 
@@ -13,7 +14,6 @@ interface ProductCardProps {
   compact?: boolean;
 }
 
-// Curated high-res grocery CDN imagery for classic Indian SKUs
 const PRODUCT_IMAGE_FALLBACKS: Record<string, string> = {
   'amul milk': 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&auto=format&fit=crop&q=80',
   'milk': 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&auto=format&fit=crop&q=80',
@@ -106,42 +106,64 @@ export default function ProductCard({
           <p className="text-sm font-bold text-on-surface truncate font-headline">{product.name}</p>
           <p className="text-[11px] text-on-surface-variant font-medium">{packUnit}</p>
           <div className="flex items-baseline gap-1.5 mt-0.5">
-            <span className="text-sm font-extrabold text-primary font-headline">₹{product.price}</span>
-            <span className="text-[11px] text-on-surface-variant/60 line-through">₹{mrp}</span>
+            <span className="text-sm font-extrabold text-primary font-headline tabular-nums">₹{product.price}</span>
+            <span className="text-[11px] text-on-surface-variant/60 line-through tabular-nums">₹{mrp}</span>
           </div>
         </div>
-        {quantity > 0 && onUpdateQuantity ? (
-          <div className="flex items-center leaf-gradient text-white rounded-xl shadow-brand-glow overflow-hidden">
-            <button
-              onClick={() => onUpdateQuantity(product.id, quantity - 1)}
-              className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
-              aria-label="Decrease quantity"
-            >
-              −
-            </button>
-            <span className="text-xs font-black px-1.5 min-w-[20px] text-center font-headline">{quantity}</span>
-            <button
-              onClick={() => onUpdateQuantity(product.id, quantity + 1)}
-              className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
-              aria-label="Increase quantity"
-            >
-              +
-            </button>
-          </div>
-        ) : onAddToCart ? (
-          <button
-            onClick={() => onAddToCart(product)}
-            className="border-2 border-primary bg-primary/10 hover:bg-primary hover:text-white text-primary font-black text-xs px-3 py-1.5 rounded-xl active:scale-90 transition-all uppercase tracking-wider font-headline shadow-sm"
-          >
-            ADD
-          </button>
-        ) : null}
+
+        <div className="shrink-0 min-w-[76px] flex justify-end">
+          <AnimatePresence mode="wait" initial={false}>
+            {quantity > 0 && onUpdateQuantity ? (
+              <motion.div
+                key="stepper"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                className="flex items-center leaf-gradient text-white rounded-xl shadow-brand-glow overflow-hidden"
+              >
+                <button
+                  onClick={() => onUpdateQuantity(product.id, quantity - 1)}
+                  className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
+                  aria-label="Decrease quantity"
+                >
+                  −
+                </button>
+                <span className="text-xs font-black px-1.5 min-w-[20px] text-center font-headline tabular-nums">{quantity}</span>
+                <button
+                  onClick={() => onUpdateQuantity(product.id, quantity + 1)}
+                  className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
+                  aria-label="Increase quantity"
+                >
+                  +
+                </button>
+              </motion.div>
+            ) : onAddToCart ? (
+              <motion.button
+                key="add"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                whileTap={{ scale: 0.92 }}
+                onClick={() => onAddToCart(product)}
+                className="border-2 border-primary bg-primary/10 hover:bg-primary hover:text-white text-primary font-black text-xs px-3.5 py-1.5 rounded-xl uppercase tracking-wider font-headline shadow-sm"
+              >
+                ADD
+              </motion.button>
+            ) : null}
+          </AnimatePresence>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="group bg-surface-container-low border border-white/5 hover:border-primary/30 rounded-3xl p-3.5 flex flex-col justify-between transition-all duration-300 hover:shadow-editorial-lg hover:-translate-y-1 relative overflow-hidden">
+    <motion.div
+      whileHover={{ y: -3 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+      className="group bg-surface-container-low border border-white/5 hover:border-primary/30 rounded-3xl p-3.5 flex flex-col justify-between transition-colors duration-300 hover:shadow-editorial-lg relative overflow-hidden"
+    >
       <div>
         {/* Product Image Plate */}
         <div className="relative w-full aspect-square rounded-2xl bg-surface-container-lowest flex items-center justify-center mb-3 overflow-hidden border border-white/5">
@@ -161,7 +183,7 @@ export default function ProductCard({
           </div>
 
           <div className="absolute top-2 right-2 z-10">
-            <span className="bg-black/70 backdrop-blur-md text-emerald-400 border border-emerald-500/20 text-[10px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm font-headline">
+            <span className="bg-black/75 backdrop-blur-md text-emerald-400 border border-emerald-500/20 text-[10px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm font-headline">
               <Icon name="bolt" size="sm" filled />
               10m
             </span>
@@ -170,7 +192,7 @@ export default function ProductCard({
 
         {/* Product Meta */}
         <div className="space-y-1">
-          <p className="text-[11px] font-semibold text-primary uppercase tracking-wider truncate">
+          <p className="text-[11px] font-semibold text-primary uppercase tracking-wider truncate font-headline">
             {product.category || 'Grocery'}
           </p>
           <h3 className="font-bold text-on-surface text-sm leading-snug line-clamp-2 font-headline group-hover:text-primary transition-colors min-h-[2.5rem]">
@@ -182,48 +204,65 @@ export default function ProductCard({
         </div>
       </div>
 
-      {/* Pricing & Add Stepper */}
+      {/* Pricing & Add Stepper with Spring Morph */}
       <div className="pt-3 mt-2 border-t border-white/5 flex items-center justify-between gap-2">
         <div>
           <div className="flex items-baseline gap-1.5">
-            <span className="text-base sm:text-lg font-black text-on-surface font-headline tracking-tight">
+            <span className="text-base sm:text-lg font-black text-on-surface font-headline tracking-tight tabular-nums">
               ₹{product.price}
             </span>
-            <span className="text-xs text-on-surface-variant/60 line-through">
+            <span className="text-xs text-on-surface-variant/60 line-through tabular-nums">
               ₹{mrp}
             </span>
           </div>
         </div>
 
-        {quantity > 0 && onUpdateQuantity ? (
-          <div className="flex items-center leaf-gradient text-white rounded-xl shadow-brand-glow overflow-hidden shrink-0">
-            <button
-              onClick={() => onUpdateQuantity(product.id, quantity - 1)}
-              className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
-              aria-label="Decrease quantity"
-            >
-              −
-            </button>
-            <span className="text-xs font-black px-2 min-w-[20px] text-center font-headline">{quantity}</span>
-            <button
-              onClick={() => onUpdateQuantity(product.id, quantity + 1)}
-              className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
-              aria-label="Increase quantity"
-            >
-              +
-            </button>
-          </div>
-        ) : onAddToCart && product.isAvailable !== false ? (
-          <button
-            onClick={() => onAddToCart(product)}
-            className="border-2 border-primary/80 bg-primary/10 hover:bg-primary hover:text-white text-primary font-black text-xs px-3.5 py-1.5 rounded-xl active:scale-95 transition-all uppercase tracking-wider font-headline shadow-sm hover:shadow-brand-glow shrink-0"
-          >
-            ADD +
-          </button>
-        ) : (
-          <span className="text-[11px] font-bold text-on-surface-variant/50 uppercase tracking-wider">Out of Stock</span>
-        )}
+        <div className="shrink-0 min-w-[76px] flex justify-end">
+          <AnimatePresence mode="wait" initial={false}>
+            {quantity > 0 && onUpdateQuantity ? (
+              <motion.div
+                key="stepper-full"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                className="flex items-center leaf-gradient text-white rounded-xl shadow-brand-glow overflow-hidden shrink-0"
+              >
+                <button
+                  onClick={() => onUpdateQuantity(product.id, quantity - 1)}
+                  className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
+                  aria-label="Decrease quantity"
+                >
+                  −
+                </button>
+                <span className="text-xs font-black px-2 min-w-[20px] text-center font-headline tabular-nums">{quantity}</span>
+                <button
+                  onClick={() => onUpdateQuantity(product.id, quantity + 1)}
+                  className="w-7 h-7 flex items-center justify-center font-black hover:bg-black/20 active:scale-90 transition-transform"
+                  aria-label="Increase quantity"
+                >
+                  +
+                </button>
+              </motion.div>
+            ) : onAddToCart && product.isAvailable !== false ? (
+              <motion.button
+                key="add-full"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                whileTap={{ scale: 0.92 }}
+                onClick={() => onAddToCart(product)}
+                className="border-2 border-primary/80 bg-primary/10 hover:bg-primary hover:text-white text-primary font-black text-xs px-3.5 py-1.5 rounded-xl uppercase tracking-wider font-headline shadow-sm hover:shadow-brand-glow shrink-0"
+              >
+                ADD +
+              </motion.button>
+            ) : (
+              <span className="text-[11px] font-bold text-on-surface-variant/50 uppercase tracking-wider">Out of Stock</span>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
