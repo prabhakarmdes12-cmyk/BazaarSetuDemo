@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 10,
-  "totalSkus": 15,
+  "totalAssets": 20,
+  "totalSkus": 25,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -19,7 +19,7 @@
       "path": "/catalog/items/dairy/amul-taaza-toned-milk-500ml.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 52315,
+      "bytes": 52110,
       "verified": true
     },
     "bb-00009": {
@@ -30,7 +30,7 @@
       "path": "/catalog/items/dairy/amul-gold-full-cream-milk-1l.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 56367,
+      "bytes": 56023,
       "verified": true
     },
     "bb-00003": {
@@ -41,7 +41,7 @@
       "path": "/catalog/items/dairy/salted-butter-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 65776,
+      "bytes": 65242,
       "verified": true
     },
     "bb-00004": {
@@ -52,7 +52,7 @@
       "path": "/catalog/items/dairy/salted-butter-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 50377,
+      "bytes": 49726,
       "verified": true
     },
     "bb-00055": {
@@ -63,7 +63,7 @@
       "path": "/catalog/items/dairy/salted-butter-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 65776,
+      "bytes": 65242,
       "verified": true
     },
     "bb-00056": {
@@ -74,7 +74,7 @@
       "path": "/catalog/items/dairy/salted-butter-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 50377,
+      "bytes": 49726,
       "verified": true
     },
     "bb-00014": {
@@ -85,7 +85,7 @@
       "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49789,
+      "bytes": 49603,
       "verified": true
     },
     "bb-00059": {
@@ -96,7 +96,7 @@
       "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49789,
+      "bytes": 49603,
       "verified": true
     },
     "bb-00011": {
@@ -107,7 +107,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44643,
+      "bytes": 44583,
       "verified": true
     },
     "bb-00037": {
@@ -118,7 +118,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44643,
+      "bytes": 44583,
       "verified": true
     },
     "bb-00066": {
@@ -129,7 +129,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44643,
+      "bytes": 44583,
       "verified": true
     },
     "bb-00109": {
@@ -140,7 +140,7 @@
       "path": "/catalog/items/vegetables/desi-tomato-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 58181,
+      "bytes": 58046,
       "verified": true
     },
     "bb-00129": {
@@ -151,7 +151,7 @@
       "path": "/catalog/items/vegetables/hybrid-potato-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 40208,
+      "bytes": 40433,
       "verified": true
     },
     "bb-00138": {
@@ -162,7 +162,7 @@
       "path": "/catalog/items/vegetables/red-onion-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 60623,
+      "bytes": 60815,
       "verified": true
     },
     "bb-00116": {
@@ -173,7 +173,117 @@
       "path": "/catalog/items/vegetables/fresh-coriander-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 73924,
+      "bytes": 73666,
+      "verified": true
+    },
+    "bb-00133": {
+      "skuId": "bb-00133",
+      "name": "Palak / Spinach",
+      "unit": "250 g bunch",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/palak-spinach-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64772,
+      "verified": true
+    },
+    "bb-00089": {
+      "skuId": "bb-00089",
+      "name": "Bhindi / Okra",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/bhindi-okra-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46384,
+      "verified": true
+    },
+    "bb-00122": {
+      "skuId": "bb-00122",
+      "name": "Ginger Root",
+      "unit": "250 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/ginger-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 41589,
+      "verified": true
+    },
+    "bb-00119": {
+      "skuId": "bb-00119",
+      "name": "Garlic Bulb",
+      "unit": "250 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/garlic-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 30781,
+      "verified": true
+    },
+    "bb-00172": {
+      "skuId": "bb-00172",
+      "name": "Robusta Banana",
+      "unit": "12 pcs",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/robusta-banana-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34231,
+      "verified": true
+    },
+    "bb-00176": {
+      "skuId": "bb-00176",
+      "name": "Shimla Apple",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/shimla-apple-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62012,
+      "verified": true
+    },
+    "bb-00161": {
+      "skuId": "bb-00161",
+      "name": "Mosambi / Sweet Lime",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/mosambi-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45154,
+      "verified": true
+    },
+    "bb-00170": {
+      "skuId": "bb-00170",
+      "name": "Pomegranate / Anar",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/pomegranate-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 80782,
+      "verified": true
+    },
+    "bb-00173": {
+      "skuId": "bb-00173",
+      "name": "Seedless Green Grapes",
+      "unit": "500 g",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/green-grapes-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39900,
+      "verified": true
+    },
+    "bb-00165": {
+      "skuId": "bb-00165",
+      "name": "Papaya",
+      "unit": "1 pc ~1.2 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/papaya-1pc.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49444,
       "verified": true
     }
   }

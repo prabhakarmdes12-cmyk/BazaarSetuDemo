@@ -44,6 +44,17 @@ const SKU_ASSETS = {
   'bb-00129': 'vegetables/hybrid-potato-1kg.jpg',
   'bb-00138': 'vegetables/red-onion-1kg.jpg',
   'bb-00116': 'vegetables/fresh-coriander-100g.jpg',
+  'bb-00133': 'vegetables/palak-spinach-250g.jpg',
+  'bb-00089': 'vegetables/bhindi-okra-500g.jpg',
+  'bb-00122': 'vegetables/ginger-250g.jpg',
+  'bb-00119': 'vegetables/garlic-250g.jpg',
+  // Fruits
+  'bb-00172': 'fruits/robusta-banana-1kg.jpg',
+  'bb-00176': 'fruits/shimla-apple-1kg.jpg',
+  'bb-00161': 'fruits/mosambi-1kg.jpg',
+  'bb-00170': 'fruits/pomegranate-1kg.jpg',
+  'bb-00173': 'fruits/green-grapes-500g.jpg',
+  'bb-00165': 'fruits/papaya-1pc.jpg',
 };
 
 const EXPECTED_PX = 600;

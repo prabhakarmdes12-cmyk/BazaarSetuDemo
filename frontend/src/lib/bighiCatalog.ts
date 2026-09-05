@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 15 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 25 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25678,7 +25678,17 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00109": "/catalog/items/vegetables/desi-tomato-1kg.jpg",
   "bb-00129": "/catalog/items/vegetables/hybrid-potato-1kg.jpg",
   "bb-00138": "/catalog/items/vegetables/red-onion-1kg.jpg",
-  "bb-00116": "/catalog/items/vegetables/fresh-coriander-100g.jpg"
+  "bb-00116": "/catalog/items/vegetables/fresh-coriander-100g.jpg",
+  "bb-00133": "/catalog/items/vegetables/palak-spinach-250g.jpg",
+  "bb-00089": "/catalog/items/vegetables/bhindi-okra-500g.jpg",
+  "bb-00122": "/catalog/items/vegetables/ginger-250g.jpg",
+  "bb-00119": "/catalog/items/vegetables/garlic-250g.jpg",
+  "bb-00172": "/catalog/items/fruits/robusta-banana-1kg.jpg",
+  "bb-00176": "/catalog/items/fruits/shimla-apple-1kg.jpg",
+  "bb-00161": "/catalog/items/fruits/mosambi-1kg.jpg",
+  "bb-00170": "/catalog/items/fruits/pomegranate-1kg.jpg",
+  "bb-00173": "/catalog/items/fruits/green-grapes-500g.jpg",
+  "bb-00165": "/catalog/items/fruits/papaya-1pc.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
