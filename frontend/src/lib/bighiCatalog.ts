@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 399 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 436 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27634,7 +27634,44 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01929": "/catalog/items/homekitchen/steel-tiffin-box-3-tier.jpg",
   "bb-01959": "/catalog/items/homekitchen/steel-tiffin-box-3-tier.jpg",
   "bb-01954": "/catalog/items/homekitchen/kitchen-knife.jpg",
-  "bb-01975": "/catalog/items/homekitchen/kitchen-knife.jpg"
+  "bb-01975": "/catalog/items/homekitchen/kitchen-knife.jpg",
+  "bb-01471": "/catalog/items/meat/chicken-curry-cut-500g.jpg",
+  "bb-01472": "/catalog/items/meat/chicken-curry-cut-500g.jpg",
+  "bb-01482": "/catalog/items/meat/chicken-curry-cut-500g.jpg",
+  "bb-01483": "/catalog/items/meat/chicken-curry-cut-500g.jpg",
+  "bb-01495": "/catalog/items/meat/chicken-curry-cut-500g.jpg",
+  "bb-01496": "/catalog/items/meat/chicken-curry-cut-500g.jpg",
+  "bb-01469": "/catalog/items/meat/chicken-breast-boneless-450g.jpg",
+  "bb-01470": "/catalog/items/meat/chicken-breast-boneless-450g.jpg",
+  "bb-01480": "/catalog/items/meat/chicken-breast-boneless-450g.jpg",
+  "bb-01481": "/catalog/items/meat/chicken-breast-boneless-450g.jpg",
+  "bb-01484": "/catalog/items/meat/chicken-drumstick-500g.jpg",
+  "bb-01497": "/catalog/items/meat/chicken-drumstick-500g.jpg",
+  "bb-01473": "/catalog/items/meat/chicken-keema-mince-450g.jpg",
+  "bb-01485": "/catalog/items/meat/chicken-keema-mince-450g.jpg",
+  "bb-01474": "/catalog/items/meat/whole-chicken-skinless-1kg.jpg",
+  "bb-01475": "/catalog/items/meat/whole-chicken-skinless-1kg.jpg",
+  "bb-01504": "/catalog/items/meat/whole-chicken-skinless-1kg.jpg",
+  "bb-01505": "/catalog/items/meat/whole-chicken-skinless-1kg.jpg",
+  "bb-01486": "/catalog/items/meat/mutton-curry-cut-500g.jpg",
+  "bb-01487": "/catalog/items/meat/mutton-curry-cut-500g.jpg",
+  "bb-01501": "/catalog/items/meat/mutton-curry-cut-500g.jpg",
+  "bb-01502": "/catalog/items/meat/mutton-curry-cut-500g.jpg",
+  "bb-01488": "/catalog/items/meat/mutton-keema-450g.jpg",
+  "bb-01503": "/catalog/items/meat/mutton-keema-450g.jpg",
+  "bb-01466": "/catalog/items/meat/rohu-fish-cut-500g.jpg",
+  "bb-01467": "/catalog/items/meat/rohu-fish-cut-500g.jpg",
+  "bb-01493": "/catalog/items/meat/rohu-fish-cut-500g.jpg",
+  "bb-01494": "/catalog/items/meat/rohu-fish-cut-500g.jpg",
+  "bb-01468": "/catalog/items/meat/rohu-fish-cut-500g.jpg",
+  "bb-01461": "/catalog/items/meat/katla-fish-cut-500g.jpg",
+  "bb-01462": "/catalog/items/meat/katla-fish-cut-500g.jpg",
+  "bb-01491": "/catalog/items/meat/katla-fish-cut-500g.jpg",
+  "bb-01492": "/catalog/items/meat/katla-fish-cut-500g.jpg",
+  "bb-01464": "/catalog/items/meat/prawns-cleaned-250g.jpg",
+  "bb-01465": "/catalog/items/meat/prawns-cleaned-250g.jpg",
+  "bb-01489": "/catalog/items/meat/prawns-cleaned-250g.jpg",
+  "bb-01490": "/catalog/items/meat/prawns-cleaned-250g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
