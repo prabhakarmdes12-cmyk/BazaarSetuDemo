@@ -81,7 +81,7 @@ export default function TopNav({
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/15 border border-primary/30 text-primary text-xs font-black uppercase tracking-wider font-headline hover:bg-primary/25 active:scale-95 transition-all"
             >
               <Icon name="shopping_cart" size="sm" filled />
-              <span className="hidden xs:inline">Blinkit Store</span>
+              <span className="hidden xs:inline">Customer Store</span>
             </Link>
           ) : (
             <Link

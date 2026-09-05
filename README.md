@@ -1,7 +1,7 @@
 # Chiti Bazaar 🛒⚡
 
 > **Hyperlocal 10-Minute Quick-Commerce & Digital Kirana Network**  
-> Bringing local neighborhood dukaans online with the speed, visual appetite, and convenience of Blinkit and Zepto, paired with a modern digital khata (credit ledger).
+> Bringing local neighborhood dukaans online with the speed, visual appetite, and convenience of 10-minute quick-commerce platforms, paired with a modern digital khata (credit ledger).
 
 ---
 
@@ -11,7 +11,7 @@
 
 ### Key Capabilities
 
-1. **⚡ Blinkit-Grade 10-Minute Customer Storefront (`/customer`)**:
+1. **⚡ Quick-Commerce Grade 10-Minute Customer Storefront (`/customer`)**:
    - **Delivery Cockpit**: Live pulsing radar status (`⚡ Delivery in 10 mins`) with precise address selector.
    - **Visual Category Strip**: Dairy & Breakfast, Atta & Dals, Munchies & Biscuits, Chai & Coffee, Cleaning & Hygiene.
    - **Curated Live Grocery Shelves**:
@@ -59,7 +59,7 @@ Chiti Bazaar follows the **Chiti Technologies Unified Design System**:
 chiti-bazaar/
 ├── frontend/                     # Next.js 14 App Router
 │   ├── src/app/
-│   │   ├── customer/             # Blinkit-grade Customer Storefront
+│   │   ├── customer/             # Quick-commerce grade Customer Storefront
 │   │   │   ├── cart/             # Cart review & checkout
 │   │   │   ├── orders/           # Live order tracking & history
 │   │   │   └── shop/[id]/        # Individual Dukaan catalog

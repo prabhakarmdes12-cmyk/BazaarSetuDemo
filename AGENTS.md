@@ -2,7 +2,7 @@
 
 ## Mission & Architectural Invariants
 
-1. **Blinkit Visual Benchmark**: The customer storefront (`/customer`) must always deliver instant, mouth-watering visual appeal equal to or exceeding Blinkit and Zepto. Never regress to empty store lists or missing product shelves.
+1. **Quick-Commerce Visual Benchmark**: The customer storefront (`/customer`) must always deliver instant, mouth-watering visual appeal delivering instant, mouth-watering visual appeal with premium quick-commerce polish. Never regress to empty store lists or missing product shelves.
 2. **Zero-Config Deployment**: All changes are automatically built and deployed via git pushes to `https://github.com/prabhakarmdes12-cmyk/chiti-bazaar.git` on `main` and `production`. Never require the user to configure Vercel or DNS manually.
 3. **Preserve Passing Tests**: All 55 backend tests (`npm test` in `backend/`) must remain 100% passing.
 4. **Unicode Cleanliness**: Always use standard UTF-8 characters:

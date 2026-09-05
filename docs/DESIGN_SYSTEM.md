@@ -29,7 +29,7 @@ Chiti Bazaar blends luxury obsidian dark mode with fresh, appetizing leaf green 
 
 ---
 
-## 3. Blinkit-Grade Component Guidelines
+## 3. Quick-Commerce Component Guidelines
 
 ### A. `ProductCard.tsx`
 - **Image Plate**: Aspect-square container (`rounded-2xl bg-surface-container-lowest`), subtle border (`border border-white/5`), high-resolution product photography.

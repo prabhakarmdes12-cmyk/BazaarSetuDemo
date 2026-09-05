@@ -175,7 +175,7 @@ export default function ProductCard({
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
 
-          {/* Blinkit-Style Floating Badges */}
+          {/* Instant Delivery Floating Badges */}
           <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
             <span className="bg-primary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-md font-headline">
               {discountPercent}% OFF

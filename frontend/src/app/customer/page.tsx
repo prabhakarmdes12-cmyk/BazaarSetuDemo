@@ -332,7 +332,7 @@ export default function CustomerHomePage() {
         </div>
       </div>
 
-      {/* Blinkit Style Live Search */}
+      {/* Instant Live Search */}
       <SearchBar
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -409,7 +409,7 @@ export default function CustomerHomePage() {
           )}
         </section>
       ) : (
-        /* Blinkit Curated Grocery Shelves */
+        /* Curated Fresh Grocery Shelves */
         <div className="space-y-12">
           {/* Shelf 1: Daily Milk & Breakfast */}
           {dailyMilkShelf.length > 0 && (
@@ -576,7 +576,7 @@ export default function CustomerHomePage() {
         </div>
       )}
 
-      {/* Floating Blinkit-Style Cart Bar */}
+      {/* Floating Quick Cart Bar */}
       {cartCount > 0 && (
         <div className="fixed bottom-28 sm:bottom-8 left-0 right-0 z-50 px-4 pointer-events-none animate-in fade-in slide-in-from-bottom-5 duration-300">
           <div className="max-w-xl mx-auto pointer-events-auto">
