@@ -55,6 +55,7 @@ export default function BighiStorefront() {
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
   const railRef = useRef<HTMLDivElement>(null);
+  const asideRailRef = useRef<HTMLDivElement>(null);
   const isScrolling = useRef(false);
 
   // ---- cart state (guest cart works for both logged-in & anonymous) ----
