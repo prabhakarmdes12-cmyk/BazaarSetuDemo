@@ -2,6 +2,8 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
 import AppShell from '@/components/AppShell';
 import SearchBar from '@/components/SearchBar';
 import CategoryFilter from '@/components/CategoryFilter';
@@ -9,11 +11,13 @@ import ProductCard from '@/components/ProductCard';
 import ShopCard from '@/components/ShopCard';
 import VendorCTA from '@/components/VendorCTA';
 import EmptyState from '@/components/EmptyState';
+import PromoCarousels from '@/components/PromoCarousels';
 import { Icon } from '@/components/ui';
 import { ShopSkeleton } from '@/components/Skeletons';
 import { useAuth } from '@/hooks/useAuth';
 import { Shop, Product } from '@/types';
 import { api } from '@/lib/api';
+import { BIGHI_STORE, BIGHI_TOTAL_SKUS } from '@/lib/bighiCatalog';
 import {
   addToGuestCart,
   getGuestCart,
@@ -347,32 +351,60 @@ export default function CustomerHomePage() {
         onCategoryChange={setActiveCategory}
       />
 
-      {/* Featured Hero Banner */}
+      {/* Flagship Store — Bighi Brothers Mart */}
       {search === '' && activeCategory === 'Sab' && (
-        <section className="mb-10">
-          <div className="relative min-h-[200px] sm:min-h-[220px] rounded-3xl overflow-hidden bg-surface-container-low p-6 sm:p-8 flex flex-col justify-center border border-primary/20 shadow-editorial-lg">
-            <div className="absolute inset-0 leaf-ambient-glow" />
-            <div className="absolute -top-16 -right-10 w-64 h-64 rounded-full bg-primary/25 blur-[90px]" />
-            <div className="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-secondary/15 blur-[80px]" />
-
-            <div className="relative z-10 max-w-xl">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="inline-flex items-center gap-1 bg-primary/20 border border-primary/40 text-primary text-[11px] font-black tracking-wider uppercase px-3 py-1 rounded-full font-headline shadow-sm">
-                  <Icon name="bolt" size="sm" filled />
-                  Lightning Fast
-                </span>
-                <span className="text-xs text-on-surface-variant font-medium">
-                  Gupta General Store &bull; 800m away
+        <section className="mb-6">
+          <Link href={`/customer/shop/${BIGHI_STORE.id}`} className="block group">
+            <div className="relative rounded-3xl overflow-hidden border border-primary/30 shadow-editorial-lg min-h-[210px] sm:min-h-[230px]">
+              <Image
+                fill
+                sizes="100vw"
+                src={BIGHI_STORE.heroBanner}
+                alt={`${BIGHI_STORE.name} — ${BIGHI_STORE.subtitle}`}
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/10" />
+              <div className="relative z-10 p-6 sm:p-8 max-w-lg h-full flex flex-col justify-center min-h-[210px] sm:min-h-[230px]">
+                <div className="flex items-center gap-2 mb-2.5 flex-wrap">
+                  <span className="inline-flex items-center gap-1 leaf-gradient text-white text-[10px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline shadow-brand-glow">
+                    <Icon name="bolt" size="sm" filled />
+                    ⚡ {BIGHI_STORE.etaMinutes} mins
+                  </span>
+                  <span className="inline-flex items-center gap-1 bg-black/40 backdrop-blur border border-primary/40 text-primary text-[10px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline">
+                    <Icon name="verified_user" size="sm" filled />
+                    {BIGHI_STORE.verifiedLabel}
+                  </span>
+                </div>
+                <h2 className="text-white text-2xl sm:text-4xl font-black leading-tight font-headline">
+                  {BIGHI_STORE.name}
+                </h2>
+                <p className="text-emerald-200 italic text-sm sm:text-base font-semibold mt-1">
+                  “{BIGHI_STORE.subtitle}”
+                </p>
+                <div className="flex items-center gap-4 mt-3 text-[11px] sm:text-xs font-bold text-white/90 flex-wrap">
+                  <span className="flex items-center gap-1">
+                    <Icon name="star" size="sm" filled className="text-warning" />
+                    {BIGHI_STORE.reviewsLabel}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Icon name="inventory_2" size="sm" filled className="text-emerald-300" />
+                    {BIGHI_TOTAL_SKUS.toLocaleString('en-IN')}+ products · 14 categories
+                  </span>
+                </div>
+                <span className="mt-4 inline-flex items-center gap-1.5 bg-white text-emerald-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wide font-headline w-fit group-hover:gap-2.5 transition-all">
+                  Shop the Superstore
+                  <Icon name="arrow_forward" size="sm" />
                 </span>
               </div>
-              <h2 className="text-white text-2xl sm:text-3xl font-black leading-tight font-headline">
-                Daily Essentials &amp; Kirana in <span className="leaf-text-gradient">10 mins</span>
-              </h2>
-              <p className="text-on-surface-variant mt-2 text-xs sm:text-sm font-medium">
-                Support your trusted local shopkeeper while getting instant 10-minute doorstep delivery.
-              </p>
             </div>
-          </div>
+          </Link>
+        </section>
+      )}
+
+      {/* Promotional carousels */}
+      {search === '' && activeCategory === 'Sab' && (
+        <section className="mb-8">
+          <PromoCarousels onSelect={() => router.push(`/customer/shop/${BIGHI_STORE.id}`)} />
         </section>
       )}
 

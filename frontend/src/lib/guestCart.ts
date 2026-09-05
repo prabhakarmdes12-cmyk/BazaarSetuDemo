@@ -13,6 +13,12 @@ export interface GuestCartItem {
   unit: string;
   image: string;
   quantity: number;
+  // Optional strikethrough MRP + branded icon-tile metadata (used by the
+  // icon-based Bighi master catalog, which ships no product photos).
+  mrp?: number;
+  icon?: string;
+  from?: string;
+  to?: string;
 }
 
 const KEY = 'chitibazaar_guest_cart';
