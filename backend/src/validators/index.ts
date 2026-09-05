@@ -55,6 +55,11 @@ export const updateCartItemSchema = z.object({
 // === Orders ===
 export const createOrderSchema = z.object({
   shopId: z.string().uuid(),
+  paymentMethod: z.enum(['COD', 'DIRECT_UPI', 'UDHAAR', 'RAZORPAY']).optional(),
+  deliveryAddress: z.string().max(500).optional(),
+  deliveryPincode: z.string().regex(/^\d{6}$/, 'Invalid PIN code').optional(),
+  deliveryLat: z.number().min(-90).max(90).optional(),
+  deliveryLng: z.number().min(-180).max(180).optional(),
 });
 
 const allowedOrderStatuses = ['pending', 'accepted', 'preparing', 'ready', 'out_for_delivery', 'pickup', 'completed', 'rejected'];
@@ -114,8 +119,12 @@ export const finalQuoteSchema = z.object({
 });
 
 export const draftCheckoutSchema = z.object({
-  paymentMethod: z.enum(['COD', 'DIRECT_UPI', 'UDHAAR', 'RAZORPAY']),
+  paymentMethod: z.enum(['COD', 'DIRECT_UPI', 'UDHAAR', 'RAZORPAY']).optional(),
   clientActionId: z.string().min(1).max(120).optional(),
+  deliveryAddress: z.string().max(500).optional(),
+  deliveryPincode: z.string().regex(/^\d{6}$/, 'Invalid PIN code').optional(),
+  deliveryLat: z.number().min(-90).max(90).optional(),
+  deliveryLng: z.number().min(-180).max(180).optional(),
 });
 
 export const callRecordSchema = z.object({

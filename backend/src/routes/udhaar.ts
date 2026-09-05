@@ -5,11 +5,22 @@ import { udhaarEntrySchema, udhaarCreditLimitSchema, udhaarPaySchema, udhaarPayl
 import { buildWhatsAppLink, buildReminderMessage } from '../lib/whatsapp';
 import { isRazorpayConfigured, getRazorpayClient } from '../lib/razorpay';
 import { prisma } from '../lib/prisma';
+import { assertFinancialWriteReady, isFinancialGuardError } from '../lib/financialGuard';
 
 const router = Router();
 
 const REMIND_COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 const OVERDUE_DAYS = 30;
+
+function sendFinancialGuardError(res: Response, err: unknown): boolean {
+  if (!isFinancialGuardError(err)) return false;
+  res.status(err.statusCode).json({
+    success: false,
+    code: err.code,
+    message: 'Udhaar/payment action is temporarily unavailable. Please retry once database health is restored.',
+  });
+  return true;
+}
 
 interface EntryLike {
   type: string;
@@ -94,6 +105,8 @@ router.get('/:shopId', authenticateToken, async (req: AuthRequest, res: Response
 // Vendor: add udhaar entry
 router.post('/entry', authenticateToken, requireRole('vendor'), validate(udhaarEntrySchema), async (req: AuthRequest, res: Response) => {
   try {
+    await assertFinancialWriteReady('vendor udhaar ledger entry');
+
     const { customerId, shopId, type, amount, note } = req.body;
 
     // Verify vendor owns the shop
@@ -128,6 +141,7 @@ router.post('/entry', authenticateToken, requireRole('vendor'), validate(udhaarE
 
     res.json({ success: true, data: { entryId: entry.id } });
   } catch (err) {
+    if (sendFinancialGuardError(res, err)) return;
     res.status(500).json({ success: false, message: 'Failed to add entry' });
   }
 });
@@ -136,6 +150,8 @@ router.post('/entry', authenticateToken, requireRole('vendor'), validate(udhaarE
 // Creates a PAYMENT entry, bumps totalPaid and logs a Payment row (receipt).
 router.post('/vendor/:customerId/pay', authenticateToken, requireRole('vendor'), validate(udhaarPaySchema), async (req: AuthRequest, res: Response) => {
   try {
+    await assertFinancialWriteReady('vendor udhaar payment receipt');
+
     const shop = await prisma.shop.findUnique({ where: { ownerId: req.userId } });
     if (!shop) return res.status(404).json({ success: false, message: 'Shop not found' });
 
@@ -188,6 +204,7 @@ router.post('/vendor/:customerId/pay', authenticateToken, requireRole('vendor'),
       },
     });
   } catch (err) {
+    if (sendFinancialGuardError(res, err)) return;
     res.status(500).json({ success: false, message: 'Failed to record payment' });
   }
 });
@@ -199,6 +216,7 @@ router.post('/vendor/:customerId/paylink', authenticateToken, requireRole('vendo
     if (!isRazorpayConfigured()) {
       return res.status(503).json({ success: false, message: 'Online payments abhi available nahi hain' });
     }
+    await assertFinancialWriteReady('Razorpay udhaar payment link creation');
 
     const shop = await prisma.shop.findUnique({ where: { ownerId: req.userId } });
     if (!shop) return res.status(404).json({ success: false, message: 'Shop not found' });
@@ -242,6 +260,7 @@ router.post('/vendor/:customerId/paylink', authenticateToken, requireRole('vendo
       data: { paymentId: payment.id, linkId: link.id, linkUrl: link.short_url },
     });
   } catch (err) {
+    if (sendFinancialGuardError(res, err)) return;
     res.status(500).json({ success: false, message: 'Failed to create payment link' });
   }
 });

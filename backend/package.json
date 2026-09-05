@@ -6,10 +6,12 @@
     "dev": "ts-node src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
+    "db:generate": "node scripts/prepare-prisma-provider.cjs && prisma generate",
+    "db:push": "node scripts/prepare-prisma-provider.cjs && prisma db push",
     "db:seed": "ts-node src/seed.ts",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "db:prepare:provider": "node scripts/prepare-prisma-provider.cjs",
+    "db:seed:pilot": "ts-node src/seed-pilot.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.10.0",

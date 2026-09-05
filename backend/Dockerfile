@@ -12,11 +12,12 @@ RUN npm ci
 
 COPY tsconfig.json ./
 COPY prisma ./prisma
+COPY scripts ./scripts
 COPY src ./src
 
-# Dev uses SQLite; prod images are built for PostgreSQL. `prisma generate`
+# Dev/test use SQLite; prod images are built for PostgreSQL. `prisma generate`
 # bakes the provider into the generated client.
-RUN sed -i 's/provider = "sqlite"/provider = "postgresql"/' prisma/schema.prisma \
+RUN BAZAARSETU_PRISMA_PROVIDER=postgresql node scripts/prepare-prisma-provider.cjs \
   && npx prisma generate \
   && npm run build
 

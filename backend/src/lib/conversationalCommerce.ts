@@ -59,7 +59,7 @@ export interface DraftLike {
   adjustments: DraftAdjustmentLike[];
   chat?: {
     customer?: { name: string; phone?: string };
-    shop?: { name: string; phone?: string; ownerId?: string; upiId?: string };
+    shop?: { name: string; phone?: string; ownerId?: string; upiId?: string; address?: string; lat?: number; lng?: number };
   };
 }
 
@@ -167,7 +167,7 @@ export async function loadDraftOrThrow(draftId: string) {
       chat: {
         include: {
           customer: { select: { name: true, phone: true } },
-          shop: { select: { name: true, phone: true, ownerId: true, upiId: true } },
+          shop: { select: { name: true, phone: true, ownerId: true, upiId: true, address: true, lat: true, lng: true } },
         },
       },
     },

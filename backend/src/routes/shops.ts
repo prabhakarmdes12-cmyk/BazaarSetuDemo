@@ -4,6 +4,7 @@ import { validate } from '../middleware/validate';
 import { getPagination } from '../middleware/pagination';
 import { updateShopSchema } from '../validators';
 import { prisma } from '../lib/prisma';
+import { getPilotConfig, isPilotMode, isPilotShopEligible } from '../lib/config';
 
 const router = Router();
 
@@ -65,13 +66,24 @@ router.get('/', optionalAuth, async (req: AuthRequest, res: Response) => {
       createdAt: shop.createdAt.toISOString(),
     }));
 
+    if (isPilotMode()) {
+      formattedShops = formattedShops.filter((shop: any) => isPilotShopEligible(shop));
+    }
+
     if (sort === 'distance' && lat && lng) {
       formattedShops.sort((a: any, b: any) => (a.distance || 999) - (b.distance || 999));
     } else {
       formattedShops.sort((a: any, b: any) => b.rating - a.rating);
     }
 
-    res.json({ success: true, data: formattedShops, total, limit, offset });
+    res.json({
+      success: true,
+      data: formattedShops,
+      total: isPilotMode() ? formattedShops.length : total,
+      limit,
+      offset,
+      ...(isPilotMode() ? { pilot: getPilotConfig() } : {}),
+    });
   } catch (err) {
     console.error('Get shops error:', err);
     res.status(500).json({ success: false, message: 'Failed to get shops' });
@@ -94,6 +106,9 @@ router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
     ]);
 
     if (!shop) return res.status(404).json({ success: false, message: 'Shop not found' });
+    if (isPilotMode() && !isPilotShopEligible(shop)) {
+      return res.status(403).json({ success: false, message: 'Shop is outside the active BazaarSetu pilot locality', pilot: getPilotConfig() });
+    }
 
     res.json({
       success: true,

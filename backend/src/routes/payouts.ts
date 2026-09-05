@@ -5,8 +5,19 @@ import { linkBankSchema, payoutRequestSchema } from '../validators';
 import { encryptSecret, decryptSecret, maskAccountNumber } from '../lib/encrypt';
 import { isRazorpayXConfigured, createVendorPayout } from '../lib/razorpayX';
 import { prisma } from '../lib/prisma';
+import { assertFinancialWriteReady, isFinancialGuardError } from '../lib/financialGuard';
 
 const router = Router();
+
+function sendFinancialGuardError(res: Response, err: unknown): boolean {
+  if (!isFinancialGuardError(err)) return false;
+  res.status(err.statusCode).json({
+    success: false,
+    code: err.code,
+    message: 'Payouts are temporarily unavailable. Please retry once database health is restored.',
+  });
+  return true;
+}
 
 // Every payout route requires a vendor, and the vendor's shop is their only
 // money context — resolve it once per request.
@@ -133,6 +144,8 @@ router.get('/', authenticateToken, requireRole('vendor'), async (req: AuthReques
 // Vendor: request a settlement of collected earnings to a linked bank account
 router.post('/request', authenticateToken, requireRole('vendor'), validate(payoutRequestSchema), async (req: AuthRequest, res: Response) => {
   try {
+    await assertFinancialWriteReady('vendor payout request');
+
     const shop = await getVendorShop(req.userId!);
     if (!shop) return res.status(404).json({ success: false, message: 'Shop not found' });
 
@@ -206,6 +219,7 @@ router.post('/request', authenticateToken, requireRole('vendor'), validate(payou
       return res.status(502).json({ success: false, message: 'Payout request failed at the payment gateway' });
     }
   } catch (err) {
+    if (sendFinancialGuardError(res, err)) return;
     console.error('Payout request error:', err);
     res.status(500).json({ success: false, message: 'Failed to request payout' });
   }

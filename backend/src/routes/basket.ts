@@ -10,6 +10,8 @@ import {
   summarizeDraftItems,
 } from '../lib/conversationalCommerce';
 import { queueOperationalEvent } from '../lib/operationalEvents';
+import { assertPilotCheckoutMethod, assertPilotDeliveryAllowed, getAvailableCheckoutMethods, isPilotMode, PilotPolicyError } from '../lib/config';
+import { assertFinancialWriteReady, isFinancialGuardError } from '../lib/financialGuard';
 import { AuthRequest, authenticateToken } from '../middleware/auth';
 import { validate } from '../middleware/validate';
 import {
@@ -533,6 +535,8 @@ router.post('/draft/:draftId/final-quote', authenticateToken, validate(finalQuot
 
 router.post('/draft/:draftId/checkout', authenticateToken, validate(draftCheckoutSchema), async (req: AuthRequest, res: Response) => {
   try {
+    await assertFinancialWriteReady('conversation draft checkout');
+
     const draft = await loadDraftOrThrow(req.params.draftId);
     if (!draft) return res.status(404).json({ success: false, message: 'Draft not found' });
     if (!isDraftCustomer(req, draft)) return res.status(403).json({ success: false, message: 'Only the customer can checkout this draft' });
@@ -543,7 +547,36 @@ router.post('/draft/:draftId/checkout', authenticateToken, validate(draftCheckou
       return res.json({ success: true, data: payload, ...payload });
     }
 
-    const { paymentMethod } = req.body as { paymentMethod: 'COD' | 'DIRECT_UPI' | 'UDHAAR' | 'RAZORPAY'; clientActionId?: string };
+    const {
+      paymentMethod = 'COD',
+      deliveryPincode,
+      deliveryAddress,
+      deliveryLat,
+      deliveryLng,
+    } = req.body as {
+      paymentMethod?: 'COD' | 'DIRECT_UPI' | 'UDHAAR' | 'RAZORPAY';
+      clientActionId?: string;
+      deliveryPincode?: string;
+      deliveryAddress?: string;
+      deliveryLat?: number;
+      deliveryLng?: number;
+    };
+    assertPilotCheckoutMethod(paymentMethod);
+    const customerForPilot = isPilotMode()
+      ? await (prisma as any).user.findUnique({
+          where: { id: draft.customerId },
+          select: { address: true, locality: true, pincode: true, lat: true, lng: true },
+        })
+      : undefined;
+    const pilotDelivery = assertPilotDeliveryAllowed({
+      shop: draft.chat.shop,
+      customer: customerForPilot,
+      deliveryPincode,
+      deliveryAddress,
+      deliveryLat,
+      deliveryLng,
+    });
+
     const orderItems = await materializeOrderItems(draft);
     const subtotal = draft.quotedSubtotal ?? estimateDraftSubtotal(draft.items);
     const deliveryFee = draft.deliveryFee ?? 0;
@@ -614,6 +647,8 @@ router.post('/draft/:draftId/checkout', authenticateToken, validate(draftCheckou
           allowUdhar: true,
           allowCod: true,
           selectedMethod: paymentMethod,
+          allowedMethods: getAvailableCheckoutMethods(),
+          pilotDelivery,
         },
       },
       req.app.locals.io,
@@ -641,7 +676,7 @@ router.post('/draft/:draftId/checkout', authenticateToken, validate(draftCheckou
       customerId: draft.customerId,
       conversationId: draft.chatId,
       orderId: order.id,
-      payload: { draftId: draft.id, itemsCount: order.items.length, estimatedAmount: order.totalAmount, paymentMethod },
+      payload: { draftId: draft.id, itemsCount: order.items.length, estimatedAmount: order.totalAmount, paymentMethod, pilotDelivery },
     });
 
     const payload = {
@@ -653,12 +688,20 @@ router.post('/draft/:draftId/checkout', authenticateToken, validate(draftCheckou
         publicToken: order.publicToken,
         items: order.items,
         paymentMethod,
+        allowedPaymentMethods: getAvailableCheckoutMethods(),
+        pilotDelivery,
       },
       draft: formatDraft(updatedDraft),
       udhaarReceipt,
     };
     return res.json({ success: true, data: payload, ...payload });
   } catch (err) {
+    if (err instanceof PilotPolicyError) {
+      return res.status(err.statusCode).json({ success: false, message: err.message, details: err.details });
+    }
+    if (isFinancialGuardError(err)) {
+      return res.status(err.statusCode).json({ success: false, message: 'Financial transactions are temporarily unavailable. Please retry once database health is restored.', code: err.code });
+    }
     console.error('Draft checkout error:', err);
     const message = err instanceof Error ? err.message : 'Failed to checkout draft';
     return res.status(400).json({ success: false, message });

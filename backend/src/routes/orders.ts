@@ -7,6 +7,8 @@ import { createOrderSchema, updateOrderStatusSchema } from '../validators';
 import { prisma } from '../lib/prisma';
 import { appendChitigramMessage, CHITIGRAM_TYPES } from '../lib/chitigram';
 import { queueOperationalEvent } from '../lib/operationalEvents';
+import { assertPilotCheckoutMethod, assertPilotDeliveryAllowed, isPilotMode, PilotPolicyError } from '../lib/config';
+import { assertFinancialWriteReady, isFinancialGuardError } from '../lib/financialGuard';
 
 const router = Router();
 
@@ -29,16 +31,50 @@ function buildTimeline(status: string, createdAt: Date, updatedAt: Date) {
 // Create order from cart
 router.post('/', authenticateToken, validate(createOrderSchema), async (req: AuthRequest, res: Response) => {
   try {
-    const { shopId } = req.body;
+    const {
+      shopId,
+      paymentMethod: requestedPaymentMethod,
+      deliveryPincode,
+      deliveryAddress,
+      deliveryLat,
+      deliveryLng,
+    } = req.body as {
+      shopId: string;
+      paymentMethod?: string;
+      deliveryPincode?: string;
+      deliveryAddress?: string;
+      deliveryLat?: number;
+      deliveryLng?: number;
+    };
+
+    const checkoutMethodForPolicy = requestedPaymentMethod || 'COD';
+    assertPilotCheckoutMethod(checkoutMethodForPolicy);
+    const paymentMethod = requestedPaymentMethod || (isPilotMode() ? checkoutMethodForPolicy : 'CART_CHECKOUT');
+    await assertFinancialWriteReady('cart checkout order creation');
 
     const cart = await prisma.cart.findUnique({
       where: { customerId_shopId: { customerId: req.userId!, shopId } },
-      include: { items: { include: { product: true } } },
+      include: { items: { include: { product: true } }, shop: { select: { address: true, lat: true, lng: true } } },
     });
 
     if (!cart || cart.items.length === 0) {
       return res.status(400).json({ success: false, message: 'Cart is empty' });
     }
+
+    const customerForPilot = isPilotMode()
+      ? await (prisma as any).user.findUnique({
+          where: { id: req.userId! },
+          select: { address: true, locality: true, pincode: true, lat: true, lng: true },
+        })
+      : undefined;
+    const pilotDelivery = assertPilotDeliveryAllowed({
+      shop: cart.shop,
+      customer: customerForPilot,
+      deliveryPincode,
+      deliveryAddress,
+      deliveryLat,
+      deliveryLng,
+    });
 
     const totalAmount = cart.items.reduce((sum: any, item: any) => sum + item.price * item.quantity, 0);
 
@@ -87,7 +123,12 @@ router.post('/', authenticateToken, validate(createOrderSchema), async (req: Aut
       shopId,
       customerId: req.userId!,
       orderId: order.id,
-      payload: { itemsCount: order.items.length, estimatedAmount: totalAmount, paymentMethod: 'CART_CHECKOUT' },
+      payload: {
+        itemsCount: order.items.length,
+        estimatedAmount: totalAmount,
+        paymentMethod,
+        pilotDelivery,
+      },
     });
 
     res.json({
@@ -97,9 +138,17 @@ router.post('/', authenticateToken, validate(createOrderSchema), async (req: Aut
         status: order.status,
         totalAmount: order.totalAmount,
         publicToken: order.publicToken,
+        paymentMethod,
+        pilotDelivery,
       },
     });
   } catch (err) {
+    if (err instanceof PilotPolicyError) {
+      return res.status(err.statusCode).json({ success: false, message: err.message, details: err.details });
+    }
+    if (isFinancialGuardError(err)) {
+      return res.status(err.statusCode).json({ success: false, message: 'Financial transactions are temporarily unavailable. Please retry once database health is restored.', code: err.code });
+    }
     console.error('Create order error:', err);
     res.status(500).json({ success: false, message: 'Failed to create order' });
   }

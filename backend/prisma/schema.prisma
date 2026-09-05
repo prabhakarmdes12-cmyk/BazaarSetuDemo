@@ -3,6 +3,9 @@ generator client {
 }
 
 datasource db {
+  // Dev/test default is SQLite (DATABASE_URL=file:...). The production Docker
+  // build rewrites this provider to "postgresql" before `prisma generate`, so
+  // the same models connect to PostgreSQL via DATABASE_URL in production.
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
@@ -15,6 +18,14 @@ model User {
   password  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  // Pilot customer locality fields. Empty by default to preserve legacy signup;
+  // seed-pilot.ts preconfigures real pilot addresses and PINs.
+  address  String @default("")
+  locality String @default("")
+  pincode  String @default("")
+  lat      Float?
+  lng      Float?
 
   // DPDP: timestamp when the user accepted the privacy policy at signup.
   privacyAcceptedAt DateTime?

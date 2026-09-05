@@ -2,6 +2,7 @@ import { Router } from 'express';
 import express from 'express';
 import { verifyRazorpaySignature } from '../lib/razorpay';
 import { prisma } from '../lib/prisma';
+import { assertFinancialWriteReady, isFinancialGuardError } from '../lib/financialGuard';
 
 const router = Router();
 
@@ -32,6 +33,22 @@ router.post('/razorpay', express.raw({ type: 'application/json' }), async (req, 
   const link = payload.payload?.payment_link?.entity;
   const linkId = link?.id;
   if (!linkId) return res.json({ success: true, ignored: true });
+
+  if (event === 'payment_link.paid' || event === 'payment_link.payment_successful' || event === 'payment_link.cancelled') {
+    try {
+      await assertFinancialWriteReady(`Razorpay webhook ${event}`);
+    } catch (err) {
+      if (isFinancialGuardError(err)) {
+        return res.status(err.statusCode).json({
+          success: false,
+          code: err.code,
+          message: 'Webhook money movement is temporarily unavailable. Retry after database health is restored.',
+        });
+      }
+      console.error('Razorpay webhook financial guard error:', err);
+      return res.status(500).json({ success: false, message: 'Webhook processing unavailable' });
+    }
+  }
 
   if (event === 'payment_link.paid' || event === 'payment_link.payment_successful') {
     const paidAmount = Math.round((link.amount ?? 0) / 100); // paise -> rupees
