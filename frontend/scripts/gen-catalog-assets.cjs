@@ -422,6 +422,28 @@ const SKU_ASSET_ROWS = [
   ['household', "Surf Excel Matic Detergent Powder", "2 kg", 'household/surf-excel-matic-1kg.jpg'],
   ['household', "Ariel Matic Detergent Powder", "2 kg", 'household/surf-excel-matic-1kg.jpg'],
   ['household', "Tide Matic Detergent Powder", "2 kg", 'household/surf-excel-matic-1kg.jpg'],
+  // Batch 4 group G/H: laundry & cleaning, pooja essentials
+  ['household', "Tide Plus Top-Load Detergent", "1 kg", 'household/tide-plus-detergent-1kg.jpg'],
+  ['household', "Rin Detergent Washing Bar", "4 pack", 'household/rin-detergent-bar-4-pack.jpg'],
+  ['household', "Wheel Detergent Washing Bar", "4 pack", 'household/rin-detergent-bar-4-pack.jpg'],
+  ['household', "Nirma Detergent Washing Bar", "4 pack", 'household/rin-detergent-bar-4-pack.jpg'],
+  ['household', "Comfort Fabric Conditioner", "860 ml", 'household/comfort-fabric-conditioner-860ml.jpg'],
+  ['household', "Downy Fabric Conditioner", "860 ml", 'household/comfort-fabric-conditioner-860ml.jpg'],
+  ['household', "Colin Glass Cleaner", "500 ml spray", 'household/colin-glass-cleaner-500ml.jpg'],
+  ['household', "Cif Glass Cleaner", "500 ml spray", 'household/colin-glass-cleaner-500ml.jpg'],
+  ['household', "Harpic Power Plus Toilet Cleaner", "500 ml", 'household/harpic-toilet-cleaner-1l.jpg'],
+  ['household', "Odonil Room Freshener", "50 g block", 'household/odonil-air-freshener-50g.jpg'],
+  ['household', "Godrej Aer Room Freshener", "50 g block", 'household/odonil-air-freshener-50g.jpg'],
+  ['household', "Ambipur Room Freshener", "50 g block", 'household/odonil-air-freshener-50g.jpg'],
+  ['pooja', "Homelite Matchbox Bundle", "10 boxes", 'pooja/safety-matchbox-10-pack.jpg'],
+  ['pooja', "Ship Matchbox Bundle", "10 boxes", 'pooja/safety-matchbox-10-pack.jpg'],
+  ['pooja', "Mangaldeep Agarbatti Incense Sticks", "100 sticks", 'pooja/mangaldeep-agarbatti-ziplock.jpg'],
+  ['pooja', "Cycle Agarbatti Incense Sticks", "100 sticks", 'pooja/mangaldeep-agarbatti-ziplock.jpg'],
+  ['pooja', "Zed Black Agarbatti Incense Sticks", "100 sticks", 'pooja/mangaldeep-agarbatti-ziplock.jpg'],
+  ['pooja', "Cycle Camphor Kapur Tablets", "100 g", 'pooja/camphor-tablets-50g.jpg'],
+  ['pooja', "Mangalam Camphor Kapur Tablets", "100 g", 'pooja/camphor-tablets-50g.jpg'],
+  ['pooja', "Local Cotton Wicks Batti", "100 pcs", 'pooja/cotton-wicks-100-pack.jpg'],
+  ['pooja', "Mangalam Cotton Wicks Batti", "100 pcs", 'pooja/cotton-wicks-100-pack.jpg'],
 ];
 
 const EXPECTED_PX = 600;
