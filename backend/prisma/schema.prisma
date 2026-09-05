@@ -1,0 +1,410 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // Dev/test default is SQLite (DATABASE_URL=file:...). The production Docker
+  // build rewrites this provider to "postgresql" before `prisma generate`, so
+  // the same models connect to PostgreSQL via DATABASE_URL in production.
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  phone     String   @unique
+  name      String
+  role      String   @default("customer")
+  password  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Pilot customer locality fields. Empty by default to preserve legacy signup;
+  // seed-pilot.ts preconfigures real pilot addresses and PINs.
+  address  String @default("")
+  locality String @default("")
+  pincode  String @default("")
+  lat      Float?
+  lng      Float?
+
+  // DPDP: timestamp when the user accepted the privacy policy at signup.
+  privacyAcceptedAt DateTime?
+
+  shop            Shop?
+  carts           Cart[]
+  orders          Order[]
+  chatsAsCustomer Chat[]       @relation("CustomerChats")
+  favorites       FavoriteShop[]
+  notifications   Notification[]
+  udharLedger     UdharLedger[]
+  messageReads    MessageRead[]
+  referralCode    String?      @unique
+  referralsReferrer Referral[] @relation("ReferralsReferrer")
+  paymentsAsCustomer Payment[] @relation("CustomerPayments")
+  bankAccounts       BankAccount[] @relation("VendorBankAccounts")
+  payouts            Payout[]      @relation("VendorPayouts")
+}
+
+model Shop {
+  id          String   @id @default(uuid())
+  ownerId     String   @unique
+  owner       User     @relation(fields: [ownerId], references: [id])
+  name        String
+  description String   @default("")
+  address     String   @default("")
+  phone       String   @default("")
+  image       String   @default("")
+  lat         Float    @default(0)
+  lng         Float    @default(0)
+  isActive    Boolean  @default(true)
+  rating      Float    @default(4.5)
+  upiId       String   @default("")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  products  Product[]
+  chats     Chat[]
+  carts     Cart[]
+  orders    Order[]
+  favorites FavoriteShop[]
+  udharLedger UdharLedger[]
+  referrals Referral[]
+  payments  Payment[]
+  payouts   Payout[]
+
+  @@index([lat, lng])
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  shopId      String
+  shop        Shop     @relation(fields: [shopId], references: [id])
+  name        String
+  description String   @default("")
+  price       Float
+  image       String   @default("")
+  category    String   @default("General")
+  unit        String   @default("kg")
+  isAvailable Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  cartItems  CartItem[]
+  orderItems OrderItem[]
+
+  @@index([shopId, category])
+}
+
+model Chat {
+  id         String   @id @default(uuid())
+  customerId String
+  customer   User     @relation("CustomerChats", fields: [customerId], references: [id])
+  shopId     String
+  shop       Shop     @relation(fields: [shopId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  messages Message[]
+  drafts   ConversationDraft[]
+
+  @@unique([customerId, shopId])
+}
+
+model Message {
+  id          String   @id @default(uuid())
+  chatId      String
+  chat        Chat     @relation(fields: [chatId], references: [id])
+  senderId    String
+  senderRole  String
+  type        String   @default("TEXT")
+  content     String
+  productId   String?
+  productData String?  @default("")
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  reads MessageRead[]
+
+  @@index([chatId, createdAt])
+}
+
+model MessageRead {
+  id        String   @id @default(uuid())
+  messageId String
+  message   Message  @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  readAt    DateTime @default(now())
+
+  @@unique([messageId, userId])
+}
+
+model Cart {
+  id         String   @id @default(uuid())
+  customerId String
+  customer   User     @relation(fields: [customerId], references: [id])
+  shopId     String
+  shop       Shop     @relation(fields: [shopId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  items CartItem[]
+
+  @@unique([customerId, shopId])
+}
+
+model CartItem {
+  id        String  @id @default(uuid())
+  cartId    String
+  cart      Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int     @default(1)
+  price     Float
+
+  @@unique([cartId, productId])
+}
+
+model Order {
+  id          String   @id @default(uuid())
+  customerId  String
+  customer    User     @relation(fields: [customerId], references: [id])
+  shopId      String
+  shop        Shop     @relation(fields: [shopId], references: [id])
+  totalAmount          Float
+  status               String   @default("pending")
+  publicToken          String?  @unique
+  conversationDraftId  String?  @unique
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  items OrderItem[]
+}
+
+model OrderItem {
+  id          String  @id @default(uuid())
+  orderId     String
+  order       Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String
+  product     Product @relation(fields: [productId], references: [id])
+  productName String
+  quantity    Int
+  price       Float
+}
+
+model FavoriteShop {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  shopId    String
+  shop      Shop     @relation(fields: [shopId], references: [id])
+  createdAt DateTime @default(now())
+
+  @@unique([userId, shopId])
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  type      String
+  title     String
+  body      String
+  data      String   @default("")
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([userId, isRead, createdAt])
+}
+
+model UdharLedger {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        User     @relation(fields: [customerId], references: [id])
+  shopId          String
+  shop            Shop     @relation(fields: [shopId], references: [id])
+  totalDue        Float    @default(0)
+  totalPaid       Float    @default(0)
+  creditLimit     Float    @default(0)
+  lastRemindedAt  DateTime?
+  lastUpdated     DateTime @default(now())
+  createdAt       DateTime @default(now())
+
+  entries UdharEntry[]
+  payments Payment[]
+
+  @@unique([customerId, shopId])
+}
+
+model UdharEntry {
+  id         String   @id @default(uuid())
+  ledgerId   String
+  ledger     UdharLedger @relation(fields: [ledgerId], references: [id], onDelete: Cascade)
+  type       String
+  amount     Float
+  note       String   @default("")
+  orderId    String?
+  createdAt  DateTime @default(now())
+}
+
+model Payment {
+  id         String      @id @default(uuid())
+  ledgerId   String
+  ledger     UdharLedger @relation(fields: [ledgerId], references: [id], onDelete: Cascade)
+  shopId     String
+  shop       Shop        @relation(fields: [shopId], references: [id])
+  customerId String
+  customer   User        @relation("CustomerPayments", fields: [customerId], references: [id])
+  amount     Float
+  method     String      @default("cash")
+  reference  String?
+  status     String      @default("paid")
+  createdAt  DateTime    @default(now())
+
+  @@index([ledgerId])
+  @@index([shopId, createdAt])
+}
+
+model BankAccount {
+  id            String   @id @default(uuid())
+  vendorId      String
+  vendor        User     @relation("VendorBankAccounts", fields: [vendorId], references: [id])
+  accountNumber String
+  ifsc          String
+  bankName      String
+  holderName    String
+  isPrimary     Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  payouts Payout[]
+
+  @@unique([vendorId, accountNumber])
+}
+
+model Payout {
+  id              String   @id @default(uuid())
+  vendorId        String
+  vendor          User      @relation("VendorPayouts", fields: [vendorId], references: [id])
+  shopId          String
+  shop            Shop      @relation(fields: [shopId], references: [id])
+  bankAccountId   String
+  bankAccount     BankAccount @relation(fields: [bankAccountId], references: [id])
+  amount          Float
+  // requested → processing → paid, or failed (gateway/insufficient funds).
+  status          String   @default("requested")
+  gatewayReference String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([vendorId, createdAt])
+}
+
+model Referral {
+  id            String   @id @default(uuid())
+  code          String
+  referrerId    String
+  referrer      User     @relation("ReferralsReferrer", fields: [referrerId], references: [id])
+  referredName  String   @default("")
+  referredPhone String
+  shopId        String?
+  shop          Shop?    @relation(fields: [shopId], references: [id])
+  status        String   @default("pending")
+  rewardAmount  Float    @default(0)
+  createdAt     DateTime @default(now())
+
+  @@unique([referrerId, referredPhone])
+  @@index([referrerId])
+}
+
+
+
+// Conversational Basket Drafts
+model ConversationDraft {
+  id             String            @id @default(uuid())
+  chatId         String
+  customerId     String
+  shopId         String
+  rawMessage     String
+  status         String            @default("DRAFT")
+  // DRAFT, CUSTOMER_CONFIRMED, SENT_TO_MERCHANT, MERCHANT_REVIEW,
+  // CHANGES_PROPOSED, FINAL_QUOTE, NEEDS_OPERATOR_ASSIST, CONVERTED, EXPIRED, CANCELLED
+  quotedSubtotal Float?
+  deliveryFee    Float?            @default(0)
+  finalTotal     Float?
+  clientActionId String?           @unique
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+
+  chat        Chat              @relation(fields: [chatId], references: [id])
+  items       DraftItem[]
+  adjustments DraftAdjustment[]
+
+  @@index([chatId, status, updatedAt])
+  @@index([customerId, shopId])
+}
+
+model DraftItem {
+  id                 String   @id @default(uuid())
+  draftId            String
+  rawText            String
+  requestedName      String
+  quantity           Float
+  unit               String
+  brandPreference    String?
+  matchedProductId   String?
+  matchConfidence    Float    @default(0.0)
+  catalogPrice       Float?
+  quotedPrice        Float?
+  availabilityStatus String   @default("NEEDS_MERCHANT_CHECK")
+  // AVAILABLE, SUBSTITUTE_PROPOSED, UNAVAILABLE, NEEDS_MERCHANT_CHECK
+  sourceMessageId    String?
+  createdAt          DateTime @default(now())
+
+  draft ConversationDraft @relation(fields: [draftId], references: [id], onDelete: Cascade)
+
+  @@index([draftId])
+  @@index([matchedProductId])
+}
+
+model DraftAdjustment {
+  id               String   @id @default(uuid())
+  draftId          String
+  itemId           String?
+  type             String
+  // PRICE_CHANGE, QUANTITY_CHANGE, SUBSTITUTION, UNAVAILABLE, CUSTOM_ITEM
+  originalText     String?
+  proposedName     String?
+  proposedQuantity Float?
+  proposedPrice    Float?
+  status           String   @default("PROPOSED")
+  // PROPOSED, CUSTOMER_ACCEPTED, CUSTOMER_DECLINED, SUPERSEDED
+  reason           String?
+  createdAt        DateTime @default(now())
+
+  draft ConversationDraft @relation(fields: [draftId], references: [id], onDelete: Cascade)
+
+  @@index([draftId, status])
+  @@index([itemId])
+}
+
+// Chiti Console Outbound Telemetry Event Log
+model OperationalEventLog {
+  id             String   @id @default(uuid())
+  eventId        String   @unique
+  eventType      String
+  version        String   @default("1.0.0")
+  shopId         String?
+  customerId     String?
+  conversationId String?
+  orderId        String?
+  payload        String
+  delivered      Boolean  @default(false)
+  attempts       Int      @default(0)
+  occurredAt     DateTime @default(now())
+
+  @@index([delivered, occurredAt])
+  @@index([shopId, occurredAt])
+  @@index([conversationId, occurredAt])
+  @@index([orderId])
+}

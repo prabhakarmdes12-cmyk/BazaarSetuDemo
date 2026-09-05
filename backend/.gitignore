@@ -1,0 +1,24 @@
+# dependencies
+/node_modules
+
+# build
+/dist
+
+# env — never commit real secrets
+.env
+.env.prod
+.env.*.local
+!.env.example
+
+# database
+/prisma/dev.db
+/prisma/dev.db-journal
+
+# uploads
+/uploads
+
+# logs
+*.log
+
+# typescript
+*.tsbuildinfo

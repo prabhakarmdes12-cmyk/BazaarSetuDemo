@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets
+.env
+.env.local
+.env.prod
+.env.*.local
+!.env.example
+
+# Build outputs
+dist/
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# Prisma
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+backend/prisma/test.db
+backend/prisma/test.db-journal
+backend/prisma/test.db-wal
+backend/prisma/test.db-shm
+
+# Uploads / media
+backend/uploads/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Testing survey app
+testing/node_modules/
+testing/dist/
+
+# Misc
+*.tmp
+*.bak

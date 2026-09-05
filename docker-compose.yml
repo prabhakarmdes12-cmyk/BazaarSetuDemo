@@ -1,0 +1,60 @@
+# Local prod-like stack: Postgres + backend + frontend.
+# Usage: copy the vars into a root .env (or rely on defaults), then
+#   docker compose up --build
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: bazaarsetu
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bazaarsetu_local}
+      POSTGRES_DB: bazaarsetu
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bazaarsetu"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      DATABASE_URL: postgresql://bazaarsetu:${POSTGRES_PASSWORD:-bazaarsetu_local}@db:5432/bazaarsetu?schema=public
+      JWT_SECRET: ${JWT_SECRET:-CHANGE_ME_long_random_string}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      SMS_PROVIDER: ${SMS_PROVIDER:-}
+      SMS_API_KEY: ${SMS_API_KEY:-}
+      SMS_SENDER_ID: ${SMS_SENDER_ID:-}
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET:-}
+      RAZORPAY_WEBHOOK_SECRET: ${RAZORPAY_WEBHOOK_SECRET:-}
+      RAZORPAYX_KEY_ID: ${RAZORPAYX_KEY_ID:-}
+      RAZORPAYX_KEY_SECRET: ${RAZORPAYX_KEY_SECRET:-}
+      RAZORPAYX_ACCOUNT_NUMBER: ${RAZORPAYX_ACCOUNT_NUMBER:-}
+      PAYOUT_ENC_KEY: ${PAYOUT_ENC_KEY:-}
+    ports:
+      - "5000:5000"
+    volumes:
+      - uploads:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Browser-visible backend URL (published port).
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:5000}
+        # Used by Next rewrites; internal Docker DNS is fine here.
+        API_PROXY_URL: ${API_PROXY_URL:-http://backend:5000}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  uploads:

@@ -1,0 +1,19 @@
+{
+  "name": "bazaarsetu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BazaarSetu - Hyperlocal multi-vendor grocery commerce platform",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "db:seed": "cd backend && npm run db:seed",
+    "db:push": "cd backend && npm run db:push",
+    "db:generate": "cd backend && npm run db:generate",
+    "setup": "npm install && cd frontend && npm install && cd ../backend && npm install && npm run db:generate && npm run db:push && npm run db:seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
