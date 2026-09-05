@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 30,
-  "totalSkus": 43,
+  "totalAssets": 40,
+  "totalSkus": 57,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -19,7 +19,7 @@
       "path": "/catalog/items/dairy/amul-taaza-toned-milk-500ml.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 52064,
+      "bytes": 52029,
       "verified": true
     },
     "bb-00009": {
@@ -30,7 +30,7 @@
       "path": "/catalog/items/dairy/amul-gold-full-cream-milk-1l.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 55836,
+      "bytes": 55735,
       "verified": true
     },
     "bb-00003": {
@@ -41,7 +41,7 @@
       "path": "/catalog/items/dairy/salted-butter-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 65047,
+      "bytes": 64950,
       "verified": true
     },
     "bb-00004": {
@@ -52,7 +52,7 @@
       "path": "/catalog/items/dairy/salted-butter-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49546,
+      "bytes": 49416,
       "verified": true
     },
     "bb-00055": {
@@ -63,7 +63,7 @@
       "path": "/catalog/items/dairy/salted-butter-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 65047,
+      "bytes": 64950,
       "verified": true
     },
     "bb-00056": {
@@ -74,7 +74,7 @@
       "path": "/catalog/items/dairy/salted-butter-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49546,
+      "bytes": 49416,
       "verified": true
     },
     "bb-00014": {
@@ -85,7 +85,7 @@
       "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49528,
+      "bytes": 49484,
       "verified": true
     },
     "bb-00059": {
@@ -96,7 +96,7 @@
       "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49528,
+      "bytes": 49484,
       "verified": true
     },
     "bb-00011": {
@@ -107,7 +107,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44573,
+      "bytes": 44542,
       "verified": true
     },
     "bb-00037": {
@@ -118,7 +118,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44573,
+      "bytes": 44542,
       "verified": true
     },
     "bb-00066": {
@@ -129,7 +129,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44573,
+      "bytes": 44542,
       "verified": true
     },
     "bb-00109": {
@@ -140,7 +140,7 @@
       "path": "/catalog/items/vegetables/desi-tomato-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 57977,
+      "bytes": 57935,
       "verified": true
     },
     "bb-00129": {
@@ -151,7 +151,7 @@
       "path": "/catalog/items/vegetables/hybrid-potato-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 40407,
+      "bytes": 40420,
       "verified": true
     },
     "bb-00138": {
@@ -162,7 +162,7 @@
       "path": "/catalog/items/vegetables/red-onion-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 60784,
+      "bytes": 60798,
       "verified": true
     },
     "bb-00116": {
@@ -173,7 +173,7 @@
       "path": "/catalog/items/vegetables/fresh-coriander-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 73578,
+      "bytes": 73526,
       "verified": true
     },
     "bb-00133": {
@@ -184,7 +184,7 @@
       "path": "/catalog/items/vegetables/palak-spinach-250g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64884,
+      "bytes": 64899,
       "verified": true
     },
     "bb-00089": {
@@ -195,7 +195,7 @@
       "path": "/catalog/items/vegetables/bhindi-okra-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 46227,
+      "bytes": 46224,
       "verified": true
     },
     "bb-00122": {
@@ -206,7 +206,7 @@
       "path": "/catalog/items/vegetables/ginger-250g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 41541,
+      "bytes": 41571,
       "verified": true
     },
     "bb-00119": {
@@ -217,7 +217,7 @@
       "path": "/catalog/items/vegetables/garlic-250g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 30780,
+      "bytes": 30763,
       "verified": true
     },
     "bb-00172": {
@@ -228,7 +228,7 @@
       "path": "/catalog/items/fruits/robusta-banana-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 34233,
+      "bytes": 34248,
       "verified": true
     },
     "bb-00176": {
@@ -239,7 +239,7 @@
       "path": "/catalog/items/fruits/shimla-apple-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 62051,
+      "bytes": 62002,
       "verified": true
     },
     "bb-00161": {
@@ -250,7 +250,7 @@
       "path": "/catalog/items/fruits/mosambi-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 45050,
+      "bytes": 45021,
       "verified": true
     },
     "bb-00170": {
@@ -261,7 +261,7 @@
       "path": "/catalog/items/fruits/pomegranate-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 80588,
+      "bytes": 80560,
       "verified": true
     },
     "bb-00173": {
@@ -272,7 +272,7 @@
       "path": "/catalog/items/fruits/green-grapes-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 39981,
+      "bytes": 39968,
       "verified": true
     },
     "bb-00165": {
@@ -283,7 +283,7 @@
       "path": "/catalog/items/fruits/papaya-1pc.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49327,
+      "bytes": 49335,
       "verified": true
     },
     "bb-00200": {
@@ -294,7 +294,7 @@
       "path": "/catalog/items/staples/chakki-atta-5kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 61222,
+      "bytes": 61147,
       "verified": true
     },
     "bb-00201": {
@@ -305,7 +305,7 @@
       "path": "/catalog/items/staples/chakki-atta-10kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 67971,
+      "bytes": 67599,
       "verified": true
     },
     "bb-00236": {
@@ -316,7 +316,7 @@
       "path": "/catalog/items/staples/chakki-atta-5kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 61222,
+      "bytes": 61147,
       "verified": true
     },
     "bb-00237": {
@@ -327,7 +327,7 @@
       "path": "/catalog/items/staples/chakki-atta-10kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 67971,
+      "bytes": 67599,
       "verified": true
     },
     "bb-00238": {
@@ -338,7 +338,7 @@
       "path": "/catalog/items/staples/classic-basmati-rice-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 57398,
+      "bytes": 57136,
       "verified": true
     },
     "bb-00209": {
@@ -349,7 +349,7 @@
       "path": "/catalog/items/staples/classic-basmati-rice-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 57398,
+      "bytes": 57136,
       "verified": true
     },
     "bb-00290": {
@@ -360,7 +360,7 @@
       "path": "/catalog/items/staples/toor-arhar-dal-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64738,
+      "bytes": 64368,
       "verified": true
     },
     "bb-00232": {
@@ -371,7 +371,7 @@
       "path": "/catalog/items/staples/toor-arhar-dal-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64738,
+      "bytes": 64368,
       "verified": true
     },
     "bb-00362": {
@@ -382,7 +382,7 @@
       "path": "/catalog/items/oils/refined-soyabean-oil-1l.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 33661,
+      "bytes": 33822,
       "verified": true
     },
     "bb-00416": {
@@ -393,7 +393,7 @@
       "path": "/catalog/items/oils/refined-soyabean-oil-1l.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 33661,
+      "bytes": 33822,
       "verified": true
     },
     "bb-00337": {
@@ -404,7 +404,7 @@
       "path": "/catalog/items/oils/kachi-ghani-mustard-oil-1l.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 41422,
+      "bytes": 41058,
       "verified": true
     },
     "bb-00360": {
@@ -415,7 +415,7 @@
       "path": "/catalog/items/oils/kachi-ghani-mustard-oil-1l.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 41422,
+      "bytes": 41058,
       "verified": true
     },
     "bb-00500": {
@@ -426,7 +426,7 @@
       "path": "/catalog/items/munchies/masala-potato-chips-52g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 70582,
+      "bytes": 70097,
       "verified": true
     },
     "bb-00501": {
@@ -437,7 +437,7 @@
       "path": "/catalog/items/munchies/masala-potato-chips-52g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 70582,
+      "bytes": 70097,
       "verified": true
     },
     "bb-00496": {
@@ -448,7 +448,7 @@
       "path": "/catalog/items/munchies/masala-corn-puffs-70g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 71313,
+      "bytes": 70642,
       "verified": true
     },
     "bb-00457": {
@@ -459,7 +459,7 @@
       "path": "/catalog/items/munchies/aloo-bhujia-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 81376,
+      "bytes": 80854,
       "verified": true
     },
     "bb-00431": {
@@ -470,7 +470,7 @@
       "path": "/catalog/items/munchies/aloo-bhujia-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 81376,
+      "bytes": 80854,
       "verified": true
     },
     "bb-00429": {
@@ -481,7 +481,161 @@
       "path": "/catalog/items/munchies/butter-popcorn-70g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 66266,
+      "bytes": 65349,
+      "verified": true
+    },
+    "bb-00703": {
+      "skuId": "bb-00703",
+      "name": "Coca-Cola Soft Drink",
+      "unit": "750 ml",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/cola-750ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 43581,
+      "verified": true
+    },
+    "bb-00779": {
+      "skuId": "bb-00779",
+      "name": "Thums Up Cola Soft Drink",
+      "unit": "750 ml",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/masala-cola-750ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47374,
+      "verified": true
+    },
+    "bb-00770": {
+      "skuId": "bb-00770",
+      "name": "Sprite Lime Soft Drink",
+      "unit": "750 ml",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/lime-soda-750ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 36924,
+      "verified": true
+    },
+    "bb-00729": {
+      "skuId": "bb-00729",
+      "name": "Maaza Mango Drink",
+      "unit": "600 ml",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/mango-drink-600ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 32628,
+      "verified": true
+    },
+    "bb-00865": {
+      "skuId": "bb-00865",
+      "name": "Tata Tea Gold Premium Leaf Tea",
+      "unit": "500 g",
+      "categoryId": "tea",
+      "path": "/catalog/items/tea/premium-black-tea-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 56385,
+      "verified": true
+    },
+    "bb-00870": {
+      "skuId": "bb-00870",
+      "name": "Tata Tea Masala Chai Tea",
+      "unit": "500 g",
+      "categoryId": "tea",
+      "path": "/catalog/items/tea/premium-black-tea-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 56385,
+      "verified": true
+    },
+    "bb-00833": {
+      "skuId": "bb-00833",
+      "name": "Nescafe Classic Instant Coffee Classic",
+      "unit": "50 g jar",
+      "categoryId": "tea",
+      "path": "/catalog/items/tea/instant-coffee-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47355,
+      "verified": true
+    },
+    "bb-00838": {
+      "skuId": "bb-00838",
+      "name": "Nescafe Sunrise Instant Coffee Classic",
+      "unit": "50 g jar",
+      "categoryId": "tea",
+      "path": "/catalog/items/tea/instant-coffee-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47355,
+      "verified": true
+    },
+    "bb-00939": {
+      "skuId": "bb-00939",
+      "name": "Maggi 2-Minute Masala Noodles",
+      "unit": "4 pack",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/masala-noodles-pack-of-4.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 79063,
+      "verified": true
+    },
+    "bb-00946": {
+      "skuId": "bb-00946",
+      "name": "Maggi Noodles Masala Pack",
+      "unit": "8 pack",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/masala-noodles-pack-of-8.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 76290,
+      "verified": true
+    },
+    "bb-00930": {
+      "skuId": "bb-00930",
+      "name": "Knorr Instant Soup",
+      "unit": "4 sachets",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68090,
+      "verified": true
+    },
+    "bb-00883": {
+      "skuId": "bb-00883",
+      "name": "Ching’s Secret Instant Soup",
+      "unit": "4 sachets",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68090,
+      "verified": true
+    },
+    "bb-00924": {
+      "skuId": "bb-00924",
+      "name": "Kissan Tomato Ketchup",
+      "unit": "1 kg",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/tomato-ketchup-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 43131,
+      "verified": true
+    },
+    "bb-00915": {
+      "skuId": "bb-00915",
+      "name": "Heinz Tomato Ketchup",
+      "unit": "1 kg",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/tomato-ketchup-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 43131,
       "verified": true
     }
   }

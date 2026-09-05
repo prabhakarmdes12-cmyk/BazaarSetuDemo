@@ -76,6 +76,23 @@ const SKU_ASSETS = {
   'bb-00457': 'munchies/aloo-bhujia-200g.jpg',
   'bb-00431': 'munchies/aloo-bhujia-200g.jpg',
   'bb-00429': 'munchies/butter-popcorn-70g.jpg',
+  // Beverages
+  'bb-00703': 'drinks/cola-750ml.jpg',
+  'bb-00779': 'drinks/masala-cola-750ml.jpg',
+  'bb-00770': 'drinks/lime-soda-750ml.jpg',
+  'bb-00729': 'drinks/mango-drink-600ml.jpg',
+  // Tea & coffee
+  'bb-00865': 'tea/premium-black-tea-500g.jpg',
+  'bb-00870': 'tea/premium-black-tea-500g.jpg',
+  'bb-00833': 'tea/instant-coffee-50g.jpg',
+  'bb-00838': 'tea/instant-coffee-50g.jpg',
+  // Instant
+  'bb-00939': 'instant/masala-noodles-pack-of-4.jpg',
+  'bb-00946': 'instant/masala-noodles-pack-of-8.jpg',
+  'bb-00930': 'instant/mixed-veg-soup-sachet.jpg',
+  'bb-00883': 'instant/mixed-veg-soup-sachet.jpg',
+  'bb-00924': 'instant/tomato-ketchup-1kg.jpg',
+  'bb-00915': 'instant/tomato-ketchup-1kg.jpg',
 };
 
 const EXPECTED_PX = 600;

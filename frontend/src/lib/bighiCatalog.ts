@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 43 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 57 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25706,7 +25706,21 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00496": "/catalog/items/munchies/masala-corn-puffs-70g.jpg",
   "bb-00457": "/catalog/items/munchies/aloo-bhujia-200g.jpg",
   "bb-00431": "/catalog/items/munchies/aloo-bhujia-200g.jpg",
-  "bb-00429": "/catalog/items/munchies/butter-popcorn-70g.jpg"
+  "bb-00429": "/catalog/items/munchies/butter-popcorn-70g.jpg",
+  "bb-00703": "/catalog/items/drinks/cola-750ml.jpg",
+  "bb-00779": "/catalog/items/drinks/masala-cola-750ml.jpg",
+  "bb-00770": "/catalog/items/drinks/lime-soda-750ml.jpg",
+  "bb-00729": "/catalog/items/drinks/mango-drink-600ml.jpg",
+  "bb-00865": "/catalog/items/tea/premium-black-tea-500g.jpg",
+  "bb-00870": "/catalog/items/tea/premium-black-tea-500g.jpg",
+  "bb-00833": "/catalog/items/tea/instant-coffee-50g.jpg",
+  "bb-00838": "/catalog/items/tea/instant-coffee-50g.jpg",
+  "bb-00939": "/catalog/items/instant/masala-noodles-pack-of-4.jpg",
+  "bb-00946": "/catalog/items/instant/masala-noodles-pack-of-8.jpg",
+  "bb-00930": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
+  "bb-00883": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
+  "bb-00924": "/catalog/items/instant/tomato-ketchup-1kg.jpg",
+  "bb-00915": "/catalog/items/instant/tomato-ketchup-1kg.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
