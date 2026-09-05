@@ -57,7 +57,7 @@ export default function PaymentHistoryPage() {
           </button>
           <div className="flex flex-col">
             <h1 className="font-headline text-lg font-bold tracking-tight text-primary dark:text-primary">Payment History</h1>
-            <p className="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest italic">Vasooli ka hisab</p>
+            <p className="text-[11px] text-on-surface-variant font-medium uppercase tracking-widest italic">Vasooli ka hisab</p>
           </div>
         </div>
       </header>
@@ -65,11 +65,11 @@ export default function PaymentHistoryPage() {
       <main className="pt-24 px-6 max-w-2xl mx-auto pb-40">
         <section className="grid grid-cols-2 gap-4 mb-8">
           <div className="leaf-gradient rounded-2xl p-5 shadow-lg text-white">
-            <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Aaj ki Vasooli</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest opacity-80 mb-1">Aaj ki Vasooli</p>
             <p className="text-3xl font-extrabold tracking-tighter">₹{collectedToday}</p>
           </div>
           <div className="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Kul Vasooli</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Kul Vasooli</p>
             <p className="text-3xl font-extrabold tracking-tighter text-on-surface">₹{totalCollected}</p>
           </div>
         </section>

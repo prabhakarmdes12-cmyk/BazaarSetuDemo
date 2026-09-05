@@ -69,7 +69,7 @@ export default function VendorChatsPage() {
                 <div className="flex items-center justify-between">
                   <h4 className="font-semibold text-on-surface truncate">{chat.customerName || 'Customer'}</h4>
                   {chat.lastMessageAt && (
-                    <span className="text-[10px] text-on-surface-variant">
+                    <span className="text-[11px] text-on-surface-variant">
                       {new Date(chat.lastMessageAt).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}
                     </span>
                   )}
@@ -77,7 +77,7 @@ export default function VendorChatsPage() {
                 <p className="text-sm text-on-surface-variant truncate">{chat.lastMessage || 'Abhi koi message nahi'}</p>
               </div>
               {chat.unreadCount && chat.unreadCount > 0 && (
-                <span className="bg-primary text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                <span className="bg-primary text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
                   {chat.unreadCount}
                 </span>
               )}

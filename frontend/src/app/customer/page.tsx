@@ -366,11 +366,11 @@ export default function CustomerHomePage() {
               <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/10" />
               <div className="relative z-10 p-6 sm:p-8 max-w-lg h-full flex flex-col justify-center min-h-[210px] sm:min-h-[230px]">
                 <div className="flex items-center gap-2 mb-2.5 flex-wrap">
-                  <span className="inline-flex items-center gap-1 leaf-gradient text-white text-[10px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline shadow-brand-glow">
+                  <span className="inline-flex items-center gap-1 leaf-gradient text-white text-[11px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline shadow-brand-glow">
                     <Icon name="bolt" size="sm" filled />
                     ⚡ {BIGHI_STORE.etaMinutes} mins
                   </span>
-                  <span className="inline-flex items-center gap-1 bg-black/40 backdrop-blur border border-primary/40 text-primary text-[10px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline">
+                  <span className="inline-flex items-center gap-1 bg-black/40 backdrop-blur border border-primary/40 text-primary text-[11px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline">
                     <Icon name="verified_user" size="sm" filled />
                     {BIGHI_STORE.verifiedLabel}
                   </span>

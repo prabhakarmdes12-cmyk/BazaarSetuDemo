@@ -168,7 +168,7 @@ export default function VendorPayoutsPage() {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Linked Account</p>
+            <p className="text-[11px] uppercase tracking-widest text-on-surface-variant font-bold">Linked Account</p>
             <p className="font-mono text-sm font-bold text-on-surface-variant">
               {primaryBank ? `${primaryBank.bankName} ${primaryBank.masked}` : 'Abhi koi account linked nahi'}
             </p>

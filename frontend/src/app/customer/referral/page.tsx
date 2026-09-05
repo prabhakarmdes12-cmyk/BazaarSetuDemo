@@ -87,15 +87,15 @@ export default function ReferralPage() {
         <section className="grid grid-cols-3 gap-4">
           <div className="bg-surface-container-low rounded-2xl p-5 text-center">
             <p className="text-2xl font-extrabold text-on-surface">{info?.joinedCount ?? '--'}</p>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Jude</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Jude</p>
           </div>
           <div className="bg-surface-container-low rounded-2xl p-5 text-center">
             <p className="text-2xl font-extrabold text-on-surface">{info?.pendingCount ?? '--'}</p>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Pending</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Pending</p>
           </div>
           <div className="bg-surface-container-low rounded-2xl p-5 text-center">
             <p className="text-2xl font-extrabold text-primary">₹{info?.rewardAmount ?? 0}</p>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Reward</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Reward</p>
           </div>
         </section>
 

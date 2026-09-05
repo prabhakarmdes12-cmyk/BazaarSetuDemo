@@ -40,7 +40,7 @@ export default function BottomNavBar({ items }: BottomNavBarProps) {
                 <span className="relative">
                   <Icon name={item.icon} filled={isActive} />
                 </span>
-                <span className="relative font-label text-[10px] font-semibold tracking-wide mt-0.5">
+                <span className="relative font-label text-[11px] font-semibold tracking-wide mt-0.5">
                   {item.label}
                 </span>
               </Link>

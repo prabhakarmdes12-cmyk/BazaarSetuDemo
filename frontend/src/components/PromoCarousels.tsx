@@ -50,7 +50,7 @@ export default function PromoCarousels({ onSelect }: { onSelect?: (promoId: stri
           >
             <div className="absolute -right-6 -bottom-8 w-28 h-28 rounded-full bg-white/15 blur-xl" />
             <div className="relative flex items-start justify-between">
-              <span className="bg-black/25 text-white text-[10px] font-black tracking-wide uppercase px-2.5 py-1 rounded-full font-headline">
+              <span className="bg-black/25 text-white text-[11px] font-black tracking-wide uppercase px-2.5 py-1 rounded-full font-headline">
                 {promo.tag}
               </span>
               <Icon name={promo.icon} filled size="lg" className="text-white/90" />

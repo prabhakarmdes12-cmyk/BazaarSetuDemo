@@ -116,7 +116,7 @@ export default function AdminSettingsPage() {
               {cat.tags && (
                 <div className="mt-4 flex gap-2">
                   {cat.tags.map((tag) => (
-                    <span key={tag} className="px-2.5 py-1 bg-surface-container-highest rounded-lg text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">
+                    <span key={tag} className="px-2.5 py-1 bg-surface-container-highest rounded-lg text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">
                       {tag}
                     </span>
                   ))}
@@ -130,7 +130,7 @@ export default function AdminSettingsPage() {
                   >
                     <div className={`absolute top-1 w-4 h-4 bg-surface-container-lowest rounded-full shadow-md transition-all ${signupOpen ? 'left-7' : 'left-1'}`} />
                   </button>
-                  <span className="text-[10px] font-bold text-secondary uppercase tracking-wider">{signupOpen ? cat.toggleLabel : 'Signup Closed'}</span>
+                  <span className="text-[11px] font-bold text-secondary uppercase tracking-wider">{signupOpen ? cat.toggleLabel : 'Signup Closed'}</span>
                 </div>
               )}
             </div>

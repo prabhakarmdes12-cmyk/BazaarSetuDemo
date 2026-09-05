@@ -21,7 +21,7 @@ export default function FloatingActionButton({
     <>
       <Icon name={icon} />
       {count != null && count > 0 && (
-        <span className="absolute -top-1 -right-1 bg-error text-on-error text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center ring-2 ring-surface">
+        <span className="absolute -top-1 -right-1 bg-error text-on-error text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center ring-2 ring-surface">
           {count > 99 ? '99+' : count}
         </span>
       )}

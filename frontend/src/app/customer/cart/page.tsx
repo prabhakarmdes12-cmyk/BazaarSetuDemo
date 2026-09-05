@@ -219,16 +219,18 @@ export default function CartPage() {
                   <span className="font-bold text-on-surface">₹{item.price}</span>
                 </div>
                 <div className="flex justify-between items-center mt-4">
+                  {/* 44px minimum touch targets — this is the most-tapped
+                      control in the app and is often used one-handed. */}
                   <div className="flex items-center bg-surface-container-highest rounded-lg overflow-hidden">
-                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity - 1)} aria-label="Decrease quantity" className="px-3 py-1 hover:bg-primary-fixed transition-colors">
+                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity - 1)} aria-label="Decrease quantity" className="min-w-[44px] min-h-[44px] flex items-center justify-center hover:bg-primary-fixed transition-colors">
                       <Icon name="remove" size="sm" />
                     </button>
-                    <span className="px-3 font-bold text-sm">{item.quantity}</span>
-                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity + 1)} aria-label="Increase quantity" className="px-3 py-1 hover:bg-primary-fixed transition-colors">
+                    <span className="px-3 font-bold text-sm tabular-nums">{item.quantity}</span>
+                    <button onClick={() => handleUpdateQuantity(item.productId, item.quantity + 1)} aria-label="Increase quantity" className="min-w-[44px] min-h-[44px] flex items-center justify-center hover:bg-primary-fixed transition-colors">
                       <Icon name="add" size="sm" />
                     </button>
                   </div>
-                  <button onClick={() => handleRemove(item.productId)} aria-label="Remove item" className="text-on-surface-variant hover:text-error transition-colors">
+                  <button onClick={() => handleRemove(item.productId)} aria-label="Remove item" className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-on-surface-variant hover:text-error hover:bg-error/10 transition-colors">
                     <Icon name="delete" />
                   </button>
                 </div>
@@ -263,7 +265,7 @@ export default function CartPage() {
       <div className="fixed bottom-0 left-0 w-full bg-surface-container-lowest/90 backdrop-blur-xl px-6 pt-4 pb-8 shadow-bottom-nav flex flex-col gap-4 z-40">
         <div className="flex justify-between items-center mb-2">
           <div className="flex flex-col">
-            <span className="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase">PAYING</span>
+            <span className="text-[11px] font-bold text-on-surface-variant tracking-widest uppercase">PAYING</span>
             <span className="text-lg font-extrabold text-on-surface">₹{total}</span>
           </div>
           <div className="flex items-center gap-1 text-secondary text-sm font-bold">

@@ -177,13 +177,13 @@ export default function ProductCard({
 
           {/* Instant Delivery Floating Badges */}
           <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
-            <span className="bg-primary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-md font-headline">
+            <span className="bg-primary text-white text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-md font-headline">
               {discountPercent}% OFF
             </span>
           </div>
 
           <div className="absolute top-2 right-2 z-10">
-            <span className="bg-black/75 backdrop-blur-md text-emerald-400 border border-emerald-500/20 text-[10px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm font-headline">
+            <span className="bg-black/75 backdrop-blur-md text-emerald-400 border border-emerald-500/20 text-[11px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm font-headline">
               <Icon name="bolt" size="sm" filled />
               10m
             </span>

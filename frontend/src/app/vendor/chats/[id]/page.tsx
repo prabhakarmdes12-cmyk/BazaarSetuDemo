@@ -188,7 +188,7 @@ export default function VendorChatPage() {
                   </div>
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     {(item.actions || []).slice(0, 5).map((action) => (
-                      <span key={action} className="rounded-full bg-surface-container-low px-2 py-1 text-[10px] font-bold text-on-surface-variant">
+                      <span key={action} className="rounded-full bg-surface-container-low px-2 py-1 text-[11px] font-bold text-on-surface-variant">
                         {action.replace(/_/g, ' ')}
                       </span>
                     ))}

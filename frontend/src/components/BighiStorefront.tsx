@@ -258,7 +258,7 @@ export default function BighiStorefront() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
             <div className="relative z-10 p-6 sm:p-8 max-w-lg">
-              <span className="inline-flex items-center gap-1 bg-primary/90 text-white text-[10px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline">
+              <span className="inline-flex items-center gap-1 bg-primary/90 text-white text-[11px] font-black tracking-wider uppercase px-2.5 py-1 rounded-full font-headline">
                 <Icon name="bolt" size="sm" filled />
                 ⚡ {BIGHI_STORE.etaMinutes}-minute delivery
               </span>
@@ -369,7 +369,7 @@ export default function BighiStorefront() {
                       iconClassName="text-sm"
                     />
                     <span className="leading-tight">{c.label}</span>
-                    <span className="ml-auto text-[10px] text-on-surface-variant/70 tabular-nums">
+                    <span className="ml-auto text-[11px] text-on-surface-variant/70 tabular-nums">
                       {BIGHI_CATEGORY_COUNTS[c.label]}
                     </span>
                   </button>

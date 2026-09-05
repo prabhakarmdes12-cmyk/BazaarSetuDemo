@@ -10,11 +10,19 @@ interface FloatingCartDockProps {
   onClick: () => void;
   label?: string;
   ctaLabel?: string;
+  /** Lift above a `BottomNavBar` (default). Set false on pages without one. */
+  offsetForNav?: boolean;
 }
 
 /**
  * Persistent bottom cart dock that springs in whenever the cart has items.
  * `[🛒 N items · ₹total] .......................... [View Cart →]`
+ *
+ * Layout note: pages rendered inside `AppShell` also show `BottomNavBar`,
+ * which is `fixed bottom-0` and ~72px tall including the safe-area inset.
+ * The dock therefore sits *above* the nav rather than at `bottom-4`, where it
+ * was previously rendering underneath the primary conversion CTA. Pages
+ * without a bottom nav pass `offsetForNav={false}` to sit low again.
  */
 export default function FloatingCartDock({
   count,
@@ -22,6 +30,7 @@ export default function FloatingCartDock({
   onClick,
   label = 'items',
   ctaLabel = 'View Cart',
+  offsetForNav = true,
 }: FloatingCartDockProps) {
   return (
     <AnimatePresence>
@@ -31,7 +40,12 @@ export default function FloatingCartDock({
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 90, opacity: 0 }}
           transition={{ type: 'spring', stiffness: 420, damping: 34 }}
-          className="fixed bottom-4 sm:bottom-6 left-0 right-0 z-40 px-4 pointer-events-none"
+          className="fixed left-0 right-0 z-40 px-4 pointer-events-none"
+          style={{
+            bottom: offsetForNav
+              ? 'calc(env(safe-area-inset-bottom, 0px) + 88px)'
+              : 'calc(env(safe-area-inset-bottom, 0px) + 16px)',
+          }}
         >
           <div className="max-w-2xl mx-auto pointer-events-auto">
             <button

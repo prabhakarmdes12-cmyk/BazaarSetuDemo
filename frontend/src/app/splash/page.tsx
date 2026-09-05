@@ -62,7 +62,7 @@ export default function SplashPage() {
                 <Icon name="storefront" size="sm" />
               </div>
               <div>
-                <p className="text-[9px] font-bold text-primary tracking-widest uppercase">Verified Shop</p>
+                <p className="text-[11px] font-bold text-primary tracking-widest uppercase">Verified Shop</p>
                 <p className="text-xs font-semibold text-on-surface">Local Merchant</p>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function SplashPage() {
 
         {/* Footer */}
         <footer className="pb-6 text-center">
-          <p className="text-[10px] font-label font-medium text-on-surface-variant/60 tracking-widest uppercase">
+          <p className="text-[11px] font-label font-medium text-on-surface-variant/60 tracking-widest uppercase">
             Vocal for Local &bull; Made in Bharat
           </p>
         </footer>

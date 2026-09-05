@@ -100,7 +100,7 @@ export default function EditProfilePage() {
                 <Icon name="shopping_basket" className="text-primary" />
                 Dukaan ki Details
               </h2>
-              <span className="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant bg-surface-container p-1 px-2 rounded">Shop Profile</span>
+              <span className="text-[11px] uppercase tracking-widest font-bold text-on-surface-variant bg-surface-container p-1 px-2 rounded">Shop Profile</span>
             </div>
             <div className="grid grid-cols-1 gap-6">
               <div className="space-y-2">
@@ -178,7 +178,7 @@ export default function EditProfilePage() {
                   />
                   <Icon name="lock" className="absolute right-4 top-4 text-on-surface-variant/40 text-sm" />
                 </div>
-                <p className="text-[10px] text-on-surface-variant px-1">Mobile number cannot be changed for security</p>
+                <p className="text-[11px] text-on-surface-variant px-1">Mobile number cannot be changed for security</p>
               </div>
             </div>
           </section>

@@ -52,7 +52,7 @@ export default function TopNav({
                 {title}
               </h1>
               {subtitle && (
-                <span className="text-[10px] italic font-medium text-on-surface-variant tracking-wider truncate">
+                <span className="text-[11px] italic font-medium text-on-surface-variant tracking-wider truncate">
                   {subtitle}
                 </span>
               )}
@@ -100,7 +100,7 @@ export default function TopNav({
           >
             <Icon name="notifications" />
             {notificationCount != null && notificationCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 bg-error text-on-error text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+              <span className="absolute -top-0.5 -right-0.5 bg-error text-on-error text-[11px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                 {notificationCount > 9 ? '9+' : notificationCount}
               </span>
             )}

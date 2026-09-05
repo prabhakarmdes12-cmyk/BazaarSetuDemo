@@ -40,7 +40,7 @@ export default function OrderProgress({ status }: OrderProgressProps) {
                 <Icon name={step.icon} size="sm" filled={isActive} />
               </div>
               <span
-                className={`text-[10px] font-medium ${
+                className={`text-[11px] font-medium ${
                   isActive ? 'text-on-surface' : 'text-on-surface-variant'
                 }`}
               >

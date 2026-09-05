@@ -81,7 +81,7 @@ export default function OrderStatusPage() {
         {/* Order Header */}
         <section className="relative overflow-hidden rounded-xl bg-surface-container-low p-6">
           <div className="relative z-10 flex flex-col gap-2">
-            <span className="inline-flex w-fit px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label text-[10px] font-bold tracking-widest uppercase">
+            <span className="inline-flex w-fit px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label text-[11px] font-bold tracking-widest uppercase">
               Order ID: #{order?.id?.slice(-6)?.toUpperCase()}
             </span>
             <h2 className="font-headline text-2xl font-bold text-on-surface leading-tight mt-2">
@@ -141,7 +141,7 @@ export default function OrderStatusPage() {
                     </h3>
                     <p className="text-sm text-on-surface-variant">{step.labelHi}</p>
                     {isActive && (
-                      <span className="mt-2 text-[10px] font-bold text-secondary uppercase tracking-tighter">
+                      <span className="mt-2 text-[11px] font-bold text-secondary uppercase tracking-tighter">
                         Current Status
                       </span>
                     )}
@@ -225,19 +225,19 @@ export default function OrderStatusPage() {
       <nav className="fixed bottom-0 left-0 w-full bg-surface-container-lowest/80 backdrop-blur-xl flex justify-around items-center px-4 pb-6 pt-3 z-50 rounded-t-3xl shadow-bottom-nav">
         <button onClick={() => router.push('/customer')} className="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-2 hover:text-primary active:scale-90 transition-all duration-200">
           <Icon name="storefront" />
-          <span className="font-inter text-[10px] font-medium uppercase tracking-wider">Bazaar</span>
+          <span className="font-inter text-[11px] font-medium uppercase tracking-wider">Bazaar</span>
         </button>
         <button className="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-container text-primary dark:text-primary-fixed rounded-2xl px-5 py-2 active:scale-90 transition-all duration-200">
           <Icon name="receipt_long" filled />
-          <span className="font-inter text-[10px] font-medium uppercase tracking-wider">Orders</span>
+          <span className="font-inter text-[11px] font-medium uppercase tracking-wider">Orders</span>
         </button>
         <button className="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-2 hover:text-primary active:scale-90 transition-all duration-200">
           <Icon name="chat" />
-          <span className="font-inter text-[10px] font-medium uppercase tracking-wider">Chat</span>
+          <span className="font-inter text-[11px] font-medium uppercase tracking-wider">Chat</span>
         </button>
         <button className="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-2 hover:text-primary active:scale-90 transition-all duration-200">
           <Icon name="support_agent" />
-          <span className="font-inter text-[10px] font-medium uppercase tracking-wider">Help</span>
+          <span className="font-inter text-[11px] font-medium uppercase tracking-wider">Help</span>
         </button>
       </nav>
     </div>

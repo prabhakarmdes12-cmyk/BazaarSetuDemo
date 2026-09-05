@@ -311,7 +311,7 @@ export default function VendorProductsPage() {
             <Icon name={t.icon} size="sm" filled={tab === t.id} />
             <span>{t.label}</span>
             {t.id === 'inventory' && (products.length + localItems.length) > 0 && (
-              <span className="bg-black/20 text-white text-[10px] font-black px-1.5 py-0.5 rounded-full">
+              <span className="bg-black/20 text-white text-[11px] font-black px-1.5 py-0.5 rounded-full">
                 {products.length + localItems.length}
               </span>
             )}
@@ -508,10 +508,10 @@ export default function VendorProductsPage() {
                               rounded="rounded-lg"
                               iconClassName="text-2xl"
                             />
-                            <span className="text-[10px] font-bold text-on-surface leading-tight line-clamp-2 min-h-[1.6rem] font-headline">
+                            <span className="text-[11px] font-bold text-on-surface leading-tight line-clamp-2 min-h-[1.6rem] font-headline">
                               {b.name}
                             </span>
-                            <span className="text-[9px] text-on-surface-variant truncate">{b.unit}</span>
+                            <span className="text-[11px] text-on-surface-variant truncate">{b.unit}</span>
                             <span className="mt-0.5 flex items-center justify-between gap-1">
                               <span className="text-[11px] font-black text-on-surface tabular-nums">
                                 ₹{b.price}
@@ -648,7 +648,7 @@ export default function VendorProductsPage() {
                     name={b.name}
                     className="w-full aspect-square mb-2"
                   />
-                  <p className="text-[10px] font-semibold text-primary uppercase tracking-wide truncate font-headline">
+                  <p className="text-[11px] font-semibold text-primary uppercase tracking-wide truncate font-headline">
                     {b.category.split(',')[0]}
                   </p>
                   <h4 className="font-bold text-on-surface text-[12px] leading-snug line-clamp-2 min-h-[2rem] font-headline">

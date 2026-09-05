@@ -76,7 +76,7 @@ export default function MakePaymentPage() {
               <h1 className="font-headline font-bold text-lg tracking-tight text-primary dark:text-primary">{customerName}</h1>
               <div className="flex items-center gap-1">
                 <Icon name="verified" size="sm" filled className="text-secondary" />
-                <span className="text-[10px] font-semibold text-secondary uppercase tracking-wider">Verified Merchant</span>
+                <span className="text-[11px] font-semibold text-secondary uppercase tracking-wider">Verified Merchant</span>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function MakePaymentPage() {
         <section className="mb-10">
           <div className="flex items-center justify-between mb-4">
             <h4 className="font-headline font-bold text-lg">Payment Method Chunein</h4>
-            <span className="text-[10px] font-bold text-primary bg-primary-fixed px-2 py-1 rounded-full uppercase">Secure</span>
+            <span className="text-[11px] font-bold text-primary bg-primary-fixed px-2 py-1 rounded-full uppercase">Secure</span>
           </div>
           <div className="space-y-4">
             {METHODS.map((method) => {
@@ -146,7 +146,7 @@ export default function MakePaymentPage() {
                     <div className="mt-4 flex gap-3 pt-4 border-t border-surface-container">
                       {['GPay', 'PhonePe', 'Paytm'].map((name) => (
                         <div key={name} className="bg-surface-container-lowest p-2 rounded-lg shadow-sm border border-outline-variant/20">
-                          <span className="text-[10px] font-bold text-on-surface-variant">{name}</span>
+                          <span className="text-[11px] font-bold text-on-surface-variant">{name}</span>
                         </div>
                       ))}
                     </div>
@@ -193,19 +193,19 @@ export default function MakePaymentPage() {
           <div className="max-w-md mx-auto flex justify-around items-center px-4 pb-6 pt-3">
             <button onClick={() => router.push('/vendor')} className="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 opacity-70 hover:text-primary transition-colors">
               <Icon name="home" />
-              <span className="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Home</span>
+              <span className="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Home</span>
             </button>
             <button className="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-container text-primary-fixed rounded-2xl px-5 py-2 scale-105 active:scale-90 transition-transform">
               <Icon name="account_balance_wallet" filled />
-              <span className="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Udhaar</span>
+              <span className="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Udhaar</span>
             </button>
             <button onClick={() => router.push('/vendor/orders')} className="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 opacity-70 hover:text-primary transition-colors">
               <Icon name="receipt_long" />
-              <span className="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Orders</span>
+              <span className="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Orders</span>
             </button>
             <button onClick={() => router.push('/vendor')} className="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 opacity-70 hover:text-primary transition-colors">
               <Icon name="person" />
-              <span className="font-inter text-[10px] font-semibold tracking-wide uppercase mt-1">Profile</span>
+              <span className="font-inter text-[11px] font-semibold tracking-wide uppercase mt-1">Profile</span>
             </button>
           </div>
         </nav>

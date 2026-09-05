@@ -158,7 +158,7 @@ export default function VendorUdhaarPage() {
               <h1 className="font-headline text-lg font-bold tracking-tight text-on-surface">
                 Digital Khata Ledger
               </h1>
-              <p className="text-[10px] text-on-surface-variant font-medium">Bacha hua Udhaar &bull; Hisaab-Kitab</p>
+              <p className="text-[11px] text-on-surface-variant font-medium">Bacha hua Udhaar &bull; Hisaab-Kitab</p>
             </div>
           </div>
 
@@ -282,7 +282,7 @@ export default function VendorUdhaarPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-surface-container-low border border-white/5 rounded-2xl p-5 shadow-sm">
-              <p className="text-[10px] font-black uppercase tracking-widest text-primary font-headline mb-1">
+              <p className="text-[11px] font-black uppercase tracking-widest text-primary font-headline mb-1">
                 Collection Rate
               </p>
               <p className="text-2xl font-black text-on-surface font-headline tabular-nums">
@@ -295,7 +295,7 @@ export default function VendorUdhaarPage() {
             </div>
 
             <div className="bg-surface-container-low border border-white/5 rounded-2xl p-5 shadow-sm">
-              <p className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant font-headline mb-1">
+              <p className="text-[11px] font-black uppercase tracking-widest text-on-surface-variant font-headline mb-1">
                 DSO (Recovery Time)
               </p>
               <p className="text-2xl font-black text-on-surface font-headline tabular-nums">
@@ -305,7 +305,7 @@ export default function VendorUdhaarPage() {
             </div>
 
             <div className="bg-surface-container-low border border-white/5 rounded-2xl p-5 shadow-sm">
-              <p className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant font-headline mb-1">
+              <p className="text-[11px] font-black uppercase tracking-widest text-on-surface-variant font-headline mb-1">
                 Credit Utilization
               </p>
               <p className="text-2xl font-black text-on-surface font-headline tabular-nums">
@@ -318,7 +318,7 @@ export default function VendorUdhaarPage() {
             </div>
 
             <div className="bg-surface-container-low border border-white/5 rounded-2xl p-5 shadow-sm">
-              <p className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant font-headline mb-1">
+              <p className="text-[11px] font-black uppercase tracking-widest text-on-surface-variant font-headline mb-1">
                 Overdue Khata
               </p>
               <p className="text-2xl font-black text-emerald-400 font-headline tabular-nums">
@@ -406,7 +406,7 @@ export default function VendorUdhaarPage() {
                           </div>
 
                           <div className="text-right">
-                            <span className="text-[10px] font-black uppercase tracking-wider text-on-surface-variant font-headline">
+                            <span className="text-[11px] font-black uppercase tracking-wider text-on-surface-variant font-headline">
                               Baaki Balance
                             </span>
                             <p className="text-xl font-black text-primary font-headline tabular-nums">₹{l.balance}</p>

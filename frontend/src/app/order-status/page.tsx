@@ -77,7 +77,7 @@ export default function PublicOrderStatusPage() {
     <div className="bg-surface min-h-screen pb-16">
       <header className="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-top-bar flex justify-between items-center px-6 py-4">
         <span className="font-headline font-extrabold text-primary italic leading-none">Chiti Bazaar</span>
-        <span className="font-inter text-[10px] font-medium uppercase tracking-wider text-on-surface-variant italic">
+        <span className="font-inter text-[11px] font-medium uppercase tracking-wider text-on-surface-variant italic">
           Apni local dukaan, ab online
         </span>
       </header>
@@ -85,7 +85,7 @@ export default function PublicOrderStatusPage() {
       <main className="pt-24 px-6 max-w-xl mx-auto space-y-6">
         <section className="relative overflow-hidden rounded-xl bg-surface-container-low p-6">
           <div className="relative z-10 flex flex-col gap-2">
-            <span className="inline-flex w-fit px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label text-[10px] font-bold tracking-widest uppercase">
+            <span className="inline-flex w-fit px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label text-[11px] font-bold tracking-widest uppercase">
               Order ID: #{order.id.slice(-6).toUpperCase()}
             </span>
             <h2 className="font-headline text-2xl font-bold text-on-surface leading-tight mt-2">{order.shopName}</h2>
@@ -140,7 +140,7 @@ export default function PublicOrderStatusPage() {
                     </h3>
                     <p className="text-sm text-on-surface-variant">{step.labelHi}</p>
                     {isActive && (
-                      <span className="mt-2 text-[10px] font-bold text-secondary uppercase tracking-tighter">
+                      <span className="mt-2 text-[11px] font-bold text-secondary uppercase tracking-tighter">
                         Current Status
                       </span>
                     )}

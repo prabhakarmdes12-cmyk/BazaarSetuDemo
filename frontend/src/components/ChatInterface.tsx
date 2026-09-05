@@ -294,7 +294,7 @@ export default function ChatInterface({
           <div key={gi}>
             {/* Time separator */}
             <div className="text-center py-2">
-              <span className="text-[10px] text-on-surface-variant bg-surface-container-high px-3 py-1 rounded-full">{group.time}</span>
+              <span className="text-[11px] text-on-surface-variant bg-surface-container-high px-3 py-1 rounded-full">{group.time}</span>
             </div>
 
             {group.messages.map((msg) => {
@@ -341,11 +341,11 @@ export default function ChatInterface({
                       <p className="text-sm whitespace-pre-wrap break-words">{msg.content}</p>
                     ))}
                     <div className="flex items-center justify-end gap-1 mt-1">
-                      <p className="text-[10px] text-on-surface-variant">
+                      <p className="text-[11px] text-on-surface-variant">
                         {new Date(msg.createdAt).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}
                       </p>
                       {showReadStatus && (
-                        <span className={`text-[10px] ${msg.isRead ? 'text-primary' : 'text-on-surface-variant'}`}>
+                        <span className={`text-[11px] ${msg.isRead ? 'text-primary' : 'text-on-surface-variant'}`}>
                           {msg.isRead ? '✓✓' : '✓'}
                         </span>
                       )}

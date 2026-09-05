@@ -60,11 +60,11 @@ export default function BighiProductCard({ product, quantity = 0, onAdd, onInc, 
           className="w-full aspect-square"
         />
         {off > 0 && (
-          <span className="absolute top-1.5 left-1.5 z-10 bg-warning text-[#1C1503] text-[9px] font-black tracking-wide px-1.5 py-0.5 rounded-md shadow-md">
+          <span className="absolute top-1.5 left-1.5 z-10 bg-warning text-[#1C1503] text-[11px] font-black tracking-wide px-1.5 py-0.5 rounded-md shadow-md">
             {off}% OFF
           </span>
         )}
-        <span className="absolute top-1.5 right-1.5 z-10 bg-black/70 backdrop-blur-md text-emerald-300 border border-emerald-500/20 text-[9px] font-extrabold px-1.5 py-0.5 rounded-md flex items-center gap-0.5">
+        <span className="absolute top-1.5 right-1.5 z-10 bg-black/70 backdrop-blur-md text-emerald-300 border border-emerald-500/20 text-[11px] font-extrabold px-1.5 py-0.5 rounded-md flex items-center gap-0.5">
           <span className="material-symbols-outlined text-[11px] leading-none" style={{ fontVariationSettings: "'FILL' 1" }}>
             bolt
           </span>
@@ -72,7 +72,7 @@ export default function BighiProductCard({ product, quantity = 0, onAdd, onInc, 
         </span>
       </div>
 
-      <p className="text-[10px] font-semibold text-primary uppercase tracking-wide truncate font-headline">
+      <p className="text-[11px] font-semibold text-primary uppercase tracking-wide truncate font-headline">
         {product.category || 'Grocery'}
       </p>
       <h3 className="font-bold text-on-surface text-[13px] leading-snug line-clamp-2 min-h-[2.1rem] font-headline">
@@ -86,7 +86,7 @@ export default function BighiProductCard({ product, quantity = 0, onAdd, onInc, 
             ₹{product.price}
           </span>
           {mrp && mrp > product.price && (
-            <span className="text-[10px] text-on-surface-variant/60 line-through tabular-nums">
+            <span className="text-[11px] text-on-surface-variant/60 line-through tabular-nums">
               ₹{mrp}
             </span>
           )}

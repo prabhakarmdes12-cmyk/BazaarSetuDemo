@@ -46,7 +46,7 @@ export default function VendorStatsPage() {
             </button>
             <div>
               <h1 className="font-headline font-bold text-2xl tracking-tight text-primary dark:text-primary italic">Chiti Bazaar</h1>
-              <p className="text-[10px] font-headline font-bold tracking-widest text-on-surface-variant italic">Apni local dukaan, ab online</p>
+              <p className="text-[11px] font-headline font-bold tracking-widest text-on-surface-variant italic">Apni local dukaan, ab online</p>
             </div>
           </div>
           <button className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary-container transition-colors active:scale-95">
@@ -138,13 +138,13 @@ export default function VendorStatsPage() {
                 <Icon name="pending_actions" className="text-error mb-4" />
                 <p className="text-xs font-bold text-on-error-container uppercase mb-1">Pending Udhaar</p>
                 <p className="text-2xl font-headline font-black text-on-error-container">₹{(udhaar?.outstanding ?? 0).toLocaleString('en-IN')}</p>
-                <p className="text-[10px] text-error mt-2 font-medium">{udhaar?.overdueCount ?? 0} customers overdue</p>
+                <p className="text-[11px] text-error mt-2 font-medium">{udhaar?.overdueCount ?? 0} customers overdue</p>
               </div>
               <div className="bg-secondary-container/20 p-6 rounded-2xl border border-secondary/5">
                 <Icon name="check_circle" className="text-secondary mb-4" filled />
                 <p className="text-xs font-bold text-on-secondary-container uppercase mb-1">Recovered (Total)</p>
                 <p className="text-2xl font-headline font-black text-on-secondary-container">₹{(udhaar?.totalPaid ?? 0).toLocaleString('en-IN')}</p>
-                <p className="text-[10px] text-secondary mt-2 font-medium">{udhaar?.activeCustomerCount ?? 0} active customers</p>
+                <p className="text-[11px] text-secondary mt-2 font-medium">{udhaar?.activeCustomerCount ?? 0} active customers</p>
               </div>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function VendorStatsPage() {
                 <div className="relative mb-4 rounded-xl overflow-hidden aspect-square bg-surface-container">
                   <Icon name="grocery" size="xl" className="absolute inset-0 m-auto text-on-surface-variant/30" />
                   {index === 0 && (
-                    <div className="absolute top-2 left-2 bg-primary-dark text-white px-2 py-1 rounded-lg text-[10px] font-black uppercase">
+                    <div className="absolute top-2 left-2 bg-primary-dark text-white px-2 py-1 rounded-lg text-[11px] font-black uppercase">
                       #1 Best Seller
                     </div>
                   )}

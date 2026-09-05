@@ -697,9 +697,15 @@ h1, h2, h3, h4, h5, h6, .font-headline {
 
   .animate-pulse,
   .animate-spin,
+  .animate-spin-slow,
   .animate-bounce,
   .animate-slide-up,
+  .animate-slide-down,
   .animate-fade-in,
+  .animate-pulse-ring,
+  .animate-pulse-ring-slow,
+  .animate-leaf-sway,
+  .animate-float,
   .shimmer {
     animation: none !important;
   }

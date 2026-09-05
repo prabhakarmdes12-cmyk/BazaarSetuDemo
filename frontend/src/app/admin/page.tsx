@@ -75,7 +75,7 @@ function AdminPanel() {
           <Icon name="grid_view" className="text-primary text-2xl" />
           <div className="flex flex-col">
             <h1 className="font-headline font-bold tracking-tight text-xl text-on-surface">Admin Dashboard</h1>
-            <span className="text-[10px] font-medium tracking-[0.1em] text-primary uppercase italic">Apni local dukaan, ab online</span>
+            <span className="text-[11px] font-medium tracking-[0.1em] text-primary uppercase italic">Apni local dukaan, ab online</span>
           </div>
         </div>
         <div className="flex items-center gap-4">
@@ -191,7 +191,7 @@ function AdminPanel() {
                               }`}
                               style={{ height: `${heights[i]}%` }}
                             />
-                            <span className={`text-[10px] font-bold mt-4 uppercase ${isToday ? 'text-primary' : 'text-on-surface-variant'}`}>{day}</span>
+                            <span className={`text-[11px] font-bold mt-4 uppercase ${isToday ? 'text-primary' : 'text-on-surface-variant'}`}>{day}</span>
                           </div>
                         );
                       })}
@@ -256,7 +256,7 @@ function AdminPanel() {
                         <span className="text-xs text-on-surface-variant flex items-center gap-0.5">
                           <Icon name="star" size="sm" filled className="text-primary" /> {shop.rating?.toFixed(1) || '4.5'}
                         </span>
-                        <span className={`text-[10px] px-2 py-0.5 rounded-full ${shop.isActive ? 'bg-secondary-container/30 text-secondary' : 'bg-surface-container-highest text-on-surface-variant'}`}>
+                        <span className={`text-[11px] px-2 py-0.5 rounded-full ${shop.isActive ? 'bg-secondary-container/30 text-secondary' : 'bg-surface-container-highest text-on-surface-variant'}`}>
                           {shop.isActive ? 'Active' : 'Disabled'}
                         </span>
                       </div>
@@ -285,7 +285,7 @@ function AdminPanel() {
                           {new Date(order.createdAt).toLocaleDateString('en-IN')} {new Date(order.createdAt).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}
                         </p>
                       </div>
-                      <span className={`text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider ${
+                      <span className={`text-[11px] font-bold px-2 py-1 rounded-full uppercase tracking-wider ${
                         order.status === 'completed' ? 'bg-secondary-container/30 text-secondary' :
                         order.status === 'pending' ? 'bg-primary-fixed text-on-primary-fixed-variant' :
                         order.status === 'rejected' ? 'bg-error-container text-on-error-container' :

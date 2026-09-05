@@ -48,19 +48,19 @@ export default function ShopCard({
 
         <div className="absolute top-3 left-3 flex gap-2">
           {isOpen ? (
-            <span className="bg-primary/90 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md flex items-center gap-1.5">
+            <span className="bg-primary/90 text-white text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-md flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               Open
             </span>
           ) : (
-            <span className="bg-stone-500/90 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md">
+            <span className="bg-stone-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-md">
               {openStatusText || 'Band Hai'}
             </span>
           )}
         </div>
 
         <div className="absolute top-3 right-3">
-          <span className="bg-black/50 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+          <span className="bg-black/50 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
             <Icon name="bolt" size="sm" filled className="text-primary" />
             {eta} mins
           </span>
@@ -68,7 +68,7 @@ export default function ShopCard({
 
         {distance != null && (
           <div className="absolute bottom-3 left-3">
-            <span className="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1">
+            <span className="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[11px] font-bold px-2 py-1 rounded-md flex items-center gap-1">
               <Icon name="distance" size="sm" className="text-on-surface-variant" />
               {distance} km
             </span>

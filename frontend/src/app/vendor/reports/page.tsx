@@ -66,10 +66,10 @@ export default function ReportsPage() {
               <h3 className="font-headline font-bold text-lg text-on-surface mb-1">{report.label}</h3>
               <p className="text-sm text-on-surface-variant">{report.description}</p>
               <div className="mt-4 flex gap-2">
-                <span className="px-3 py-1 bg-surface-container-highest rounded-lg text-[10px] font-bold text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+                <span className="px-3 py-1 bg-surface-container-highest rounded-lg text-[11px] font-bold text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
                   <Icon name="picture_as_pdf" size="sm" /> PDF
                 </span>
-                <span className="px-3 py-1 bg-surface-container-highest rounded-lg text-[10px] font-bold text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+                <span className="px-3 py-1 bg-surface-container-highest rounded-lg text-[11px] font-bold text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
                   <Icon name="table_chart" size="sm" /> CSV
                 </span>
               </div>

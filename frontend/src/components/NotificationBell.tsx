@@ -41,7 +41,7 @@ export default function NotificationBell({ token }: NotificationBellProps) {
     >
       <Icon name="notifications" className="text-on-surface" />
       {count > 0 && (
-        <span className="absolute -top-0.5 -right-0.5 bg-error-container text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+        <span className="absolute -top-0.5 -right-0.5 bg-error-container text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
           {count > 9 ? '9+' : count}
         </span>
       )}

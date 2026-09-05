@@ -199,7 +199,7 @@ export default function VendorDashboard() {
                 <div className="flex items-center gap-2">
                   <span className="text-3xl font-headline font-bold">{summary?.today?.orders ?? 0}</span>
                 </div>
-                <p className="text-[10px] text-on-surface-variant mt-1">
+                <p className="text-[11px] text-on-surface-variant mt-1">
                   Pending: {summary?.today?.pending ?? 0} &bull; Completed: {summary?.today?.completed ?? 0}
                 </p>
               </div>

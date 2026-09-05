@@ -242,16 +242,16 @@ function RegularShopPage({ shopId }: { shopId: string }) {
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="flex items-center gap-1">
                   <Icon name="verified" size="sm" filled className="text-secondary" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-secondary">Trusted Dukaan</span>
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-secondary">Trusted Dukaan</span>
                 </span>
                 {shop && (
                   <>
-                    <span className="flex items-center gap-0.5 text-[10px] font-bold text-primary">
+                    <span className="flex items-center gap-0.5 text-[11px] font-bold text-primary">
                       <Icon name="star" size="sm" filled />
                       {shop.rating.toFixed(1)}
                     </span>
                     {shop.distance != null && (
-                      <span className="text-[10px] font-bold text-on-surface-variant">
+                      <span className="text-[11px] font-bold text-on-surface-variant">
                         {shop.distance} km
                       </span>
                     )}
@@ -360,7 +360,7 @@ function RegularShopPage({ shopId }: { shopId: string }) {
                         <p className="text-on-surface-variant text-xs mt-1">{product.unit}</p>
                       </div>
                       <div className="flex flex-col items-end">
-                        <span className="text-[9px] font-bold tracking-widest text-on-surface-variant uppercase bg-surface-container px-1.5 py-0.5 rounded">MRP</span>
+                        <span className="text-[11px] font-bold tracking-widest text-on-surface-variant uppercase bg-surface-container px-1.5 py-0.5 rounded">MRP</span>
                         <span className="font-headline font-black text-lg text-primary">₹{product.price}</span>
                       </div>
                     </div>

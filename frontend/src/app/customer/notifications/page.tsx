@@ -81,7 +81,7 @@ export default function NotificationsPage() {
                     {n.title}
                   </p>
                   <p className="text-xs text-on-surface-variant mt-0.5">{n.body}</p>
-                  <p className="text-[10px] text-on-surface-variant mt-1">
+                  <p className="text-[11px] text-on-surface-variant mt-1">
                     {new Date(n.createdAt).toLocaleString('en-IN')}
                   </p>
                 </div>

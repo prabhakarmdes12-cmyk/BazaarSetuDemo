@@ -198,7 +198,7 @@ export default function ShopLedgerPage() {
           </button>
           <div className="flex flex-col">
             <h1 className="font-headline text-lg font-bold tracking-tight text-primary dark:text-primary">{ledger.customerName}</h1>
-            <p className="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest italic">Detailed Khata</p>
+            <p className="text-[11px] text-on-surface-variant font-medium uppercase tracking-widest italic">Detailed Khata</p>
           </div>
         </div>
       </header>
@@ -220,7 +220,7 @@ export default function ShopLedgerPage() {
             </div>
             <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-end relative z-10">
               <div>
-                <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-1">Aakhri Payment</p>
+                <p className="text-white/60 text-[11px] font-bold uppercase tracking-widest mb-1">Aakhri Payment</p>
                 {lastPayment ? (
                   <p className="text-white font-headline font-medium">
                     ₹{lastPayment.amount} <span className="text-white/60 text-xs ml-1">&bull; {formatDate(lastPayment.createdAt)}</span>
@@ -236,14 +236,14 @@ export default function ShopLedgerPage() {
 
         <section className="mb-8 grid grid-cols-2 gap-4">
           <div className="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Credit Limit</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Credit Limit</p>
             <p className="text-2xl font-extrabold text-on-surface">{ledger.creditLimit > 0 ? `₹${ledger.creditLimit}` : 'Set karein'}</p>
             {ledger.creditLimit > 0 && ledger.balance > ledger.creditLimit && (
               <p className="text-xs text-error mt-1">Limit cross ho gayi!</p>
             )}
           </div>
           <div className="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Purana Udhaar</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Purana Udhaar</p>
             <p className="text-2xl font-extrabold text-on-surface">{Math.round(ledger.oldestCreditAgeDays)} din</p>
             <p className="text-xs text-on-surface-variant mt-1">Sabse purana khata</p>
           </div>

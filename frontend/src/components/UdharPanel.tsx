@@ -49,7 +49,7 @@ export default function UdharPanel({ ledger, isVendor = false }: UdharPanelProps
                 <p className={`text-sm font-bold ${entry.type === 'CREDIT' ? 'text-error' : 'text-success'}`}>
                   {entry.type === 'CREDIT' ? '+' : '-'}₹{entry.amount}
                 </p>
-                <p className="text-[10px] text-on-surface-variant">
+                <p className="text-[11px] text-on-surface-variant">
                   {new Date(entry.createdAt).toLocaleDateString('en-IN')}
                 </p>
               </div>

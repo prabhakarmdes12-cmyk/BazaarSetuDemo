@@ -53,7 +53,7 @@ export default function OrderConfirmPage() {
           </button>
           <div className="flex flex-col">
             <span className="font-headline font-extrabold text-primary italic leading-none">Chiti Bazaar</span>
-            <span className="font-inter text-[10px] font-medium uppercase tracking-wider text-on-surface-variant italic mt-0.5">
+            <span className="font-inter text-[11px] font-medium uppercase tracking-wider text-on-surface-variant italic mt-0.5">
               Apni local dukaan, ab online
             </span>
           </div>
@@ -108,7 +108,7 @@ export default function OrderConfirmPage() {
               <Icon name="storefront" size="xl" className="text-on-surface-variant" />
             </div>
             <div className="flex-grow">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-secondary mb-1 block">Preparing at</span>
+              <span className="text-[11px] font-bold uppercase tracking-widest text-secondary mb-1 block">Preparing at</span>
               <h3 className="font-headline font-bold text-on-surface leading-tight">
                 {order?.shopName || 'Local Shop'}
               </h3>
