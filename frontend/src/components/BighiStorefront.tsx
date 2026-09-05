@@ -336,6 +336,7 @@ export default function BighiStorefront() {
                     key={c.id}
                     data-rail-id={c.id}
                     onClick={() => jumpToCategory(c.id)}
+                    data-aside-cat={c.id}
                     className={`shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold whitespace-nowrap transition border ${
                       activeCat === c.id
                         ? 'leaf-gradient text-white border-transparent shadow-brand-glow'
@@ -351,11 +352,12 @@ export default function BighiStorefront() {
 
             <div className="flex gap-5">
             {/* Left rail (desktop) */}
-            <aside className="hidden lg:block w-52 shrink-0">
-              <div className="sticky top-[150px] space-y-1">
+            <aside className="hidden lg:block w-56 shrink-0">
+              <div ref={asideRailRef} className="sticky top-[140px] max-h-[calc(100vh-160px)] overflow-y-auto overscroll-contain pr-1.5 space-y-1">
                 {BIGHI_CATEGORIES.map((c) => (
                   <button
                     key={c.id}
+                    data-aside-cat={c.id}
                     onClick={() => jumpToCategory(c.id)}
                     className={`w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-[13px] font-semibold transition-all border ${
                       activeCat === c.id
