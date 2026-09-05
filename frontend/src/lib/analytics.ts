@@ -12,6 +12,13 @@ type AnalyticsEvent =
   | { type: 'referral_shared'; code: string }
   | { type: 'udhaar_remind'; customerId: string }
   | { type: 'udhaar_paylink'; customerId: string }
+  // Paaska Sahayak — voice parchi funnel
+  | { type: 'voice_parchi_open'; shopId: string }
+  | { type: 'voice_parchi_add_to_cart'; shopId: string; itemCount: number }
+  | { type: 'voice_parchi_instant_checkout'; shopId: string; itemCount: number }
+  // Chiti Connect — masked dukaan hotline
+  | { type: 'chiti_connect_call_start'; shopId: string; surface: string }
+  | { type: 'chiti_connect_call_end'; shopId: string; durationSeconds: number; status: string }
   | { type: 'error'; message: string; componentStack?: string };
 
 function getClientId(): string {

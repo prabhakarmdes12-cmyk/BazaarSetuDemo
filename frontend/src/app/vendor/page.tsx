@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import AppShell from '@/components/AppShell';
 import { Icon, Badge, Button } from '@/components/ui';
@@ -9,6 +9,9 @@ import { useAuth } from '@/hooks/useAuth';
 import { useSocket } from '@/hooks/useSocket';
 import { Order, OrderStatus, VendorSummary } from '@/types';
 import { api } from '@/lib/api';
+import { announceNewOrder, primeAudioDispatch, stopAudioDispatch } from '@/lib/audioDispatch';
+
+const AUDIO_PREF_KEY = 'chitibazaar_vendor_audio_dispatch';
 
 export default function VendorDashboard() {
   const router = useRouter();
@@ -18,6 +21,9 @@ export default function VendorDashboard() {
   const [summary, setSummary] = useState<VendorSummary | null>(null);
   const [loading, setLoading] = useState(true);
   const [newOrderAlert, setNewOrderAlert] = useState(false);
+  const [audioDispatchOn, setAudioDispatchOn] = useState(true);
+  const audioDispatchOnRef = useRef(true);
+  const announcedOrders = useRef<Set<string>>(new Set());
 
   const loadData = useCallback(async () => {
     try {
@@ -36,16 +42,85 @@ export default function VendorDashboard() {
     if (token) loadData();
   }, [token, authLoading, loadData]);
 
+  // Audio dispatch preference — a shopkeeper in a quiet market may want it off.
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(AUDIO_PREF_KEY);
+      const on = stored === null ? true : stored === 'true';
+      setAudioDispatchOn(on);
+      audioDispatchOnRef.current = on;
+    } catch {
+      /* private mode — default to on */
+    }
+  }, []);
+
+  const toggleAudioDispatch = useCallback(() => {
+    setAudioDispatchOn((prev) => {
+      const next = !prev;
+      audioDispatchOnRef.current = next;
+      try { window.localStorage.setItem(AUDIO_PREF_KEY, String(next)); } catch { /* ignore */ }
+      if (next) primeAudioDispatch(); else stopAudioDispatch();
+      return next;
+    });
+  }, []);
+
+  // Browsers only allow audio after a gesture; arm the context on first touch.
+  useEffect(() => {
+    const arm = () => primeAudioDispatch();
+    window.addEventListener('pointerdown', arm, { once: true });
+    window.addEventListener('keydown', arm, { once: true });
+    return () => {
+      window.removeEventListener('pointerdown', arm);
+      window.removeEventListener('keydown', arm);
+    };
+  }, []);
+
+  useEffect(() => () => stopAudioDispatch(), []);
+
+  /**
+   * The merchant is rarely watching the screen — he is at the weighing scale
+   * or on the scooter. A new order therefore announces itself out loud: a
+   * high-urgency earcon that carries over shop noise, then a Hinglish summary
+   * of who ordered, how many items and how much.
+   */
+  const announceOrder = useCallback(async (orderId?: string) => {
+    if (!audioDispatchOnRef.current) return;
+    if (orderId && announcedOrders.current.has(orderId)) return;
+    if (orderId) announcedOrders.current.add(orderId);
+
+    let detail: Order | null = null;
+    if (orderId) {
+      try {
+        const res = await api.get<{ success: boolean; data: Order }>(`/api/orders/${orderId}`, token || undefined);
+        if (res.success) detail = res.data;
+      } catch (err) {
+        console.error('Could not load order for audio dispatch:', err);
+      }
+    }
+
+    const itemCount = detail?.items?.reduce((sum, item) => sum + (item.quantity || 0), 0) || detail?.items?.length || 1;
+    // Address line one is close enough to a locality for a spoken cue.
+    const locality = detail?.deliveryAddress?.split(',')[0]?.trim() || undefined;
+
+    await announceNewOrder({
+      customerName: detail?.customerName || 'Ek grahak',
+      itemCount,
+      totalAmount: detail?.totalAmount ?? 0,
+      locality,
+    });
+  }, [token]);
+
   useEffect(() => {
     const cleanup = onNotification((data) => {
       if (data.type === 'NEW_ORDER') {
         setNewOrderAlert(true);
         loadData();
+        void announceOrder(data.orderId);
         setTimeout(() => setNewOrderAlert(false), 5000);
       }
     });
     return cleanup;
-  }, [onNotification, loadData]);
+  }, [onNotification, loadData, announceOrder]);
 
   const handleStatusUpdate = async (orderId: string, status: OrderStatus) => {
     try {
@@ -93,12 +168,35 @@ export default function VendorDashboard() {
       {newOrderAlert && (
         <div className="bg-primary text-white rounded-xl p-4 flex items-center gap-3 animate-pulse mb-6">
           <Icon name="notifications" />
-          <div>
+          <div className="flex-1">
             <p className="font-bold">Naya Order Aaya!</p>
             <p className="text-sm opacity-90">Jaldi dekho aur accept karo</p>
           </div>
+          {audioDispatchOn && (
+            <span className="hidden sm:flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/15 rounded-full px-3 py-1.5">
+              <Icon name="campaign" size="sm" filled />
+              Bol ke bataya
+            </span>
+          )}
         </div>
       )}
+
+      {/* Audio dispatch toggle — hands-free alerts for a busy counter. */}
+      <div className="flex justify-end mb-4">
+        <button
+          onClick={toggleAudioDispatch}
+          aria-pressed={audioDispatchOn}
+          aria-label="Toggle spoken order alerts"
+          className={`flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider border transition active:scale-95 ${
+            audioDispatchOn
+              ? 'leaf-gradient text-white border-transparent shadow-brand-glow'
+              : 'bg-surface-container-high text-on-surface-variant border-outline-variant/30'
+          }`}
+        >
+          <Icon name={audioDispatchOn ? 'volume_up' : 'volume_off'} size="sm" filled={audioDispatchOn} />
+          {audioDispatchOn ? 'Awaaz alerts on' : 'Awaaz alerts off'}
+        </button>
+      </div>
 
       {/* Hero Greeting */}
       <section className="mb-10">

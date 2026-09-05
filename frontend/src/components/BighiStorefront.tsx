@@ -9,6 +9,10 @@ import BighiProductCard, { CatalogProduct } from './BighiProductCard';
 import PromoCarousels from './PromoCarousels';
 import FloatingCartDock from './FloatingCartDock';
 import ProductDetailSheet from './ProductDetailSheet';
+import DukaanHotlineModal from './DukaanHotlineModal';
+import { useAuth } from '@/hooks/useAuth';
+import { useChitiConnectCall } from '@/hooks/useChitiConnectCall';
+import { api } from '@/lib/api';
 import {
   BIGHI_STORE,
   BIGHI_CATEGORIES,
@@ -45,6 +49,7 @@ function toGuestCartInput(p: CatalogProduct) {
 
 export default function BighiStorefront() {
   const router = useRouter();
+  const { token, user } = useAuth();
   const [activeCat, setActiveCat] = useState(BIGHI_CATEGORIES[0].id);
   const [search, setSearch] = useState('');
   const [quantities, setQuantities] = useState<Record<string, number>>({});
@@ -82,6 +87,60 @@ export default function BighiStorefront() {
     if (toastTimer.current) clearTimeout(toastTimer.current);
     toastTimer.current = setTimeout(() => setToast(null), 1600);
   }, []);
+
+  // ---- Chiti Connect dukaan hotline -------------------------------------
+  const [hotlineOpen, setHotlineOpen] = useState(false);
+  const [hotlineChatId, setHotlineChatId] = useState<string | null>(null);
+  const chitiCall = useChitiConnectCall({ token, chatId: hotlineChatId });
+
+  const callDukaan = useCallback(async () => {
+    if (!token) {
+      showToast('Dukaan ko call karne ke liye login karein.');
+      router.push('/login');
+      return;
+    }
+
+    let chatId = hotlineChatId;
+    if (!chatId) {
+      try {
+        const res = await api.post<{ success: boolean; data: { chatId: string } }>(
+          '/api/chats',
+          { shopId: SHOP_ID },
+          token,
+        );
+        if (res.success) {
+          chatId = res.data.chatId;
+          setHotlineChatId(chatId);
+        }
+      } catch (err) {
+        console.error('Failed to open Chiti Connect conversation:', err);
+        showToast('Call abhi connect nahi ho paayi. Kripya dobara koshish karein.');
+        return;
+      }
+    }
+
+    setHotlineOpen(true);
+    track({ type: 'chiti_connect_call_start', shopId: SHOP_ID, surface: 'storefront_hero' });
+    void chitiCall.startCall();
+  }, [chitiCall, hotlineChatId, router, showToast, token]);
+
+  const hangUpDukaan = useCallback(() => {
+    track({
+      type: 'chiti_connect_call_end',
+      shopId: SHOP_ID,
+      durationSeconds: chitiCall.liveAt ? Math.round((Date.now() - chitiCall.liveAt.getTime()) / 1000) : 0,
+      status: chitiCall.status,
+    });
+    void chitiCall.endCall(chitiCall.status === 'LIVE' ? 'ENDED' : 'NO_ANSWER');
+  }, [chitiCall]);
+
+  // The hook needs the chat id at call time; start once it lands.
+  useEffect(() => {
+    if (hotlineOpen && hotlineChatId && chitiCall.status === 'IDLE') {
+      void chitiCall.startCall();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hotlineChatId, hotlineOpen]);
 
   // ---- cart actions ----
   const add = useCallback(
@@ -218,9 +277,9 @@ export default function BighiStorefront() {
               <span className="hidden sm:inline">Chat</span>
             </button>
             <button
-              onClick={() => showToast('Calling Bighi Brothers Mart…')}
+              onClick={callDukaan}
               className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold leaf-gradient text-white shadow-brand-glow active:scale-95 transition"
-              aria-label="Call shop"
+              aria-label="Call Dukaan via Chiti Connect"
             >
               <Icon name="call" size="sm" />
               <span className="hidden sm:inline">Call</span>
@@ -281,6 +340,25 @@ export default function BighiStorefront() {
                   {BIGHI_STORE.verifiedLabel}
                 </span>
               </div>
+
+              {/*
+                The hotline is the moat, so it gets hero real estate — not a
+                buried support link. Dark stores hide behind ticket bots; here
+                the shopper is one tap from the person packing their order.
+              */}
+              <button
+                onClick={callDukaan}
+                aria-label="Call Dukaan via Chiti Connect"
+                className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-white/95 hover:bg-white text-emerald-950 font-headline font-black uppercase tracking-wider text-xs px-5 py-3 shadow-editorial-lg active:scale-95 transition"
+              >
+                <span className="flex items-center justify-center w-6 h-6 rounded-full leaf-gradient text-white">
+                  <Icon name="call" size="sm" filled />
+                </span>
+                📞 Call Dukaan
+                <span className="hidden sm:inline text-[10px] font-bold normal-case tracking-normal text-emerald-800/70">
+                  · number private rehta hai
+                </span>
+              </button>
             </div>
           </section>
         )}
@@ -470,6 +548,24 @@ export default function BighiStorefront() {
         onAdd={add}
         onInc={inc}
         onDec={dec}
+      />
+
+      <DukaanHotlineModal
+        open={hotlineOpen}
+        onClose={() => setHotlineOpen(false)}
+        status={chitiCall.status}
+        callerName={user?.name || 'Aap'}
+        shopName={SHOP_NAME}
+        shopLocality="Ashok Nagar, Ranchi"
+        liveAt={chitiCall.liveAt}
+        isMuted={chitiCall.isMuted}
+        isSpeakerOn={chitiCall.isSpeakerOn}
+        transport={chitiCall.transport}
+        localStream={chitiCall.localStream}
+        remoteStream={chitiCall.remoteStream}
+        onToggleMute={chitiCall.toggleMute}
+        onToggleSpeaker={chitiCall.toggleSpeaker}
+        onHangUp={hangUpDukaan}
       />
     </div>
   );
