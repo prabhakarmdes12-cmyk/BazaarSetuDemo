@@ -359,6 +359,26 @@ const SKU_ASSET_ROWS = [
   ['biscuits', "Britannia Marie Gold Marie Gold Biscuits", "250 g", 'biscuits/britannia-marie-gold-300g.jpg'],
   ['biscuits', "Parle Marie Gold Biscuits", "250 g", 'biscuits/britannia-marie-gold-300g.jpg'],
   ['biscuits', "Britannia Good Day Cashew Cookies", "100 g", 'biscuits/britannia-good-day-cashew-120g.jpg'],
+  // Batch 4 group B/C: premium biscuits, tea & coffee, salt
+  ['biscuits', "Sunfeast Dark Fantasy Choco Fills Cookies", "150 g", 'biscuits/dark-fantasy-choco-fills-150g.jpg'],
+  ['biscuits', "Cadbury Bournvita Biscuits Choco Fills Cookies", "150 g", 'biscuits/dark-fantasy-choco-fills-150g.jpg'],
+  ['biscuits', "Parle Monaco Salted Biscuits", "200 g", 'biscuits/monaco-salted-biscuit-200g.jpg'],
+  ['tea', "Tata Agni Premium Leaf Tea", "500 g", 'tea/tata-tea-premium-500g.jpg'],
+  ['tea', "Tetley Premium Leaf Tea", "500 g", 'tea/tata-tea-premium-500g.jpg'],
+  ['tea', "Red Label Premium Leaf Tea", "500 g", 'tea/red-label-tea-500g.jpg'],
+  ['tea', "Brooke Bond Red Label Strong CTC Tea", "500 g", 'tea/red-label-tea-500g.jpg'],
+  ['tea', "Tata Tea Taaza Strong CTC Tea", "250 g", 'tea/tata-tea-taaza-250g.jpg'],
+  ['tea', "Society Strong CTC Tea", "250 g", 'tea/tata-tea-taaza-250g.jpg'],
+  ['tea', "Wagh Bakri Strong CTC Tea", "250 g", 'tea/tata-tea-taaza-250g.jpg'],
+  ['tea', "Taj Mahal Premium Leaf Tea", "250 g", 'tea/taj-mahal-tea-250g.jpg'],
+  ['tea', "Tata Tea Gold Premium Leaf Tea", "250 g", 'tea/taj-mahal-tea-250g.jpg'],
+  ['tea', "Nescafe Classic Instant Coffee Classic", "100 g jar", 'tea/nescafe-classic-coffee-50g.jpg'],
+  ['tea', "Continental Premium Instant Coffee", "50 g", 'tea/nescafe-classic-coffee-50g.jpg'],
+  ['tea', "Bru Instant Premium Instant Coffee", "50 g", 'tea/bru-instant-coffee-50g.jpg'],
+  ['tea', "Bru Gold Premium Instant Coffee", "50 g", 'tea/bru-instant-coffee-50g.jpg'],
+  ['staples', "Tata Salt Iodised Salt", "250 g", 'staples/tata-salt-1kg.jpg'],
+  ['staples', "Aashirvaad Salt Iodised Salt", "250 g", 'staples/tata-salt-1kg.jpg'],
+  ['staples', "Tata Salt Lite Low Sodium Salt", "1 kg pack", 'staples/tata-salt-lite-1kg.jpg'],
 ];
 
 const EXPECTED_PX = 600;
