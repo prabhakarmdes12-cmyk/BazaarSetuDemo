@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 96,
-  "totalSkus": 191,
+  "totalAssets": 106,
+  "totalSkus": 210,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -2110,6 +2110,215 @@
       "width": 600,
       "height": 600,
       "bytes": 54866,
+      "verified": true
+    },
+    "bb-00626": {
+      "skuId": "bb-00626",
+      "name": "Cadbury Dairy Milk Silk Chocolate Bar",
+      "unit": "60 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/milk-chocolate-bar-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58236,
+      "verified": true
+    },
+    "bb-00610": {
+      "skuId": "bb-00610",
+      "name": "Amul Milk Chocolate Bar",
+      "unit": "40 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/milk-chocolate-bar-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58236,
+      "verified": true
+    },
+    "bb-00656": {
+      "skuId": "bb-00656",
+      "name": "KitKat Crispy Wafer Chocolate",
+      "unit": "4-pack 8 fingers",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/wafer-finger-bar-4-finger.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64312,
+      "verified": true
+    },
+    "bb-00601": {
+      "skuId": "bb-00601",
+      "name": "Alpenliebe Gold Toffee Jar",
+      "unit": "jar ~100 pcs",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/eclairs-toffee-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 70863,
+      "verified": true
+    },
+    "bb-00664": {
+      "skuId": "bb-00664",
+      "name": "Melody Toffee Jar",
+      "unit": "jar ~100 pcs",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/eclairs-toffee-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 70863,
+      "verified": true
+    },
+    "bb-00640": {
+      "skuId": "bb-00640",
+      "name": "Haldiram’s Gulab Jamun Tin",
+      "unit": "1 kg tin",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/gulab-jamun-tin-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60190,
+      "verified": true
+    },
+    "bb-00613": {
+      "skuId": "bb-00613",
+      "name": "Bikaji Gulab Jamun Tin",
+      "unit": "1 kg tin",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/gulab-jamun-tin-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60190,
+      "verified": true
+    },
+    "bb-00644": {
+      "skuId": "bb-00644",
+      "name": "Haldiram’s Rasgulla Tin",
+      "unit": "1 kg tin",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/rasgulla-tin-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46870,
+      "verified": true
+    },
+    "bb-00615": {
+      "skuId": "bb-00615",
+      "name": "Bikaji Rasgulla Tin",
+      "unit": "1 kg tin",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/rasgulla-tin-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46870,
+      "verified": true
+    },
+    "bb-00647": {
+      "skuId": "bb-00647",
+      "name": "Haldiram’s Soan Papdi",
+      "unit": "250 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/soan-papdi-box-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 73566,
+      "verified": true
+    },
+    "bb-00616": {
+      "skuId": "bb-00616",
+      "name": "Bikaji Soan Papdi",
+      "unit": "250 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/soan-papdi-box-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 73566,
+      "verified": true
+    },
+    "bb-00622": {
+      "skuId": "bb-00622",
+      "name": "Cadbury Bournville Dark Chocolate",
+      "unit": "55 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/dark-chocolate-slab-80g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46932,
+      "verified": true
+    },
+    "bb-00606": {
+      "skuId": "bb-00606",
+      "name": "Amul Dark Chocolate",
+      "unit": "55 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/dark-chocolate-slab-80g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46932,
+      "verified": true
+    },
+    "bb-00484": {
+      "skuId": "bb-00484",
+      "name": "Haldiram’s Peanut Chikki",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/chocolates/peanut-chikki-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 79834,
+      "verified": true
+    },
+    "bb-00496": {
+      "skuId": "bb-00496",
+      "name": "Jabsons Peanut Chikki",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/chocolates/peanut-chikki-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 79834,
+      "verified": true
+    },
+    "bb-00777": {
+      "skuId": "bb-00777",
+      "name": "Sprite Lime Soft Drink",
+      "unit": "1.25 L",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/lemon-lime-soda-1250ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 40226,
+      "verified": true
+    },
+    "bb-00684": {
+      "skuId": "bb-00684",
+      "name": "7Up Lime Soft Drink",
+      "unit": "1.25 L",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/lemon-lime-soda-1250ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 40226,
+      "verified": true
+    },
+    "bb-00718": {
+      "skuId": "bb-00718",
+      "name": "Fanta Orange Fizzy Drink",
+      "unit": "750 ml",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/orange-fizzy-750ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37891,
+      "verified": true
+    },
+    "bb-00737": {
+      "skuId": "bb-00737",
+      "name": "Mirinda Orange Fizzy Drink",
+      "unit": "750 ml",
+      "categoryId": "drinks",
+      "path": "/catalog/items/drinks/orange-fizzy-750ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37891,
       "verified": true
     }
   }

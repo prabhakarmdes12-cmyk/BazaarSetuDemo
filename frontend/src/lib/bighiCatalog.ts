@@ -26068,7 +26068,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 191 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 210 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -26262,7 +26262,26 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01688": "/catalog/items/pharma/glucose-energy-powder-500g.jpg",
   "bb-01756": "/catalog/items/pharma/cough-lozenges-20.jpg",
   "bb-01765": "/catalog/items/pharma/cough-lozenges-20.jpg",
-  "bb-01722": "/catalog/items/pharma/cough-lozenges-20.jpg"
+  "bb-01722": "/catalog/items/pharma/cough-lozenges-20.jpg",
+  "bb-00626": "/catalog/items/chocolates/milk-chocolate-bar-50g.jpg",
+  "bb-00610": "/catalog/items/chocolates/milk-chocolate-bar-50g.jpg",
+  "bb-00656": "/catalog/items/chocolates/wafer-finger-bar-4-finger.jpg",
+  "bb-00601": "/catalog/items/chocolates/eclairs-toffee-200g.jpg",
+  "bb-00664": "/catalog/items/chocolates/eclairs-toffee-200g.jpg",
+  "bb-00640": "/catalog/items/chocolates/gulab-jamun-tin-1kg.jpg",
+  "bb-00613": "/catalog/items/chocolates/gulab-jamun-tin-1kg.jpg",
+  "bb-00644": "/catalog/items/chocolates/rasgulla-tin-1kg.jpg",
+  "bb-00615": "/catalog/items/chocolates/rasgulla-tin-1kg.jpg",
+  "bb-00647": "/catalog/items/chocolates/soan-papdi-box-250g.jpg",
+  "bb-00616": "/catalog/items/chocolates/soan-papdi-box-250g.jpg",
+  "bb-00622": "/catalog/items/chocolates/dark-chocolate-slab-80g.jpg",
+  "bb-00606": "/catalog/items/chocolates/dark-chocolate-slab-80g.jpg",
+  "bb-00484": "/catalog/items/chocolates/peanut-chikki-150g.jpg",
+  "bb-00496": "/catalog/items/chocolates/peanut-chikki-150g.jpg",
+  "bb-00777": "/catalog/items/drinks/lemon-lime-soda-1250ml.jpg",
+  "bb-00684": "/catalog/items/drinks/lemon-lime-soda-1250ml.jpg",
+  "bb-00718": "/catalog/items/drinks/orange-fizzy-750ml.jpg",
+  "bb-00737": "/catalog/items/drinks/orange-fizzy-750ml.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

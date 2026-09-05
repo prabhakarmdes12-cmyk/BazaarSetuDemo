@@ -245,7 +245,29 @@ const SKU_ASSET_ROWS = [
   ['pharma', "Dabur Glucose Energy Powder", "500 g", 'pharma/glucose-energy-powder-500g.jpg'],
   ['pharma', "Strepsils Cough Lozenges", "pack of 20", 'pharma/cough-lozenges-20.jpg'],
   ['pharma', "Vicks Cough Lozenges", "pack of 20", 'pharma/cough-lozenges-20.jpg'],
-  ['pharma', "Halls Cough Lozenges", "pack of 20", 'pharma/cough-lozenges-20.jpg']
+  ['pharma', "Halls Cough Lozenges", "pack of 20", 'pharma/cough-lozenges-20.jpg'],
+  // ---- Batch 3 -------------------------------------------------------------
+  // Chocolates & sweets
+  ['chocolates', "Cadbury Dairy Milk Silk Chocolate Bar", "60 g", 'chocolates/milk-chocolate-bar-50g.jpg'],
+  ['chocolates', "Amul Milk Chocolate Bar", "40 g", 'chocolates/milk-chocolate-bar-50g.jpg'],
+  ['chocolates', "KitKat Crispy Wafer Chocolate", "4-pack 8 fingers", 'chocolates/wafer-finger-bar-4-finger.jpg'],
+  ['chocolates', "Alpenliebe Gold Toffee Jar", "jar ~100 pcs", 'chocolates/eclairs-toffee-200g.jpg'],
+  ['chocolates', "Melody Toffee Jar", "jar ~100 pcs", 'chocolates/eclairs-toffee-200g.jpg'],
+  ['chocolates', "Haldiram\u2019s Gulab Jamun Tin", "1 kg tin", 'chocolates/gulab-jamun-tin-1kg.jpg'],
+  ['chocolates', "Bikaji Gulab Jamun Tin", "1 kg tin", 'chocolates/gulab-jamun-tin-1kg.jpg'],
+  ['chocolates', "Haldiram\u2019s Rasgulla Tin", "1 kg tin", 'chocolates/rasgulla-tin-1kg.jpg'],
+  ['chocolates', "Bikaji Rasgulla Tin", "1 kg tin", 'chocolates/rasgulla-tin-1kg.jpg'],
+  ['chocolates', "Haldiram\u2019s Soan Papdi", "250 g", 'chocolates/soan-papdi-box-250g.jpg'],
+  ['chocolates', "Bikaji Soan Papdi", "250 g", 'chocolates/soan-papdi-box-250g.jpg'],
+  ['chocolates', "Cadbury Bournville Dark Chocolate", "55 g", 'chocolates/dark-chocolate-slab-80g.jpg'],
+  ['chocolates', "Amul Dark Chocolate", "55 g", 'chocolates/dark-chocolate-slab-80g.jpg'],
+  ['munchies', "Haldiram\u2019s Peanut Chikki", "200 g", 'chocolates/peanut-chikki-150g.jpg'],
+  ['munchies', "Jabsons Peanut Chikki", "200 g", 'chocolates/peanut-chikki-150g.jpg'],
+  // Cold drinks
+  ['drinks', "Sprite Lime Soft Drink", "1.25 L", 'drinks/lemon-lime-soda-1250ml.jpg'],
+  ['drinks', "7Up Lime Soft Drink", "1.25 L", 'drinks/lemon-lime-soda-1250ml.jpg'],
+  ['drinks', "Fanta Orange Fizzy Drink", "750 ml", 'drinks/orange-fizzy-750ml.jpg'],
+  ['drinks', "Mirinda Orange Fizzy Drink", "750 ml", 'drinks/orange-fizzy-750ml.jpg'],
 ];
 
 const EXPECTED_PX = 600;
