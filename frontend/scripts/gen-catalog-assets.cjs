@@ -231,6 +231,9 @@ const SKU_ASSETS = {
   'bb-01690': 'pharma/fruit-salt-sachet-pack.jpg',
   'bb-00812': 'pharma/glucose-energy-powder-500g.jpg',
   'bb-00810': 'pharma/glucose-energy-powder-500g.jpg',
+  'bb-01726': 'pharma/cough-lozenges-20.jpg',
+  'bb-01733': 'pharma/cough-lozenges-20.jpg',
+  'bb-01696': 'pharma/cough-lozenges-20.jpg',
 };
 
 const EXPECTED_PX = 600;

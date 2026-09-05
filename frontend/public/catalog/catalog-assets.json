@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 94,
-  "totalSkus": 183,
+  "totalAssets": 95,
+  "totalSkus": 186,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -2022,6 +2022,39 @@
       "width": 600,
       "height": 600,
       "bytes": 68937,
+      "verified": true
+    },
+    "bb-01726": {
+      "skuId": "bb-01726",
+      "name": "Strepsils Cough Lozenges",
+      "unit": "pack of 20",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/cough-lozenges-20.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54866,
+      "verified": true
+    },
+    "bb-01733": {
+      "skuId": "bb-01733",
+      "name": "Vicks Cough Lozenges",
+      "unit": "pack of 20",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/cough-lozenges-20.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54866,
+      "verified": true
+    },
+    "bb-01696": {
+      "skuId": "bb-01696",
+      "name": "Halls Cough Lozenges",
+      "unit": "pack of 20",
+      "categoryId": "pharma",
+      "path": "/catalog/items/pharma/cough-lozenges-20.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54866,
       "verified": true
     }
   }

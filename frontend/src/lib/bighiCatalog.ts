@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 183 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 186 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25846,7 +25846,10 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01683": "/catalog/items/pharma/fruit-salt-sachet-pack.jpg",
   "bb-01690": "/catalog/items/pharma/fruit-salt-sachet-pack.jpg",
   "bb-00812": "/catalog/items/pharma/glucose-energy-powder-500g.jpg",
-  "bb-00810": "/catalog/items/pharma/glucose-energy-powder-500g.jpg"
+  "bb-00810": "/catalog/items/pharma/glucose-energy-powder-500g.jpg",
+  "bb-01726": "/catalog/items/pharma/cough-lozenges-20.jpg",
+  "bb-01733": "/catalog/items/pharma/cough-lozenges-20.jpg",
+  "bb-01696": "/catalog/items/pharma/cough-lozenges-20.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
