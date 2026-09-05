@@ -211,6 +211,17 @@ export const updateShopSchema = z.object({
   upiId: z.string().max(100).optional(),
   lat: z.number().min(-90).max(90).optional(),
   lng: z.number().min(-180).max(180).optional(),
+  deliveryRadiusKm: z.number().min(1).max(10).multipleOf(0.5).optional(),
+  serviceablePincodes: z.string()
+    .max(200)
+    .refine(
+      (value) => value.trim() === '' || value.split(',').every((pin) => /^\d{6}$/.test(pin.trim())),
+      'PIN codes must be comma-separated 6-digit numbers',
+    )
+    .optional(),
+  minOrderAmount: z.number().min(0).max(1_000_000).optional(),
+  deliveryFee: z.number().min(0).max(1_000_000).optional(),
+  freeDeliveryAbove: z.number().min(0).max(1_000_000).optional(),
 });
 
 // === Admin ===

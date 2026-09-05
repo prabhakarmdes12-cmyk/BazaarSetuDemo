@@ -23,8 +23,13 @@ function getDistanceKm(lat1: number, lng1: number, lat2: number, lng2: number): 
 // Get all active shops (with optional location sorting) — public for guest browse
 router.get('/', optionalAuth, async (req: AuthRequest, res: Response) => {
   try {
-    const lat = parseFloat(req.query.lat as string) || 0;
-    const lng = parseFloat(req.query.lng as string) || 0;
+    const parsedLat = Number(req.query.lat);
+    const parsedLng = Number(req.query.lng);
+    const hasCoordinates = Number.isFinite(parsedLat) && Number.isFinite(parsedLng)
+      && parsedLat >= -90 && parsedLat <= 90 && parsedLng >= -180 && parsedLng <= 180;
+    const pincode = typeof req.query.pincode === 'string' && /^\d{6}$/.test(req.query.pincode.trim())
+      ? req.query.pincode.trim()
+      : undefined;
     const sort = (req.query.sort as string) || 'rating';
     const { limit, offset } = getPagination(req);
 
@@ -46,32 +51,48 @@ router.get('/', optionalAuth, async (req: AuthRequest, res: Response) => {
 
     const favoriteSet = new Set(favorites.map((f: any) => f.shopId));
 
-    let formattedShops = shops.map((shop: any) => ({
-      id: shop.id,
-      ownerId: shop.ownerId,
-      ownerName: shop.owner.name,
-      name: shop.name,
-      description: shop.description,
-      address: shop.address,
-      image: shop.image,
-      lat: shop.lat,
-      lng: shop.lng,
-      isActive: shop.isActive,
-      rating: shop.rating,
-      upiId: shop.upiId,
-      isFavorite: favoriteSet.has(shop.id),
-      distance: lat && lng && shop.lat && shop.lng
-        ? getDistanceKm(lat, lng, shop.lat, shop.lng)
-        : undefined,
-      createdAt: shop.createdAt.toISOString(),
-    }));
+    let formattedShops = shops.map((shop: any) => {
+      const distance = hasCoordinates
+        ? getDistanceKm(parsedLat, parsedLng, shop.lat, shop.lng)
+        : undefined;
+      const shopPins = shop.serviceablePincodes
+        .split(',')
+        .map((pin: string) => pin.trim())
+        .filter(Boolean);
+      const isDeliverable = (distance !== undefined && distance * 1.3 <= shop.deliveryRadiusKm)
+        || (pincode !== undefined && shopPins.includes(pincode));
+
+      return {
+        id: shop.id,
+        ownerId: shop.ownerId,
+        ownerName: shop.owner.name,
+        name: shop.name,
+        description: shop.description,
+        address: shop.address,
+        image: shop.image,
+        lat: shop.lat,
+        lng: shop.lng,
+        isActive: shop.isActive,
+        rating: shop.rating,
+        upiId: shop.upiId,
+        deliveryRadiusKm: shop.deliveryRadiusKm,
+        serviceablePincodes: shop.serviceablePincodes,
+        minOrderAmount: shop.minOrderAmount,
+        deliveryFee: shop.deliveryFee,
+        freeDeliveryAbove: shop.freeDeliveryAbove,
+        isFavorite: favoriteSet.has(shop.id),
+        distance,
+        isDeliverable,
+        createdAt: shop.createdAt.toISOString(),
+      };
+    });
 
     if (isPilotMode()) {
       formattedShops = formattedShops.filter((shop: any) => isPilotShopEligible(shop));
     }
 
-    if (sort === 'distance' && lat && lng) {
-      formattedShops.sort((a: any, b: any) => (a.distance || 999) - (b.distance || 999));
+    if (sort === 'distance' && hasCoordinates) {
+      formattedShops.sort((a: any, b: any) => (a.distance ?? Infinity) - (b.distance ?? Infinity));
     } else {
       formattedShops.sort((a: any, b: any) => b.rating - a.rating);
     }
@@ -125,6 +146,11 @@ router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
         isActive: shop.isActive,
         rating: shop.rating,
         upiId: shop.upiId,
+        deliveryRadiusKm: shop.deliveryRadiusKm,
+        serviceablePincodes: shop.serviceablePincodes,
+        minOrderAmount: shop.minOrderAmount,
+        deliveryFee: shop.deliveryFee,
+        freeDeliveryAbove: shop.freeDeliveryAbove,
         isFavorite: !!fav,
         createdAt: shop.createdAt.toISOString(),
       },
@@ -146,7 +172,12 @@ router.get('/vendor/my-shop', authenticateToken, requireRole('vendor'), async (r
         id: shop.id, ownerId: shop.ownerId, name: shop.name,
         description: shop.description, address: shop.address, phone: shop.phone,
         image: shop.image, isActive: shop.isActive, rating: shop.rating,
-        upiId: shop.upiId,
+        upiId: shop.upiId, lat: shop.lat, lng: shop.lng,
+        deliveryRadiusKm: shop.deliveryRadiusKm,
+        serviceablePincodes: shop.serviceablePincodes,
+        minOrderAmount: shop.minOrderAmount,
+        deliveryFee: shop.deliveryFee,
+        freeDeliveryAbove: shop.freeDeliveryAbove,
         createdAt: shop.createdAt.toISOString(),
       },
     });
@@ -163,7 +194,10 @@ router.put('/:id', authenticateToken, requireRole('vendor'), validate(updateShop
       return res.status(403).json({ success: false, message: 'Not authorized' });
     }
 
-    const { name, description, address, phone, image, upiId, lat, lng } = req.body;
+    const {
+      name, description, address, phone, image, upiId, lat, lng,
+      deliveryRadiusKm, serviceablePincodes, minOrderAmount, deliveryFee, freeDeliveryAbove,
+    } = req.body;
     const updated = await prisma.shop.update({
       where: { id: req.params.id },
       data: {
@@ -175,6 +209,13 @@ router.put('/:id', authenticateToken, requireRole('vendor'), validate(updateShop
         ...(upiId !== undefined && { upiId }),
         ...(lat !== undefined && { lat }),
         ...(lng !== undefined && { lng }),
+        ...(deliveryRadiusKm !== undefined && { deliveryRadiusKm }),
+        ...(serviceablePincodes !== undefined && {
+          serviceablePincodes: serviceablePincodes.split(',').map((pin: string) => pin.trim()).join(', '),
+        }),
+        ...(minOrderAmount !== undefined && { minOrderAmount }),
+        ...(deliveryFee !== undefined && { deliveryFee }),
+        ...(freeDeliveryAbove !== undefined && { freeDeliveryAbove }),
       },
     });
 

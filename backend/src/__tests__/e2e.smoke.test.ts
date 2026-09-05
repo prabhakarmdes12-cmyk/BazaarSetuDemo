@@ -49,6 +49,37 @@ describe('E2E smoke — core marketplace journey', () => {
     const browse = await request(app).get('/api/shops');
     expect(browse.status).toBe(200);
     expect(browse.body.data.some((s: { id: string }) => s.id === shopId)).toBe(true);
+
+    // Delivery settings persist and drive both radius- and PIN-based serviceability.
+    const deliverySettings = await request(app)
+      .put(`/api/shops/${shopId}`)
+      .set('Authorization', `Bearer ${vendorToken}`)
+      .send({
+        lat: 25,
+        lng: 85,
+        deliveryRadiusKm: 1,
+        serviceablePincodes: '826001, 826004',
+        minOrderAmount: 49,
+        deliveryFee: 15,
+        freeDeliveryAbove: 199,
+      });
+    expect(deliverySettings.status).toBe(200);
+    expect(deliverySettings.body.data.deliveryRadiusKm).toBe(1);
+    expect(deliverySettings.body.data.serviceablePincodes).toBe('826001, 826004');
+
+    const nearShop = await request(app).get('/api/shops?lat=25.005&lng=85&pincode=999999');
+    const nearResult = nearShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(nearResult.isDeliverable).toBe(true);
+    expect(nearResult.distance).toBeGreaterThan(0);
+
+    const pinShop = await request(app).get('/api/shops?lat=26&lng=86&pincode=826004');
+    const pinResult = pinShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(pinResult.isDeliverable).toBe(true);
+
+    const farShop = await request(app).get('/api/shops?lat=26&lng=86&pincode=999999');
+    const farResult = farShop.body.data.find((s: { id: string }) => s.id === shopId);
+    expect(farResult.isDeliverable).toBe(false);
+
     const guestProducts = await request(app).get(`/api/products/shop/${shopId}`);
     expect(guestProducts.body.data.some((p: { id: string }) => p.id === productId)).toBe(true);
 
