@@ -31,6 +31,8 @@ export interface Product {
   name: string;
   description: string;
   price: number;
+  /** Optional strikethrough MRP; when omitted the card derives a deterministic one. */
+  mrp?: number;
   image: string;
   category: string;
   unit: string;

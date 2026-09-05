@@ -2,9 +2,9 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { Icon, Badge } from '@/components/ui';
 import AppShell from '@/components/AppShell';
+import CatalogTile from '@/components/CatalogTile';
 import { useAuth } from '@/hooks/useAuth';
 import { Cart, CartItem } from '@/types';
 import { api } from '@/lib/api';
@@ -16,6 +16,9 @@ interface CartViewItem {
   name: string;
   unit: string;
   image: string;
+  icon?: string;
+  from?: string;
+  to?: string;
   quantity: number;
   price: number;
 }
@@ -123,6 +126,9 @@ export default function CartPage() {
         name: i.name,
         unit: i.unit,
         image: i.image,
+        icon: i.icon,
+        from: i.from,
+        to: i.to,
         quantity: i.quantity,
         price: i.price,
       }))
@@ -195,9 +201,15 @@ export default function CartPage() {
         <section className="space-y-6">
           {viewItems.map((item) => (
             <div key={item.key} className="grid grid-cols-[100px_1fr] gap-6 bg-surface-container-low p-4 rounded-xl items-center">
-              <div className="relative w-[100px] h-[100px] rounded-xl overflow-hidden bg-surface-container-lowest">
-                <Image fill sizes="100px" alt={item.name} className="object-cover" src={item.image || '/placeholder.jpg'} />
-              </div>
+              <CatalogTile
+                image={item.image}
+                icon={item.icon}
+                from={item.from}
+                to={item.to}
+                name={item.name}
+                className="w-[100px] h-[100px] !rounded-xl"
+                iconClassName="text-3xl"
+              />
               <div className="flex flex-col justify-between h-full py-1">
                 <div className="flex justify-between items-start">
                   <div>

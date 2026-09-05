@@ -13,14 +13,24 @@ import { Shop, Product, Message } from '@/types';
 import { api, API_URL } from '@/lib/api';
 import { addToGuestCart, guestCartCount } from '@/lib/guestCart';
 import { track } from '@/lib/analytics';
+import BighiStorefront from '@/components/BighiStorefront';
+import { BIGHI_STORE } from '@/lib/bighiCatalog';
 
 type Tab = 'products' | 'chat';
 
+// Route wrapper: the flagship "Bighi Brothers Mart" demo store is a fully
+// bundled experience (1,000+ SKU master catalog, no backend shop record), so
+// it renders its own component before the hook-heavy regular shop flow mounts.
 export default function ShopPage() {
   const params = useParams();
+  const shopId = params.id as string;
+  if (shopId === BIGHI_STORE.id) return <BighiStorefront />;
+  return <RegularShopPage shopId={shopId} />;
+}
+
+function RegularShopPage({ shopId }: { shopId: string }) {
   const router = useRouter();
   const { token, user, isLoading: authLoading } = useAuth();
-  const shopId = params.id as string;
 
   const [shop, setShop] = useState<Shop | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
