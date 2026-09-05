@@ -343,7 +343,7 @@ export default function VendorProductsPage() {
               </div>
               <p className="text-on-surface font-bold font-headline text-lg">Your dukaan is empty</p>
               <p className="text-on-surface-variant text-sm mt-1 mb-5">
-                Add products from the 1,000-item master catalog in one tap.
+                Add products from the {BIGHI_CATALOG.length.toLocaleString('en-IN')}-item master catalog in one tap.
               </p>
               <button onClick={() => setTab('catalog')} className="btn-primary text-sm">
                 Browse Master Catalog
@@ -540,7 +540,7 @@ export default function VendorProductsPage() {
             <input
               value={catalogSearch}
               onChange={(e) => setCatalogSearch(e.target.value)}
-              placeholder="Search 1,000+ products — Amul, Maggi, Surf Excel…"
+              placeholder={`Search ${BIGHI_CATALOG.length.toLocaleString('en-IN')} products — Amul, Maggi, Dolo, Makhana…`}
               className="w-full bg-surface-container-low border border-white/10 focus:border-primary/50 rounded-xl pl-10 pr-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 outline-none"
             />
           </div>

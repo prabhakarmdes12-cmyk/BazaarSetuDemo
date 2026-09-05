@@ -19,7 +19,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// ---- Category metadata (14 quick-commerce categories) ---------------------
+// ---- Category metadata (26 quick-commerce categories) ---------------------
 const CATEGORIES = [
   { id: 'dairy',       label: 'Dairy, Bread & Eggs',  icon: 'egg',               from: '#38BDF8', to: '#0369A1' },
   { id: 'vegetables',  label: 'Fresh Vegetables',     icon: 'nutrition',         from: '#4ADE80', to: '#15803D' },
@@ -35,6 +35,20 @@ const CATEGORIES = [
   { id: 'household',   label: 'Cleaning & Household', icon: 'cleaning_services', from: '#2DD4BF', to: '#0F766E' },
   { id: 'personal',    label: 'Personal Care',        icon: 'health_and_beauty', from: '#C4B5FD', to: '#5B21B6' },
   { id: 'baby',        label: 'Baby Care & Wellness', icon: 'child_care',        from: '#5EEAD4', to: '#0F766E' },
+  // ---- Expansion wave 2: gaps found vs Blinkit / Zepto / Instamart / JioMart.
+  // See docs/CATEGORY-GAP-ANALYSIS.md for the reasoning behind each.
+  { id: 'meat',        label: 'Chicken, Meat & Fish', icon: 'set_meal',          from: '#F87171', to: '#991B1B' },
+  { id: 'breakfast',   label: 'Breakfast & Spreads',  icon: 'bakery_dining',     from: '#FBBF24', to: '#92400E' },
+  { id: 'frozen',      label: 'Frozen Food & Ice Cream', icon: 'ac_unit',        from: '#7DD3FC', to: '#0C4A6E' },
+  { id: 'dryfruits',   label: 'Dry Fruits & Makhana', icon: 'grain',             from: '#D6A87F', to: '#78350F' },
+  { id: 'pharma',      label: 'Pharma & Wellness',    icon: 'medical_services',  from: '#4ADE80', to: '#166534' },
+  { id: 'pooja',       label: 'Pooja & Festive Needs', icon: 'local_fire_department', from: '#FDBA74', to: '#9A3412' },
+  { id: 'homekitchen', label: 'Home & Kitchen Needs', icon: 'lightbulb',         from: '#A5B4FC', to: '#3730A3' },
+  { id: 'stationery',  label: 'Stationery & Office',  icon: 'edit',              from: '#93C5FD', to: '#1E40AF' },
+  { id: 'beauty',      label: 'Beauty & Cosmetics',   icon: 'auto_awesome',      from: '#F9A8D4', to: '#9D174D' },
+  { id: 'pet',         label: 'Pet Care',             icon: 'pets',              from: '#FCD34D', to: '#92400E' },
+  { id: 'electronics', label: 'Electronics & Accessories', icon: 'cable',        from: '#94A3B8', to: '#1E293B' },
+  { id: 'paan',        label: 'Paan Corner & Mouth Fresheners', icon: 'spa',     from: '#86EFAC', to: '#14532D' },
 ];
 
 // Each item: n = product line, brands = pack brands (empty = loose/unbranded),
@@ -276,8 +290,6 @@ const CATALOG = {
     { n: 'Gulab Jamun Mix', brands: ['MTR', 'Gits', 'Haldiram’s'], packs: [['200 g', 0.45], ['500 g', 1]], p: 75 },
     { n: 'Pav Bhaji Masala Base', brands: ['MTR', 'Haldiram’s'], packs: [['300 g', 0.55], ['600 g', 1]], p: 90 },
     { n: 'Noodles Masala Pack', brands: ['Maggi', 'Knorr'], packs: [['140 g pack', 0.16], ['8 pack', 1]], p: 120 },
-    { n: 'Frozen French Fries', brands: ['McCain', 'Hyfun'], packs: [['425 g', 0.6], ['750 g', 1]], p: 120 },
-    { n: 'Frozen Veg Paratha', brands: ['MTR', 'ID Fresh'], packs: [['4 pcs', 0.55], ['8 pcs', 1]], p: 90 },
     { n: 'Mayonnaise', brands: ['Dr. Oetker', 'FunFoods', 'Del Monte'], packs: [['250 g', 0.5], ['500 g', 1]], p: 110 },
     { n: 'Pasta Sauce', brands: ['Dr. Oetker', 'Knorr', 'Maggi'], packs: [['350 g', 0.55], ['700 g', 1]], p: 130 },
   ],
@@ -351,6 +363,290 @@ const CATALOG = {
     { n: 'Vitamin C Tablets', brands: ['Limcee', 'Limcee Chewable'], packs: [['20 tablets', 0.4], ['60 tablets', 1]], p: 110 },
     { n: 'Baby ORS Electrolyte', brands: ['Electral', 'WHO-ORS'], packs: [['4 sachets', 0.4], ['10 sachets', 1]], p: 70 },
   ],
+
+  // ===== Expansion wave 2 ===================================================
+  // Chicken, Meat & Fish — headline category on Blinkit/Zepto. Rohu & katla
+  // are the everyday fish in Bihar/Jharkhand; mutton is the premium occasion buy.
+  meat: [
+    { n: 'Chicken Curry Cut', brands: ['Licious', 'Fresh Farm', 'Local'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 260 },
+    { n: 'Chicken Breast Boneless', brands: ['Licious', 'Fresh Farm'], packs: [['450 g', 1], ['1 kg', 2.1]], p: 320 },
+    { n: 'Chicken Drumstick', brands: ['Licious', 'Local'], packs: [['500 g', 1]], p: 220 },
+    { n: 'Whole Chicken Skinless', brands: ['Fresh Farm', 'Local'], packs: [['1 kg', 1], ['1.5 kg', 1.45]], p: 240 },
+    { n: 'Chicken Keema Mince', brands: ['Licious', 'Fresh Farm'], packs: [['450 g', 1]], p: 280 },
+    { n: 'Chicken Sausages', brands: ['Godrej Yummiez', 'Venky’s'], packs: [['250 g', 0.6], ['500 g', 1]], p: 240 },
+    { n: 'Chicken Salami', brands: ['Godrej Yummiez', 'Venky’s'], packs: [['200 g', 1]], p: 210 },
+    { n: 'Mutton Curry Cut', brands: ['Licious', 'Local'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 820 },
+    { n: 'Mutton Keema', brands: ['Licious', 'Local'], packs: [['450 g', 1]], p: 760 },
+    { n: 'Rohu Fish Cut', brands: ['Local Catch', 'Fresh Catch'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 320 },
+    { n: 'Katla Fish Cut', brands: ['Local Catch', 'Fresh Catch'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 300 },
+    { n: 'Rui Machh Steaks', brands: ['Fresh Catch'], packs: [['500 g', 1]], p: 340 },
+    { n: 'Prawns Cleaned', brands: ['Licious', 'Fresh Catch'], packs: [['250 g', 0.55], ['500 g', 1]], p: 480 },
+    { n: 'Basa Fish Fillet', brands: ['Licious', 'Fresh Catch'], packs: [['500 g', 1]], p: 420 },
+    { n: 'Pomfret Whole', brands: ['Fresh Catch'], packs: [['500 g', 1]], p: 620 },
+    { n: 'Country Eggs Desi', brands: ['Local Farm'], packs: [['6 pcs', 0.5], ['12 pcs', 1]], p: 130 },
+    { n: 'Fish Curry Masala Kit', brands: ['Local', 'MDH'], packs: [['100 g', 1]], p: 70 },
+  ],
+
+  // Breakfast & Spreads — pulled out of Instant Food into its own shelf, which
+  // is how Blinkit ("Breakfast & Instant Food") and Zepto merchandise it.
+  breakfast: [
+    { n: 'Corn Flakes', brands: ['Kellogg’s', 'Bagrry’s', 'Patanjali'], packs: [['250 g', 0.45], ['475 g', 0.8], ['875 g', 1]], p: 420 },
+    { n: 'Chocos Cereal', brands: ['Kellogg’s', 'Bagrry’s'], packs: [['300 g', 0.6], ['700 g', 1]], p: 380 },
+    { n: 'Muesli Fruit & Nut', brands: ['Bagrry’s', 'Kellogg’s', 'Soulfull'], packs: [['400 g', 0.55], ['750 g', 1]], p: 520 },
+    { n: 'Rolled Oats', brands: ['Quaker', 'Saffola', 'Bagrry’s'], packs: [['400 g', 0.35], ['1 kg', 1]], p: 320 },
+    { n: 'Masala Oats Cup', brands: ['Saffola', 'Quaker'], packs: [['40 g cup', 0.25], ['6 pack', 1]], p: 210 },
+    { n: 'Ragi Malt Mix', brands: ['Soulfull', 'Manna'], packs: [['500 g', 1]], p: 240 },
+    { n: 'Mixed Fruit Jam', brands: ['Kissan', 'Tops', 'Patanjali'], packs: [['200 g', 0.35], ['500 g', 0.75], ['700 g', 1]], p: 240 },
+    { n: 'Strawberry Jam', brands: ['Kissan', 'Tops'], packs: [['200 g', 0.4], ['500 g', 1]], p: 200 },
+    { n: 'Peanut Butter Creamy', brands: ['Pintola', 'Sundrop', 'MyFitness'], packs: [['340 g', 0.45], ['1 kg', 1]], p: 520 },
+    { n: 'Honey', brands: ['Dabur', 'Patanjali', 'Apis'], packs: [['250 g', 0.35], ['500 g', 0.65], ['1 kg', 1]], p: 480 },
+    { n: 'Tomato Ketchup Squeezy', brands: ['Kissan', 'Maggi', 'Veeba'], packs: [['200 g', 0.25], ['500 g', 0.55], ['950 g', 1]], p: 180 },
+    { n: 'Eggless Mayonnaise', brands: ['Veeba', 'Dr. Oetker FunFoods', 'Cremica'], packs: [['250 g', 0.45], ['875 g', 1]], p: 220 },
+    { n: 'Chilli Garlic Sauce', brands: ['Veeba', 'Ching’s', 'Cremica'], packs: [['200 g', 0.5], ['320 g', 1]], p: 110 },
+    { n: 'Schezwan Sauce', brands: ['Ching’s', 'Veeba'], packs: [['250 g', 1]], p: 130 },
+    { n: 'Chocolate Spread', brands: ['Nutella', 'Hershey’s', 'Cadbury'], packs: [['160 g', 0.35], ['350 g', 1]], p: 320 },
+    { n: 'Vermicelli Sewai', brands: ['Bambino', 'MTR'], packs: [['400 g', 0.6], ['900 g', 1]], p: 90 },
+    { n: 'Idli Dosa Batter', brands: ['iD Fresh', 'MTR'], packs: [['1 kg', 1]], p: 90 },
+    { n: 'Sprouted Moong Chilla Mix', brands: ['MTR', 'Gits'], packs: [['200 g', 1]], p: 85 },
+  ],
+
+  // Frozen — Zepto lists ~799 SKUs here; McCain & Godrej Yummiez lead.
+  // NOTE: requires a freezer at the dukaan — flagged in vendor onboarding.
+  frozen: [
+    { n: 'Frozen French Fries', brands: ['McCain', 'ITC Master Chef'], packs: [['420 g', 0.5], ['750 g', 0.85], ['1.25 kg', 1]], p: 320 },
+    { n: 'Aloo Tikki Frozen', brands: ['McCain', 'Godrej Yummiez'], packs: [['400 g', 1]], p: 180 },
+    { n: 'Smiley Potato Bites', brands: ['McCain', 'Wow! Smiley'], packs: [['415 g', 1]], p: 190 },
+    { n: 'Veg Nuggets', brands: ['McCain', 'Godrej Yummiez'], packs: [['400 g', 1]], p: 200 },
+    { n: 'Chicken Nuggets Frozen', brands: ['Godrej Yummiez', 'Venky’s', 'Prasuma'], packs: [['400 g', 1]], p: 280 },
+    { n: 'Chicken Seekh Kebab Frozen', brands: ['Godrej Yummiez', 'Prasuma'], packs: [['400 g', 1]], p: 300 },
+    { n: 'Frozen Green Peas', brands: ['Safal', 'Godrej Yummiez'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 160 },
+    { n: 'Frozen Sweet Corn', brands: ['Safal', 'Godrej Yummiez'], packs: [['500 g', 1]], p: 120 },
+    { n: 'Frozen Mixed Vegetables', brands: ['Safal', 'Godrej Yummiez'], packs: [['500 g', 1]], p: 140 },
+    { n: 'Veg Momos Frozen', brands: ['Wow! Momo', 'Prasuma', 'Sumeru'], packs: [['300 g', 1]], p: 180 },
+    { n: 'Chicken Momos Frozen', brands: ['Wow! Momo', 'Prasuma'], packs: [['300 g', 1]], p: 220 },
+    { n: 'Whole Wheat Chapati Frozen', brands: ['Modern', 'iD Fresh'], packs: [['30 pcs', 1]], p: 180 },
+    { n: 'Frozen Malabar Paratha', brands: ['Sumeru', 'iD Fresh', 'Modern'], packs: [['400 g · 5 pcs', 1]], p: 150 },
+    { n: 'Vanilla Ice Cream Tub', brands: ['Amul', 'Kwality Walls', 'Mother Dairy'], packs: [['700 ml', 0.65], ['1.25 L', 1]], p: 280 },
+    { n: 'Chocolate Ice Cream Tub', brands: ['Amul', 'Kwality Walls'], packs: [['700 ml', 0.65], ['1.25 L', 1]], p: 300 },
+    { n: 'Kulfi Sticks', brands: ['Amul', 'Vadilal'], packs: [['4 pack', 1]], p: 140 },
+    { n: 'Cornetto Cone', brands: ['Kwality Walls', 'Amul'], packs: [['single', 0.3], ['4 pack', 1]], p: 200 },
+    { n: 'Frozen Paneer Cubes', brands: ['Safal', 'Milky Mist'], packs: [['500 g', 1]], p: 220 },
+  ],
+
+  // Dry Fruits & Makhana — high margin, gifting-led. Makhana is grown in
+  // Darbhanga/Madhubani, Bihar: a genuine local sourcing edge for us.
+  dryfruits: [
+    { n: 'Almonds California', brands: ['Happilo', 'Nutraj', 'Vedaka'], packs: [['200 g', 0.28], ['500 g', 0.62], ['1 kg', 1]], p: 900 },
+    { n: 'Cashew Whole W240', brands: ['Happilo', 'Nutraj', 'Vedaka'], packs: [['200 g', 0.28], ['500 g', 0.62], ['1 kg', 1]], p: 1000 },
+    { n: 'Pistachio Roasted Salted', brands: ['Happilo', 'Nutraj'], packs: [['200 g', 0.3], ['500 g', 1]], p: 700 },
+    { n: 'Walnut Kernels', brands: ['Happilo', 'Nutraj'], packs: [['200 g', 0.35], ['500 g', 1]], p: 800 },
+    { n: 'Raisins Kishmish', brands: ['Happilo', 'Nutraj', 'Vedaka'], packs: [['250 g', 0.3], ['500 g', 0.55], ['1 kg', 1]], p: 420 },
+    { n: 'Phool Makhana Fox Nuts', brands: ['Bihar Special', 'Happilo', 'Local'], packs: [['100 g', 0.3], ['250 g', 0.65], ['500 g', 1]], p: 420 },
+    { n: 'Roasted Makhana Peri Peri', brands: ['Bihar Special', 'Too Yumm'], packs: [['75 g', 1]], p: 90 },
+    { n: 'Dates Khajur Seedless', brands: ['Lion', 'Happilo', 'Vedaka'], packs: [['250 g', 0.35], ['500 g', 0.62], ['1 kg', 1]], p: 400 },
+    { n: 'Anjeer Dried Figs', brands: ['Happilo', 'Nutraj'], packs: [['200 g', 0.4], ['500 g', 1]], p: 750 },
+    { n: 'Apricot Dried Khubani', brands: ['Happilo', 'Nutraj'], packs: [['200 g', 0.4], ['500 g', 1]], p: 550 },
+    { n: 'Mixed Dry Fruits Gift Box', brands: ['Happilo', 'Nutraj'], packs: [['500 g box', 0.6], ['1 kg box', 1]], p: 1200 },
+    { n: 'Chia Seeds', brands: ['True Elements', 'Happilo'], packs: [['200 g', 0.5], ['500 g', 1]], p: 340 },
+    { n: 'Flax Seeds Alsi', brands: ['True Elements', 'Nutraj'], packs: [['200 g', 0.5], ['500 g', 1]], p: 220 },
+    { n: 'Pumpkin Seeds', brands: ['Happilo', 'True Elements'], packs: [['200 g', 0.5], ['500 g', 1]], p: 380 },
+    { n: 'Sunflower Seeds', brands: ['Happilo', 'True Elements'], packs: [['200 g', 0.5], ['500 g', 1]], p: 300 },
+    { n: 'Trail Mix Berries & Nuts', brands: ['Happilo', 'Yoga Bar'], packs: [['200 g', 1]], p: 400 },
+    { n: 'Gud Jaggery Cubes', brands: ['24 Mantra', 'Local'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 120 },
+  ],
+
+  // Pharma & Wellness — OTC ONLY. No prescription medicines (Blinkit, Zepto
+  // and Instamart all refuse them; we do too).
+  pharma: [
+    { n: 'Paracetamol 500mg Tablets', brands: ['Crocin', 'Dolo 650', 'Calpol'], packs: [['10 tablets', 0.4], ['15 tablets', 1]], p: 35 },
+    { n: 'Antacid Tablets', brands: ['Digene', 'Eno', 'Gelusil'], packs: [['10 tablets', 0.5], ['30 tablets', 1]], p: 90 },
+    { n: 'Antacid Fruit Salt Sachet', brands: ['Eno', 'Gelusil'], packs: [['5 g sachet', 0.15], ['100 g bottle', 1]], p: 130 },
+    { n: 'Pain Relief Balm', brands: ['Amrutanjan', 'Zandu', 'Tiger Balm'], packs: [['9 ml', 0.4], ['25 ml', 1]], p: 120 },
+    { n: 'Pain Relief Spray', brands: ['Volini', 'Moov'], packs: [['40 g', 0.5], ['100 g', 1]], p: 300 },
+    { n: 'Cough Syrup', brands: ['Benadryl', 'Honitus', 'Dabur'], packs: [['100 ml', 0.6], ['200 ml', 1]], p: 190 },
+    { n: 'Cough Lozenges', brands: ['Strepsils', 'Vicks', 'Halls'], packs: [['8 pcs', 0.4], ['pack of 20', 1]], p: 90 },
+    { n: 'Vapo Rub', brands: ['Vicks', 'Amrutanjan'], packs: [['25 g', 0.5], ['50 g', 1]], p: 180 },
+    { n: 'Digestive Churan Tablets', brands: ['Hajmola', 'Dabur'], packs: [['120 tablets', 1]], p: 80 },
+    { n: 'ORS Electrolyte Powder', brands: ['Electral', 'Prolyte'], packs: [['sachet', 0.15], ['10 sachets', 1]], p: 220 },
+    { n: 'Multivitamin Tablets', brands: ['Revital H', 'Supradyn', 'Zincovit'], packs: [['15 tablets', 0.4], ['30 tablets', 1]], p: 340 },
+    { n: 'Vitamin D3 Sachet', brands: ['Uprise D3', 'Calcirol'], packs: [['4 sachets', 1]], p: 180 },
+    { n: 'Calcium Tablets', brands: ['Shelcal', 'Ostocalcium'], packs: [['15 tablets', 0.5], ['30 tablets', 1]], p: 220 },
+    { n: 'Protein Powder', brands: ['Horlicks Protein+', 'Ensure', 'Optimum Nutrition'], packs: [['200 g', 0.25], ['400 g', 0.45], ['1 kg', 1]], p: 1400 },
+    { n: 'Chyawanprash', brands: ['Dabur', 'Patanjali', 'Baidyanath'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 450 },
+    { n: 'Giloy Tulsi Immunity Drops', brands: ['Dabur', 'Patanjali'], packs: [['30 ml', 1]], p: 160 },
+    { n: 'Digital BP Monitor', brands: ['Omron', 'Dr. Morepen'], packs: [['1 unit', 1]], p: 1800 },
+    { n: 'Glucometer Strips', brands: ['Accu-Chek', 'Dr. Morepen'], packs: [['25 strips', 0.55], ['50 strips', 1]], p: 900 },
+    { n: 'Surgical Face Mask', brands: ['Dettol', 'Local'], packs: [['10 pcs', 0.4], ['50 pcs box', 1]], p: 200 },
+    { n: 'Crepe Bandage', brands: ['Dynamic', 'Local'], packs: [['6 cm', 0.7], ['10 cm', 1]], p: 130 },
+    { n: 'Antiseptic Cream', brands: ['Boroline', 'Betadine', 'Soframycin'], packs: [['20 g', 0.5], ['40 g', 1]], p: 90 },
+  ],
+
+  // Pooja & Festive — culturally essential in India, largely missing from
+  // Western-modelled apps. Chhath Puja is THE Bihar festival: our home market.
+  pooja: [
+    { n: 'Agarbatti Incense Sticks', brands: ['Cycle', 'Mangaldeep', 'Zed Black'], packs: [['50 sticks', 0.35], ['100 sticks', 0.6], ['200 sticks', 1]], p: 150 },
+    { n: 'Dhoop Sticks', brands: ['Cycle', 'Mangaldeep'], packs: [['12 sticks', 0.5], ['20 sticks', 1]], p: 90 },
+    { n: 'Sambrani Cups', brands: ['Cycle', 'Mangaldeep'], packs: [['12 cups', 1]], p: 80 },
+    { n: 'Camphor Kapur Tablets', brands: ['Mangalam', 'Cycle'], packs: [['50 g', 0.5], ['100 g', 1]], p: 120 },
+    { n: 'Brass Diya Lamp', brands: ['Local'], packs: [['1 pc small', 0.5], ['1 pc medium', 1]], p: 180 },
+    { n: 'Clay Diya Set', brands: ['Local'], packs: [['12 pcs', 0.5], ['24 pcs', 1]], p: 100 },
+    { n: 'Cotton Wicks Batti', brands: ['Local', 'Mangalam'], packs: [['100 pcs', 0.5], ['250 pcs', 1]], p: 60 },
+    { n: 'Pooja Oil Til Oil', brands: ['Idhayam', 'Local'], packs: [['200 ml', 0.4], ['500 ml', 1]], p: 180 },
+    { n: 'Ghee Diya Batti Ready', brands: ['Mangaldeep', 'Local'], packs: [['6 pcs', 1]], p: 90 },
+    { n: 'Kumkum Roli Powder', brands: ['Local'], packs: [['50 g', 1]], p: 40 },
+    { n: 'Haldi Chandan Tika', brands: ['Local'], packs: [['50 g', 1]], p: 45 },
+    { n: 'Ganga Jal Bottle', brands: ['Local'], packs: [['250 ml', 1]], p: 50 },
+    { n: 'Mauli Kalava Sacred Thread', brands: ['Local'], packs: [['1 roll', 1]], p: 25 },
+    { n: 'Janeu Sacred Thread', brands: ['Local'], packs: [['3 pcs', 1]], p: 40 },
+    { n: 'Marigold Garland Fresh', brands: ['Local'], packs: [['1 garland', 0.6], ['2 garlands', 1]], p: 90 },
+    { n: 'Rose Flower Petals', brands: ['Local'], packs: [['100 g', 1]], p: 60 },
+    { n: 'Nariyal Coconut for Pooja', brands: ['Local'], packs: [['1 pc', 0.55], ['2 pcs', 1]], p: 70 },
+    { n: 'Panchamrit Pooja Kit', brands: ['Local'], packs: [['1 kit', 1]], p: 150 },
+    { n: 'Chhath Puja Soop Daura Set', brands: ['Local'], packs: [['1 set', 1]], p: 350 },
+    { n: 'Chhath Puja Complete Kit', brands: ['Local'], packs: [['1 kit', 1]], p: 650 },
+    { n: 'Diwali Pooja Thali Set', brands: ['Local'], packs: [['1 set', 1]], p: 450 },
+    { n: 'Rangoli Colour Powder', brands: ['Local'], packs: [['5 colours', 1]], p: 90 },
+    { n: 'Havan Samagri', brands: ['Patanjali', 'Local'], packs: [['200 g', 0.55], ['500 g', 1]], p: 160 },
+    { n: 'Matchbox Bundle', brands: ['Homelite', 'Ship'], packs: [['10 boxes', 1]], p: 40 },
+  ],
+
+  // Home & Kitchen Needs — Blinkit's "Home & Office". The village-kirana moat:
+  // matchbox, candle, bulb, battery. Emergency buys with a healthy margin.
+  homekitchen: [
+    { n: 'LED Bulb 9W', brands: ['Philips', 'Syska', 'Wipro'], packs: [['1 pc', 0.55], ['2 pack', 1]], p: 300 },
+    { n: 'LED Bulb 12W', brands: ['Philips', 'Syska', 'Havells'], packs: [['1 pc', 1]], p: 220 },
+    { n: 'LED Tube Light 20W', brands: ['Philips', 'Wipro'], packs: [['1 pc', 1]], p: 420 },
+    { n: 'AA Batteries', brands: ['Duracell', 'Eveready', 'Panasonic'], packs: [['2 pcs', 0.45], ['4 pcs', 0.8], ['10 pcs', 1]], p: 340 },
+    { n: 'AAA Batteries', brands: ['Duracell', 'Eveready'], packs: [['2 pcs', 0.5], ['4 pcs', 1]], p: 190 },
+    { n: 'Candles White', brands: ['Local'], packs: [['6 pcs', 0.55], ['12 pcs', 1]], p: 90 },
+    { n: 'Gas Lighter', brands: ['Pigeon', 'Local'], packs: [['1 pc', 1]], p: 130 },
+    { n: 'Steel Water Bottle', brands: ['Milton', 'Cello'], packs: [['750 ml', 0.7], ['1 L', 1]], p: 450 },
+    { n: 'Plastic Bucket', brands: ['Cello', 'Nayasa'], packs: [['15 L', 0.7], ['20 L', 1]], p: 320 },
+    { n: 'Plastic Mug', brands: ['Cello', 'Nayasa'], packs: [['1 pc', 1]], p: 70 },
+    { n: 'Dustbin with Lid', brands: ['Cello', 'Nayasa'], packs: [['10 L', 0.7], ['20 L', 1]], p: 400 },
+    { n: 'Steel Tiffin Box', brands: ['Milton', 'Cello'], packs: [['2 container', 0.7], ['3 container', 1]], p: 550 },
+    { n: 'Non-Stick Tawa', brands: ['Prestige', 'Hawkins', 'Pigeon'], packs: [['25 cm', 1]], p: 700 },
+    { n: 'Pressure Cooker', brands: ['Prestige', 'Hawkins'], packs: [['3 L', 0.75], ['5 L', 1]], p: 2200 },
+    { n: 'Kitchen Knife', brands: ['Pigeon', 'Local'], packs: [['1 pc', 1]], p: 150 },
+    { n: 'Vegetable Chopper', brands: ['Pigeon', 'Ganesh'], packs: [['1 pc', 1]], p: 400 },
+    { n: 'Steel Scrubber', brands: ['Scotch-Brite', 'Local'], packs: [['3 pcs', 1]], p: 60 },
+    { n: 'Clothes Hanger Set', brands: ['Local'], packs: [['6 pcs', 1]], p: 150 },
+    { n: 'Nylon Clothesline Rope', brands: ['Local'], packs: [['10 m', 1]], p: 90 },
+    { n: 'Umbrella', brands: ['John’s', 'Local'], packs: [['1 pc', 1]], p: 350 },
+    { n: 'Extension Cord Board', brands: ['Anchor', 'Havells'], packs: [['4 socket', 1]], p: 450 },
+    { n: 'Insulation Tape', brands: ['Anchor', 'Local'], packs: [['1 pc', 1]], p: 30 },
+  ],
+
+  // Stationery & Office — Blinkit lists it; huge school-season demand and a
+  // strong Tier-2/3 fit where a dedicated stationer may be far away.
+  stationery: [
+    { n: 'Ball Pen Blue', brands: ['Cello', 'Reynolds', 'Linc'], packs: [['5 pcs', 0.5], ['10 pcs', 1]], p: 100 },
+    { n: 'Gel Pen Black', brands: ['Cello', 'Reynolds', 'Linc'], packs: [['5 pcs', 1]], p: 100 },
+    { n: 'Pencil HB', brands: ['Apsara', 'Nataraj', 'Doms'], packs: [['10 pcs', 1]], p: 60 },
+    { n: 'Eraser & Sharpener Set', brands: ['Apsara', 'Doms'], packs: [['1 set', 1]], p: 40 },
+    { n: 'Long Notebook 172 Pages', brands: ['Classmate', 'Navneet', 'Local'], packs: [['1 pc', 0.3], ['6 pack', 1]], p: 350 },
+    { n: 'Spiral Notebook A4', brands: ['Classmate', 'Navneet'], packs: [['1 pc', 1]], p: 120 },
+    { n: 'Practical Copy', brands: ['Classmate', 'Local'], packs: [['1 pc', 1]], p: 80 },
+    { n: 'Geometry Box', brands: ['Camlin', 'Doms', 'Classmate'], packs: [['1 set', 1]], p: 220 },
+    { n: 'Wax Crayons', brands: ['Doms', 'Camlin'], packs: [['12 shades', 0.6], ['24 shades', 1]], p: 130 },
+    { n: 'Colour Pencils', brands: ['Doms', 'Camlin', 'Apsara'], packs: [['12 shades', 1]], p: 110 },
+    { n: 'Sketch Pens', brands: ['Doms', 'Camlin'], packs: [['12 shades', 1]], p: 120 },
+    { n: 'Chart Paper', brands: ['Local'], packs: [['5 sheets', 1]], p: 50 },
+    { n: 'A4 Copier Paper', brands: ['JK', 'Century'], packs: [['100 sheets', 0.25], ['500 sheets ream', 1]], p: 380 },
+    { n: 'Glue Stick', brands: ['Fevistick', 'Camlin'], packs: [['15 g', 0.5], ['25 g', 1]], p: 70 },
+    { n: 'Adhesive Fevicol', brands: ['Fevicol'], packs: [['50 g', 0.5], ['200 g', 1]], p: 110 },
+    { n: 'Cello Tape', brands: ['Wonder', 'Local'], packs: [['1 roll', 1]], p: 40 },
+    { n: 'Stapler with Pins', brands: ['Kangaro', 'Local'], packs: [['1 set', 1]], p: 130 },
+    { n: 'Scissors', brands: ['Camlin', 'Local'], packs: [['1 pc', 1]], p: 90 },
+    { n: 'File Folder', brands: ['Solo', 'Local'], packs: [['5 pcs', 1]], p: 150 },
+    { n: 'Whiteboard Marker', brands: ['Camlin', 'Luxor'], packs: [['4 pcs', 1]], p: 130 },
+    { n: 'Highlighter Set', brands: ['Camlin', 'Luxor'], packs: [['4 shades', 1]], p: 140 },
+    { n: 'Envelope Pack', brands: ['Local'], packs: [['20 pcs', 1]], p: 60 },
+  ],
+
+  // Beauty & Cosmetics — Blinkit and Zepto are both actively expanding here.
+  beauty: [
+    { n: 'Matte Lipstick', brands: ['Lakme', 'Maybelline', 'Sugar'], packs: [['1 pc', 1]], p: 550 },
+    { n: 'Lip Balm', brands: ['Nivea', 'Vaseline', 'Himalaya'], packs: [['4.8 g', 1]], p: 160 },
+    { n: 'Kajal Pencil', brands: ['Lakme', 'Maybelline', 'Himalaya'], packs: [['1 pc', 1]], p: 250 },
+    { n: 'Compact Powder', brands: ['Lakme', 'Maybelline', 'Ponds'], packs: [['9 g', 1]], p: 330 },
+    { n: 'Foundation', brands: ['Lakme', 'Maybelline'], packs: [['30 ml', 1]], p: 600 },
+    { n: 'Nail Polish', brands: ['Lakme', 'Elle 18', 'Colorbar'], packs: [['1 pc', 1]], p: 130 },
+    { n: 'Nail Polish Remover', brands: ['Lakme', 'Colorbar'], packs: [['27 ml', 0.5], ['50 ml', 1]], p: 110 },
+    { n: 'Mascara', brands: ['Maybelline', 'Lakme'], packs: [['1 pc', 1]], p: 450 },
+    { n: 'Eyeliner', brands: ['Maybelline', 'Lakme', 'Sugar'], packs: [['1 pc', 1]], p: 320 },
+    { n: 'Bindi Pack', brands: ['Shilpa', 'Local'], packs: [['1 pack', 1]], p: 30 },
+    { n: 'Sindoor', brands: ['Shringar', 'Local'], packs: [['1 pc', 1]], p: 60 },
+    { n: 'Mehendi Cone', brands: ['Rajasthani', 'Local'], packs: [['3 pcs', 1]], p: 60 },
+    { n: 'Hair Colour', brands: ['Godrej Expert', 'Garnier', 'L’Oreal'], packs: [['single sachet', 0.2], ['full pack', 1]], p: 260 },
+    { n: 'Hair Serum', brands: ['Livon', 'Streax'], packs: [['50 ml', 0.5], ['100 ml', 1]], p: 340 },
+    { n: 'Hair Removal Cream', brands: ['Veet', 'Anne French'], packs: [['25 g', 0.4], ['60 g', 1]], p: 200 },
+    { n: 'Face Sheet Mask', brands: ['Garnier', 'Mamaearth'], packs: [['1 pc', 0.3], ['3 pack', 1]], p: 200 },
+    { n: 'Face Serum', brands: ['Minimalist', 'Mamaearth', 'Plum'], packs: [['30 ml', 1]], p: 600 },
+    { n: 'Makeup Remover Wipes', brands: ['Garnier', 'Lakme'], packs: [['25 wipes', 1]], p: 220 },
+    { n: 'Perfume Body Mist', brands: ['Engage', 'Fogg', 'Plum'], packs: [['120 ml', 1]], p: 320 },
+    { n: 'Makeup Brush Set', brands: ['Sugar', 'Local'], packs: [['5 pcs', 1]], p: 450 },
+  ],
+
+  // Pet Care — growing fast; Blinkit runs a dedicated HUFT tie-up. Thin in
+  // Tier-3 today, so we keep the assortment deliberately small.
+  pet: [
+    { n: 'Adult Dog Dry Food', brands: ['Pedigree', 'Drools', 'Royal Canin'], packs: [['1.2 kg', 0.35], ['3 kg', 0.75], ['10 kg', 1]], p: 3200 },
+    { n: 'Puppy Dry Food', brands: ['Pedigree', 'Drools'], packs: [['1.2 kg', 0.4], ['3 kg', 1]], p: 1100 },
+    { n: 'Dog Wet Food Pouch', brands: ['Pedigree', 'Drools'], packs: [['70 g', 0.2], ['15 pack', 1]], p: 600 },
+    { n: 'Dog Biscuits Treats', brands: ['Pedigree', 'Choostix', 'Drools'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 380 },
+    { n: 'Dog Chew Bone', brands: ['Choostix', 'Drools'], packs: [['pack of 5', 1]], p: 220 },
+    { n: 'Adult Cat Dry Food', brands: ['Whiskas', 'Me-O', 'Drools'], packs: [['1.2 kg', 0.4], ['3 kg', 1]], p: 1300 },
+    { n: 'Cat Wet Food Pouch', brands: ['Whiskas', 'Me-O'], packs: [['85 g', 0.2], ['12 pack', 1]], p: 550 },
+    { n: 'Cat Litter', brands: ['Drools', 'Me-O'], packs: [['5 kg', 1]], p: 600 },
+    { n: 'Pet Shampoo', brands: ['Himalaya', 'Drools'], packs: [['200 ml', 0.55], ['500 ml', 1]], p: 400 },
+    { n: 'Pet Grooming Brush', brands: ['Local', 'Drools'], packs: [['1 pc', 1]], p: 300 },
+    { n: 'Dog Collar & Leash', brands: ['Local'], packs: [['1 set', 1]], p: 450 },
+    { n: 'Pet Feeding Bowl', brands: ['Local', 'Drools'], packs: [['1 pc', 1]], p: 250 },
+    { n: 'Bird Feed Seeds', brands: ['Local'], packs: [['500 g', 0.55], ['1 kg', 1]], p: 150 },
+  ],
+
+  // Electronics & Accessories — Blinkit positions itself as a "last-minute
+  // electronics store": dead charger, forgotten cable. Accessories only.
+  electronics: [
+    { n: 'USB-C Charging Cable', brands: ['boAt', 'Mi', 'Portronics'], packs: [['1 m', 0.7], ['1.5 m', 1]], p: 400 },
+    { n: 'Micro USB Cable', brands: ['boAt', 'Mi'], packs: [['1 m', 1]], p: 250 },
+    { n: 'Lightning Cable', brands: ['boAt', 'Portronics'], packs: [['1 m', 1]], p: 600 },
+    { n: 'Fast Charger Adapter 20W', brands: ['Mi', 'boAt', 'Portronics'], packs: [['1 pc', 1]], p: 700 },
+    { n: 'Power Bank 10000mAh', brands: ['Mi', 'boAt', 'Ambrane'], packs: [['1 pc', 1]], p: 1500 },
+    { n: 'Wired Earphones', brands: ['boAt', 'JBL', 'Realme'], packs: [['1 pc', 1]], p: 600 },
+    { n: 'Bluetooth Neckband', brands: ['boAt', 'Realme', 'Noise'], packs: [['1 pc', 1]], p: 1200 },
+    { n: 'TWS Earbuds', brands: ['boAt', 'Noise', 'Realme'], packs: [['1 pc', 1]], p: 1800 },
+    { n: 'Bluetooth Speaker', brands: ['boAt', 'JBL'], packs: [['1 pc', 1]], p: 1800 },
+    { n: 'Mobile Back Cover', brands: ['Local'], packs: [['1 pc', 1]], p: 250 },
+    { n: 'Tempered Glass Screen Guard', brands: ['Local', 'boAt'], packs: [['1 pc', 0.6], ['2 pack', 1]], p: 250 },
+    { n: 'OTG Adapter', brands: ['Portronics', 'Local'], packs: [['1 pc', 1]], p: 200 },
+    { n: 'Memory Card 64GB', brands: ['SanDisk', 'Samsung'], packs: [['1 pc', 1]], p: 700 },
+    { n: 'Pen Drive 32GB', brands: ['SanDisk', 'HP'], packs: [['1 pc', 1]], p: 450 },
+    { n: 'Mobile Stand Holder', brands: ['Portronics', 'Local'], packs: [['1 pc', 1]], p: 250 },
+    { n: 'Wall Clock', brands: ['Ajanta', 'Local'], packs: [['1 pc', 1]], p: 450 },
+    { n: 'Rechargeable Torch', brands: ['Eveready', 'Syska'], packs: [['1 pc', 1]], p: 400 },
+    { n: 'Emergency LED Light', brands: ['Syska', 'Eveready'], packs: [['1 pc', 1]], p: 700 },
+  ],
+
+  // Paan Corner — Blinkit's #1 rail. We ship the MOUTH-FRESHENER half only:
+  // NO tobacco, NO gutkha, NO age-restricted products. Deliberate call for a
+  // village-facing brand.
+  paan: [
+    { n: 'Meetha Saunf Mukhwas', brands: ['Local', 'Rajnigandha'], packs: [['100 g', 0.5], ['250 g', 1]], p: 130 },
+    { n: 'Roasted Saunf', brands: ['Local'], packs: [['100 g', 0.5], ['250 g', 1]], p: 110 },
+    { n: 'Mukhwas Mix', brands: ['Local', 'Vimal'], packs: [['100 g', 0.5], ['250 g', 1]], p: 140 },
+    { n: 'Paan Masala Mouth Freshener', brands: ['Rajnigandha', 'Pass Pass'], packs: [['10 sachets', 0.5], ['30 sachets', 1]], p: 250 },
+    { n: 'Silver Coated Elaichi', brands: ['Local'], packs: [['50 g', 1]], p: 180 },
+    { n: 'Green Cardamom Elaichi', brands: ['Local', 'Everest'], packs: [['25 g', 0.5], ['50 g', 1]], p: 220 },
+    { n: 'Chocolate Mint Pellets', brands: ['Pass Pass', 'Center Fresh'], packs: [['jar', 1]], p: 150 },
+    { n: 'Mint Candy Roll', brands: ['Polo', 'Mentos', 'Alpenliebe'], packs: [['pack of 10', 1]], p: 100 },
+    { n: 'Digestive Anardana Goli', brands: ['Hajmola', 'Local'], packs: [['100 g', 1]], p: 70 },
+    { n: 'Imli Candy', brands: ['Local'], packs: [['100 g', 1]], p: 60 },
+    { n: 'Sweet Betel Paan Ready', brands: ['Local'], packs: [['2 pcs', 0.6], ['5 pcs', 1]], p: 150 },
+    { n: 'Gulkand', brands: ['Local', 'Baidyanath'], packs: [['200 g', 0.55], ['400 g', 1]], p: 220 },
+    { n: 'Dry Dates Chhuhara', brands: ['Local'], packs: [['200 g', 0.55], ['500 g', 1]], p: 260 },
+  ],
 };
 
 // ---- Self-hosted category imagery -----------------------------------------
@@ -372,7 +668,18 @@ const CATEGORY_IMAGES = {
   chocolates: '/catalog/chocolates.jpg',
   drinks: '/catalog/drinks.jpg',
   tea: '/catalog/tea.jpg',
-  // instant / household / personal / baby → icon fallback until shot.
+  instant: '/catalog/instant.jpg',
+  household: '/catalog/household.jpg',
+  personal: '/catalog/personal.jpg',
+  baby: '/catalog/baby.jpg',
+  meat: '/catalog/meat.jpg',
+  frozen: '/catalog/frozen.jpg',
+  dryfruits: '/catalog/dryfruits.jpg',
+  pharma: '/catalog/pharma.jpg',
+  pooja: '/catalog/pooja.jpg',
+  beauty: '/catalog/beauty.jpg',
+  // breakfast / homekitchen / stationery / pet / electronics → icon fallback
+  // until their photos are generated. CatalogTile degrades gracefully.
 };
 
 // ---- Quick-add essentials --------------------------------------------------
@@ -404,7 +711,7 @@ const ESSENTIAL_LINES = {
   tea: ['Premium Leaf Tea', 'Strong CTC Tea', 'Green Tea', 'Instant Coffee Classic',
     'Chocolate Health Drink', 'Masala Chai Tea'],
   instant: ['2-Minute Masala Noodles', 'Cup Noodles', 'Tomato Ketchup', 'Instant Soup',
-    'Ready-to-Eat Curry', 'Soy Sauce', 'Mayonnaise', 'Frozen Veg Paratha'],
+    'Ready-to-Eat Curry', 'Soy Sauce', 'Instant Upma Mix'],
   household: ['Matic Detergent Powder', 'Top-Load Detergent', 'Dishwash Gel', 'Dishwash Bar',
     'Toilet Cleaner', 'Floor Cleaner', 'Mosquito Coil', 'Garbage Bags', 'Toilet Paper Roll',
     'Broom / Phool Jhadu'],
@@ -413,6 +720,31 @@ const ESSENTIAL_LINES = {
     'Hand Wash', 'Sanitary Pads', 'Shaving Cream'],
   baby: ['Diapers Pants', 'Baby Wipes', 'Baby Soap', 'Infant Cereal', 'Antiseptic Liquid',
     'Hand Sanitizer'],
+  // ---- Expansion wave 2 ----
+  meat: ['Chicken Curry Cut', 'Chicken Breast Boneless', 'Rohu Fish Cut', 'Katla Fish Cut',
+    'Mutton Curry Cut', 'Country Eggs Desi'],
+  breakfast: ['Corn Flakes', 'Rolled Oats', 'Mixed Fruit Jam', 'Peanut Butter Creamy', 'Honey',
+    'Tomato Ketchup Squeezy', 'Eggless Mayonnaise', 'Idli Dosa Batter'],
+  frozen: ['Frozen French Fries', 'Frozen Green Peas', 'Veg Momos Frozen',
+    'Whole Wheat Chapati Frozen', 'Vanilla Ice Cream Tub'],
+  dryfruits: ['Almonds California', 'Cashew Whole W240', 'Raisins Kishmish',
+    'Phool Makhana Fox Nuts', 'Dates Khajur Seedless', 'Gud Jaggery Cubes'],
+  pharma: ['Paracetamol 500mg Tablets', 'Antacid Fruit Salt Sachet', 'Pain Relief Balm',
+    'Cough Syrup', 'ORS Electrolyte Powder', 'Multivitamin Tablets', 'Vapo Rub',
+    'Antiseptic Cream'],
+  pooja: ['Agarbatti Incense Sticks', 'Camphor Kapur Tablets', 'Clay Diya Set',
+    'Cotton Wicks Batti', 'Kumkum Roli Powder', 'Matchbox Bundle', 'Nariyal Coconut for Pooja'],
+  homekitchen: ['LED Bulb 9W', 'AA Batteries', 'Candles White', 'Gas Lighter', 'Plastic Bucket',
+    'Steel Scrubber', 'Kitchen Knife'],
+  stationery: ['Ball Pen Blue', 'Pencil HB', 'Long Notebook 172 Pages', 'Eraser & Sharpener Set',
+    'A4 Copier Paper', 'Glue Stick', 'Geometry Box'],
+  beauty: ['Matte Lipstick', 'Kajal Pencil', 'Lip Balm', 'Nail Polish', 'Bindi Pack', 'Sindoor',
+    'Hair Colour'],
+  pet: ['Adult Dog Dry Food', 'Dog Biscuits Treats', 'Adult Cat Dry Food', 'Pet Shampoo'],
+  electronics: ['USB-C Charging Cable', 'Fast Charger Adapter 20W', 'Wired Earphones',
+    'Power Bank 10000mAh', 'Tempered Glass Screen Guard', 'Rechargeable Torch'],
+  paan: ['Meetha Saunf Mukhwas', 'Paan Masala Mouth Freshener', 'Mint Candy Roll',
+    'Green Cardamom Elaichi', 'Digestive Anardana Goli'],
 };
 
 // ---- Deterministic pseudo-random (mulberry32) ------------------------------
