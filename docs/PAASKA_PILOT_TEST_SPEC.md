@@ -28,7 +28,7 @@ state → owner → customer message → merchant action → Console visibility 
 |---|---|
 | **Flagship Merchant** | Bighi Brothers Mart (`id: bighi-brothers-mart`) |
 | **Locality / Base** | Bank More, Dhanbad · 826001 (`lat: 23.7957, lng: 86.4304`) |
-| **Catalogue Base** | 2,145 SKUs across 26 categories (191 SKUs with studio pack shots) |
+| **Catalogue Base** | 2,176 SKUs across 26 categories (277 SKUs with dedicated studio pack shots, 136 master pack assets) |
 | **Fulfilment Modes** | **Mode A:** 10-Min Instant Delivery (Dukaan boy) · **Mode B:** Self Pickup (Free, valid 12 hrs) |
 | **Payment Tenders** | Direct UPI (to merchant VPA), COD, Udhaar (Khata ledger) |
 | **Handoff Verification** | 4-digit numeric OTP for Self-Pickup collection |
