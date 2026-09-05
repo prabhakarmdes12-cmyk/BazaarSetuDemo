@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 45,
-  "totalSkus": 68,
+  "totalAssets": 55,
+  "totalSkus": 86,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -757,6 +757,204 @@
       "width": 600,
       "height": 600,
       "bytes": 37039,
+      "verified": true
+    },
+    "bb-01783": {
+      "skuId": "bb-01783",
+      "name": "Mangaldeep Agarbatti Incense Sticks",
+      "unit": "50 sticks",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/agarbatti-sandalwood-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 53036,
+      "verified": true
+    },
+    "bb-01742": {
+      "skuId": "bb-01742",
+      "name": "Cycle Agarbatti Incense Sticks",
+      "unit": "50 sticks",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/agarbatti-sandalwood-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 53036,
+      "verified": true
+    },
+    "bb-01793": {
+      "skuId": "bb-01793",
+      "name": "Zed Black Agarbatti Incense Sticks",
+      "unit": "50 sticks",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/agarbatti-rose-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 69179,
+      "verified": true
+    },
+    "bb-01788": {
+      "skuId": "bb-01788",
+      "name": "Mangaldeep Ghee Diya Batti Ready",
+      "unit": "6 pcs",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/cow-ghee-diya-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 69331,
+      "verified": true
+    },
+    "bb-01763": {
+      "skuId": "bb-01763",
+      "name": "Local Ghee Diya Batti Ready",
+      "unit": "6 pcs",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/cow-ghee-diya-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 69331,
+      "verified": true
+    },
+    "bb-01745": {
+      "skuId": "bb-01745",
+      "name": "Cycle Camphor Kapur Tablets",
+      "unit": "50 g",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/camphor-kapoor-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49649,
+      "verified": true
+    },
+    "bb-01779": {
+      "skuId": "bb-01779",
+      "name": "Mangalam Camphor Kapur Tablets",
+      "unit": "50 g",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/camphor-kapoor-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49649,
+      "verified": true
+    },
+    "bb-01768": {
+      "skuId": "bb-01768",
+      "name": "Local Kumkum Roli Powder",
+      "unit": "50 g",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/roli-kumkum-chandan-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 72334,
+      "verified": true
+    },
+    "bb-01764": {
+      "skuId": "bb-01764",
+      "name": "Local Haldi Chandan Tika",
+      "unit": "50 g",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/roli-kumkum-chandan-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 72334,
+      "verified": true
+    },
+    "bb-01766": {
+      "skuId": "bb-01766",
+      "name": "Local Havan Samagri",
+      "unit": "500 g",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/hawan-samagri-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61185,
+      "verified": true
+    },
+    "bb-01791": {
+      "skuId": "bb-01791",
+      "name": "Patanjali Havan Samagri",
+      "unit": "500 g",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/hawan-samagri-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61185,
+      "verified": true
+    },
+    "bb-01771": {
+      "skuId": "bb-01771",
+      "name": "Local Mauli Kalava Sacred Thread",
+      "unit": "1 roll",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/mauli-kalawa-thread.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 63578,
+      "verified": true
+    },
+    "bb-01753": {
+      "skuId": "bb-01753",
+      "name": "Local Brass Diya Lamp",
+      "unit": "1 pc small",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/brass-diya-single.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42684,
+      "verified": true
+    },
+    "bb-01754": {
+      "skuId": "bb-01754",
+      "name": "Local Brass Diya Lamp",
+      "unit": "1 pc medium",
+      "categoryId": "pooja",
+      "path": "/catalog/items/pooja/brass-diya-single.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42684,
+      "verified": true
+    },
+    "bb-01559": {
+      "skuId": "bb-01559",
+      "name": "Bihar Special Phool Makhana Fox Nuts",
+      "unit": "250 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62582,
+      "verified": true
+    },
+    "bb-01580": {
+      "skuId": "bb-01580",
+      "name": "Happilo Phool Makhana Fox Nuts",
+      "unit": "250 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62582,
+      "verified": true
+    },
+    "bb-01600": {
+      "skuId": "bb-01600",
+      "name": "Local Phool Makhana Fox Nuts",
+      "unit": "250 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62582,
+      "verified": true
+    },
+    "bb-00434": {
+      "skuId": "bb-00434",
+      "name": "Bikaji Chana Jor Garam",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/dryfruits/roasted-chana-sattu-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62156,
       "verified": true
     }
   }

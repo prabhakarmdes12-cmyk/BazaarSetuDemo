@@ -105,6 +105,28 @@ const SKU_ASSETS = {
   'bb-01029': 'household/toilet-cleaner-1l.jpg',
   'bb-01024': 'household/pine-floor-cleaner-1l.jpg',
   'bb-00993': 'household/pine-floor-cleaner-1l.jpg',
+
+  // ---- Batch 2 -------------------------------------------------------------
+  // Pooja & festive needs
+  'bb-01783': 'pooja/agarbatti-sandalwood-box.jpg',
+  'bb-01742': 'pooja/agarbatti-sandalwood-box.jpg',
+  'bb-01793': 'pooja/agarbatti-rose-box.jpg',
+  'bb-01788': 'pooja/cow-ghee-diya-pack.jpg',
+  'bb-01763': 'pooja/cow-ghee-diya-pack.jpg',
+  'bb-01745': 'pooja/camphor-kapoor-box.jpg',
+  'bb-01779': 'pooja/camphor-kapoor-box.jpg',
+  'bb-01768': 'pooja/roli-kumkum-chandan-pack.jpg',
+  'bb-01764': 'pooja/roli-kumkum-chandan-pack.jpg',
+  'bb-01766': 'pooja/hawan-samagri-500g.jpg',
+  'bb-01791': 'pooja/hawan-samagri-500g.jpg',
+  'bb-01771': 'pooja/mauli-kalawa-thread.jpg',
+  'bb-01753': 'pooja/brass-diya-single.jpg',
+  'bb-01754': 'pooja/brass-diya-single.jpg',
+  // Dry fruits & regional staples
+  'bb-01559': 'dryfruits/phool-makhana-250g.jpg',
+  'bb-01580': 'dryfruits/phool-makhana-250g.jpg',
+  'bb-01600': 'dryfruits/phool-makhana-250g.jpg',
+  'bb-00434': 'dryfruits/roasted-chana-sattu-500g.jpg',
 };
 
 const EXPECTED_PX = 600;

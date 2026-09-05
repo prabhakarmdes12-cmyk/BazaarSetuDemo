@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 68 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 86 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25731,7 +25731,25 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01013": "/catalog/items/household/toilet-cleaner-1l.jpg",
   "bb-01029": "/catalog/items/household/toilet-cleaner-1l.jpg",
   "bb-01024": "/catalog/items/household/pine-floor-cleaner-1l.jpg",
-  "bb-00993": "/catalog/items/household/pine-floor-cleaner-1l.jpg"
+  "bb-00993": "/catalog/items/household/pine-floor-cleaner-1l.jpg",
+  "bb-01783": "/catalog/items/pooja/agarbatti-sandalwood-box.jpg",
+  "bb-01742": "/catalog/items/pooja/agarbatti-sandalwood-box.jpg",
+  "bb-01793": "/catalog/items/pooja/agarbatti-rose-box.jpg",
+  "bb-01788": "/catalog/items/pooja/cow-ghee-diya-pack.jpg",
+  "bb-01763": "/catalog/items/pooja/cow-ghee-diya-pack.jpg",
+  "bb-01745": "/catalog/items/pooja/camphor-kapoor-box.jpg",
+  "bb-01779": "/catalog/items/pooja/camphor-kapoor-box.jpg",
+  "bb-01768": "/catalog/items/pooja/roli-kumkum-chandan-pack.jpg",
+  "bb-01764": "/catalog/items/pooja/roli-kumkum-chandan-pack.jpg",
+  "bb-01766": "/catalog/items/pooja/hawan-samagri-500g.jpg",
+  "bb-01791": "/catalog/items/pooja/hawan-samagri-500g.jpg",
+  "bb-01771": "/catalog/items/pooja/mauli-kalawa-thread.jpg",
+  "bb-01753": "/catalog/items/pooja/brass-diya-single.jpg",
+  "bb-01754": "/catalog/items/pooja/brass-diya-single.jpg",
+  "bb-01559": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
+  "bb-01580": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
+  "bb-01600": "/catalog/items/dryfruits/phool-makhana-250g.jpg",
+  "bb-00434": "/catalog/items/dryfruits/roasted-chana-sattu-500g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
