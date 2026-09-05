@@ -22,6 +22,12 @@ export interface Shop {
   upiId?: string;
   isFavorite?: boolean;
   distance?: number;
+  isDeliverable?: boolean;
+  deliveryRadiusKm?: number;
+  serviceablePincodes?: string;
+  minOrderAmount?: number;
+  deliveryFee?: number;
+  freeDeliveryAbove?: number;
   createdAt: string;
 }
 

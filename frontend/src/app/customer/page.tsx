@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -26,8 +26,22 @@ import {
   GuestCartItem,
 } from '@/lib/guestCart';
 import { track } from '@/lib/analytics';
+import {
+  DeliveryAddress,
+  formatAddress,
+  getAddresses,
+  getDefaultAddress,
+  shortAddress,
+} from '@/lib/address';
 
 const SHOP_CATEGORIES = ['Sab', 'Dairy', 'Grains', 'Oil', 'Snacks', 'Beverages', 'Home Care', 'Personal Care'];
+
+interface CustomerLocation {
+  label: string;
+  pincode: string;
+  lat?: number;
+  lng?: number;
+}
 
 // Built-in starter pilot products for Ashok Nagar / Ranchi so shelves are immediately populated
 const FALLBACK_PILOT_PRODUCTS: Product[] = [
@@ -190,6 +204,15 @@ export default function CustomerHomePage() {
   const [cartCount, setCartCount] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
   const [cartQuantities, setCartQuantities] = useState<Record<string, number>>({});
+  const [locationOpen, setLocationOpen] = useState(false);
+  const [savedAddresses, setSavedAddresses] = useState<DeliveryAddress[]>([]);
+  const [pincodeInput, setPincodeInput] = useState('');
+  const [locationError, setLocationError] = useState('');
+  const [customerLocation, setCustomerLocation] = useState<CustomerLocation>({
+    label: 'Ashok Nagar Road No. 4, Ranchi',
+    pincode: '826001',
+  });
+  const loadRequestRef = useRef(0);
 
   const refreshCartState = useCallback(() => {
     const items = getGuestCart();
@@ -204,9 +227,35 @@ export default function CustomerHomePage() {
     setCartQuantities(qtyMap);
   }, []);
 
+  useEffect(() => {
+    const addresses = getAddresses();
+    const defaultAddress = getDefaultAddress();
+    setSavedAddresses(addresses);
+    if (defaultAddress) {
+      setCustomerLocation({
+        label: shortAddress(defaultAddress),
+        pincode: defaultAddress.pincode,
+        lat: defaultAddress.lat,
+        lng: defaultAddress.lng,
+      });
+    }
+  }, []);
+
   const loadData = useCallback(async () => {
+    const requestId = ++loadRequestRef.current;
+    setLoading(true);
     try {
-      const res = await api.get<{ success: boolean; data: Shop[] }>('/api/shops', token || undefined);
+      const query = new URLSearchParams({ pincode: customerLocation.pincode });
+      if (customerLocation.lat !== undefined && customerLocation.lng !== undefined) {
+        query.set('lat', String(customerLocation.lat));
+        query.set('lng', String(customerLocation.lng));
+        query.set('sort', 'distance');
+      }
+      const res = await api.get<{ success: boolean; data: Shop[] }>(
+        `/api/shops?${query.toString()}`,
+        token || undefined,
+      );
+      if (requestId !== loadRequestRef.current) return;
       if (res.success && res.data.length > 0) {
         setShops(res.data);
         // Load live products from the primary pilot shop
@@ -216,6 +265,7 @@ export default function CustomerHomePage() {
             `/api/shops/${primaryShopId}/products`,
             token || undefined
           );
+          if (requestId !== loadRequestRef.current) return;
           if (prodRes.success && prodRes.data.length > 0) {
             // Merge with fallback products to guarantee rich coverage
             const serverProducts = prodRes.data;
@@ -232,10 +282,13 @@ export default function CustomerHomePage() {
         }
       }
     } catch (err) {
-      console.error('Failed to load shops:', err);
+      if (requestId === loadRequestRef.current) {
+        console.error('Failed to load shops:', err);
+      }
+    } finally {
+      if (requestId === loadRequestRef.current) setLoading(false);
     }
-    setLoading(false);
-  }, [token]);
+  }, [token, customerLocation]);
 
   useEffect(() => {
     track({ type: 'view', page: '/customer' });
@@ -263,6 +316,30 @@ export default function CustomerHomePage() {
   const handleUpdateQuantity = (productId: string, quantity: number) => {
     updateGuestQuantity(productId, quantity);
     refreshCartState();
+  };
+
+  const selectSavedAddress = (address: DeliveryAddress) => {
+    setCustomerLocation({
+      label: shortAddress(address),
+      pincode: address.pincode,
+      lat: address.lat,
+      lng: address.lng,
+    });
+    setLocationError('');
+    setLocationOpen(false);
+  };
+
+  const applyPincode = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const pincode = pincodeInput.trim();
+    if (!/^\d{6}$/.test(pincode)) {
+      setLocationError('Please enter a valid 6-digit PIN code.');
+      return;
+    }
+    setCustomerLocation({ label: `PIN ${pincode}`, pincode });
+    setPincodeInput('');
+    setLocationError('');
+    setLocationOpen(false);
   };
 
   // Filtered by search and category
@@ -319,10 +396,16 @@ export default function CustomerHomePage() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
             </div>
-            <p className="text-sm font-bold text-on-surface flex items-center gap-1 cursor-pointer hover:text-primary transition-colors">
-              <span>Ashok Nagar Road No. 4, Ranchi</span>
+            <button
+              type="button"
+              onClick={() => setLocationOpen(true)}
+              aria-haspopup="dialog"
+              className="text-left text-sm font-bold text-on-surface flex items-center gap-1 cursor-pointer hover:text-primary transition-colors"
+            >
+              <span className="max-w-[240px] truncate">{customerLocation.label}</span>
+              <span className="text-[11px] text-on-surface-variant">{customerLocation.pincode}</span>
               <Icon name="keyboard_arrow_down" size="sm" />
-            </p>
+            </button>
           </div>
         </div>
 
@@ -337,6 +420,88 @@ export default function CustomerHomePage() {
           </button>
         </div>
       </div>
+
+      {locationOpen && (
+        <div
+          className="fixed inset-0 z-[80] flex items-end justify-center bg-black/60 p-0 backdrop-blur-sm sm:items-center sm:p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="location-dialog-title"
+          onMouseDown={(event) => {
+            if (event.currentTarget === event.target) setLocationOpen(false);
+          }}
+        >
+          <div className="w-full max-w-lg rounded-t-3xl bg-surface-container-lowest p-6 shadow-2xl sm:rounded-3xl">
+            <div className="mb-5 flex items-start justify-between gap-4">
+              <div>
+                <h2 id="location-dialog-title" className="font-headline text-xl font-black text-on-surface">
+                  Choose delivery location
+                </h2>
+                <p className="mt-1 text-xs text-on-surface-variant">
+                  We’ll instantly check which local dukaans deliver here.
+                </p>
+              </div>
+              <button
+                type="button"
+                aria-label="Close location picker"
+                onClick={() => setLocationOpen(false)}
+                className="rounded-full bg-surface-container p-2 text-on-surface-variant"
+              >
+                <Icon name="close" size="sm" />
+              </button>
+            </div>
+
+            {savedAddresses.length > 0 && (
+              <div className="mb-5 space-y-2">
+                <p className="text-[11px] font-black uppercase tracking-wider text-on-surface-variant">Saved addresses</p>
+                {savedAddresses.map((address) => (
+                  <button
+                    type="button"
+                    key={address.id}
+                    onClick={() => selectSavedAddress(address)}
+                    className="flex w-full items-start gap-3 rounded-2xl border border-transparent bg-surface-container-low p-3 text-left transition-colors hover:border-primary/30"
+                  >
+                    <span className="rounded-xl bg-primary/10 p-2 text-primary">
+                      <Icon name={address.label === 'Ghar' ? 'home' : 'location_on'} size="sm" filled />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-sm font-extrabold text-on-surface">{address.label}</span>
+                      <span className="block truncate text-xs text-on-surface-variant">{formatAddress(address)}</span>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <form onSubmit={applyPincode} className="space-y-3">
+              <label htmlFor="customer-pincode" className="text-sm font-bold text-on-surface">
+                Or enter a PIN code
+              </label>
+              <div className="flex gap-2">
+                <input
+                  id="customer-pincode"
+                  type="text"
+                  inputMode="numeric"
+                  autoComplete="postal-code"
+                  maxLength={6}
+                  pattern="[0-9]{6}"
+                  value={pincodeInput}
+                  onChange={(event) => {
+                    setPincodeInput(event.target.value.replace(/\D/g, '').slice(0, 6));
+                    setLocationError('');
+                  }}
+                  placeholder="e.g. 826001"
+                  className="min-w-0 flex-1 rounded-xl border-none bg-surface-container-low px-4 py-3.5 font-bold tracking-widest text-on-surface focus:ring-2 focus:ring-primary/30"
+                />
+                <button type="submit" className="rounded-xl bg-primary px-5 py-3 text-sm font-extrabold text-white active:scale-95">
+                  Check
+                </button>
+              </div>
+              {locationError && <p role="alert" className="text-xs font-semibold text-red-600">{locationError}</p>}
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* Instant Live Search */}
       <SearchBar
@@ -600,6 +765,7 @@ export default function CustomerHomePage() {
                     image={shop.image}
                     rating={shop.rating}
                     distance={shop.distance}
+                    isDeliverable={shop.isDeliverable}
                     isOpen={shop.isActive}
                     href={`/customer/shop/${shop.id}`}
                   />

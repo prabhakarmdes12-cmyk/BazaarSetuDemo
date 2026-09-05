@@ -11,6 +11,7 @@ interface ShopCardProps {
   image: string;
   rating: number;
   distance?: number;
+  isDeliverable?: boolean;
   isOpen: boolean;
   openStatusText?: string;
   href?: string;
@@ -28,6 +29,7 @@ export default function ShopCard({
   image,
   rating,
   distance,
+  isDeliverable,
   isOpen,
   openStatusText,
   href,
@@ -59,22 +61,36 @@ export default function ShopCard({
           )}
         </div>
 
-        <div className="absolute top-3 right-3">
-          <span className="bg-black/50 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-            <Icon name="bolt" size="sm" filled className="text-primary" />
-            {eta} mins
-          </span>
-        </div>
+        {isDeliverable !== false && (
+          <div className="absolute top-3 right-3">
+            <span className="bg-black/50 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+              <Icon name="bolt" size="sm" filled className="text-primary" />
+              {isDeliverable ? '10' : eta} mins
+            </span>
+          </div>
+        )}
 
-        {distance != null && (
+        {distance != null && isDeliverable === undefined && (
           <div className="absolute bottom-3 left-3">
             <span className="bg-surface-container-lowest/90 backdrop-blur text-on-surface text-[11px] font-bold px-2 py-1 rounded-md flex items-center gap-1">
               <Icon name="distance" size="sm" className="text-on-surface-variant" />
-              {distance} km
+              {distance.toFixed(1)} km
             </span>
           </div>
         )}
       </div>
+
+      {isDeliverable !== undefined && (
+        <div className={`mb-4 rounded-xl px-3 py-2.5 text-xs font-extrabold ${
+          isDeliverable
+            ? 'bg-emerald-500/10 text-emerald-700'
+            : 'bg-amber-500/10 text-amber-800'
+        }`}>
+          {isDeliverable
+            ? `⚡ 10 mins${distance != null ? ` (${distance.toFixed(1)} km away)` : ' • Delivery available'}`
+            : `⚠️ ${distance != null ? `${distance.toFixed(1)} km away • ` : ''}🛍️ Self-Pickup Only`}
+        </div>
+      )}
 
       <div className="flex justify-between items-start mb-2">
         <h4 className="font-headline font-bold text-lg text-on-surface @lg:text-xl">{name}</h4>
