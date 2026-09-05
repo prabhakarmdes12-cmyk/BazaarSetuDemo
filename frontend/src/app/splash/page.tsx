@@ -75,12 +75,12 @@ export default function SplashPage() {
             <div className="flex flex-col items-center">
               <ChitiBazaarLogo size={48} />
               <p className="font-headline italic text-sm font-semibold text-on-surface-variant mt-2">
-                Fresh Veggies &amp; Kirana in 10 mins
+                Jo chahiye, paas se &bull; 10 mins delivery
               </p>
             </div>
             <div className="pt-3">
               <p className="text-on-surface-variant font-medium text-base leading-relaxed max-w-[260px] mx-auto">
-                Dukaan se seedha baat karke order karein
+                Apni local dukaan se seedha order karein
               </p>
             </div>
           </div>

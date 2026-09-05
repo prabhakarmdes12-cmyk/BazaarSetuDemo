@@ -1,123 +1,45 @@
-# Chiti Bazaar 🛒⚡
+# Paaska ⚡🍃
 
-> **Hyperlocal 10-Minute Quick-Commerce & Digital Kirana Network**  
-> Bringing local neighborhood dukaans online with the speed, visual appetite, and convenience of 10-minute quick-commerce platforms, paired with a modern digital khata (credit ledger).
-
----
-
-## 🌟 Overview
-
-**Chiti Bazaar** bridges the gap between quick-commerce convenience and trusted local neighborhood stores. It empowers shoppers to order daily milk, fresh produce, atta, staples, and munchies in **10 minutes** from verified neighborhood dukaans, while giving merchants a luxury digital ledger to manage credit (udhaar), track payments, and send instant WhatsApp reminders.
-
-### Key Capabilities
-
-1. **⚡ Quick-Commerce Grade 10-Minute Customer Storefront (`/customer`)**:
-   - **Delivery Cockpit**: Live pulsing radar status (`⚡ Delivery in 10 mins`) with precise address selector.
-   - **Visual Category Strip**: Dairy & Breakfast, Atta & Dals, Munchies & Biscuits, Chai & Coffee, Cleaning & Hygiene.
-   - **Curated Live Grocery Shelves**:
-     - *Daily Milk & Breakfast* (Amul Taaza, Britannia Bread, Amul Butter, Tata Salt).
-     - *Atta, Rice, Dals & Oils* (Aashirvaad Chakki Atta, Fortune Sunflower Oil, Toor Dal, Chana Dal).
-     - *Munchies & Quick Bites* (Maggi 2-Min Noodles, Parle-G, Lay's, Red Label Tea).
-     - *Cleaning & Personal Care* (Surf Excel, Vim Bar, Dettol Soap, Colgate).
-   - **Interactive Product Cards**: High-resolution grocery photos on elevated plates, `⚡ 10m` tags, green discount badges (`20% OFF`), pack size pills (`500 ml pouch`, `5 kg bag`), bold prices (`₹28` / `₹35`), and instant `ADD +` / `- 1 +` steppers.
-   - **Floating Bottom Cart Dock**: Animated floating dock that slides up as items are added: `[ 🛒 {count} items · ₹{total} ] ─── [ View Cart ➔ ]`.
-   - **Verified Neighborhood Dukaans**: Showcases local partners (e.g. Gupta General Store, Kisan Fresh) fulfilling 10-min orders.
-
-2. **💳 Luxury Fintech Vendor Portal (`/vendor/udhaar`)**:
-   - **Stripe/CRED-Style Obsidian Ledger**: Deep obsidian card with metallic emerald borders and glowing balance metrics.
-   - **Credit Health Matrix**: Visual collection rate progress bars (100%), recovery DSO indicator, and overdue tracking.
-   - **One-Click WhatsApp Reminders**: Direct integration to send friendly settlement reminders via WhatsApp.
-   - **Seamless Role Switcher**: Quick toggle between Customer Storefront and Dukaan Partner portal.
-
-3. **🤖 Chitigram Calling & Voice Bridge**:
-   - WebRTC calling bridge between customer and shopkeeper with low-latency audio.
+> **"Jo chahiye, paas se."**  
+> Hyperlocal 10-Minute Instant Delivery & Counter Pickup Operating System for Neighborhood Dukaans.  
+> *Powered by Chiti Technologies*
 
 ---
 
-## 🎨 Design System: Obsidian Black & Fresh Leaf Green
+## 🏬 Overview
 
-Chiti Bazaar follows the **Chiti Technologies Unified Design System**:
-- **Palette**:
-  - Background Surface: Obsidian Black (`#070A07`)
-  - Elevated Containers: Dark Slate (`#0B100B`, `#121812`)
-  - Primary Brand & Glow: Fresh Leaf Green (`#10B981`, `#22C55E`, `#059669`)
-  - Accents: Emerald glow, subtle golden amber pills, crisp white badges
-- **Typography**:
-  - Headings / Display: **Outfit** (`font-headline`, 700/800/900 black)
-  - Body Text: **Inter** (`font-body`, 400/500/600)
-  - Numeric & Financial: **Outfit / JetBrains Mono** for clear, bold pricing and ledger metrics
-- **Visual Principles**:
-  - Glassmorphism (`backdrop-blur-xl`, subtle `border-white/5` - `border-white/10`)
-  - Micro-animations: pulsing delivery badges, smooth card hover lifts, animated quantity steppers
-  - High visual density with clean negative space — zero raw empty voids
+**Paaska** (built on the BazaarSetu commerce runtime) is a living local-commerce operating system. It bridges the gap between quick-commerce convenience and trusted neighborhood kiranas, starting with our pilot flagship: **Bighi Brothers Mart (Bank More, Dhanbad · 826001)**.
+
+Paaska allows shoppers to order daily milk, groceries, pooja essentials, produce, and medicines in **10 minutes** or choose **12-Hour Self Pickup (Free)** from verified local merchants, backed by a modern digital khata (credit ledger).
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+## 🚀 Key Capabilities Live in Pilot
 
-```
-chiti-bazaar/
-├── frontend/                     # Next.js 14 App Router
-│   ├── src/app/
-│   │   ├── customer/             # Quick-commerce grade Customer Storefront
-│   │   │   ├── cart/             # Cart review & checkout
-│   │   │   ├── orders/           # Live order tracking & history
-│   │   │   └── shop/[id]/        # Individual Dukaan catalog
-│   │   ├── vendor/               # Shopkeeper Cockpit
-│   │   │   ├── udhaar/           # Digital Khata / Credit Ledger
-│   │   │   ├── orders/           # Real-time incoming orders & status
-│   │   │   └── products/         # Inventory management
-│   │   ├── admin/                # Platform management
-│   │   └── login/                # Phone OTP authentication
-│   ├── src/components/           # Reusable UI & atomic design system
-│   └── src/lib/                  # Guest cart, analytics, API client
-├── backend/                      # Express.js REST + Socket.IO API
-│   ├── src/routes/               # Shops, products, cart, orders, udhaar
-│   ├── src/services/             # Radar, Shop Bot parser, Chitigram bridge
-│   └── prisma/                   # SQLite / PostgreSQL schema & seeds
-└── docs/                         # Architecture, design system & agent guides
-```
+1. **⚡ 10-Minute Instant Delivery & 12-Hour Self Pickup**:
+   - **Mode A (10-Min Delivery):** Instant doorstep delivery fulfilling local kirana orders in under 15–30 minutes with our bold 10-minute marketing anchor.
+   - **Mode B (Self Pickup):** Free takeaway with a generated **4-digit Pickup OTP** valid for 12 hours from Bighi Brothers Mart counter.
+2. **📦 Master Central Product Repository (2,145 SKUs · 26 Categories)**:
+   - **96 Studio Pack Shots** (600×600 JPG on clean studio sweep) covering 191 high-velocity SKUs.
+   - **Identity-Keyed Architecture:** Manifest keyed by `[categoryId, name, unit, slug]` ensuring zero image misattribution.
+3. **🔁 1-Tap "Buy Again" Retention Rail**:
+   - Horizontal carousel on `/customer` rendering past orders with a 1-tap re-order button into cart.
+4. **📥 Vendor Action Inbox**:
+   - Replaces static dashboards with an urgent operational queue: timer indicators, accept/pack buttons, reject reasons, and OTP verification.
+5. **⚠️ One-Tap Sahayata & Dispute Resolution**:
+   - Built-in reporting for missing, damaged, or delayed items with automatic operational telemetry.
 
 ---
 
-## 🚀 Quick Start (Local Development)
+## 🛠️ Tech Stack & Invariants
 
-### 1. Backend Service
-```bash
-cd backend
-npm install
-npm run dev
-# Starts on http://localhost:5000
-```
-
-### 2. Frontend Application
-```bash
-cd frontend
-npm install
-npm run dev -- -p 3005
-# Starts on http://localhost:3005
-```
-
-Open **`http://localhost:3005/customer`** in your browser to experience the 10-minute quick-commerce storefront.
+- **Frontend:** Next.js 14/16 (App Router), TypeScript, Tailwind CSS, Framer Motion, Lucide icons.
+- **Backend:** Node.js, Express, Prisma ORM, SQLite (Dev) / PostgreSQL (Prod), WebSockets.
+- **Control Plane:** Chiti Console Integration (`D:\Projects\chiti-console`) with Fulfilment & Money Radars.
 
 ---
 
-## 🌐 Zero-Config Automated Deployment (Vercel)
+## 🧪 Pilot Verification & Testing
 
-- Repository: [`prabhakarmdes12-cmyk/chiti-bazaar`](https://github.com/prabhakarmdes12-cmyk/chiti-bazaar.git)
-- Deployment on Vercel is **fully automated**:
-  - Root configuration has been streamlined for native Next.js build detection.
-  - Pushing to `main` or `production` triggers instant Vercel builds without any manual settings required.
-  - Production build compiles **32/32 routes with 0 errors**.
-
----
-
-## 🧪 Testing & Verification
-
-```bash
-# Backend unit & integration tests (55/55 passing)
-cd backend && npm test
-
-# Frontend typecheck & production build
-cd frontend && npm run build
-```
+See the full **50 Hostile Transactions Testing Specification**:
+[PAASKA_PILOT_TEST_SPEC.md](file:///D:/Projects/BazaarSetu/docs/PAASKA_PILOT_TEST_SPEC.md)

@@ -4,10 +4,10 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'Chiti Bazaar - Fresh Veggies & Kirana in 10 Mins',
-  description: 'Fresh veggies & kirana in 10 mins from your trusted neighborhood dukaans. Local shops, delivered to your doorstep.',
+  title: 'Paaska - 10-Minute Instant Delivery | Apne Paas Ki Dukaan',
+  description: 'Jo chahiye, paas se. 10-minute instant delivery & self pickup from your trusted local dukaans in Dhanbad. Powered by Chiti Technologies.',
   manifest: '/manifest.json',
-  appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'Chiti Bazaar' },
+  appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'Paaska' },
 };
 
 export const viewport: Viewport = {

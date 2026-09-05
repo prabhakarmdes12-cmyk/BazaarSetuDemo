@@ -104,8 +104,7 @@ export default function ChitiBazaarLogo({
         className="font-headline font-extrabold tracking-tight leading-none"
         style={{ fontSize: Math.round(size * 0.62) }}
       >
-        <span className="text-white">Chiti</span>{' '}
-        <span className="leaf-text-gradient">Bazaar</span>
+        <span className="text-white">Paas</span><span className="leaf-text-gradient">ka</span>
       </span>
     </div>
   );
