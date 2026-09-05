@@ -215,7 +215,7 @@ export default function LoginPage() {
                   className="mt-0.5 w-5 h-5 accent-primary"
                 />
                 <span className="text-sm text-on-surface-variant leading-relaxed">
-                  Main apni jaankari ka istemal samajhkar, Chiti Bazaar ki{' '}
+                  Main apni jaankari ka istemal samajhkar, Paaska ki{' '}
                   <a href="/privacy" className="text-primary font-semibold underline">Privacy Policy</a> aur{' '}
                   <a href="/terms" className="text-primary font-semibold underline">Terms &amp; Conditions</a> seekar
                   accept karta/karti hoon.

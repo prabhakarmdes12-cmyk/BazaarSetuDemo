@@ -45,7 +45,7 @@ export default function ProfilePage() {
     { icon: 'location_on', title: 'Bachaya hua pata (Saved Addresses)', subtitle: 'Manage your delivery locations' },
     { icon: 'account_balance_wallet', title: 'Mera Khata (Digital Ledger/Balance)', subtitle: 'Apni dukaan ka khata dekhein' },
     { icon: 'help_outline', title: 'Madad aur Support (Help)', subtitle: '24/7 customer assistance' },
-    { icon: 'info', title: 'Chiti Bazaar ke baare mein', subtitle: 'Version 2.4.0' },
+    { icon: 'info', title: 'Paaska ke baare mein', subtitle: 'Version 2.4.0' },
     { icon: 'privacy_tip', title: 'Privacy Policy', subtitle: 'Aapka data kaise handle hota hai', href: '/privacy' },
   ];
 

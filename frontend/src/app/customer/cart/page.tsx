@@ -211,7 +211,7 @@ export default function CartPage() {
           </button>
           <h1 className="font-headline font-bold text-lg tracking-tight text-on-surface">Aapka cart</h1>
         </div>
-        <span className="font-headline font-extrabold text-primary italic">Chiti Bazaar</span>
+        <span className="font-headline font-extrabold text-primary italic">Paaska</span>
       </header>
 
       <main className="pt-24 px-4 max-w-2xl mx-auto space-y-8">

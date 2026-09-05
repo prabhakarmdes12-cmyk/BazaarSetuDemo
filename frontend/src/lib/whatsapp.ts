@@ -8,7 +8,7 @@ export function buildWhatsAppLink(phone: string, text: string): string {
 export function buildOrderShareLink(shopName: string, orderId: string, amount: number, statusUrl: string): string {
   const shortId = orderId.slice(-6).toUpperCase();
   const text =
-    `Namaste! Maine ${shopName} se Chiti Bazaar par ${amount} rupaye ka order diya hai (Order #${shortId}).\n\n` +
+    `Namaste! Maine ${shopName} se Paaska par ${amount} rupaye ka order diya hai (Order #${shortId}).\n\n` +
     `Status yahan dekhein: ${statusUrl}`;
   return `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
 }
@@ -16,7 +16,7 @@ export function buildOrderShareLink(shopName: string, orderId: string, amount: n
 export function buildInviteLink(phone: string, code: string, appUrl: string): string {
   return buildWhatsAppLink(
     phone,
-    `Namaste! Main Chiti Bazaar par hoon — apni local dukaan se online samaan mangwaata hoon. Aap bhi judiye aur udhaar khata online rakhein. Mera referral code: ${code}. Join karein: ${appUrl}?ref=${code}`,
+    `Namaste! Main Paaska par hoon — apni local dukaan se online samaan mangwaata hoon. Aap bhi judiye aur udhaar khata online rakhein. Mera referral code: ${code}. Join karein: ${appUrl}?ref=${code}`,
   );
 }
 

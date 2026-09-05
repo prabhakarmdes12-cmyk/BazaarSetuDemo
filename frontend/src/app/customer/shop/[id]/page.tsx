@@ -385,7 +385,7 @@ function RegularShopPage({ shopId }: { shopId: string }) {
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-headline font-extrabold text-2xl text-on-primary-fixed">Meet the Shopkeeper</h3>
-                    <p className="text-on-primary-fixed-variant mt-2 max-w-md leading-relaxed">&quot;Serving this community for over 25 years with honesty and fresh supplies. Now bringing our personalized service to your doorstep via Chiti Bazaar.&quot;</p>
+                    <p className="text-on-primary-fixed-variant mt-2 max-w-md leading-relaxed">&quot;Serving this community for over 25 years with honesty and fresh supplies. Now bringing our personalized service to your doorstep via Paaska.&quot;</p>
                   </div>
                 </div>
                 <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl" />

@@ -103,7 +103,7 @@ export default function VendorUdhaarPage() {
 
   const handleSendReminder = (customer: UdhaarCustomer) => {
     const text = encodeURIComponent(
-      `Namaste ${customer.customerName} ji, aapki dukaan ka bacha hua udhaar ₹${customer.balance} hai. Kripya UPI ya cash se settlement karein. Dhanyawaad - Chiti Bazaar.`
+      `Namaste ${customer.customerName} ji, aapki dukaan ka bacha hua udhaar ₹${customer.balance} hai. Kripya UPI ya cash se settlement karein. Dhanyawaad - Paaska.`
     );
     window.open(`https://wa.me/${customer.customerPhone.replace(/\D/g, '')}?text=${text}`, '_blank');
   };
@@ -131,7 +131,7 @@ export default function VendorUdhaarPage() {
     setIsModalOpen(false);
 
     const text = encodeURIComponent(
-      `Namaste ${customerName} ji, aapka dukaan khata Chiti Bazaar par open ho gaya hai. Bacha hua balance ₹${amt} hai. Dhanyawaad!`
+      `Namaste ${customerName} ji, aapka dukaan khata Paaska par open ho gaya hai. Bacha hua balance ₹${amt} hai. Dhanyawaad!`
     );
     window.open(`https://wa.me/${customerPhone.replace(/\D/g, '')}?text=${text}`, '_blank');
 

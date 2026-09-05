@@ -115,7 +115,7 @@ export default function ReferralPage() {
           </h3>
           <div className="space-y-3 text-sm text-on-surface-variant">
             <p className="flex gap-3"><span className="text-primary font-bold">1.</span> Apna referral code share karein</p>
-            <p className="flex gap-3"><span className="text-primary font-bold">2.</span> Dost Chiti Bazaar par register karein</p>
+            <p className="flex gap-3"><span className="text-primary font-bold">2.</span> Dost Paaska par register karein</p>
             <p className="flex gap-3"><span className="text-primary font-bold">3.</span> Har joined dost par reward paayein</p>
           </div>
         </section>

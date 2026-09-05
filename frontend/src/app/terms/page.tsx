@@ -3,7 +3,7 @@ import Link from 'next/link';
 const sections = [
   {
     title: '1. Service',
-    body: 'Chiti Bazaar ek local marketplace hai jo customers aur dukaano ko jodta hai — orders, udhaar (khata), payments aur chat ke liye.',
+    body: 'Paaska ek local marketplace hai jo customers aur dukaano ko jodta hai — orders, udhaar (khata), payments aur chat ke liye.',
   },
   {
     title: '2. Accounts aur OTP',
@@ -19,7 +19,7 @@ const sections = [
   },
   {
     title: '5. Fees',
-    body: 'Abhi Chiti Bazaar customers aur vendors se koi platform fee nahi leta. Aage koi fee aaye toh pehle inform kiya jayega.',
+    body: 'Abhi Paaska customers aur vendors se koi platform fee nahi leta. Aage koi fee aaye toh pehle inform kiya jayega.',
   },
   {
     title: '6. Account deletion',
@@ -27,7 +27,7 @@ const sections = [
   },
   {
     title: '7. Disclaimer',
-    body: 'Chiti Bazaar ek technology platform hai. Products ki quality, delivery aur service ki zimmedari vendor ki hai.',
+    body: 'Paaska ek technology platform hai. Products ki quality, delivery aur service ki zimmedari vendor ki hai.',
   },
 ];
 
@@ -36,7 +36,7 @@ export default function TermsPage() {
     <div className="bg-surface font-body text-on-surface min-h-screen flex flex-col items-center">
       <header className="w-full max-w-2xl px-8 pt-10 pb-6">
         <Link href="/" className="text-primary font-headline font-bold text-2xl italic tracking-tight">
-          Chiti Bazaar
+          Paaska
         </Link>
         <h1 className="font-headline font-extrabold text-3xl tracking-tight mt-4">Terms &amp; Conditions</h1>
         <p className="text-on-surface-variant mt-1">Effective date: August 2026</p>

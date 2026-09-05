@@ -52,7 +52,7 @@ export default function OrderConfirmPage() {
             <Icon name="arrow_back" />
           </button>
           <div className="flex flex-col">
-            <span className="font-headline font-extrabold text-primary italic leading-none">Chiti Bazaar</span>
+            <span className="font-headline font-extrabold text-primary italic leading-none">Paaska</span>
             <span className="font-inter text-[11px] font-medium uppercase tracking-wider text-on-surface-variant italic mt-0.5">
               Apni local dukaan, ab online
             </span>

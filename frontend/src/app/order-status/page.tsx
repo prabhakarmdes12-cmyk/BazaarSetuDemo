@@ -67,7 +67,7 @@ export default function PublicOrderStatusPage() {
           onClick={() => router.push('/')}
           className="mt-4 leaf-gradient text-on-primary font-headline font-bold px-8 py-3 rounded-xl active:scale-95 transition-all"
         >
-          Chiti Bazaar par jayein
+          Paaska par jayein
         </button>
       </div>
     );
@@ -76,7 +76,7 @@ export default function PublicOrderStatusPage() {
   return (
     <div className="bg-surface min-h-screen pb-16">
       <header className="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-top-bar flex justify-between items-center px-6 py-4">
-        <span className="font-headline font-extrabold text-primary italic leading-none">Chiti Bazaar</span>
+        <span className="font-headline font-extrabold text-primary italic leading-none">Paaska</span>
         <span className="font-inter text-[11px] font-medium uppercase tracking-wider text-on-surface-variant italic">
           Apni local dukaan, ab online
         </span>
@@ -190,7 +190,7 @@ export default function PublicOrderStatusPage() {
             className="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-1"
           >
             <Icon name="storefront" size="sm" />
-            Chiti Bazaar
+            Paaska
           </button>
         </section>
       </main>
