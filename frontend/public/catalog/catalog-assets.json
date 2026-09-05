@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 74,
-  "totalSkus": 135,
+  "totalAssets": 84,
+  "totalSkus": 160,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -1494,6 +1494,281 @@
       "width": 600,
       "height": 600,
       "bytes": 60002,
+      "verified": true
+    },
+    "bb-01118": {
+      "skuId": "bb-01118",
+      "name": "Dettol Original Germ Protection Soap",
+      "unit": "4 pack",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/antibacterial-soap-pack-of-3.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52124,
+      "verified": true
+    },
+    "bb-01161": {
+      "skuId": "bb-01161",
+      "name": "Lifebuoy Germ Protection Soap",
+      "unit": "4 pack",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/antibacterial-soap-pack-of-3.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52124,
+      "verified": true
+    },
+    "bb-01211": {
+      "skuId": "bb-01211",
+      "name": "Savlon Germ Protection Soap",
+      "unit": "4 pack",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/antibacterial-soap-pack-of-3.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52124,
+      "verified": true
+    },
+    "bb-01122": {
+      "skuId": "bb-01122",
+      "name": "Dove Cream Bar Beauty Bathing Bar",
+      "unit": "100 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/moisturising-beauty-bar-75g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 29728,
+      "verified": true
+    },
+    "bb-01166": {
+      "skuId": "bb-01166",
+      "name": "Lux Beauty Bathing Bar",
+      "unit": "100 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/moisturising-beauty-bar-75g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 29728,
+      "verified": true
+    },
+    "bb-01194": {
+      "skuId": "bb-01194",
+      "name": "Pears Beauty Bathing Bar",
+      "unit": "100 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/moisturising-beauty-bar-75g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 29728,
+      "verified": true
+    },
+    "bb-01149": {
+      "skuId": "bb-01149",
+      "name": "Head & Shoulders Anti-Dandruff Shampoo",
+      "unit": "180 ml",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/anti-dandruff-shampoo-180ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 32680,
+      "verified": true
+    },
+    "bb-01098": {
+      "skuId": "bb-01098",
+      "name": "Clinic Plus Anti-Dandruff Shampoo",
+      "unit": "180 ml",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/anti-dandruff-shampoo-180ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 32680,
+      "verified": true
+    },
+    "bb-01119": {
+      "skuId": "bb-01119",
+      "name": "Dove Anti-Dandruff Shampoo",
+      "unit": "180 ml",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/anti-dandruff-shampoo-180ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 32680,
+      "verified": true
+    },
+    "bb-01212": {
+      "skuId": "bb-01212",
+      "name": "Sensodyne Strong Teeth Toothpaste",
+      "unit": "100 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/herbal-red-toothpaste-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71276,
+      "verified": true
+    },
+    "bb-01104": {
+      "skuId": "bb-01104",
+      "name": "Colgate Strong Teeth Strong Teeth Toothpaste",
+      "unit": "100 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/mint-gel-toothpaste-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60206,
+      "verified": true
+    },
+    "bb-01197": {
+      "skuId": "bb-01197",
+      "name": "Pepsodent Strong Teeth Toothpaste",
+      "unit": "100 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/mint-gel-toothpaste-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60206,
+      "verified": true
+    },
+    "bb-01108": {
+      "skuId": "bb-01108",
+      "name": "Colgate Toothbrush",
+      "unit": "4 pack soft",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/soft-toothbrush-pack-of-2.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47576,
+      "verified": true
+    },
+    "bb-01187": {
+      "skuId": "bb-01187",
+      "name": "Oral-B Toothbrush",
+      "unit": "4 pack soft",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/soft-toothbrush-pack-of-2.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47576,
+      "verified": true
+    },
+    "bb-01216": {
+      "skuId": "bb-01216",
+      "name": "Sensodyne Toothbrush",
+      "unit": "4 pack soft",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/soft-toothbrush-pack-of-2.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47576,
+      "verified": true
+    },
+    "bb-01146": {
+      "skuId": "bb-01146",
+      "name": "Gillette Shaving Cream",
+      "unit": "70 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/shaving-foam-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 28702,
+      "verified": true
+    },
+    "bb-01184": {
+      "skuId": "bb-01184",
+      "name": "Old Spice Shaving Cream",
+      "unit": "70 g",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/shaving-foam-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 28702,
+      "verified": true
+    },
+    "bb-01144": {
+      "skuId": "bb-01144",
+      "name": "Gillette Manual Razor",
+      "unit": "1 razor",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/twin-blade-razors-pack-of-5.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60074,
+      "verified": true
+    },
+    "bb-01086": {
+      "skuId": "bb-01086",
+      "name": "7 O’clock Manual Razor",
+      "unit": "1 razor",
+      "categoryId": "personal",
+      "path": "/catalog/items/personal/twin-blade-razors-pack-of-5.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60074,
+      "verified": true
+    },
+    "bb-01328": {
+      "skuId": "bb-01328",
+      "name": "Pampers Diapers Pants",
+      "unit": "M · 36 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48291,
+      "verified": true
+    },
+    "bb-01280": {
+      "skuId": "bb-01280",
+      "name": "Huggies Diapers Pants",
+      "unit": "M · 36 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48291,
+      "verified": true
+    },
+    "bb-01311": {
+      "skuId": "bb-01311",
+      "name": "MamyPoko Diapers Pants",
+      "unit": "M · 36 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48291,
+      "verified": true
+    },
+    "bb-01329": {
+      "skuId": "bb-01329",
+      "name": "Pampers Diapers Pants",
+      "unit": "L · 34 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49277,
+      "verified": true
+    },
+    "bb-01281": {
+      "skuId": "bb-01281",
+      "name": "Huggies Diapers Pants",
+      "unit": "L · 34 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49277,
+      "verified": true
+    },
+    "bb-01312": {
+      "skuId": "bb-01312",
+      "name": "MamyPoko Diapers Pants",
+      "unit": "L · 34 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49277,
       "verified": true
     }
   }

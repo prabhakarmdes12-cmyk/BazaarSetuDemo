@@ -180,6 +180,33 @@ const SKU_ASSETS = {
   'bb-01447': 'instant/mixed-fruit-jam-500g.jpg',
   'bb-01473': 'instant/mixed-fruit-jam-500g.jpg',
   'bb-01491': 'instant/mixed-fruit-jam-500g.jpg',
+  // Personal care & hygiene
+  'bb-01118': 'personal/antibacterial-soap-pack-of-3.jpg',
+  'bb-01161': 'personal/antibacterial-soap-pack-of-3.jpg',
+  'bb-01211': 'personal/antibacterial-soap-pack-of-3.jpg',
+  'bb-01122': 'personal/moisturising-beauty-bar-75g.jpg',
+  'bb-01166': 'personal/moisturising-beauty-bar-75g.jpg',
+  'bb-01194': 'personal/moisturising-beauty-bar-75g.jpg',
+  'bb-01149': 'personal/anti-dandruff-shampoo-180ml.jpg',
+  'bb-01098': 'personal/anti-dandruff-shampoo-180ml.jpg',
+  'bb-01119': 'personal/anti-dandruff-shampoo-180ml.jpg',
+  'bb-01212': 'personal/herbal-red-toothpaste-150g.jpg',
+  'bb-01104': 'personal/mint-gel-toothpaste-150g.jpg',
+  'bb-01197': 'personal/mint-gel-toothpaste-150g.jpg',
+  'bb-01108': 'personal/soft-toothbrush-pack-of-2.jpg',
+  'bb-01187': 'personal/soft-toothbrush-pack-of-2.jpg',
+  'bb-01216': 'personal/soft-toothbrush-pack-of-2.jpg',
+  'bb-01146': 'personal/shaving-foam-200ml.jpg',
+  'bb-01184': 'personal/shaving-foam-200ml.jpg',
+  'bb-01144': 'personal/twin-blade-razors-pack-of-5.jpg',
+  'bb-01086': 'personal/twin-blade-razors-pack-of-5.jpg',
+  // Baby care
+  'bb-01328': 'baby/baby-diaper-pants-m-32.jpg',
+  'bb-01280': 'baby/baby-diaper-pants-m-32.jpg',
+  'bb-01311': 'baby/baby-diaper-pants-m-32.jpg',
+  'bb-01329': 'baby/baby-diaper-pants-l-30.jpg',
+  'bb-01281': 'baby/baby-diaper-pants-l-30.jpg',
+  'bb-01312': 'baby/baby-diaper-pants-l-30.jpg',
 };
 
 const EXPECTED_PX = 600;

@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 135 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 160 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25798,7 +25798,32 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00522": "/catalog/items/biscuits/butter-cookies-150g.jpg",
   "bb-01447": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
   "bb-01473": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
-  "bb-01491": "/catalog/items/instant/mixed-fruit-jam-500g.jpg"
+  "bb-01491": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
+  "bb-01118": "/catalog/items/personal/antibacterial-soap-pack-of-3.jpg",
+  "bb-01161": "/catalog/items/personal/antibacterial-soap-pack-of-3.jpg",
+  "bb-01211": "/catalog/items/personal/antibacterial-soap-pack-of-3.jpg",
+  "bb-01122": "/catalog/items/personal/moisturising-beauty-bar-75g.jpg",
+  "bb-01166": "/catalog/items/personal/moisturising-beauty-bar-75g.jpg",
+  "bb-01194": "/catalog/items/personal/moisturising-beauty-bar-75g.jpg",
+  "bb-01149": "/catalog/items/personal/anti-dandruff-shampoo-180ml.jpg",
+  "bb-01098": "/catalog/items/personal/anti-dandruff-shampoo-180ml.jpg",
+  "bb-01119": "/catalog/items/personal/anti-dandruff-shampoo-180ml.jpg",
+  "bb-01212": "/catalog/items/personal/herbal-red-toothpaste-150g.jpg",
+  "bb-01104": "/catalog/items/personal/mint-gel-toothpaste-150g.jpg",
+  "bb-01197": "/catalog/items/personal/mint-gel-toothpaste-150g.jpg",
+  "bb-01108": "/catalog/items/personal/soft-toothbrush-pack-of-2.jpg",
+  "bb-01187": "/catalog/items/personal/soft-toothbrush-pack-of-2.jpg",
+  "bb-01216": "/catalog/items/personal/soft-toothbrush-pack-of-2.jpg",
+  "bb-01146": "/catalog/items/personal/shaving-foam-200ml.jpg",
+  "bb-01184": "/catalog/items/personal/shaving-foam-200ml.jpg",
+  "bb-01144": "/catalog/items/personal/twin-blade-razors-pack-of-5.jpg",
+  "bb-01086": "/catalog/items/personal/twin-blade-razors-pack-of-5.jpg",
+  "bb-01328": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+  "bb-01280": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+  "bb-01311": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+  "bb-01329": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+  "bb-01281": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+  "bb-01312": "/catalog/items/baby/baby-diaper-pants-l-30.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
