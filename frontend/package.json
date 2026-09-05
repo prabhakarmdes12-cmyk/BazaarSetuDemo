@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "catalog:assets": "node scripts/gen-catalog-assets.cjs",
-    "catalog:gen": "node scripts/gen-catalog-assets.cjs && node scripts/gen-bighi-catalog.cjs"
+    "catalog:gen": "node scripts/gen-bighi-catalog.cjs && node scripts/gen-catalog-assets.cjs && node scripts/gen-bighi-catalog.cjs"
   },
   "dependencies": {
     "@chiti/ui": "^1.0.0",

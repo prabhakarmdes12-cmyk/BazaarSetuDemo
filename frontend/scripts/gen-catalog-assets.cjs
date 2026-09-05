@@ -268,6 +268,32 @@ const SKU_ASSET_ROWS = [
   ['drinks', "7Up Lime Soft Drink", "1.25 L", 'drinks/lemon-lime-soda-1250ml.jpg'],
   ['drinks', "Fanta Orange Fizzy Drink", "750 ml", 'drinks/orange-fizzy-750ml.jpg'],
   ['drinks', "Mirinda Orange Fizzy Drink", "750 ml", 'drinks/orange-fizzy-750ml.jpg'],
+  // Cold drinks, juices & mixers
+  ['drinks', "Real Fruit Power Apple Juice", "1 L carton", 'drinks/apple-juice-tetra-1l.jpg'],
+  ['drinks', "Tropicana Apple Juice", "1 L carton", 'drinks/apple-juice-tetra-1l.jpg'],
+  ['drinks', "Real Fruit Power Mixed Fruit Juice", "1 L carton", 'drinks/mixed-fruit-juice-tetra-1l.jpg'],
+  ['drinks', "Tropicana Mixed Fruit Juice", "1 L carton", 'drinks/mixed-fruit-juice-tetra-1l.jpg'],
+  ['drinks', "Paper Boat Guava Chili Juice", "1 L carton", 'drinks/guava-chili-juice-1l.jpg'],
+  ['drinks', "Real Fruit Power Guava Chili Juice", "1 L carton", 'drinks/guava-chili-juice-1l.jpg'],
+  ['drinks', "Real Tender Coconut Water", "200 ml", 'drinks/coconut-water-250ml.jpg'],
+  ['drinks', "Coco Tender Coconut Water", "200 ml", 'drinks/coconut-water-250ml.jpg'],
+  ['drinks', "Red Bull Energy Drink", "250 ml can", 'drinks/energy-drink-can-250ml.jpg'],
+  ['drinks', "Sting Energy Drink", "250 ml can", 'drinks/energy-drink-can-250ml.jpg'],
+  ['drinks', "Monster Energy Drink", "250 ml can", 'drinks/energy-drink-can-250ml.jpg'],
+  ['drinks', "Paper Boat Jeera Masala Soda", "600 ml", 'drinks/jeera-masala-soda-600ml.jpg'],
+  ['drinks', "Campa Jeera Masala Soda", "600 ml", 'drinks/jeera-masala-soda-600ml.jpg'],
+  ['drinks', "Local Jeera Masala Soda", "600 ml", 'drinks/jeera-masala-soda-600ml.jpg'],
+  ['drinks', "Bisleri Packaged Water", "1 L bottle", 'drinks/mineral-water-1l.jpg'],
+  ['drinks', "Aquafina Packaged Water", "1 L bottle", 'drinks/mineral-water-1l.jpg'],
+  ['drinks', "Kinley Packaged Water", "1 L bottle", 'drinks/mineral-water-1l.jpg'],
+  ['drinks', "Amul Lassi Sweet", "200 ml", 'drinks/lassi-bottle-200ml.jpg'],
+  ['drinks', "Mother Dairy Lassi Sweet", "200 ml", 'drinks/lassi-bottle-200ml.jpg'],
+  // Breakfast & cereals
+  ['breakfast', "Kellogg\u2019s Corn Flakes", "475 g", 'breakfast/corn-flakes-500g.jpg'],
+  ['breakfast', "Bagrry\u2019s Corn Flakes", "475 g", 'breakfast/corn-flakes-500g.jpg'],
+  ['breakfast', "Patanjali Corn Flakes", "475 g", 'breakfast/corn-flakes-500g.jpg'],
+  ['breakfast', "Kellogg\u2019s Chocos Cereal", "300 g", 'breakfast/choco-flakes-375g.jpg'],
+  ['breakfast', "Bagrry\u2019s Chocos Cereal", "300 g", 'breakfast/choco-flakes-375g.jpg'],
 ];
 
 const EXPECTED_PX = 600;
