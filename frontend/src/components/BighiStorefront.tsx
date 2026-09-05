@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Icon from './ui/Icon';
+import CatalogTile from './CatalogTile';
 import BighiProductCard, { CatalogProduct } from './BighiProductCard';
 import PromoCarousels from './PromoCarousels';
 import FloatingCartDock from './FloatingCartDock';
@@ -357,14 +358,16 @@ export default function BighiStorefront() {
                         : 'bg-transparent border-transparent text-on-surface-variant hover:bg-surface-container-high'
                     }`}
                   >
-                    <span
-                      className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                      style={{
-                        background: `linear-gradient(135deg, ${c.from}33, ${c.to}22)`,
-                      }}
-                    >
-                      <Icon name={c.icon} filled size="sm" className="text-white" />
-                    </span>
+                    <CatalogTile
+                      image={c.image}
+                      icon={c.icon}
+                      from={c.from}
+                      to={c.to}
+                      name={c.label}
+                      className="w-8 h-8 shrink-0"
+                      rounded="rounded-lg"
+                      iconClassName="text-sm"
+                    />
                     <span className="leading-tight">{c.label}</span>
                     <span className="ml-auto text-[10px] text-on-surface-variant/70 tabular-nums">
                       {BIGHI_CATEGORY_COUNTS[c.label]}
@@ -391,12 +394,16 @@ export default function BighiStorefront() {
                     className="mb-10 scroll-mt-[210px]"
                   >
                     <div className="flex items-center gap-2.5 mb-4">
-                      <span
-                        className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-                        style={{ background: `linear-gradient(135deg, ${c.from}40, ${c.to}26)` }}
-                      >
-                        <Icon name={c.icon} filled size="sm" className="text-white" />
-                      </span>
+                      <CatalogTile
+                        image={c.image}
+                        icon={c.icon}
+                        from={c.from}
+                        to={c.to}
+                        name={c.label}
+                        className="w-9 h-9 shrink-0"
+                        rounded="rounded-xl"
+                        iconClassName="text-base"
+                      />
                       <div>
                         <h3 className="font-headline font-black text-lg leading-tight">{c.label}</h3>
                         <p className="text-[11px] text-on-surface-variant">{totalInCat} items</p>

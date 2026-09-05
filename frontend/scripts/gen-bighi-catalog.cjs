@@ -353,6 +353,68 @@ const CATALOG = {
   ],
 };
 
+// ---- Self-hosted category imagery -----------------------------------------
+// Production-correct approach: images are OURS, served from /public (and later
+// a CDN / object store via the existing /api/upload flow). No hotlinking to
+// Unsplash or Wikimedia — those are unverifiable at build time, can 404 or be
+// rate-limited, and brand pack shots carry trademark risk.
+//
+// Only categories with a real photo on disk are listed here; every other SKU
+// falls back to the branded gradient + icon plate, which never looks broken.
+const CATEGORY_IMAGES = {
+  dairy: '/catalog/dairy.jpg',
+  vegetables: '/catalog/vegetables.jpg',
+  fruits: '/catalog/fruits.jpg',
+  staples: '/catalog/staples.jpg',
+  oils: '/catalog/oils.jpg',
+  munchies: '/catalog/munchies.jpg',
+  biscuits: '/catalog/biscuits.jpg',
+  chocolates: '/catalog/chocolates.jpg',
+  drinks: '/catalog/drinks.jpg',
+  tea: '/catalog/tea.jpg',
+  // instant / household / personal / baby → icon fallback until shot.
+};
+
+// ---- Quick-add essentials --------------------------------------------------
+// The high-velocity kirana lines a shopkeeper stocks on day one. Matching is by
+// case-insensitive substring against the generated product name, restricted to
+// the listed category, and only the FIRST pack of each line is flagged so the
+// quick-add grid stays one-tap-per-item rather than one-tap-per-pack-size.
+const ESSENTIAL_LINES = {
+  dairy: ['Fresh Toned Milk', 'Full Cream Milk', 'Fresh Curd', 'Butter', 'Malai Paneer',
+    'White Sandwich Bread', 'Brown Bread', 'Fresh Farm Eggs', 'Processed Cheese Slices'],
+  vegetables: ['Desi Tomato', 'Hybrid Potato', 'Red Onion', 'Fresh Coriander', 'Ginger Root',
+    'Garlic Bulb', 'Green Chilli', 'Palak', 'Cauliflower', 'Capsicum Green', 'Carrot'],
+  fruits: ['Robusta Banana', 'Shimla Apple', 'Mosambi', 'Pomegranate', 'Seedless Green Grapes',
+    'Papaya', 'Orange'],
+  staples: ['Whole Wheat Chakki Atta', 'Basmati Rice', 'Sona Masoori Rice', 'Toor / Arhar Dal',
+    'Moong Dhuli Dal', 'Chana Dal', 'Masoor Dal', 'Rajma Chitra', 'Besan Gram Flour',
+    'Sooji / Rava', 'Maida', 'Poha', 'Sugar / Cheeni', 'Iodised Salt'],
+  oils: ['Refined Sunflower Oil', 'Kachi Ghani Mustard Oil', 'Refined Soyabean Oil', 'Cow Ghee',
+    'Deggi Mirch Chilli Powder', 'Haldi / Turmeric Powder', 'Dhania / Coriander Powder',
+    'Jeera / Cumin Seeds', 'Garam Masala'],
+  munchies: ['Magic Masala Chips', 'Classic Salted Chips', 'Masala Munch Namkeen', 'Aloo Bhujia',
+    'Navratan Mixture', 'Roasted Peanuts', 'Salted Popcorn'],
+  biscuits: ['Gold Glucose Biscuits', 'Marie Gold Biscuits', 'Cashew Cookies',
+    'Chocolate Cream Biscuit', 'Suji Rusk', 'Monaco Salted Biscuits', '50-50 Sweet Salty'],
+  chocolates: ['Silk Chocolate Bar', 'Crispy Wafer Chocolate', 'Milk Chocolate Bar', 'Toffee Jar',
+    'Ice Cream Tub'],
+  drinks: ['Cola Soft Drink', 'Lime Soft Drink', 'Mango Drink', 'Fruit Juice', 'Packaged Water',
+    'Energy Drink'],
+  tea: ['Premium Leaf Tea', 'Strong CTC Tea', 'Green Tea', 'Instant Coffee Classic',
+    'Chocolate Health Drink', 'Masala Chai Tea'],
+  instant: ['2-Minute Masala Noodles', 'Cup Noodles', 'Tomato Ketchup', 'Instant Soup',
+    'Ready-to-Eat Curry', 'Soy Sauce', 'Mayonnaise', 'Frozen Veg Paratha'],
+  household: ['Matic Detergent Powder', 'Top-Load Detergent', 'Dishwash Gel', 'Dishwash Bar',
+    'Toilet Cleaner', 'Floor Cleaner', 'Mosquito Coil', 'Garbage Bags', 'Toilet Paper Roll',
+    'Broom / Phool Jhadu'],
+  personal: ['Germ Protection Soap', 'Beauty Bathing Bar', 'Anti-Dandruff Shampoo', 'Shampoo',
+    'Strong Teeth Toothpaste', 'Toothbrush', 'Hair Oil', 'Face Wash', 'Deodorant Spray',
+    'Hand Wash', 'Sanitary Pads', 'Shaving Cream'],
+  baby: ['Diapers Pants', 'Baby Wipes', 'Baby Soap', 'Infant Cereal', 'Antiseptic Liquid',
+    'Hand Sanitizer'],
+};
+
 // ---- Deterministic pseudo-random (mulberry32) ------------------------------
 function mulberry32(seed) {
   return function () {
@@ -362,6 +424,23 @@ function mulberry32(seed) {
     t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
+}
+
+/**
+ * Drop an immediately-repeated word so brand+line concatenation reads naturally:
+ *   "Amul Butter Butter"        → "Amul Butter"
+ *   "Coca-Cola Cola Soft Drink" → "Coca-Cola Soft Drink"  (hyphen tail matches)
+ */
+function dedupeWords(s) {
+  const out = [];
+  for (const w of s.split(' ')) {
+    const prev = out.length ? out[out.length - 1].toLowerCase() : '';
+    const cur = w.toLowerCase();
+    // exact repeat, or the previous token's hyphen tail repeats ("coca-cola" + "cola")
+    if (prev === cur || prev.split('-').pop() === cur) continue;
+    out.push(w);
+  }
+  return out.join(' ');
 }
 
 function normPack(pk) {
@@ -384,7 +463,9 @@ CATEGORIES.forEach((cat, catIdx) => {
     brands.forEach((brand) => {
       item.packs.forEach((pk) => {
         const { unit, mult } = normPack(pk);
-        const name = brand ? `${brand} ${item.n}` : item.n;
+        // Collapse "Amul Butter Butter" → "Amul Butter" when the brand label
+        // already ends with the product-line word.
+        const name = brand ? dedupeWords(`${brand} ${item.n}`) : item.n;
         const key = `${cat.id}::${name}::${unit}`;
         if (seen.has(key)) return;
         seen.add(key);
@@ -394,7 +475,7 @@ CATEGORIES.forEach((cat, catIdx) => {
         const markup = 1.08 + rand() * 0.27;
         const mrp = Math.max(price + 1, Math.round(price * markup));
 
-        products.push({
+        const sku = {
           id: `bb-${catIdx + 1}-${(skuCounter + 1).toString().padStart(4, '0')}`,
           name,
           category: cat.label,
@@ -405,7 +486,8 @@ CATEGORIES.forEach((cat, catIdx) => {
           icon: cat.icon,
           from: cat.from,
           to: cat.to,
-        });
+        };
+        products.push(sku);
         skuCounter++;
       });
     });
@@ -419,6 +501,25 @@ products.sort((a, b) => catOrder.get(a.category) - catOrder.get(b.category) || a
 products.forEach((p, i) => {
   p.id = `bb-${(i + 1).toString().padStart(5, '0')}`;
 });
+
+// ---- Flag the quick-add essentials ----------------------------------------
+// One SKU per essential line (the first/smallest pack after the alpha sort),
+// so the vendor quick-add grid is one tap per *item*, not per pack size.
+const essentialIds = [];
+for (const cat of CATEGORIES) {
+  const lines = ESSENTIAL_LINES[cat.id] || [];
+  const pool = products.filter((p) => p.categoryId === cat.id);
+  const taken = new Set();
+  for (const line of lines) {
+    const needle = line.toLowerCase();
+    const hit = pool.find((p) => !taken.has(p.id) && p.name.toLowerCase().includes(needle));
+    if (hit) {
+      taken.add(hit.id);
+      essentialIds.push(hit.id);
+    }
+  }
+}
+const essentialCount = { n: essentialIds.length };
 
 const byCat = {};
 for (const c of CATEGORIES) byCat[c.label] = products.filter((p) => p.category === c.label).length;
@@ -438,6 +539,8 @@ export interface BighiCategory {
   icon: string;
   from: string;
   to: string;
+  /** Self-hosted category photo under /public. Absent → icon plate fallback. */
+  image?: string;
 }
 
 export interface BighiProduct {
@@ -451,6 +554,10 @@ export interface BighiProduct {
   icon: string;
   from: string;
   to: string;
+  /** Self-hosted photo under /public. Absent → branded icon plate fallback. */
+  image?: string;
+  /** High-velocity kirana line, surfaced in the vendor quick-add grid. */
+  essential?: boolean;
 }
 
 export interface PromoCarousel {
@@ -507,16 +614,67 @@ export const BIGHI_PROMOS: PromoCarousel[] = [
 ];
 
 export const BIGHI_CATEGORIES: BighiCategory[] = ${JSON.stringify(
-  CATEGORIES.map(({ id, label, icon, from, to }) => ({ id, label, icon, from, to })),
+  CATEGORIES.map(({ id, label, icon, from, to }) => {
+    const c = { id, label, icon, from, to };
+    if (CATEGORY_IMAGES[id]) c.image = CATEGORY_IMAGES[id];
+    return c;
+  }),
   null,
   2,
 )};
 
-export const BIGHI_CATALOG: BighiProduct[] = ${JSON.stringify(products, null, 2)};
+const RAW_CATALOG: BighiProduct[] = ${JSON.stringify(products, null, 2)};
+
+/** Ids of the ${essentialCount.n} highest-velocity quick-add kirana lines. */
+export const BIGHI_ESSENTIAL_IDS: string[] = ${JSON.stringify(essentialIds)};
+
+/**
+ * Self-hosted category photo by categoryId. Stored once per category (not
+ * repeated across all ${products.length} SKUs) to keep the bundle small.
+ * Categories absent here fall back to the branded gradient + icon plate.
+ */
+export const BIGHI_CATEGORY_IMAGES: Record<string, string> = ${JSON.stringify(CATEGORY_IMAGES, null, 2)};
+
+const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
+
+/**
+ * The catalog, with the self-hosted photo and quick-add flag resolved onto
+ * each SKU from the compact per-category maps above.
+ */
+export const BIGHI_CATALOG: BighiProduct[] = RAW_CATALOG.map((p) => {
+  const image = BIGHI_CATEGORY_IMAGES[p.categoryId];
+  return {
+    ...p,
+    ...(image ? { image } : {}),
+    ...(ESSENTIAL_ID_SET.has(p.id) ? { essential: true as const } : {}),
+  };
+});
 
 export const BIGHI_CATEGORY_COUNTS: Record<string, number> = ${JSON.stringify(byCat, null, 2)};
 
 export const BIGHI_TOTAL_SKUS = ${products.length};
+
+/** Photo for a SKU's category, or undefined → CatalogTile shows the icon plate. */
+export function bighiImageFor(categoryId: string): string | undefined {
+  return BIGHI_CATEGORY_IMAGES[categoryId];
+}
+
+export function isBighiEssential(id: string): boolean {
+  return ESSENTIAL_ID_SET.has(id);
+}
+
+/**
+ * Quick-add essentials — a shopkeeper onboards by tapping these, never by
+ * typing a product. Ordered by category for a stable grid.
+ */
+export const BIGHI_ESSENTIALS: BighiProduct[] = BIGHI_CATALOG.filter((p) =>
+  ESSENTIAL_ID_SET.has(p.id),
+);
+
+export function bighiEssentialsByCategory(categoryLabel: string): BighiProduct[] {
+  if (categoryLabel === 'All') return BIGHI_ESSENTIALS;
+  return BIGHI_ESSENTIALS.filter((p) => p.category === categoryLabel);
+}
 
 // Quick lookup helpers -------------------------------------------------------
 export function bighiProductsByCategory(categoryLabel: string): BighiProduct[] {
@@ -532,7 +690,9 @@ const outPath = path.join(__dirname, '..', 'src', 'lib', 'bighiCatalog.ts');
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, header);
 
+const withPhoto = products.filter((p) => CATEGORY_IMAGES[p.categoryId]).length;
 console.log(`Wrote ${products.length} SKUs across ${CATEGORIES.length} categories -> ${path.relative(process.cwd(), outPath)}`);
+console.log(`  ${essentialCount.n} quick-add essentials · ${withPhoto} SKUs with a self-hosted photo`);
 for (const c of CATEGORIES) {
   console.log(`  ${c.label.padEnd(26)} ${byCat[c.label]}`);
 }

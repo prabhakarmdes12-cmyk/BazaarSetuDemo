@@ -12,6 +12,7 @@ import { api } from '@/lib/api';
 import {
   BIGHI_CATEGORIES,
   BIGHI_CATALOG,
+  BIGHI_ESSENTIALS,
   BighiProduct,
 } from '@/lib/bighiCatalog';
 
@@ -67,6 +68,11 @@ export default function VendorProductsPage() {
   const [catalogSearch, setCatalogSearch] = useState('');
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [inStore, setInStore] = useState<Set<string>>(new Set());
+
+  // --- Quick-add essentials panel ---
+  const [essentialsOpen, setEssentialsOpen] = useState(true);
+  const [essentialsCat, setEssentialsCat] = useState<string>('All');
+  const [essentialsOnly, setEssentialsOnly] = useState(false);
 
   // --- Custom product form ---
   const [form, setForm] = useState({
@@ -124,9 +130,19 @@ export default function VendorProductsPage() {
       const matchCat = catFilter === 'All' || p.category === catFilter;
       const matchQ =
         !q || p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
-      return matchCat && matchQ;
+      const matchEssential = !essentialsOnly || p.essential === true;
+      return matchCat && matchQ && matchEssential;
     });
-  }, [catFilter, catalogSearch]);
+  }, [catFilter, catalogSearch, essentialsOnly]);
+
+  // Essentials shown in the quick-add panel, filtered by its own dropdown.
+  const visibleEssentials = useMemo(
+    () =>
+      essentialsCat === 'All'
+        ? BIGHI_ESSENTIALS
+        : BIGHI_ESSENTIALS.filter((p) => p.category === essentialsCat),
+    [essentialsCat],
+  );
 
   const countsByCat = useMemo(() => {
     const map: Record<string, number> = {};
@@ -342,6 +358,7 @@ export default function VendorProductsPage() {
                   className="flex items-center gap-3 p-3 bg-surface-container-low border border-white/5 rounded-2xl"
                 >
                   <CatalogTile
+                    image={b.image}
                     icon={b.icon}
                     from={b.from}
                     to={b.to}
@@ -410,6 +427,113 @@ export default function VendorProductsPage() {
       {/* ============ TAB 2: MASTER CATALOG PICKER ============ */}
       {tab === 'catalog' && (
         <div>
+          {/* ---- Quick-add essentials -------------------------------------
+              Shopkeepers never type a product — they tap it. This surfaces the
+              highest-velocity kirana lines so a new dukaan can be stocked in
+              under a minute. */}
+          <div className="mb-4 rounded-2xl border border-primary/25 bg-primary/[0.06] overflow-hidden">
+            <button
+              onClick={() => setEssentialsOpen((v) => !v)}
+              className="w-full flex items-center gap-2.5 px-3.5 py-3 text-left"
+            >
+              <span className="w-8 h-8 rounded-xl leaf-gradient flex items-center justify-center shrink-0">
+                <Icon name="bolt" size="sm" filled className="text-white" />
+              </span>
+              <span className="flex-1 min-w-0">
+                <span className="block text-sm font-black text-on-surface font-headline">
+                  Quick-add essentials
+                </span>
+                <span className="block text-[11px] text-on-surface-variant">
+                  {BIGHI_ESSENTIALS.length} most-ordered items · one tap to stock
+                </span>
+              </span>
+              <Icon
+                name={essentialsOpen ? 'expand_less' : 'expand_more'}
+                size="sm"
+                className="text-on-surface-variant shrink-0"
+              />
+            </button>
+
+            <AnimatePresence initial={false}>
+              {essentialsOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.22 }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-3.5 pb-3.5">
+                    {/* Category dropdown */}
+                    <select
+                      value={essentialsCat}
+                      onChange={(e) => setEssentialsCat(e.target.value)}
+                      className="w-full mb-3 bg-surface-container-low border border-white/10 focus:border-primary/50 rounded-xl px-3 py-2.5 text-sm font-semibold text-on-surface outline-none"
+                    >
+                      <option value="All">All essentials · {BIGHI_ESSENTIALS.length}</option>
+                      {BIGHI_CATEGORIES.map((c) => {
+                        const n = BIGHI_ESSENTIALS.filter((p) => p.category === c.label).length;
+                        if (!n) return null;
+                        return (
+                          <option key={c.id} value={c.label}>
+                            {c.label} · {n}
+                          </option>
+                        );
+                      })}
+                    </select>
+
+                    {/* Photo grid of essentials */}
+                    <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
+                      {visibleEssentials.map((b) => {
+                        const added = inStore.has(b.id);
+                        return (
+                          <button
+                            key={b.id}
+                            onClick={() => addCatalogItem(b)}
+                            disabled={added}
+                            title={`${b.name} · ${b.unit}`}
+                            className={`group relative flex flex-col text-left rounded-xl border p-1.5 transition ${
+                              added
+                                ? 'border-primary/50 bg-primary/10'
+                                : 'border-white/5 bg-surface-container-low hover:border-primary/40 active:scale-95'
+                            }`}
+                          >
+                            <CatalogTile
+                              image={b.image}
+                              icon={b.icon}
+                              from={b.from}
+                              to={b.to}
+                              name={b.name}
+                              className="w-full aspect-square mb-1.5"
+                              rounded="rounded-lg"
+                              iconClassName="text-2xl"
+                            />
+                            <span className="text-[10px] font-bold text-on-surface leading-tight line-clamp-2 min-h-[1.6rem] font-headline">
+                              {b.name}
+                            </span>
+                            <span className="text-[9px] text-on-surface-variant truncate">{b.unit}</span>
+                            <span className="mt-0.5 flex items-center justify-between gap-1">
+                              <span className="text-[11px] font-black text-on-surface tabular-nums">
+                                ₹{b.price}
+                              </span>
+                              <span
+                                className={`w-5 h-5 rounded-md flex items-center justify-center shrink-0 ${
+                                  added ? 'bg-primary text-white' : 'bg-primary/15 text-primary'
+                                }`}
+                              >
+                                <Icon name={added ? 'check' : 'add'} size="sm" />
+                              </span>
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           {/* Search */}
           <div className="relative mb-3">
             <Icon name="search" size="sm" className="absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant" />
@@ -432,6 +556,18 @@ export default function VendorProductsPage() {
               }`}
             >
               All · {BIGHI_CATALOG.length}
+            </button>
+            <button
+              onClick={() => setEssentialsOnly((v) => !v)}
+              className={`shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold whitespace-nowrap transition border ${
+                essentialsOnly
+                  ? 'bg-warning text-[#1C1503] border-transparent'
+                  : 'bg-surface-container-low text-on-surface-variant border-white/5'
+              }`}
+            >
+              <Icon name="bolt" size="sm" filled={essentialsOnly} />
+              Essentials
+              <span className="opacity-60">{BIGHI_ESSENTIALS.length}</span>
             </button>
             {BIGHI_CATEGORIES.map((c) => (
               <button
@@ -505,6 +641,7 @@ export default function VendorProductsPage() {
                   </button>
 
                   <CatalogTile
+                    image={b.image}
                     icon={b.icon}
                     from={b.from}
                     to={b.to}
