@@ -55,6 +55,27 @@ const SKU_ASSETS = {
   'bb-00170': 'fruits/pomegranate-1kg.jpg',
   'bb-00173': 'fruits/green-grapes-500g.jpg',
   'bb-00165': 'fruits/papaya-1pc.jpg',
+  // Staples
+  'bb-00200': 'staples/chakki-atta-5kg.jpg',
+  'bb-00201': 'staples/chakki-atta-10kg.jpg',
+  'bb-00236': 'staples/chakki-atta-5kg.jpg',
+  'bb-00237': 'staples/chakki-atta-10kg.jpg',
+  'bb-00238': 'staples/classic-basmati-rice-1kg.jpg',
+  'bb-00209': 'staples/classic-basmati-rice-1kg.jpg',
+  'bb-00290': 'staples/toor-arhar-dal-1kg.jpg',
+  'bb-00232': 'staples/toor-arhar-dal-1kg.jpg',
+  // Oils
+  'bb-00362': 'oils/refined-soyabean-oil-1l.jpg',
+  'bb-00416': 'oils/refined-soyabean-oil-1l.jpg',
+  'bb-00337': 'oils/kachi-ghani-mustard-oil-1l.jpg',
+  'bb-00360': 'oils/kachi-ghani-mustard-oil-1l.jpg',
+  // Munchies
+  'bb-00500': 'munchies/masala-potato-chips-52g.jpg',
+  'bb-00501': 'munchies/masala-potato-chips-52g.jpg',
+  'bb-00496': 'munchies/masala-corn-puffs-70g.jpg',
+  'bb-00457': 'munchies/aloo-bhujia-200g.jpg',
+  'bb-00431': 'munchies/aloo-bhujia-200g.jpg',
+  'bb-00429': 'munchies/butter-popcorn-70g.jpg',
 };
 
 const EXPECTED_PX = 600;

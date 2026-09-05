@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 25 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 43 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25688,7 +25688,25 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00161": "/catalog/items/fruits/mosambi-1kg.jpg",
   "bb-00170": "/catalog/items/fruits/pomegranate-1kg.jpg",
   "bb-00173": "/catalog/items/fruits/green-grapes-500g.jpg",
-  "bb-00165": "/catalog/items/fruits/papaya-1pc.jpg"
+  "bb-00165": "/catalog/items/fruits/papaya-1pc.jpg",
+  "bb-00200": "/catalog/items/staples/chakki-atta-5kg.jpg",
+  "bb-00201": "/catalog/items/staples/chakki-atta-10kg.jpg",
+  "bb-00236": "/catalog/items/staples/chakki-atta-5kg.jpg",
+  "bb-00237": "/catalog/items/staples/chakki-atta-10kg.jpg",
+  "bb-00238": "/catalog/items/staples/classic-basmati-rice-1kg.jpg",
+  "bb-00209": "/catalog/items/staples/classic-basmati-rice-1kg.jpg",
+  "bb-00290": "/catalog/items/staples/toor-arhar-dal-1kg.jpg",
+  "bb-00232": "/catalog/items/staples/toor-arhar-dal-1kg.jpg",
+  "bb-00362": "/catalog/items/oils/refined-soyabean-oil-1l.jpg",
+  "bb-00416": "/catalog/items/oils/refined-soyabean-oil-1l.jpg",
+  "bb-00337": "/catalog/items/oils/kachi-ghani-mustard-oil-1l.jpg",
+  "bb-00360": "/catalog/items/oils/kachi-ghani-mustard-oil-1l.jpg",
+  "bb-00500": "/catalog/items/munchies/masala-potato-chips-52g.jpg",
+  "bb-00501": "/catalog/items/munchies/masala-potato-chips-52g.jpg",
+  "bb-00496": "/catalog/items/munchies/masala-corn-puffs-70g.jpg",
+  "bb-00457": "/catalog/items/munchies/aloo-bhujia-200g.jpg",
+  "bb-00431": "/catalog/items/munchies/aloo-bhujia-200g.jpg",
+  "bb-00429": "/catalog/items/munchies/butter-popcorn-70g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
