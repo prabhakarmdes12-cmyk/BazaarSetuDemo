@@ -9,6 +9,10 @@ import { useAuth } from '@/hooks/useAuth';
 import { Cart, CartItem } from '@/types';
 import { api } from '@/lib/api';
 import { GuestCartItem, getGuestCart, updateGuestQuantity, removeGuestItem } from '@/lib/guestCart';
+import AddressSheet from '@/components/AddressSheet';
+import PaymentSheet from '@/components/PaymentSheet';
+import { DeliveryAddress, getDefaultAddress, shortAddress } from '@/lib/address';
+import { PaymentMethod, paymentLabel } from '@/lib/payment';
 
 interface CartViewItem {
   key: string;
@@ -31,6 +35,17 @@ export default function CartPage() {
   const [loading, setLoading] = useState(true);
   const [ordering, setOrdering] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState(false);
+  const [orderError, setOrderError] = useState<string | null>(null);
+  // Checkout inputs: where it goes and how it is paid for.
+  const [address, setAddress] = useState<DeliveryAddress | null>(null);
+  const [payment, setPayment] = useState<PaymentMethod>('DIRECT_UPI');
+  const [addressOpen, setAddressOpen] = useState(false);
+  const [paymentOpen, setPaymentOpen] = useState(false);
+
+  // Restore the saved default address on mount so a repeat buyer never retypes it.
+  useEffect(() => {
+    setAddress(getDefaultAddress());
+  }, []);
 
   const loadCart = useCallback(async () => {
     if (!token) {
@@ -77,18 +92,46 @@ export default function CartPage() {
     await handleUpdateQuantity(productId, 0);
   };
 
-  const handlePlaceOrder = async () => {
+  const handlePlaceOrder = async (method: PaymentMethod = payment) => {
     if (!cart || !token) return;
+    // Delivery needs a destination — open the address book instead of failing.
+    if (!address) {
+      setPaymentOpen(false);
+      setAddressOpen(true);
+      return;
+    }
     setOrdering(true);
+    setOrderError(null);
     try {
+      // The backend's createOrderSchema already accepts every one of these
+      // fields; until now the cart simply never sent them.
       const res = await api.post<{ success: boolean; data: { orderId: string } }>(
-        '/api/orders', { shopId: cart.shopId }, token
+        '/api/orders',
+        {
+          shopId: cart.shopId,
+          paymentMethod: method,
+          deliveryAddress: [address.line1, address.line2, address.city].filter(Boolean).join(', '),
+          deliveryPincode: address.pincode,
+          ...(address.lat != null && address.lng != null
+            ? { deliveryLat: address.lat, deliveryLng: address.lng }
+            : {}),
+        },
+        token,
       );
       if (res.success) {
+        setPaymentOpen(false);
         setOrderSuccess(true);
         setTimeout(() => router.push(`/customer/orders/${res.data.orderId}/confirm`), 900);
+      } else {
+        setOrderError('Order nahi ho paya. Dobara koshish karein.');
       }
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+      // Pilot policy rejections (unsupported tender / out-of-range pincode)
+      // arrive here — show the server's own message when we have one.
+      const message = err instanceof Error ? err.message : '';
+      setOrderError(message || 'Order nahi ho paya. Dobara koshish karein.');
+    }
     setOrdering(false);
   };
 
@@ -239,6 +282,55 @@ export default function CartPage() {
           ))}
         </section>
 
+        {/* Delivery destination — required before an order can be placed. */}
+        <section className="bg-surface-container-low rounded-2xl p-4 mb-4">
+          <button
+            onClick={() => setAddressOpen(true)}
+            className="w-full flex items-center gap-3 text-left min-h-[44px]"
+          >
+            <span className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+              <Icon name="location_on" filled className="text-primary" />
+            </span>
+            <span className="flex-1 min-w-0">
+              <span className="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wide">
+                Delivery yahan
+              </span>
+              <span className="block text-sm font-bold text-on-surface truncate font-headline">
+                {address ? `${address.label} — ${shortAddress(address)}` : 'Address chunein'}
+              </span>
+              {address && (
+                <span className="block text-[11px] text-on-surface-variant truncate">
+                  {address.city} {address.pincode}
+                </span>
+              )}
+            </span>
+            <span className="text-[13px] font-bold text-primary shrink-0">
+              {address ? 'Badlein' : 'Jodein'}
+            </span>
+          </button>
+        </section>
+
+        {/* Tender selection, confirmed again inside the payment sheet. */}
+        <section className="bg-surface-container-low rounded-2xl p-4 mb-4">
+          <button
+            onClick={() => setPaymentOpen(true)}
+            className="w-full flex items-center gap-3 text-left min-h-[44px]"
+          >
+            <span className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+              <Icon name="account_balance_wallet" filled className="text-primary" />
+            </span>
+            <span className="flex-1 min-w-0">
+              <span className="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wide">
+                Payment
+              </span>
+              <span className="block text-sm font-bold text-on-surface truncate font-headline">
+                {paymentLabel(payment)}
+              </span>
+            </span>
+            <span className="text-[13px] font-bold text-primary shrink-0">Badlein</span>
+          </button>
+        </section>
+
         <section className="bg-surface-container-low rounded-2xl p-6 space-y-4">
           <h3 className="font-bold text-lg text-on-surface flex items-center gap-2">
             <Icon name="receipt" className="text-primary" />
@@ -263,6 +355,12 @@ export default function CartPage() {
       </main>
 
       <div className="fixed bottom-0 left-0 w-full bg-surface-container-lowest/90 backdrop-blur-xl px-6 pt-4 pb-8 shadow-bottom-nav flex flex-col gap-4 z-40">
+        {orderError && (
+          <p className="flex items-start gap-2 text-[13px] text-error bg-error/10 border border-error/25 rounded-xl px-3 py-2.5" role="alert">
+            <Icon name="error" size="sm" filled className="shrink-0 mt-0.5" />
+            {orderError}
+          </p>
+        )}
         <div className="flex justify-between items-center mb-2">
           <div className="flex flex-col">
             <span className="text-[11px] font-bold text-on-surface-variant tracking-widest uppercase">PAYING</span>
@@ -283,14 +381,32 @@ export default function CartPage() {
           </a>
         ) : (
           <button
-            onClick={handlePlaceOrder} disabled={ordering}
-            className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3 disabled:opacity-50"
+            onClick={() => (address ? setPaymentOpen(true) : setAddressOpen(true))}
+            disabled={ordering}
+            className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3 disabled:opacity-50 min-h-[44px]"
           >
-            {ordering ? 'Order ho raha hai...' : 'Order karein'}
+            {ordering ? 'Order ho raha hai...' : address ? 'Order karein' : 'Address chunein'}
             <Icon name="chevron_right" />
           </button>
         )}
       </div>
+
+      <AddressSheet
+        open={addressOpen}
+        onClose={() => setAddressOpen(false)}
+        onSelect={setAddress}
+        selectedId={address?.id}
+      />
+
+      <PaymentSheet
+        open={paymentOpen}
+        onClose={() => setPaymentOpen(false)}
+        amount={total}
+        selected={payment}
+        onSelect={setPayment}
+        onConfirm={handlePlaceOrder}
+        placing={ordering}
+      />
     </div>
   );
 }

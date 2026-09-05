@@ -8,6 +8,8 @@ export interface CatalogProduct {
   id: string;
   name: string;
   category?: string;
+  /** Stable category key (dairy, pharma, meat…), drives category-specific UI. */
+  categoryId?: string;
   unit: string;
   price: number;
   mrp?: number;
@@ -23,6 +25,8 @@ interface BighiProductCardProps {
   onAdd: (product: CatalogProduct) => void;
   onInc: (product: CatalogProduct) => void;
   onDec: (product: CatalogProduct) => void;
+  /** Open the product detail sheet. ADD stays one-tap and does NOT open it. */
+  onOpen?: (product: CatalogProduct) => void;
 }
 
 function discountPercent(price: number, mrp?: number): number {
@@ -36,7 +40,7 @@ function discountPercent(price: number, mrp?: number): number {
  * pattern and the existing ProductCard motion, but is tailored to the
  * bundled icon-based Bighi master catalog (real MRP + pack size).
  */
-export default function BighiProductCard({ product, quantity = 0, onAdd, onInc, onDec }: BighiProductCardProps) {
+export default function BighiProductCard({ product, quantity = 0, onAdd, onInc, onDec, onOpen }: BighiProductCardProps) {
   const mrp = product.mrp;
   const off = discountPercent(product.price, mrp);
   const hasQty = quantity > 0;
@@ -50,7 +54,19 @@ export default function BighiProductCard({ product, quantity = 0, onAdd, onInc, 
       whileHover={{ y: -3 }}
       className="group flex flex-col bg-surface-container-low border border-white/5 hover:border-primary/30 rounded-2xl p-2.5 transition-colors duration-300"
     >
-      <div className="relative mb-2">
+      <div
+        className="relative mb-2 cursor-pointer"
+        role="button"
+        tabIndex={0}
+        aria-label={`${product.name} ki jaankari dekhein`}
+        onClick={() => onOpen?.(product)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onOpen?.(product);
+          }
+        }}
+      >
         <CatalogTile
           image={product.image}
           icon={product.icon || 'inventory_2'}
@@ -75,7 +91,10 @@ export default function BighiProductCard({ product, quantity = 0, onAdd, onInc, 
       <p className="text-[11px] font-semibold text-primary uppercase tracking-wide truncate font-headline">
         {product.category || 'Grocery'}
       </p>
-      <h3 className="font-bold text-on-surface text-[13px] leading-snug line-clamp-2 min-h-[2.1rem] font-headline">
+      <h3
+        className="font-bold text-on-surface text-[13px] leading-snug line-clamp-2 min-h-[2.1rem] font-headline cursor-pointer"
+        onClick={() => onOpen?.(product)}
+      >
         {product.name}
       </h3>
       <p className="text-[11px] text-on-surface-variant font-medium mb-1.5 truncate">{product.unit}</p>

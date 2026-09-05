@@ -8,6 +8,7 @@ import CatalogTile from './CatalogTile';
 import BighiProductCard, { CatalogProduct } from './BighiProductCard';
 import PromoCarousels from './PromoCarousels';
 import FloatingCartDock from './FloatingCartDock';
+import ProductDetailSheet from './ProductDetailSheet';
 import {
   BIGHI_STORE,
   BIGHI_CATEGORIES,
@@ -47,6 +48,8 @@ export default function BighiStorefront() {
   const [activeCat, setActiveCat] = useState(BIGHI_CATEGORIES[0].id);
   const [search, setSearch] = useState('');
   const [quantities, setQuantities] = useState<Record<string, number>>({});
+  // Product detail is a sheet, not a route — the shelf stays mounted behind it.
+  const [detail, setDetail] = useState<CatalogProduct | null>(null);
   const [revealed, setRevealed] = useState<Record<string, number>>({});
   const [toast, setToast] = useState<string | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -312,6 +315,7 @@ export default function BighiStorefront() {
                     onAdd={add}
                     onInc={inc}
                     onDec={dec}
+                    onOpen={setDetail}
                   />
                 ))}
               </div>
@@ -418,6 +422,7 @@ export default function BighiStorefront() {
                           onAdd={add}
                           onInc={inc}
                           onDec={dec}
+                          onOpen={setDetail}
                         />
                       ))}
                     </div>
@@ -455,6 +460,16 @@ export default function BighiStorefront() {
         total={cartMeta.total}
         label="items"
         onClick={() => router.push('/customer/cart')}
+      />
+
+      <ProductDetailSheet
+        product={detail}
+        open={detail !== null}
+        onClose={() => setDetail(null)}
+        quantity={detail ? quantities[detail.id] || 0 : 0}
+        onAdd={add}
+        onInc={inc}
+        onDec={dec}
       />
     </div>
   );

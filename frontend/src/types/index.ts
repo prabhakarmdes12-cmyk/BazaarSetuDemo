@@ -119,6 +119,12 @@ export interface Order {
   items: OrderItem[];
   totalAmount: number;
   status: OrderStatus;
+  /** Tender chosen at checkout — mirrors the backend enum. */
+  paymentMethod?: 'COD' | 'DIRECT_UPI' | 'UDHAAR' | 'RAZORPAY';
+  deliveryAddress?: string;
+  deliveryPincode?: string;
+  deliveryLat?: number;
+  deliveryLng?: number;
   createdAt: string;
   updatedAt: string;
 }
