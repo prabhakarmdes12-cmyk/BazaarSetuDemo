@@ -93,6 +93,18 @@ const SKU_ASSETS = {
   'bb-00883': 'instant/mixed-veg-soup-sachet.jpg',
   'bb-00924': 'instant/tomato-ketchup-1kg.jpg',
   'bb-00915': 'instant/tomato-ketchup-1kg.jpg',
+  // Household
+  'bb-01068': 'household/matic-detergent-front-load-1kg.jpg',
+  'bb-00980': 'household/matic-detergent-front-load-1kg.jpg',
+  'bb-01075': 'household/matic-detergent-front-load-1kg.jpg',
+  'bb-01073': 'household/matic-detergent-top-load-1kg.jpg',
+  'bb-01081': 'household/dishwash-gel-500ml.jpg',
+  'bb-01055': 'household/dishwash-gel-500ml.jpg',
+  'bb-00998': 'household/dishwash-gel-500ml.jpg',
+  'bb-01013': 'household/toilet-cleaner-1l.jpg',
+  'bb-01029': 'household/toilet-cleaner-1l.jpg',
+  'bb-01024': 'household/pine-floor-cleaner-1l.jpg',
+  'bb-00993': 'household/pine-floor-cleaner-1l.jpg',
 };
 
 const EXPECTED_PX = 600;

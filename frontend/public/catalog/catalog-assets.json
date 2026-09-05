@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 40,
-  "totalSkus": 57,
+  "totalAssets": 45,
+  "totalSkus": 68,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -636,6 +636,127 @@
       "width": 600,
       "height": 600,
       "bytes": 43131,
+      "verified": true
+    },
+    "bb-01068": {
+      "skuId": "bb-01068",
+      "name": "Surf Excel Matic Detergent Powder",
+      "unit": "1 kg",
+      "categoryId": "household",
+      "path": "/catalog/items/household/matic-detergent-front-load-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67667,
+      "verified": true
+    },
+    "bb-00980": {
+      "skuId": "bb-00980",
+      "name": "Ariel Matic Detergent Powder",
+      "unit": "1 kg",
+      "categoryId": "household",
+      "path": "/catalog/items/household/matic-detergent-front-load-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67667,
+      "verified": true
+    },
+    "bb-01075": {
+      "skuId": "bb-01075",
+      "name": "Tide Matic Detergent Powder",
+      "unit": "1 kg",
+      "categoryId": "household",
+      "path": "/catalog/items/household/matic-detergent-front-load-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67667,
+      "verified": true
+    },
+    "bb-01073": {
+      "skuId": "bb-01073",
+      "name": "Surf Excel Top-Load Detergent",
+      "unit": "1 kg",
+      "categoryId": "household",
+      "path": "/catalog/items/household/matic-detergent-top-load-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68495,
+      "verified": true
+    },
+    "bb-01081": {
+      "skuId": "bb-01081",
+      "name": "Vim Gel Dishwash Gel",
+      "unit": "500 ml",
+      "categoryId": "household",
+      "path": "/catalog/items/household/dishwash-gel-500ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 35224,
+      "verified": true
+    },
+    "bb-01055": {
+      "skuId": "bb-01055",
+      "name": "Pril Dishwash Gel",
+      "unit": "500 ml",
+      "categoryId": "household",
+      "path": "/catalog/items/household/dishwash-gel-500ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 35224,
+      "verified": true
+    },
+    "bb-00998": {
+      "skuId": "bb-00998",
+      "name": "Exo Dishwash Gel",
+      "unit": "500 ml",
+      "categoryId": "household",
+      "path": "/catalog/items/household/dishwash-gel-500ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 35224,
+      "verified": true
+    },
+    "bb-01013": {
+      "skuId": "bb-01013",
+      "name": "Harpic Power Plus Toilet Cleaner",
+      "unit": "1 L",
+      "categoryId": "household",
+      "path": "/catalog/items/household/toilet-cleaner-1l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34868,
+      "verified": true
+    },
+    "bb-01029": {
+      "skuId": "bb-01029",
+      "name": "Lizol Toilet Cleaner",
+      "unit": "1 L",
+      "categoryId": "household",
+      "path": "/catalog/items/household/toilet-cleaner-1l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34868,
+      "verified": true
+    },
+    "bb-01024": {
+      "skuId": "bb-01024",
+      "name": "Lizol Floor Cleaner",
+      "unit": "1 L",
+      "categoryId": "household",
+      "path": "/catalog/items/household/pine-floor-cleaner-1l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37039,
+      "verified": true
+    },
+    "bb-00993": {
+      "skuId": "bb-00993",
+      "name": "Domex Floor Cleaner",
+      "unit": "1 L",
+      "categoryId": "household",
+      "path": "/catalog/items/household/pine-floor-cleaner-1l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37039,
       "verified": true
     }
   }

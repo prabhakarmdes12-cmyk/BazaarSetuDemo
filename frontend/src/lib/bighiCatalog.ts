@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 57 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 68 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25720,7 +25720,18 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00930": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
   "bb-00883": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
   "bb-00924": "/catalog/items/instant/tomato-ketchup-1kg.jpg",
-  "bb-00915": "/catalog/items/instant/tomato-ketchup-1kg.jpg"
+  "bb-00915": "/catalog/items/instant/tomato-ketchup-1kg.jpg",
+  "bb-01068": "/catalog/items/household/matic-detergent-front-load-1kg.jpg",
+  "bb-00980": "/catalog/items/household/matic-detergent-front-load-1kg.jpg",
+  "bb-01075": "/catalog/items/household/matic-detergent-front-load-1kg.jpg",
+  "bb-01073": "/catalog/items/household/matic-detergent-top-load-1kg.jpg",
+  "bb-01081": "/catalog/items/household/dishwash-gel-500ml.jpg",
+  "bb-01055": "/catalog/items/household/dishwash-gel-500ml.jpg",
+  "bb-00998": "/catalog/items/household/dishwash-gel-500ml.jpg",
+  "bb-01013": "/catalog/items/household/toilet-cleaner-1l.jpg",
+  "bb-01029": "/catalog/items/household/toilet-cleaner-1l.jpg",
+  "bb-01024": "/catalog/items/household/pine-floor-cleaner-1l.jpg",
+  "bb-00993": "/catalog/items/household/pine-floor-cleaner-1l.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
