@@ -184,7 +184,7 @@ const SKU_ASSET_ROWS = [
   ['biscuits', "Britannia Toastea Suji Rusk", "200 g", 'biscuits/suji-rusk-toast-300g.jpg'],
   ['biscuits', "Parle Rusk Suji Rusk", "200 g", 'biscuits/suji-rusk-toast-300g.jpg'],
   ['biscuits', "Modern Suji Rusk", "200 g", 'biscuits/suji-rusk-toast-300g.jpg'],
-  ['biscuits', "Parle-G Gold Glucose Biscuits", "250 g", 'biscuits/glucose-biscuits-250g.jpg'],
+  ['biscuits', "Parle-G Gold Glucose Biscuits", "100 g", 'biscuits/glucose-biscuits-250g.jpg'],
   ['biscuits', "Britannia Good Day Cashew Cookies", "250 g", 'biscuits/butter-cookies-150g.jpg'],
   // Spreads (catalog files jams under the `breakfast` category)
   ['breakfast', "Kissan Mixed Fruit Jam", "500 g", 'instant/mixed-fruit-jam-500g.jpg'],
@@ -339,6 +339,26 @@ const SKU_ASSET_ROWS = [
   ['paan', "Local Roasted Saunf", "100 g", 'paan/roasted-saunf-100g.jpg'],
   ['paan', "Hajmola Digestive Anardana Goli", "100 g", 'paan/anardana-goli-100g.jpg'],
   ['paan', "Local Digestive Anardana Goli", "100 g", 'paan/anardana-goli-100g.jpg'],
+  // ---- Batch 4: national high-velocity FMCG core -----------------------------
+  // Instant food & noodles
+  ['instant', "Maggi 2-Minute Masala Noodles", "70 g", 'instant/maggi-2-minute-noodles-70g.jpg'],
+  ['instant', "Sunfeast YiPPee! 2-Minute Masala Noodles", "70 g", 'instant/maggi-2-minute-noodles-70g.jpg'],
+  ['instant', "Knorr 2-Minute Masala Noodles", "4 pack", 'instant/maggi-masala-noodles-4-pack.jpg'],
+  ['instant', "Maggi 2-Minute Masala Noodles", "12 pack family", 'instant/maggi-masala-noodles-4-pack.jpg'],
+  ['instant', "Sunfeast YiPPee! 2-Minute Masala Noodles", "4 pack", 'instant/yippee-magic-masala-noodles-4-pack.jpg'],
+  ['instant', "Knorr Mast Masala Soupy Noodles", "70 g", 'instant/knorr-soupy-noodles-pouch.jpg'],
+  ['instant', "Maggi Soupy Noodles", "70 g", 'instant/knorr-soupy-noodles-pouch.jpg'],
+  ['instant', "Top Ramen Curry Veg Noodles", "70 g", 'instant/top-ramen-curry-noodles-single.jpg'],
+  ['instant', "Ching\u2019s Secret Curry Veg Noodles", "70 g", 'instant/top-ramen-curry-noodles-single.jpg'],
+  ['staples', "Fortune Soya Chunks", "200 g", 'instant/soya-chunks-fortune-200g.jpg'],
+  ['staples', "Nutrela Soya Chunks", "200 g", 'instant/soya-chunks-fortune-200g.jpg'],
+  ['staples', "Patanjali Soya Chunks", "200 g", 'instant/soya-chunks-fortune-200g.jpg'],
+  // Everyday biscuits & cookies
+  ['biscuits', "Parle-G Gold Glucose Biscuits", "250 g", 'biscuits/parle-g-glucose-biscuit-250g.jpg'],
+  ['biscuits', "Parle-G Gold Glucose Biscuits", "800 g family", 'biscuits/parle-g-family-pack-800g.jpg'],
+  ['biscuits', "Britannia Marie Gold Marie Gold Biscuits", "250 g", 'biscuits/britannia-marie-gold-300g.jpg'],
+  ['biscuits', "Parle Marie Gold Biscuits", "250 g", 'biscuits/britannia-marie-gold-300g.jpg'],
+  ['biscuits', "Britannia Good Day Cashew Cookies", "100 g", 'biscuits/britannia-good-day-cashew-120g.jpg'],
 ];
 
 const EXPECTED_PX = 600;

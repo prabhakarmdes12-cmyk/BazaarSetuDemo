@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 136,
-  "totalSkus": 277,
+  "totalAssets": 146,
+  "totalSkus": 294,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -308,8 +308,8 @@
       "bytes": 67540,
       "verified": true
     },
-    "bb-00236": {
-      "skuId": "bb-00236",
+    "bb-00238": {
+      "skuId": "bb-00238",
       "name": "Fortune Whole Wheat Chakki Atta",
       "unit": "5 kg bag",
       "categoryId": "staples",
@@ -319,8 +319,8 @@
       "bytes": 61114,
       "verified": true
     },
-    "bb-00237": {
-      "skuId": "bb-00237",
+    "bb-00239": {
+      "skuId": "bb-00239",
       "name": "Fortune Whole Wheat Chakki Atta",
       "unit": "10 kg bag",
       "categoryId": "staples",
@@ -330,8 +330,8 @@
       "bytes": 67540,
       "verified": true
     },
-    "bb-00238": {
-      "skuId": "bb-00238",
+    "bb-00240": {
+      "skuId": "bb-00240",
       "name": "India Gate Classic Basmati Rice",
       "unit": "1 kg pack",
       "categoryId": "staples",
@@ -352,8 +352,8 @@
       "bytes": 57109,
       "verified": true
     },
-    "bb-00296": {
-      "skuId": "bb-00296",
+    "bb-00303": {
+      "skuId": "bb-00303",
       "name": "Tata Sampann Toor / Arhar Dal",
       "unit": "1 kg pack",
       "categoryId": "staples",
@@ -363,8 +363,8 @@
       "bytes": 64243,
       "verified": true
     },
-    "bb-00232": {
-      "skuId": "bb-00232",
+    "bb-00234": {
+      "skuId": "bb-00234",
       "name": "Fortune Toor / Arhar Dal",
       "unit": "1 kg pack",
       "categoryId": "staples",
@@ -374,8 +374,8 @@
       "bytes": 64243,
       "verified": true
     },
-    "bb-00368": {
-      "skuId": "bb-00368",
+    "bb-00375": {
+      "skuId": "bb-00375",
       "name": "Fortune Refined Soyabean Oil",
       "unit": "1 L pouch",
       "categoryId": "oils",
@@ -385,8 +385,8 @@
       "bytes": 33822,
       "verified": true
     },
-    "bb-00422": {
-      "skuId": "bb-00422",
+    "bb-00429": {
+      "skuId": "bb-00429",
       "name": "Saffola Refined Soyabean Oil",
       "unit": "1 L pouch",
       "categoryId": "oils",
@@ -396,8 +396,8 @@
       "bytes": 33822,
       "verified": true
     },
-    "bb-00343": {
-      "skuId": "bb-00343",
+    "bb-00350": {
+      "skuId": "bb-00350",
       "name": "Engine Kachi Ghani Mustard Oil",
       "unit": "1 L bottle",
       "categoryId": "oils",
@@ -407,8 +407,8 @@
       "bytes": 41058,
       "verified": true
     },
-    "bb-00366": {
-      "skuId": "bb-00366",
+    "bb-00373": {
+      "skuId": "bb-00373",
       "name": "Fortune Kachi Ghani Mustard Oil",
       "unit": "1 L bottle",
       "categoryId": "oils",
@@ -418,8 +418,8 @@
       "bytes": 41058,
       "verified": true
     },
-    "bb-00506": {
-      "skuId": "bb-00506",
+    "bb-00513": {
+      "skuId": "bb-00513",
       "name": "Lay’s Magic Masala Chips",
       "unit": "52 g",
       "categoryId": "munchies",
@@ -429,8 +429,8 @@
       "bytes": 70097,
       "verified": true
     },
-    "bb-00507": {
-      "skuId": "bb-00507",
+    "bb-00514": {
+      "skuId": "bb-00514",
       "name": "Lay’s Magic Masala Chips",
       "unit": "78 g family",
       "categoryId": "munchies",
@@ -440,8 +440,8 @@
       "bytes": 70097,
       "verified": true
     },
-    "bb-00502": {
-      "skuId": "bb-00502",
+    "bb-00509": {
+      "skuId": "bb-00509",
       "name": "Kurkure Masala Munch Namkeen",
       "unit": "85 g",
       "categoryId": "munchies",
@@ -451,8 +451,8 @@
       "bytes": 70642,
       "verified": true
     },
-    "bb-00463": {
-      "skuId": "bb-00463",
+    "bb-00470": {
+      "skuId": "bb-00470",
       "name": "Haldiram’s Aloo Bhujia",
       "unit": "200 g",
       "categoryId": "munchies",
@@ -462,8 +462,8 @@
       "bytes": 80854,
       "verified": true
     },
-    "bb-00437": {
-      "skuId": "bb-00437",
+    "bb-00444": {
+      "skuId": "bb-00444",
       "name": "Bikaji Aloo Bhujia",
       "unit": "200 g",
       "categoryId": "munchies",
@@ -473,8 +473,8 @@
       "bytes": 80854,
       "verified": true
     },
-    "bb-00435": {
-      "skuId": "bb-00435",
+    "bb-00442": {
+      "skuId": "bb-00442",
       "name": "Act II Salted Popcorn",
       "unit": "70 g",
       "categoryId": "munchies",
@@ -484,8 +484,8 @@
       "bytes": 65349,
       "verified": true
     },
-    "bb-00713": {
-      "skuId": "bb-00713",
+    "bb-00721": {
+      "skuId": "bb-00721",
       "name": "Coca-Cola Soft Drink",
       "unit": "750 ml",
       "categoryId": "drinks",
@@ -495,8 +495,8 @@
       "bytes": 43581,
       "verified": true
     },
-    "bb-00797": {
-      "skuId": "bb-00797",
+    "bb-00805": {
+      "skuId": "bb-00805",
       "name": "Thums Up Cola Soft Drink",
       "unit": "750 ml",
       "categoryId": "drinks",
@@ -506,8 +506,8 @@
       "bytes": 47374,
       "verified": true
     },
-    "bb-00788": {
-      "skuId": "bb-00788",
+    "bb-00796": {
+      "skuId": "bb-00796",
       "name": "Sprite Lime Soft Drink",
       "unit": "750 ml",
       "categoryId": "drinks",
@@ -517,8 +517,8 @@
       "bytes": 36924,
       "verified": true
     },
-    "bb-00739": {
-      "skuId": "bb-00739",
+    "bb-00747": {
+      "skuId": "bb-00747",
       "name": "Maaza Mango Drink",
       "unit": "600 ml",
       "categoryId": "drinks",
@@ -528,8 +528,8 @@
       "bytes": 32628,
       "verified": true
     },
-    "bb-00887": {
-      "skuId": "bb-00887",
+    "bb-00895": {
+      "skuId": "bb-00895",
       "name": "Tata Tea Gold Premium Leaf Tea",
       "unit": "500 g",
       "categoryId": "tea",
@@ -539,8 +539,8 @@
       "bytes": 56385,
       "verified": true
     },
-    "bb-00892": {
-      "skuId": "bb-00892",
+    "bb-00900": {
+      "skuId": "bb-00900",
       "name": "Tata Tea Masala Chai Tea",
       "unit": "500 g",
       "categoryId": "tea",
@@ -550,8 +550,8 @@
       "bytes": 56385,
       "verified": true
     },
-    "bb-00855": {
-      "skuId": "bb-00855",
+    "bb-00863": {
+      "skuId": "bb-00863",
       "name": "Nescafe Classic Instant Coffee Classic",
       "unit": "50 g jar",
       "categoryId": "tea",
@@ -561,8 +561,8 @@
       "bytes": 47355,
       "verified": true
     },
-    "bb-00860": {
-      "skuId": "bb-00860",
+    "bb-00868": {
+      "skuId": "bb-00868",
       "name": "Nescafe Sunrise Instant Coffee Classic",
       "unit": "50 g jar",
       "categoryId": "tea",
@@ -572,8 +572,8 @@
       "bytes": 47355,
       "verified": true
     },
-    "bb-00961": {
-      "skuId": "bb-00961",
+    "bb-00973": {
+      "skuId": "bb-00973",
       "name": "Maggi 2-Minute Masala Noodles",
       "unit": "4 pack",
       "categoryId": "instant",
@@ -583,8 +583,8 @@
       "bytes": 78348,
       "verified": true
     },
-    "bb-00968": {
-      "skuId": "bb-00968",
+    "bb-00980": {
+      "skuId": "bb-00980",
       "name": "Maggi Noodles Masala Pack",
       "unit": "8 pack",
       "categoryId": "instant",
@@ -594,8 +594,8 @@
       "bytes": 75634,
       "verified": true
     },
-    "bb-00952": {
-      "skuId": "bb-00952",
+    "bb-00962": {
+      "skuId": "bb-00962",
       "name": "Knorr Instant Soup",
       "unit": "4 sachets",
       "categoryId": "instant",
@@ -605,8 +605,8 @@
       "bytes": 67847,
       "verified": true
     },
-    "bb-00905": {
-      "skuId": "bb-00905",
+    "bb-00915": {
+      "skuId": "bb-00915",
       "name": "Ching’s Secret Instant Soup",
       "unit": "4 sachets",
       "categoryId": "instant",
@@ -616,8 +616,8 @@
       "bytes": 67847,
       "verified": true
     },
-    "bb-00946": {
-      "skuId": "bb-00946",
+    "bb-00956": {
+      "skuId": "bb-00956",
       "name": "Kissan Tomato Ketchup",
       "unit": "1 kg",
       "categoryId": "instant",
@@ -627,8 +627,8 @@
       "bytes": 42705,
       "verified": true
     },
-    "bb-00937": {
-      "skuId": "bb-00937",
+    "bb-00947": {
+      "skuId": "bb-00947",
       "name": "Heinz Tomato Ketchup",
       "unit": "1 kg",
       "categoryId": "instant",
@@ -638,8 +638,8 @@
       "bytes": 42705,
       "verified": true
     },
-    "bb-01099": {
-      "skuId": "bb-01099",
+    "bb-01115": {
+      "skuId": "bb-01115",
       "name": "Surf Excel Matic Detergent Powder",
       "unit": "1 kg",
       "categoryId": "household",
@@ -649,8 +649,8 @@
       "bytes": 67667,
       "verified": true
     },
-    "bb-01002": {
-      "skuId": "bb-01002",
+    "bb-01018": {
+      "skuId": "bb-01018",
       "name": "Ariel Matic Detergent Powder",
       "unit": "1 kg",
       "categoryId": "household",
@@ -660,8 +660,8 @@
       "bytes": 67667,
       "verified": true
     },
-    "bb-01106": {
-      "skuId": "bb-01106",
+    "bb-01122": {
+      "skuId": "bb-01122",
       "name": "Tide Matic Detergent Powder",
       "unit": "1 kg",
       "categoryId": "household",
@@ -671,8 +671,8 @@
       "bytes": 67667,
       "verified": true
     },
-    "bb-01104": {
-      "skuId": "bb-01104",
+    "bb-01120": {
+      "skuId": "bb-01120",
       "name": "Surf Excel Top-Load Detergent",
       "unit": "1 kg",
       "categoryId": "household",
@@ -682,8 +682,8 @@
       "bytes": 68495,
       "verified": true
     },
-    "bb-01112": {
-      "skuId": "bb-01112",
+    "bb-01128": {
+      "skuId": "bb-01128",
       "name": "Vim Gel Dishwash Gel",
       "unit": "500 ml",
       "categoryId": "household",
@@ -693,8 +693,8 @@
       "bytes": 35224,
       "verified": true
     },
-    "bb-01083": {
-      "skuId": "bb-01083",
+    "bb-01099": {
+      "skuId": "bb-01099",
       "name": "Pril Dishwash Gel",
       "unit": "500 ml",
       "categoryId": "household",
@@ -704,8 +704,8 @@
       "bytes": 35224,
       "verified": true
     },
-    "bb-01020": {
-      "skuId": "bb-01020",
+    "bb-01036": {
+      "skuId": "bb-01036",
       "name": "Exo Dishwash Gel",
       "unit": "500 ml",
       "categoryId": "household",
@@ -715,8 +715,8 @@
       "bytes": 35224,
       "verified": true
     },
-    "bb-01035": {
-      "skuId": "bb-01035",
+    "bb-01051": {
+      "skuId": "bb-01051",
       "name": "Harpic Power Plus Toilet Cleaner",
       "unit": "1 L",
       "categoryId": "household",
@@ -726,8 +726,8 @@
       "bytes": 34868,
       "verified": true
     },
-    "bb-01051": {
-      "skuId": "bb-01051",
+    "bb-01067": {
+      "skuId": "bb-01067",
       "name": "Lizol Toilet Cleaner",
       "unit": "1 L",
       "categoryId": "household",
@@ -737,8 +737,8 @@
       "bytes": 34868,
       "verified": true
     },
-    "bb-01046": {
-      "skuId": "bb-01046",
+    "bb-01062": {
+      "skuId": "bb-01062",
       "name": "Lizol Floor Cleaner",
       "unit": "1 L",
       "categoryId": "household",
@@ -748,8 +748,8 @@
       "bytes": 37039,
       "verified": true
     },
-    "bb-01015": {
-      "skuId": "bb-01015",
+    "bb-01031": {
+      "skuId": "bb-01031",
       "name": "Domex Floor Cleaner",
       "unit": "1 L",
       "categoryId": "household",
@@ -759,8 +759,8 @@
       "bytes": 37039,
       "verified": true
     },
-    "bb-01842": {
-      "skuId": "bb-01842",
+    "bb-01858": {
+      "skuId": "bb-01858",
       "name": "Mangaldeep Agarbatti Incense Sticks",
       "unit": "50 sticks",
       "categoryId": "pooja",
@@ -770,8 +770,8 @@
       "bytes": 53036,
       "verified": true
     },
-    "bb-01801": {
-      "skuId": "bb-01801",
+    "bb-01817": {
+      "skuId": "bb-01817",
       "name": "Cycle Agarbatti Incense Sticks",
       "unit": "50 sticks",
       "categoryId": "pooja",
@@ -781,8 +781,8 @@
       "bytes": 53036,
       "verified": true
     },
-    "bb-01852": {
-      "skuId": "bb-01852",
+    "bb-01868": {
+      "skuId": "bb-01868",
       "name": "Zed Black Agarbatti Incense Sticks",
       "unit": "50 sticks",
       "categoryId": "pooja",
@@ -792,8 +792,8 @@
       "bytes": 69179,
       "verified": true
     },
-    "bb-01847": {
-      "skuId": "bb-01847",
+    "bb-01863": {
+      "skuId": "bb-01863",
       "name": "Mangaldeep Ghee Diya Batti Ready",
       "unit": "6 pcs",
       "categoryId": "pooja",
@@ -803,8 +803,8 @@
       "bytes": 69331,
       "verified": true
     },
-    "bb-01822": {
-      "skuId": "bb-01822",
+    "bb-01838": {
+      "skuId": "bb-01838",
       "name": "Local Ghee Diya Batti Ready",
       "unit": "6 pcs",
       "categoryId": "pooja",
@@ -814,8 +814,8 @@
       "bytes": 69331,
       "verified": true
     },
-    "bb-01804": {
-      "skuId": "bb-01804",
+    "bb-01820": {
+      "skuId": "bb-01820",
       "name": "Cycle Camphor Kapur Tablets",
       "unit": "50 g",
       "categoryId": "pooja",
@@ -825,8 +825,8 @@
       "bytes": 49649,
       "verified": true
     },
-    "bb-01838": {
-      "skuId": "bb-01838",
+    "bb-01854": {
+      "skuId": "bb-01854",
       "name": "Mangalam Camphor Kapur Tablets",
       "unit": "50 g",
       "categoryId": "pooja",
@@ -836,8 +836,8 @@
       "bytes": 49649,
       "verified": true
     },
-    "bb-01827": {
-      "skuId": "bb-01827",
+    "bb-01843": {
+      "skuId": "bb-01843",
       "name": "Local Kumkum Roli Powder",
       "unit": "50 g",
       "categoryId": "pooja",
@@ -847,8 +847,8 @@
       "bytes": 72334,
       "verified": true
     },
-    "bb-01823": {
-      "skuId": "bb-01823",
+    "bb-01839": {
+      "skuId": "bb-01839",
       "name": "Local Haldi Chandan Tika",
       "unit": "50 g",
       "categoryId": "pooja",
@@ -858,8 +858,8 @@
       "bytes": 72334,
       "verified": true
     },
-    "bb-01825": {
-      "skuId": "bb-01825",
+    "bb-01841": {
+      "skuId": "bb-01841",
       "name": "Local Havan Samagri",
       "unit": "500 g",
       "categoryId": "pooja",
@@ -869,8 +869,8 @@
       "bytes": 61185,
       "verified": true
     },
-    "bb-01850": {
-      "skuId": "bb-01850",
+    "bb-01866": {
+      "skuId": "bb-01866",
       "name": "Patanjali Havan Samagri",
       "unit": "500 g",
       "categoryId": "pooja",
@@ -880,8 +880,8 @@
       "bytes": 61185,
       "verified": true
     },
-    "bb-01830": {
-      "skuId": "bb-01830",
+    "bb-01846": {
+      "skuId": "bb-01846",
       "name": "Local Mauli Kalava Sacred Thread",
       "unit": "1 roll",
       "categoryId": "pooja",
@@ -891,8 +891,8 @@
       "bytes": 63578,
       "verified": true
     },
-    "bb-01812": {
-      "skuId": "bb-01812",
+    "bb-01828": {
+      "skuId": "bb-01828",
       "name": "Local Brass Diya Lamp",
       "unit": "1 pc small",
       "categoryId": "pooja",
@@ -902,8 +902,8 @@
       "bytes": 42684,
       "verified": true
     },
-    "bb-01813": {
-      "skuId": "bb-01813",
+    "bb-01829": {
+      "skuId": "bb-01829",
       "name": "Local Brass Diya Lamp",
       "unit": "1 pc medium",
       "categoryId": "pooja",
@@ -913,8 +913,8 @@
       "bytes": 42684,
       "verified": true
     },
-    "bb-01596": {
-      "skuId": "bb-01596",
+    "bb-01612": {
+      "skuId": "bb-01612",
       "name": "Bihar Special Phool Makhana Fox Nuts",
       "unit": "250 g",
       "categoryId": "dryfruits",
@@ -924,8 +924,8 @@
       "bytes": 62555,
       "verified": true
     },
-    "bb-01617": {
-      "skuId": "bb-01617",
+    "bb-01633": {
+      "skuId": "bb-01633",
       "name": "Happilo Phool Makhana Fox Nuts",
       "unit": "250 g",
       "categoryId": "dryfruits",
@@ -935,8 +935,8 @@
       "bytes": 62555,
       "verified": true
     },
-    "bb-01637": {
-      "skuId": "bb-01637",
+    "bb-01653": {
+      "skuId": "bb-01653",
       "name": "Local Phool Makhana Fox Nuts",
       "unit": "250 g",
       "categoryId": "dryfruits",
@@ -946,8 +946,8 @@
       "bytes": 62555,
       "verified": true
     },
-    "bb-00440": {
-      "skuId": "bb-00440",
+    "bb-00447": {
+      "skuId": "bb-00447",
       "name": "Bikaji Chana Jor Garam",
       "unit": "200 g",
       "categoryId": "munchies",
@@ -957,8 +957,8 @@
       "bytes": 62069,
       "verified": true
     },
-    "bb-00247": {
-      "skuId": "bb-00247",
+    "bb-00249": {
+      "skuId": "bb-00249",
       "name": "Local Poha Flattened Rice",
       "unit": "500 g",
       "categoryId": "staples",
@@ -979,8 +979,8 @@
       "bytes": 59643,
       "verified": true
     },
-    "bb-01669": {
-      "skuId": "bb-01669",
+    "bb-01685": {
+      "skuId": "bb-01685",
       "name": "Vedaka Almonds California",
       "unit": "200 g",
       "categoryId": "dryfruits",
@@ -990,8 +990,8 @@
       "bytes": 55494,
       "verified": true
     },
-    "bb-01599": {
-      "skuId": "bb-01599",
+    "bb-01615": {
+      "skuId": "bb-01615",
       "name": "Happilo Almonds California",
       "unit": "200 g",
       "categoryId": "dryfruits",
@@ -1001,8 +1001,8 @@
       "bytes": 55494,
       "verified": true
     },
-    "bb-01639": {
-      "skuId": "bb-01639",
+    "bb-01655": {
+      "skuId": "bb-01655",
       "name": "Nutraj Almonds California",
       "unit": "200 g",
       "categoryId": "dryfruits",
@@ -1012,8 +1012,8 @@
       "bytes": 55494,
       "verified": true
     },
-    "bb-01672": {
-      "skuId": "bb-01672",
+    "bb-01688": {
+      "skuId": "bb-01688",
       "name": "Vedaka Cashew Whole W240",
       "unit": "200 g",
       "categoryId": "dryfruits",
@@ -1023,8 +1023,8 @@
       "bytes": 52295,
       "verified": true
     },
-    "bb-01606": {
-      "skuId": "bb-01606",
+    "bb-01622": {
+      "skuId": "bb-01622",
       "name": "Happilo Cashew Whole W240",
       "unit": "200 g",
       "categoryId": "dryfruits",
@@ -1034,8 +1034,8 @@
       "bytes": 52295,
       "verified": true
     },
-    "bb-01646": {
-      "skuId": "bb-01646",
+    "bb-01662": {
+      "skuId": "bb-01662",
       "name": "Nutraj Cashew Whole W240",
       "unit": "200 g",
       "categoryId": "dryfruits",
@@ -1045,8 +1045,8 @@
       "bytes": 52295,
       "verified": true
     },
-    "bb-01678": {
-      "skuId": "bb-01678",
+    "bb-01694": {
+      "skuId": "bb-01694",
       "name": "Vedaka Raisins Kishmish",
       "unit": "250 g",
       "categoryId": "dryfruits",
@@ -1056,8 +1056,8 @@
       "bytes": 67384,
       "verified": true
     },
-    "bb-01623": {
-      "skuId": "bb-01623",
+    "bb-01639": {
+      "skuId": "bb-01639",
       "name": "Happilo Raisins Kishmish",
       "unit": "250 g",
       "categoryId": "dryfruits",
@@ -1067,8 +1067,8 @@
       "bytes": 67384,
       "verified": true
     },
-    "bb-01655": {
-      "skuId": "bb-01655",
+    "bb-01671": {
+      "skuId": "bb-01671",
       "name": "Nutraj Raisins Kishmish",
       "unit": "250 g",
       "categoryId": "dryfruits",
@@ -1078,8 +1078,8 @@
       "bytes": 67384,
       "verified": true
     },
-    "bb-00282": {
-      "skuId": "bb-00282",
+    "bb-00289": {
+      "skuId": "bb-00289",
       "name": "Tata Sampann Besan Gram Flour",
       "unit": "1 kg",
       "categoryId": "staples",
@@ -1111,8 +1111,8 @@
       "bytes": 64246,
       "verified": true
     },
-    "bb-00431": {
-      "skuId": "bb-00431",
+    "bb-00438": {
+      "skuId": "bb-00438",
       "name": "Tata Haldi / Turmeric Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1122,8 +1122,8 @@
       "bytes": 54412,
       "verified": true
     },
-    "bb-00391": {
-      "skuId": "bb-00391",
+    "bb-00398": {
+      "skuId": "bb-00398",
       "name": "MDH Haldi / Turmeric Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1133,8 +1133,8 @@
       "bytes": 54412,
       "verified": true
     },
-    "bb-00304": {
-      "skuId": "bb-00304",
+    "bb-00311": {
+      "skuId": "bb-00311",
       "name": "24 Mantra Haldi / Turmeric Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1144,8 +1144,8 @@
       "bytes": 54412,
       "verified": true
     },
-    "bb-00383": {
-      "skuId": "bb-00383",
+    "bb-00390": {
+      "skuId": "bb-00390",
       "name": "MDH Deggi Mirch Chilli Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1155,8 +1155,8 @@
       "bytes": 64422,
       "verified": true
     },
-    "bb-00350": {
-      "skuId": "bb-00350",
+    "bb-00357": {
+      "skuId": "bb-00357",
       "name": "Everest Deggi Mirch Chilli Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1166,8 +1166,8 @@
       "bytes": 64422,
       "verified": true
     },
-    "bb-00322": {
-      "skuId": "bb-00322",
+    "bb-00329": {
+      "skuId": "bb-00329",
       "name": "Catch Deggi Mirch Chilli Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1177,8 +1177,8 @@
       "bytes": 64422,
       "verified": true
     },
-    "bb-00386": {
-      "skuId": "bb-00386",
+    "bb-00393": {
+      "skuId": "bb-00393",
       "name": "MDH Dhania / Coriander Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1188,8 +1188,8 @@
       "bytes": 64187,
       "verified": true
     },
-    "bb-00353": {
-      "skuId": "bb-00353",
+    "bb-00360": {
+      "skuId": "bb-00360",
       "name": "Everest Dhania / Coriander Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1199,8 +1199,8 @@
       "bytes": 64187,
       "verified": true
     },
-    "bb-00325": {
-      "skuId": "bb-00325",
+    "bb-00332": {
+      "skuId": "bb-00332",
       "name": "Catch Dhania / Coriander Powder",
       "unit": "200 g",
       "categoryId": "oils",
@@ -1210,8 +1210,8 @@
       "bytes": 64187,
       "verified": true
     },
-    "bb-00388": {
-      "skuId": "bb-00388",
+    "bb-00395": {
+      "skuId": "bb-00395",
       "name": "MDH Garam Masala",
       "unit": "100 g",
       "categoryId": "oils",
@@ -1221,8 +1221,8 @@
       "bytes": 67404,
       "verified": true
     },
-    "bb-00355": {
-      "skuId": "bb-00355",
+    "bb-00362": {
+      "skuId": "bb-00362",
       "name": "Everest Garam Masala",
       "unit": "100 g",
       "categoryId": "oils",
@@ -1232,8 +1232,8 @@
       "bytes": 67404,
       "verified": true
     },
-    "bb-00327": {
-      "skuId": "bb-00327",
+    "bb-00334": {
+      "skuId": "bb-00334",
       "name": "Catch Garam Masala",
       "unit": "100 g",
       "categoryId": "oils",
@@ -1243,8 +1243,8 @@
       "bytes": 67404,
       "verified": true
     },
-    "bb-00397": {
-      "skuId": "bb-00397",
+    "bb-00404": {
+      "skuId": "bb-00404",
       "name": "MDH Kitchen King Masala",
       "unit": "100 g",
       "categoryId": "oils",
@@ -1254,8 +1254,8 @@
       "bytes": 64348,
       "verified": true
     },
-    "bb-00359": {
-      "skuId": "bb-00359",
+    "bb-00366": {
+      "skuId": "bb-00366",
       "name": "Everest Kitchen King Masala",
       "unit": "100 g",
       "categoryId": "oils",
@@ -1265,8 +1265,8 @@
       "bytes": 64348,
       "verified": true
     },
-    "bb-00278": {
-      "skuId": "bb-00278",
+    "bb-00284": {
+      "skuId": "bb-00284",
       "name": "Tata Salt Iodised Salt",
       "unit": "1 kg pack",
       "categoryId": "staples",
@@ -1276,8 +1276,8 @@
       "bytes": 61543,
       "verified": true
     },
-    "bb-00280": {
-      "skuId": "bb-00280",
+    "bb-00287": {
+      "skuId": "bb-00287",
       "name": "Tata Salt Rock Salt / Sendha Namak",
       "unit": "1 kg pack",
       "categoryId": "staples",
@@ -1287,8 +1287,8 @@
       "bytes": 48536,
       "verified": true
     },
-    "bb-00263": {
-      "skuId": "bb-00263",
+    "bb-00267": {
+      "skuId": "bb-00267",
       "name": "Patanjali Rock Salt / Sendha Namak",
       "unit": "1 kg pack",
       "categoryId": "staples",
@@ -1298,8 +1298,8 @@
       "bytes": 48536,
       "verified": true
     },
-    "bb-00250": {
-      "skuId": "bb-00250",
+    "bb-00252": {
+      "skuId": "bb-00252",
       "name": "Local Rock Salt / Sendha Namak",
       "unit": "1 kg pack",
       "categoryId": "staples",
@@ -1320,8 +1320,8 @@
       "bytes": 61543,
       "verified": true
     },
-    "bb-00311": {
-      "skuId": "bb-00311",
+    "bb-00318": {
+      "skuId": "bb-00318",
       "name": "Amul Cow Ghee Cow Ghee",
       "unit": "500 ml",
       "categoryId": "oils",
@@ -1331,8 +1331,8 @@
       "bytes": 44639,
       "verified": true
     },
-    "bb-00402": {
-      "skuId": "bb-00402",
+    "bb-00409": {
+      "skuId": "bb-00409",
       "name": "Mother Dairy Cow Ghee",
       "unit": "500 ml",
       "categoryId": "oils",
@@ -1342,8 +1342,8 @@
       "bytes": 44639,
       "verified": true
     },
-    "bb-00411": {
-      "skuId": "bb-00411",
+    "bb-00418": {
+      "skuId": "bb-00418",
       "name": "Nestle a+ Cow Ghee",
       "unit": "500 ml",
       "categoryId": "oils",
@@ -1441,8 +1441,8 @@
       "bytes": 58584,
       "verified": true
     },
-    "bb-00538": {
-      "skuId": "bb-00538",
+    "bb-00545": {
+      "skuId": "bb-00545",
       "name": "Britannia Toastea Suji Rusk",
       "unit": "200 g",
       "categoryId": "biscuits",
@@ -1452,8 +1452,8 @@
       "bytes": 72090,
       "verified": true
     },
-    "bb-00581": {
-      "skuId": "bb-00581",
+    "bb-00588": {
+      "skuId": "bb-00588",
       "name": "Parle Rusk Suji Rusk",
       "unit": "200 g",
       "categoryId": "biscuits",
@@ -1463,8 +1463,8 @@
       "bytes": 72090,
       "verified": true
     },
-    "bb-00564": {
-      "skuId": "bb-00564",
+    "bb-00571": {
+      "skuId": "bb-00571",
       "name": "Modern Suji Rusk",
       "unit": "200 g",
       "categoryId": "biscuits",
@@ -1474,10 +1474,10 @@
       "bytes": 72090,
       "verified": true
     },
-    "bb-00585": {
-      "skuId": "bb-00585",
+    "bb-00591": {
+      "skuId": "bb-00591",
       "name": "Parle-G Gold Glucose Biscuits",
-      "unit": "250 g",
+      "unit": "100 g",
       "categoryId": "biscuits",
       "path": "/catalog/items/biscuits/glucose-biscuits-250g.jpg",
       "width": 600,
@@ -1485,8 +1485,8 @@
       "bytes": 61670,
       "verified": true
     },
-    "bb-00528": {
-      "skuId": "bb-00528",
+    "bb-00535": {
+      "skuId": "bb-00535",
       "name": "Britannia Good Day Cashew Cookies",
       "unit": "250 g",
       "categoryId": "biscuits",
@@ -1496,8 +1496,8 @@
       "bytes": 60736,
       "verified": true
     },
-    "bb-01484": {
-      "skuId": "bb-01484",
+    "bb-01500": {
+      "skuId": "bb-01500",
       "name": "Kissan Mixed Fruit Jam",
       "unit": "500 g",
       "categoryId": "breakfast",
@@ -1507,8 +1507,8 @@
       "bytes": 60002,
       "verified": true
     },
-    "bb-01510": {
-      "skuId": "bb-01510",
+    "bb-01526": {
+      "skuId": "bb-01526",
       "name": "Patanjali Mixed Fruit Jam",
       "unit": "500 g",
       "categoryId": "breakfast",
@@ -1518,8 +1518,8 @@
       "bytes": 60002,
       "verified": true
     },
-    "bb-01528": {
-      "skuId": "bb-01528",
+    "bb-01544": {
+      "skuId": "bb-01544",
       "name": "Tops Mixed Fruit Jam",
       "unit": "500 g",
       "categoryId": "breakfast",
@@ -1529,8 +1529,8 @@
       "bytes": 60002,
       "verified": true
     },
-    "bb-01149": {
-      "skuId": "bb-01149",
+    "bb-01165": {
+      "skuId": "bb-01165",
       "name": "Dettol Original Germ Protection Soap",
       "unit": "4 pack",
       "categoryId": "personal",
@@ -1540,8 +1540,8 @@
       "bytes": 52124,
       "verified": true
     },
-    "bb-01194": {
-      "skuId": "bb-01194",
+    "bb-01210": {
+      "skuId": "bb-01210",
       "name": "Lifebuoy Germ Protection Soap",
       "unit": "4 pack",
       "categoryId": "personal",
@@ -1551,8 +1551,8 @@
       "bytes": 52124,
       "verified": true
     },
-    "bb-01248": {
-      "skuId": "bb-01248",
+    "bb-01264": {
+      "skuId": "bb-01264",
       "name": "Savlon Germ Protection Soap",
       "unit": "4 pack",
       "categoryId": "personal",
@@ -1562,8 +1562,8 @@
       "bytes": 52124,
       "verified": true
     },
-    "bb-01153": {
-      "skuId": "bb-01153",
+    "bb-01169": {
+      "skuId": "bb-01169",
       "name": "Dove Cream Bar Beauty Bathing Bar",
       "unit": "100 g",
       "categoryId": "personal",
@@ -1573,8 +1573,8 @@
       "bytes": 29728,
       "verified": true
     },
-    "bb-01199": {
-      "skuId": "bb-01199",
+    "bb-01215": {
+      "skuId": "bb-01215",
       "name": "Lux Beauty Bathing Bar",
       "unit": "100 g",
       "categoryId": "personal",
@@ -1584,8 +1584,8 @@
       "bytes": 29728,
       "verified": true
     },
-    "bb-01231": {
-      "skuId": "bb-01231",
+    "bb-01247": {
+      "skuId": "bb-01247",
       "name": "Pears Beauty Bathing Bar",
       "unit": "100 g",
       "categoryId": "personal",
@@ -1595,8 +1595,8 @@
       "bytes": 29728,
       "verified": true
     },
-    "bb-01182": {
-      "skuId": "bb-01182",
+    "bb-01198": {
+      "skuId": "bb-01198",
       "name": "Head & Shoulders Anti-Dandruff Shampoo",
       "unit": "180 ml",
       "categoryId": "personal",
@@ -1606,8 +1606,8 @@
       "bytes": 32680,
       "verified": true
     },
-    "bb-01129": {
-      "skuId": "bb-01129",
+    "bb-01145": {
+      "skuId": "bb-01145",
       "name": "Clinic Plus Anti-Dandruff Shampoo",
       "unit": "180 ml",
       "categoryId": "personal",
@@ -1617,8 +1617,8 @@
       "bytes": 32680,
       "verified": true
     },
-    "bb-01150": {
-      "skuId": "bb-01150",
+    "bb-01166": {
+      "skuId": "bb-01166",
       "name": "Dove Anti-Dandruff Shampoo",
       "unit": "180 ml",
       "categoryId": "personal",
@@ -1628,8 +1628,8 @@
       "bytes": 32680,
       "verified": true
     },
-    "bb-01249": {
-      "skuId": "bb-01249",
+    "bb-01265": {
+      "skuId": "bb-01265",
       "name": "Sensodyne Strong Teeth Toothpaste",
       "unit": "100 g",
       "categoryId": "personal",
@@ -1639,8 +1639,8 @@
       "bytes": 71276,
       "verified": true
     },
-    "bb-01135": {
-      "skuId": "bb-01135",
+    "bb-01151": {
+      "skuId": "bb-01151",
       "name": "Colgate Strong Teeth Strong Teeth Toothpaste",
       "unit": "100 g",
       "categoryId": "personal",
@@ -1650,8 +1650,8 @@
       "bytes": 60206,
       "verified": true
     },
-    "bb-01234": {
-      "skuId": "bb-01234",
+    "bb-01250": {
+      "skuId": "bb-01250",
       "name": "Pepsodent Strong Teeth Toothpaste",
       "unit": "100 g",
       "categoryId": "personal",
@@ -1661,8 +1661,8 @@
       "bytes": 60206,
       "verified": true
     },
-    "bb-01139": {
-      "skuId": "bb-01139",
+    "bb-01155": {
+      "skuId": "bb-01155",
       "name": "Colgate Toothbrush",
       "unit": "4 pack soft",
       "categoryId": "personal",
@@ -1672,8 +1672,8 @@
       "bytes": 47576,
       "verified": true
     },
-    "bb-01222": {
-      "skuId": "bb-01222",
+    "bb-01238": {
+      "skuId": "bb-01238",
       "name": "Oral-B Toothbrush",
       "unit": "4 pack soft",
       "categoryId": "personal",
@@ -1683,8 +1683,8 @@
       "bytes": 47576,
       "verified": true
     },
-    "bb-01253": {
-      "skuId": "bb-01253",
+    "bb-01269": {
+      "skuId": "bb-01269",
       "name": "Sensodyne Toothbrush",
       "unit": "4 pack soft",
       "categoryId": "personal",
@@ -1694,8 +1694,8 @@
       "bytes": 47576,
       "verified": true
     },
-    "bb-01179": {
-      "skuId": "bb-01179",
+    "bb-01195": {
+      "skuId": "bb-01195",
       "name": "Gillette Shaving Foam",
       "unit": "200 ml",
       "categoryId": "personal",
@@ -1705,8 +1705,8 @@
       "bytes": 28702,
       "verified": true
     },
-    "bb-01219": {
-      "skuId": "bb-01219",
+    "bb-01235": {
+      "skuId": "bb-01235",
       "name": "Old Spice Shaving Foam",
       "unit": "200 ml",
       "categoryId": "personal",
@@ -1716,8 +1716,8 @@
       "bytes": 28702,
       "verified": true
     },
-    "bb-01229": {
-      "skuId": "bb-01229",
+    "bb-01245": {
+      "skuId": "bb-01245",
       "name": "Park Avenue Shaving Foam",
       "unit": "200 ml",
       "categoryId": "personal",
@@ -1727,8 +1727,8 @@
       "bytes": 28702,
       "verified": true
     },
-    "bb-01175": {
-      "skuId": "bb-01175",
+    "bb-01191": {
+      "skuId": "bb-01191",
       "name": "Gillette Manual Razor",
       "unit": "1 razor",
       "categoryId": "personal",
@@ -1738,8 +1738,8 @@
       "bytes": 60074,
       "verified": true
     },
-    "bb-01117": {
-      "skuId": "bb-01117",
+    "bb-01133": {
+      "skuId": "bb-01133",
       "name": "7 O’clock Manual Razor",
       "unit": "1 razor",
       "categoryId": "personal",
@@ -1749,63 +1749,63 @@
       "bytes": 60074,
       "verified": true
     },
+    "bb-01381": {
+      "skuId": "bb-01381",
+      "name": "Pampers Diapers Pants",
+      "unit": "M · 36 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48184,
+      "verified": true
+    },
+    "bb-01333": {
+      "skuId": "bb-01333",
+      "name": "Huggies Diapers Pants",
+      "unit": "M · 36 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48184,
+      "verified": true
+    },
+    "bb-01364": {
+      "skuId": "bb-01364",
+      "name": "MamyPoko Diapers Pants",
+      "unit": "M · 36 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48184,
+      "verified": true
+    },
+    "bb-01382": {
+      "skuId": "bb-01382",
+      "name": "Pampers Diapers Pants",
+      "unit": "L · 34 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49368,
+      "verified": true
+    },
+    "bb-01334": {
+      "skuId": "bb-01334",
+      "name": "Huggies Diapers Pants",
+      "unit": "L · 34 pcs",
+      "categoryId": "baby",
+      "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49368,
+      "verified": true
+    },
     "bb-01365": {
       "skuId": "bb-01365",
-      "name": "Pampers Diapers Pants",
-      "unit": "M · 36 pcs",
-      "categoryId": "baby",
-      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
-      "width": 600,
-      "height": 600,
-      "bytes": 48184,
-      "verified": true
-    },
-    "bb-01317": {
-      "skuId": "bb-01317",
-      "name": "Huggies Diapers Pants",
-      "unit": "M · 36 pcs",
-      "categoryId": "baby",
-      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
-      "width": 600,
-      "height": 600,
-      "bytes": 48184,
-      "verified": true
-    },
-    "bb-01348": {
-      "skuId": "bb-01348",
-      "name": "MamyPoko Diapers Pants",
-      "unit": "M · 36 pcs",
-      "categoryId": "baby",
-      "path": "/catalog/items/baby/baby-diaper-pants-m-32.jpg",
-      "width": 600,
-      "height": 600,
-      "bytes": 48184,
-      "verified": true
-    },
-    "bb-01366": {
-      "skuId": "bb-01366",
-      "name": "Pampers Diapers Pants",
-      "unit": "L · 34 pcs",
-      "categoryId": "baby",
-      "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
-      "width": 600,
-      "height": 600,
-      "bytes": 49368,
-      "verified": true
-    },
-    "bb-01318": {
-      "skuId": "bb-01318",
-      "name": "Huggies Diapers Pants",
-      "unit": "L · 34 pcs",
-      "categoryId": "baby",
-      "path": "/catalog/items/baby/baby-diaper-pants-l-30.jpg",
-      "width": 600,
-      "height": 600,
-      "bytes": 49368,
-      "verified": true
-    },
-    "bb-01349": {
-      "skuId": "bb-01349",
       "name": "MamyPoko Diapers Pants",
       "unit": "L · 34 pcs",
       "categoryId": "baby",
@@ -1815,8 +1815,8 @@
       "bytes": 49368,
       "verified": true
     },
-    "bb-01331": {
-      "skuId": "bb-01331",
+    "bb-01347": {
+      "skuId": "bb-01347",
       "name": "Johnson’s Baby Wipes",
       "unit": "72 wipes pack",
       "categoryId": "baby",
@@ -1826,8 +1826,8 @@
       "bytes": 47771,
       "verified": true
     },
-    "bb-01363": {
-      "skuId": "bb-01363",
+    "bb-01379": {
+      "skuId": "bb-01379",
       "name": "Pampers Baby Wipes",
       "unit": "72 wipes pack",
       "categoryId": "baby",
@@ -1837,8 +1837,8 @@
       "bytes": 47771,
       "verified": true
     },
-    "bb-01346": {
-      "skuId": "bb-01346",
+    "bb-01362": {
+      "skuId": "bb-01362",
       "name": "MamyPoko Baby Wipes",
       "unit": "72 wipes pack",
       "categoryId": "baby",
@@ -1848,8 +1848,8 @@
       "bytes": 47771,
       "verified": true
     },
-    "bb-01355": {
-      "skuId": "bb-01355",
+    "bb-01371": {
+      "skuId": "bb-01371",
       "name": "Nestle Cerelac Infant Cereal",
       "unit": "300 g",
       "categoryId": "baby",
@@ -1859,8 +1859,8 @@
       "bytes": 64301,
       "verified": true
     },
-    "bb-01358": {
-      "skuId": "bb-01358",
+    "bb-01374": {
+      "skuId": "bb-01374",
       "name": "Nestum Infant Cereal",
       "unit": "300 g",
       "categoryId": "baby",
@@ -1870,8 +1870,8 @@
       "bytes": 64301,
       "verified": true
     },
-    "bb-01308": {
-      "skuId": "bb-01308",
+    "bb-01324": {
+      "skuId": "bb-01324",
       "name": "Himalaya Baby Soap",
       "unit": "75 g",
       "categoryId": "baby",
@@ -1881,8 +1881,8 @@
       "bytes": 39820,
       "verified": true
     },
-    "bb-01327": {
-      "skuId": "bb-01327",
+    "bb-01343": {
+      "skuId": "bb-01343",
       "name": "Johnson’s Baby Soap",
       "unit": "75 g",
       "categoryId": "baby",
@@ -1892,8 +1892,8 @@
       "bytes": 39820,
       "verified": true
     },
-    "bb-01382": {
-      "skuId": "bb-01382",
+    "bb-01398": {
+      "skuId": "bb-01398",
       "name": "Sebamed Baby Soap",
       "unit": "75 g",
       "categoryId": "baby",
@@ -1903,8 +1903,8 @@
       "bytes": 39820,
       "verified": true
     },
-    "bb-01723": {
-      "skuId": "bb-01723",
+    "bb-01739": {
+      "skuId": "bb-01739",
       "name": "Dolo 650 Paracetamol 500mg Tablets",
       "unit": "10 tablets",
       "categoryId": "pharma",
@@ -1914,8 +1914,8 @@
       "bytes": 62743,
       "verified": true
     },
-    "bb-01705": {
-      "skuId": "bb-01705",
+    "bb-01721": {
+      "skuId": "bb-01721",
       "name": "Crocin Paracetamol 500mg Tablets",
       "unit": "10 tablets",
       "categoryId": "pharma",
@@ -1925,8 +1925,8 @@
       "bytes": 62743,
       "verified": true
     },
-    "bb-01701": {
-      "skuId": "bb-01701",
+    "bb-01717": {
+      "skuId": "bb-01717",
       "name": "Calpol Paracetamol 500mg Tablets",
       "unit": "10 tablets",
       "categoryId": "pharma",
@@ -1936,8 +1936,8 @@
       "bytes": 62743,
       "verified": true
     },
-    "bb-01753": {
-      "skuId": "bb-01753",
+    "bb-01769": {
+      "skuId": "bb-01769",
       "name": "Limcee Chewable Vitamin C Tablets",
       "unit": "15 tablets",
       "categoryId": "pharma",
@@ -1947,8 +1947,8 @@
       "bytes": 67019,
       "verified": true
     },
-    "bb-01703": {
-      "skuId": "bb-01703",
+    "bb-01719": {
+      "skuId": "bb-01719",
       "name": "Celin Chewable Vitamin C Tablets",
       "unit": "15 tablets",
       "categoryId": "pharma",
@@ -1958,8 +1958,8 @@
       "bytes": 67019,
       "verified": true
     },
-    "bb-01798": {
-      "skuId": "bb-01798",
+    "bb-01814": {
+      "skuId": "bb-01814",
       "name": "Zandu Pain Relief Balm Jar",
       "unit": "50 g",
       "categoryId": "pharma",
@@ -1969,8 +1969,8 @@
       "bytes": 61223,
       "verified": true
     },
-    "bb-01687": {
-      "skuId": "bb-01687",
+    "bb-01703": {
+      "skuId": "bb-01703",
       "name": "Amrutanjan Pain Relief Balm Jar",
       "unit": "50 g",
       "categoryId": "pharma",
@@ -1980,8 +1980,8 @@
       "bytes": 61223,
       "verified": true
     },
-    "bb-01787": {
-      "skuId": "bb-01787",
+    "bb-01803": {
+      "skuId": "bb-01803",
       "name": "Tiger Balm Pain Relief Balm Jar",
       "unit": "50 g",
       "categoryId": "pharma",
@@ -1991,8 +1991,8 @@
       "bytes": 61223,
       "verified": true
     },
-    "bb-01717": {
-      "skuId": "bb-01717",
+    "bb-01733": {
+      "skuId": "bb-01733",
       "name": "Dettol Antiseptic Liquid",
       "unit": "100 ml",
       "categoryId": "pharma",
@@ -2002,8 +2002,8 @@
       "bytes": 32286,
       "verified": true
     },
-    "bb-01774": {
-      "skuId": "bb-01774",
+    "bb-01790": {
+      "skuId": "bb-01790",
       "name": "Savlon Antiseptic Liquid",
       "unit": "100 ml",
       "categoryId": "pharma",
@@ -2013,8 +2013,8 @@
       "bytes": 32286,
       "verified": true
     },
-    "bb-01692": {
-      "skuId": "bb-01692",
+    "bb-01708": {
+      "skuId": "bb-01708",
       "name": "Band-Aid Adhesive Bandages",
       "unit": "pack of 10",
       "categoryId": "pharma",
@@ -2024,8 +2024,8 @@
       "bytes": 45536,
       "verified": true
     },
-    "bb-01715": {
-      "skuId": "bb-01715",
+    "bb-01731": {
+      "skuId": "bb-01731",
       "name": "Dettol Adhesive Bandages",
       "unit": "pack of 10",
       "categoryId": "pharma",
@@ -2035,8 +2035,8 @@
       "bytes": 45536,
       "verified": true
     },
-    "bb-01732": {
-      "skuId": "bb-01732",
+    "bb-01748": {
+      "skuId": "bb-01748",
       "name": "Eno Antacid Fruit Salt Sachet",
       "unit": "5 g sachet",
       "categoryId": "pharma",
@@ -2046,8 +2046,8 @@
       "bytes": 54944,
       "verified": true
     },
-    "bb-01739": {
-      "skuId": "bb-01739",
+    "bb-01755": {
+      "skuId": "bb-01755",
       "name": "Gelusil Antacid Fruit Salt Sachet",
       "unit": "5 g sachet",
       "categoryId": "pharma",
@@ -2057,8 +2057,8 @@
       "bytes": 54944,
       "verified": true
     },
-    "bb-01743": {
-      "skuId": "bb-01743",
+    "bb-01759": {
+      "skuId": "bb-01759",
       "name": "Glucon-D Glucose Energy Powder",
       "unit": "500 g",
       "categoryId": "pharma",
@@ -2068,8 +2068,8 @@
       "bytes": 68937,
       "verified": true
     },
-    "bb-01713": {
-      "skuId": "bb-01713",
+    "bb-01729": {
+      "skuId": "bb-01729",
       "name": "Dabur Glucose Energy Powder",
       "unit": "500 g",
       "categoryId": "pharma",
@@ -2079,8 +2079,8 @@
       "bytes": 68937,
       "verified": true
     },
-    "bb-01781": {
-      "skuId": "bb-01781",
+    "bb-01797": {
+      "skuId": "bb-01797",
       "name": "Strepsils Cough Lozenges",
       "unit": "pack of 20",
       "categoryId": "pharma",
@@ -2090,8 +2090,8 @@
       "bytes": 54866,
       "verified": true
     },
-    "bb-01790": {
-      "skuId": "bb-01790",
+    "bb-01806": {
+      "skuId": "bb-01806",
       "name": "Vicks Cough Lozenges",
       "unit": "pack of 20",
       "categoryId": "pharma",
@@ -2101,8 +2101,8 @@
       "bytes": 54866,
       "verified": true
     },
-    "bb-01747": {
-      "skuId": "bb-01747",
+    "bb-01763": {
+      "skuId": "bb-01763",
       "name": "Halls Cough Lozenges",
       "unit": "pack of 20",
       "categoryId": "pharma",
@@ -2112,8 +2112,8 @@
       "bytes": 54866,
       "verified": true
     },
-    "bb-00626": {
-      "skuId": "bb-00626",
+    "bb-00634": {
+      "skuId": "bb-00634",
       "name": "Cadbury Dairy Milk Silk Chocolate Bar",
       "unit": "60 g",
       "categoryId": "chocolates",
@@ -2123,8 +2123,8 @@
       "bytes": 58236,
       "verified": true
     },
-    "bb-00610": {
-      "skuId": "bb-00610",
+    "bb-00618": {
+      "skuId": "bb-00618",
       "name": "Amul Milk Chocolate Bar",
       "unit": "40 g",
       "categoryId": "chocolates",
@@ -2134,8 +2134,8 @@
       "bytes": 58236,
       "verified": true
     },
-    "bb-00656": {
-      "skuId": "bb-00656",
+    "bb-00664": {
+      "skuId": "bb-00664",
       "name": "KitKat Crispy Wafer Chocolate",
       "unit": "4-pack 8 fingers",
       "categoryId": "chocolates",
@@ -2145,8 +2145,8 @@
       "bytes": 64312,
       "verified": true
     },
-    "bb-00601": {
-      "skuId": "bb-00601",
+    "bb-00609": {
+      "skuId": "bb-00609",
       "name": "Alpenliebe Gold Toffee Jar",
       "unit": "jar ~100 pcs",
       "categoryId": "chocolates",
@@ -2156,8 +2156,8 @@
       "bytes": 70863,
       "verified": true
     },
-    "bb-00664": {
-      "skuId": "bb-00664",
+    "bb-00672": {
+      "skuId": "bb-00672",
       "name": "Melody Toffee Jar",
       "unit": "jar ~100 pcs",
       "categoryId": "chocolates",
@@ -2167,8 +2167,8 @@
       "bytes": 70863,
       "verified": true
     },
-    "bb-00640": {
-      "skuId": "bb-00640",
+    "bb-00648": {
+      "skuId": "bb-00648",
       "name": "Haldiram’s Gulab Jamun Tin",
       "unit": "1 kg tin",
       "categoryId": "chocolates",
@@ -2178,8 +2178,8 @@
       "bytes": 60190,
       "verified": true
     },
-    "bb-00613": {
-      "skuId": "bb-00613",
+    "bb-00621": {
+      "skuId": "bb-00621",
       "name": "Bikaji Gulab Jamun Tin",
       "unit": "1 kg tin",
       "categoryId": "chocolates",
@@ -2189,8 +2189,8 @@
       "bytes": 60190,
       "verified": true
     },
-    "bb-00644": {
-      "skuId": "bb-00644",
+    "bb-00652": {
+      "skuId": "bb-00652",
       "name": "Haldiram’s Rasgulla Tin",
       "unit": "1 kg tin",
       "categoryId": "chocolates",
@@ -2200,8 +2200,8 @@
       "bytes": 46870,
       "verified": true
     },
-    "bb-00615": {
-      "skuId": "bb-00615",
+    "bb-00623": {
+      "skuId": "bb-00623",
       "name": "Bikaji Rasgulla Tin",
       "unit": "1 kg tin",
       "categoryId": "chocolates",
@@ -2211,8 +2211,8 @@
       "bytes": 46870,
       "verified": true
     },
-    "bb-00647": {
-      "skuId": "bb-00647",
+    "bb-00655": {
+      "skuId": "bb-00655",
       "name": "Haldiram’s Soan Papdi",
       "unit": "250 g",
       "categoryId": "chocolates",
@@ -2222,8 +2222,8 @@
       "bytes": 73566,
       "verified": true
     },
-    "bb-00616": {
-      "skuId": "bb-00616",
+    "bb-00624": {
+      "skuId": "bb-00624",
       "name": "Bikaji Soan Papdi",
       "unit": "250 g",
       "categoryId": "chocolates",
@@ -2233,8 +2233,8 @@
       "bytes": 73566,
       "verified": true
     },
-    "bb-00622": {
-      "skuId": "bb-00622",
+    "bb-00630": {
+      "skuId": "bb-00630",
       "name": "Cadbury Bournville Dark Chocolate",
       "unit": "55 g",
       "categoryId": "chocolates",
@@ -2244,8 +2244,8 @@
       "bytes": 46932,
       "verified": true
     },
-    "bb-00606": {
-      "skuId": "bb-00606",
+    "bb-00614": {
+      "skuId": "bb-00614",
       "name": "Amul Dark Chocolate",
       "unit": "55 g",
       "categoryId": "chocolates",
@@ -2255,8 +2255,8 @@
       "bytes": 46932,
       "verified": true
     },
-    "bb-00484": {
-      "skuId": "bb-00484",
+    "bb-00491": {
+      "skuId": "bb-00491",
       "name": "Haldiram’s Peanut Chikki",
       "unit": "200 g",
       "categoryId": "munchies",
@@ -2266,8 +2266,8 @@
       "bytes": 79834,
       "verified": true
     },
-    "bb-00496": {
-      "skuId": "bb-00496",
+    "bb-00503": {
+      "skuId": "bb-00503",
       "name": "Jabsons Peanut Chikki",
       "unit": "200 g",
       "categoryId": "munchies",
@@ -2277,8 +2277,8 @@
       "bytes": 79834,
       "verified": true
     },
-    "bb-00789": {
-      "skuId": "bb-00789",
+    "bb-00797": {
+      "skuId": "bb-00797",
       "name": "Sprite Lime Soft Drink",
       "unit": "1.25 L",
       "categoryId": "drinks",
@@ -2288,8 +2288,8 @@
       "bytes": 40226,
       "verified": true
     },
-    "bb-00684": {
-      "skuId": "bb-00684",
+    "bb-00692": {
+      "skuId": "bb-00692",
       "name": "7Up Lime Soft Drink",
       "unit": "1.25 L",
       "categoryId": "drinks",
@@ -2299,8 +2299,8 @@
       "bytes": 40226,
       "verified": true
     },
-    "bb-00722": {
-      "skuId": "bb-00722",
+    "bb-00730": {
+      "skuId": "bb-00730",
       "name": "Fanta Orange Fizzy Drink",
       "unit": "750 ml",
       "categoryId": "drinks",
@@ -2310,8 +2310,8 @@
       "bytes": 37891,
       "verified": true
     },
-    "bb-00741": {
-      "skuId": "bb-00741",
+    "bb-00749": {
+      "skuId": "bb-00749",
       "name": "Mirinda Orange Fizzy Drink",
       "unit": "750 ml",
       "categoryId": "drinks",
@@ -2321,8 +2321,8 @@
       "bytes": 37891,
       "verified": true
     },
-    "bb-00770": {
-      "skuId": "bb-00770",
+    "bb-00778": {
+      "skuId": "bb-00778",
       "name": "Real Fruit Power Apple Juice",
       "unit": "1 L carton",
       "categoryId": "drinks",
@@ -2332,8 +2332,8 @@
       "bytes": 44574,
       "verified": true
     },
-    "bb-00801": {
-      "skuId": "bb-00801",
+    "bb-00809": {
+      "skuId": "bb-00809",
       "name": "Tropicana Apple Juice",
       "unit": "1 L carton",
       "categoryId": "drinks",
@@ -2343,8 +2343,8 @@
       "bytes": 44574,
       "verified": true
     },
-    "bb-00776": {
-      "skuId": "bb-00776",
+    "bb-00784": {
+      "skuId": "bb-00784",
       "name": "Real Fruit Power Mixed Fruit Juice",
       "unit": "1 L carton",
       "categoryId": "drinks",
@@ -2354,8 +2354,8 @@
       "bytes": 52966,
       "verified": true
     },
-    "bb-00805": {
-      "skuId": "bb-00805",
+    "bb-00813": {
+      "skuId": "bb-00813",
       "name": "Tropicana Mixed Fruit Juice",
       "unit": "1 L carton",
       "categoryId": "drinks",
@@ -2365,8 +2365,8 @@
       "bytes": 52966,
       "verified": true
     },
-    "bb-00755": {
-      "skuId": "bb-00755",
+    "bb-00763": {
+      "skuId": "bb-00763",
       "name": "Paper Boat Guava Chili Juice",
       "unit": "1 L carton",
       "categoryId": "drinks",
@@ -2376,8 +2376,8 @@
       "bytes": 50022,
       "verified": true
     },
-    "bb-00774": {
-      "skuId": "bb-00774",
+    "bb-00782": {
+      "skuId": "bb-00782",
       "name": "Real Fruit Power Guava Chili Juice",
       "unit": "1 L carton",
       "categoryId": "drinks",
@@ -2387,8 +2387,8 @@
       "bytes": 50022,
       "verified": true
     },
-    "bb-00779": {
-      "skuId": "bb-00779",
+    "bb-00787": {
+      "skuId": "bb-00787",
       "name": "Real Tender Coconut Water",
       "unit": "200 ml",
       "categoryId": "drinks",
@@ -2398,8 +2398,8 @@
       "bytes": 34025,
       "verified": true
     },
-    "bb-00716": {
-      "skuId": "bb-00716",
+    "bb-00724": {
+      "skuId": "bb-00724",
       "name": "Coco Tender Coconut Water",
       "unit": "200 ml",
       "categoryId": "drinks",
@@ -2409,8 +2409,8 @@
       "bytes": 34025,
       "verified": true
     },
-    "bb-00781": {
-      "skuId": "bb-00781",
+    "bb-00789": {
+      "skuId": "bb-00789",
       "name": "Red Bull Energy Drink",
       "unit": "250 ml can",
       "categoryId": "drinks",
@@ -2420,8 +2420,8 @@
       "bytes": 52087,
       "verified": true
     },
-    "bb-00793": {
-      "skuId": "bb-00793",
+    "bb-00801": {
+      "skuId": "bb-00801",
       "name": "Sting Energy Drink",
       "unit": "250 ml can",
       "categoryId": "drinks",
@@ -2431,8 +2431,8 @@
       "bytes": 52087,
       "verified": true
     },
-    "bb-00743": {
-      "skuId": "bb-00743",
+    "bb-00751": {
+      "skuId": "bb-00751",
       "name": "Monster Energy Drink",
       "unit": "250 ml can",
       "categoryId": "drinks",
@@ -2442,8 +2442,8 @@
       "bytes": 52087,
       "verified": true
     },
-    "bb-00757": {
-      "skuId": "bb-00757",
+    "bb-00765": {
+      "skuId": "bb-00765",
       "name": "Paper Boat Jeera Masala Soda",
       "unit": "600 ml",
       "categoryId": "drinks",
@@ -2453,8 +2453,8 @@
       "bytes": 41481,
       "verified": true
     },
-    "bb-00710": {
-      "skuId": "bb-00710",
+    "bb-00718": {
+      "skuId": "bb-00718",
       "name": "Campa Jeera Masala Soda",
       "unit": "600 ml",
       "categoryId": "drinks",
@@ -2464,8 +2464,8 @@
       "bytes": 41481,
       "verified": true
     },
-    "bb-00737": {
-      "skuId": "bb-00737",
+    "bb-00745": {
+      "skuId": "bb-00745",
       "name": "Local Jeera Masala Soda",
       "unit": "600 ml",
       "categoryId": "drinks",
@@ -2475,8 +2475,8 @@
       "bytes": 41481,
       "verified": true
     },
-    "bb-00701": {
-      "skuId": "bb-00701",
+    "bb-00709": {
+      "skuId": "bb-00709",
       "name": "Bisleri Packaged Water",
       "unit": "1 L bottle",
       "categoryId": "drinks",
@@ -2486,8 +2486,8 @@
       "bytes": 32674,
       "verified": true
     },
-    "bb-00690": {
-      "skuId": "bb-00690",
+    "bb-00698": {
+      "skuId": "bb-00698",
       "name": "Aquafina Packaged Water",
       "unit": "1 L bottle",
       "categoryId": "drinks",
@@ -2497,8 +2497,8 @@
       "bytes": 32674,
       "verified": true
     },
-    "bb-00730": {
-      "skuId": "bb-00730",
+    "bb-00738": {
+      "skuId": "bb-00738",
       "name": "Kinley Packaged Water",
       "unit": "1 L bottle",
       "categoryId": "drinks",
@@ -2508,8 +2508,8 @@
       "bytes": 32674,
       "verified": true
     },
-    "bb-00688": {
-      "skuId": "bb-00688",
+    "bb-00696": {
+      "skuId": "bb-00696",
       "name": "Amul Lassi Sweet",
       "unit": "200 ml",
       "categoryId": "drinks",
@@ -2519,8 +2519,8 @@
       "bytes": 29977,
       "verified": true
     },
-    "bb-00747": {
-      "skuId": "bb-00747",
+    "bb-00755": {
+      "skuId": "bb-00755",
       "name": "Mother Dairy Lassi Sweet",
       "unit": "200 ml",
       "categoryId": "drinks",
@@ -2530,8 +2530,8 @@
       "bytes": 29977,
       "verified": true
     },
-    "bb-01479": {
-      "skuId": "bb-01479",
+    "bb-01495": {
+      "skuId": "bb-01495",
       "name": "Kellogg’s Corn Flakes",
       "unit": "475 g",
       "categoryId": "breakfast",
@@ -2541,8 +2541,8 @@
       "bytes": 67223,
       "verified": true
     },
-    "bb-01450": {
-      "skuId": "bb-01450",
+    "bb-01466": {
+      "skuId": "bb-01466",
       "name": "Bagrry’s Corn Flakes",
       "unit": "475 g",
       "categoryId": "breakfast",
@@ -2552,8 +2552,8 @@
       "bytes": 67223,
       "verified": true
     },
-    "bb-01504": {
-      "skuId": "bb-01504",
+    "bb-01520": {
+      "skuId": "bb-01520",
       "name": "Patanjali Corn Flakes",
       "unit": "475 g",
       "categoryId": "breakfast",
@@ -2563,8 +2563,8 @@
       "bytes": 67223,
       "verified": true
     },
-    "bb-01476": {
-      "skuId": "bb-01476",
+    "bb-01492": {
+      "skuId": "bb-01492",
       "name": "Kellogg’s Chocos Cereal",
       "unit": "300 g",
       "categoryId": "breakfast",
@@ -2574,8 +2574,8 @@
       "bytes": 74088,
       "verified": true
     },
-    "bb-01447": {
-      "skuId": "bb-01447",
+    "bb-01463": {
+      "skuId": "bb-01463",
       "name": "Bagrry’s Chocos Cereal",
       "unit": "300 g",
       "categoryId": "breakfast",
@@ -2585,8 +2585,8 @@
       "bytes": 74088,
       "verified": true
     },
-    "bb-01517": {
-      "skuId": "bb-01517",
+    "bb-01533": {
+      "skuId": "bb-01533",
       "name": "Quaker Rolled Oats",
       "unit": "1 kg",
       "categoryId": "breakfast",
@@ -2596,8 +2596,8 @@
       "bytes": 53525,
       "verified": true
     },
-    "bb-01521": {
-      "skuId": "bb-01521",
+    "bb-01537": {
+      "skuId": "bb-01537",
       "name": "Saffola Rolled Oats",
       "unit": "1 kg",
       "categoryId": "breakfast",
@@ -2607,8 +2607,8 @@
       "bytes": 53525,
       "verified": true
     },
-    "bb-01455": {
-      "skuId": "bb-01455",
+    "bb-01471": {
+      "skuId": "bb-01471",
       "name": "Bagrry’s Rolled Oats",
       "unit": "1 kg",
       "categoryId": "breakfast",
@@ -2618,8 +2618,8 @@
       "bytes": 53525,
       "verified": true
     },
-    "bb-01481": {
-      "skuId": "bb-01481",
+    "bb-01497": {
+      "skuId": "bb-01497",
       "name": "Kellogg’s Muesli Fruit & Nut",
       "unit": "400 g",
       "categoryId": "breakfast",
@@ -2629,8 +2629,8 @@
       "bytes": 77593,
       "verified": true
     },
-    "bb-01452": {
-      "skuId": "bb-01452",
+    "bb-01468": {
+      "skuId": "bb-01468",
       "name": "Bagrry’s Muesli Fruit & Nut",
       "unit": "400 g",
       "categoryId": "breakfast",
@@ -2640,8 +2640,8 @@
       "bytes": 77593,
       "verified": true
     },
-    "bb-01522": {
-      "skuId": "bb-01522",
+    "bb-01538": {
+      "skuId": "bb-01538",
       "name": "Soulfull Muesli Fruit & Nut",
       "unit": "400 g",
       "categoryId": "breakfast",
@@ -2673,8 +2673,8 @@
       "bytes": 49892,
       "verified": true
     },
-    "bb-01581": {
-      "skuId": "bb-01581",
+    "bb-01597": {
+      "skuId": "bb-01597",
       "name": "Safal Frozen Green Peas",
       "unit": "500 g",
       "categoryId": "frozen",
@@ -2684,8 +2684,8 @@
       "bytes": 84959,
       "verified": true
     },
-    "bb-01550": {
-      "skuId": "bb-01550",
+    "bb-01566": {
+      "skuId": "bb-01566",
       "name": "Godrej Yummiez Frozen Green Peas",
       "unit": "500 g",
       "categoryId": "frozen",
@@ -2695,8 +2695,8 @@
       "bytes": 84959,
       "verified": true
     },
-    "bb-01567": {
-      "skuId": "bb-01567",
+    "bb-01583": {
+      "skuId": "bb-01583",
       "name": "McCain Frozen French Fries",
       "unit": "420 g",
       "categoryId": "frozen",
@@ -2706,8 +2706,8 @@
       "bytes": 69609,
       "verified": true
     },
-    "bb-01557": {
-      "skuId": "bb-01557",
+    "bb-01573": {
+      "skuId": "bb-01573",
       "name": "ITC Master Chef Frozen French Fries",
       "unit": "420 g",
       "categoryId": "frozen",
@@ -2717,8 +2717,8 @@
       "bytes": 69609,
       "verified": true
     },
-    "bb-01566": {
-      "skuId": "bb-01566",
+    "bb-01582": {
+      "skuId": "bb-01582",
       "name": "McCain Aloo Tikki Frozen",
       "unit": "400 g",
       "categoryId": "frozen",
@@ -2728,8 +2728,8 @@
       "bytes": 74490,
       "verified": true
     },
-    "bb-01547": {
-      "skuId": "bb-01547",
+    "bb-01563": {
+      "skuId": "bb-01563",
       "name": "Godrej Yummiez Aloo Tikki Frozen",
       "unit": "400 g",
       "categoryId": "frozen",
@@ -2739,8 +2739,8 @@
       "bytes": 74490,
       "verified": true
     },
-    "bb-01585": {
-      "skuId": "bb-01585",
+    "bb-01601": {
+      "skuId": "bb-01601",
       "name": "Safal Frozen Sweet Corn",
       "unit": "500 g",
       "categoryId": "frozen",
@@ -2750,8 +2750,8 @@
       "bytes": 78941,
       "verified": true
     },
-    "bb-01553": {
-      "skuId": "bb-01553",
+    "bb-01569": {
+      "skuId": "bb-01569",
       "name": "Godrej Yummiez Frozen Sweet Corn",
       "unit": "500 g",
       "categoryId": "frozen",
@@ -2783,8 +2783,8 @@
       "bytes": 61754,
       "verified": true
     },
-    "bb-01110": {
-      "skuId": "bb-01110",
+    "bb-01126": {
+      "skuId": "bb-01126",
       "name": "Vim Dishwash Bar",
       "unit": "3 pack",
       "categoryId": "household",
@@ -2794,20 +2794,9 @@
       "bytes": 69777,
       "verified": true
     },
-    "bb-01018": {
-      "skuId": "bb-01018",
+    "bb-01034": {
+      "skuId": "bb-01034",
       "name": "Exo Dishwash Bar",
-      "unit": "3 pack",
-      "categoryId": "household",
-      "path": "/catalog/items/household/dishwash-bar-3-pack.jpg",
-      "width": 600,
-      "height": 600,
-      "bytes": 69777,
-      "verified": true
-    },
-    "bb-01081": {
-      "skuId": "bb-01081",
-      "name": "Pril Dishwash Bar",
       "unit": "3 pack",
       "categoryId": "household",
       "path": "/catalog/items/household/dishwash-bar-3-pack.jpg",
@@ -2818,6 +2807,17 @@
     },
     "bb-01097": {
       "skuId": "bb-01097",
+      "name": "Pril Dishwash Bar",
+      "unit": "3 pack",
+      "categoryId": "household",
+      "path": "/catalog/items/household/dishwash-bar-3-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 69777,
+      "verified": true
+    },
+    "bb-01113": {
+      "skuId": "bb-01113",
       "name": "Shalimar Garbage Bags",
       "unit": "30 bags medium",
       "categoryId": "household",
@@ -2827,8 +2827,8 @@
       "bytes": 40830,
       "verified": true
     },
-    "bb-01062": {
-      "skuId": "bb-01062",
+    "bb-01078": {
+      "skuId": "bb-01078",
       "name": "Origami Garbage Bags",
       "unit": "30 bags medium",
       "categoryId": "household",
@@ -2838,8 +2838,8 @@
       "bytes": 40830,
       "verified": true
     },
-    "bb-01038": {
-      "skuId": "bb-01038",
+    "bb-01054": {
+      "skuId": "bb-01054",
       "name": "Hindalco Aluminium Foil",
       "unit": "9 m",
       "categoryId": "household",
@@ -2849,8 +2849,8 @@
       "bytes": 29606,
       "verified": true
     },
-    "bb-01086": {
-      "skuId": "bb-01086",
+    "bb-01102": {
+      "skuId": "bb-01102",
       "name": "Reynolds Aluminium Foil",
       "unit": "9 m",
       "categoryId": "household",
@@ -2860,8 +2860,8 @@
       "bytes": 29606,
       "verified": true
     },
-    "bb-01066": {
-      "skuId": "bb-01066",
+    "bb-01082": {
+      "skuId": "bb-01082",
       "name": "Origami Kitchen Towel Roll",
       "unit": "2 rolls 2-ply",
       "categoryId": "household",
@@ -2871,8 +2871,8 @@
       "bytes": 52925,
       "verified": true
     },
-    "bb-01073": {
-      "skuId": "bb-01073",
+    "bb-01089": {
+      "skuId": "bb-01089",
       "name": "Premier Kitchen Towel Roll",
       "unit": "2 rolls 2-ply",
       "categoryId": "household",
@@ -2882,8 +2882,8 @@
       "bytes": 52925,
       "verified": true
     },
-    "bb-01029": {
-      "skuId": "bb-01029",
+    "bb-01045": {
+      "skuId": "bb-01045",
       "name": "Good Knight Mosquito Repellent Refill",
       "unit": "45 ml refill",
       "categoryId": "household",
@@ -2893,8 +2893,8 @@
       "bytes": 72276,
       "verified": true
     },
-    "bb-00995": {
-      "skuId": "bb-00995",
+    "bb-01011": {
+      "skuId": "bb-01011",
       "name": "AllOut Mosquito Repellent Refill",
       "unit": "45 ml refill",
       "categoryId": "household",
@@ -2904,8 +2904,8 @@
       "bytes": 72276,
       "verified": true
     },
-    "bb-01040": {
-      "skuId": "bb-01040",
+    "bb-01056": {
+      "skuId": "bb-01056",
       "name": "Hit Mosquito Repellent Refill",
       "unit": "45 ml refill",
       "categoryId": "household",
@@ -2915,8 +2915,8 @@
       "bytes": 72276,
       "verified": true
     },
-    "bb-02171": {
-      "skuId": "bb-02171",
+    "bb-02187": {
+      "skuId": "bb-02187",
       "name": "Rajnigandha Meetha Saunf Mukhwas",
       "unit": "100 g",
       "categoryId": "paan",
@@ -2926,8 +2926,8 @@
       "bytes": 52689,
       "verified": true
     },
-    "bb-02155": {
-      "skuId": "bb-02155",
+    "bb-02171": {
+      "skuId": "bb-02171",
       "name": "Local Meetha Saunf Mukhwas",
       "unit": "100 g",
       "categoryId": "paan",
@@ -2937,8 +2937,8 @@
       "bytes": 52689,
       "verified": true
     },
-    "bb-02161": {
-      "skuId": "bb-02161",
+    "bb-02177": {
+      "skuId": "bb-02177",
       "name": "Local Silver Coated Elaichi",
       "unit": "50 g",
       "categoryId": "paan",
@@ -2948,8 +2948,8 @@
       "bytes": 60559,
       "verified": true
     },
-    "bb-02173": {
-      "skuId": "bb-02173",
+    "bb-02189": {
+      "skuId": "bb-02189",
       "name": "Rajnigandha Paan Masala Mouth Freshener",
       "unit": "10 sachets",
       "categoryId": "paan",
@@ -2959,8 +2959,8 @@
       "bytes": 81054,
       "verified": true
     },
-    "bb-02168": {
-      "skuId": "bb-02168",
+    "bb-02184": {
+      "skuId": "bb-02184",
       "name": "Pass Paan Masala Mouth Freshener",
       "unit": "10 sachets",
       "categoryId": "paan",
@@ -2970,8 +2970,8 @@
       "bytes": 81054,
       "verified": true
     },
-    "bb-02139": {
-      "skuId": "bb-02139",
+    "bb-02155": {
+      "skuId": "bb-02155",
       "name": "Center Fresh Chocolate Mint Pellets",
       "unit": "jar",
       "categoryId": "paan",
@@ -2981,8 +2981,8 @@
       "bytes": 53053,
       "verified": true
     },
-    "bb-02167": {
-      "skuId": "bb-02167",
+    "bb-02183": {
+      "skuId": "bb-02183",
       "name": "Pass Chocolate Mint Pellets",
       "unit": "jar",
       "categoryId": "paan",
@@ -2992,8 +2992,8 @@
       "bytes": 53053,
       "verified": true
     },
-    "bb-02165": {
-      "skuId": "bb-02165",
+    "bb-02181": {
+      "skuId": "bb-02181",
       "name": "Orbit Spearmint Chewing Gum",
       "unit": "blister pack",
       "categoryId": "paan",
@@ -3003,8 +3003,8 @@
       "bytes": 46615,
       "verified": true
     },
-    "bb-02140": {
-      "skuId": "bb-02140",
+    "bb-02156": {
+      "skuId": "bb-02156",
       "name": "Center Fresh Spearmint Chewing Gum",
       "unit": "blister pack",
       "categoryId": "paan",
@@ -3014,8 +3014,8 @@
       "bytes": 46615,
       "verified": true
     },
-    "bb-02145": {
-      "skuId": "bb-02145",
+    "bb-02161": {
+      "skuId": "bb-02161",
       "name": "Happydent Spearmint Chewing Gum",
       "unit": "blister pack",
       "categoryId": "paan",
@@ -3025,8 +3025,8 @@
       "bytes": 46615,
       "verified": true
     },
-    "bb-02159": {
-      "skuId": "bb-02159",
+    "bb-02175": {
+      "skuId": "bb-02175",
       "name": "Local Roasted Saunf",
       "unit": "100 g",
       "categoryId": "paan",
@@ -3036,8 +3036,8 @@
       "bytes": 56216,
       "verified": true
     },
-    "bb-02144": {
-      "skuId": "bb-02144",
+    "bb-02160": {
+      "skuId": "bb-02160",
       "name": "Hajmola Digestive Anardana Goli",
       "unit": "100 g",
       "categoryId": "paan",
@@ -3047,8 +3047,8 @@
       "bytes": 44114,
       "verified": true
     },
-    "bb-02147": {
-      "skuId": "bb-02147",
+    "bb-02163": {
+      "skuId": "bb-02163",
       "name": "Local Digestive Anardana Goli",
       "unit": "100 g",
       "categoryId": "paan",
@@ -3056,6 +3056,193 @@
       "width": 600,
       "height": 600,
       "bytes": 44114,
+      "verified": true
+    },
+    "bb-00972": {
+      "skuId": "bb-00972",
+      "name": "Maggi 2-Minute Masala Noodles",
+      "unit": "70 g",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/maggi-2-minute-noodles-70g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62238,
+      "verified": true
+    },
+    "bb-01002": {
+      "skuId": "bb-01002",
+      "name": "Sunfeast YiPPee! 2-Minute Masala Noodles",
+      "unit": "70 g",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/maggi-2-minute-noodles-70g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62238,
+      "verified": true
+    },
+    "bb-00958": {
+      "skuId": "bb-00958",
+      "name": "Knorr 2-Minute Masala Noodles",
+      "unit": "4 pack",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/maggi-masala-noodles-4-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 81491,
+      "verified": true
+    },
+    "bb-00974": {
+      "skuId": "bb-00974",
+      "name": "Maggi 2-Minute Masala Noodles",
+      "unit": "12 pack family",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/maggi-masala-noodles-4-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 81491,
+      "verified": true
+    },
+    "bb-01003": {
+      "skuId": "bb-01003",
+      "name": "Sunfeast YiPPee! 2-Minute Masala Noodles",
+      "unit": "4 pack",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/yippee-magic-masala-noodles-4-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 88543,
+      "verified": true
+    },
+    "bb-00964": {
+      "skuId": "bb-00964",
+      "name": "Knorr Mast Masala Soupy Noodles",
+      "unit": "70 g",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/knorr-soupy-noodles-pouch.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68745,
+      "verified": true
+    },
+    "bb-00985": {
+      "skuId": "bb-00985",
+      "name": "Maggi Soupy Noodles",
+      "unit": "70 g",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/knorr-soupy-noodles-pouch.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68745,
+      "verified": true
+    },
+    "bb-01007": {
+      "skuId": "bb-01007",
+      "name": "Top Ramen Curry Veg Noodles",
+      "unit": "70 g",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/top-ramen-curry-noodles-single.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71859,
+      "verified": true
+    },
+    "bb-00911": {
+      "skuId": "bb-00911",
+      "name": "Ching’s Secret Curry Veg Noodles",
+      "unit": "70 g",
+      "categoryId": "instant",
+      "path": "/catalog/items/instant/top-ramen-curry-noodles-single.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71859,
+      "verified": true
+    },
+    "bb-00231": {
+      "skuId": "bb-00231",
+      "name": "Fortune Soya Chunks",
+      "unit": "200 g",
+      "categoryId": "staples",
+      "path": "/catalog/items/instant/soya-chunks-fortune-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52707,
+      "verified": true
+    },
+    "bb-00262": {
+      "skuId": "bb-00262",
+      "name": "Nutrela Soya Chunks",
+      "unit": "200 g",
+      "categoryId": "staples",
+      "path": "/catalog/items/instant/soya-chunks-fortune-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52707,
+      "verified": true
+    },
+    "bb-00268": {
+      "skuId": "bb-00268",
+      "name": "Patanjali Soya Chunks",
+      "unit": "200 g",
+      "categoryId": "staples",
+      "path": "/catalog/items/instant/soya-chunks-fortune-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52707,
+      "verified": true
+    },
+    "bb-00592": {
+      "skuId": "bb-00592",
+      "name": "Parle-G Gold Glucose Biscuits",
+      "unit": "250 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/parle-g-glucose-biscuit-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62380,
+      "verified": true
+    },
+    "bb-00593": {
+      "skuId": "bb-00593",
+      "name": "Parle-G Gold Glucose Biscuits",
+      "unit": "800 g family",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/parle-g-family-pack-800g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71744,
+      "verified": true
+    },
+    "bb-00538": {
+      "skuId": "bb-00538",
+      "name": "Britannia Marie Gold Marie Gold Biscuits",
+      "unit": "250 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/britannia-marie-gold-300g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59360,
+      "verified": true
+    },
+    "bb-00584": {
+      "skuId": "bb-00584",
+      "name": "Parle Marie Gold Biscuits",
+      "unit": "250 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/britannia-marie-gold-300g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59360,
+      "verified": true
+    },
+    "bb-00534": {
+      "skuId": "bb-00534",
+      "name": "Britannia Good Day Cashew Cookies",
+      "unit": "100 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/britannia-good-day-cashew-120g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68212,
       "verified": true
     }
   }

@@ -144,6 +144,8 @@ const CATALOG = {
     { n: 'Pasta', brands: ['Maggi', 'Sunfeast YiPPee!', 'Bambino'], packs: [['400 g pack', 0.6], ['900 g family pack', 1]], p: 95 },
     { n: 'Sugar / Cheeni', brands: ['Madhur', 'Tata', 'Parry’s'], packs: [['1 kg pack', 0.22], ['5 kg bag', 1]], p: 230 },
     { n: 'Iodised Salt', brands: ['Tata Salt', 'Aashirvaad Salt'], packs: [['250 g', 0.3], ['1 kg pack', 1]], p: 24 },
+    { n: 'Lite Low Sodium Salt', brands: ['Tata Salt'], packs: [['1 kg pack', 1]], p: 32 },
+    { n: 'Soya Chunks', brands: ['Fortune', 'Nutrela', 'Patanjali'], packs: [['200 g', 1], ['500 g', 2.2]], p: 55 },
     { n: 'Rock Salt / Sendha Namak', brands: ['Tata Salt', 'Patanjali', 'Local'], packs: [['500 g', 0.55], ['1 kg pack', 1]], p: 60 },
   ],
   oils: [
@@ -191,7 +193,7 @@ const CATALOG = {
     { n: 'Green Chilli Pickle', brands: ['Mother’s Recipe', 'Nilons'], packs: [['200 g', 0.55], ['400 g', 1]], p: 70 },
   ],
   biscuits: [
-    { n: 'Gold Glucose Biscuits', brands: ['Parle-G Gold', 'Parle-G'], packs: [['100 g', 0.18], ['250 g', 0.4], ['1 kg family', 1]], p: 110 },
+    { n: 'Gold Glucose Biscuits', brands: ['Parle-G Gold', 'Parle-G'], packs: [['100 g', 0.18], ['250 g', 0.4], ['800 g family', 0.82], ['1 kg family', 1]], p: 110 },
     { n: 'Cashew Cookies', brands: ['Britannia Good Day', 'Sunfeast'], packs: [['100 g', 0.28], ['250 g', 0.55], ['600 g', 1]], p: 90 },
     { n: 'Marie Gold Biscuits', brands: ['Britannia Marie Gold', 'Parle Marie'], packs: [['100 g', 0.25], ['250 g', 0.5], ['600 g', 1]], p: 85 },
     { n: 'Choco Fills Cookies', brands: ['Sunfeast Dark Fantasy', 'Cadbury Bournvita Biscuits'], packs: [['75 g', 0.5], ['300 g', 1]], p: 80 },
@@ -280,6 +282,8 @@ const CATALOG = {
   instant: [
     { n: '2-Minute Masala Noodles', brands: ['Maggi', 'Sunfeast YiPPee!', 'Knorr'], packs: [['70 g', 0.09], ['4 pack', 0.36], ['12 pack family', 1]], p: 168 },
     { n: 'Cup Noodles', brands: ['Maggi Cuppa Mania', 'Yippee Cup'], packs: [['70 g cup', 0.3], ['4 cup pack', 1]], p: 60 },
+    { n: 'Soupy Noodles', brands: ['Knorr Mast Masala', 'Maggi'], packs: [['70 g', 0.28], ['4 pack', 1]], p: 90 },
+    { n: 'Curry Veg Noodles', brands: ['Top Ramen', 'Ching\u2019s Secret'], packs: [['70 g', 0.28], ['4 pack', 1]], p: 90 },
     { n: 'Cheesy Pasta Snack', brands: ['Maggi Pazzta', 'Sunfeast YiPPee! Pasta'], packs: [['65 g', 0.3], ['4 pack', 1]], p: 55 },
     { n: 'Instant Soup', brands: ['Knorr', 'Ching’s Secret', 'Maggi'], packs: [['4 sachets', 0.45], ['10 sachets', 1]], p: 60 },
     { n: 'Tomato Ketchup', brands: ['Kissan', 'Heinz', 'Maggi'], packs: [['200 g', 0.5], ['500 g', 1], ['1 kg', 1.9]], p: 120 },
