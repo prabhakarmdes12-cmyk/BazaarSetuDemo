@@ -1,4 +1,4 @@
-# BazaarSetu — 90-Day Growth Implementation Plan
+# Chiti Bazaar — 90-Day Growth Implementation Plan
 
 Market context (D-Mart-as-agent research): kiranas ≈ 13M stores; 91%/86% grocery
 share; grocery $658B → $992B by FY30; kirana credit gap ₹20 lakh crore; digital
@@ -32,7 +32,7 @@ no-frills utility.
   `GET /api/shops`, `GET /api/shops/:id`, `GET /api/shops/:id/products`,
   `GET /api/products/shop/:shopId`, `GET /api/products/shops/:shopId/products`.
 - Frontend: guest browse on `/customer`; localStorage guest cart
-  (`bazaarsetu_guest_cart`); add-to-cart while logged out; checkout-login —
+  (`chitibazaar_guest_cart`); add-to-cart while logged out; checkout-login —
   merge guest cart into server cart on login/register; cart page shows guest
   cart with login CTA when unauthenticated.
 - MRP badge on product cards (price + unit trust cue).

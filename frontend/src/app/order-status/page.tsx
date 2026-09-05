@@ -65,9 +65,9 @@ export default function PublicOrderStatusPage() {
         <p className="text-on-surface-variant">Ye link galat hai ya order delete ho chuka hai.</p>
         <button
           onClick={() => router.push('/')}
-          className="mt-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold px-8 py-3 rounded-xl active:scale-95 transition-all"
+          className="mt-4 leaf-gradient text-on-primary font-headline font-bold px-8 py-3 rounded-xl active:scale-95 transition-all"
         >
-          BazaarSetu par jayein
+          Chiti Bazaar par jayein
         </button>
       </div>
     );
@@ -76,7 +76,7 @@ export default function PublicOrderStatusPage() {
   return (
     <div className="bg-surface min-h-screen pb-16">
       <header className="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-top-bar flex justify-between items-center px-6 py-4">
-        <span className="font-headline font-extrabold text-primary italic leading-none">BazaarSetu</span>
+        <span className="font-headline font-extrabold text-primary italic leading-none">Chiti Bazaar</span>
         <span className="font-inter text-[10px] font-medium uppercase tracking-wider text-on-surface-variant italic">
           Apni local dukaan, ab online
         </span>
@@ -122,7 +122,7 @@ export default function PublicOrderStatusPage() {
                   <div
                     className={`z-10 w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
                       isCompleted
-                        ? 'bg-gradient-to-br from-primary to-primary-container text-white'
+                        ? 'leaf-gradient text-white'
                         : isActive
                           ? 'bg-primary-container text-on-primary-container shadow-lg shadow-primary/20'
                           : 'bg-surface-container-highest text-on-surface-variant'
@@ -190,7 +190,7 @@ export default function PublicOrderStatusPage() {
             className="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-1"
           >
             <Icon name="storefront" size="sm" />
-            BazaarSetu
+            Chiti Bazaar
           </button>
         </section>
       </main>

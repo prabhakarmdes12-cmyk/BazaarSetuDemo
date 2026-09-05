@@ -217,7 +217,7 @@ export function evaluatePilotDelivery(input: PilotDeliveryInput): PilotDeliveryD
 export function assertPilotDeliveryAllowed(input: PilotDeliveryInput): PilotDeliveryDecision {
   const decision = evaluatePilotDelivery(input);
   if (!decision.ok) {
-    throw new PilotPolicyError('Delivery address is outside the active BazaarSetu pilot locality', decision);
+    throw new PilotPolicyError('Delivery address is outside the active Chiti Bazaar pilot locality', decision);
   }
   return decision;
 }

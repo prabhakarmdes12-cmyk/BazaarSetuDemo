@@ -1,6 +1,6 @@
-# BazaarSetu Development Journal
+# Chiti Bazaar Development Journal
 
-## Project: BazaarSetu — "Bridge between local shops and customers"
+## Project: Chiti Bazaar — "Bridge between local shops and customers"
 
 A hyperlocal multi-vendor grocery commerce platform connecting Indian shopkeepers with nearby customers through chat-first commerce.
 
@@ -9,13 +9,13 @@ A hyperlocal multi-vendor grocery commerce platform connecting Indian shopkeeper
 ## 2026-03-28 — MVP Build Session
 
 ### Objective
-Design and build a production-ready MVP for BazaarSetu from scratch.
+Design and build a production-ready MVP for Chiti Bazaar from scratch.
 
 ### What Was Built
 
 #### 1. Project Structure
 ```
-BazaarSetu/
+Chiti Bazaar/
 ├── frontend/          # Next.js 14 + TypeScript + TailwindCSS
 ├── backend/           # Express + Prisma + SQLite + Socket.io
 ├── package.json       # Root workspace (concurrently)
@@ -172,7 +172,7 @@ cd frontend && npm run dev   # localhost:3000
 ## 2026-03-29 — Production Upgrade Session
 
 ### Objective
-Upgrade BazaarSetu from MVP to production-ready deployable system. Focus on real-world usability for shopkeepers, customer retention, system reliability, and low-tech friendliness.
+Upgrade Chiti Bazaar from MVP to production-ready deployable system. Focus on real-world usability for shopkeepers, customer retention, system reliability, and low-tech friendliness.
 
 ### What Was Built
 

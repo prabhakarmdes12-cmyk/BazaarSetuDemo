@@ -10,7 +10,7 @@ interface BadgeProps {
   uppercase?: boolean;
 }
 
-// Map BazaarSetu badge states onto the Chiti badge variants (success | warn | error).
+// Map Chiti Bazaar badge states onto the Chiti badge variants (success | warn | error).
 const variantMap: Record<string, 'success' | 'warn' | 'error'> = {
   default: 'success',
   success: 'success',

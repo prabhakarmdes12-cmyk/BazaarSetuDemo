@@ -19,27 +19,34 @@ export default function BottomNavBar({ items }: BottomNavBarProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl rounded-t-[24px] border-t border-outline-variant shadow-bottom-nav">
-      <div className="flex justify-around items-center px-4 pb-6 pt-3 max-w-7xl mx-auto">
-        {items.map((item) => {
-          const isActive = pathname === item.href || (item.href !== '/customer' && item.href !== '/vendor' && item.href !== '/admin' && pathname.startsWith(item.href));
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`flex flex-col items-center justify-center rounded-xl px-5 py-2 active:scale-90 transition-all duration-200 ease-out ${
-                isActive
-                  ? 'bg-primary-container dark:bg-primary-container text-primary dark:text-primary-fixed'
-                  : 'text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed'
-              }`}
-            >
-              <Icon name={item.icon} filled={isActive} />
-              <span className="font-inter text-[11px] font-medium tracking-wide mt-1">
-                {item.label}
-              </span>
-            </Link>
-          );
-        })}
+    <nav className="fixed bottom-0 left-0 w-full z-50 pointer-events-none">
+      <div className="max-w-7xl mx-auto px-4 pb-[calc(env(safe-area-inset-bottom,0px)+16px)] pt-2 flex justify-center">
+        <div className="glass-panel pointer-events-auto flex items-center gap-1 rounded-[28px] px-3 py-2 shadow-bottom-nav">
+          {items.map((item) => {
+            const isActive = pathname === item.href || (item.href !== '/customer' && item.href !== '/vendor' && item.href !== '/admin' && pathname.startsWith(item.href));
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative flex flex-col items-center justify-center rounded-2xl px-4 py-2 active:scale-90 transition-all duration-200 ease-out ${
+                  isActive
+                    ? 'text-primary'
+                    : 'text-on-surface-variant hover:text-primary'
+                }`}
+              >
+                {isActive && (
+                  <span className="absolute inset-0 rounded-2xl bg-primary/12 shadow-leaf-glow" aria-hidden="true" />
+                )}
+                <span className="relative">
+                  <Icon name={item.icon} filled={isActive} />
+                </span>
+                <span className="relative font-label text-[10px] font-semibold tracking-wide mt-0.5">
+                  {item.label}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </nav>
   );

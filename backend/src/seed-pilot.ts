@@ -147,7 +147,7 @@ async function seedProducts(shopId: string, products: PilotProductInput[]) {
 }
 
 async function seedPilot() {
-  console.log('Seeding BazaarSetu pilot locality...');
+  console.log('Seeding Chiti Bazaar pilot locality...');
   console.log(`${locality.name} (${locality.pincodes.join(', ')}) radius ${locality.radiusKm}km`);
 
   const admin = await upsertUser({ phone: '9999900000', name: 'Chiti Pilot Operator', role: 'admin' });

@@ -62,7 +62,7 @@ async function attemptConfiguredDelivery(eventLogId: string, envelope: Operation
       headers: {
         'Content-Type': 'application/json',
         ...(envelope.signature && { 'X-Chiti-Signature': envelope.signature }),
-        'X-BazaarSetu-Event-Id': envelope.eventId,
+        'X-Chiti-Bazaar-Event-Id': envelope.eventId,
       },
       body: JSON.stringify(envelope),
     });

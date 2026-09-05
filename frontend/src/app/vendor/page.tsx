@@ -113,7 +113,7 @@ export default function VendorDashboard() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-primary to-primary-container p-6 rounded-xl shadow-saffron flex flex-col justify-between text-on-primary">
+          <div className="leaf-gradient p-6 rounded-xl shadow-saffron flex flex-col justify-between text-on-primary">
             <div className="flex justify-between items-start">
               <Icon name="payments" className="text-white text-3xl" filled />
               <Icon name="trending_up" className="text-white/50" />

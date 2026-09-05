@@ -64,7 +64,7 @@ export default function PaymentHistoryPage() {
 
       <main className="pt-24 px-6 max-w-2xl mx-auto pb-40">
         <section className="grid grid-cols-2 gap-4 mb-8">
-          <div className="bg-gradient-to-br from-primary to-primary-container rounded-2xl p-5 shadow-lg text-white">
+          <div className="leaf-gradient rounded-2xl p-5 shadow-lg text-white">
             <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Aaj ki Vasooli</p>
             <p className="text-3xl font-extrabold tracking-tighter">₹{collectedToday}</p>
           </div>

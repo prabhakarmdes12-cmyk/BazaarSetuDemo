@@ -174,7 +174,7 @@ export default function ShopLedgerPage() {
         <h1 className="font-headline font-bold text-on-surface text-xl">Khata nahi mila</h1>
         <button
           onClick={() => router.push('/vendor/udhaar')}
-          className="mt-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold px-8 py-3 rounded-xl active:scale-95 transition-all"
+          className="mt-4 leaf-gradient text-on-primary font-headline font-bold px-8 py-3 rounded-xl active:scale-95 transition-all"
         >
           Wapas udhaar par
         </button>
@@ -206,7 +206,7 @@ export default function ShopLedgerPage() {
       <main className="pt-24 px-6 max-w-2xl mx-auto pb-40">
         <section className="relative mb-6">
           <div className="absolute -right-4 -top-4 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl" />
-          <div className="relative bg-gradient-to-br from-primary to-primary-container p-8 rounded-[2rem] shadow-lg overflow-hidden text-white">
+          <div className="relative leaf-gradient p-8 rounded-[2rem] shadow-lg overflow-hidden text-white">
             <div className="absolute top-0 right-0 w-32 h-32 bg-black/10 rounded-bl-[100px]" />
             <div className="flex flex-col gap-1 relative z-10">
               <span className="text-white/80 font-headline font-semibold text-sm tracking-wide uppercase">Kul Baaki (Balance)</span>

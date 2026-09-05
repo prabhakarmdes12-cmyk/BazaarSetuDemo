@@ -1,4 +1,4 @@
-# MISSION: BAZAARSETU OPERATIONAL COMMERCE BUILD
+# MISSION: CHITI-BAZAAR OPERATIONAL COMMERCE BUILD
 ## Conversational Ordering + Merchant Negotiation + Chitigram + Chiti Console
 *Document Version: 1.0.0-PROD | Status: Authoritative Architecture Specification*
 *Published For: Autonomous Coding Agent & Engineering Team*
@@ -7,7 +7,7 @@
 
 ## 0. Current Verified Baseline — Preserve It
 
-A forensic audit of BazaarSetu has established the verified foundation:
+A forensic audit of Chiti Bazaar has established the verified foundation:
 - **Backend**: Express + Prisma ORM (SQLite for local dev, PostgreSQL for pilot/prod). **51/51 Jest tests passing**.
 - **Frontend**: Next.js 14 App Router, Tailwind CSS, `@chiti/ui`. **32/32 routes compiling cleanly**.
 - **Verified Capabilities**: Customer PWA, vendor dashboard, admin UI, shop/product CRUD, single-shop cart, order creation, vendor order processing, persistent Socket.io chat, unread/typing tracking, product cards in chat, Udhaar Khata ledger (FIFO DSO aging), Razorpay checkout, RazorpayX payouts, WhatsApp `wa.me` fallback, and public token order tracking.
@@ -24,7 +24,7 @@ Everything in this milestone exists to make this **ONE canonical flow real**:
 ```
 CUSTOMER
    ↓
-Opens BazaarSetu & selects local Kirana store
+Opens Chiti Bazaar & selects local Kirana store
    ↓
 Opens Shop Bot / Conversation
    ↓
@@ -238,7 +238,7 @@ Provide a minimal, touch-friendly mobile interface for the dukandar:
 
 ## 6. Chitigram Protocol Integration
 
-BazaarSetu's chat bridges into canonical Chitigram message types:
+Chiti Bazaar's chat bridges into canonical Chitigram message types:
 
 | Bazaar Canonical Type | Description | Payload Data |
 |---|---|---|
@@ -261,7 +261,7 @@ BazaarSetu's chat bridges into canonical Chitigram message types:
 - **Payment Methods Supported**:
   - `COD` (Cash on Delivery)
   - `DIRECT_UPI` (Merchant UPI QR)
-  - `UDHAAR` (Native BazaarSetu Khata)
+  - `UDHAAR` (Native Chiti Bazaar Khata)
   - `RAZORPAY` (Where configured)
 - **Payment Verification**:
   - Opening a UPI intent link does NOT equal payment success.
@@ -275,7 +275,7 @@ BazaarSetu's chat bridges into canonical Chitigram message types:
 
 ## 8. Chiti Console Operational Event Bridge
 
-BazaarSetu emits signed, versioned, idempotent operational events to Chiti Console:
+Chiti Bazaar emits signed, versioned, idempotent operational events to Chiti Console:
 
 ### 8.1 Event Envelope
 ```json
@@ -342,13 +342,13 @@ The implementation is verified when the following 22-step automated sequence exe
 
 ```bash
 # 1. Verify baseline
-cd D:\Projects\BazaarSetu\backend
+cd D:\Projects\Chiti Bazaar\backend
 npm test
-cd D:\Projects\BazaarSetu\frontend
+cd D:\Projects\Chiti Bazaar\frontend
 npm run build
 
 # 2. Apply Schema
-cd D:\Projects\BazaarSetu\backend
+cd D:\Projects\Chiti Bazaar\backend
 npx prisma generate
 npx prisma db push
 
@@ -357,6 +357,6 @@ npm test -- src/__tests__/pilot.conversational.e2e.ts
 
 # 4. Final Full Regression
 npm test
-cd D:\Projects\BazaarSetu\frontend
+cd D:\Projects\Chiti Bazaar\frontend
 npm run build
 ```

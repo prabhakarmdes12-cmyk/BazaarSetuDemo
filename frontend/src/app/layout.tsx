@@ -4,17 +4,17 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'BazaarSetu - Apni Dukaan, Apni Pehchaan',
-  description: 'Local shops, delivered to your doorstep. Connect with nearby grocery stores.',
+  title: 'Chiti Bazaar - Fresh Veggies & Kirana in 10 Mins',
+  description: 'Fresh veggies & kirana in 10 mins from your trusted neighborhood dukaans. Local shops, delivered to your doorstep.',
   manifest: '/manifest.json',
-  appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'BazaarSetu' },
+  appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'Chiti Bazaar' },
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  themeColor: '#090a0b',
+  themeColor: '#070A07',
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="hi" data-theme="dark" data-density="default">
       <head>
-        <meta name="theme-color" content="#090a0b" />
+        <meta name="theme-color" content="#070A07" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

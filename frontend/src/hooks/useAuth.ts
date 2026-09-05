@@ -13,8 +13,8 @@ export function useAuth() {
   });
 
   useEffect(() => {
-    const token = localStorage.getItem('bazaarsetu_token');
-    const userStr = localStorage.getItem('bazaarsetu_user');
+    const token = localStorage.getItem('chitibazaar_token');
+    const userStr = localStorage.getItem('chitibazaar_user');
     
     if (token && userStr) {
       try {
@@ -40,9 +40,9 @@ export function useAuth() {
     );
     
     if (res.success) {
-      localStorage.setItem('bazaarsetu_token', res.data.token);
-      localStorage.setItem('bazaarsetu_user', JSON.stringify(res.data.user));
-      localStorage.setItem('bazaarsetu_role', res.data.user.role);
+      localStorage.setItem('chitibazaar_token', res.data.token);
+      localStorage.setItem('chitibazaar_user', JSON.stringify(res.data.user));
+      localStorage.setItem('chitibazaar_role', res.data.user.role);
       setAuth({
         user: res.data.user,
         token: res.data.token,
@@ -62,9 +62,9 @@ export function useAuth() {
       );
 
       if (res.success) {
-        localStorage.setItem('bazaarsetu_token', res.data.token);
-        localStorage.setItem('bazaarsetu_user', JSON.stringify(res.data.user));
-        localStorage.setItem('bazaarsetu_role', res.data.user.role);
+        localStorage.setItem('chitibazaar_token', res.data.token);
+        localStorage.setItem('chitibazaar_user', JSON.stringify(res.data.user));
+        localStorage.setItem('chitibazaar_role', res.data.user.role);
         setAuth({
           user: res.data.user,
           token: res.data.token,
@@ -79,14 +79,14 @@ export function useAuth() {
   );
 
   const logout = useCallback(() => {
-    localStorage.removeItem('bazaarsetu_token');
-    localStorage.removeItem('bazaarsetu_user');
-    localStorage.removeItem('bazaarsetu_role');
+    localStorage.removeItem('chitibazaar_token');
+    localStorage.removeItem('chitibazaar_user');
+    localStorage.removeItem('chitibazaar_role');
     setAuth({ user: null, token: null, isAuthenticated: false, isLoading: false });
   }, []);
 
   const deleteAccount = useCallback(async () => {
-    const token = localStorage.getItem('bazaarsetu_token') || undefined;
+    const token = localStorage.getItem('chitibazaar_token') || undefined;
     const res = await api.delete<{ success: boolean; message: string }>(
       '/api/auth/account',
       token

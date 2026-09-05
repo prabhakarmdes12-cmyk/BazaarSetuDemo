@@ -9,10 +9,10 @@ export interface SubmissionData {
 }
 
 export async function saveSubmission(data: SubmissionData): Promise<void> {
-  console.log('[BazaarSetu] Submission saved (stub):', data);
+  console.log('[Chiti Bazaar] Submission saved (stub):', data);
 
   // TODO: Future integration options:
-  // 1. POST to BazaarSetu backend API
+  // 1. POST to Chiti Bazaar backend API
   // 2. Write to Google Sheets via Apps Script or API
   // 3. Store in localStorage for offline collection
 

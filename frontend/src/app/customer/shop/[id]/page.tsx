@@ -221,17 +221,32 @@ export default function ShopPage() {
 
   return (
     <div className="bg-surface text-on-surface">
-      <header className="bg-surface-container-lowest/80 backdrop-blur-md sticky top-0 z-50 shadow-top-bar">
+      <header className="glass-panel bg-surface/85 backdrop-blur-xl sticky top-0 z-50 shadow-top-bar">
         <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
           <div className="flex items-center gap-4">
-            <button onClick={() => router.back()} aria-label="Go back" className="active:scale-95 transition-transform text-on-surface-variant">
+            <button onClick={() => router.back()} aria-label="Go back" className="active:scale-95 transition-transform text-on-surface-variant hover:text-primary">
               <Icon name="arrow_back" />
             </button>
             <div className="flex flex-col">
               <h1 className="font-headline font-bold text-lg tracking-tight text-on-surface">{shop?.name || 'Shop'}</h1>
-              <div className="flex items-center gap-1">
-                <Icon name="verified" size="sm" filled className="text-secondary" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-secondary">Trusted Dukaan</span>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="flex items-center gap-1">
+                  <Icon name="verified" size="sm" filled className="text-secondary" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-secondary">Trusted Dukaan</span>
+                </span>
+                {shop && (
+                  <>
+                    <span className="flex items-center gap-0.5 text-[10px] font-bold text-primary">
+                      <Icon name="star" size="sm" filled />
+                      {shop.rating.toFixed(1)}
+                    </span>
+                    {shop.distance != null && (
+                      <span className="text-[10px] font-bold text-on-surface-variant">
+                        {shop.distance} km
+                      </span>
+                    )}
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -342,7 +357,7 @@ export default function ShopPage() {
                     <button
                       onClick={() => handleAddToCart(product)}
                       disabled={!product.isAvailable}
-                      className="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full leaf-gradient text-on-primary font-headline font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Icon name="add" size="sm" />
                       {product.isAvailable ? 'Add to bag' : 'Stock khatam'}
@@ -360,7 +375,7 @@ export default function ShopPage() {
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-headline font-extrabold text-2xl text-on-primary-fixed">Meet the Shopkeeper</h3>
-                    <p className="text-on-primary-fixed-variant mt-2 max-w-md leading-relaxed">&quot;Serving this community for over 25 years with honesty and fresh supplies. Now bringing our personalized service to your doorstep via BazaarSetu.&quot;</p>
+                    <p className="text-on-primary-fixed-variant mt-2 max-w-md leading-relaxed">&quot;Serving this community for over 25 years with honesty and fresh supplies. Now bringing our personalized service to your doorstep via Chiti Bazaar.&quot;</p>
                   </div>
                 </div>
                 <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl" />
@@ -378,7 +393,7 @@ export default function ShopPage() {
             </div>
             <button
               onClick={() => router.push('/login')}
-              className="mx-auto bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold px-8 py-3 rounded-xl active:scale-95 transition-all"
+              className="mx-auto leaf-gradient text-on-primary font-headline font-bold px-8 py-3 rounded-xl active:scale-95 transition-all"
             >
               Login karein
             </button>
@@ -405,7 +420,7 @@ export default function ShopPage() {
       {cartCount > 0 && (
         <button
           onClick={() => router.push('/customer/cart')}
-          className="fixed bottom-6 right-4 bg-gradient-to-br from-primary to-primary-container text-on-primary px-5 py-3 rounded-2xl shadow-brand-glow flex items-center gap-2 z-30 active:scale-90 transition-transform"
+          className="fixed bottom-6 right-4 leaf-gradient text-on-primary px-5 py-3 rounded-2xl shadow-brand-glow flex items-center gap-2 z-30 active:scale-90 transition-transform"
         >
           <Icon name="shopping_cart" />
           <span className="font-semibold">Cart Dekhein</span>

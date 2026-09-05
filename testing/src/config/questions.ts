@@ -20,7 +20,7 @@ export const roles: Role[] = [
 
 const recommendQuestion: Question = {
   id: 'recommend',
-  q: 'Kya aap BazaarSetu ko apne dost ya parivaar ko recommend karenge? / Would you recommend BazaarSetu to your friends or family?',
+  q: 'Kya aap Chiti Bazaar ko apne dost ya parivaar ko recommend karenge? / Would you recommend Chiti Bazaar to your friends or family?',
   options: ['Haan - Yes', 'Nahi - No', 'Shayad - Maybe'],
 };
 

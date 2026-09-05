@@ -139,7 +139,7 @@ export default function CustomerOrdersPage() {
                     <button
                       onClick={() => handleRepeatOrder(order.id)}
                       disabled={repeatingId === order.id}
-                      className="flex-[1.5] bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold py-3 rounded-xl shadow-lg shadow-primary/10 active:scale-95 transition-all text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+                      className="flex-[1.5] leaf-gradient text-on-primary font-bold py-3 rounded-xl shadow-lg shadow-primary/10 active:scale-95 transition-all text-sm flex items-center justify-center gap-2 disabled:opacity-50"
                     >
                       <Icon name="rebase_edit" size="sm" />
                       {repeatingId === order.id ? 'Cart mein daal rahe...' : 'Repeat karein'}

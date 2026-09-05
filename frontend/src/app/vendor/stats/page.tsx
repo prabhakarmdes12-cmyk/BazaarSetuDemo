@@ -45,7 +45,7 @@ export default function VendorStatsPage() {
               <Icon name="arrow_back" />
             </button>
             <div>
-              <h1 className="font-headline font-bold text-2xl tracking-tight text-primary dark:text-primary italic">BazaarSetu</h1>
+              <h1 className="font-headline font-bold text-2xl tracking-tight text-primary dark:text-primary italic">Chiti Bazaar</h1>
               <p className="text-[10px] font-headline font-bold tracking-widest text-on-surface-variant italic">Apni local dukaan, ab online</p>
             </div>
           </div>

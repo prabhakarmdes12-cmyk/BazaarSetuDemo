@@ -2,7 +2,6 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import AppShell from '@/components/AppShell';
 import HeroGreeting from '@/components/HeroGreeting';
 import SearchBar from '@/components/SearchBar';
@@ -10,6 +9,7 @@ import CategoryFilter from '@/components/CategoryFilter';
 import ShopCard from '@/components/ShopCard';
 import VendorCTA from '@/components/VendorCTA';
 import EmptyState from '@/components/EmptyState';
+import { Icon } from '@/components/ui';
 import { ShopSkeleton } from '@/components/Skeletons';
 import { useAuth } from '@/hooks/useAuth';
 import { Shop } from '@/types';
@@ -85,21 +85,25 @@ export default function CustomerHomePage() {
       />
 
       <section className="mb-12">
-        <div className="relative h-48 rounded-[2rem] overflow-hidden bg-gradient-to-br from-primary to-primary-container p-8 flex flex-col justify-center">
-          <Image
-            fill
-            sizes="100vw"
-            className="object-cover mix-blend-overlay opacity-30"
-            alt="Local indian grocery store"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO-TstSaBb3wfU3VfxbMuTYoitpw2y9i41UHhNWd9yr2tr-x1yvq4jux8jSnf3wF-zlzVIc37Ti6thucTZuXj2MgKM8DYVO52-yRv1xt_KhJG0SJ8uZ3u_Fx2GmL3lbKn234GQaNYINoB3Gu1Cd2eGLUALIqf5GurSsWv3Ag4nvMuT4HSl8tT10ZYk8fGFgptdvXApS8YDP9gVrO9FiZtyHlHr1_kpfM2UgwEbnKBdyUyaVP_rWyjsHzkFPy5LHzk1g6rUxmANOjQ"
-          />
+        <div className="relative min-h-[240px] rounded-[2rem] overflow-hidden bg-surface-container p-8 flex flex-col justify-center border border-primary/15">
+          {/* Obsidian + leaf ambient backdrop */}
+          <div className="absolute inset-0 leaf-ambient-glow" />
+          <div className="absolute -top-16 -right-10 w-64 h-64 rounded-full bg-primary/20 blur-[90px]" />
+          <div className="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-secondary/10 blur-[80px]" />
+
           <div className="relative z-10">
-            <span className="bg-black/20 backdrop-blur-sm text-white text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full">
-              Local Pride
-            </span>
-            <h2 className="text-white text-3xl font-black mt-3 leading-tight font-headline">
-              Support your neighborhood<br />merchants today.
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center gap-1.5 bg-primary/15 border border-primary/30 text-primary text-[11px] font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-full">
+                <Icon name="bolt" size="sm" filled />
+                10 minute delivery
+              </span>
+            </div>
+            <h2 className="text-white text-3xl sm:text-4xl font-black leading-tight font-headline max-w-xl">
+              Fresh Veggies &amp; Kirana in <span className="leaf-text-gradient">10 mins</span> from your trusted neighborhood dukaans
             </h2>
+            <p className="text-on-surface-variant mt-3 max-w-md text-sm font-medium">
+              Support your local shopkeepers while shopping as fast as any big app.
+            </p>
           </div>
         </div>
       </section>

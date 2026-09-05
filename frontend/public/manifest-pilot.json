@@ -1,11 +1,11 @@
 {
-  "name": "BazaarSetu Pilot Test",
-  "short_name": "BazaarSetu Pilot",
-  "description": "Join BazaarSetu pilot for Udhaar testing",
+  "name": "Chiti Bazaar Pilot Test",
+  "short_name": "Chiti Bazaar Pilot",
+  "description": "Join Chiti Bazaar pilot for Udhaar testing",
   "start_url": "/pilot-test",
   "display": "standalone",
-  "background_color": "#ff9933",
-  "theme_color": "#8f4e00",
+  "background_color": "#070A07",
+  "theme_color": "#10B981",
   "icons": [
     {
       "src": "/icon-192.png",

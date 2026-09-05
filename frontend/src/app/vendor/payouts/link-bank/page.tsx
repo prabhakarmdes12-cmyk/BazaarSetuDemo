@@ -159,7 +159,7 @@ export default function LinkBankPage() {
               <Icon name="verified_user" filled className="text-secondary text-3xl" />
             </div>
             <div>
-              <p className="text-xs font-bold text-secondary uppercase tracking-wider">Secured by BazaarSetu</p>
+              <p className="text-xs font-bold text-secondary uppercase tracking-wider">Secured by Chiti Bazaar</p>
               <p className="text-[11px] text-on-surface-variant leading-relaxed">Your banking details are encrypted and 100% safe with us.</p>
             </div>
           </div>

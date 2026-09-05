@@ -311,7 +311,7 @@ function scoreProductMatch(itemName: string, product: CatalogueProduct): number 
 
   // Avoid false positives like "hair oil" matching edible "mustard oil" just
   // because a generic category token overlaps. The merchant should manually
-  // verify those requests instead of BazaarSetu inventing a SKU match.
+  // verify those requests instead of Chiti Bazaar inventing a SKU match.
   const genericTokens = new Set(['oil', 'packet', 'piece', 'detergent', 'soap', 'item', 'product']);
   if (itemTokens.length > 1 && shared === 1 && genericTokens.has(sharedTokens[0])) return 0;
 

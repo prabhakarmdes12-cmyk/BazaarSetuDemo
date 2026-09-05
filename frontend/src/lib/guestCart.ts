@@ -15,7 +15,7 @@ export interface GuestCartItem {
   quantity: number;
 }
 
-const KEY = 'bazaarsetu_guest_cart';
+const KEY = 'chitibazaar_guest_cart';
 
 function read(): GuestCartItem[] {
   if (typeof window === 'undefined') return [];

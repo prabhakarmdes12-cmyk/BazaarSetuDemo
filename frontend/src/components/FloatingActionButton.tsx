@@ -21,7 +21,7 @@ export default function FloatingActionButton({
     <>
       <Icon name={icon} />
       {count != null && count > 0 && (
-        <span className="absolute -top-1 -right-1 bg-error text-on-error text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+        <span className="absolute -top-1 -right-1 bg-error text-on-error text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center ring-2 ring-surface">
           {count > 99 ? '99+' : count}
         </span>
       )}
@@ -29,7 +29,7 @@ export default function FloatingActionButton({
   );
 
   const className =
-    'fixed bottom-28 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full shadow-saffron flex items-center justify-center z-40 active:scale-90 transition-transform duration-150 ease-out will-change-transform';
+    'fixed bottom-28 right-6 w-14 h-14 leaf-gradient text-white rounded-full shadow-brand-glow flex items-center justify-center z-40 active:scale-90 transition-transform duration-150 ease-out will-change-transform';
 
   if (href) {
     return (

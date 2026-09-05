@@ -1,4 +1,4 @@
-# BazaarSetu — Complete Testing Report
+# Chiti Bazaar — Complete Testing Report
 
 **Date:** 2026-03-31  
 **Scope:** Phases 1–8 (Design System, Customer, Vendor, Admin, Udhaar, Navigation, Polish)  

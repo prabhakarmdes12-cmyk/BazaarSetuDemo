@@ -29,7 +29,7 @@ function buildPDF(
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(24);
   doc.setTextColor(255, 255, 255);
-  doc.text('BazaarSetu', 105, 18, { align: 'center' });
+  doc.text('Chiti Bazaar', 105, 18, { align: 'center' });
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(11);
@@ -123,7 +123,7 @@ function buildPDF(
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(11);
   doc.setTextColor(255, 255, 255);
-  doc.text('BazaarSetu', 105, 280, { align: 'center' });
+  doc.text('Chiti Bazaar', 105, 280, { align: 'center' });
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8);
@@ -143,7 +143,7 @@ export function downloadPDF(
   score: number,
 ): void {
   const doc = buildPDF(role, name, locality, answers, level, score);
-  doc.save('bazaarsetu-validation-report.pdf');
+  doc.save('chitibazaar-validation-report.pdf');
 }
 
 export function generatePDFBlob(

@@ -23,9 +23,9 @@ export class ApiError extends Error {
 
 function clearSession() {
   if (typeof window === 'undefined') return;
-  localStorage.removeItem('bazaarsetu_token');
-  localStorage.removeItem('bazaarsetu_user');
-  localStorage.removeItem('bazaarsetu_role');
+  localStorage.removeItem('chitibazaar_token');
+  localStorage.removeItem('chitibazaar_user');
+  localStorage.removeItem('chitibazaar_role');
 }
 
 async function apiFetch<T>(endpoint: string, options: FetchOptions = {}): Promise<T> {
