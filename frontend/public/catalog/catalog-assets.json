@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 65,
-  "totalSkus": 114,
+  "totalAssets": 74,
+  "totalSkus": 135,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -19,7 +19,7 @@
       "path": "/catalog/items/dairy/amul-taaza-toned-milk-500ml.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 52029,
+      "bytes": 52014,
       "verified": true
     },
     "bb-00009": {
@@ -30,7 +30,7 @@
       "path": "/catalog/items/dairy/amul-gold-full-cream-milk-1l.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 55735,
+      "bytes": 55680,
       "verified": true
     },
     "bb-00003": {
@@ -41,7 +41,7 @@
       "path": "/catalog/items/dairy/salted-butter-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64950,
+      "bytes": 64870,
       "verified": true
     },
     "bb-00004": {
@@ -52,7 +52,7 @@
       "path": "/catalog/items/dairy/salted-butter-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49416,
+      "bytes": 49419,
       "verified": true
     },
     "bb-00055": {
@@ -63,7 +63,7 @@
       "path": "/catalog/items/dairy/salted-butter-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64950,
+      "bytes": 64870,
       "verified": true
     },
     "bb-00056": {
@@ -74,7 +74,7 @@
       "path": "/catalog/items/dairy/salted-butter-500g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49416,
+      "bytes": 49419,
       "verified": true
     },
     "bb-00014": {
@@ -85,7 +85,7 @@
       "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49484,
+      "bytes": 49487,
       "verified": true
     },
     "bb-00059": {
@@ -96,7 +96,7 @@
       "path": "/catalog/items/dairy/masti-dahi-curd-400g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 49484,
+      "bytes": 49487,
       "verified": true
     },
     "bb-00011": {
@@ -107,7 +107,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44542,
+      "bytes": 44544,
       "verified": true
     },
     "bb-00037": {
@@ -118,7 +118,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44542,
+      "bytes": 44544,
       "verified": true
     },
     "bb-00066": {
@@ -129,7 +129,7 @@
       "path": "/catalog/items/dairy/malai-paneer-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 44542,
+      "bytes": 44544,
       "verified": true
     },
     "bb-00109": {
@@ -580,7 +580,7 @@
       "path": "/catalog/items/instant/masala-noodles-pack-of-4.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 79063,
+      "bytes": 78348,
       "verified": true
     },
     "bb-00946": {
@@ -591,7 +591,7 @@
       "path": "/catalog/items/instant/masala-noodles-pack-of-8.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 76290,
+      "bytes": 75634,
       "verified": true
     },
     "bb-00930": {
@@ -602,7 +602,7 @@
       "path": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 68090,
+      "bytes": 67847,
       "verified": true
     },
     "bb-00883": {
@@ -613,7 +613,7 @@
       "path": "/catalog/items/instant/mixed-veg-soup-sachet.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 68090,
+      "bytes": 67847,
       "verified": true
     },
     "bb-00924": {
@@ -624,7 +624,7 @@
       "path": "/catalog/items/instant/tomato-ketchup-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 43131,
+      "bytes": 42705,
       "verified": true
     },
     "bb-00915": {
@@ -635,7 +635,7 @@
       "path": "/catalog/items/instant/tomato-ketchup-1kg.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 43131,
+      "bytes": 42705,
       "verified": true
     },
     "bb-01068": {
@@ -1119,7 +1119,7 @@
       "path": "/catalog/items/spices/haldi-turmeric-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 54731,
+      "bytes": 54412,
       "verified": true
     },
     "bb-00385": {
@@ -1130,7 +1130,7 @@
       "path": "/catalog/items/spices/haldi-turmeric-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 54731,
+      "bytes": 54412,
       "verified": true
     },
     "bb-00298": {
@@ -1141,7 +1141,7 @@
       "path": "/catalog/items/spices/haldi-turmeric-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 54731,
+      "bytes": 54412,
       "verified": true
     },
     "bb-00377": {
@@ -1152,7 +1152,7 @@
       "path": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64782,
+      "bytes": 64422,
       "verified": true
     },
     "bb-00344": {
@@ -1163,7 +1163,7 @@
       "path": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64782,
+      "bytes": 64422,
       "verified": true
     },
     "bb-00316": {
@@ -1174,7 +1174,7 @@
       "path": "/catalog/items/spices/lal-mirch-chilli-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64782,
+      "bytes": 64422,
       "verified": true
     },
     "bb-00380": {
@@ -1185,7 +1185,7 @@
       "path": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64218,
+      "bytes": 64187,
       "verified": true
     },
     "bb-00347": {
@@ -1196,7 +1196,7 @@
       "path": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64218,
+      "bytes": 64187,
       "verified": true
     },
     "bb-00319": {
@@ -1207,7 +1207,7 @@
       "path": "/catalog/items/spices/dhaniya-coriander-200g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64218,
+      "bytes": 64187,
       "verified": true
     },
     "bb-00382": {
@@ -1218,7 +1218,7 @@
       "path": "/catalog/items/spices/garam-masala-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 67490,
+      "bytes": 67404,
       "verified": true
     },
     "bb-00349": {
@@ -1229,7 +1229,7 @@
       "path": "/catalog/items/spices/garam-masala-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 67490,
+      "bytes": 67404,
       "verified": true
     },
     "bb-00321": {
@@ -1240,7 +1240,7 @@
       "path": "/catalog/items/spices/garam-masala-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 67490,
+      "bytes": 67404,
       "verified": true
     },
     "bb-00391": {
@@ -1251,7 +1251,7 @@
       "path": "/catalog/items/spices/chicken-meat-masala-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64525,
+      "bytes": 64348,
       "verified": true
     },
     "bb-00353": {
@@ -1262,7 +1262,238 @@
       "path": "/catalog/items/spices/chicken-meat-masala-100g.jpg",
       "width": 600,
       "height": 600,
-      "bytes": 64525,
+      "bytes": 64348,
+      "verified": true
+    },
+    "bb-00274": {
+      "skuId": "bb-00274",
+      "name": "Tata Salt Iodised Salt",
+      "unit": "1 kg pack",
+      "categoryId": "staples",
+      "path": "/catalog/items/spices/iodised-salt-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61543,
+      "verified": true
+    },
+    "bb-00196": {
+      "skuId": "bb-00196",
+      "name": "Aashirvaad Salt Iodised Salt",
+      "unit": "1 kg pack",
+      "categoryId": "staples",
+      "path": "/catalog/items/spices/iodised-salt-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61543,
+      "verified": true
+    },
+    "bb-00305": {
+      "skuId": "bb-00305",
+      "name": "Amul Cow Ghee Cow Ghee",
+      "unit": "500 ml",
+      "categoryId": "oils",
+      "path": "/catalog/items/dairy/pure-cow-ghee-500ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44639,
+      "verified": true
+    },
+    "bb-00396": {
+      "skuId": "bb-00396",
+      "name": "Mother Dairy Cow Ghee",
+      "unit": "500 ml",
+      "categoryId": "oils",
+      "path": "/catalog/items/dairy/pure-cow-ghee-500ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44639,
+      "verified": true
+    },
+    "bb-00405": {
+      "skuId": "bb-00405",
+      "name": "Nestle a+ Cow Ghee",
+      "unit": "500 ml",
+      "categoryId": "oils",
+      "path": "/catalog/items/dairy/pure-cow-ghee-500ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44639,
+      "verified": true
+    },
+    "bb-00030": {
+      "skuId": "bb-00030",
+      "name": "Britannia White Sandwich Bread",
+      "unit": "400 g loaf",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/white-bread-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48073,
+      "verified": true
+    },
+    "bb-00042": {
+      "skuId": "bb-00042",
+      "name": "Harvest Gold White Sandwich Bread",
+      "unit": "400 g loaf",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/white-bread-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48073,
+      "verified": true
+    },
+    "bb-00051": {
+      "skuId": "bb-00051",
+      "name": "Modern White Sandwich Bread",
+      "unit": "400 g loaf",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/white-bread-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48073,
+      "verified": true
+    },
+    "bb-00025": {
+      "skuId": "bb-00025",
+      "name": "Britannia Brown Bread",
+      "unit": "400 g loaf",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/brown-bread-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44692,
+      "verified": true
+    },
+    "bb-00039": {
+      "skuId": "bb-00039",
+      "name": "Harvest Gold Brown Bread",
+      "unit": "400 g loaf",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/brown-bread-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44692,
+      "verified": true
+    },
+    "bb-00048": {
+      "skuId": "bb-00048",
+      "name": "Modern Brown Bread",
+      "unit": "400 g loaf",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/brown-bread-400g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44692,
+      "verified": true
+    },
+    "bb-00041": {
+      "skuId": "bb-00041",
+      "name": "Harvest Gold Pav Buns",
+      "unit": "6 pcs pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/pav-bun-6-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58584,
+      "verified": true
+    },
+    "bb-00050": {
+      "skuId": "bb-00050",
+      "name": "Modern Pav Buns",
+      "unit": "6 pcs pack",
+      "categoryId": "dairy",
+      "path": "/catalog/items/dairy/pav-bun-6-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58584,
+      "verified": true
+    },
+    "bb-00532": {
+      "skuId": "bb-00532",
+      "name": "Britannia Toastea Suji Rusk",
+      "unit": "200 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/suji-rusk-toast-300g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 72090,
+      "verified": true
+    },
+    "bb-00575": {
+      "skuId": "bb-00575",
+      "name": "Parle Rusk Suji Rusk",
+      "unit": "200 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/suji-rusk-toast-300g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 72090,
+      "verified": true
+    },
+    "bb-00558": {
+      "skuId": "bb-00558",
+      "name": "Modern Suji Rusk",
+      "unit": "200 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/suji-rusk-toast-300g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 72090,
+      "verified": true
+    },
+    "bb-00579": {
+      "skuId": "bb-00579",
+      "name": "Parle-G Gold Glucose Biscuits",
+      "unit": "250 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/glucose-biscuits-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61670,
+      "verified": true
+    },
+    "bb-00522": {
+      "skuId": "bb-00522",
+      "name": "Britannia Good Day Cashew Cookies",
+      "unit": "250 g",
+      "categoryId": "biscuits",
+      "path": "/catalog/items/biscuits/butter-cookies-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60736,
+      "verified": true
+    },
+    "bb-01447": {
+      "skuId": "bb-01447",
+      "name": "Kissan Mixed Fruit Jam",
+      "unit": "500 g",
+      "categoryId": "breakfast",
+      "path": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60002,
+      "verified": true
+    },
+    "bb-01473": {
+      "skuId": "bb-01473",
+      "name": "Patanjali Mixed Fruit Jam",
+      "unit": "500 g",
+      "categoryId": "breakfast",
+      "path": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60002,
+      "verified": true
+    },
+    "bb-01491": {
+      "skuId": "bb-01491",
+      "name": "Tops Mixed Fruit Jam",
+      "unit": "500 g",
+      "categoryId": "breakfast",
+      "path": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60002,
       "verified": true
     }
   }

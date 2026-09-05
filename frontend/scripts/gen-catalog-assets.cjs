@@ -156,6 +156,30 @@ const SKU_ASSETS = {
   'bb-00321': 'spices/garam-masala-100g.jpg',
   'bb-00391': 'spices/chicken-meat-masala-100g.jpg',
   'bb-00353': 'spices/chicken-meat-masala-100g.jpg',
+  // Salts & ghee
+  'bb-00274': 'spices/iodised-salt-1kg.jpg',
+  'bb-00196': 'spices/iodised-salt-1kg.jpg',
+  'bb-00305': 'dairy/pure-cow-ghee-500ml.jpg',
+  'bb-00396': 'dairy/pure-cow-ghee-500ml.jpg',
+  'bb-00405': 'dairy/pure-cow-ghee-500ml.jpg',
+  // Bakery & breads
+  'bb-00030': 'dairy/white-bread-400g.jpg',
+  'bb-00042': 'dairy/white-bread-400g.jpg',
+  'bb-00051': 'dairy/white-bread-400g.jpg',
+  'bb-00025': 'dairy/brown-bread-400g.jpg',
+  'bb-00039': 'dairy/brown-bread-400g.jpg',
+  'bb-00048': 'dairy/brown-bread-400g.jpg',
+  'bb-00041': 'dairy/pav-bun-6-pack.jpg',
+  'bb-00050': 'dairy/pav-bun-6-pack.jpg',
+  'bb-00532': 'biscuits/suji-rusk-toast-300g.jpg',
+  'bb-00575': 'biscuits/suji-rusk-toast-300g.jpg',
+  'bb-00558': 'biscuits/suji-rusk-toast-300g.jpg',
+  'bb-00579': 'biscuits/glucose-biscuits-250g.jpg',
+  'bb-00522': 'biscuits/butter-cookies-150g.jpg',
+  // Spreads (catalog files jams under the `breakfast` category)
+  'bb-01447': 'instant/mixed-fruit-jam-500g.jpg',
+  'bb-01473': 'instant/mixed-fruit-jam-500g.jpg',
+  'bb-01491': 'instant/mixed-fruit-jam-500g.jpg',
 };
 
 const EXPECTED_PX = 600;

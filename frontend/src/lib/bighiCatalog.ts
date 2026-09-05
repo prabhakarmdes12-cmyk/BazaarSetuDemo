@@ -25660,7 +25660,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 114 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 135 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -25777,7 +25777,28 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00349": "/catalog/items/spices/garam-masala-100g.jpg",
   "bb-00321": "/catalog/items/spices/garam-masala-100g.jpg",
   "bb-00391": "/catalog/items/spices/chicken-meat-masala-100g.jpg",
-  "bb-00353": "/catalog/items/spices/chicken-meat-masala-100g.jpg"
+  "bb-00353": "/catalog/items/spices/chicken-meat-masala-100g.jpg",
+  "bb-00274": "/catalog/items/spices/iodised-salt-1kg.jpg",
+  "bb-00196": "/catalog/items/spices/iodised-salt-1kg.jpg",
+  "bb-00305": "/catalog/items/dairy/pure-cow-ghee-500ml.jpg",
+  "bb-00396": "/catalog/items/dairy/pure-cow-ghee-500ml.jpg",
+  "bb-00405": "/catalog/items/dairy/pure-cow-ghee-500ml.jpg",
+  "bb-00030": "/catalog/items/dairy/white-bread-400g.jpg",
+  "bb-00042": "/catalog/items/dairy/white-bread-400g.jpg",
+  "bb-00051": "/catalog/items/dairy/white-bread-400g.jpg",
+  "bb-00025": "/catalog/items/dairy/brown-bread-400g.jpg",
+  "bb-00039": "/catalog/items/dairy/brown-bread-400g.jpg",
+  "bb-00048": "/catalog/items/dairy/brown-bread-400g.jpg",
+  "bb-00041": "/catalog/items/dairy/pav-bun-6-pack.jpg",
+  "bb-00050": "/catalog/items/dairy/pav-bun-6-pack.jpg",
+  "bb-00532": "/catalog/items/biscuits/suji-rusk-toast-300g.jpg",
+  "bb-00575": "/catalog/items/biscuits/suji-rusk-toast-300g.jpg",
+  "bb-00558": "/catalog/items/biscuits/suji-rusk-toast-300g.jpg",
+  "bb-00579": "/catalog/items/biscuits/glucose-biscuits-250g.jpg",
+  "bb-00522": "/catalog/items/biscuits/butter-cookies-150g.jpg",
+  "bb-01447": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
+  "bb-01473": "/catalog/items/instant/mixed-fruit-jam-500g.jpg",
+  "bb-01491": "/catalog/items/instant/mixed-fruit-jam-500g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
