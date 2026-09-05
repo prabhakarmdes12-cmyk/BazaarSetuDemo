@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 226,
-  "totalSkus": 479,
+  "totalAssets": 236,
+  "totalSkus": 500,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -5278,6 +5278,237 @@
       "width": 600,
       "height": 600,
       "bytes": 49530,
+      "verified": true
+    },
+    "bb-00666": {
+      "skuId": "bb-00666",
+      "name": "KitKat Crispy Wafer Chocolate",
+      "unit": "37.3 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/crispy-wafer-chocolate-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47906,
+      "verified": true
+    },
+    "bb-00684": {
+      "skuId": "bb-00684",
+      "name": "Nestle KitKat Crispy Wafer Chocolate",
+      "unit": "37.3 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/crispy-wafer-chocolate-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47906,
+      "verified": true
+    },
+    "bb-00674": {
+      "skuId": "bb-00674",
+      "name": "Mars Candy Bar Multipack",
+      "unit": "12 pack box",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/candy-bar-multipack-10.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 69710,
+      "verified": true
+    },
+    "bb-00693": {
+      "skuId": "bb-00693",
+      "name": "Snickers Candy Bar Multipack",
+      "unit": "12 pack box",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/candy-bar-multipack-10.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 69710,
+      "verified": true
+    },
+    "bb-00632": {
+      "skuId": "bb-00632",
+      "name": "Bounty Candy Bar Multipack",
+      "unit": "12 pack box",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/candy-bar-multipack-10.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 69710,
+      "verified": true
+    },
+    "bb-00610": {
+      "skuId": "bb-00610",
+      "name": "5 Star Caramel Chocolate Bar",
+      "unit": "40 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/caramel-chocolate-bar-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 55863,
+      "verified": true
+    },
+    "bb-00640": {
+      "skuId": "bb-00640",
+      "name": "Cadbury Fuse Caramel Chocolate Bar",
+      "unit": "40 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/caramel-chocolate-bar-50g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 55863,
+      "verified": true
+    },
+    "bb-00643": {
+      "skuId": "bb-00643",
+      "name": "Cadbury Gems Sugar Buttons",
+      "unit": "100 g pack",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/gems-sugar-buttons-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58810,
+      "verified": true
+    },
+    "bb-00649": {
+      "skuId": "bb-00649",
+      "name": "Ferrero Rocher Premium Hazelnut Box",
+      "unit": "16 pcs box",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/premium-hazelnut-box-16pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 97253,
+      "verified": true
+    },
+    "bb-00647": {
+      "skuId": "bb-00647",
+      "name": "Ferrero Mon Chéri Premium Hazelnut Box",
+      "unit": "16 pcs box",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/premium-hazelnut-box-16pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 97253,
+      "verified": true
+    },
+    "bb-00688": {
+      "skuId": "bb-00688",
+      "name": "Nutella Hazelnut Spread",
+      "unit": "350 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/hazelnut-spread-350g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46033,
+      "verified": true
+    },
+    "bb-00662": {
+      "skuId": "bb-00662",
+      "name": "Jus’ Amazin Hazelnut Spread",
+      "unit": "350 g",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/hazelnut-spread-350g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46033,
+      "verified": true
+    },
+    "bb-00635": {
+      "skuId": "bb-00635",
+      "name": "Cadbury Chocolate Syrup",
+      "unit": "200 ml",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/chocolate-syrup-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39893,
+      "verified": true
+    },
+    "bb-00660": {
+      "skuId": "bb-00660",
+      "name": "Hershey’s Chocolate Syrup",
+      "unit": "200 ml",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/chocolate-syrup-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39893,
+      "verified": true
+    },
+    "bb-00619": {
+      "skuId": "bb-00619",
+      "name": "Amul Ice Cream Tub",
+      "unit": "700 ml tub",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/ice-cream-tub-700ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 65423,
+      "verified": true
+    },
+    "bb-00670": {
+      "skuId": "bb-00670",
+      "name": "Kwality Walls Ice Cream Tub",
+      "unit": "700 ml tub",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/ice-cream-tub-700ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 65423,
+      "verified": true
+    },
+    "bb-00676": {
+      "skuId": "bb-00676",
+      "name": "Mother Dairy Ice Cream Tub",
+      "unit": "700 ml tub",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/ice-cream-tub-700ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 65423,
+      "verified": true
+    },
+    "bb-00615": {
+      "skuId": "bb-00615",
+      "name": "Amul Choco Bar Ice Cream",
+      "unit": "single",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/choco-bar-ice-cream-60ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 53641,
+      "verified": true
+    },
+    "bb-00668": {
+      "skuId": "bb-00668",
+      "name": "Kwality Walls Choco Bar Ice Cream",
+      "unit": "single",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/choco-bar-ice-cream-60ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 53641,
+      "verified": true
+    },
+    "bb-00657": {
+      "skuId": "bb-00657",
+      "name": "Haldiram’s Rasmalai Tin",
+      "unit": "1 kg tin",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/rasmalai-tin-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 56444,
+      "verified": true
+    },
+    "bb-00683": {
+      "skuId": "bb-00683",
+      "name": "MTR Rasmalai Tin",
+      "unit": "1 kg tin",
+      "categoryId": "chocolates",
+      "path": "/catalog/items/chocolates/rasmalai-tin-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 56444,
       "verified": true
     }
   }

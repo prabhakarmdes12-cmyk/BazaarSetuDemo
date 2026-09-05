@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 479 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 500 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27714,7 +27714,28 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01695": "/catalog/items/dryfruits/walnut-kernels-200g.jpg",
   "bb-01724": "/catalog/items/dryfruits/walnut-kernels-200g.jpg",
   "bb-01685": "/catalog/items/dryfruits/pistachio-roasted-salted-200g.jpg",
-  "bb-01719": "/catalog/items/dryfruits/pistachio-roasted-salted-200g.jpg"
+  "bb-01719": "/catalog/items/dryfruits/pistachio-roasted-salted-200g.jpg",
+  "bb-00666": "/catalog/items/chocolates/crispy-wafer-chocolate-100g.jpg",
+  "bb-00684": "/catalog/items/chocolates/crispy-wafer-chocolate-100g.jpg",
+  "bb-00674": "/catalog/items/chocolates/candy-bar-multipack-10.jpg",
+  "bb-00693": "/catalog/items/chocolates/candy-bar-multipack-10.jpg",
+  "bb-00632": "/catalog/items/chocolates/candy-bar-multipack-10.jpg",
+  "bb-00610": "/catalog/items/chocolates/caramel-chocolate-bar-50g.jpg",
+  "bb-00640": "/catalog/items/chocolates/caramel-chocolate-bar-50g.jpg",
+  "bb-00643": "/catalog/items/chocolates/gems-sugar-buttons-100g.jpg",
+  "bb-00649": "/catalog/items/chocolates/premium-hazelnut-box-16pcs.jpg",
+  "bb-00647": "/catalog/items/chocolates/premium-hazelnut-box-16pcs.jpg",
+  "bb-00688": "/catalog/items/chocolates/hazelnut-spread-350g.jpg",
+  "bb-00662": "/catalog/items/chocolates/hazelnut-spread-350g.jpg",
+  "bb-00635": "/catalog/items/chocolates/chocolate-syrup-200ml.jpg",
+  "bb-00660": "/catalog/items/chocolates/chocolate-syrup-200ml.jpg",
+  "bb-00619": "/catalog/items/chocolates/ice-cream-tub-700ml.jpg",
+  "bb-00670": "/catalog/items/chocolates/ice-cream-tub-700ml.jpg",
+  "bb-00676": "/catalog/items/chocolates/ice-cream-tub-700ml.jpg",
+  "bb-00615": "/catalog/items/chocolates/choco-bar-ice-cream-60ml.jpg",
+  "bb-00668": "/catalog/items/chocolates/choco-bar-ice-cream-60ml.jpg",
+  "bb-00657": "/catalog/items/chocolates/rasmalai-tin-1kg.jpg",
+  "bb-00683": "/catalog/items/chocolates/rasmalai-tin-1kg.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

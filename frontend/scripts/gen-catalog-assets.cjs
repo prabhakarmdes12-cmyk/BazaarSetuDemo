@@ -553,6 +553,28 @@ const SKU_ASSET_ROWS = [
   ['dryfruits', "Nutraj Walnut Kernels", "200 g", 'dryfruits/walnut-kernels-200g.jpg'],
   ['dryfruits', "Happilo Pistachio Roasted Salted", "200 g", 'dryfruits/pistachio-roasted-salted-200g.jpg'],
   ['dryfruits', "Nutraj Pistachio Roasted Salted", "200 g", 'dryfruits/pistachio-roasted-salted-200g.jpg'],
+  // Batch 5: chocolates, confectionery, frozen desserts & sweets
+  ['chocolates', "KitKat Crispy Wafer Chocolate", "37.3 g", 'chocolates/crispy-wafer-chocolate-100g.jpg'],
+  ['chocolates', "Nestle KitKat Crispy Wafer Chocolate", "37.3 g", 'chocolates/crispy-wafer-chocolate-100g.jpg'],
+  ['chocolates', "Mars Candy Bar Multipack", "12 pack box", 'chocolates/candy-bar-multipack-10.jpg'],
+  ['chocolates', "Snickers Candy Bar Multipack", "12 pack box", 'chocolates/candy-bar-multipack-10.jpg'],
+  ['chocolates', "Bounty Candy Bar Multipack", "12 pack box", 'chocolates/candy-bar-multipack-10.jpg'],
+  ['chocolates', "5 Star Caramel Chocolate Bar", "40 g", 'chocolates/caramel-chocolate-bar-50g.jpg'],
+  ['chocolates', "Cadbury Fuse Caramel Chocolate Bar", "40 g", 'chocolates/caramel-chocolate-bar-50g.jpg'],
+  ['chocolates', "Cadbury Gems Sugar Buttons", "100 g pack", 'chocolates/gems-sugar-buttons-100g.jpg'],
+  ['chocolates', "Ferrero Rocher Premium Hazelnut Box", "16 pcs box", 'chocolates/premium-hazelnut-box-16pcs.jpg'],
+  ['chocolates', "Ferrero Mon Ch\u00e9ri Premium Hazelnut Box", "16 pcs box", 'chocolates/premium-hazelnut-box-16pcs.jpg'],
+  ['chocolates', "Nutella Hazelnut Spread", "350 g", 'chocolates/hazelnut-spread-350g.jpg'],
+  ['chocolates', "Jus\u2019 Amazin Hazelnut Spread", "350 g", 'chocolates/hazelnut-spread-350g.jpg'],
+  ['chocolates', "Cadbury Chocolate Syrup", "200 ml", 'chocolates/chocolate-syrup-200ml.jpg'],
+  ['chocolates', "Hershey\u2019s Chocolate Syrup", "200 ml", 'chocolates/chocolate-syrup-200ml.jpg'],
+  ['chocolates', "Amul Ice Cream Tub", "700 ml tub", 'chocolates/ice-cream-tub-700ml.jpg'],
+  ['chocolates', "Kwality Walls Ice Cream Tub", "700 ml tub", 'chocolates/ice-cream-tub-700ml.jpg'],
+  ['chocolates', "Mother Dairy Ice Cream Tub", "700 ml tub", 'chocolates/ice-cream-tub-700ml.jpg'],
+  ['chocolates', "Amul Choco Bar Ice Cream", "single", 'chocolates/choco-bar-ice-cream-60ml.jpg'],
+  ['chocolates', "Kwality Walls Choco Bar Ice Cream", "single", 'chocolates/choco-bar-ice-cream-60ml.jpg'],
+  ['chocolates', "Haldiram\u2019s Rasmalai Tin", "1 kg tin", 'chocolates/rasmalai-tin-1kg.jpg'],
+  ['chocolates', "MTR Rasmalai Tin", "1 kg tin", 'chocolates/rasmalai-tin-1kg.jpg'],
 ];
 
 const EXPECTED_PX = 600;
