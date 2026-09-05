@@ -18,7 +18,7 @@ export default function Home() {
     } else if (token) {
       router.replace('/customer');
     } else {
-      router.replace('/splash');
+      router.replace('/customer');
     }
   }, [router]);
 
