@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 375 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 399 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27610,7 +27610,31 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01871": "/catalog/items/pooja/camphor-tablets-50g.jpg",
   "bb-01905": "/catalog/items/pooja/camphor-tablets-50g.jpg",
   "bb-01884": "/catalog/items/pooja/cotton-wicks-100-pack.jpg",
-  "bb-01906": "/catalog/items/pooja/cotton-wicks-100-pack.jpg"
+  "bb-01906": "/catalog/items/pooja/cotton-wicks-100-pack.jpg",
+  "bb-01971": "/catalog/items/homekitchen/led-bulb-9w.jpg",
+  "bb-01983": "/catalog/items/homekitchen/led-bulb-9w.jpg",
+  "bb-01985": "/catalog/items/homekitchen/led-bulb-9w.jpg",
+  "bb-01970": "/catalog/items/homekitchen/led-bulb-12w.jpg",
+  "bb-01982": "/catalog/items/homekitchen/led-bulb-12w.jpg",
+  "bb-01944": "/catalog/items/homekitchen/led-bulb-12w.jpg",
+  "bb-01933": "/catalog/items/homekitchen/aa-batteries-4-pack.jpg",
+  "bb-01938": "/catalog/items/homekitchen/aa-batteries-4-pack.jpg",
+  "bb-01968": "/catalog/items/homekitchen/aa-batteries-4-pack.jpg",
+  "bb-01952": "/catalog/items/homekitchen/gas-lighter.jpg",
+  "bb-01974": "/catalog/items/homekitchen/gas-lighter.jpg",
+  "bb-01926": "/catalog/items/homekitchen/plastic-bucket-20l.jpg",
+  "bb-01965": "/catalog/items/homekitchen/plastic-bucket-20l.jpg",
+  "bb-01956": "/catalog/items/homekitchen/steel-scrubber-3-pack.jpg",
+  "bb-01981": "/catalog/items/homekitchen/steel-scrubber-3-pack.jpg",
+  "bb-01946": "/catalog/items/homekitchen/pressure-cooker-3l.jpg",
+  "bb-01979": "/catalog/items/homekitchen/pressure-cooker-3l.jpg",
+  "bb-01945": "/catalog/items/homekitchen/non-stick-tawa-25cm.jpg",
+  "bb-01976": "/catalog/items/homekitchen/non-stick-tawa-25cm.jpg",
+  "bb-01978": "/catalog/items/homekitchen/non-stick-tawa-25cm.jpg",
+  "bb-01929": "/catalog/items/homekitchen/steel-tiffin-box-3-tier.jpg",
+  "bb-01959": "/catalog/items/homekitchen/steel-tiffin-box-3-tier.jpg",
+  "bb-01954": "/catalog/items/homekitchen/kitchen-knife.jpg",
+  "bb-01975": "/catalog/items/homekitchen/kitchen-knife.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

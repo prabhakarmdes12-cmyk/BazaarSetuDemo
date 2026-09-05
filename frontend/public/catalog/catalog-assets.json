@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 186,
-  "totalSkus": 375,
+  "totalAssets": 196,
+  "totalSkus": 399,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -4134,6 +4134,270 @@
       "width": 600,
       "height": 600,
       "bytes": 48421,
+      "verified": true
+    },
+    "bb-01971": {
+      "skuId": "bb-01971",
+      "name": "Philips LED Bulb 9W",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/led-bulb-9w.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42530,
+      "verified": true
+    },
+    "bb-01983": {
+      "skuId": "bb-01983",
+      "name": "Syska LED Bulb 9W",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/led-bulb-9w.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42530,
+      "verified": true
+    },
+    "bb-01985": {
+      "skuId": "bb-01985",
+      "name": "Wipro LED Bulb 9W",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/led-bulb-9w.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42530,
+      "verified": true
+    },
+    "bb-01970": {
+      "skuId": "bb-01970",
+      "name": "Philips LED Bulb 12W",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/led-bulb-12w.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47336,
+      "verified": true
+    },
+    "bb-01982": {
+      "skuId": "bb-01982",
+      "name": "Syska LED Bulb 12W",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/led-bulb-12w.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47336,
+      "verified": true
+    },
+    "bb-01944": {
+      "skuId": "bb-01944",
+      "name": "Havells LED Bulb 12W",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/led-bulb-12w.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47336,
+      "verified": true
+    },
+    "bb-01933": {
+      "skuId": "bb-01933",
+      "name": "Duracell AA Batteries",
+      "unit": "4 pcs",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/aa-batteries-4-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58167,
+      "verified": true
+    },
+    "bb-01938": {
+      "skuId": "bb-01938",
+      "name": "Eveready AA Batteries",
+      "unit": "4 pcs",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/aa-batteries-4-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58167,
+      "verified": true
+    },
+    "bb-01968": {
+      "skuId": "bb-01968",
+      "name": "Panasonic AA Batteries",
+      "unit": "4 pcs",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/aa-batteries-4-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 58167,
+      "verified": true
+    },
+    "bb-01952": {
+      "skuId": "bb-01952",
+      "name": "Local Gas Lighter",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/gas-lighter.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 18556,
+      "verified": true
+    },
+    "bb-01974": {
+      "skuId": "bb-01974",
+      "name": "Pigeon Gas Lighter",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/gas-lighter.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 18556,
+      "verified": true
+    },
+    "bb-01926": {
+      "skuId": "bb-01926",
+      "name": "Cello Plastic Bucket",
+      "unit": "20 L",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/plastic-bucket-20l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 28425,
+      "verified": true
+    },
+    "bb-01965": {
+      "skuId": "bb-01965",
+      "name": "Nayasa Plastic Bucket",
+      "unit": "20 L",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/plastic-bucket-20l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 28425,
+      "verified": true
+    },
+    "bb-01956": {
+      "skuId": "bb-01956",
+      "name": "Local Steel Scrubber",
+      "unit": "3 pcs",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/steel-scrubber-3-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59056,
+      "verified": true
+    },
+    "bb-01981": {
+      "skuId": "bb-01981",
+      "name": "Scotch-Brite Steel Scrubber",
+      "unit": "3 pcs",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/steel-scrubber-3-pack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59056,
+      "verified": true
+    },
+    "bb-01946": {
+      "skuId": "bb-01946",
+      "name": "Hawkins Pressure Cooker",
+      "unit": "3 L",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/pressure-cooker-3l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 27014,
+      "verified": true
+    },
+    "bb-01979": {
+      "skuId": "bb-01979",
+      "name": "Prestige Pressure Cooker",
+      "unit": "3 L",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/pressure-cooker-3l.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 27014,
+      "verified": true
+    },
+    "bb-01945": {
+      "skuId": "bb-01945",
+      "name": "Hawkins Non-Stick Tawa",
+      "unit": "25 cm",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/non-stick-tawa-25cm.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 24546,
+      "verified": true
+    },
+    "bb-01976": {
+      "skuId": "bb-01976",
+      "name": "Pigeon Non-Stick Tawa",
+      "unit": "25 cm",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/non-stick-tawa-25cm.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 24546,
+      "verified": true
+    },
+    "bb-01978": {
+      "skuId": "bb-01978",
+      "name": "Prestige Non-Stick Tawa",
+      "unit": "25 cm",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/non-stick-tawa-25cm.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 24546,
+      "verified": true
+    },
+    "bb-01929": {
+      "skuId": "bb-01929",
+      "name": "Cello Steel Tiffin Box",
+      "unit": "3 container",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/steel-tiffin-box-3-tier.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34073,
+      "verified": true
+    },
+    "bb-01959": {
+      "skuId": "bb-01959",
+      "name": "Milton Steel Tiffin Box",
+      "unit": "3 container",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/steel-tiffin-box-3-tier.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34073,
+      "verified": true
+    },
+    "bb-01954": {
+      "skuId": "bb-01954",
+      "name": "Local Kitchen Knife",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/kitchen-knife.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 16366,
+      "verified": true
+    },
+    "bb-01975": {
+      "skuId": "bb-01975",
+      "name": "Pigeon Kitchen Knife",
+      "unit": "1 pc",
+      "categoryId": "homekitchen",
+      "path": "/catalog/items/homekitchen/kitchen-knife.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 16366,
       "verified": true
     }
   }
