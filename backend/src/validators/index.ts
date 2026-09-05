@@ -42,19 +42,19 @@ export const updateProductSchema = z.object({
 
 // === Cart ===
 export const addToCartSchema = z.object({
-  shopId: z.string().uuid(),
-  productId: z.string().uuid(),
+  shopId: z.string().min(1),
+  productId: z.string().min(1),
   quantity: z.number().int().positive().max(99).optional(),
 });
 
 export const updateCartItemSchema = z.object({
-  productId: z.string().uuid(),
+  productId: z.string().min(1),
   quantity: z.number().int().min(1).max(99),
 });
 
 // === Orders ===
 export const createOrderSchema = z.object({
-  shopId: z.string().uuid(),
+  shopId: z.string().min(1),
   paymentMethod: z.enum(['COD', 'DIRECT_UPI', 'UDHAAR', 'RAZORPAY']).optional(),
   deliveryAddress: z.string().max(500).optional(),
   deliveryPincode: z.string().regex(/^\d{6}$/, 'Invalid PIN code').optional(),
@@ -70,7 +70,7 @@ export const updateOrderStatusSchema = z.object({
 
 // === Chats ===
 export const createChatSchema = z.object({
-  shopId: z.string().uuid(),
+  shopId: z.string().min(1),
 });
 
 export const sendMessageSchema = z.object({
@@ -139,13 +139,13 @@ export const callRecordSchema = z.object({
 
 // === Favorites ===
 export const toggleFavoriteSchema = z.object({
-  shopId: z.string().uuid(),
+  shopId: z.string().min(1),
 });
 
 // === Udhaar ===
 export const udhaarEntrySchema = z.object({
   customerId: z.string().uuid(),
-  shopId: z.string().uuid(),
+  shopId: z.string().min(1),
   type: z.enum(['CREDIT', 'PAYMENT']),
   amount: z.number().positive(),
   note: z.string().max(200).optional(),
