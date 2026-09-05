@@ -40,7 +40,7 @@ export default function ShopCard({
         <Image
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          src={image || '/placeholder-shop.jpg'}
+          src={image || 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&auto=format&fit=crop&q=80'}
           alt={name}
           className="object-cover group-hover:scale-110 transition-transform duration-500 ease-out will-change-transform"
         />

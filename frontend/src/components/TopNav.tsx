@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Icon } from './ui';
 import ChitiBazaarLogo from './ChitiBazaarLogo';
 
@@ -22,10 +23,13 @@ export default function TopNav({
   showBack = false,
   backHref,
 }: TopNavProps) {
+  const pathname = usePathname();
+  const isVendor = pathname.startsWith('/vendor');
+
   return (
-    <header className="glass-panel bg-surface/85 backdrop-blur-xl sticky top-0 z-50 shadow-top-bar">
-      <div className="flex justify-between items-center w-full px-6 py-3.5 max-w-7xl mx-auto gap-4">
-        <div className="flex items-center gap-4 min-w-0">
+    <header className="glass-panel bg-surface/90 backdrop-blur-xl sticky top-0 z-50 shadow-top-bar border-b border-white/5">
+      <div className="flex justify-between items-center w-full px-4 sm:px-6 py-3.5 max-w-7xl mx-auto gap-4">
+        <div className="flex items-center gap-3 sm:gap-4 min-w-0">
           {showBack ? (
             <Link
               href={backHref || '#'}
@@ -44,7 +48,7 @@ export default function TopNav({
           )}
           {title ? (
             <div className="flex flex-col min-w-0">
-              <h1 className="font-headline font-bold text-lg tracking-tight text-on-surface truncate">
+              <h1 className="font-headline font-bold text-base sm:text-lg tracking-tight text-on-surface truncate">
                 {title}
               </h1>
               {subtitle && (
@@ -61,7 +65,7 @@ export default function TopNav({
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          {/* Delivery speed badge — pulsing emerald status ring */}
+          {/* 10 Mins Delivery Speed Badge */}
           <div className="hidden sm:flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -69,6 +73,25 @@ export default function TopNav({
             </span>
             <span className="text-xs font-bold text-primary whitespace-nowrap">⚡ 10 mins</span>
           </div>
+
+          {/* Quick Experience Switcher */}
+          {isVendor ? (
+            <Link
+              href="/customer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/15 border border-primary/30 text-primary text-xs font-black uppercase tracking-wider font-headline hover:bg-primary/25 active:scale-95 transition-all"
+            >
+              <Icon name="shopping_cart" size="sm" filled />
+              <span className="hidden xs:inline">Blinkit Store</span>
+            </Link>
+          ) : (
+            <Link
+              href="/vendor"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-white/10 hover:border-primary/40 text-xs font-bold text-on-surface-variant hover:text-primary transition-all active:scale-95"
+            >
+              <Icon name="storefront" size="sm" />
+              <span className="hidden xs:inline">Dukaan Partner</span>
+            </Link>
+          )}
 
           <Link
             href="/customer/notifications"
