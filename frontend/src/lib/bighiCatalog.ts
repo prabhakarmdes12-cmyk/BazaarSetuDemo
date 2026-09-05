@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 436 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 459 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27671,7 +27671,30 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01464": "/catalog/items/meat/prawns-cleaned-250g.jpg",
   "bb-01465": "/catalog/items/meat/prawns-cleaned-250g.jpg",
   "bb-01489": "/catalog/items/meat/prawns-cleaned-250g.jpg",
-  "bb-01490": "/catalog/items/meat/prawns-cleaned-250g.jpg"
+  "bb-01490": "/catalog/items/meat/prawns-cleaned-250g.jpg",
+  "bb-01460": "/catalog/items/meat/basa-fish-fillet-500g.jpg",
+  "bb-01479": "/catalog/items/meat/basa-fish-fillet-500g.jpg",
+  "bb-01463": "/catalog/items/meat/pomfret-whole-500g.jpg",
+  "bb-01476": "/catalog/items/meat/chicken-salami-200g.jpg",
+  "bb-01507": "/catalog/items/meat/chicken-salami-200g.jpg",
+  "bb-01477": "/catalog/items/meat/chicken-sausages-250g.jpg",
+  "bb-01478": "/catalog/items/meat/chicken-sausages-250g.jpg",
+  "bb-01508": "/catalog/items/meat/chicken-sausages-250g.jpg",
+  "bb-01509": "/catalog/items/meat/chicken-sausages-250g.jpg",
+  "bb-01498": "/catalog/items/meat/country-eggs-desi-6pcs.jpg",
+  "bb-01499": "/catalog/items/meat/country-eggs-desi-6pcs.jpg",
+  "bb-01500": "/catalog/items/meat/fish-curry-masala-kit-100g.jpg",
+  "bb-01506": "/catalog/items/meat/fish-curry-masala-kit-100g.jpg",
+  "bb-00511": "/catalog/items/munchies/classic-salted-chips-52g.jpg",
+  "bb-00523": "/catalog/items/munchies/classic-salted-chips-52g.jpg",
+  "bb-00512": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+  "bb-00515": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+  "bb-00524": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+  "bb-00522": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+  "bb-00493": "/catalog/items/munchies/potato-wafers-salted-150g.jpg",
+  "bb-00525": "/catalog/items/munchies/potato-wafers-salted-150g.jpg",
+  "bb-00443": "/catalog/items/munchies/salted-popcorn-150g.jpg",
+  "bb-00500": "/catalog/items/munchies/salted-popcorn-150g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

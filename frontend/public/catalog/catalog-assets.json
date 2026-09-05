@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 206,
-  "totalSkus": 436,
+  "totalAssets": 216,
+  "totalSkus": 459,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -4805,6 +4805,259 @@
       "width": 600,
       "height": 600,
       "bytes": 52646,
+      "verified": true
+    },
+    "bb-01460": {
+      "skuId": "bb-01460",
+      "name": "Fresh Catch Basa Fish Fillet",
+      "unit": "500 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/basa-fish-fillet-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44675,
+      "verified": true
+    },
+    "bb-01479": {
+      "skuId": "bb-01479",
+      "name": "Licious Basa Fish Fillet",
+      "unit": "500 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/basa-fish-fillet-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44675,
+      "verified": true
+    },
+    "bb-01463": {
+      "skuId": "bb-01463",
+      "name": "Fresh Catch Pomfret Whole",
+      "unit": "500 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/pomfret-whole-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48500,
+      "verified": true
+    },
+    "bb-01476": {
+      "skuId": "bb-01476",
+      "name": "Godrej Yummiez Chicken Salami",
+      "unit": "200 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/chicken-salami-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 55662,
+      "verified": true
+    },
+    "bb-01507": {
+      "skuId": "bb-01507",
+      "name": "Venky’s Chicken Salami",
+      "unit": "200 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/chicken-salami-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 55662,
+      "verified": true
+    },
+    "bb-01477": {
+      "skuId": "bb-01477",
+      "name": "Godrej Yummiez Chicken Sausages",
+      "unit": "250 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/chicken-sausages-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 66435,
+      "verified": true
+    },
+    "bb-01478": {
+      "skuId": "bb-01478",
+      "name": "Godrej Yummiez Chicken Sausages",
+      "unit": "500 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/chicken-sausages-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 66435,
+      "verified": true
+    },
+    "bb-01508": {
+      "skuId": "bb-01508",
+      "name": "Venky’s Chicken Sausages",
+      "unit": "250 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/chicken-sausages-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 66435,
+      "verified": true
+    },
+    "bb-01509": {
+      "skuId": "bb-01509",
+      "name": "Venky’s Chicken Sausages",
+      "unit": "500 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/chicken-sausages-250g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 66435,
+      "verified": true
+    },
+    "bb-01498": {
+      "skuId": "bb-01498",
+      "name": "Local Farm Country Eggs Desi",
+      "unit": "6 pcs",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/country-eggs-desi-6pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62719,
+      "verified": true
+    },
+    "bb-01499": {
+      "skuId": "bb-01499",
+      "name": "Local Farm Country Eggs Desi",
+      "unit": "12 pcs",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/country-eggs-desi-6pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62719,
+      "verified": true
+    },
+    "bb-01500": {
+      "skuId": "bb-01500",
+      "name": "Local Fish Curry Masala Kit",
+      "unit": "100 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/fish-curry-masala-kit-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 77308,
+      "verified": true
+    },
+    "bb-01506": {
+      "skuId": "bb-01506",
+      "name": "MDH Fish Curry Masala Kit",
+      "unit": "100 g",
+      "categoryId": "meat",
+      "path": "/catalog/items/meat/fish-curry-masala-kit-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 77308,
+      "verified": true
+    },
+    "bb-00511": {
+      "skuId": "bb-00511",
+      "name": "Lay’s Classic Salted Chips",
+      "unit": "52 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/classic-salted-chips-52g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61400,
+      "verified": true
+    },
+    "bb-00523": {
+      "skuId": "bb-00523",
+      "name": "Uncle Chipps Classic Salted Chips",
+      "unit": "52 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/classic-salted-chips-52g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61400,
+      "verified": true
+    },
+    "bb-00512": {
+      "skuId": "bb-00512",
+      "name": "Lay’s Classic Salted Chips",
+      "unit": "157 g party",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 73362,
+      "verified": true
+    },
+    "bb-00515": {
+      "skuId": "bb-00515",
+      "name": "Lay’s Magic Masala Chips",
+      "unit": "157 g party",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 73362,
+      "verified": true
+    },
+    "bb-00524": {
+      "skuId": "bb-00524",
+      "name": "Uncle Chipps Classic Salted Chips",
+      "unit": "157 g party",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 73362,
+      "verified": true
+    },
+    "bb-00522": {
+      "skuId": "bb-00522",
+      "name": "Ruffles Magic Masala Chips",
+      "unit": "157 g party",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/masala-chips-157g-party.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 73362,
+      "verified": true
+    },
+    "bb-00493": {
+      "skuId": "bb-00493",
+      "name": "Haldiram’s Potato Wafers Salted",
+      "unit": "150 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/potato-wafers-salted-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 65740,
+      "verified": true
+    },
+    "bb-00525": {
+      "skuId": "bb-00525",
+      "name": "Uncle Chipps Potato Wafers Salted",
+      "unit": "150 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/potato-wafers-salted-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 65740,
+      "verified": true
+    },
+    "bb-00443": {
+      "skuId": "bb-00443",
+      "name": "Act II Salted Popcorn",
+      "unit": "150 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/salted-popcorn-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67994,
+      "verified": true
+    },
+    "bb-00500": {
+      "skuId": "bb-00500",
+      "name": "Haldiram’s Salted Popcorn",
+      "unit": "150 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/salted-popcorn-150g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 67994,
       "verified": true
     }
   }
