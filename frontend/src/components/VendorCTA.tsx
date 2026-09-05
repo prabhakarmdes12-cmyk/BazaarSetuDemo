@@ -16,7 +16,7 @@ export default function VendorCTA({ onSwitch }: VendorCTAProps) {
           Kya aapki apni dukaan hai?
         </h3>
         <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
-          BazaarSetu par aaj hi apni dukaan register karein aur online order lena shuru karein.
+          Chiti Bazaar par aaj hi apni dukaan register karein aur online order lena shuru karein.
         </p>
         {onSwitch ? (
           <Button onClick={onSwitch}>Switch to Vendor</Button>

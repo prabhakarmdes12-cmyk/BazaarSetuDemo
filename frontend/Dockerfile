@@ -1,4 +1,4 @@
-# BazaarSetu frontend — production image using Next.js standalone output.
+# Chiti Bazaar frontend — production image using Next.js standalone output.
 #
 # NEXT_PUBLIC_API_URL and API_PROXY_URL are baked in at build time (Vite/Next
 # inlines NEXT_PUBLIC_* at build). Point them at the deployed backend URL.

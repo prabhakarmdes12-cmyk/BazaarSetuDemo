@@ -1,8 +1,8 @@
-# BazaarSetu: Demo to Real App Implementation Plan
+# Chiti Bazaar: Demo to Real App Implementation Plan
 
 ## Executive Summary
 
-This plan bridges the gap between the BazaarSetu design demo (36 screens, 4 roles) and the current working Next.js + Express application. The demo showcases a polished, Hindi/Hinglish hyperlocal marketplace UI. The real app has functional backend APIs and core screens but is missing several UI screens, visual polish, and specific features demonstrated in the demo.
+This plan bridges the gap between the Chiti Bazaar design demo (36 screens, 4 roles) and the current working Next.js + Express application. The demo showcases a polished, Hindi/Hinglish hyperlocal marketplace UI. The real app has functional backend APIs and core screens but is missing several UI screens, visual polish, and specific features demonstrated in the demo.
 
 **Total Estimated Effort: 19–27 days**
 
@@ -262,7 +262,7 @@ Update `frontend/src/components/ui/` components:
 
 **Features:**
 - Full-screen branded splash with hero image (local marketplace photo)
-- "BazaarSetu" in `font-black text-5xl text-orange-700 italic`
+- "Chiti Bazaar" in `font-black text-5xl text-orange-700 italic`
 - Tagline: `'Apni local dukaan, ab online'`
 - "Aage Badhein" CTA button with `editorial-gradient` background
 - Progress dots (3 dots, first one active)
@@ -682,7 +682,7 @@ Update `frontend/src/components/ui/` components:
    - **UPI Transfer** (default selected, `border-2 border-primary-container`):
      - GPay, PhonePe, Paytm logos
      - `radio_button_checked` icon
-   - **BazaarSetu Wallet:**
+   - **Chiti Bazaar Wallet:**
      - Balance display (₹1,240)
      - `radio_button_unchecked` icon
    - **Cash at Shop:**

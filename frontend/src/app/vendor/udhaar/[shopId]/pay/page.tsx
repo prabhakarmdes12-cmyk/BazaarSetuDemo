@@ -11,7 +11,7 @@ type PaymentMethod = 'upi' | 'wallet' | 'cash';
 
 const METHODS: { id: PaymentMethod; icon: string; label: string; subtitle: string; bgClass: string; iconClass: string }[] = [
   { id: 'upi', icon: 'account_balance', label: 'UPI Transfer', subtitle: 'GPay, PhonePe, Paytm', bgClass: 'bg-primary-container', iconClass: 'text-primary' },
-  { id: 'wallet', icon: 'account_balance_wallet', label: 'BazaarSetu Wallet', subtitle: 'Pay via wallet', bgClass: 'bg-surface-container-high', iconClass: 'text-on-surface-variant' },
+  { id: 'wallet', icon: 'account_balance_wallet', label: 'Chiti Bazaar Wallet', subtitle: 'Pay via wallet', bgClass: 'bg-surface-container-high', iconClass: 'text-on-surface-variant' },
   { id: 'cash', icon: 'payments', label: 'Cash at Shop', subtitle: 'Record cash payment manually', bgClass: 'bg-surface-container-high', iconClass: 'text-on-surface-variant' },
 ];
 

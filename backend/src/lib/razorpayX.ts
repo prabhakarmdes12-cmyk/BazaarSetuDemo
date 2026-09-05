@@ -86,7 +86,7 @@ export async function createVendorPayout(input: VendorPayoutInput): Promise<{ id
       mode: 'IMPS',
       purpose: 'payout',
       reference_id: input.referenceId,
-      narration: `BazaarSetu vendor settlement ${input.referenceId}`,
+      narration: `Chiti Bazaar vendor settlement ${input.referenceId}`,
     },
   });
 

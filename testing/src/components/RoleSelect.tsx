@@ -9,7 +9,7 @@ export default function RoleSelect({ onSelect }: Props) {
     <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-br from-[#8f4e00] to-[#ff9933]">
       <div className="animate-slide-up text-center">
         <h1 className="font-headline text-4xl font-extrabold text-white mb-2">
-          BazaarSetu
+          Chiti Bazaar
         </h1>
         <p className="text-white/80 font-body text-base mb-2">
           Validation Form / Jaanch Prashnaavali

@@ -89,7 +89,7 @@ export default function VendorUdhaarPage() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-primary-container p-8 text-on-primary shadow-2xl">
+        <section className="relative overflow-hidden rounded-[2rem] leaf-gradient p-8 text-on-primary shadow-2xl">
           <div className="relative z-10 grid grid-cols-2 gap-8">
             <div className="space-y-1">
               <p className="text-sm font-medium opacity-90">Bacha hua Udhaar</p>

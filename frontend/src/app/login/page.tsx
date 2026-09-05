@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/hooks/useAuth';
 import { Icon } from '@/components/ui';
+import ChitiBazaarLogo from '@/components/ChitiBazaarLogo';
 import { mergeGuestCart, guestCartCount } from '@/lib/guestCart';
 import { ApiError } from '@/lib/api';
 import { track } from '@/lib/analytics';
@@ -77,7 +78,7 @@ export default function LoginPage() {
     <div className="bg-surface font-body text-on-surface min-h-screen flex flex-col items-center selection:bg-primary-container selection:text-on-primary-container">
       <header className="w-full max-w-md px-8 pt-12 pb-8 flex flex-col items-center">
         <div className="flex flex-col items-center space-y-2">
-          <span className="text-3xl font-black text-primary italic tracking-tight font-headline">BazaarSetu</span>
+          <ChitiBazaarLogo size={44} />
           <span className="text-sm font-headline italic font-medium text-on-surface-variant tracking-wide">&apos;Apni local dukaan, ab online&apos;</span>
         </div>
       </header>
@@ -86,7 +87,7 @@ export default function LoginPage() {
         {step === 'phone' && (
           <div className="space-y-8">
             <div className="relative w-full mb-12 overflow-hidden rounded-xl bg-surface-container-low aspect-[16/9]">
-              <Image fill sizes="(max-width: 768px) 100vw, 448px" alt="Vibrant Indian street market scene" className="object-cover opacity-90 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABRSq_cClpLAf-kGnbXCDRMts-_U5d5-lqrbFx_rtgNPC1wC1I8tWDCNRHqmy3POXg1eHUCDV4juTCXEQ2RQG2nJHVK7F3B721VUv5pnarlKv-Uj9N4JHC3mB0uDnjf-rybdm7EA-YxjiUdIOs3ZitmhPs8hDPsigpAPS183hwdlaGnSMex4Ndgb3D-B6doovkROrJY-nmVBDnRE1ogGIMJHJb5UnPbhkAyV2aACkVGnV0U06HhIprHpWjSbuw_23BWuGUBjK0Cis" />
+              <Image fill sizes="(max-width: 768px) 100vw, 448px" alt="Vibrant Indian street market scene" className="object-cover opacity-90 scale-105" src="/hero-shop.jpg" />
               <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
             </div>
             <div className="space-y-2 text-left">
@@ -111,7 +112,7 @@ export default function LoginPage() {
               {error && <p className="text-error text-sm">{error}</p>}
               <button
                 onClick={handleSendOtp} disabled={loading || phone.length < 10}
-                className="w-full py-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-lg shadow-card active:scale-[0.98] transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
+                className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-headline font-bold text-lg shadow-brand-glow active:scale-[0.98] transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50"
               >
                 <span>{loading ? 'Bhej rahe hain...' : 'OTP bhejein'}</span>
                 <Icon name="arrow_forward" className="font-bold" />
@@ -153,7 +154,7 @@ export default function LoginPage() {
               {error && <p className="text-error text-sm">{error}</p>}
               <button
                 onClick={handleVerifyOtp} disabled={loading || otp.length < 4}
-                className="w-full py-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-lg shadow-card active:scale-[0.98] transition-all duration-200 flex items-center justify-center disabled:opacity-50"
+                className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-headline font-bold text-lg shadow-brand-glow active:scale-[0.98] transition-all duration-200 flex items-center justify-center disabled:opacity-50"
               >
                 {loading ? 'Check kar rahe hain...' : 'Verify karein'}
               </button>
@@ -214,7 +215,7 @@ export default function LoginPage() {
                   className="mt-0.5 w-5 h-5 accent-primary"
                 />
                 <span className="text-sm text-on-surface-variant leading-relaxed">
-                  Main apni jaankari ka istemal samajhkar, BazaarSetu ki{' '}
+                  Main apni jaankari ka istemal samajhkar, Chiti Bazaar ki{' '}
                   <a href="/privacy" className="text-primary font-semibold underline">Privacy Policy</a> aur{' '}
                   <a href="/terms" className="text-primary font-semibold underline">Terms &amp; Conditions</a> seekar
                   accept karta/karti hoon.
@@ -223,7 +224,7 @@ export default function LoginPage() {
               {error && <p className="text-error text-sm">{error}</p>}
               <button
                 onClick={handleRegister} disabled={loading || !name.trim() || !acceptedPrivacy}
-                className="w-full py-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-lg shadow-card active:scale-[0.98] transition-all duration-200 flex items-center justify-center disabled:opacity-50"
+                className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-headline font-bold text-lg shadow-brand-glow active:scale-[0.98] transition-all duration-200 flex items-center justify-center disabled:opacity-50"
               >
                 {loading ? 'Bana rahe hain...' : 'Account banayein'}
               </button>

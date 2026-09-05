@@ -2,9 +2,11 @@ import type { Config } from 'tailwindcss';
 import forms from '@tailwindcss/forms';
 import containerQueries from '@tailwindcss/container-queries';
 
-// Chiti Design System v3 — dark-first, violet/cyan brand on near-black neutrals.
-// Existing Material-3 class names (bg-surface, text-on-surface, ...) are remapped
-// to the Chiti semantic token values so every page inherits the new theme.
+// Chiti Bazaar Design System — Obsidian Black + Fresh Leaf Green.
+// Dark-first, organic-premium brand on near-black neutrals. Existing
+// Material-3 style class names (bg-surface, text-on-surface, ...) are
+// remapped to the Chiti Bazaar semantic token values so every page
+// inherits the new theme without touching component markup.
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,69 +17,75 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand (Layer 2 semantic → Chiti)
-        primary: '#884dff',
-        'primary-dark': '#5417cf',
-        'primary-container': '#2a1a4d',
-        'primary-fixed': '#3b2a66',
-        'primary-fixed-dim': '#5b3aa8',
+        // Brand (Layer 2 semantic → Chiti Bazaar emerald)
+        primary: '#10B981',
+        'primary-dark': '#059669',
+        'primary-container': '#0F3D2A',
+        'primary-fixed': '#14532D',
+        'primary-fixed-dim': '#0F3D2A',
         'on-primary': '#ffffff',
-        'on-primary-container': '#e4d5ff',
-        'on-primary-fixed': '#ece0ff',
-        'on-primary-fixed-variant': '#d9c4ff',
+        'on-primary-container': '#B9F5D8',
+        'on-primary-fixed': '#DCFCE7',
+        'on-primary-fixed-variant': '#86EFAC',
 
-        // Secondary (cyan brand-secondary)
-        secondary: '#00d5ff',
-        'secondary-container': '#0d3a46',
-        'secondary-fixed': '#0f4a58',
-        'on-secondary': '#00262e',
-        'on-secondary-container': '#c3f4ff',
+        // Secondary (leaf green — live/open/active states)
+        secondary: '#22C55E',
+        'secondary-container': '#123421',
+        'secondary-fixed': '#155D34',
+        'on-secondary': '#052e16',
+        'on-secondary-container': '#BBF7D0',
 
-        // Tertiary (teal accent)
-        tertiary: '#17cfbf',
-        'tertiary-container': '#0d3d3a',
-        'tertiary-fixed': '#104a46',
-        'on-tertiary': '#00221f',
-        'on-tertiary-container': '#c0fff5',
+        // Tertiary (glow highlight — emerald-teal accent)
+        tertiary: '#34D399',
+        'tertiary-container': '#0B3A30',
+        'tertiary-fixed': '#0F4A3C',
+        'on-tertiary': '#022c22',
+        'on-tertiary-container': '#99F6E4',
 
         // Error
-        error: '#e8304f',
-        'error-container': '#4a1420',
+        error: '#EF4444',
+        'error-container': '#3F1214',
         'on-error': '#ffffff',
-        'on-error-container': '#ffd9de',
+        'on-error-container': '#FECACA',
+
+        // Warning (amber — pending / attention states)
+        warning: '#F59E0B',
+        'warning-container': '#3A2A0A',
+        'on-warning': '#1C1503',
+        'on-warning-container': '#FDE68A',
 
         // Success (positive / paid / in-stock semantics)
-        success: '#34d17b',
-        'success-container': '#123b26',
+        success: '#22C55E',
+        'success-container': '#123B26',
         'on-success': '#ffffff',
-        'on-success-container': '#c9f5d5',
+        'on-success-container': '#C9F5D5',
 
-        // Surfaces (dark-first)
-        surface: '#090a0b',
-        'surface-dim': '#0c0d10',
-        'surface-bright': '#14161a',
-        'surface-container-lowest': '#121416',
-        'surface-container-low': '#1a1d21',
-        'surface-container': '#1e2126',
-        'surface-container-high': '#23262c',
-        'surface-container-highest': '#2b2e35',
-        'surface-variant': '#1c1f24',
-        'surface-tint': '#884dff',
+        // Surfaces (obsidian black — dark-first)
+        surface: '#070A07',
+        'surface-dim': '#050705',
+        'surface-bright': '#141C14',
+        'surface-container-lowest': '#0B100B',
+        'surface-container-low': '#0E140E',
+        'surface-container': '#121812',
+        'surface-container-high': '#171F17',
+        'surface-container-highest': '#1D261D',
+        'surface-variant': '#141C14',
+        'surface-tint': '#10B981',
 
         // On-surface
-        'on-surface': '#f6f7f8',
-        'on-surface-variant': '#a9b0bd',
-        'on-background': '#f6f7f8',
-        background: '#090a0b',
+        'on-surface': '#FFFFFF',
+        'on-surface-variant': '#A3B19B',
+        'on-background': '#FFFFFF',
+        background: '#070A07',
 
         // Outline
-        outline: '#4c5058',
-        'outline-variant': '#262a30',
+        outline: '#2A362A',
+        'outline-variant': '#1B241B',
 
         // Inverse
-        'inverse-surface': '#f6f7f8',
-        'inverse-on-surface': '#090a0b',
-        'inverse-primary': '#a678ff',
+        'inverse-surface': '#FFFFFF',
+        'inverse-on-surface': '#070A07',
+        'inverse-primary': '#34D399',
       },
       fontFamily: {
         headline: ['Outfit', 'Noto Sans Devanagari', 'sans-serif'],
@@ -98,15 +106,16 @@ const config: Config = {
         full: '9999px',
       },
       boxShadow: {
-        card: '0 4px 24px rgba(0,0,0,0.4)',
-        elevated: '0 20px 60px rgba(0,0,0,0.6)',
-        'editorial': '0 4px 20px rgba(0,0,0,0.3)',
-        'editorial-lg': '0 8px 32px rgba(0,0,0,0.4)',
-        'editorial-xl': '0 16px 48px rgba(0,0,0,0.5)',
-        'brand-glow': '0 12px 24px rgba(124,58,237,0.3)',
-        'brand-glow-lg': '0 32px 64px rgba(124,58,237,0.2)',
-        'bottom-nav': '0 -8px 24px rgba(0,0,0,0.35)',
-        'top-bar': '0 4px 24px rgba(0,0,0,0.35)',
+        card: '0 4px 24px rgba(0,0,0,0.5)',
+        elevated: '0 20px 60px rgba(0,0,0,0.65)',
+        'editorial': '0 4px 20px rgba(0,0,0,0.4)',
+        'editorial-lg': '0 8px 32px rgba(0,0,0,0.5)',
+        'editorial-xl': '0 16px 48px rgba(0,0,0,0.6)',
+        'brand-glow': '0 12px 32px rgba(16,185,129,0.35)',
+        'brand-glow-lg': '0 32px 64px rgba(16,185,129,0.22)',
+        'leaf-glow': '0 0 24px rgba(52,211,153,0.45)',
+        'bottom-nav': '0 -8px 32px rgba(0,0,0,0.5)',
+        'top-bar': '0 4px 24px rgba(0,0,0,0.45)',
       },
       animation: {
         'slide-up': 'slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -114,7 +123,10 @@ const config: Config = {
         'fade-in': 'fade-in 0.2s ease-out',
         'shimmer': 'shimmer 1.5s ease-in-out infinite',
         'pulse-ring': 'pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-ring-slow': 'pulse-ring-slow 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'spin-slow': 'spin 2s linear infinite',
+        'leaf-sway': 'leaf-sway 3s ease-in-out infinite',
+        'float': 'float 4s ease-in-out infinite',
       },
       keyframes: {
         'slide-up': {
@@ -136,6 +148,19 @@ const config: Config = {
         'pulse-ring': {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '.5' },
+        },
+        'pulse-ring-slow': {
+          '0%': { transform: 'scale(0.9)', opacity: '0.7' },
+          '70%': { transform: 'scale(1.6)', opacity: '0' },
+          '100%': { transform: 'scale(1.6)', opacity: '0' },
+        },
+        'leaf-sway': {
+          '0%, 100%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(4deg)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
         },
       },
     },

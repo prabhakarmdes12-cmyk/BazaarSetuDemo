@@ -6,26 +6,28 @@
 @tailwind utilities;
 
 /* ================================================================
-   CHITI DESIGN SYSTEM v3 — Token Layer
-   Three-layer architecture: Primitive → Semantic → Component
-   Dark is the DEFAULT theme; [data-theme="light"] overrides Layer 2.
+   CHITI BAZAAR DESIGN SYSTEM — Token Layer
+   Obsidian Black + Fresh Leaf Green. Three-layer architecture:
+   Primitive → Semantic → Component. Dark is the DEFAULT theme;
+   [data-theme="light"] overrides Layer 2.
    ================================================================ */
 
 /* ---- Layer 1: Primitive tokens ---- */
 :root {
-  --p-purple-500: hsl(260, 100%, 65%);
-  --p-purple-700: hsl(260, 80%, 45%);
-  --p-cyan-500: hsl(190, 100%, 50%);
+  --p-emerald-500: hsl(160, 84%, 39%);
+  --p-emerald-700: hsl(161, 94%, 30%);
+  --p-leaf-400: hsl(142, 71%, 45%);
+  --p-glow-400: hsl(158, 64%, 52%);
   --p-neutral-0: hsl(0, 0%, 100%);
-  --p-neutral-50: hsl(220, 15%, 97%);
-  --p-neutral-100: hsl(220, 14%, 93%);
-  --p-neutral-200: hsl(220, 13%, 85%);
-  --p-neutral-500: hsl(220, 10%, 55%);
-  --p-neutral-900: hsl(220, 10%, 8%);
-  --p-neutral-950: hsl(220, 10%, 4%);
-  --p-green-500: hsl(150, 80%, 40%);
-  --p-amber-500: hsl(35, 90%, 50%);
-  --p-red-500: hsl(350, 80%, 55%);
+  --p-neutral-50: hsl(110, 15%, 97%);
+  --p-neutral-100: hsl(110, 14%, 93%);
+  --p-neutral-200: hsl(100, 13%, 85%);
+  --p-neutral-500: hsl(98, 12%, 65%);
+  --p-neutral-900: hsl(120, 14%, 8%);
+  --p-neutral-950: hsl(120, 18%, 3%);
+  --p-green-500: hsl(142, 71%, 45%);
+  --p-amber-500: hsl(38, 92%, 50%);
+  --p-red-500: hsl(0, 84%, 60%);
   --p-dv-sapphire: hsl(215, 90%, 55%);
   --p-dv-teal: hsl(175, 80%, 45%);
   --p-dv-amber: hsl(45, 95%, 60%);
@@ -38,22 +40,22 @@
 /* ---- Layer 2: Semantic tokens (dark = default) ---- */
 :root,
 [data-theme='dark'] {
-  --bg-base: var(--p-neutral-950);
-  --surface-1: var(--p-neutral-900);
-  --surface-2: hsl(220, 10%, 12%);
-  --surface-3: hsl(220, 10%, 16%);
+  --bg-base: #070A07;
+  --surface-1: #0B100B;
+  --surface-2: #121812;
+  --surface-3: #171F17;
   --text-main: var(--p-neutral-0);
-  --text-muted: var(--p-neutral-500);
+  --text-muted: #A3B19B;
   --text-inverted: var(--p-neutral-950);
-  --border: rgba(255, 255, 255, 0.08);
-  --focus-ring: rgba(124, 58, 237, 0.8);
-  --brand: var(--p-purple-500);
-  --brand-secondary: var(--p-cyan-500);
+  --border: rgba(34, 197, 94, 0.15);
+  --focus-ring: rgba(52, 211, 153, 0.8);
+  --brand: var(--p-emerald-500);
+  --brand-secondary: var(--p-leaf-400);
   --success: var(--p-green-500);
   --warning: var(--p-amber-500);
   --error: var(--p-red-500);
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.65);
 }
 
 [data-theme='light'] {
@@ -61,12 +63,12 @@
   --surface-1: var(--p-neutral-0);
   --surface-2: var(--p-neutral-100);
   --surface-3: var(--p-neutral-200);
-  --text-main: hsl(220, 20%, 8%);
-  --text-muted: hsl(220, 10%, 45%);
+  --text-main: hsl(120, 20%, 8%);
+  --text-muted: hsl(100, 10%, 40%);
   --text-inverted: var(--p-neutral-0);
-  --border: rgba(0, 0, 0, 0.08);
-  --focus-ring: rgba(124, 58, 237, 0.5);
-  --brand: var(--p-purple-700);
+  --border: rgba(16, 185, 129, 0.15);
+  --focus-ring: rgba(16, 185, 129, 0.5);
+  --brand: var(--p-emerald-700);
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
   --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
@@ -163,7 +165,7 @@ h1, h2, h3, h4, h5, h6, .font-headline {
   line-height: 1.5;
 }
 .c-btn.primary { background: var(--text-main); color: var(--text-inverted); }
-.c-btn.primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15); }
+.c-btn.primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15); }
 .c-btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--text-main); }
 .c-btn.ghost:hover { border-color: var(--brand); color: var(--brand); }
 .c-btn.danger { background: rgba(225, 29, 72, 0.1); color: var(--error); border: 1px solid rgba(225, 29, 72, 0.3); }
@@ -181,7 +183,7 @@ h1, h2, h3, h4, h5, h6, .font-headline {
   font-size: 0.9rem;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.c-input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2); outline: none; }
+.c-input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); outline: none; }
 .c-input.error { border-color: var(--error); }
 .c-input:disabled { opacity: 0.5; cursor: not-allowed; }
 
@@ -323,7 +325,7 @@ h1, h2, h3, h4, h5, h6, .font-headline {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, hsl(260, 100%, 65%), hsl(260, 80%, 45%));
+  background: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(142, 71%, 45%));
   color: #fff;
   font-weight: 700;
   padding: 12px 20px;
@@ -333,7 +335,7 @@ h1, h2, h3, h4, h5, h6, .font-headline {
   transition: all 0.2s;
   line-height: 1.5;
 }
-.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(16, 185, 129, 0.3); }
 .btn-primary:active { transform: scale(0.97); }
 .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
 .btn-success {
@@ -364,7 +366,7 @@ h1, h2, h3, h4, h5, h6, .font-headline {
   font-size: 0.9rem;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.input-field:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2); outline: none; }
+.input-field:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); outline: none; }
 .input-field:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* Table */
@@ -392,30 +394,30 @@ h1, h2, h3, h4, h5, h6, .font-headline {
 
 /* Brand gradient (violet → deep violet) — was saffron */
 .editorial-gradient {
-  background: linear-gradient(135deg, hsl(260, 100%, 65%), hsl(260, 80%, 45%));
+  background: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(142, 71%, 45%));
 }
 
 .digital-courtyard-gradient {
-  background: linear-gradient(135deg, hsl(260, 100%, 65%), hsl(260, 80%, 45%));
+  background: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(142, 71%, 45%));
 }
 
 .saffron-gradient {
-  background: linear-gradient(135deg, hsl(260, 100%, 65%), hsl(260, 80%, 45%));
+  background: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(142, 71%, 45%));
 }
 
 .saffron-glow {
-  background: linear-gradient(135deg, hsl(260, 100%, 65%), hsl(260, 80%, 45%));
+  background: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(142, 71%, 45%));
 }
 
 /* Brand glow shadows — were saffron */
 .shadow-saffron {
-  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.3);
 }
 .shadow-saffron-lg {
-  box-shadow: 0 32px 64px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.2);
 }
 .shadow-brand-glow {
-  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.3);
 }
 
 /* Organic shape for decorative background elements */
@@ -426,7 +428,7 @@ h1, h2, h3, h4, h5, h6, .font-headline {
 /* OTP input focus style */
 .otp-input-focus:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.4);
 }
 
 /* Digital courtyard shadow */
@@ -499,7 +501,7 @@ h1, h2, h3, h4, h5, h6, .font-headline {
   max-width: 80%;
 }
 .chat-bubble-vendor {
-  background: linear-gradient(135deg, hsl(260, 100%, 65%), hsl(260, 80%, 45%));
+  background: linear-gradient(135deg, hsl(160, 84%, 39%), hsl(142, 71%, 45%));
   color: #fff;
   border-radius: 16px;
   border-bottom-right-radius: 4px;
@@ -613,6 +615,73 @@ h1, h2, h3, h4, h5, h6, .font-headline {
 
 .animate-pulse-dot {
   animation: pulseDot 2s ease-in-out infinite;
+}
+
+/* ================================================================
+   Chiti Bazaar — Obsidian glass + leaf-green premium utilities
+   ================================================================ */
+
+/* Glassmorphic obsidian panel — headers, docks, floating sheets */
+.glass-panel {
+  background: rgba(11, 16, 11, 0.72);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+/* Radial leaf-green ambient glow, used behind hero sections */
+.leaf-ambient-glow {
+  background: radial-gradient(60% 60% at 50% 0%, rgba(16, 185, 129, 0.22) 0%, rgba(7, 10, 7, 0) 70%);
+}
+
+/* Premium brand gradient — obsidian → emerald → leaf */
+.leaf-gradient {
+  background: linear-gradient(135deg, #10B981 0%, #22C55E 60%, #34D399 100%);
+}
+
+.leaf-text-gradient {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 60%, #22C55E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Pulsing live/delivery status ring (emerald) */
+.pulse-ring-emerald {
+  position: relative;
+}
+.pulse-ring-emerald::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid rgba(52, 211, 153, 0.6);
+  animation: pulse-ring-slow 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring-slow {
+  0% { transform: scale(0.92); opacity: 0.8; }
+  70% { transform: scale(1.55); opacity: 0; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+/* Organic leaf-sprout micro motion, used by the logo mark */
+@keyframes leaf-sway {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+.animate-leaf-sway {
+  animation: leaf-sway 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Gentle float used by floating dock / assistant button */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: floatY 4s ease-in-out infinite;
 }
 
 /* Reduced motion support */

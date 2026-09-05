@@ -22,7 +22,7 @@ export default class ErrorBoundary extends React.Component<Props, State> {
 
   componentDidCatch(error: Error, info: React.ErrorInfo) {
     try {
-      const beacon = (globalThis as { __bazaarsetu_reportError?: (e: Error, i?: unknown) => void }).__bazaarsetu_reportError;
+      const beacon = (globalThis as { __chitibazaar_reportError?: (e: Error, i?: unknown) => void }).__chitibazaar_reportError;
       if (beacon) beacon(error, info.componentStack);
     } catch {
       // never let telemetry take down the app
@@ -40,7 +40,7 @@ export default class ErrorBoundary extends React.Component<Props, State> {
         </p>
         <button
           onClick={() => window.location.reload()}
-          className="mt-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold active:scale-95 transition-all"
+          className="mt-2 px-6 py-3 rounded-xl leaf-gradient text-on-primary font-headline font-bold active:scale-95 transition-all"
         >
           Refresh karein
         </button>

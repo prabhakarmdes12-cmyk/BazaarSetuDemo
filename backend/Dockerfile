@@ -1,4 +1,4 @@
-# BazaarSetu backend — production image.
+# Chiti Bazaar backend — production image.
 #
 # Builds the TypeScript to dist/, swaps the Prisma provider from SQLite
 # (dev) to PostgreSQL (prod), and runs `db push` on boot so the schema is

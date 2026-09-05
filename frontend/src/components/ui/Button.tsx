@@ -10,12 +10,13 @@ interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 const sizeStyles: Record<'sm' | 'md' | 'lg', React.CSSProperties> = {
-  sm: { padding: '8px 14px', fontSize: '0.8rem', borderRadius: '6px' },
-  md: { padding: '12px 20px', fontSize: '0.9rem', borderRadius: '8px' },
-  lg: { padding: '16px 28px', fontSize: '1rem', borderRadius: '10px' },
+  sm: { padding: '8px 14px', fontSize: '0.8rem', borderRadius: '10px' },
+  md: { padding: '12px 20px', fontSize: '0.9rem', borderRadius: '12px' },
+  lg: { padding: '16px 28px', fontSize: '1rem', borderRadius: '14px' },
 };
 
-// Map BazaarSetu variants onto the Chiti button variants.
+// Map Chiti Bazaar variants onto the underlying @chiti/ui button primitives —
+// the visual palette is fully overridden below to the obsidian + leaf-green brand.
 const variantMap: Record<string, 'cinematic' | 'glass' | 'saas' | 'error'> = {
   primary: 'cinematic',
   gradient: 'cinematic',
@@ -26,10 +27,42 @@ const variantMap: Record<string, 'cinematic' | 'glass' | 'saas' | 'error'> = {
   error: 'error',
 };
 
+// Obsidian Black + Fresh Leaf Green overrides per variant.
 const variantStyleOverrides: Record<string, React.CSSProperties> = {
+  primary: {
+    background: 'linear-gradient(135deg, #10B981 0%, #22C55E 100%)',
+    boxShadow: '0 8px 24px rgba(16, 185, 129, 0.35)',
+    color: '#ffffff',
+  },
+  gradient: {
+    background: 'linear-gradient(135deg, #10B981 0%, #22C55E 55%, #34D399 100%)',
+    boxShadow: '0 8px 24px rgba(16, 185, 129, 0.35)',
+    color: '#ffffff',
+  },
+  secondary: {
+    background: 'rgba(18, 24, 18, 0.6)',
+    border: '1px solid rgba(34, 197, 94, 0.25)',
+    color: '#ffffff',
+    backdropFilter: 'blur(12px)',
+  },
+  ghost: {
+    background: 'transparent',
+    border: '1px solid rgba(34, 197, 94, 0.25)',
+    color: '#ffffff',
+  },
+  surface: {
+    background: '#121812',
+    border: '1px solid rgba(34, 197, 94, 0.15)',
+    color: '#ffffff',
+  },
   success: {
-    background: 'linear-gradient(135deg, hsl(150, 80%, 45%), hsl(150, 80%, 32%))',
-    boxShadow: '0 4px 12px rgba(20, 184, 102, 0.3)',
+    background: 'linear-gradient(135deg, #22C55E 0%, #16A34A 100%)',
+    boxShadow: '0 4px 12px rgba(34, 197, 94, 0.3)',
+    color: '#ffffff',
+  },
+  error: {
+    background: '#EF4444',
+    color: '#ffffff',
   },
 };
 

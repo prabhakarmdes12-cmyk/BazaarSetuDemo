@@ -4,6 +4,7 @@ import React from 'react';
 import TopNav from './TopNav';
 import BottomNavBar from './BottomNavBar';
 import FloatingActionButton from './FloatingActionButton';
+import ChitiAssistantButton from './ChitiAssistantButton';
 import RequireAuth from './RequireAuth';
 
 interface AppShellProps {
@@ -22,6 +23,7 @@ interface AppShellProps {
   topNavSubtitle?: string;
   showBack?: boolean;
   backHref?: string;
+  showAssistant?: boolean;
 }
 
 const customerNavItems = [
@@ -61,12 +63,17 @@ export default function AppShell({
   topNavSubtitle,
   showBack = false,
   backHref,
+  showAssistant,
 }: AppShellProps) {
   const navItems = role === 'vendor'
     ? vendorNavItems
     : role === 'admin'
       ? adminNavItems
       : customerNavItems;
+
+  // Only surface the Chiti Assistant nudge for customers, and only when the
+  // page hasn't explicitly opted out.
+  const shouldShowAssistant = showAssistant ?? (role === 'customer' && showNav);
 
   // Guest mode: browse without an account; a login CTA replaces the nav bar.
   if (guest) {
@@ -88,10 +95,11 @@ export default function AppShell({
         {showFab && (
           <FloatingActionButton count={fabCount} href={fabHref} onClick={onFabClick} />
         )}
-        <div className="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/90 backdrop-blur-xl border-t border-outline-variant/10 px-6 pt-4 pb-6">
+        {shouldShowAssistant && <ChitiAssistantButton />}
+        <div className="fixed bottom-0 left-0 right-0 z-40 glass-panel px-6 pt-4 pb-6">
           <a
             href="/login"
-            className="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold text-center block shadow-lg active:scale-[0.98] transition-all"
+            className="w-full py-3.5 rounded-xl leaf-gradient text-on-primary font-headline font-bold text-center block shadow-brand-glow active:scale-[0.98] transition-all"
           >
             Login karke order karein
           </a>
@@ -120,6 +128,7 @@ export default function AppShell({
       {showFab && (
         <FloatingActionButton count={fabCount} href={fabHref} onClick={onFabClick} />
       )}
+      {shouldShowAssistant && <ChitiAssistantButton />}
     </div>
     </RequireAuth>
   );

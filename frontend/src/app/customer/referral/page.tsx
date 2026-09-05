@@ -65,7 +65,7 @@ export default function ReferralPage() {
       </nav>
 
       <main className="pt-24 px-6 max-w-screen-md mx-auto space-y-8">
-        <section className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-primary-container p-8 text-on-primary shadow-lg">
+        <section className="relative overflow-hidden rounded-[2rem] leaf-gradient p-8 text-on-primary shadow-lg">
           <div className="absolute -right-6 -top-6 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
           <div className="relative z-10 space-y-2">
             <p className="text-sm font-medium opacity-90">Aapka referral code</p>
@@ -115,7 +115,7 @@ export default function ReferralPage() {
           </h3>
           <div className="space-y-3 text-sm text-on-surface-variant">
             <p className="flex gap-3"><span className="text-primary font-bold">1.</span> Apna referral code share karein</p>
-            <p className="flex gap-3"><span className="text-primary font-bold">2.</span> Dost BazaarSetu par register karein</p>
+            <p className="flex gap-3"><span className="text-primary font-bold">2.</span> Dost Chiti Bazaar par register karein</p>
             <p className="flex gap-3"><span className="text-primary font-bold">3.</span> Har joined dost par reward paayein</p>
           </div>
         </section>

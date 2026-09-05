@@ -1,11 +1,11 @@
 {
-  "name": "BazaarSetu",
-  "short_name": "BazaarSetu",
-  "description": "Apni Dukaan, Apni Pehchaan - Local shops delivered to your doorstep",
+  "name": "Chiti Bazaar",
+  "short_name": "Chiti Bazaar",
+  "description": "Fresh veggies & kirana in 10 mins from your trusted neighborhood dukaans",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F9F5F0",
-  "theme_color": "#FF6B00",
+  "background_color": "#070A07",
+  "theme_color": "#070A07",
   "orientation": "portrait",
   "icons": [
     {

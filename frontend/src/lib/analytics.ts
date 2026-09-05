@@ -16,10 +16,10 @@ type AnalyticsEvent =
 
 function getClientId(): string {
   try {
-    let id = localStorage.getItem('bazaarsetu_client_id');
+    let id = localStorage.getItem('chitibazaar_client_id');
     if (!id) {
       id = `c_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
-      localStorage.setItem('bazaarsetu_client_id', id);
+      localStorage.setItem('chitibazaar_client_id', id);
     }
     return id;
   } catch {
@@ -48,7 +48,7 @@ export function reportError(error: Error, componentStack?: string) {
 
 // Register so ErrorBoundary can reach the reporter without importing it.
 if (typeof window !== 'undefined') {
-  (globalThis as Record<string, unknown>).__bazaarsetu_reportError = (e: Error, stack?: unknown) => {
+  (globalThis as Record<string, unknown>).__chitibazaar_reportError = (e: Error, stack?: unknown) => {
     reportError(e, typeof stack === 'string' ? stack : undefined);
   };
 }

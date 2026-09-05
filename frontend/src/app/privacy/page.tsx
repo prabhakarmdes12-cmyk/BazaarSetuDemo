@@ -3,7 +3,7 @@ import Link from 'next/link';
 const sections = [
   {
     title: '1. Aapke liye ekdum saaf baat',
-    body: 'BazaarSetu aapke phone number, naam, address, orders, khata (udhaar) aur payment jaani jaankari ko sirf dukaan aur app ke kaam ke liye istemal karta hai.',
+    body: 'Chiti Bazaar aapke phone number, naam, address, orders, khata (udhaar) aur payment jaani jaankari ko sirf dukaan aur app ke kaam ke liye istemal karta hai.',
   },
   {
     title: '2. Kaunsi jaankari collect hoti hai',
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
     <div className="bg-surface font-body text-on-surface min-h-screen flex flex-col items-center">
       <header className="w-full max-w-2xl px-8 pt-10 pb-6">
         <Link href="/" className="text-primary font-headline font-bold text-2xl italic tracking-tight">
-          BazaarSetu
+          Chiti Bazaar
         </Link>
         <h1 className="font-headline font-extrabold text-3xl tracking-tight mt-4">Privacy Policy</h1>
         <p className="text-on-surface-variant mt-1">Effective date: August 2026</p>

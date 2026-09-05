@@ -32,7 +32,7 @@ router.post('/on_search', (req: Request, res: Response) => {
       bap_uri: context.bap_uri,
     },
     message: {
-      catalog: { descriptor: { name: 'BazaarSetu' }, providers: [] },
+      catalog: { descriptor: { name: 'Chiti Bazaar' }, providers: [] },
     },
   });
 });

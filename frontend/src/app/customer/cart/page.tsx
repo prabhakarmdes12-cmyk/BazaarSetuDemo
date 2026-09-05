@@ -161,7 +161,7 @@ export default function CartPage() {
           </button>
           <h1 className="font-headline font-bold text-lg tracking-tight text-on-surface">Aapka cart</h1>
         </div>
-        <span className="font-headline font-extrabold text-primary italic">BazaarSetu</span>
+        <span className="font-headline font-extrabold text-primary italic">Chiti Bazaar</span>
       </header>
 
       <main className="pt-24 px-4 max-w-2xl mx-auto space-y-8">
@@ -262,7 +262,7 @@ export default function CartPage() {
         {isGuest ? (
           <a
             href="/login"
-            className="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+            className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3"
           >
             Login karke order karein
             <Icon name="chevron_right" />
@@ -270,7 +270,7 @@ export default function CartPage() {
         ) : (
           <button
             onClick={handlePlaceOrder} disabled={ordering}
-            className="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3 disabled:opacity-50"
+            className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3 disabled:opacity-50"
           >
             {ordering ? 'Order ho raha hai...' : 'Order karein'}
             <Icon name="chevron_right" />

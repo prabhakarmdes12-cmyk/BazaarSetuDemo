@@ -17,7 +17,7 @@ function buildSummaryMessage(
     .join('\n');
 
   return [
-    '*BazaarSetu Validation Report*',
+    '*Chiti Bazaar Validation Report*',
     '',
     `Name / Naam: ${name}`,
     `Locality / Ilaaka: ${locality}`,
@@ -27,7 +27,7 @@ function buildSummaryMessage(
     'Answers / Jawaab:',
     answersText,
     '',
-    'BazaarSetu - Apni Dukaan, Apni Pehchaan',
+    'Chiti Bazaar - Apni Dukaan, Apni Pehchaan',
   ].join('\n');
 }
 
@@ -40,7 +40,7 @@ export async function shareViaWhatsApp(
   locality: string,
 ): Promise<void> {
   const pdfBlob = generatePDFBlob(role, name, locality, answers, level, score);
-  const fileName = 'bazaarsetu-validation-report.pdf';
+  const fileName = 'chitibazaar-validation-report.pdf';
   const file = new File([pdfBlob], fileName, { type: 'application/pdf' });
 
   const message = buildSummaryMessage(role, level, score, answers, name, locality);
@@ -48,7 +48,7 @@ export async function shareViaWhatsApp(
   if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
     try {
       await navigator.share({
-        title: 'BazaarSetu Validation Report',
+        title: 'Chiti Bazaar Validation Report',
         text: message,
         files: [file],
       });

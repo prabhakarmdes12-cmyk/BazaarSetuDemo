@@ -107,7 +107,7 @@ router.get('/:id', optionalAuth, async (req: AuthRequest, res: Response) => {
 
     if (!shop) return res.status(404).json({ success: false, message: 'Shop not found' });
     if (isPilotMode() && !isPilotShopEligible(shop)) {
-      return res.status(403).json({ success: false, message: 'Shop is outside the active BazaarSetu pilot locality', pilot: getPilotConfig() });
+      return res.status(403).json({ success: false, message: 'Shop is outside the active Chiti Bazaar pilot locality', pilot: getPilotConfig() });
     }
 
     res.json({

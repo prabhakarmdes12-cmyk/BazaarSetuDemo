@@ -131,7 +131,7 @@ if (process.env.NODE_ENV !== 'test') {
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'test') {
   server.listen(PORT, () => {
-    console.log(`BazaarSetu API running on port ${PORT}`);
+    console.log(`Chiti Bazaar API running on port ${PORT}`);
   });
 }
 

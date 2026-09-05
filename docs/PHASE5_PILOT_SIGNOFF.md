@@ -1,18 +1,18 @@
-# BazaarSetu Operational Commerce — Phase 5 Pilot Hardening & Final Sign-off
+# Chiti Bazaar Operational Commerce — Phase 5 Pilot Hardening & Final Sign-off
 
 Date: 2026-09-05  
-Branch: `arena/01a06eea-bazaarsetudemo`  
+Branch: `arena/01a06eea-chitibazaardemo`  
 Milestone commits: `a807b2c`, `0789a42`, `31a4eb3`
 
 ## 1. Summary of Changed Files
 
 ### Phase 5 hardening files
 
-- `backend/.env.example` — documents `BAZAARSETU_PILOT_MODE`, pilot locality/PIN/radius config, pilot checkout methods, and dual SQLite/PostgreSQL provider preparation.
+- `backend/.env.example` — documents `CHITI-BAZAAR_PILOT_MODE`, pilot locality/PIN/radius config, pilot checkout methods, and dual SQLite/PostgreSQL provider preparation.
 - `backend/Dockerfile` — uses the Prisma provider preparation script during production image build so PostgreSQL generation is deterministic.
 - `backend/package.json` — adds `db:prepare:provider` and `db:seed:pilot`; updates Prisma scripts to prepare the datasource provider before generate/push.
 - `backend/prisma/schema.prisma` — documents SQLite dev/test plus PostgreSQL production flow; adds optional/defaulted customer address/locality/PIN/coordinate fields used by the pilot seed and locality guard.
-- `backend/scripts/prepare-prisma-provider.cjs` — infers Prisma provider from `DATABASE_URL` or `BAZAARSETU_PRISMA_PROVIDER`/`PRISMA_PROVIDER`.
+- `backend/scripts/prepare-prisma-provider.cjs` — infers Prisma provider from `DATABASE_URL` or `CHITI-BAZAAR_PRISMA_PROVIDER`/`PRISMA_PROVIDER`.
 - `backend/src/lib/config.ts` — central pilot-mode policy: locality, allowed PINs, radius validation, allowed checkout methods, and `PilotPolicyError`.
 - `backend/src/lib/financialGuard.ts` — fail-closed DB health guard for pilot financial writes.
 - `backend/src/lib/conversationalCommerce.ts` — carries shop address/coordinate metadata into draft checkout validation.
@@ -29,7 +29,7 @@ Milestone commits: `a807b2c`, `0789a42`, `31a4eb3`
 
 ### Operational commerce files delivered in Phases 1–4
 
-- `BAZAARSETU-OPERATIONAL-COMMERCE-SPEC.md` — authoritative product/operational commerce specification.
+- `CHITI-BAZAAR-OPERATIONAL-COMMERCE-SPEC.md` — authoritative product/operational commerce specification.
 - `.github/workflows/ci.yml` — backend/frontend CI gates.
 - `backend/src/lib/shopBotEngine.ts` — multilingual deterministic Shop Bot parser and catalogue matcher.
 - `backend/src/lib/chitigram.ts` — Chitigram typed action-card bridge.
@@ -80,7 +80,7 @@ Catalogue, cart, orders, Udhaar, and payments are intact.
 - Existing order creation, status timeline, public tracking, repeat order, and vendor order views are preserved.
 - Udhaar ledger views, credit entries, reminders, limits, payments, DSO, and summary routes are preserved.
 - Razorpay payment links and RazorpayX payouts remain available when configured.
-- Phase 5 restrictions are gated by `BAZAARSETU_PILOT_MODE=true`; default mode remains backward-compatible.
+- Phase 5 restrictions are gated by `CHITI-BAZAAR_PILOT_MODE=true`; default mode remains backward-compatible.
 - Pilot financial guards only add fail-closed protection in pilot mode; they do not fake or partially complete money movement.
 
 ## 4. Shop Bot Multilingual Architecture
@@ -191,13 +191,13 @@ Escalation endpoint:
 ### Configure pilot mode
 
 ```env
-BAZAARSETU_PILOT_MODE=true
-BAZAARSETU_PILOT_LOCALITY="Ashok Nagar / Kanke Road"
-BAZAARSETU_PILOT_PINCODES="834002,834008"
-BAZAARSETU_PILOT_CENTER_LAT="23.375"
-BAZAARSETU_PILOT_CENTER_LNG="85.329"
-BAZAARSETU_PILOT_RADIUS_KM="5"
-BAZAARSETU_PILOT_CHECKOUT_METHODS="DIRECT_UPI,COD,UDHAAR"
+CHITI-BAZAAR_PILOT_MODE=true
+CHITI-BAZAAR_PILOT_LOCALITY="Ashok Nagar / Kanke Road"
+CHITI-BAZAAR_PILOT_PINCODES="834002,834008"
+CHITI-BAZAAR_PILOT_CENTER_LAT="23.375"
+CHITI-BAZAAR_PILOT_CENTER_LNG="85.329"
+CHITI-BAZAAR_PILOT_RADIUS_KM="5"
+CHITI-BAZAAR_PILOT_CHECKOUT_METHODS="DIRECT_UPI,COD,UDHAAR"
 DATABASE_URL="postgresql://..."
 JWT_SECRET="..."
 ```
@@ -216,8 +216,8 @@ Production PostgreSQL without Docker:
 
 ```bash
 cd backend
-BAZAARSETU_PRISMA_PROVIDER=postgresql npm run db:generate
-BAZAARSETU_PRISMA_PROVIDER=postgresql npm run db:push
+CHITI-BAZAAR_PRISMA_PROVIDER=postgresql npm run db:generate
+CHITI-BAZAAR_PRISMA_PROVIDER=postgresql npm run db:push
 ```
 
 Docker production prepares PostgreSQL provider during image build.

@@ -1,4 +1,4 @@
-# BazaarSetu: Launch Checklist
+# Chiti Bazaar: Launch Checklist
 
 **Verdict:** Not market-ready yet. Core product (auth, shops, products, cart, orders, chats, udhaar, referrals, admin) works end-to-end and is a solid demo/MVP. The gap to a real launch is money movement, real OTP delivery, deployment, and honest dashboards — not the product surface.
 
@@ -34,7 +34,7 @@ Money must actually move and be recorded. No simulation.
    - Actual settlement via **RazorpayX** (`lib/razorpayX.ts`, env-gated: `RAZORPAYX_KEY_ID/SECRET/ACCOUNT_NUMBER`). Unconfigured requests return **503 — no faked transfers**.
    - Available balance = platform-collected (paid Payments) − settled (non-failed Payouts). No wallet, no float.
 5. **Frontend wiring** — pay page calls the real endpoint; success page renders the real `paymentId`; payouts page reads real balance/history. Remove `setTimeout` simulation.
-6. **Do NOT ship a "BazaarSetu Wallet"** — a stored-balance wallet implies holding customer money (escrow/PG wallet, settlement licensing). Keep UPI + Cash only; remove or gate the wallet method.
+6. **Do NOT ship a "Chiti Bazaar Wallet"** — a stored-balance wallet implies holding customer money (escrow/PG wallet, settlement licensing). Keep UPI + Cash only; remove or gate the wallet method.
 
 ### Sprint B — SMS OTP (P0, 1–2 days) — ✅ DONE
 1. ✅ Provider: **Fast2SMS** implemented (`backend/src/lib/sms.ts`), switchable via `SMS_PROVIDER` env.
