@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 500 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 527 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27735,7 +27735,34 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00615": "/catalog/items/chocolates/choco-bar-ice-cream-60ml.jpg",
   "bb-00668": "/catalog/items/chocolates/choco-bar-ice-cream-60ml.jpg",
   "bb-00657": "/catalog/items/chocolates/rasmalai-tin-1kg.jpg",
-  "bb-00683": "/catalog/items/chocolates/rasmalai-tin-1kg.jpg"
+  "bb-00683": "/catalog/items/chocolates/rasmalai-tin-1kg.jpg",
+  "bb-01534": "/catalog/items/breakfast/pure-honey-500g.jpg",
+  "bb-01511": "/catalog/items/breakfast/pure-honey-500g.jpg",
+  "bb-01573": "/catalog/items/breakfast/pure-honey-500g.jpg",
+  "bb-01556": "/catalog/items/breakfast/tomato-ketchup-squeezy-950g.jpg",
+  "bb-01559": "/catalog/items/breakfast/tomato-ketchup-squeezy-950g.jpg",
+  "bb-01605": "/catalog/items/breakfast/tomato-ketchup-squeezy-950g.jpg",
+  "bb-01525": "/catalog/items/breakfast/chocolate-spread-350g.jpg",
+  "bb-01540": "/catalog/items/breakfast/chocolate-spread-350g.jpg",
+  "bb-01568": "/catalog/items/breakfast/chocolate-spread-350g.jpg",
+  "bb-01526": "/catalog/items/breakfast/chilli-garlic-sauce-200g.jpg",
+  "bb-01529": "/catalog/items/breakfast/chilli-garlic-sauce-200g.jpg",
+  "bb-01598": "/catalog/items/breakfast/chilli-garlic-sauce-200g.jpg",
+  "bb-01578": "/catalog/items/breakfast/peanut-butter-creamy-340g.jpg",
+  "bb-01591": "/catalog/items/breakfast/peanut-butter-creamy-340g.jpg",
+  "bb-01565": "/catalog/items/breakfast/peanut-butter-creamy-340g.jpg",
+  "bb-01552": "/catalog/items/breakfast/strawberry-jam-200g.jpg",
+  "bb-01596": "/catalog/items/breakfast/strawberry-jam-200g.jpg",
+  "bb-01580": "/catalog/items/breakfast/masala-oats-cup-50g.jpg",
+  "bb-01584": "/catalog/items/breakfast/masala-oats-cup-50g.jpg",
+  "bb-00999": "/catalog/items/instant/gulab-jamun-mix-200g.jpg",
+  "bb-00938": "/catalog/items/instant/gulab-jamun-mix-200g.jpg",
+  "bb-00942": "/catalog/items/instant/gulab-jamun-mix-200g.jpg",
+  "bb-01009": "/catalog/items/instant/ready-to-eat-curry-300g.jpg",
+  "bb-00952": "/catalog/items/instant/ready-to-eat-curry-300g.jpg",
+  "bb-00979": "/catalog/items/instant/ready-to-eat-curry-300g.jpg",
+  "bb-01005": "/catalog/items/instant/instant-upma-mix-180g.jpg",
+  "bb-00946": "/catalog/items/instant/instant-upma-mix-180g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
