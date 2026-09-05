@@ -532,6 +532,27 @@ const SKU_ASSET_ROWS = [
   ['munchies', "Uncle Chipps Potato Wafers Salted", "150 g", 'munchies/potato-wafers-salted-150g.jpg'],
   ['munchies', "Act II Salted Popcorn", "150 g", 'munchies/salted-popcorn-150g.jpg'],
   ['munchies', "Haldiram\u2019s Salted Popcorn", "150 g", 'munchies/salted-popcorn-150g.jpg'],
+  // Batch 5: namkeen & dry fruits deepening
+  ['munchies', "Bikharam Bhujiya Sev", "200 g", 'munchies/bhujiya-sev-200g.jpg'],
+  ['munchies', "Haldiram\u2019s Bhujiya Sev", "200 g", 'munchies/bhujiya-sev-200g.jpg'],
+  ['munchies', "Bikaji Navratan Mixture", "200 g", 'munchies/navratan-mixture-200g.jpg'],
+  ['munchies', "Haldiram\u2019s Navratan Mixture", "200 g", 'munchies/navratan-mixture-200g.jpg'],
+  ['munchies', "Bikaji Moong Dal", "200 g", 'munchies/moong-dal-namkeen-200g.jpg'],
+  ['munchies', "Haldiram\u2019s Moong Dal", "200 g", 'munchies/moong-dal-namkeen-200g.jpg'],
+  ['munchies', "Haldiram\u2019s Khatta Meetha Namkeen", "200 g", 'munchies/khatta-meetha-namkeen-200g.jpg'],
+  ['munchies', "Cornitos Nacho Tortilla Chips", "100 g", 'munchies/nacho-tortilla-chips-100g.jpg'],
+  ['munchies', "Doritos Nacho Tortilla Chips", "100 g", 'munchies/nacho-tortilla-chips-100g.jpg'],
+  ['munchies', "Haldiram\u2019s Roasted Peanuts", "200 g", 'munchies/roasted-peanuts-200g.jpg'],
+  ['munchies', "Jabsons Roasted Peanuts", "200 g", 'munchies/roasted-peanuts-200g.jpg'],
+  ['dryfruits', "Happilo Dates Khajur Seedless", "500 g", 'dryfruits/dates-khajur-seedless-500g.jpg'],
+  ['dryfruits', "Lion Dates Khajur Seedless", "500 g", 'dryfruits/dates-khajur-seedless-500g.jpg'],
+  ['dryfruits', "Vedaka Dates Khajur Seedless", "500 g", 'dryfruits/dates-khajur-seedless-500g.jpg'],
+  ['dryfruits', "Happilo Anjeer Dried Figs", "200 g", 'dryfruits/anjeer-dried-figs-200g.jpg'],
+  ['dryfruits', "Nutraj Anjeer Dried Figs", "200 g", 'dryfruits/anjeer-dried-figs-200g.jpg'],
+  ['dryfruits', "Happilo Walnut Kernels", "200 g", 'dryfruits/walnut-kernels-200g.jpg'],
+  ['dryfruits', "Nutraj Walnut Kernels", "200 g", 'dryfruits/walnut-kernels-200g.jpg'],
+  ['dryfruits', "Happilo Pistachio Roasted Salted", "200 g", 'dryfruits/pistachio-roasted-salted-200g.jpg'],
+  ['dryfruits', "Nutraj Pistachio Roasted Salted", "200 g", 'dryfruits/pistachio-roasted-salted-200g.jpg'],
 ];
 
 const EXPECTED_PX = 600;

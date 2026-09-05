@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 459 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 479 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27694,7 +27694,27 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00493": "/catalog/items/munchies/potato-wafers-salted-150g.jpg",
   "bb-00525": "/catalog/items/munchies/potato-wafers-salted-150g.jpg",
   "bb-00443": "/catalog/items/munchies/salted-popcorn-150g.jpg",
-  "bb-00500": "/catalog/items/munchies/salted-popcorn-150g.jpg"
+  "bb-00500": "/catalog/items/munchies/salted-popcorn-150g.jpg",
+  "bb-00460": "/catalog/items/munchies/bhujiya-sev-200g.jpg",
+  "bb-00473": "/catalog/items/munchies/bhujiya-sev-200g.jpg",
+  "bb-00453": "/catalog/items/munchies/navratan-mixture-200g.jpg",
+  "bb-00487": "/catalog/items/munchies/navratan-mixture-200g.jpg",
+  "bb-00451": "/catalog/items/munchies/moong-dal-namkeen-200g.jpg",
+  "bb-00485": "/catalog/items/munchies/moong-dal-namkeen-200g.jpg",
+  "bb-00479": "/catalog/items/munchies/khatta-meetha-namkeen-200g.jpg",
+  "bb-00466": "/catalog/items/munchies/nacho-tortilla-chips-100g.jpg",
+  "bb-00468": "/catalog/items/munchies/nacho-tortilla-chips-100g.jpg",
+  "bb-00497": "/catalog/items/munchies/roasted-peanuts-200g.jpg",
+  "bb-00507": "/catalog/items/munchies/roasted-peanuts-200g.jpg",
+  "bb-01678": "/catalog/items/dryfruits/dates-khajur-seedless-500g.jpg",
+  "bb-01698": "/catalog/items/dryfruits/dates-khajur-seedless-500g.jpg",
+  "bb-01742": "/catalog/items/dryfruits/dates-khajur-seedless-500g.jpg",
+  "bb-01668": "/catalog/items/dryfruits/anjeer-dried-figs-200g.jpg",
+  "bb-01708": "/catalog/items/dryfruits/anjeer-dried-figs-200g.jpg",
+  "bb-01695": "/catalog/items/dryfruits/walnut-kernels-200g.jpg",
+  "bb-01724": "/catalog/items/dryfruits/walnut-kernels-200g.jpg",
+  "bb-01685": "/catalog/items/dryfruits/pistachio-roasted-salted-200g.jpg",
+  "bb-01719": "/catalog/items/dryfruits/pistachio-roasted-salted-200g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

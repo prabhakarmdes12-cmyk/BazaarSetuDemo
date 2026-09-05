@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 216,
-  "totalSkus": 459,
+  "totalAssets": 226,
+  "totalSkus": 479,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -5058,6 +5058,226 @@
       "width": 600,
       "height": 600,
       "bytes": 67994,
+      "verified": true
+    },
+    "bb-00460": {
+      "skuId": "bb-00460",
+      "name": "Bikharam Bhujiya Sev",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/bhujiya-sev-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 76773,
+      "verified": true
+    },
+    "bb-00473": {
+      "skuId": "bb-00473",
+      "name": "Haldiram’s Bhujiya Sev",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/bhujiya-sev-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 76773,
+      "verified": true
+    },
+    "bb-00453": {
+      "skuId": "bb-00453",
+      "name": "Bikaji Navratan Mixture",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/navratan-mixture-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 70968,
+      "verified": true
+    },
+    "bb-00487": {
+      "skuId": "bb-00487",
+      "name": "Haldiram’s Navratan Mixture",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/navratan-mixture-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 70968,
+      "verified": true
+    },
+    "bb-00451": {
+      "skuId": "bb-00451",
+      "name": "Bikaji Moong Dal",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/moong-dal-namkeen-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71214,
+      "verified": true
+    },
+    "bb-00485": {
+      "skuId": "bb-00485",
+      "name": "Haldiram’s Moong Dal",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/moong-dal-namkeen-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71214,
+      "verified": true
+    },
+    "bb-00479": {
+      "skuId": "bb-00479",
+      "name": "Haldiram’s Khatta Meetha Namkeen",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/khatta-meetha-namkeen-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 78280,
+      "verified": true
+    },
+    "bb-00466": {
+      "skuId": "bb-00466",
+      "name": "Cornitos Nacho Tortilla Chips",
+      "unit": "100 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/nacho-tortilla-chips-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 66006,
+      "verified": true
+    },
+    "bb-00468": {
+      "skuId": "bb-00468",
+      "name": "Doritos Nacho Tortilla Chips",
+      "unit": "100 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/nacho-tortilla-chips-100g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 66006,
+      "verified": true
+    },
+    "bb-00497": {
+      "skuId": "bb-00497",
+      "name": "Haldiram’s Roasted Peanuts",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/roasted-peanuts-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62767,
+      "verified": true
+    },
+    "bb-00507": {
+      "skuId": "bb-00507",
+      "name": "Jabsons Roasted Peanuts",
+      "unit": "200 g",
+      "categoryId": "munchies",
+      "path": "/catalog/items/munchies/roasted-peanuts-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62767,
+      "verified": true
+    },
+    "bb-01678": {
+      "skuId": "bb-01678",
+      "name": "Happilo Dates Khajur Seedless",
+      "unit": "500 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/dates-khajur-seedless-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48440,
+      "verified": true
+    },
+    "bb-01698": {
+      "skuId": "bb-01698",
+      "name": "Lion Dates Khajur Seedless",
+      "unit": "500 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/dates-khajur-seedless-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48440,
+      "verified": true
+    },
+    "bb-01742": {
+      "skuId": "bb-01742",
+      "name": "Vedaka Dates Khajur Seedless",
+      "unit": "500 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/dates-khajur-seedless-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48440,
+      "verified": true
+    },
+    "bb-01668": {
+      "skuId": "bb-01668",
+      "name": "Happilo Anjeer Dried Figs",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/anjeer-dried-figs-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49845,
+      "verified": true
+    },
+    "bb-01708": {
+      "skuId": "bb-01708",
+      "name": "Nutraj Anjeer Dried Figs",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/anjeer-dried-figs-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49845,
+      "verified": true
+    },
+    "bb-01695": {
+      "skuId": "bb-01695",
+      "name": "Happilo Walnut Kernels",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/walnut-kernels-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47532,
+      "verified": true
+    },
+    "bb-01724": {
+      "skuId": "bb-01724",
+      "name": "Nutraj Walnut Kernels",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/walnut-kernels-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47532,
+      "verified": true
+    },
+    "bb-01685": {
+      "skuId": "bb-01685",
+      "name": "Happilo Pistachio Roasted Salted",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/pistachio-roasted-salted-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49530,
+      "verified": true
+    },
+    "bb-01719": {
+      "skuId": "bb-01719",
+      "name": "Nutraj Pistachio Roasted Salted",
+      "unit": "200 g",
+      "categoryId": "dryfruits",
+      "path": "/catalog/items/dryfruits/pistachio-roasted-salted-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49530,
       "verified": true
     }
   }
