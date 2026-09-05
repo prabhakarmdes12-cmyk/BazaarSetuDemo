@@ -318,6 +318,27 @@ const SKU_ASSET_ROWS = [
   ['household', "Pril Dishwash Bar", "3 pack", 'household/dishwash-bar-3-pack.jpg'],
   ['household', "Shalimar Garbage Bags", "30 bags medium", 'household/garbage-bags-30-medium.jpg'],
   ['household', "Origami Garbage Bags", "30 bags medium", 'household/garbage-bags-30-medium.jpg'],
+  // Batch 3 part 4 — home & kitchen, paan corner
+  ['household', "Hindalco Aluminium Foil", "9 m", 'household/aluminium-foil-9m.jpg'],
+  ['household', "Reynolds Aluminium Foil", "9 m", 'household/aluminium-foil-9m.jpg'],
+  ['household', "Origami Kitchen Towel Roll", "2 rolls 2-ply", 'household/kitchen-tissue-2-pack.jpg'],
+  ['household', "Premier Kitchen Towel Roll", "2 rolls 2-ply", 'household/kitchen-tissue-2-pack.jpg'],
+  ['household', "Good Knight Mosquito Repellent Refill", "45 ml refill", 'household/mosquito-repellent-refill-45ml.jpg'],
+  ['household', "AllOut Mosquito Repellent Refill", "45 ml refill", 'household/mosquito-repellent-refill-45ml.jpg'],
+  ['household', "Hit Mosquito Repellent Refill", "45 ml refill", 'household/mosquito-repellent-refill-45ml.jpg'],
+  ['paan', "Rajnigandha Meetha Saunf Mukhwas", "100 g", 'paan/silver-pearls-mukhwas-tin.jpg'],
+  ['paan', "Local Meetha Saunf Mukhwas", "100 g", 'paan/silver-pearls-mukhwas-tin.jpg'],
+  ['paan', "Local Silver Coated Elaichi", "50 g", 'paan/silver-coated-elaichi-50g.jpg'],
+  ['paan', "Rajnigandha Paan Masala Mouth Freshener", "10 sachets", 'paan/paan-masala-mouth-freshener-sachets.jpg'],
+  ['paan', "Pass Paan Masala Mouth Freshener", "10 sachets", 'paan/paan-masala-mouth-freshener-sachets.jpg'],
+  ['paan', "Center Fresh Chocolate Mint Pellets", "jar", 'paan/mint-pellets-jar.jpg'],
+  ['paan', "Pass Chocolate Mint Pellets", "jar", 'paan/mint-pellets-jar.jpg'],
+  ['paan', "Orbit Spearmint Chewing Gum", "blister pack", 'paan/spearmint-chewing-gum-pack.jpg'],
+  ['paan', "Center Fresh Spearmint Chewing Gum", "blister pack", 'paan/spearmint-chewing-gum-pack.jpg'],
+  ['paan', "Happydent Spearmint Chewing Gum", "blister pack", 'paan/spearmint-chewing-gum-pack.jpg'],
+  ['paan', "Local Roasted Saunf", "100 g", 'paan/roasted-saunf-100g.jpg'],
+  ['paan', "Hajmola Digestive Anardana Goli", "100 g", 'paan/anardana-goli-100g.jpg'],
+  ['paan', "Local Digestive Anardana Goli", "100 g", 'paan/anardana-goli-100g.jpg'],
 ];
 
 const EXPECTED_PX = 600;
