@@ -1,0 +1,23 @@
+The beauty of BazaarSetu's current technical stack is that it entirely bypasses the need for the Google Play Store or Apple App Store. It is built as a Progressive Web App (PWA), meaning it behaves like a normal website but can be "installed" on a phone to look and feel exactly like a native app.
+
+Here is how installation and access work for all three parties:
+
+1. The Customer & The Shopkeeper
+Since this is a PWA, customers and shopkeepers install the app directly from their web browser. This is perfect for the Indian local market because it requires zero storage space on lower-end devices and bypasses complex app store updates.
+
+How they install it:
+
+They open your website link (e.g., www.bazaarsetu.in) in Google Chrome (Android) or Safari (iPhone).
+The browser will automatically show a popup saying "Add BazaarSetu to Home Screen" or "Install App".
+They tap "Install", and the BazaarSetu icon is instantly added to their phone's home screen.
+When they open it from their home screen, it opens in full-screen mode (without the browser search bar) and gives push notifications, acting exactly like a downloaded app.
+2. We (The Platform Provider)
+As the platform provider, you do not install an app. Instead, you deploy the code to cloud servers and access the system via the web.
+
+How we set it up:
+
+Host the Frontend: The Next.js code (/frontend) is typically deployed to a provider like Vercel or Netlify. This makes the UI lightning fast globally.
+Host the Backend: The Node.js/Express server and Socket.io engine (/backend) are deployed to a platform like Render, Railway, or AWS/DigitalOcean.
+Database Setup: The SQLite database is migrated to a hosted PostgreSQL database (like Supabase or Amazon RDS) so it can handle thousands of concurrent transactions and be backed up securely.
+Domain Name: You purchase a domain (like bazaarsetu.in) and point it to the frontend.
+How we manage it: You (the admins) simply visit www.bazaarsetu.in/admin on any desktop or tablet browser. You log in with your admin phone number and OTP to view the master dashboard, manage all shops, monitor global orders, and track platform analytics.

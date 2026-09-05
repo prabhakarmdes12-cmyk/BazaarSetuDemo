@@ -1,0 +1,22 @@
+{
+  "name": "BazaarSetu",
+  "short_name": "BazaarSetu",
+  "description": "Apni Dukaan, Apni Pehchaan - Local shops delivered to your doorstep",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F5F0",
+  "theme_color": "#FF6B00",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

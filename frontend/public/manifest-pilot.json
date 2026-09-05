@@ -1,0 +1,16 @@
+{
+  "name": "BazaarSetu Pilot Test",
+  "short_name": "BazaarSetu Pilot",
+  "description": "Join BazaarSetu pilot for Udhaar testing",
+  "start_url": "/pilot-test",
+  "display": "standalone",
+  "background_color": "#ff9933",
+  "theme_color": "#8f4e00",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
