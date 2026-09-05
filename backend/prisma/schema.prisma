@@ -59,14 +59,12 @@ model Shop {
   isActive    Boolean  @default(true)
   rating      Float    @default(4.5)
   upiId       String   @default("")
-
   // Location Intelligence & Serviceability
   deliveryRadiusKm    Float  @default(3.5)
   serviceablePincodes String @default("826001") // Comma-separated PINs
   minOrderAmount      Float  @default(0.0)
   deliveryFee         Float  @default(15.0)
   freeDeliveryAbove   Float  @default(199.0)
-
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
