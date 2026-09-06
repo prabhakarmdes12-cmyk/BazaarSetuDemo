@@ -11,11 +11,11 @@ export default function LandingFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 sm:px-6 md:flex-row md:items-start md:justify-between">
         <div className="max-w-sm">
           <ChitiBazaarLogo size={36} variant="full" />
-          <p className="mt-3 text-[13px] leading-relaxed text-[rgba(248,250,252,0.55)]">
+          <p className="mt-3 text-[13px] leading-relaxed text-[rgba(248,250,252,0.6)]">
             Dhanbad ki apni quick-commerce bazaar — taaza doodh, sabzi aur ration, 10 minute mein, aapke nazdeeki
             kirana dukaanon se.
           </p>
-          <p className="land-mono mt-4 text-[11px] font-bold uppercase tracking-[0.16em] text-[rgba(248,250,252,0.45)]">
+          <p className="land-mono mt-4 text-[11px] font-bold uppercase tracking-[0.16em] text-[rgba(248,250,252,0.6)]">
             Powered by Chiti Technologies · Unified Design System v3
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function LandingFooter() {
       </div>
 
       <div className="mx-auto mt-8 max-w-6xl border-t border-[rgba(255,255,255,0.06)] px-4 pt-5 sm:px-6">
-        <p className="text-[11.5px] text-[rgba(248,250,252,0.4)]">
+        <p className="text-[11.5px] text-[rgba(248,250,252,0.6)]">
           © {new Date().getFullYear()} Paaska · Dhanbad, Jharkhand 826001 · Aapke data ka intezaam DPDP Act 2023
           ke mutabik.
         </p>

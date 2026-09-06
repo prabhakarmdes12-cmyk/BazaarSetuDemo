@@ -43,7 +43,7 @@ function CallDemo() {
       : state === 'ringing'
         ? 'Bighi Brothers ko dial ho raha hai…'
         : state === 'live'
-          ? `Line live · ${seconds}s · end-to-end encrypted`
+          ? `Line live · ${seconds}s · E2E encrypted`
           : 'Call khatam · INV_002 · transcript aapke order se jud gayi';
 
   return (
@@ -76,13 +76,22 @@ function CallDemo() {
           type="button"
           onClick={startCall}
           disabled={state === 'ringing' || state === 'live'}
-          aria-label="Call Dukaan demo"
-          className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-2xl transition-transform hover:scale-105 active:scale-95 disabled:opacity-60 ${
-            state === 'live' ? 'land-mic-live bg-[#1F2937]' : 'land-mic-idle land-btn-leaf !p-0'
+          aria-label={state === 'live' ? 'Call live — demo chal raha hai' : 'Call Dukaan demo'}
+          className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-2xl transition-transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed ${
+            state === 'live'
+              ? 'land-mic-live bg-[#1F2937]'
+              : state === 'ringing'
+                ? 'land-mic-idle land-btn-leaf !p-0 opacity-60'
+                : 'land-mic-idle land-btn-leaf !p-0'
           }`}
         >
-          <span className={state === 'ringing' ? 'land-ring-shake inline-block' : ''} aria-hidden>
-            {state === 'live' ? '️' : '📞'}
+          <span
+            className={`inline-block transition-transform duration-300 ${
+              state === 'ringing' ? 'land-ring-shake' : ''
+            } ${state === 'live' ? 'rotate-[135deg]' : ''}`}
+            aria-hidden
+          >
+            📞
           </span>
         </button>
         <div className="min-w-0 flex-1">
@@ -94,7 +103,7 @@ function CallDemo() {
             amplitude={state === 'live' ? 0.5 : 0}
             label="Chiti Connect call waveform"
           />
-          <p className="land-mono mt-2 truncate text-[11px] text-[rgba(248,250,252,0.55)]" aria-live="polite">
+          <p className="land-mono mt-2 text-[11px] leading-snug text-[rgba(248,250,252,0.6)]" aria-live="polite">
             {statusLine}
           </p>
         </div>
@@ -146,7 +155,7 @@ function RadarMap() {
           <span aria-hidden>🏪</span>
           <div className="leading-tight">
             <p className="text-[10px] font-bold">Bighi Brothers</p>
-            <p className="land-mono text-[8.5px] text-[rgba(248,250,252,0.5)]">2.1 km · ~8 min</p>
+            <p className="land-mono text-[8.5px] text-[rgba(248,250,252,0.6)]">2.1 km · ~8 min</p>
           </div>
         </div>
 
@@ -155,12 +164,12 @@ function RadarMap() {
           <span aria-hidden>🛒</span>
           <div className="leading-tight">
             <p className="text-[10px] font-bold">Nazdeeki Kirana</p>
-            <p className="land-mono text-[8.5px] text-[rgba(248,250,252,0.5)]">0.8 km · ~5 min</p>
+            <p className="land-mono text-[8.5px] text-[rgba(248,250,252,0.6)]">0.8 km · ~5 min</p>
           </div>
         </div>
       </div>
 
-      <p className="land-mono mt-1 text-center text-[10.5px] text-[rgba(248,250,252,0.45)]">
+      <p className="land-mono mt-1 text-center text-[10.5px] text-[rgba(248,250,252,0.6)]">
         23 dukaans active · Dhanbad 826001
       </p>
     </div>
@@ -178,7 +187,7 @@ function UdhaarKhata() {
       </p>
 
       <div className="mt-4 rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(11,19,43,0.5)] p-3.5">
-        <div className="flex items-center justify-between text-[11px] text-[rgba(248,250,252,0.55)]">
+        <div className="flex items-center justify-between text-[11px] text-[rgba(248,250,252,0.6)]">
           <span className="land-mono font-bold uppercase tracking-wider">Khata · Sharma Ji</span>
           <span className="land-mono">is mahine</span>
         </div>
@@ -190,7 +199,7 @@ function UdhaarKhata() {
           ].map(([item, time, amt]) => (
             <div key={item} className="flex items-center justify-between gap-2 text-[12px]">
               <span className="truncate text-[rgba(248,250,252,0.8)]">{item}</span>
-              <span className="land-mono shrink-0 text-[rgba(248,250,252,0.4)]">{time}</span>
+              <span className="land-mono shrink-0 text-[rgba(248,250,252,0.6)]">{time}</span>
               <span className="land-mono shrink-0 font-bold text-[#BBF7D0]">{amt}</span>
             </div>
           ))}
@@ -201,7 +210,7 @@ function UdhaarKhata() {
         </div>
       </div>
 
-      <p className="mt-auto pt-3 text-[11px] leading-relaxed text-[rgba(248,250,252,0.5)]">
+      <p className="mt-auto pt-3 text-[11px] leading-relaxed text-[rgba(248,250,252,0.6)]">
         Dukaan ki taraf se bhi ek hi raqam dikhti hai — do taraf, ek sach.
       </p>
     </div>

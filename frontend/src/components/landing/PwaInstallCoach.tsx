@@ -49,7 +49,7 @@ function QrTile({ value, label }: { value: string; label: string }) {
           <path d={path} fill="#0B132B" />
         </svg>
       </div>
-      <span className="text-[11px] tracking-wide text-[rgba(248,250,252,0.5)]">{label}</span>
+      <span className="text-[11px] tracking-wide text-[rgba(248,250,252,0.6)]">{label}</span>
     </div>
   );
 }
@@ -61,7 +61,7 @@ function AndroidSteps({ onPrompt, canInstall }: { onPrompt: () => void; canInsta
         📲 Install Paaska App
       </button>
       {!canInstall && (
-        <p className="max-w-xs text-center text-xs leading-relaxed text-[rgba(248,250,252,0.55)]">
+        <p className="max-w-xs text-center text-xs leading-relaxed text-[rgba(248,250,252,0.6)]">
           1-tap sheet abhi available nahi hai — Chrome menu (⋮) → <span className="text-[#BBF7D0]">“Add to Home screen”</span>{' '}
           chunein. 2 MB se kam, 10 second.
         </p>
@@ -87,7 +87,7 @@ function IosSteps() {
           </div>
           <div>
             <p className="text-sm font-semibold">Step 1 — Safari mein Share button dabayein</p>
-            <p className="text-xs text-[rgba(248,250,252,0.55)]">Bottom bar ke square-arrow icon ⎋ par tap karein</p>
+            <p className="text-xs text-[rgba(248,250,252,0.6)]">Bottom bar ke square-arrow icon ⎋ par tap karein</p>
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@ function IosSteps() {
           </div>
           <div>
             <p className="text-sm font-semibold">Step 2 — “Add to Home Screen” chunein</p>
-            <p className="text-xs text-[rgba(248,250,252,0.55)]">List mein neeche scroll → Add, aur Paaska ready</p>
+            <p className="text-xs text-[rgba(248,250,252,0.6)]">List mein neeche scroll → Add, aur Paaska ready</p>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ function IosSteps() {
   );
 }
 
-export default function PwaInstallCoach() {
+export default function PwaInstallCoach({ subheading = false }: { subheading?: boolean }) {
   const { os, canInstall, promptInstall } = usePwaInstall();
   const [notice, setNotice] = useState<string | null>(null);
 
@@ -127,8 +127,18 @@ export default function PwaInstallCoach() {
         <p className="land-mono text-[11px] font-bold uppercase tracking-[0.22em] text-[#22C55E]">
           {os === 'android' ? 'Android Chrome detected' : os === 'ios' ? 'iPhone / iPad Safari detected' : 'Desktop detected'}
         </p>
-        <h3 className="text-xl font-extrabold sm:text-2xl">
-          {os === 'ios' ? '2 step mein app jaisa Paaska' : '1 tap mein Paaska, app jaisa'}
+        <h3
+          className={
+            subheading
+              ? 'text-base font-semibold text-[rgba(248,250,252,0.85)]'
+              : 'text-xl font-extrabold sm:text-2xl'
+          }
+        >
+          {os === 'ios'
+            ? '2 step mein app jaisa Paaska'
+            : os === 'android'
+              ? '1 tap mein Paaska, app jaisa'
+              : 'Phone se scan karo, app jaisa Paaska'}
         </h3>
       </div>
 
@@ -144,7 +154,7 @@ export default function PwaInstallCoach() {
       ) : (
         <div className="flex flex-col items-center gap-3">
           <QrTile value={INSTALL_URL} label={`Scan karein · ${INSTALL_URL}`} />
-          <p className="max-w-xs text-center text-xs leading-relaxed text-[rgba(248,250,252,0.55)]">
+          <p className="max-w-xs text-center text-xs leading-relaxed text-[rgba(248,250,252,0.6)]">
             Phone ki camera se scan karein — Android par 1-tap install, iPhone par 2-step.
           </p>
         </div>
@@ -163,7 +173,7 @@ export default function PwaInstallCoach() {
             </span>
             <div>
               <p className="text-[13px] font-bold leading-tight">{b.title}</p>
-              <p className="mt-0.5 text-[11.5px] leading-snug text-[rgba(248,250,252,0.55)]">{b.sub}</p>
+              <p className="mt-0.5 text-[11.5px] leading-snug text-[rgba(248,250,252,0.6)]">{b.sub}</p>
             </div>
           </div>
         ))}

@@ -25,12 +25,15 @@ export default function LandingHero({ audience, onOpenDownload }: LandingHeroPro
       <section className="land-hero-sky">
         <div className="land-grid-lines" aria-hidden />
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_1fr] lg:items-center">
-          <div className="land-rise">
+          <div className="land-rise min-w-0">
             <span className="land-pill mb-5">
               <span className="land-dot" aria-hidden /> Dhanbad ke kirana owners ke liye
             </span>
             <h1 className="text-[2.1rem] font-extrabold leading-[1.08] sm:text-5xl">
-              Apni Kirana Dukaan Ko Banayein <span className="leaf-text-gradient">10-Minute Superstore</span>
+              Apni Kirana Dukaan Ko Banayein{' '}
+              <span className="leaf-text-gradient">
+                <span className="whitespace-nowrap">10-Minute</span> Superstore
+              </span>
             </h1>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[rgba(248,250,252,0.72)] sm:text-base">
               0% Commission. Seedha aapke UPI Soundbox par paisa. 60 second mein online aao aur poore Dhanbad mein
@@ -59,18 +62,18 @@ export default function LandingHero({ audience, onOpenDownload }: LandingHeroPro
               </button>
             </div>
 
-            <div className="mt-6 flex items-center gap-5 text-[12px] text-[rgba(248,250,252,0.55)]">
+            <div className="mt-6 flex items-center gap-5 text-[12px] text-[rgba(248,250,252,0.6)]">
               <span>
                 <strong className="land-mono text-[15px] text-white">23</strong> dukaans live · Bank More
               </span>
-              <span className="h-4 w-px bg-[rgba(255,255,255,0.14)]" aria-hidden />
+              <span className="hidden h-4 w-px bg-[rgba(255,255,255,0.14)] sm:block" aria-hidden />
               <span>
                 <strong className="land-mono text-[15px] text-white">₹11.4L</strong> is hafte aam dukanon tak
               </span>
             </div>
           </div>
 
-          <div className="land-rise land-rise-2" id="merchant-onboard">
+          <div className="land-rise land-rise-2 min-w-0 scroll-mt-28" id="merchant-onboard">
             <MerchantOnboardBox />
           </div>
         </div>
@@ -82,7 +85,7 @@ export default function LandingHero({ audience, onOpenDownload }: LandingHeroPro
     <section className="land-hero-sky">
       <div className="land-grid-lines" aria-hidden />
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_1fr] lg:items-center">
-        <div className="land-rise">
+        <div className="land-rise min-w-0">
           <span className="land-pill mb-5">
             <span className="land-dot" aria-hidden /> 10-Min Delivery · Dhanbad
           </span>
@@ -103,22 +106,22 @@ export default function LandingHero({ audience, onOpenDownload }: LandingHeroPro
             </button>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-[rgba(248,250,252,0.55)]">
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-[rgba(248,250,252,0.6)]">
             <span>
               <strong className="land-mono text-[15px] text-white">10 min</strong> average delivery
             </span>
-            <span className="h-4 w-px bg-[rgba(255,255,255,0.14)]" aria-hidden />
+            <span className="hidden h-4 w-px bg-[rgba(255,255,255,0.14)] sm:block" aria-hidden />
             <span>
               <strong className="land-mono text-[15px] text-white">₹0</strong> delivery charge
             </span>
-            <span className="h-4 w-px bg-[rgba(255,255,255,0.14)]" aria-hidden />
+            <span className="hidden h-4 w-px bg-[rgba(255,255,255,0.14)] sm:block" aria-hidden />
             <span>
               <strong className="land-mono text-[15px] text-white">23</strong> dukaans · Bank More
             </span>
           </div>
         </div>
 
-        <div className="land-rise land-rise-2">
+        <div className="land-rise land-rise-2 min-w-0">
           <VoiceParchiSandbox />
         </div>
       </div>

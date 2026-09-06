@@ -59,11 +59,11 @@ export default function LandingHeader({ audience, onAudienceChange, onOpenDownlo
 
       {/* Mobile audience switcher */}
       <div className="border-t border-[rgba(255,255,255,0.06)] px-4 py-2 md:hidden">
-        <div className="flex items-center gap-2">
+        <div className="flex items-stretch gap-2">
           <button
             type="button"
             onClick={() => onAudienceChange('shopper')}
-            className={`land-chip flex-1 justify-center !py-2 ${
+            className={`land-chip flex-1 justify-center !py-2 leading-tight ${
               audience === 'shopper' ? '!border-[rgba(34,197,94,0.55)] !bg-[rgba(34,197,94,0.14)]' : ''
             }`}
           >
@@ -72,7 +72,7 @@ export default function LandingHeader({ audience, onAudienceChange, onOpenDownlo
           <button
             type="button"
             onClick={() => onAudienceChange('merchant')}
-            className={`land-chip flex-1 justify-center !py-2 ${
+            className={`land-chip flex-1 justify-center !py-2 leading-tight ${
               audience === 'merchant' ? '!border-[rgba(34,197,94,0.55)] !bg-[rgba(34,197,94,0.14)]' : ''
             }`}
           >

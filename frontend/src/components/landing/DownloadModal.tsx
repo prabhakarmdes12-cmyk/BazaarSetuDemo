@@ -53,11 +53,11 @@ export default function DownloadModal({ open, onClose }: DownloadModalProps) {
             ✕
           </button>
         </div>
-        <PwaInstallCoach />
+        <PwaInstallCoach subheading />
         <a
           href="/download"
           onClick={onClose}
-          className="mt-6 block text-center text-[12.5px] font-semibold text-[rgba(248,250,252,0.55)] underline-offset-4 hover:text-white hover:underline"
+          className="mt-6 block text-center text-[12.5px] font-semibold text-[rgba(248,250,252,0.6)] underline-offset-4 hover:text-white hover:underline"
         >
           Poori install guide ke liye /download kholein →
         </a>

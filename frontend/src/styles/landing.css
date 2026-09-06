@@ -15,7 +15,7 @@
   --land-leaf-soft: rgba(34, 197, 94, 0.14);
   --land-white: #f8fafc;
   --land-muted: rgba(248, 250, 252, 0.66);
-  --land-faint: rgba(248, 250, 252, 0.42);
+  --land-faint: rgba(248, 250, 252, 0.55);
   --land-border: rgba(255, 255, 255, 0.08);
   --land-border-strong: rgba(255, 255, 255, 0.14);
   --land-glass: rgba(28, 37, 65, 0.55);
@@ -98,7 +98,8 @@
 }
 
 .land-btn-leaf {
-  background: linear-gradient(135deg, var(--land-leaf) 0%, var(--land-leaf-bright) 100%);
+  /* Deepened leaf gradient: white text on #15803D/#14532D clears WCAG AA (≥4.7:1) */
+  background: linear-gradient(135deg, #15803d 0%, #14532d 100%);
   color: #f8fafc;
   box-shadow: 0 10px 30px rgba(22, 163, 74, 0.35);
 }
@@ -321,6 +322,19 @@
   outline: none;
   border-color: rgba(34, 197, 94, 0.65);
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18);
+}
+
+/* Keyboard focus visibility for all interactive controls */
+.land a:focus-visible,
+.land button:focus-visible,
+.land [tabindex]:focus-visible {
+  outline: 2px solid var(--land-leaf-bright);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+.land .land-btn:focus-visible,
+.land .land-chip:focus-visible {
+  outline-offset: 3px;
 }
 
 /* iOS step arrows */

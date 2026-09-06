@@ -114,13 +114,13 @@ export default function MerchantOnboardBox() {
         ].map(([title, sub]) => (
           <div key={title} className="rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(11,19,43,0.45)] px-3 py-2.5">
             <p className="text-[12px] font-bold leading-tight text-[#BBF7D0]">{title}</p>
-            <p className="mt-0.5 text-[10.5px] text-[rgba(248,250,252,0.5)]">{sub}</p>
+            <p className="mt-0.5 text-[10.5px] text-[rgba(248,250,252,0.6)]">{sub}</p>
           </div>
         ))}
       </div>
 
       {shopValid && (
-        <p className="land-mono mt-3 text-center text-[10.5px] text-[rgba(248,250,252,0.4)]">
+        <p className="land-mono mt-3 text-center text-[10.5px] text-[rgba(248,250,252,0.6)]">
           aapka counter QR → paaska.app/s/{slug}
         </p>
       )}

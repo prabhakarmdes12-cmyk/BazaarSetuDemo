@@ -12,7 +12,7 @@ import { qrEncode, qrToSvgPath } from '@/lib/qr';
  */
 const BASE = 'paaska.app/s/';
 
-function StandeeQr({ slug, sizePx = 150 }: { slug: string; sizePx?: number }) {
+function StandeeQr({ slug, className = '' }: { slug: string; className?: string }) {
   const matrix = useMemo(() => {
     try {
       return qrEncode(`${BASE}${slug}`);
@@ -21,13 +21,12 @@ function StandeeQr({ slug, sizePx = 150 }: { slug: string; sizePx?: number }) {
     }
   }, [slug]);
 
-  if (!matrix) return <div style={{ width: sizePx, height: sizePx }} className="rounded-lg bg-[#0B132B]" />;
+  if (!matrix) return <div className={`${className} rounded-lg bg-[#0B132B]`} />;
   const path = qrToSvgPath(matrix);
   return (
     <svg
       viewBox={`0 0 ${matrix.size} ${matrix.size}`}
-      width={sizePx}
-      height={sizePx}
+      className={className}
       shapeRendering="crispEdges"
       role="img"
       aria-label={`Counter QR for ${slug}`}
@@ -78,7 +77,7 @@ export default function StandeePreview() {
               onChange={(e) => setShop(e.target.value)}
               maxLength={40}
             />
-            <p className="land-mono text-[11px] text-[rgba(248,250,252,0.45)]">
+            <p className="land-mono text-[11px] text-[rgba(248,250,252,0.6)]">
               {BASE}
               {slug}
             </p>
@@ -102,7 +101,7 @@ export default function StandeePreview() {
               transformStyle: 'preserve-3d',
             }}
           >
-            <div className="land-sheen relative w-64 overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.16)] bg-gradient-to-b from-[rgba(248,250,252,0.94)] to-[rgba(226,232,240,0.85)] p-5 shadow-[0_30px_80px_rgba(2,6,23,0.6)]">
+            <div className="land-sheen relative w-64 overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.16)] bg-gradient-to-b from-[rgba(248,250,252,0.94)] to-[rgba(226,232,240,0.85)] p-5 shadow-[0_30px_80px_rgba(2,6,23,0.6)] sm:w-72">
               {/* Acrylic top bar */}
               <div className="mb-3 flex items-center justify-between">
                 <span className="land-mono text-[9px] font-bold uppercase tracking-[0.18em] text-[#0B132B]">
@@ -115,7 +114,7 @@ export default function StandeePreview() {
 
               {/* QR on white card */}
               <div className="mx-auto w-fit rounded-xl bg-white p-3 shadow-[0_8px_24px_rgba(11,19,43,0.18)]">
-                <StandeeQr slug={slug} />
+                <StandeeQr slug={slug} className="block h-auto w-40 sm:w-44" />
               </div>
 
               <p className="mt-4 truncate text-center text-[15px] font-extrabold text-[#0B132B]">{shop.trim() || 'Aapki Dukaan'}</p>

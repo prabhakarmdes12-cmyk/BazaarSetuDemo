@@ -164,9 +164,9 @@ export default function VoiceParchiSandbox() {
             tone={isRecording ? 'live' : phase === 'recording' ? 'live' : 'idle'}
             label="Paaska voice waveform"
           />
-          <p className="mt-2 truncate text-[13px] text-[rgba(248,250,252,0.7)]" aria-live="polite">
+          <p className="mt-2 text-[13px] leading-snug text-[rgba(248,250,252,0.7)]" aria-live="polite">
             {phase === 'idle' && (
-              <span className="text-[rgba(248,250,252,0.5)]">
+              <span className="text-[rgba(248,250,252,0.6)]">
                 Mic dabayein ya neeche se kuch chunein — jaise <em>“2 packet Amul milk aur bread”</em>
               </span>
             )}
@@ -196,7 +196,7 @@ export default function VoiceParchiSandbox() {
           {phase !== 'idle' && (
             <button
               type="button"
-              className="land-chip !border-transparent !bg-transparent text-[rgba(248,250,252,0.55)]"
+              className="land-chip !border-transparent !bg-transparent text-[rgba(248,250,252,0.6)]"
               onClick={onCancel}
             >
               ✕ Reset
@@ -224,7 +224,7 @@ export default function VoiceParchiSandbox() {
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-[13.5px] font-semibold">{line.product.name}</p>
-                  <p className="land-mono text-[10.5px] text-[rgba(248,250,252,0.5)]">
+                  <p className="land-mono text-[10.5px] text-[rgba(248,250,252,0.6)]">
                     {line.qty} × {line.product.unit} ({line.product.unitLabel})
                   </p>
                 </div>
@@ -249,7 +249,7 @@ export default function VoiceParchiSandbox() {
           <p className="text-sm font-semibold text-[rgba(248,250,252,0.85)]">
             Hmm, ye item abhi demo shelf par nahi hai 🙏
           </p>
-          <p className="mt-1 text-xs text-[rgba(248,250,252,0.55)]">
+          <p className="mt-1 text-xs text-[rgba(248,250,252,0.6)]">
             Chip try karein — “2 packet Amul milk aur bread” hamesha kaam karta hai.
           </p>
         </div>
