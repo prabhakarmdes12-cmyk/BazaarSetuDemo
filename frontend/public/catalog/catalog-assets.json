@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 256,
-  "totalSkus": 552,
+  "totalAssets": 266,
+  "totalSkus": 578,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -6081,6 +6081,292 @@
       "width": 600,
       "height": 600,
       "bytes": 62208,
+      "verified": true
+    },
+    "bb-01990": {
+      "skuId": "bb-01990",
+      "name": "Apsara Pencil HB",
+      "unit": "10 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/apsara-pencil-hb-10pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 33629,
+      "verified": true
+    },
+    "bb-02014": {
+      "skuId": "bb-02014",
+      "name": "Doms Pencil HB",
+      "unit": "10 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/apsara-pencil-hb-10pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 33629,
+      "verified": true
+    },
+    "bb-02039": {
+      "skuId": "bb-02039",
+      "name": "Nataraj Pencil HB",
+      "unit": "10 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/apsara-pencil-hb-10pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 33629,
+      "verified": true
+    },
+    "bb-01989": {
+      "skuId": "bb-01989",
+      "name": "Apsara Eraser & Sharpener Set",
+      "unit": "1 set",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/apsara-eraser-sharpener-set.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39586,
+      "verified": true
+    },
+    "bb-02012": {
+      "skuId": "bb-02012",
+      "name": "Doms Eraser & Sharpener Set",
+      "unit": "1 set",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/apsara-eraser-sharpener-set.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39586,
+      "verified": true
+    },
+    "bb-01991": {
+      "skuId": "bb-01991",
+      "name": "Camlin Colour Pencils",
+      "unit": "12 shades",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-colour-pencils-12shades.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48945,
+      "verified": true
+    },
+    "bb-01988": {
+      "skuId": "bb-01988",
+      "name": "Apsara Colour Pencils",
+      "unit": "12 shades",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-colour-pencils-12shades.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48945,
+      "verified": true
+    },
+    "bb-02011": {
+      "skuId": "bb-02011",
+      "name": "Doms Colour Pencils",
+      "unit": "12 shades",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-colour-pencils-12shades.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48945,
+      "verified": true
+    },
+    "bb-01998": {
+      "skuId": "bb-01998",
+      "name": "Camlin Wax Crayons",
+      "unit": "12 shades",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-wax-crayons-12shades.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60031,
+      "verified": true
+    },
+    "bb-02016": {
+      "skuId": "bb-02016",
+      "name": "Doms Wax Crayons",
+      "unit": "12 shades",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-wax-crayons-12shades.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60031,
+      "verified": true
+    },
+    "bb-01997": {
+      "skuId": "bb-01997",
+      "name": "Camlin Sketch Pens",
+      "unit": "12 shades",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-sketch-pens-12shades.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64284,
+      "verified": true
+    },
+    "bb-02015": {
+      "skuId": "bb-02015",
+      "name": "Doms Sketch Pens",
+      "unit": "12 shades",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-sketch-pens-12shades.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64284,
+      "verified": true
+    },
+    "bb-02001": {
+      "skuId": "bb-02001",
+      "name": "Cello Ball Pen Blue",
+      "unit": "5 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39768,
+      "verified": true
+    },
+    "bb-02002": {
+      "skuId": "bb-02002",
+      "name": "Cello Ball Pen Blue",
+      "unit": "10 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39768,
+      "verified": true
+    },
+    "bb-02025": {
+      "skuId": "bb-02025",
+      "name": "Linc Ball Pen Blue",
+      "unit": "5 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39768,
+      "verified": true
+    },
+    "bb-02043": {
+      "skuId": "bb-02043",
+      "name": "Reynolds Ball Pen Blue",
+      "unit": "5 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39768,
+      "verified": true
+    },
+    "bb-01992": {
+      "skuId": "bb-01992",
+      "name": "Camlin Geometry Box",
+      "unit": "1 set",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-geometry-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61986,
+      "verified": true
+    },
+    "bb-02006": {
+      "skuId": "bb-02006",
+      "name": "Classmate Geometry Box",
+      "unit": "1 set",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-geometry-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61986,
+      "verified": true
+    },
+    "bb-02013": {
+      "skuId": "bb-02013",
+      "name": "Doms Geometry Box",
+      "unit": "1 set",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-geometry-box.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61986,
+      "verified": true
+    },
+    "bb-01993": {
+      "skuId": "bb-01993",
+      "name": "Camlin Glue Stick",
+      "unit": "15 g",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-glue-stick-15g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 25274,
+      "verified": true
+    },
+    "bb-01994": {
+      "skuId": "bb-01994",
+      "name": "Camlin Glue Stick",
+      "unit": "25 g",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-glue-stick-15g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 25274,
+      "verified": true
+    },
+    "bb-02020": {
+      "skuId": "bb-02020",
+      "name": "Fevistick Glue Stick",
+      "unit": "15 g",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-glue-stick-15g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 25274,
+      "verified": true
+    },
+    "bb-02000": {
+      "skuId": "bb-02000",
+      "name": "Camlin Whiteboard Marker",
+      "unit": "4 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-whiteboard-marker-4pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44336,
+      "verified": true
+    },
+    "bb-02038": {
+      "skuId": "bb-02038",
+      "name": "Luxor Whiteboard Marker",
+      "unit": "4 pcs",
+      "categoryId": "stationery",
+      "path": "/catalog/items/stationery/camlin-whiteboard-marker-4pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44336,
+      "verified": true
+    },
+    "bb-02050": {
+      "skuId": "bb-02050",
+      "name": "Colorbar Nail Polish",
+      "unit": "1 pc",
+      "categoryId": "beauty",
+      "path": "/catalog/items/beauty/colorbar-nail-polish.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 23176,
+      "verified": true
+    },
+    "bb-02074": {
+      "skuId": "bb-02074",
+      "name": "Lakme Nail Polish",
+      "unit": "1 pc",
+      "categoryId": "beauty",
+      "path": "/catalog/items/beauty/colorbar-nail-polish.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 23176,
       "verified": true
     }
   }

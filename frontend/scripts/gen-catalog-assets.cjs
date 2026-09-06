@@ -629,6 +629,35 @@ const SKU_ASSET_ROWS = [
   ['biscuits', "Dukes Waffy Cream Wafers", "150 g", 'biscuits/cream-wafers-75g.jpg'],
   ['biscuits', "Local Bakery Khari Biscuit", "200 g", 'biscuits/khari-biscuit-200g.jpg'],
   ['biscuits', "Modern Khari Biscuit", "200 g", 'biscuits/khari-biscuit-200g.jpg'],
+  // ---- Batch 6: zero-aisle-gap elimination -----------------------------------
+  // Stationery
+  ['stationery', "Apsara Pencil HB", "10 pcs", 'stationery/apsara-pencil-hb-10pcs.jpg'],
+  ['stationery', "Doms Pencil HB", "10 pcs", 'stationery/apsara-pencil-hb-10pcs.jpg'],
+  ['stationery', "Nataraj Pencil HB", "10 pcs", 'stationery/apsara-pencil-hb-10pcs.jpg'],
+  ['stationery', "Apsara Eraser & Sharpener Set", "1 set", 'stationery/apsara-eraser-sharpener-set.jpg'],
+  ['stationery', "Doms Eraser & Sharpener Set", "1 set", 'stationery/apsara-eraser-sharpener-set.jpg'],
+  ['stationery', "Camlin Colour Pencils", "12 shades", 'stationery/camlin-colour-pencils-12shades.jpg'],
+  ['stationery', "Apsara Colour Pencils", "12 shades", 'stationery/camlin-colour-pencils-12shades.jpg'],
+  ['stationery', "Doms Colour Pencils", "12 shades", 'stationery/camlin-colour-pencils-12shades.jpg'],
+  ['stationery', "Camlin Wax Crayons", "12 shades", 'stationery/camlin-wax-crayons-12shades.jpg'],
+  ['stationery', "Doms Wax Crayons", "12 shades", 'stationery/camlin-wax-crayons-12shades.jpg'],
+  ['stationery', "Camlin Sketch Pens", "12 shades", 'stationery/camlin-sketch-pens-12shades.jpg'],
+  ['stationery', "Doms Sketch Pens", "12 shades", 'stationery/camlin-sketch-pens-12shades.jpg'],
+  ['stationery', "Cello Ball Pen Blue", "5 pcs", 'stationery/cello-ball-pen-blue-5pcs.jpg'],
+  ['stationery', "Cello Ball Pen Blue", "10 pcs", 'stationery/cello-ball-pen-blue-5pcs.jpg'],
+  ['stationery', "Linc Ball Pen Blue", "5 pcs", 'stationery/cello-ball-pen-blue-5pcs.jpg'],
+  ['stationery', "Reynolds Ball Pen Blue", "5 pcs", 'stationery/cello-ball-pen-blue-5pcs.jpg'],
+  ['stationery', "Camlin Geometry Box", "1 set", 'stationery/camlin-geometry-box.jpg'],
+  ['stationery', "Classmate Geometry Box", "1 set", 'stationery/camlin-geometry-box.jpg'],
+  ['stationery', "Doms Geometry Box", "1 set", 'stationery/camlin-geometry-box.jpg'],
+  ['stationery', "Camlin Glue Stick", "15 g", 'stationery/camlin-glue-stick-15g.jpg'],
+  ['stationery', "Camlin Glue Stick", "25 g", 'stationery/camlin-glue-stick-15g.jpg'],
+  ['stationery', "Fevistick Glue Stick", "15 g", 'stationery/camlin-glue-stick-15g.jpg'],
+  ['stationery', "Camlin Whiteboard Marker", "4 pcs", 'stationery/camlin-whiteboard-marker-4pcs.jpg'],
+  ['stationery', "Luxor Whiteboard Marker", "4 pcs", 'stationery/camlin-whiteboard-marker-4pcs.jpg'],
+  // Beauty
+  ['beauty', "Colorbar Nail Polish", "1 pc", 'beauty/colorbar-nail-polish.jpg'],
+  ['beauty', "Lakme Nail Polish", "1 pc", 'beauty/colorbar-nail-polish.jpg'],
 ];
 
 const EXPECTED_PX = 600;

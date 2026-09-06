@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 552 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 578 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27787,7 +27787,33 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00550": "/catalog/items/biscuits/cream-wafers-75g.jpg",
   "bb-00557": "/catalog/items/biscuits/cream-wafers-75g.jpg",
   "bb-00562": "/catalog/items/biscuits/khari-biscuit-200g.jpg",
-  "bb-00570": "/catalog/items/biscuits/khari-biscuit-200g.jpg"
+  "bb-00570": "/catalog/items/biscuits/khari-biscuit-200g.jpg",
+  "bb-01990": "/catalog/items/stationery/apsara-pencil-hb-10pcs.jpg",
+  "bb-02014": "/catalog/items/stationery/apsara-pencil-hb-10pcs.jpg",
+  "bb-02039": "/catalog/items/stationery/apsara-pencil-hb-10pcs.jpg",
+  "bb-01989": "/catalog/items/stationery/apsara-eraser-sharpener-set.jpg",
+  "bb-02012": "/catalog/items/stationery/apsara-eraser-sharpener-set.jpg",
+  "bb-01991": "/catalog/items/stationery/camlin-colour-pencils-12shades.jpg",
+  "bb-01988": "/catalog/items/stationery/camlin-colour-pencils-12shades.jpg",
+  "bb-02011": "/catalog/items/stationery/camlin-colour-pencils-12shades.jpg",
+  "bb-01998": "/catalog/items/stationery/camlin-wax-crayons-12shades.jpg",
+  "bb-02016": "/catalog/items/stationery/camlin-wax-crayons-12shades.jpg",
+  "bb-01997": "/catalog/items/stationery/camlin-sketch-pens-12shades.jpg",
+  "bb-02015": "/catalog/items/stationery/camlin-sketch-pens-12shades.jpg",
+  "bb-02001": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+  "bb-02002": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+  "bb-02025": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+  "bb-02043": "/catalog/items/stationery/cello-ball-pen-blue-5pcs.jpg",
+  "bb-01992": "/catalog/items/stationery/camlin-geometry-box.jpg",
+  "bb-02006": "/catalog/items/stationery/camlin-geometry-box.jpg",
+  "bb-02013": "/catalog/items/stationery/camlin-geometry-box.jpg",
+  "bb-01993": "/catalog/items/stationery/camlin-glue-stick-15g.jpg",
+  "bb-01994": "/catalog/items/stationery/camlin-glue-stick-15g.jpg",
+  "bb-02020": "/catalog/items/stationery/camlin-glue-stick-15g.jpg",
+  "bb-02000": "/catalog/items/stationery/camlin-whiteboard-marker-4pcs.jpg",
+  "bb-02038": "/catalog/items/stationery/camlin-whiteboard-marker-4pcs.jpg",
+  "bb-02050": "/catalog/items/beauty/colorbar-nail-polish.jpg",
+  "bb-02074": "/catalog/items/beauty/colorbar-nail-polish.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
