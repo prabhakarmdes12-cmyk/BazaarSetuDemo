@@ -128,8 +128,8 @@ function RadarMap() {
       <p className="land-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#22C55E]">Hyperlocal Radar</p>
       <h3 className="mt-1.5 text-lg font-extrabold leading-tight">Bank More se 10-Minute Radius</h3>
       <p className="mt-2 text-[13px] leading-relaxed text-[rgba(248,250,252,0.62)]">
-        Har order sirf aapke aas-paas ki dukaanon se banta hai — Bighi Brothers Mart ke gharon tak, chawk par
-        ruk-ruk kar nahi.
+        Aapke aas-paas ki har dukaan aapki shelf hai — Bighi Brothers Mart se Sharma Kirana tak. Jo paas mein
+        hai, wahi 10 minute mein.
       </p>
 
       <div className="relative mx-auto mt-4 flex h-52 w-full max-w-xs items-center justify-center">
@@ -159,18 +159,27 @@ function RadarMap() {
           </div>
         </div>
 
-        {/* Nearby dukaan */}
+        {/* Sharma Kirana */}
         <div className="land-float absolute bottom-4 left-0 z-10 flex items-center gap-1.5 rounded-full border border-[rgba(255,255,255,0.14)] bg-[rgba(28,37,65,0.9)] px-2.5 py-1.5" style={{ animationDelay: '1.2s' }}>
           <span aria-hidden>🛒</span>
           <div className="leading-tight">
-            <p className="text-[10px] font-bold">Nazdeeki Kirana</p>
+            <p className="text-[10px] font-bold">Sharma Kirana</p>
             <p className="land-mono text-[8.5px] text-[rgba(248,250,252,0.6)]">0.8 km · ~5 min</p>
+          </div>
+        </div>
+
+        {/* Verma Bhandar */}
+        <div className="land-float absolute right-1 bottom-6 z-10 flex items-center gap-1.5 rounded-full border border-[rgba(255,255,255,0.14)] bg-[rgba(28,37,65,0.9)] px-2.5 py-1.5" style={{ animationDelay: '2.1s' }}>
+          <span aria-hidden>🪧</span>
+          <div className="leading-tight">
+            <p className="text-[10px] font-bold">Verma Bhandar</p>
+            <p className="land-mono text-[8.5px] text-[rgba(248,250,252,0.6)]">1.2 km · ~6 min</p>
           </div>
         </div>
       </div>
 
       <p className="land-mono mt-1 text-center text-[10.5px] text-[rgba(248,250,252,0.6)]">
-        23 dukaans active · Dhanbad 826001
+        23 dukaan · 12,000+ products · Dhanbad 826001
       </p>
     </div>
   );

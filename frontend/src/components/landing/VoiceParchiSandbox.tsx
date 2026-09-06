@@ -213,7 +213,7 @@ export default function VoiceParchiSandbox() {
               <span aria-hidden>🧺</span> Aapki parchi samajh aayi
             </p>
             <span className="land-mono text-[10.5px] font-bold uppercase tracking-wider text-[#22C55E]">
-              Bighi Brothers · Bank More
+              Nearest · Bighi Brothers · 4 min
             </span>
           </div>
           <div className="divide-y divide-[rgba(255,255,255,0.06)]">
@@ -236,6 +236,9 @@ export default function VoiceParchiSandbox() {
             <div>
               <p className="text-[12px] font-semibold text-[rgba(248,250,252,0.7)]">Kul (free delivery)</p>
               <p className="land-mono text-lg font-bold text-white">₹{total}</p>
+              <p className="land-mono mt-0.5 text-[9.5px] text-[rgba(248,250,252,0.6)]">
+                ✓ Ye parchi aas-paas 18 dukaan mein available
+              </p>
             </div>
             <button type="button" className="land-btn land-btn-leaf !px-5 !py-3 text-sm" onClick={() => router.push('/customer')}>
               ⚡ Order Online Now

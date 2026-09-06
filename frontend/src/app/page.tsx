@@ -5,6 +5,7 @@ import '@/styles/landing.css';
 import LandingHeader, { type LandingAudience } from '@/components/landing/LandingHeader';
 import LandingHero from '@/components/landing/LandingHero';
 import FeatureShowcase from '@/components/landing/FeatureShowcase';
+import TownNetwork from '@/components/landing/TownNetwork';
 import StandeePreview from '@/components/landing/StandeePreview';
 import DownloadModal from '@/components/landing/DownloadModal';
 import LandingFooter from '@/components/landing/LandingFooter';
@@ -33,6 +34,7 @@ export default function Home() {
       <main>
         <LandingHero audience={audience} onOpenDownload={openDownload} />
         <FeatureShowcase />
+        <TownNetwork onMerchantClick={() => setAudience('merchant')} />
         <StandeePreview />
 
         {/* Closing CTA band */}
@@ -53,7 +55,7 @@ export default function Home() {
             <p className="land-rise land-rise-1 mx-auto mt-3 max-w-md text-[14.5px] text-[rgba(248,250,252,0.66)]">
               {audience === 'merchant'
                 ? '60 second ka onboarding, 0% commission, aur counter par aapka QR.'
-                : 'Bighi Brothers aur aapke nazdeeki kirana se — bina kisi extra delivery charge ke.'}
+                : '23 dukaan, 12,000+ products — aapke shehar ki apni shelf. Bina kisi extra delivery charge ke.'}
             </p>
             <div className="land-rise land-rise-2 mt-7 flex flex-col justify-center gap-3 sm:flex-row">
               {audience === 'merchant' ? (

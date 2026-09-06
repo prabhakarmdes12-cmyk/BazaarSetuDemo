@@ -344,6 +344,25 @@
 }
 .land-step-hint { animation: land-step-hint 1.6s ease-in-out infinite; }
 
+/* ---- Live order ticker (marquee) ---- */
+@keyframes land-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.land-ticker {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+.land-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: land-ticker 38s linear infinite;
+}
+.land-ticker:hover .land-ticker-track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .land * {
     animation-duration: 0.01ms !important;

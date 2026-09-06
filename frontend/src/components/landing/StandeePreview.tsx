@@ -92,10 +92,23 @@ export default function StandeePreview() {
           </button>
         </div>
 
-        {/* Acrylic standee mockup */}
+        {/* Acrylic standee mockup — standing on the real counter */}
         <div className="land-rise land-rise-2 flex justify-center">
+          <div className="relative w-full max-w-md sm:max-w-lg">
+            {/* Kirana counter photo backdrop */}
+            <div className="relative overflow-hidden rounded-3xl border border-[rgba(255,255,255,0.1)] shadow-[0_30px_80px_rgba(2,6,23,0.5)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/landing/kirana-counter.jpg"
+                alt="Kirana dukaan ka counter — jars, masale aur QR standee ki jagah"
+                className="h-[400px] w-full object-cover sm:h-[460px]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(7,13,31,0.66)] via-[rgba(7,13,31,0.2)] to-[rgba(7,13,31,0.45)]" aria-hidden />
+            </div>
+
           <div
-            className="transition-transform duration-500"
+            className="absolute inset-0 flex items-center justify-center transition-transform duration-500"
             style={{
               transform: tilt ? 'perspective(900px) rotateY(-18deg) rotateX(6deg)' : 'perspective(900px) rotateY(0deg)',
               transformStyle: 'preserve-3d',
@@ -128,6 +141,7 @@ export default function StandeePreview() {
             {/* Acrylic base */}
             <div className="mx-auto h-3 w-40 rounded-b-lg bg-gradient-to-b from-[rgba(255,255,255,0.25)] to-[rgba(255,255,255,0.05)]" />
             <div className="mx-auto h-1.5 w-52 rounded-full bg-[rgba(255,255,255,0.12)]" />
+          </div>
           </div>
         </div>
       </div>
