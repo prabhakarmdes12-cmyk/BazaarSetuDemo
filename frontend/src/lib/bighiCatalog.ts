@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 611 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 645 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27846,7 +27846,41 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-02142": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
   "bb-02149": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
   "bb-02150": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
-  "bb-02151": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg"
+  "bb-02151": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02117": "/catalog/items/pet/drools-dog-biscuits-500g.jpg",
+  "bb-02118": "/catalog/items/pet/drools-dog-biscuits-500g.jpg",
+  "bb-02143": "/catalog/items/pet/drools-dog-biscuits-500g.jpg",
+  "bb-02144": "/catalog/items/pet/drools-dog-biscuits-500g.jpg",
+  "bb-02108": "/catalog/items/pet/drools-dog-biscuits-500g.jpg",
+  "bb-02109": "/catalog/items/pet/drools-dog-biscuits-500g.jpg",
+  "bb-02119": "/catalog/items/pet/drools-dog-chew-bone-5pk.jpg",
+  "bb-02110": "/catalog/items/pet/choostix-dog-chew-bone-5pk.jpg",
+  "bb-02120": "/catalog/items/pet/drools-dog-wet-food-70g.jpg",
+  "bb-02121": "/catalog/items/pet/drools-dog-wet-food-70g.jpg",
+  "bb-02145": "/catalog/items/pet/drools-dog-wet-food-70g.jpg",
+  "bb-02146": "/catalog/items/pet/drools-dog-wet-food-70g.jpg",
+  "bb-02111": "/catalog/items/pet/drools-adult-cat-food-1-2kg.jpg",
+  "bb-02112": "/catalog/items/pet/drools-adult-cat-food-1-2kg.jpg",
+  "bb-02135": "/catalog/items/pet/drools-adult-cat-food-1-2kg.jpg",
+  "bb-02136": "/catalog/items/pet/drools-adult-cat-food-1-2kg.jpg",
+  "bb-02152": "/catalog/items/pet/drools-adult-cat-food-1-2kg.jpg",
+  "bb-02153": "/catalog/items/pet/drools-adult-cat-food-1-2kg.jpg",
+  "bb-02116": "/catalog/items/pet/drools-cat-litter-5kg.jpg",
+  "bb-02137": "/catalog/items/pet/drools-cat-litter-5kg.jpg",
+  "bb-02122": "/catalog/items/pet/drools-feeding-bowl.jpg",
+  "bb-02133": "/catalog/items/pet/drools-feeding-bowl.jpg",
+  "bb-02167": "/catalog/items/electronics/boat-usb-c-cable-1m.jpg",
+  "bb-02168": "/catalog/items/electronics/boat-usb-c-cable-1m.jpg",
+  "bb-02184": "/catalog/items/electronics/boat-usb-c-cable-1m.jpg",
+  "bb-02185": "/catalog/items/electronics/boat-usb-c-cable-1m.jpg",
+  "bb-02192": "/catalog/items/electronics/boat-usb-c-cable-1m.jpg",
+  "bb-02193": "/catalog/items/electronics/boat-usb-c-cable-1m.jpg",
+  "bb-02160": "/catalog/items/electronics/boat-fast-charger-20w.jpg",
+  "bb-02181": "/catalog/items/electronics/boat-fast-charger-20w.jpg",
+  "bb-02188": "/catalog/items/electronics/boat-fast-charger-20w.jpg",
+  "bb-02169": "/catalog/items/electronics/boat-wired-earphones.jpg",
+  "bb-02174": "/catalog/items/electronics/boat-wired-earphones.jpg",
+  "bb-02196": "/catalog/items/electronics/boat-wired-earphones.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
