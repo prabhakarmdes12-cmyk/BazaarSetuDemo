@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 578 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 611 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27813,7 +27813,40 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-02000": "/catalog/items/stationery/camlin-whiteboard-marker-4pcs.jpg",
   "bb-02038": "/catalog/items/stationery/camlin-whiteboard-marker-4pcs.jpg",
   "bb-02050": "/catalog/items/beauty/colorbar-nail-polish.jpg",
-  "bb-02074": "/catalog/items/beauty/colorbar-nail-polish.jpg"
+  "bb-02074": "/catalog/items/beauty/colorbar-nail-polish.jpg",
+  "bb-02051": "/catalog/items/beauty/colorbar-nail-polish-remover-27ml.jpg",
+  "bb-02052": "/catalog/items/beauty/colorbar-nail-polish-remover-27ml.jpg",
+  "bb-02075": "/catalog/items/beauty/colorbar-nail-polish-remover-27ml.jpg",
+  "bb-02076": "/catalog/items/beauty/colorbar-nail-polish-remover-27ml.jpg",
+  "bb-02053": "/catalog/items/beauty/elle-18-nail-polish.jpg",
+  "bb-02054": "/catalog/items/beauty/engage-body-mist-120ml.jpg",
+  "bb-02095": "/catalog/items/beauty/engage-body-mist-120ml.jpg",
+  "bb-02055": "/catalog/items/beauty/fogg-body-mist-120ml.jpg",
+  "bb-02056": "/catalog/items/beauty/garnier-face-sheet-mask.jpg",
+  "bb-02057": "/catalog/items/beauty/garnier-face-sheet-mask.jpg",
+  "bb-02084": "/catalog/items/beauty/garnier-face-sheet-mask.jpg",
+  "bb-02085": "/catalog/items/beauty/garnier-face-sheet-mask.jpg",
+  "bb-02060": "/catalog/items/beauty/garnier-makeup-wipes-25pcs.jpg",
+  "bb-02071": "/catalog/items/beauty/garnier-makeup-wipes-25pcs.jpg",
+  "bb-02058": "/catalog/items/beauty/garnier-hair-colour-sachet.jpg",
+  "bb-02059": "/catalog/items/beauty/garnier-hair-colour-sachet.jpg",
+  "bb-02065": "/catalog/items/beauty/garnier-hair-colour-sachet.jpg",
+  "bb-02066": "/catalog/items/beauty/garnier-hair-colour-sachet.jpg",
+  "bb-02061": "/catalog/items/beauty/godrej-expert-hair-colour-sachet.jpg",
+  "bb-02062": "/catalog/items/beauty/godrej-expert-hair-colour-sachet.jpg",
+  "bb-02048": "/catalog/items/beauty/anne-french-cream-25g.jpg",
+  "bb-02049": "/catalog/items/beauty/anne-french-cream-25g.jpg",
+  "bb-02106": "/catalog/items/beauty/anne-french-cream-25g.jpg",
+  "bb-02107": "/catalog/items/beauty/anne-french-cream-25g.jpg",
+  "bb-02113": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02114": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02115": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02140": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02141": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02142": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02149": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02150": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg",
+  "bb-02151": "/catalog/items/pet/drools-adult-dog-food-1-2kg.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
