@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 366,
-  "totalSkus": 870,
+  "totalAssets": 376,
+  "totalSkus": 896,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -9579,6 +9579,292 @@
       "width": 600,
       "height": 600,
       "bytes": 26832,
+      "verified": true
+    },
+    "bb-00145": {
+      "skuId": "bb-00145",
+      "name": "Alphonso Mango",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/alphonso-mango-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31730,
+      "verified": true
+    },
+    "bb-00146": {
+      "skuId": "bb-00146",
+      "name": "Alphonso Mango",
+      "unit": "2 kg box",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/alphonso-mango-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31730,
+      "verified": true
+    },
+    "bb-00148": {
+      "skuId": "bb-00148",
+      "name": "Black Grapes",
+      "unit": "500 g",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/black-grapes-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 51405,
+      "verified": true
+    },
+    "bb-00149": {
+      "skuId": "bb-00149",
+      "name": "Black Grapes",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/black-grapes-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 51405,
+      "verified": true
+    },
+    "bb-00150": {
+      "skuId": "bb-00150",
+      "name": "Chikoo / Sapota",
+      "unit": "500 g",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/chikoo-sapota-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50888,
+      "verified": true
+    },
+    "bb-00151": {
+      "skuId": "bb-00151",
+      "name": "Chikoo / Sapota",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/chikoo-sapota-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50888,
+      "verified": true
+    },
+    "bb-00152": {
+      "skuId": "bb-00152",
+      "name": "Coconut / Nariyal",
+      "unit": "1 pc",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/coconut-nariyal-1pc.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52894,
+      "verified": true
+    },
+    "bb-00153": {
+      "skuId": "bb-00153",
+      "name": "Coconut / Nariyal",
+      "unit": "2 pcs",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/coconut-nariyal-1pc.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52894,
+      "verified": true
+    },
+    "bb-00155": {
+      "skuId": "bb-00155",
+      "name": "Guava / Amrood",
+      "unit": "500 g",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/guava-amrood-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37640,
+      "verified": true
+    },
+    "bb-00156": {
+      "skuId": "bb-00156",
+      "name": "Guava / Amrood",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/guava-amrood-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37640,
+      "verified": true
+    },
+    "bb-00157": {
+      "skuId": "bb-00157",
+      "name": "Imported Kiwi",
+      "unit": "2 pcs",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/imported-kiwi-2pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61842,
+      "verified": true
+    },
+    "bb-00158": {
+      "skuId": "bb-00158",
+      "name": "Imported Kiwi",
+      "unit": "4 pcs pack",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/imported-kiwi-2pcs.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61842,
+      "verified": true
+    },
+    "bb-00164": {
+      "skuId": "bb-00164",
+      "name": "Orange / Nagpur Santra",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/orange-nagpur-santra-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45734,
+      "verified": true
+    },
+    "bb-00163": {
+      "skuId": "bb-00163",
+      "name": "Orange / Nagpur Santra",
+      "unit": "4 pcs",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/orange-nagpur-santra-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45734,
+      "verified": true
+    },
+    "bb-00179": {
+      "skuId": "bb-00179",
+      "name": "Watermelon",
+      "unit": "1 pc ~4 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/watermelon.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61220,
+      "verified": true
+    },
+    "bb-00178": {
+      "skuId": "bb-00178",
+      "name": "Watermelon",
+      "unit": "1 slice",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/watermelon.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61220,
+      "verified": true
+    },
+    "bb-00167": {
+      "skuId": "bb-00167",
+      "name": "Pineapple",
+      "unit": "1 pc ~1.5 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/pineapple-1pc.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54620,
+      "verified": true
+    },
+    "bb-00162": {
+      "skuId": "bb-00162",
+      "name": "Muskmelon / Kharbooja",
+      "unit": "1 pc ~1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/muskmelon-kharbooja-1pc.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 57499,
+      "verified": true
+    },
+    "bb-00160": {
+      "skuId": "bb-00160",
+      "name": "Mosambi / Sweet Lime",
+      "unit": "500 g",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/mosambi-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45021,
+      "verified": true
+    },
+    "bb-00166": {
+      "skuId": "bb-00166",
+      "name": "Papaya",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/papaya-1pc.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49335,
+      "verified": true
+    },
+    "bb-00168": {
+      "skuId": "bb-00168",
+      "name": "Pomegranate / Anar",
+      "unit": "1 pc",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/pomegranate-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 80560,
+      "verified": true
+    },
+    "bb-00169": {
+      "skuId": "bb-00169",
+      "name": "Pomegranate / Anar",
+      "unit": "500 g",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/pomegranate-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 80560,
+      "verified": true
+    },
+    "bb-00171": {
+      "skuId": "bb-00171",
+      "name": "Robusta Banana",
+      "unit": "6 pcs",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/robusta-banana-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34248,
+      "verified": true
+    },
+    "bb-00174": {
+      "skuId": "bb-00174",
+      "name": "Seedless Green Grapes",
+      "unit": "1 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/green-grapes-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39968,
+      "verified": true
+    },
+    "bb-00175": {
+      "skuId": "bb-00175",
+      "name": "Shimla Apple",
+      "unit": "4 pcs ~700 g",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/shimla-apple-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62002,
+      "verified": true
+    },
+    "bb-00177": {
+      "skuId": "bb-00177",
+      "name": "Shimla Apple",
+      "unit": "2 kg",
+      "categoryId": "fruits",
+      "path": "/catalog/items/fruits/shimla-apple-1kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 62002,
       "verified": true
     }
   }

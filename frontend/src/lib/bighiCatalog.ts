@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 870 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 896 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28105,7 +28105,33 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01419": "/catalog/items/baby/baby-formula-400g.jpg",
   "bb-01453": "/catalog/items/baby/baby-formula-400g.jpg",
   "bb-01399": "/catalog/items/baby/cotton-roll-100g.jpg",
-  "bb-01410": "/catalog/items/baby/cotton-roll-100g.jpg"
+  "bb-01410": "/catalog/items/baby/cotton-roll-100g.jpg",
+  "bb-00145": "/catalog/items/fruits/alphonso-mango-1kg.jpg",
+  "bb-00146": "/catalog/items/fruits/alphonso-mango-1kg.jpg",
+  "bb-00148": "/catalog/items/fruits/black-grapes-500g.jpg",
+  "bb-00149": "/catalog/items/fruits/black-grapes-500g.jpg",
+  "bb-00150": "/catalog/items/fruits/chikoo-sapota-500g.jpg",
+  "bb-00151": "/catalog/items/fruits/chikoo-sapota-500g.jpg",
+  "bb-00152": "/catalog/items/fruits/coconut-nariyal-1pc.jpg",
+  "bb-00153": "/catalog/items/fruits/coconut-nariyal-1pc.jpg",
+  "bb-00155": "/catalog/items/fruits/guava-amrood-500g.jpg",
+  "bb-00156": "/catalog/items/fruits/guava-amrood-500g.jpg",
+  "bb-00157": "/catalog/items/fruits/imported-kiwi-2pcs.jpg",
+  "bb-00158": "/catalog/items/fruits/imported-kiwi-2pcs.jpg",
+  "bb-00164": "/catalog/items/fruits/orange-nagpur-santra-1kg.jpg",
+  "bb-00163": "/catalog/items/fruits/orange-nagpur-santra-1kg.jpg",
+  "bb-00179": "/catalog/items/fruits/watermelon.jpg",
+  "bb-00178": "/catalog/items/fruits/watermelon.jpg",
+  "bb-00167": "/catalog/items/fruits/pineapple-1pc.jpg",
+  "bb-00162": "/catalog/items/fruits/muskmelon-kharbooja-1pc.jpg",
+  "bb-00160": "/catalog/items/fruits/mosambi-1kg.jpg",
+  "bb-00166": "/catalog/items/fruits/papaya-1pc.jpg",
+  "bb-00168": "/catalog/items/fruits/pomegranate-1kg.jpg",
+  "bb-00169": "/catalog/items/fruits/pomegranate-1kg.jpg",
+  "bb-00171": "/catalog/items/fruits/robusta-banana-1kg.jpg",
+  "bb-00174": "/catalog/items/fruits/green-grapes-500g.jpg",
+  "bb-00175": "/catalog/items/fruits/shimla-apple-1kg.jpg",
+  "bb-00177": "/catalog/items/fruits/shimla-apple-1kg.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
