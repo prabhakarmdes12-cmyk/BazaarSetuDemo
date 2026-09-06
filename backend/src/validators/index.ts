@@ -147,6 +147,11 @@ export const callRecordSchema = z.object({
   status: z.string().min(1).max(40),
   startedAt: z.string().datetime().optional(),
   endedAt: z.string().datetime().optional(),
+  // Chiti Connect call telemetry. Deliberately metadata-only: no phone
+  // numbers, SDP blobs or ICE candidates are ever accepted here (VOICE_INV_007).
+  endReason: z.string().min(1).max(60).optional(),
+  transport: z.enum(['WEBRTC_P2P', 'WEBRTC_RELAY', 'MASKED_VOIP_FALLBACK', 'UNKNOWN']).optional(),
+  mediaConnected: z.boolean().optional(),
 });
 
 // === Favorites ===

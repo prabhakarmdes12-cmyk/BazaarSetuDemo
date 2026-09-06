@@ -42,6 +42,11 @@ export interface ParsedBasketItem {
   catalogPrice?: number;
   availabilityStatus: AvailabilityStatus;
   requiresClarification: boolean;
+  /**
+   * Price the shopper called out for a pack size — "das wali Maggi",
+   * "10 rupaye wala biscuit". Used to disambiguate SKUs of the same brand.
+   */
+  priceHint?: number;
 }
 
 export interface ParsedCommand {
@@ -94,10 +99,34 @@ const NUMBER_WORDS: Record<string, number> = {
   दस: 10,
   das: 10,
   ten: 10,
+  gyarah: 11,
+  eleven: 11,
+  barah: 12,
+  twelve: 12,
+  darjan: 12,
+  dozen: 12,
+  bees: 20,
+  bis: 20,
+  twenty: 20,
+  pachas: 50,
+  pachaas: 50,
+  fifty: 50,
+  sau: 100,
+  hundred: 100,
   half: 0.5,
   aadha: 0.5,
   adha: 0.5,
   aadhi: 0.5,
+  आधा: 0.5,
+  // Bharat kitchen fractions: "pau kilo chini", "dedh litre doodh".
+  pau: 0.25,
+  paav: 0.25,
+  quarter: 0.25,
+  sava: 1.25,
+  dedh: 1.5,
+  ded: 1.5,
+  dhai: 2.5,
+  dhaai: 2.5,
 };
 
 const UNIT_ALIASES: Array<{ unit: string; aliases: string[] }> = [
@@ -154,6 +183,138 @@ const CANONICAL_TOKEN: Record<string, string> = {
   namak: 'salt',
   haldi: 'turmeric',
   turmeric: 'turmeric',
+  // --- Paaska Sahayak phonetic map for the master kirana catalog ---
+  // Dairy & breakfast
+  doodh: 'milk',
+  dudh: 'milk',
+  dhood: 'milk',
+  milk: 'milk',
+  दूध: 'milk',
+  dahi: 'curd',
+  curd: 'curd',
+  yoghurt: 'curd',
+  yogurt: 'curd',
+  paneer: 'paneer',
+  makhan: 'butter',
+  butter: 'butter',
+  ghee: 'ghee',
+  ghi: 'ghee',
+  bread: 'bread',
+  double: 'bread',
+  roti: 'bread',
+  anda: 'egg',
+  ande: 'egg',
+  egg: 'egg',
+  eggs: 'egg',
+  // Staples
+  maida: 'maida',
+  besan: 'besan',
+  suji: 'sooji',
+  sooji: 'sooji',
+  rawa: 'sooji',
+  arhar: 'toor',
+  toor: 'toor',
+  tur: 'toor',
+  moong: 'moong',
+  mung: 'moong',
+  masoor: 'masoor',
+  chana: 'chana',
+  channa: 'chana',
+  rajma: 'rajma',
+  poha: 'poha',
+  // Spices & condiments
+  mirch: 'chilli',
+  mirchi: 'chilli',
+  chilli: 'chilli',
+  chili: 'chilli',
+  dhaniya: 'coriander',
+  dhania: 'coriander',
+  coriander: 'coriander',
+  jeera: 'cumin',
+  zeera: 'cumin',
+  cumin: 'cumin',
+  garam: 'garam',
+  masala: 'masala',
+  imli: 'tamarind',
+  // Beverages & snacks
+  chai: 'tea',
+  chaay: 'tea',
+  chaha: 'tea',
+  tea: 'tea',
+  patti: 'tea',
+  coffee: 'coffee',
+  kaufi: 'coffee',
+  biscuit: 'biscuit',
+  biskut: 'biscuit',
+  biskoot: 'biscuit',
+  biscuits: 'biscuit',
+  namkeen: 'namkeen',
+  noodles: 'noodles',
+  maggi: 'maggi',
+  maggie: 'maggi',
+  magi: 'maggi',
+  // Home & personal care
+  sabun: 'soap',
+  saabun: 'soap',
+  soap: 'soap',
+  detergent: 'detergent',
+  powder: 'powder',
+  toothpaste: 'toothpaste',
+  manjan: 'toothpaste',
+  paste: 'toothpaste',
+  phenyl: 'phenyl',
+  jhadu: 'broom',
+  broom: 'broom',
+  // Produce
+  aloo: 'potato',
+  alu: 'potato',
+  potato: 'potato',
+  pyaz: 'onion',
+  pyaaz: 'onion',
+  onion: 'onion',
+  tamatar: 'tomato',
+  tomato: 'tomato',
+  adrak: 'ginger',
+  ginger: 'ginger',
+  lehsun: 'garlic',
+  lahsun: 'garlic',
+  garlic: 'garlic',
+  nimbu: 'lemon',
+  lemon: 'lemon',
+  kela: 'banana',
+  banana: 'banana',
+  seb: 'apple',
+  apple: 'apple',
+};
+
+// Popular brand spellings shoppers slur over the phone. Kept separate from the
+// generic canonical map so brand tokens survive intact for SKU disambiguation.
+const BRAND_TOKEN: Record<string, string> = {
+  amool: 'amul',
+  amul: 'amul',
+  ammul: 'amul',
+  aashirvad: 'aashirvaad',
+  aashirwad: 'aashirvaad',
+  ashirvad: 'aashirvaad',
+  ashirwad: 'aashirvaad',
+  aashirvaad: 'aashirvaad',
+  britania: 'britannia',
+  britannia: 'britannia',
+  parle: 'parle',
+  parleg: 'parle',
+  fortun: 'fortune',
+  fortune: 'fortune',
+  tataa: 'tata',
+  tata: 'tata',
+  sampan: 'sampann',
+  sampann: 'sampann',
+  colgat: 'colgate',
+  colgate: 'colgate',
+  lifboy: 'lifebuoy',
+  lifebuoy: 'lifebuoy',
+  redlabel: 'red',
+  taza: 'taaza',
+  taaza: 'taaza',
 };
 
 function normalizeSpace(value: string): string {
@@ -171,7 +332,7 @@ export function normalizeForMatch(value: string): string {
 
 function canonicalToken(token: string): string {
   const normalized = token.toLowerCase().trim();
-  return CANONICAL_TOKEN[normalized] || normalized;
+  return BRAND_TOKEN[normalized] || CANONICAL_TOKEN[normalized] || normalized;
 }
 
 function tokenize(value: string): string[] {
@@ -241,14 +402,46 @@ function splitPotentialItems(message: string): string[] {
     .filter(Boolean);
 }
 
+const NUMBER_ALTERNATION = Object.keys(NUMBER_WORDS)
+  .sort((a, b) => b.length - a.length)
+  .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+  .join('|');
+
+const QTY_PATTERN = `(?:\\d+(?:\\.\\d+)?|${NUMBER_ALTERNATION})`;
+
+const PRICE_HINT_PATTERNS = [
+  // "10 rupaye wali maggi", "das rupaye wala biscuit"
+  new RegExp(`\\b(${QTY_PATTERN})\\s*(?:rupaye|rupaya|rupay|rupee|rupees|rs\\.?|inr)\\s*(?:wala|wali|wale|ka|ki|ke)?\\b`, 'i'),
+  // "₹10 wali maggi"
+  new RegExp(`₹\\s*(\\d+(?:\\.\\d+)?)`, 'i'),
+  // "das wali maggi" — no currency word at all, the classic kirana phrasing
+  new RegExp(`\\b(${QTY_PATTERN})\\s*(?:wala|wali|wale)\\b`, 'i'),
+];
+
+/**
+ * Pull a rupee pack-size hint out of a phrase ("das wali Maggi" => ₹10) and
+ * return the phrase with that fragment removed so quantity parsing does not
+ * mistake the price for a count.
+ */
+export function extractPriceHint(phrase: string): { priceHint?: number; rest: string } {
+  for (const pattern of PRICE_HINT_PATTERNS) {
+    const match = phrase.match(pattern);
+    if (!match) continue;
+    const value = parseQuantity(match[1]);
+    if (value === undefined || value <= 0) continue;
+    return {
+      priceHint: value,
+      rest: normalizeSpace(phrase.replace(match[0], ' ')),
+    };
+  }
+  return { rest: normalizeSpace(phrase) };
+}
+
 export function parseItemPhrase(rawPhrase: string, defaults?: Partial<Pick<ParsedBasketItem, 'quantity' | 'unit' | 'brandPreference'>>): ParsedBasketItem {
   const rawText = normalizeSpace(rawPhrase);
-  const lower = normalizeForMatch(rawText);
-  const numberAlternation = Object.keys(NUMBER_WORDS)
-    .sort((a, b) => b.length - a.length)
-    .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-    .join('|');
-  const qtyPattern = `(?:\\d+(?:\\.\\d+)?|${numberAlternation})`;
+  const { priceHint, rest } = extractPriceHint(normalizeForMatch(rawText));
+  const lower = rest;
+  const qtyPattern = QTY_PATTERN;
 
   let quantity = defaults?.quantity ?? 1;
   let unit = defaults?.unit ?? 'piece';
@@ -288,6 +481,7 @@ export function parseItemPhrase(rawPhrase: string, defaults?: Partial<Pick<Parse
     quantity,
     unit,
     ...(brandPreference && { brandPreference }),
+    ...(priceHint !== undefined && { priceHint }),
     matchConfidence: 0,
     availabilityStatus: 'NEEDS_MERCHANT_CHECK',
     requiresClarification: true,
@@ -320,10 +514,25 @@ function scoreProductMatch(itemName: string, product: CatalogueProduct): number 
   return Math.min(0.9, 0.55 + coverage * 0.3 + specificityBonus);
 }
 
+/**
+ * When the shopper called out a rupee pack size ("das wali Maggi"), nudge SKUs
+ * priced near that value ahead of other same-brand variants. The nudge is small
+ * enough that it never manufactures a match out of an unrelated product.
+ */
+function priceHintBonus(item: ParsedBasketItem, product: CatalogueProduct): number {
+  if (item.priceHint === undefined || !Number.isFinite(product.price)) return 0;
+  const delta = Math.abs(product.price - item.priceHint);
+  if (delta <= 0.5) return 0.06;
+  if (delta <= item.priceHint * 0.15) return 0.03;
+  return 0;
+}
+
 export function enrichWithCatalogue(item: ParsedBasketItem, products: CatalogueProduct[]): ParsedBasketItem {
   let best: { product: CatalogueProduct; score: number } | undefined;
   for (const product of products) {
-    const score = scoreProductMatch(item.requestedName, product);
+    const baseScore = scoreProductMatch(item.requestedName, product);
+    // Only a real textual match earns the price nudge — never a bare price.
+    const score = baseScore > 0 ? Math.min(0.99, baseScore + priceHintBonus(item, product)) : 0;
     if (!best || score > best.score) best = { product, score };
   }
 

@@ -12,6 +12,7 @@ import ShopCard from '@/components/ShopCard';
 import VendorCTA from '@/components/VendorCTA';
 import EmptyState from '@/components/EmptyState';
 import PromoCarousels from '@/components/PromoCarousels';
+import VoiceParchiModal, { VoiceBasketItem } from '@/components/VoiceParchiModal';
 import { Icon } from '@/components/ui';
 import { ShopSkeleton } from '@/components/Skeletons';
 import { useAuth } from '@/hooks/useAuth';
@@ -214,6 +215,12 @@ export default function CustomerHomePage() {
   });
   const loadRequestRef = useRef(0);
 
+  // --- Paaska Sahayak (voice parchi) ---
+  const [voiceOpen, setVoiceOpen] = useState(false);
+  const [voiceChatId, setVoiceChatId] = useState<string | null>(null);
+  const [voiceToast, setVoiceToast] = useState<string | null>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   const refreshCartState = useCallback(() => {
     const items = getGuestCart();
     const count = items.reduce((s, i) => s + i.quantity, 0);
@@ -341,6 +348,73 @@ export default function CustomerHomePage() {
     setLocationError('');
     setLocationOpen(false);
   };
+
+  // ---- Paaska Sahayak: ambient voice parchi ------------------------------
+  const voiceShop = shops[0];
+  const voiceShopId = voiceShop?.id || BIGHI_STORE.id;
+
+  const showVoiceToast = useCallback((message: string) => {
+    setVoiceToast(message);
+    window.setTimeout(() => setVoiceToast(null), 3200);
+  }, []);
+
+  /**
+   * A voice parchi is a merchant conversation, so it needs a chat thread to
+   * hang the draft off. Open it lazily the first time the shopper speaks.
+   */
+  const openVoiceParchi = useCallback(async () => {
+    if (!token) {
+      showVoiceToast('Bol kar order karne ke liye login karein.');
+      router.push('/login');
+      return;
+    }
+    try {
+      if (!voiceChatId) {
+        const res = await api.post<{ success: boolean; data: { chatId: string } }>(
+          '/api/chats',
+          { shopId: voiceShopId },
+          token,
+        );
+        if (res.success) setVoiceChatId(res.data.chatId);
+      }
+    } catch (err) {
+      console.error('Failed to open Sahayak conversation:', err);
+    }
+    track({ type: 'voice_parchi_open', shopId: voiceShopId });
+    setVoiceOpen(true);
+  }, [router, showVoiceToast, token, voiceChatId, voiceShopId]);
+
+  /** Microphone denied — never block the journey, just point at the keyboard. */
+  const handleVoicePermissionDenied = useCallback((message: string) => {
+    showVoiceToast(message);
+    searchInputRef.current?.focus();
+  }, [showVoiceToast]);
+
+  const addVoiceItemsToCart = useCallback((items: VoiceBasketItem[]) => {
+    for (const item of items) {
+      addToGuestCart(
+        {
+          productId: item.productId,
+          shopId: voiceShopId,
+          shopName: voiceShop?.name || BIGHI_STORE.name,
+          name: item.productName,
+          price: item.price,
+          unit: item.unit || 'unit',
+          image: item.image || '',
+        },
+        item.quantity,
+      );
+    }
+    refreshCartState();
+    track({ type: 'voice_parchi_add_to_cart', shopId: voiceShopId, itemCount: items.length });
+    showVoiceToast(`${items.length} item parchi se cart mein add ho gaye.`);
+  }, [refreshCartState, showVoiceToast, voiceShop?.name, voiceShopId]);
+
+  const checkoutVoiceItems = useCallback((items: VoiceBasketItem[]) => {
+    addVoiceItemsToCart(items);
+    track({ type: 'voice_parchi_instant_checkout', shopId: voiceShopId, itemCount: items.length });
+    router.push('/customer/cart');
+  }, [addVoiceItemsToCart, router, voiceShopId]);
 
   // Filtered by search and category
   const filteredProducts = useMemo(() => {
@@ -508,6 +582,9 @@ export default function CustomerHomePage() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         onSearch={() => {}}
+        onVoiceSearch={openVoiceParchi}
+        voiceActive={voiceOpen}
+        inputRef={searchInputRef}
         placeholder="Search 'Amul milk', 'Aashirvaad atta', 'Maggi'..."
       />
 
@@ -809,6 +886,48 @@ export default function CustomerHomePage() {
           </div>
         </div>
       )}
+
+      {/*
+        Paaska Sahayak ambient mic.
+
+        Sits above the cart bar so it is always reachable with a thumb — the
+        whole point is that a shopper in Bank More can order without reading
+        2,176 catalog cards on a 6-inch phone.
+      */}
+      <button
+        onClick={openVoiceParchi}
+        aria-label="Bol kar order karein — Paaska Sahayak"
+        title="Bol kar order karein"
+        className={`fixed right-5 z-40 flex items-center justify-center rounded-full leaf-gradient text-white shadow-brand-glow-lg active:scale-90 transition-transform duration-150 h-16 w-16 ${
+          cartCount > 0 ? 'bottom-48 sm:bottom-28' : 'bottom-28 sm:bottom-8'
+        }`}
+      >
+        <span className="absolute inset-0 rounded-full animate-pulse-ring-slow border-2 border-emerald-300/60 pointer-events-none" />
+        <Icon name="mic" filled size="lg" className="relative z-10" />
+      </button>
+
+      {/* Non-blocking voice toast (permission denials, cart confirmations) */}
+      {voiceToast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] px-4 w-full max-w-sm pointer-events-none">
+          <div className="glass-panel bg-surface-container-high/95 text-on-surface text-xs font-semibold rounded-2xl px-4 py-3 shadow-editorial-lg flex items-center gap-2">
+            <Icon name="graphic_eq" size="sm" className="text-primary shrink-0" />
+            <span>{voiceToast}</span>
+          </div>
+        </div>
+      )}
+
+      <VoiceParchiModal
+        open={voiceOpen}
+        onClose={() => setVoiceOpen(false)}
+        shopId={voiceShopId}
+        shopName={voiceShop?.name || BIGHI_STORE.name}
+        customerId={user?.id}
+        conversationId={voiceChatId}
+        token={token}
+        onAddToCart={addVoiceItemsToCart}
+        onInstantCheckout={checkoutVoiceItems}
+        onPermissionDenied={handleVoicePermissionDenied}
+      />
 
       <VendorCTA />
     </AppShell>

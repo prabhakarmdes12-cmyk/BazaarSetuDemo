@@ -501,6 +501,92 @@ async function processShopBotMessage(input: ProcessShopBotMessageInput, io?: { t
   return { payload } as const;
 }
 
+// ---------------------------------------------------------------------------
+// Paaska Sahayak — voice basket resolution
+// ---------------------------------------------------------------------------
+
+/** Quick-commerce promise surfaced on the Parchi review sheet. */
+const VOICE_ORDER_ETA_MINUTES = Number(process.env.VOICE_ORDER_ETA_MINUTES || 10);
+
+export interface VoiceBasketItem {
+  productId: string;
+  productName: string;
+  unit: string;
+  price: number;
+  quantity: number;
+  matchConfidence: number;
+  image: string;
+  requestedName: string;
+  availabilityStatus: string;
+  lineTotal: number;
+}
+
+export interface VoiceBasket {
+  items: VoiceBasketItem[];
+  unmatchedItems: string[];
+  subtotal: number;
+  estimatedDeliveryMinutes: number;
+}
+
+type CatalogProductRow = {
+  id: string;
+  name: string;
+  price: number;
+  unit: string;
+  image?: string | null;
+  isAvailable: boolean;
+};
+
+/**
+ * Turn the parsed draft items into the review-sheet basket the Paaska Sahayak
+ * modal renders: matched SKUs (with photo + price) on one side, terms the
+ * catalog could not resolve on the other.
+ */
+export function buildVoiceBasket(
+  items: Array<{
+    requestedName: string;
+    quantity: number;
+    unit: string;
+    matchedProductId?: string | null;
+    matchConfidence?: number;
+    catalogPrice?: number | null;
+    quotedPrice?: number | null;
+    availabilityStatus: string;
+  }>,
+  products: CatalogProductRow[],
+  etaMinutes = VOICE_ORDER_ETA_MINUTES,
+): VoiceBasket {
+  const byId = new Map(products.map((product) => [product.id, product]));
+  const basketItems: VoiceBasketItem[] = [];
+  const unmatchedItems: string[] = [];
+
+  for (const item of items) {
+    const product = item.matchedProductId ? byId.get(item.matchedProductId) : undefined;
+    if (!product || item.availabilityStatus === 'UNAVAILABLE') {
+      if (item.requestedName) unmatchedItems.push(item.requestedName);
+      continue;
+    }
+
+    const price = item.quotedPrice ?? item.catalogPrice ?? product.price ?? 0;
+    const quantity = item.quantity > 0 ? item.quantity : 1;
+    basketItems.push({
+      productId: product.id,
+      productName: product.name,
+      unit: product.unit || item.unit,
+      price: Number(price.toFixed(2)),
+      quantity,
+      matchConfidence: Number((item.matchConfidence ?? 0).toFixed(2)),
+      image: product.image || '',
+      requestedName: item.requestedName,
+      availabilityStatus: item.availabilityStatus,
+      lineTotal: Number((price * quantity).toFixed(2)),
+    });
+  }
+
+  const subtotal = Number(basketItems.reduce((sum, item) => sum + item.lineTotal, 0).toFixed(2));
+  return { items: basketItems, unmatchedItems, subtotal, estimatedDeliveryMinutes: etaMinutes };
+}
+
 function extensionFromMime(mimeType: string, filename: string): string {
   const existing = path.extname(filename || '').toLowerCase();
   if (existing) return existing;
@@ -579,6 +665,16 @@ router.post('/voice-order', optionalAuth, async (req: AuthRequest, res: Response
     });
     const transcript = transcription.transcript || 'Voice note received. Transcript unavailable; merchant manual review needed.';
 
+    // VOICE_INV_007 / DPDP 2023: raw voice is ephemeral wherever the deployment
+    // asks for it. With `VOICE_EPHEMERAL_AUDIO=true` (or an `ephemeralAudio`
+    // form field) the recording is purged the instant a usable transcript
+    // exists — the parchi, not the customer's voice, becomes the record.
+    const ephemeralAudio = fields.ephemeralAudio === 'true' || process.env.VOICE_EPHEMERAL_AUDIO === 'true';
+    const audioPurged = ephemeralAudio && Boolean(transcription.transcript);
+    if (audioPurged) {
+      await fs.rm(audioPath, { force: true }).catch(() => undefined);
+    }
+
     const result = await processShopBotMessage(
       {
         customerId,
@@ -590,7 +686,9 @@ router.post('/voice-order', optionalAuth, async (req: AuthRequest, res: Response
         messageType: 'VOICE_ORDER',
         messagePayload: {
           audioUrl,
+          audioPurged,
           transcript: transcription.transcript,
+          detectedLanguage: transcription.detectedLanguage,
           transcriptionConfidence: transcription.confidence,
           transcriptionProvider: transcription.provider,
           requiresManualReview: transcription.requiresManualReview,
@@ -606,11 +704,22 @@ router.post('/voice-order', optionalAuth, async (req: AuthRequest, res: Response
       return res.status(result.error!.status).json({ success: false, message: result.error!.message });
     }
 
+    // Resolve the matched entities against the live shop catalog so the Parchi
+    // review sheet can render SKU photos, unit pricing and a running subtotal.
+    const catalog = await prisma.product.findMany({
+      where: { shopId },
+      select: { id: true, name: true, price: true, unit: true, image: true, isAvailable: true },
+    });
+    const basket = buildVoiceBasket(result.payload.draft.items, catalog);
+
     const payload = {
       ...result.payload,
       audioUrl,
+      audioPurged,
       transcript: transcription.transcript,
+      detectedLanguage: transcription.detectedLanguage,
       transcription,
+      basket,
     };
     return res.json({ success: true, data: payload, ...payload });
   } catch (err) {

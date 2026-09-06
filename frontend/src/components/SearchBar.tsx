@@ -7,8 +7,12 @@ interface SearchBarProps {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSearch?: () => void;
+  /** Opens the Paaska Sahayak voice parchi sheet. */
   onVoiceSearch?: () => void;
   placeholder?: string;
+  /** Mirrors the parent's recording state so the mic reads as live. */
+  voiceActive?: boolean;
+  inputRef?: React.Ref<HTMLInputElement>;
 }
 
 export default function SearchBar({
@@ -17,15 +21,19 @@ export default function SearchBar({
   onSearch,
   onVoiceSearch,
   placeholder = 'Kya chahiye? (milk, bread...)',
+  voiceActive = false,
+  inputRef,
 }: SearchBarProps) {
   const [focused, setFocused] = useState(false);
-  const [listening, setListening] = useState(false);
+  const [pulsing, setPulsing] = useState(false);
 
   const handleVoice = () => {
-    setListening(true);
+    setPulsing(true);
     onVoiceSearch?.();
-    window.setTimeout(() => setListening(false), 1600);
+    window.setTimeout(() => setPulsing(false), 1200);
   };
+
+  const listening = voiceActive || pulsing;
 
   return (
     <section className="mb-8">
@@ -47,6 +55,7 @@ export default function SearchBar({
             />
           </div>
           <input
+            ref={inputRef}
             className="w-full bg-transparent border-none py-5 pl-1 pr-2 text-on-surface focus:outline-none focus:ring-0 placeholder:text-on-surface-variant/50 transition-all"
             placeholder={placeholder}
             type="text"
@@ -58,14 +67,15 @@ export default function SearchBar({
           />
           <button
             onClick={handleVoice}
-            aria-label="Voice search"
+            aria-label="Bol kar order karein — Paaska Sahayak"
+            title="Bol kar order karein"
             className={`mx-1.5 flex items-center justify-center h-9 w-9 rounded-full transition-all duration-200 active:scale-90 ${
               listening
                 ? 'bg-primary text-white shadow-leaf-glow animate-pulse-ring'
                 : 'text-on-surface-variant/70 hover:text-primary hover:bg-primary/10'
             }`}
           >
-            <Icon name="mic" size="sm" />
+            <Icon name="mic" size="sm" filled={listening} />
           </button>
           <button
             onClick={onSearch}

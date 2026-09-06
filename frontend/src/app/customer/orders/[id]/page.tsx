@@ -1,11 +1,14 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { Icon, Badge } from '@/components/ui';
 import { useAuth } from '@/hooks/useAuth';
 import { Order, ORDER_STEPS, OrderStatus } from '@/types';
 import { api } from '@/lib/api';
+import DukaanHotlineModal from '@/components/DukaanHotlineModal';
+import { useChitiConnectCall } from '@/hooks/useChitiConnectCall';
+import { track } from '@/lib/analytics';
 
 function getStepIndex(status: OrderStatus): number {
   return ORDER_STEPS.findIndex((s) => s.key === status);
@@ -14,7 +17,7 @@ function getStepIndex(status: OrderStatus): number {
 export default function OrderStatusPage() {
   const params = useParams();
   const router = useRouter();
-  const { token } = useAuth();
+  const { token, user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
   const [repeating, setRepeating] = useState(false);
@@ -25,6 +28,55 @@ export default function OrderStatusPage() {
   const [disputeSubmitting, setDisputeSubmitting] = useState(false);
   const [disputeSuccess, setDisputeSuccess] = useState(false);
   const orderId = params.id as string;
+
+  // ---- Chiti Connect hotline (masked, no PSTN number ever surfaces) ------
+  const [hotlineOpen, setHotlineOpen] = useState(false);
+  const [hotlineChatId, setHotlineChatId] = useState<string | null>(null);
+  const [hotlineBusy, setHotlineBusy] = useState(false);
+  const chitiCall = useChitiConnectCall({ token, chatId: hotlineChatId });
+
+  const callMerchant = useCallback(async () => {
+    if (!order || !token || hotlineBusy) return;
+    setHotlineBusy(true);
+    try {
+      let chatId = hotlineChatId;
+      if (!chatId) {
+        const res = await api.post<{ success: boolean; data: { chatId: string } }>(
+          '/api/chats',
+          { shopId: order.shopId },
+          token,
+        );
+        if (!res.success) throw new Error('chat unavailable');
+        chatId = res.data.chatId;
+        setHotlineChatId(chatId);
+      }
+      setHotlineOpen(true);
+      track({ type: 'chiti_connect_call_start', shopId: order.shopId, surface: 'order_tracking' });
+      void chitiCall.startCall();
+    } catch (err) {
+      console.error('Chiti Connect call failed to start:', err);
+    } finally {
+      setHotlineBusy(false);
+    }
+  }, [chitiCall, hotlineBusy, hotlineChatId, order, token]);
+
+  const hangUpMerchant = useCallback(() => {
+    track({
+      type: 'chiti_connect_call_end',
+      shopId: order?.shopId || 'unknown',
+      durationSeconds: chitiCall.liveAt ? Math.round((Date.now() - chitiCall.liveAt.getTime()) / 1000) : 0,
+      status: chitiCall.status,
+    });
+    void chitiCall.endCall(chitiCall.status === 'LIVE' ? 'ENDED' : 'NO_ANSWER');
+  }, [chitiCall, order?.shopId]);
+
+  // The hook only picks up a chat id on the next render, so re-arm once it lands.
+  useEffect(() => {
+    if (hotlineOpen && hotlineChatId && chitiCall.status === 'IDLE') {
+      void chitiCall.startCall();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hotlineChatId, hotlineOpen]);
 
   useEffect(() => {
     if (!token) {
@@ -236,9 +288,14 @@ export default function OrderStatusPage() {
               </div>
             </div>
             <div className="mt-6 flex gap-2">
-              <button className="flex-1 bg-surface-container-highest text-on-surface font-label py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all">
+              <button
+                onClick={callMerchant}
+                disabled={!order || hotlineBusy}
+                aria-label="Call merchant via Chiti Connect"
+                className="flex-1 leaf-gradient text-white font-label py-3 rounded-xl flex items-center justify-center gap-2 shadow-brand-glow active:scale-95 transition-all disabled:opacity-50 disabled:active:scale-100"
+              >
                 <Icon name="call" size="sm" />
-                Call
+                {hotlineBusy ? 'Connecting…' : 'Call'}
               </button>
               <button className="flex-1 bg-surface-container-highest text-on-surface font-label py-3 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all">
                 <Icon name="location_on" size="sm" />
@@ -298,6 +355,24 @@ export default function OrderStatusPage() {
           <span className="font-inter text-[11px] font-medium uppercase tracking-wider">Help</span>
         </button>
       </nav>
+
+      <DukaanHotlineModal
+        open={hotlineOpen}
+        onClose={() => setHotlineOpen(false)}
+        status={chitiCall.status}
+        callerName={user?.name || order?.customerName || 'Aap'}
+        shopName={order?.shopName || 'Local Shop'}
+        shopLocality={order?.deliveryPincode ? `Pincode ${order.deliveryPincode}` : undefined}
+        liveAt={chitiCall.liveAt}
+        isMuted={chitiCall.isMuted}
+        isSpeakerOn={chitiCall.isSpeakerOn}
+        transport={chitiCall.transport}
+        localStream={chitiCall.localStream}
+        remoteStream={chitiCall.remoteStream}
+        onToggleMute={chitiCall.toggleMute}
+        onToggleSpeaker={chitiCall.toggleSpeaker}
+        onHangUp={hangUpMerchant}
+      />
     </div>
   );
 }

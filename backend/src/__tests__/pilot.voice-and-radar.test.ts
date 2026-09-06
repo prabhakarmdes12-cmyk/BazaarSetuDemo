@@ -88,6 +88,111 @@ describe('Pilot voice order and Chiti Console radar', () => {
     expect(proposal).toBeTruthy();
   });
 
+  it('returns a Paaska Sahayak parchi basket resolved against the shop catalog', async () => {
+    const ctx = await createPilotContext();
+
+    const res = await request(app)
+      .post('/api/shop-bot/voice-order')
+      .set('Authorization', `Bearer ${ctx.customerToken}`)
+      .field('customerId', ctx.customerId)
+      .field('shopId', ctx.shopId)
+      .field('conversationId', ctx.chatId)
+      .field('locale', 'hinglish')
+      .field('mockTranscript', 'Bhaiya do kilo Aashirvaad atta aur special bakery biscuit bhej dena')
+      .attach('audio', Buffer.from('fake-webm-audio'), { filename: 'parchi.webm', contentType: 'audio/webm' });
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.detectedLanguage).toBe('hinglish');
+    expect(typeof res.body.data.transcript).toBe('string');
+
+    const basket = res.body.data.basket;
+    expect(basket).toBeTruthy();
+    expect(Array.isArray(basket.items)).toBe(true);
+    expect(basket.estimatedDeliveryMinutes).toBeGreaterThan(0);
+
+    // The atta SKU exists in this shop's catalog, so it must resolve to a real
+    // product id with a price the review sheet can render.
+    const atta = basket.items.find((item: { productName: string }) => /atta/i.test(item.productName));
+    expect(atta).toBeTruthy();
+    expect(atta.productId).toBeTruthy();
+    expect(atta.quantity).toBe(2);
+    expect(atta.unit).toBeTruthy();
+    expect(atta.price).toBeGreaterThan(0);
+    expect(atta.matchConfidence).toBeGreaterThan(0);
+
+    // Unresolvable free-text stays in unmatchedItems instead of inventing a SKU.
+    expect(basket.unmatchedItems.some((name: string) => /biscuit/i.test(name))).toBe(true);
+
+    // Subtotal is the sum of matched line totals only.
+    const expectedSubtotal = Number(
+      basket.items
+        .reduce((sum: number, item: { price: number; quantity: number }) => sum + item.price * item.quantity, 0)
+        .toFixed(2),
+    );
+    expect(basket.subtotal).toBe(expectedSubtotal);
+  });
+
+  it('parses Hindi pack quantities and rupee pack-size hints from speech', async () => {
+    const ctx = await createPilotContext();
+
+    const res = await request(app)
+      .post('/api/shop-bot/voice-order')
+      .set('Authorization', `Bearer ${ctx.customerToken}`)
+      .field('customerId', ctx.customerId)
+      .field('shopId', ctx.shopId)
+      .field('conversationId', ctx.chatId)
+      .field('locale', 'hinglish')
+      .field('mockTranscript', 'aadha kilo atta aur das rupaye wali maggi')
+      .attach('audio', Buffer.from('fake-webm-audio'), { filename: 'hinglish.webm', contentType: 'audio/webm' });
+
+    expect(res.status).toBe(200);
+
+    const atta = res.body.data.items.find((item: { requestedName: string }) => /atta/i.test(item.requestedName));
+    expect(atta).toBeTruthy();
+    expect(atta.quantity).toBe(0.5);
+    expect(atta.unit).toBe('kg');
+
+    // "das rupaye wali" is a ₹10 pack-size hint, never a quantity of ten.
+    const maggi = res.body.data.items.find((item: { requestedName: string }) => /maggi/i.test(item.requestedName));
+    expect(maggi).toBeTruthy();
+    expect(maggi.quantity).toBe(1);
+  });
+
+  it('never exposes customer or vendor phone numbers in the voice-order payload (VOICE_INV_007)', async () => {
+    const vendorPhone = phone();
+    const customerPhone = phone();
+
+    const vendorReg = await request(app).post('/api/auth/register').send({
+      phone: vendorPhone, name: 'Privacy Gupta Ji', role: 'vendor', acceptPrivacy: true,
+    });
+    const vendorToken = vendorReg.body.data.token as string;
+    const customerReg = await request(app).post('/api/auth/register').send({
+      phone: customerPhone, name: 'Privacy Rahul', role: 'customer', acceptPrivacy: true,
+    });
+    const customerToken = customerReg.body.data.token as string;
+    const customerId = customerReg.body.data.user.id as string;
+
+    const shopRes = await request(app).get('/api/shops/vendor/my-shop').set('Authorization', `Bearer ${vendorToken}`);
+    const shopId = shopRes.body.data.id as string;
+    const chatRes = await request(app).post('/api/chats').set('Authorization', `Bearer ${customerToken}`).send({ shopId });
+    const chatId = chatRes.body.data.chatId as string;
+
+    const res = await request(app)
+      .post('/api/shop-bot/voice-order')
+      .set('Authorization', `Bearer ${customerToken}`)
+      .field('customerId', customerId)
+      .field('shopId', shopId)
+      .field('conversationId', chatId)
+      .field('mockTranscript', '1 kg atta')
+      .attach('audio', Buffer.from('fake-webm-audio'), { filename: 'privacy.webm', contentType: 'audio/webm' });
+
+    expect(res.status).toBe(200);
+    const serialized = JSON.stringify(res.body.data.basket);
+    expect(serialized).not.toContain(customerPhone);
+    expect(serialized).not.toContain(vendorPhone);
+  });
+
   it('fires SLA reminder and delayed events, then marks stale merchant requests for operator assist', async () => {
     const ctx = await createPilotContext();
     const parse = await request(app)
