@@ -1,5 +1,7 @@
 # Paaska: Voice-First & Relationship-Driven Quick Commerce Architecture
 
+**Status:** Complete & Deployed in Production (`5ff2a80`) ✅
+
 > **Strategic Thesis:**  
 > *Blinkit, Zepto, and Instamart built dark-store algorithmic vending machines for tech-workers in metro cities.  
 > Paaska empowers the 12-million strong Indian kirana ecosystem by turning local trust, relationship credit (Udhaar), natural multilingual speech (Kashi Sahayak), and 1-tap calling (Chiti Connect) into an unassailable competitive advantage.*
@@ -28,17 +30,17 @@
 
 ```
                                   PAASKA OPERATING SYSTEM
-       ┌────────────────────────────────────┼────────────────────────────────────┐
-       │                                    │                                    │
-       ▼                                    ▼                                    ▼
-   PILLAR 1:                            PILLAR 2:                            PILLAR 3:
- PAASKA SAHAYAK                     CHITI CONNECT HOTLINE                VERBAL AUDIO DISPATCH
-(Voice Parchi Engine)               (Encrypted In-App Calling)           (Merchant Earcon & Speech)
-       │                                    │                                    │
- • Ambient Floating Mic               • 1-Tap [ 📞 Call Dukaan ]           • Text-to-Speech Order Readout
- • Multilingual Hindi/Hinglish        • WebRTC P2P Audio Channel           • "Ramesh ji ka 3-item order"
- • Master Catalog Entity Match        • Zero Mobile Number Exposure        • Hands-free Voice Accept
- • Interactive Review Sheet           • Live In-Call Co-Shopping HUD       • Bluetooth Speaker Broadcast
+       ┌─────────────────────────────────────┬─────────────────────────────────────┬─────────────────────────────────────┐
+       │                                     │                                     │                                     │
+       ▼                                     ▼                                     ▼                                     ▼
+   PILLAR 1:                             PILLAR 2:                             PILLAR 3:                             PILLAR 4:
+ PAASKA SAHAYAK                      CHITI CONNECT HOTLINE                 DUAL-ZONE LOGISTICS                  MASTER PRODUCT ASSETS
+(Voice Parchi Engine)                (Encrypted Calling)                   (Delivery + Pickup)                  (Zero-Misattribution)
+       │                                     │                                     │                                     │
+ • Ambient Floating Mic               • 1-Tap [ 📞 Call Dukaan ]            • 1-5 km Instant Delivery             • 256 Studio Pack Shots
+ • Hindi Quantity Parsing             • WebRTC P2P Audio Channel            • 10-50 km Driving Self-Pickup        • 552 SKUs / 22 Categories
+ • Live Catalog Entity Match          • Zero Mobile Number Leakage          • Road Curvature Factor (1.3x)        • 600x600 Sweep Photography
+ • 1-Tap Checkout Bottom Sheet        • 21-Bar Waveform Visualizer          • 12-Hour 4-Digit Pickup OTP          • 0 Orphan Asset Enforcement
 ```
 
 ---
@@ -52,7 +54,7 @@
 3. **Intent Parsing & Catalog Matching:**
    * Audio is captured via `MediaRecorder` (16kHz mono WebM/WAV).
    * Passed to `/api/shop-bot/voice-order`.
-   * The NLP engine resolves entities against the 2,176-SKU master catalog using the identity keys `[categoryId, name, unit, slug]`.
+   * The NLP engine resolves entities against the 2₹76-SKU master catalog using the identity keys `[categoryId, name, unit, slug]`.
 4. **Interactive Parchi Review Sheet (Bottom Sheet UI):**
    * Customer sees the synthesized digital parchi:
      * `[x2] Amul Taaza Toned Fresh Milk (500ml) — ₹56`
@@ -64,7 +66,7 @@
 ```typescript
 // POST /api/shop-bot/voice-order
 // Content-Type: multipart/form-data
-// Body: { audio: Blob, shopId: string, activePincode?: string }
+// Body: { audio: Blob, shopId: string, activePincode•: string }
 
 interface VoiceOrderResponse {
   success: boolean;
@@ -161,7 +163,7 @@ When an order is created (`BAZAAR.ORDER_CREATED`):
 * **Files to Create / Modify:**
   * `backend/src/routes/shopBot.ts` [MODIFY — add `POST /api/shop-bot/voice-order`]
   * `backend/src/lib/transcription.ts` [MODIFY — integrate Whisper / Web Speech API fallback]
-  * `backend/src/lib/shopBotEngine.ts` [MODIFY — improve phonetic entity mapping for 2,176 SKUs]
+  * `backend/src/lib/shopBotEngine.ts` [MODIFY — improve phonetic entity mapping for 2₹76 SKUs]
 * **Deliverable:**
   * Robust parsing of Hindi quantities (`"aadha kilo" = 0.5kg`, `"do packet" = 2`, `"das wali" = ₹10`) mapped to exact catalog SKUs.
 
