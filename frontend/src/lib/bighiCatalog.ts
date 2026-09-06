@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 970 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 1011 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28205,7 +28205,48 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01074": "/catalog/items/household/mosquito-repellent-spray.jpg",
   "bb-01075": "/catalog/items/household/mosquito-repellent-spray.jpg",
   "bb-01091": "/catalog/items/household/cling-wrap-30m.jpg",
-  "bb-01122": "/catalog/items/household/cling-wrap-30m.jpg"
+  "bb-01122": "/catalog/items/household/cling-wrap-30m.jpg",
+  "bb-01151": "/catalog/items/household/dishwash-gel-750ml.jpg",
+  "bb-01152": "/catalog/items/household/dishwash-gel-750ml.jpg",
+  "bb-01118": "/catalog/items/household/dishwash-gel-750ml.jpg",
+  "bb-01119": "/catalog/items/household/dishwash-gel-750ml.jpg",
+  "bb-01051": "/catalog/items/household/dishwash-gel-750ml.jpg",
+  "bb-01052": "/catalog/items/household/dishwash-gel-750ml.jpg",
+  "bb-01147": "/catalog/items/household/dishwash-bar-200g.jpg",
+  "bb-01149": "/catalog/items/household/dishwash-bar-200g.jpg",
+  "bb-01114": "/catalog/items/household/dishwash-bar-200g.jpg",
+  "bb-01116": "/catalog/items/household/dishwash-bar-200g.jpg",
+  "bb-01047": "/catalog/items/household/dishwash-bar-200g.jpg",
+  "bb-01049": "/catalog/items/household/dishwash-bar-200g.jpg",
+  "bb-01076": "/catalog/items/household/floor-cleaner-1l.jpg",
+  "bb-01078": "/catalog/items/household/floor-cleaner-1l.jpg",
+  "bb-01034": "/catalog/items/household/floor-cleaner-1l.jpg",
+  "bb-01035": "/catalog/items/household/floor-cleaner-1l.jpg",
+  "bb-01036": "/catalog/items/household/floor-cleaner-1l.jpg",
+  "bb-01042": "/catalog/items/household/floor-cleaner-1l.jpg",
+  "bb-01044": "/catalog/items/household/floor-cleaner-1l.jpg",
+  "bb-01081": "/catalog/items/household/toilet-cleaner-500ml.jpg",
+  "bb-01062": "/catalog/items/household/mosquito-repellent-machine-refill.jpg",
+  "bb-01061": "/catalog/items/household/mosquito-repellent-machine-refill.jpg",
+  "bb-01022": "/catalog/items/household/mosquito-repellent-machine-refill.jpg",
+  "bb-01021": "/catalog/items/household/mosquito-repellent-machine-refill.jpg",
+  "bb-01073": "/catalog/items/household/mosquito-repellent-machine-refill.jpg",
+  "bb-01072": "/catalog/items/household/mosquito-repellent-machine-refill.jpg",
+  "bb-01059": "/catalog/items/household/mosquito-coil-10pcs.jpg",
+  "bb-01088": "/catalog/items/household/mosquito-coil-10pcs.jpg",
+  "bb-01094": "/catalog/items/household/room-freshener-spray-270ml.jpg",
+  "bb-01025": "/catalog/items/household/room-freshener-spray-270ml.jpg",
+  "bb-01058": "/catalog/items/household/room-freshener-spray-270ml.jpg",
+  "bb-01137": "/catalog/items/household/matic-detergent-powder-4kg.jpg",
+  "bb-01030": "/catalog/items/household/matic-detergent-powder-4kg.jpg",
+  "bb-01144": "/catalog/items/household/matic-detergent-powder-4kg.jpg",
+  "bb-01032": "/catalog/items/household/matic-detergent-powder-4kg.jpg",
+  "bb-01055": "/catalog/items/household/matic-detergent-powder-4kg.jpg",
+  "bb-01146": "/catalog/items/household/matic-detergent-powder-4kg.jpg",
+  "bb-01070": "/catalog/items/household/aluminium-foil-25m.jpg",
+  "bb-01121": "/catalog/items/household/aluminium-foil-25m.jpg",
+  "bb-01083": "/catalog/items/household/broom-phool-jhadu.jpg",
+  "bb-01087": "/catalog/items/household/broom-phool-jhadu.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
