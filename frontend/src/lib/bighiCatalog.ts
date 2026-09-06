@@ -29224,7 +29224,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 1122 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 1168 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -30349,7 +30349,53 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00831": "/catalog/items/drinks/fruit-juice-1l-carton.jpg",
   "bb-00833": "/catalog/items/drinks/fruit-juice-1l-carton.jpg",
   "bb-00863": "/catalog/items/drinks/club-soda-750ml.jpg",
-  "bb-00834": "/catalog/items/drinks/club-soda-750ml.jpg"
+  "bb-00834": "/catalog/items/drinks/club-soda-750ml.jpg",
+  "bb-01285": "/catalog/items/personal/perfume-100ml.jpg",
+  "bb-01286": "/catalog/items/personal/perfume-100ml.jpg",
+  "bb-01341": "/catalog/items/personal/perfume-100ml.jpg",
+  "bb-01342": "/catalog/items/personal/perfume-100ml.jpg",
+  "bb-01345": "/catalog/items/personal/perfume-100ml.jpg",
+  "bb-01346": "/catalog/items/personal/perfume-100ml.jpg",
+  "bb-01367": "/catalog/items/personal/face-cream-50g.jpg",
+  "bb-01368": "/catalog/items/personal/face-cream-50g.jpg",
+  "bb-01395": "/catalog/items/personal/face-cream-50g.jpg",
+  "bb-01396": "/catalog/items/personal/face-cream-50g.jpg",
+  "bb-01420": "/catalog/items/personal/face-cream-50g.jpg",
+  "bb-01421": "/catalog/items/personal/face-cream-50g.jpg",
+  "bb-01291": "/catalog/items/personal/beard-oil-30ml.jpg",
+  "bb-01292": "/catalog/items/personal/beard-oil-30ml.jpg",
+  "bb-01454": "/catalog/items/personal/beard-oil-30ml.jpg",
+  "bb-01455": "/catalog/items/personal/beard-oil-30ml.jpg",
+  "bb-01371": "/catalog/items/personal/germ-protection-soap-75g.jpg",
+  "bb-01372": "/catalog/items/personal/germ-protection-soap-75g.jpg",
+  "bb-01429": "/catalog/items/personal/germ-protection-soap-75g.jpg",
+  "bb-01430": "/catalog/items/personal/germ-protection-soap-75g.jpg",
+  "bb-01320": "/catalog/items/personal/germ-protection-soap-75g.jpg",
+  "bb-01321": "/catalog/items/personal/germ-protection-soap-75g.jpg",
+  "bb-01381": "/catalog/items/personal/beauty-bathing-bar-4pack.jpg",
+  "bb-01414": "/catalog/items/personal/beauty-bathing-bar-4pack.jpg",
+  "bb-01329": "/catalog/items/personal/beauty-bathing-bar-4pack.jpg",
+  "bb-01310": "/catalog/items/personal/toothbrush-1pc.jpg",
+  "bb-01401": "/catalog/items/personal/toothbrush-1pc.jpg",
+  "bb-01438": "/catalog/items/personal/toothbrush-1pc.jpg",
+  "bb-01293": "/catalog/items/personal/nail-grooming-kit.jpg",
+  "bb-01360": "/catalog/items/personal/nail-grooming-kit.jpg",
+  "bb-01356": "/catalog/items/personal/shaving-cream-70g.jpg",
+  "bb-01357": "/catalog/items/personal/shaving-cream-70g.jpg",
+  "bb-01397": "/catalog/items/personal/shaving-cream-70g.jpg",
+  "bb-01398": "/catalog/items/personal/shaving-cream-70g.jpg",
+  "bb-01338": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01337": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01451": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01450": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01300": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01299": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01326": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01296": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01363": "/catalog/items/personal/shampoo-650ml.jpg",
+  "bb-01463": "/catalog/items/personal/sanitary-pads-40xl.jpg",
+  "bb-01445": "/catalog/items/personal/sanitary-pads-40xl.jpg",
+  "bb-01442": "/catalog/items/personal/sanitary-pads-40xl.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
