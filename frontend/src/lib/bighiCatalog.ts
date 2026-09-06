@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 670 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 699 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27905,7 +27905,36 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-02171": "/catalog/items/electronics/rechargeable-torch.jpg",
   "bb-02201": "/catalog/items/electronics/rechargeable-torch.jpg",
   "bb-02156": "/catalog/items/electronics/wall-clock.jpg",
-  "bb-02180": "/catalog/items/electronics/wall-clock.jpg"
+  "bb-02180": "/catalog/items/electronics/wall-clock.jpg",
+  "bb-02007": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02008": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02040": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02041": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02032": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02033": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02009": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02034": "/catalog/items/stationery/long-notebook-172-pages.jpg",
+  "bb-02005": "/catalog/items/stationery/a4-copier-paper-500-sheets.jpg",
+  "bb-02004": "/catalog/items/stationery/a4-copier-paper-500-sheets.jpg",
+  "bb-02023": "/catalog/items/stationery/a4-copier-paper-500-sheets.jpg",
+  "bb-02022": "/catalog/items/stationery/a4-copier-paper-500-sheets.jpg",
+  "bb-02003": "/catalog/items/stationery/gel-pen-black-5pcs.jpg",
+  "bb-02027": "/catalog/items/stationery/gel-pen-black-5pcs.jpg",
+  "bb-02045": "/catalog/items/stationery/gel-pen-black-5pcs.jpg",
+  "bb-02010": "/catalog/items/stationery/spiral-notebook-a4.jpg",
+  "bb-02042": "/catalog/items/stationery/spiral-notebook-a4.jpg",
+  "bb-01995": "/catalog/items/stationery/highlighter-set-4shades.jpg",
+  "bb-02037": "/catalog/items/stationery/highlighter-set-4shades.jpg",
+  "bb-02024": "/catalog/items/stationery/stapler-with-pins.jpg",
+  "bb-02036": "/catalog/items/stationery/stapler-with-pins.jpg",
+  "bb-02019": "/catalog/items/stationery/adhesive-glue-200g.jpg",
+  "bb-02018": "/catalog/items/stationery/adhesive-glue-200g.jpg",
+  "bb-02028": "/catalog/items/stationery/cello-tape-roll.jpg",
+  "bb-02047": "/catalog/items/stationery/cello-tape-roll.jpg",
+  "bb-01996": "/catalog/items/stationery/scissors.jpg",
+  "bb-02035": "/catalog/items/stationery/scissors.jpg",
+  "bb-02031": "/catalog/items/stationery/file-folder-5pcs.jpg",
+  "bb-02046": "/catalog/items/stationery/file-folder-5pcs.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
