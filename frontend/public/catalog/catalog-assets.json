@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 447,
-  "totalSkus": 1262,
+  "totalAssets": 457,
+  "totalSkus": 1287,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -13891,6 +13891,281 @@
       "width": 600,
       "height": 600,
       "bytes": 56735,
+      "verified": true
+    },
+    "bb-00439": {
+      "skuId": "bb-00439",
+      "name": "Dukaan Fresh Sabut Jeera / Cumin Seeds (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-jeera.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 80669,
+      "verified": true
+    },
+    "bb-00440": {
+      "skuId": "bb-00440",
+      "name": "Dukaan Fresh Sabut Jeera / Cumin Seeds (Khula)",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-jeera.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 80669,
+      "verified": true
+    },
+    "bb-00441": {
+      "skuId": "bb-00441",
+      "name": "Dukaan Fresh Sabut Jeera / Cumin Seeds (Khula)",
+      "unit": "250 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-jeera.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 80669,
+      "verified": true
+    },
+    "bb-00442": {
+      "skuId": "bb-00442",
+      "name": "Dukaan Fresh Sabut Jeera / Cumin Seeds (Khula)",
+      "unit": "500 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-jeera.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 80669,
+      "verified": true
+    },
+    "bb-00443": {
+      "skuId": "bb-00443",
+      "name": "Dukaan Fresh Sabut Khada Dhania (Khula)",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-dhania.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 75080,
+      "verified": true
+    },
+    "bb-00444": {
+      "skuId": "bb-00444",
+      "name": "Dukaan Fresh Sabut Khada Dhania (Khula)",
+      "unit": "250 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-dhania.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 75080,
+      "verified": true
+    },
+    "bb-00445": {
+      "skuId": "bb-00445",
+      "name": "Dukaan Fresh Sabut Khada Dhania (Khula)",
+      "unit": "500 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-dhania.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 75080,
+      "verified": true
+    },
+    "bb-00436": {
+      "skuId": "bb-00436",
+      "name": "Dukaan Fresh Sabut Golki / Black Pepper (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-golki.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71650,
+      "verified": true
+    },
+    "bb-00437": {
+      "skuId": "bb-00437",
+      "name": "Dukaan Fresh Sabut Golki / Black Pepper (Khula)",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-golki.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71650,
+      "verified": true
+    },
+    "bb-00438": {
+      "skuId": "bb-00438",
+      "name": "Dukaan Fresh Sabut Golki / Black Pepper (Khula)",
+      "unit": "250 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-golki.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 71650,
+      "verified": true
+    },
+    "bb-00448": {
+      "skuId": "bb-00448",
+      "name": "Dukaan Fresh Saunf / Fennel Seeds (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-saunf.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64736,
+      "verified": true
+    },
+    "bb-00449": {
+      "skuId": "bb-00449",
+      "name": "Dukaan Fresh Saunf / Fennel Seeds (Khula)",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-saunf.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64736,
+      "verified": true
+    },
+    "bb-00450": {
+      "skuId": "bb-00450",
+      "name": "Dukaan Fresh Saunf / Fennel Seeds (Khula)",
+      "unit": "250 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-saunf.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 64736,
+      "verified": true
+    },
+    "bb-00451": {
+      "skuId": "bb-00451",
+      "name": "Dukaan Fresh Sukhi Lal Mirch Sabut (Khula)",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sukhi-lal-mirch.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 85325,
+      "verified": true
+    },
+    "bb-00452": {
+      "skuId": "bb-00452",
+      "name": "Dukaan Fresh Sukhi Lal Mirch Sabut (Khula)",
+      "unit": "250 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sukhi-lal-mirch.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 85325,
+      "verified": true
+    },
+    "bb-00416": {
+      "skuId": "bb-00416",
+      "name": "Dukaan Fresh Dalchini / Cinnamon Sticks (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-dalchini.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47573,
+      "verified": true
+    },
+    "bb-00417": {
+      "skuId": "bb-00417",
+      "name": "Dukaan Fresh Dalchini / Cinnamon Sticks (Khula)",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-dalchini.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 47573,
+      "verified": true
+    },
+    "bb-00414": {
+      "skuId": "bb-00414",
+      "name": "Dukaan Fresh Chhoti Hari Elaichi (Khula)",
+      "unit": "25 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-hari-elaichi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52879,
+      "verified": true
+    },
+    "bb-00415": {
+      "skuId": "bb-00415",
+      "name": "Dukaan Fresh Chhoti Hari Elaichi (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-hari-elaichi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 52879,
+      "verified": true
+    },
+    "bb-00412": {
+      "skuId": "bb-00412",
+      "name": "Dukaan Fresh Badi Elaichi / Black Cardamom (Khula)",
+      "unit": "25 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-badi-elaichi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60581,
+      "verified": true
+    },
+    "bb-00413": {
+      "skuId": "bb-00413",
+      "name": "Dukaan Fresh Badi Elaichi / Black Cardamom (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-badi-elaichi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 60581,
+      "verified": true
+    },
+    "bb-00446": {
+      "skuId": "bb-00446",
+      "name": "Dukaan Fresh Sabut Laung / Cloves (Khula)",
+      "unit": "25 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-laung.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 57591,
+      "verified": true
+    },
+    "bb-00447": {
+      "skuId": "bb-00447",
+      "name": "Dukaan Fresh Sabut Laung / Cloves (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-sabut-laung.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 57591,
+      "verified": true
+    },
+    "bb-00453": {
+      "skuId": "bb-00453",
+      "name": "Dukaan Fresh Tejpatta / Bay Leaves (Khula)",
+      "unit": "50 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-tejpatta.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44146,
+      "verified": true
+    },
+    "bb-00454": {
+      "skuId": "bb-00454",
+      "name": "Dukaan Fresh Tejpatta / Bay Leaves (Khula)",
+      "unit": "100 g",
+      "categoryId": "oils",
+      "path": "/catalog/items/oils/khula-tejpatta.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 44146,
       "verified": true
     }
   }

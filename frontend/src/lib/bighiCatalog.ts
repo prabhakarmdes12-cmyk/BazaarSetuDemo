@@ -29224,7 +29224,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 1262 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 1287 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -30489,7 +30489,32 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00407": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg",
   "bb-00538": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg",
   "bb-00520": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg",
-  "bb-00486": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg"
+  "bb-00486": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg",
+  "bb-00439": "/catalog/items/oils/khula-sabut-jeera.jpg",
+  "bb-00440": "/catalog/items/oils/khula-sabut-jeera.jpg",
+  "bb-00441": "/catalog/items/oils/khula-sabut-jeera.jpg",
+  "bb-00442": "/catalog/items/oils/khula-sabut-jeera.jpg",
+  "bb-00443": "/catalog/items/oils/khula-sabut-dhania.jpg",
+  "bb-00444": "/catalog/items/oils/khula-sabut-dhania.jpg",
+  "bb-00445": "/catalog/items/oils/khula-sabut-dhania.jpg",
+  "bb-00436": "/catalog/items/oils/khula-sabut-golki.jpg",
+  "bb-00437": "/catalog/items/oils/khula-sabut-golki.jpg",
+  "bb-00438": "/catalog/items/oils/khula-sabut-golki.jpg",
+  "bb-00448": "/catalog/items/oils/khula-saunf.jpg",
+  "bb-00449": "/catalog/items/oils/khula-saunf.jpg",
+  "bb-00450": "/catalog/items/oils/khula-saunf.jpg",
+  "bb-00451": "/catalog/items/oils/khula-sukhi-lal-mirch.jpg",
+  "bb-00452": "/catalog/items/oils/khula-sukhi-lal-mirch.jpg",
+  "bb-00416": "/catalog/items/oils/khula-dalchini.jpg",
+  "bb-00417": "/catalog/items/oils/khula-dalchini.jpg",
+  "bb-00414": "/catalog/items/oils/khula-hari-elaichi.jpg",
+  "bb-00415": "/catalog/items/oils/khula-hari-elaichi.jpg",
+  "bb-00412": "/catalog/items/oils/khula-badi-elaichi.jpg",
+  "bb-00413": "/catalog/items/oils/khula-badi-elaichi.jpg",
+  "bb-00446": "/catalog/items/oils/khula-sabut-laung.jpg",
+  "bb-00447": "/catalog/items/oils/khula-sabut-laung.jpg",
+  "bb-00453": "/catalog/items/oils/khula-tejpatta.jpg",
+  "bb-00454": "/catalog/items/oils/khula-tejpatta.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
