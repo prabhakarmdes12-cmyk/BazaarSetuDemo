@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 830 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 870 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28065,7 +28065,47 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00132": "/catalog/items/vegetables/button-mushroom-200g.jpg",
   "bb-00134": "/catalog/items/vegetables/palak-spinach-500g.jpg",
   "bb-00140": "/catalog/items/vegetables/red-onion-5kg-sack.jpg",
-  "bb-00139": "/catalog/items/vegetables/red-onion-5kg-sack.jpg"
+  "bb-00139": "/catalog/items/vegetables/red-onion-5kg-sack.jpg",
+  "bb-00131": "/catalog/items/vegetables/hybrid-potato-5kg-sack.jpg",
+  "bb-00130": "/catalog/items/vegetables/hybrid-potato-5kg-sack.jpg",
+  "bb-00128": "/catalog/items/vegetables/hybrid-potato-1kg.jpg",
+  "bb-00137": "/catalog/items/vegetables/red-onion-1kg.jpg",
+  "bb-00108": "/catalog/items/vegetables/desi-tomato-1kg.jpg",
+  "bb-00110": "/catalog/items/vegetables/desi-tomato-1kg.jpg",
+  "bb-00088": "/catalog/items/vegetables/bhindi-okra-500g.jpg",
+  "bb-00118": "/catalog/items/vegetables/garlic-250g.jpg",
+  "bb-00120": "/catalog/items/vegetables/garlic-250g.jpg",
+  "bb-00121": "/catalog/items/vegetables/ginger-250g.jpg",
+  "bb-00123": "/catalog/items/vegetables/ginger-250g.jpg",
+  "bb-00117": "/catalog/items/vegetables/fresh-coriander-100g.jpg",
+  "bb-01358": "/catalog/items/baby/hand-sanitizer-500ml.jpg",
+  "bb-01357": "/catalog/items/baby/hand-sanitizer-500ml.jpg",
+  "bb-01381": "/catalog/items/baby/hand-sanitizer-500ml.jpg",
+  "bb-01380": "/catalog/items/baby/hand-sanitizer-500ml.jpg",
+  "bb-01404": "/catalog/items/baby/hand-sanitizer-500ml.jpg",
+  "bb-01403": "/catalog/items/baby/hand-sanitizer-500ml.jpg",
+  "bb-01387": "/catalog/items/baby/baby-lotion-200ml.jpg",
+  "bb-01368": "/catalog/items/baby/baby-lotion-200ml.jpg",
+  "bb-01444": "/catalog/items/baby/baby-lotion-200ml.jpg",
+  "bb-01347": "/catalog/items/baby/baby-toothbrush.jpg",
+  "bb-01436": "/catalog/items/baby/baby-toothbrush.jpg",
+  "bb-01417": "/catalog/items/baby/baby-toothbrush.jpg",
+  "bb-01392": "/catalog/items/baby/baby-shampoo-200ml.jpg",
+  "bb-01373": "/catalog/items/baby/baby-shampoo-200ml.jpg",
+  "bb-01447": "/catalog/items/baby/baby-shampoo-200ml.jpg",
+  "bb-01350": "/catalog/items/baby/feeding-bottle-240ml.jpg",
+  "bb-01439": "/catalog/items/baby/feeding-bottle-240ml.jpg",
+  "bb-01435": "/catalog/items/baby/feeding-bottle-240ml.jpg",
+  "bb-01390": "/catalog/items/baby/baby-powder-200g.jpg",
+  "bb-01371": "/catalog/items/baby/baby-powder-200g.jpg",
+  "bb-01377": "/catalog/items/baby/diaper-rash-cream-50g.jpg",
+  "bb-01451": "/catalog/items/baby/diaper-rash-cream-50g.jpg",
+  "bb-01343": "/catalog/items/baby/diaper-rash-cream-50g.jpg",
+  "bb-01400": "/catalog/items/baby/baby-formula-400g.jpg",
+  "bb-01419": "/catalog/items/baby/baby-formula-400g.jpg",
+  "bb-01453": "/catalog/items/baby/baby-formula-400g.jpg",
+  "bb-01399": "/catalog/items/baby/cotton-roll-100g.jpg",
+  "bb-01410": "/catalog/items/baby/cotton-roll-100g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
