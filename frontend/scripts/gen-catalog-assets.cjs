@@ -883,6 +883,28 @@ const SKU_ASSET_ROWS = [
   ['frozen', "Prasuma Veg Momos Frozen", "300 g", 'frozen/veg-momos-frozen-500g.jpg'],
   ['frozen', "Sumeru Veg Momos Frozen", "300 g", 'frozen/veg-momos-frozen-500g.jpg'],
   ['frozen', "Wow! Momo Veg Momos Frozen", "300 g", 'frozen/veg-momos-frozen-500g.jpg'],
+  // ---- Batch 8: loose produce ------------------------------------------------
+  ['vegetables', "Bottle Gourd / Lauki", "1 pc ~700 g", 'vegetables/bottle-gourd-lauki.jpg'],
+  ['vegetables', "Bottle Gourd / Lauki", "1 kg", 'vegetables/bottle-gourd-lauki.jpg'],
+  ['vegetables', "Bitter Gourd / Karela", "500 g", 'vegetables/bitter-gourd-karela.jpg'],
+  ['vegetables', "Bitter Gourd / Karela", "1 kg", 'vegetables/bitter-gourd-karela.jpg'],
+  ['vegetables', "Brinjal / Baingan", "500 g", 'vegetables/brinjal-baingan.jpg'],
+  ['vegetables', "Brinjal / Baingan", "1 kg", 'vegetables/brinjal-baingan.jpg'],
+  ['vegetables', "Cabbage / Patta Gobi", "1 pc ~800 g", 'vegetables/cabbage-patta-gobi.jpg'],
+  ['vegetables', "Cabbage / Patta Gobi", "1 kg", 'vegetables/cabbage-patta-gobi.jpg'],
+  ['vegetables', "Carrot / Gajar", "500 g", 'vegetables/carrot-gajar.jpg'],
+  ['vegetables', "Carrot / Gajar", "1 kg", 'vegetables/carrot-gajar.jpg'],
+  ['vegetables', "Cauliflower / Phool Gobi", "1 pc ~600 g", 'vegetables/cauliflower-phool-gobi.jpg'],
+  ['vegetables', "Cauliflower / Phool Gobi", "1 kg", 'vegetables/cauliflower-phool-gobi.jpg'],
+  ['vegetables', "Cucumber / Kheera", "500 g", 'vegetables/cucumber-kheera.jpg'],
+  ['vegetables', "Cucumber / Kheera", "1 kg", 'vegetables/cucumber-kheera.jpg'],
+  ['vegetables', "Capsicum Green", "250 g", 'vegetables/capsicum-green.jpg'],
+  ['vegetables', "Capsicum Green", "500 g", 'vegetables/capsicum-green.jpg'],
+  ['vegetables', "Capsicum Green", "1 kg", 'vegetables/capsicum-green.jpg'],
+  ['vegetables', "Green Peas / Matar", "250 g", 'vegetables/green-peas-matar.jpg'],
+  ['vegetables', "Green Peas / Matar", "500 g", 'vegetables/green-peas-matar.jpg'],
+  ['vegetables', "Beetroot", "500 g", 'vegetables/beetroot.jpg'],
+  ['vegetables', "Beetroot", "1 kg", 'vegetables/beetroot.jpg'],
 ];
 
 const EXPECTED_PX = 600;

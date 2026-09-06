@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 791 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 812 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28026,7 +28026,28 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00256": "/catalog/items/staples/sharbati-wheat-atta-5kg.jpg",
   "bb-01646": "/catalog/items/frozen/veg-momos-frozen-500g.jpg",
   "bb-01653": "/catalog/items/frozen/veg-momos-frozen-500g.jpg",
-  "bb-01657": "/catalog/items/frozen/veg-momos-frozen-500g.jpg"
+  "bb-01657": "/catalog/items/frozen/veg-momos-frozen-500g.jpg",
+  "bb-00092": "/catalog/items/vegetables/bottle-gourd-lauki.jpg",
+  "bb-00093": "/catalog/items/vegetables/bottle-gourd-lauki.jpg",
+  "bb-00090": "/catalog/items/vegetables/bitter-gourd-karela.jpg",
+  "bb-00091": "/catalog/items/vegetables/bitter-gourd-karela.jpg",
+  "bb-00094": "/catalog/items/vegetables/brinjal-baingan.jpg",
+  "bb-00095": "/catalog/items/vegetables/brinjal-baingan.jpg",
+  "bb-00096": "/catalog/items/vegetables/cabbage-patta-gobi.jpg",
+  "bb-00097": "/catalog/items/vegetables/cabbage-patta-gobi.jpg",
+  "bb-00101": "/catalog/items/vegetables/carrot-gajar.jpg",
+  "bb-00102": "/catalog/items/vegetables/carrot-gajar.jpg",
+  "bb-00103": "/catalog/items/vegetables/cauliflower-phool-gobi.jpg",
+  "bb-00104": "/catalog/items/vegetables/cauliflower-phool-gobi.jpg",
+  "bb-00105": "/catalog/items/vegetables/cucumber-kheera.jpg",
+  "bb-00106": "/catalog/items/vegetables/cucumber-kheera.jpg",
+  "bb-00098": "/catalog/items/vegetables/capsicum-green.jpg",
+  "bb-00099": "/catalog/items/vegetables/capsicum-green.jpg",
+  "bb-00100": "/catalog/items/vegetables/capsicum-green.jpg",
+  "bb-00126": "/catalog/items/vegetables/green-peas-matar.jpg",
+  "bb-00127": "/catalog/items/vegetables/green-peas-matar.jpg",
+  "bb-00086": "/catalog/items/vegetables/beetroot.jpg",
+  "bb-00087": "/catalog/items/vegetables/beetroot.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

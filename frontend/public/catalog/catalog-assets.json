@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 336,
-  "totalSkus": 791,
+  "totalAssets": 346,
+  "totalSkus": 812,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -8710,6 +8710,237 @@
       "width": 600,
       "height": 600,
       "bytes": 64903,
+      "verified": true
+    },
+    "bb-00092": {
+      "skuId": "bb-00092",
+      "name": "Bottle Gourd / Lauki",
+      "unit": "1 pc ~700 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/bottle-gourd-lauki.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 19120,
+      "verified": true
+    },
+    "bb-00093": {
+      "skuId": "bb-00093",
+      "name": "Bottle Gourd / Lauki",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/bottle-gourd-lauki.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 19120,
+      "verified": true
+    },
+    "bb-00090": {
+      "skuId": "bb-00090",
+      "name": "Bitter Gourd / Karela",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/bitter-gourd-karela.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 53266,
+      "verified": true
+    },
+    "bb-00091": {
+      "skuId": "bb-00091",
+      "name": "Bitter Gourd / Karela",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/bitter-gourd-karela.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 53266,
+      "verified": true
+    },
+    "bb-00094": {
+      "skuId": "bb-00094",
+      "name": "Brinjal / Baingan",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/brinjal-baingan.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 40985,
+      "verified": true
+    },
+    "bb-00095": {
+      "skuId": "bb-00095",
+      "name": "Brinjal / Baingan",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/brinjal-baingan.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 40985,
+      "verified": true
+    },
+    "bb-00096": {
+      "skuId": "bb-00096",
+      "name": "Cabbage / Patta Gobi",
+      "unit": "1 pc ~800 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/cabbage-patta-gobi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42532,
+      "verified": true
+    },
+    "bb-00097": {
+      "skuId": "bb-00097",
+      "name": "Cabbage / Patta Gobi",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/cabbage-patta-gobi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42532,
+      "verified": true
+    },
+    "bb-00101": {
+      "skuId": "bb-00101",
+      "name": "Carrot / Gajar",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/carrot-gajar.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39802,
+      "verified": true
+    },
+    "bb-00102": {
+      "skuId": "bb-00102",
+      "name": "Carrot / Gajar",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/carrot-gajar.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39802,
+      "verified": true
+    },
+    "bb-00103": {
+      "skuId": "bb-00103",
+      "name": "Cauliflower / Phool Gobi",
+      "unit": "1 pc ~600 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/cauliflower-phool-gobi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68765,
+      "verified": true
+    },
+    "bb-00104": {
+      "skuId": "bb-00104",
+      "name": "Cauliflower / Phool Gobi",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/cauliflower-phool-gobi.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 68765,
+      "verified": true
+    },
+    "bb-00105": {
+      "skuId": "bb-00105",
+      "name": "Cucumber / Kheera",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/cucumber-kheera.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39396,
+      "verified": true
+    },
+    "bb-00106": {
+      "skuId": "bb-00106",
+      "name": "Cucumber / Kheera",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/cucumber-kheera.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39396,
+      "verified": true
+    },
+    "bb-00098": {
+      "skuId": "bb-00098",
+      "name": "Capsicum Green",
+      "unit": "250 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/capsicum-green.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 41117,
+      "verified": true
+    },
+    "bb-00099": {
+      "skuId": "bb-00099",
+      "name": "Capsicum Green",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/capsicum-green.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 41117,
+      "verified": true
+    },
+    "bb-00100": {
+      "skuId": "bb-00100",
+      "name": "Capsicum Green",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/capsicum-green.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 41117,
+      "verified": true
+    },
+    "bb-00126": {
+      "skuId": "bb-00126",
+      "name": "Green Peas / Matar",
+      "unit": "250 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/green-peas-matar.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59275,
+      "verified": true
+    },
+    "bb-00127": {
+      "skuId": "bb-00127",
+      "name": "Green Peas / Matar",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/green-peas-matar.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 59275,
+      "verified": true
+    },
+    "bb-00086": {
+      "skuId": "bb-00086",
+      "name": "Beetroot",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/beetroot.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49710,
+      "verified": true
+    },
+    "bb-00087": {
+      "skuId": "bb-00087",
+      "name": "Beetroot",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/beetroot.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 49710,
       "verified": true
     }
   }
