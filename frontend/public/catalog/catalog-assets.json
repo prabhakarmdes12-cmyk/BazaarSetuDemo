@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 316,
-  "totalSkus": 727,
+  "totalAssets": 326,
+  "totalSkus": 752,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -8006,6 +8006,281 @@
       "width": 600,
       "height": 600,
       "bytes": 43778,
+      "verified": true
+    },
+    "bb-02124": {
+      "skuId": "bb-02124",
+      "name": "Drools Pet Shampoo",
+      "unit": "200 ml",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31467,
+      "verified": true
+    },
+    "bb-02125": {
+      "skuId": "bb-02125",
+      "name": "Drools Pet Shampoo",
+      "unit": "500 ml",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31467,
+      "verified": true
+    },
+    "bb-02128": {
+      "skuId": "bb-02128",
+      "name": "Himalaya Pet Shampoo",
+      "unit": "200 ml",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31467,
+      "verified": true
+    },
+    "bb-02129": {
+      "skuId": "bb-02129",
+      "name": "Himalaya Pet Shampoo",
+      "unit": "500 ml",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31467,
+      "verified": true
+    },
+    "bb-02126": {
+      "skuId": "bb-02126",
+      "name": "Drools Puppy Dry Food",
+      "unit": "1.2 kg",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45845,
+      "verified": true
+    },
+    "bb-02127": {
+      "skuId": "bb-02127",
+      "name": "Drools Puppy Dry Food",
+      "unit": "3 kg",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45845,
+      "verified": true
+    },
+    "bb-02147": {
+      "skuId": "bb-02147",
+      "name": "Pedigree Puppy Dry Food",
+      "unit": "1.2 kg",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45845,
+      "verified": true
+    },
+    "bb-02148": {
+      "skuId": "bb-02148",
+      "name": "Pedigree Puppy Dry Food",
+      "unit": "3 kg",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 45845,
+      "verified": true
+    },
+    "bb-02138": {
+      "skuId": "bb-02138",
+      "name": "Me-O Cat Wet Food Pouch",
+      "unit": "85 g",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/cat-wet-food-85g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54203,
+      "verified": true
+    },
+    "bb-02139": {
+      "skuId": "bb-02139",
+      "name": "Me-O Cat Wet Food Pouch",
+      "unit": "12 pack",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/cat-wet-food-85g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54203,
+      "verified": true
+    },
+    "bb-02154": {
+      "skuId": "bb-02154",
+      "name": "Whiskas Cat Wet Food Pouch",
+      "unit": "85 g",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/cat-wet-food-85g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54203,
+      "verified": true
+    },
+    "bb-02155": {
+      "skuId": "bb-02155",
+      "name": "Whiskas Cat Wet Food Pouch",
+      "unit": "12 pack",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/cat-wet-food-85g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 54203,
+      "verified": true
+    },
+    "bb-02123": {
+      "skuId": "bb-02123",
+      "name": "Drools Pet Grooming Brush",
+      "unit": "1 pc",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/pet-grooming-brush.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 29430,
+      "verified": true
+    },
+    "bb-02134": {
+      "skuId": "bb-02134",
+      "name": "Local Pet Grooming Brush",
+      "unit": "1 pc",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/pet-grooming-brush.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 29430,
+      "verified": true
+    },
+    "bb-02130": {
+      "skuId": "bb-02130",
+      "name": "Local Bird Feed Seeds",
+      "unit": "500 g",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/bird-feed-seeds-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 63607,
+      "verified": true
+    },
+    "bb-02131": {
+      "skuId": "bb-02131",
+      "name": "Local Bird Feed Seeds",
+      "unit": "1 kg",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/bird-feed-seeds-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 63607,
+      "verified": true
+    },
+    "bb-02132": {
+      "skuId": "bb-02132",
+      "name": "Local Dog Collar & Leash",
+      "unit": "1 set",
+      "categoryId": "pet",
+      "path": "/catalog/items/pet/dog-collar-leash-set.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42926,
+      "verified": true
+    },
+    "bb-02172": {
+      "skuId": "bb-02172",
+      "name": "HP Pen Drive 32GB",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/pen-drive-32gb.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42100,
+      "verified": true
+    },
+    "bb-02199": {
+      "skuId": "bb-02199",
+      "name": "SanDisk Pen Drive 32GB",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/pen-drive-32gb.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42100,
+      "verified": true
+    },
+    "bb-02197": {
+      "skuId": "bb-02197",
+      "name": "Samsung Memory Card 64GB",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/memory-card-64gb.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48756,
+      "verified": true
+    },
+    "bb-02198": {
+      "skuId": "bb-02198",
+      "name": "SanDisk Memory Card 64GB",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/memory-card-64gb.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48756,
+      "verified": true
+    },
+    "bb-02176": {
+      "skuId": "bb-02176",
+      "name": "Local Mobile Stand Holder",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/mobile-stand-holder.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 24445,
+      "verified": true
+    },
+    "bb-02190": {
+      "skuId": "bb-02190",
+      "name": "Portronics Mobile Stand Holder",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/mobile-stand-holder.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 24445,
+      "verified": true
+    },
+    "bb-02177": {
+      "skuId": "bb-02177",
+      "name": "Local OTG Adapter",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/otg-adapter.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31474,
+      "verified": true
+    },
+    "bb-02191": {
+      "skuId": "bb-02191",
+      "name": "Portronics OTG Adapter",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/otg-adapter.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 31474,
       "verified": true
     }
   }

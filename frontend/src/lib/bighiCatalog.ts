@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 727 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 752 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27962,7 +27962,32 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-02093": "/catalog/items/beauty/lip-balm-4-8g.jpg",
   "bb-02105": "/catalog/items/beauty/lip-balm-4-8g.jpg",
   "bb-02080": "/catalog/items/beauty/makeup-brush-set-5pcs.jpg",
-  "bb-02103": "/catalog/items/beauty/makeup-brush-set-5pcs.jpg"
+  "bb-02103": "/catalog/items/beauty/makeup-brush-set-5pcs.jpg",
+  "bb-02124": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+  "bb-02125": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+  "bb-02128": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+  "bb-02129": "/catalog/items/pet/pet-shampoo-200ml.jpg",
+  "bb-02126": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+  "bb-02127": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+  "bb-02147": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+  "bb-02148": "/catalog/items/pet/puppy-dry-food-1-2kg.jpg",
+  "bb-02138": "/catalog/items/pet/cat-wet-food-85g.jpg",
+  "bb-02139": "/catalog/items/pet/cat-wet-food-85g.jpg",
+  "bb-02154": "/catalog/items/pet/cat-wet-food-85g.jpg",
+  "bb-02155": "/catalog/items/pet/cat-wet-food-85g.jpg",
+  "bb-02123": "/catalog/items/pet/pet-grooming-brush.jpg",
+  "bb-02134": "/catalog/items/pet/pet-grooming-brush.jpg",
+  "bb-02130": "/catalog/items/pet/bird-feed-seeds-500g.jpg",
+  "bb-02131": "/catalog/items/pet/bird-feed-seeds-500g.jpg",
+  "bb-02132": "/catalog/items/pet/dog-collar-leash-set.jpg",
+  "bb-02172": "/catalog/items/electronics/pen-drive-32gb.jpg",
+  "bb-02199": "/catalog/items/electronics/pen-drive-32gb.jpg",
+  "bb-02197": "/catalog/items/electronics/memory-card-64gb.jpg",
+  "bb-02198": "/catalog/items/electronics/memory-card-64gb.jpg",
+  "bb-02176": "/catalog/items/electronics/mobile-stand-holder.jpg",
+  "bb-02190": "/catalog/items/electronics/mobile-stand-holder.jpg",
+  "bb-02177": "/catalog/items/electronics/otg-adapter.jpg",
+  "bb-02191": "/catalog/items/electronics/otg-adapter.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
