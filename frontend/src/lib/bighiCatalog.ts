@@ -29224,7 +29224,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 1168 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 1207 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -30395,7 +30395,46 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01363": "/catalog/items/personal/shampoo-650ml.jpg",
   "bb-01463": "/catalog/items/personal/sanitary-pads-40xl.jpg",
   "bb-01445": "/catalog/items/personal/sanitary-pads-40xl.jpg",
-  "bb-01442": "/catalog/items/personal/sanitary-pads-40xl.jpg"
+  "bb-01442": "/catalog/items/personal/sanitary-pads-40xl.jpg",
+  "bb-01335": "/catalog/items/personal/sunsilk-shampoo-180ml.jpg",
+  "bb-01448": "/catalog/items/personal/sunsilk-shampoo-180ml.jpg",
+  "bb-01298": "/catalog/items/personal/clinic-plus-shampoo-175ml.jpg",
+  "bb-01325": "/catalog/items/personal/head-shoulders-shampoo-180ml.jpg",
+  "bb-01349": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01366": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01391": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01334": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01394": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01424": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01386": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01405": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01460": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01319": "/catalog/items/personal/hand-wash-215ml.jpg",
+  "bb-01376": "/catalog/items/personal/hand-wash-215ml.jpg",
+  "bb-01428": "/catalog/items/personal/hand-wash-215ml.jpg",
+  "bb-01288": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01290": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01313": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01315": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01301": "/catalog/items/personal/close-up-red-gel-150g.jpg",
+  "bb-01303": "/catalog/items/personal/colgate-maxfresh-gel-150g.jpg",
+  "bb-01415": "/catalog/items/personal/colgate-maxfresh-gel-150g.jpg",
+  "bb-01306": "/catalog/items/personal/sensodyne-sensitive-75g.jpg",
+  "bb-01434": "/catalog/items/personal/sensodyne-sensitive-75g.jpg",
+  "bb-01457": "/catalog/items/personal/sensodyne-sensitive-75g.jpg",
+  "bb-01309": "/catalog/items/personal/colgate-strong-teeth-200g.jpg",
+  "bb-01419": "/catalog/items/personal/colgate-strong-teeth-200g.jpg",
+  "bb-01436": "/catalog/items/personal/herbal-red-toothpaste-150g.jpg",
+  "bb-01437": "/catalog/items/personal/herbal-red-toothpaste-150g.jpg",
+  "bb-01359": "/catalog/items/personal/shaving-foam-200ml.jpg",
+  "bb-01400": "/catalog/items/personal/shaving-foam-200ml.jpg",
+  "bb-01411": "/catalog/items/personal/shaving-foam-200ml.jpg",
+  "bb-01351": "/catalog/items/personal/twin-blade-razors-pack-of-5.jpg",
+  "bb-01281": "/catalog/items/personal/twin-blade-razors-pack-of-5.jpg",
+  "bb-01353": "/catalog/items/personal/gillette-presto-razor-5-pack.jpg",
+  "bb-01352": "/catalog/items/personal/razor-cartridge-4pack.jpg",
+  "bb-01282": "/catalog/items/personal/razor-cartridge-4pack.jpg",
+  "bb-01355": "/catalog/items/personal/razor-cartridge-4pack.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
