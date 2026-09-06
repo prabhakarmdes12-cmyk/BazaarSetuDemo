@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 928 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 970 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28163,7 +28163,49 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01634": "/catalog/items/frozen/french-fries-frozen-400g.jpg",
   "bb-01635": "/catalog/items/frozen/french-fries-frozen-400g.jpg",
   "bb-01624": "/catalog/items/frozen/french-fries-frozen-400g.jpg",
-  "bb-01625": "/catalog/items/frozen/french-fries-frozen-400g.jpg"
+  "bb-01625": "/catalog/items/frozen/french-fries-frozen-400g.jpg",
+  "bb-01102": "/catalog/items/household/tissue-paper-box-100.jpg",
+  "bb-01103": "/catalog/items/household/tissue-paper-box-100.jpg",
+  "bb-01109": "/catalog/items/household/tissue-paper-box-100.jpg",
+  "bb-01110": "/catalog/items/household/tissue-paper-box-100.jpg",
+  "bb-01105": "/catalog/items/household/toilet-paper-roll-4pack.jpg",
+  "bb-01106": "/catalog/items/household/toilet-paper-roll-4pack.jpg",
+  "bb-01112": "/catalog/items/household/toilet-paper-roll-4pack.jpg",
+  "bb-01113": "/catalog/items/household/toilet-paper-roll-4pack.jpg",
+  "bb-01130": "/catalog/items/household/toilet-paper-roll-4pack.jpg",
+  "bb-01131": "/catalog/items/household/toilet-paper-roll-4pack.jpg",
+  "bb-01026": "/catalog/items/household/liquid-detergent-1l.jpg",
+  "bb-01027": "/catalog/items/household/liquid-detergent-1l.jpg",
+  "bb-01067": "/catalog/items/household/liquid-detergent-1l.jpg",
+  "bb-01068": "/catalog/items/household/liquid-detergent-1l.jpg",
+  "bb-01138": "/catalog/items/household/liquid-detergent-1l.jpg",
+  "bb-01139": "/catalog/items/household/liquid-detergent-1l.jpg",
+  "bb-01040": "/catalog/items/household/surface-disinfectant-500ml.jpg",
+  "bb-01041": "/catalog/items/household/surface-disinfectant-500ml.jpg",
+  "bb-01079": "/catalog/items/household/surface-disinfectant-500ml.jpg",
+  "bb-01080": "/catalog/items/household/surface-disinfectant-500ml.jpg",
+  "bb-01098": "/catalog/items/household/kitchen-roll-towel-2pack.jpg",
+  "bb-01099": "/catalog/items/household/kitchen-roll-towel-2pack.jpg",
+  "bb-01128": "/catalog/items/household/kitchen-roll-towel-2pack.jpg",
+  "bb-01129": "/catalog/items/household/kitchen-roll-towel-2pack.jpg",
+  "bb-01127": "/catalog/items/household/scrub-pad-3pack.jpg",
+  "bb-01126": "/catalog/items/household/scrub-pad-3pack.jpg",
+  "bb-01154": "/catalog/items/household/scrub-pad-3pack.jpg",
+  "bb-01153": "/catalog/items/household/scrub-pad-3pack.jpg",
+  "bb-01084": "/catalog/items/household/garbage-bags-30.jpg",
+  "bb-01086": "/catalog/items/household/garbage-bags-30.jpg",
+  "bb-01095": "/catalog/items/household/garbage-bags-30.jpg",
+  "bb-01097": "/catalog/items/household/garbage-bags-30.jpg",
+  "bb-01132": "/catalog/items/household/garbage-bags-30.jpg",
+  "bb-01134": "/catalog/items/household/garbage-bags-30.jpg",
+  "bb-01053": "/catalog/items/household/mop-with-refill.jpg",
+  "bb-01125": "/catalog/items/household/mop-with-refill.jpg",
+  "bb-01063": "/catalog/items/household/mosquito-repellent-spray.jpg",
+  "bb-01064": "/catalog/items/household/mosquito-repellent-spray.jpg",
+  "bb-01074": "/catalog/items/household/mosquito-repellent-spray.jpg",
+  "bb-01075": "/catalog/items/household/mosquito-repellent-spray.jpg",
+  "bb-01091": "/catalog/items/household/cling-wrap-30m.jpg",
+  "bb-01122": "/catalog/items/household/cling-wrap-30m.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
