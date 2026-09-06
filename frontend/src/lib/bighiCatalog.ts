@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 699 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 727 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27934,7 +27934,35 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01996": "/catalog/items/stationery/scissors.jpg",
   "bb-02035": "/catalog/items/stationery/scissors.jpg",
   "bb-02031": "/catalog/items/stationery/file-folder-5pcs.jpg",
-  "bb-02046": "/catalog/items/stationery/file-folder-5pcs.jpg"
+  "bb-02046": "/catalog/items/stationery/file-folder-5pcs.jpg",
+  "bb-02063": "/catalog/items/beauty/kajal-pencil.jpg",
+  "bb-02070": "/catalog/items/beauty/kajal-pencil.jpg",
+  "bb-02089": "/catalog/items/beauty/kajal-pencil.jpg",
+  "bb-02073": "/catalog/items/beauty/matte-lipstick.jpg",
+  "bb-02091": "/catalog/items/beauty/matte-lipstick.jpg",
+  "bb-02104": "/catalog/items/beauty/matte-lipstick.jpg",
+  "bb-02067": "/catalog/items/beauty/compact-powder-9g.jpg",
+  "bb-02086": "/catalog/items/beauty/compact-powder-9g.jpg",
+  "bb-02096": "/catalog/items/beauty/compact-powder-9g.jpg",
+  "bb-02068": "/catalog/items/beauty/eyeliner.jpg",
+  "bb-02087": "/catalog/items/beauty/eyeliner.jpg",
+  "bb-02102": "/catalog/items/beauty/eyeliner.jpg",
+  "bb-02072": "/catalog/items/beauty/mascara.jpg",
+  "bb-02090": "/catalog/items/beauty/mascara.jpg",
+  "bb-02069": "/catalog/items/beauty/foundation-30ml.jpg",
+  "bb-02088": "/catalog/items/beauty/foundation-30ml.jpg",
+  "bb-02083": "/catalog/items/beauty/face-serum-30ml.jpg",
+  "bb-02092": "/catalog/items/beauty/face-serum-30ml.jpg",
+  "bb-02094": "/catalog/items/beauty/face-serum-30ml.jpg",
+  "bb-02077": "/catalog/items/beauty/hair-serum-50ml.jpg",
+  "bb-02078": "/catalog/items/beauty/hair-serum-50ml.jpg",
+  "bb-02100": "/catalog/items/beauty/hair-serum-50ml.jpg",
+  "bb-02101": "/catalog/items/beauty/hair-serum-50ml.jpg",
+  "bb-02064": "/catalog/items/beauty/lip-balm-4-8g.jpg",
+  "bb-02093": "/catalog/items/beauty/lip-balm-4-8g.jpg",
+  "bb-02105": "/catalog/items/beauty/lip-balm-4-8g.jpg",
+  "bb-02080": "/catalog/items/beauty/makeup-brush-set-5pcs.jpg",
+  "bb-02103": "/catalog/items/beauty/makeup-brush-set-5pcs.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
