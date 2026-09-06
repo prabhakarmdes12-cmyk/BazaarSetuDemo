@@ -249,5 +249,12 @@ export function getCorsOrigins(): string[] {
   const raw = process.env.CORS_ORIGINS;
   if (raw) return raw.split(',').map((o) => o.trim()).filter(Boolean);
   // Development default — the Next.js dev server.
-  return ['http://localhost:3000', 'http://localhost:3001'];
+  return [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:3005',
+    'https://paaska.chiti.tech',
+    'https://chiti-bazaar.vercel.app',
+    'https://bazarsetu.chiti.tech'
+  ];
 }
