@@ -29224,7 +29224,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 1073 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 1122 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -30300,7 +30300,56 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00582": "/catalog/items/dryfruits/poha-chooda-500g.jpg",
   "bb-02035": "/catalog/items/pooja/camphor-tablets-50g.jpg",
   "bb-02023": "/catalog/items/pooja/cotton-wicks-100-pack.jpg",
-  "bb-02026": "/catalog/items/pooja/hawan-samagri-500g.jpg"
+  "bb-02026": "/catalog/items/pooja/hawan-samagri-500g.jpg",
+  "bb-01461": "/catalog/items/personal/sanitary-pads-15.jpg",
+  "bb-01462": "/catalog/items/personal/sanitary-pads-15.jpg",
+  "bb-01443": "/catalog/items/personal/sanitary-pads-15.jpg",
+  "bb-01444": "/catalog/items/personal/sanitary-pads-15.jpg",
+  "bb-01440": "/catalog/items/personal/sanitary-pads-15.jpg",
+  "bb-01441": "/catalog/items/personal/sanitary-pads-15.jpg",
+  "bb-01318": "/catalog/items/personal/hand-wash-215ml.jpg",
+  "bb-01375": "/catalog/items/personal/hand-wash-215ml.jpg",
+  "bb-01427": "/catalog/items/personal/hand-wash-215ml.jpg",
+  "bb-01393": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01392": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01333": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01332": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01423": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01422": "/catalog/items/personal/moisturising-cream-250ml.jpg",
+  "bb-01331": "/catalog/items/personal/hair-conditioner-335ml.jpg",
+  "bb-01330": "/catalog/items/personal/hair-conditioner-335ml.jpg",
+  "bb-01447": "/catalog/items/personal/hair-conditioner-335ml.jpg",
+  "bb-01446": "/catalog/items/personal/hair-conditioner-335ml.jpg",
+  "bb-01453": "/catalog/items/personal/hair-conditioner-335ml.jpg",
+  "bb-01452": "/catalog/items/personal/hair-conditioner-335ml.jpg",
+  "bb-01369": "/catalog/items/personal/sunscreen-lotion-50ml.jpg",
+  "bb-01370": "/catalog/items/personal/sunscreen-lotion-50ml.jpg",
+  "bb-01377": "/catalog/items/personal/sunscreen-lotion-50ml.jpg",
+  "bb-01378": "/catalog/items/personal/sunscreen-lotion-50ml.jpg",
+  "bb-01382": "/catalog/items/personal/sunscreen-lotion-50ml.jpg",
+  "bb-01383": "/catalog/items/personal/sunscreen-lotion-50ml.jpg",
+  "bb-00849": "/catalog/items/drinks/cola-soft-drink-2l.jpg",
+  "bb-00848": "/catalog/items/drinks/cola-soft-drink-2l.jpg",
+  "bb-00898": "/catalog/items/drinks/cola-soft-drink-2l.jpg",
+  "bb-00897": "/catalog/items/drinks/cola-soft-drink-2l.jpg",
+  "bb-00896": "/catalog/items/drinks/cola-soft-drink-2l.jpg",
+  "bb-00933": "/catalog/items/drinks/cola-soft-drink-2l.jpg",
+  "bb-00932": "/catalog/items/drinks/cola-soft-drink-2l.jpg",
+  "bb-00845": "/catalog/items/drinks/aerated-drink-can-300ml.jpg",
+  "bb-00846": "/catalog/items/drinks/aerated-drink-can-300ml.jpg",
+  "bb-00929": "/catalog/items/drinks/aerated-drink-can-300ml.jpg",
+  "bb-00930": "/catalog/items/drinks/aerated-drink-can-300ml.jpg",
+  "bb-00920": "/catalog/items/drinks/aerated-drink-can-300ml.jpg",
+  "bb-00921": "/catalog/items/drinks/aerated-drink-can-300ml.jpg",
+  "bb-00885": "/catalog/items/drinks/lime-soft-drink-2l.jpg",
+  "bb-00884": "/catalog/items/drinks/lime-soft-drink-2l.jpg",
+  "bb-00883": "/catalog/items/drinks/lime-soft-drink-2l.jpg",
+  "bb-00906": "/catalog/items/drinks/fruit-juice-1l-carton.jpg",
+  "bb-00937": "/catalog/items/drinks/fruit-juice-1l-carton.jpg",
+  "bb-00831": "/catalog/items/drinks/fruit-juice-1l-carton.jpg",
+  "bb-00833": "/catalog/items/drinks/fruit-juice-1l-carton.jpg",
+  "bb-00863": "/catalog/items/drinks/club-soda-750ml.jpg",
+  "bb-00834": "/catalog/items/drinks/club-soda-750ml.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
