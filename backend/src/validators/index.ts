@@ -17,6 +17,8 @@ export const registerSchema = z.object({
   name: z.string().min(1).max(100),
   role: z.enum(['customer', 'vendor']).optional(),
   ref: z.string().min(3).max(20).optional(),
+  shopName: z.string().min(2).max(100).optional(),
+  pincode: z.string().regex(/^[0-9]{6}$/, 'Invalid pincode').optional(),
   acceptPrivacy: z.literal(true, 'Privacy policy consent is required'),
 });
 

@@ -73,7 +73,7 @@ router.post('/verify-otp', authLimiter, validate(verifyOtpSchema), async (req: A
 // Register new user — role is whitelisted to customer/vendor only.
 router.post('/register', authLimiter, validate(registerSchema), async (req: AuthRequest, res: Response) => {
   try {
-    const { phone, name, role, ref } = req.body as { phone: string; name: string; role?: string; ref?: string };
+    const { phone, name, role, ref, shopName, pincode } = req.body as { phone: string; name: string; role?: string; ref?: string; shopName?: string; pincode?: string };
 
     const existing = await prisma.user.findUnique({ where: { phone } });
     if (existing) {
@@ -96,13 +96,19 @@ router.post('/register', authLimiter, validate(registerSchema), async (req: Auth
       data: { phone, name, role: userRole, referralCode, privacyAcceptedAt: new Date() },
     });
 
-    // If vendor, create a shop
+    // If vendor, create a shop with customized 60-second onboarding attributes
     if (userRole === 'vendor') {
+      const finalShopName = shopName?.trim() || `${name} ki Dukaan`;
+      const finalPin = pincode?.trim() || '826001';
       await prisma.shop.create({
         data: {
           ownerId: user.id,
-          name: `${name} ki Dukaan`,
+          name: finalShopName,
           phone,
+          address: `Bank More, Dhanbad - ${finalPin}`,
+          serviceablePincodes: finalPin,
+          deliveryRadiusKm: 3.5,
+          isActive: true,
         },
       });
     }

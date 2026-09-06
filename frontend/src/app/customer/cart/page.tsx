@@ -11,6 +11,8 @@ import { api } from '@/lib/api';
 import { GuestCartItem, getGuestCart, updateGuestQuantity, removeGuestItem } from '@/lib/guestCart';
 import AddressSheet from '@/components/AddressSheet';
 import PaymentSheet from '@/components/PaymentSheet';
+import InlineAuthSheet from '@/components/InlineAuthSheet';
+import { generateWhatsAppOrderUrl } from '@/lib/whatsappBridge';
 import { DeliveryAddress, getDefaultAddress, shortAddress } from '@/lib/address';
 import { PaymentMethod, paymentLabel } from '@/lib/payment';
 
@@ -42,6 +44,7 @@ export default function CartPage() {
   const [addressOpen, setAddressOpen] = useState(false);
   const [paymentOpen, setPaymentOpen] = useState(false);
   const [fulfilmentMode, setFulfilmentMode] = useState<'DELIVERY' | 'PICKUP'>('DELIVERY');
+  const [inlineAuthOpen, setInlineAuthOpen] = useState(false);
 
   // Restore the saved default address on mount so a repeat buyer never retypes it.
   useEffect(() => {
@@ -373,13 +376,29 @@ export default function CartPage() {
           </div>
         </div>
         {isGuest ? (
-          <a
-            href="/login"
-            className="w-full py-4 rounded-xl leaf-gradient text-on-primary font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3"
-          >
-            Login karke order karein
-            <Icon name="chevron_right" />
-          </a>
+          <div className="space-y-2.5">
+            <button
+              onClick={() => setInlineAuthOpen(true)}
+              className="w-full py-3.5 rounded-xl leaf-gradient text-on-primary font-bold text-base shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+            >
+              <span>1-Tap Phone Verify & Order</span>
+              <Icon name="bolt" size="sm" />
+            </button>
+            <a
+              href={generateWhatsAppOrderUrl(
+                '9876543210',
+                guestTitle || 'Bighi Brothers Mart',
+                viewItems.map((i: CartViewItem) => ({ name: i.name, quantity: i.quantity, price: i.price, unit: i.unit })),
+                address ? shortAddress(address) : 'Bank More, Dhanbad (826001)'
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-sm hover:bg-[#20ba59] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+            >
+              <Icon name="chat" size="sm" />
+              <span>Order via WhatsApp (Instant Bill)</span>
+            </a>
+          </div>
         ) : (
           <button
             onClick={() => ((fulfilmentMode === 'PICKUP' || address) ? setPaymentOpen(true) : setAddressOpen(true))}
