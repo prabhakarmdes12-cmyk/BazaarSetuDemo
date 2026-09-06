@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { ChitiInput } from '@chiti/ui';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: React.ReactNode;
@@ -32,10 +31,9 @@ export default function Input({
           {icon}
         </div>
       )}
-      <ChitiInput
-        error={error}
+      <input
         style={{ borderRadius: variantRadius[variant], ...style }}
-        className={`w-full py-4 ${icon ? 'pl-12' : 'pl-4'} ${
+        className={`c-input ${error ? 'error' : ''} w-full py-4 ${icon ? 'pl-12' : 'pl-4'} ${
           rightElement ? 'pr-28' : 'pr-4'
         } transition-all duration-150 text-on-surface placeholder:text-on-surface-variant/60 ${className}`}
         {...props}

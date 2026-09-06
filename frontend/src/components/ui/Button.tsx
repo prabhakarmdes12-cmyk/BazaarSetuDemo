@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import { ChitiButton } from '@chiti/ui';
+import React, { useRef, useCallback } from 'react';
 
 interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
   variant?: 'primary' | 'secondary' | 'success' | 'ghost' | 'surface' | 'gradient';
@@ -13,18 +12,6 @@ const sizeStyles: Record<'sm' | 'md' | 'lg', React.CSSProperties> = {
   sm: { padding: '8px 14px', fontSize: '0.8rem', borderRadius: '10px' },
   md: { padding: '12px 20px', fontSize: '0.9rem', borderRadius: '12px' },
   lg: { padding: '16px 28px', fontSize: '1rem', borderRadius: '14px' },
-};
-
-// Map Chiti Bazaar variants onto the underlying @chiti/ui button primitives —
-// the visual palette is fully overridden below to the obsidian + leaf-green brand.
-const variantMap: Record<string, 'cinematic' | 'glass' | 'saas' | 'error'> = {
-  primary: 'cinematic',
-  gradient: 'cinematic',
-  secondary: 'glass',
-  ghost: 'glass',
-  surface: 'saas',
-  success: 'cinematic',
-  error: 'error',
 };
 
 // Obsidian Black + Fresh Leaf Green overrides per variant.
@@ -66,6 +53,45 @@ const variantStyleOverrides: Record<string, React.CSSProperties> = {
   },
 };
 
+export function useHaptic() {
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  const playPremiumTick = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    try {
+      if (!audioCtxRef.current) {
+        const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+        if (!AudioCtx) return;
+        audioCtxRef.current = new AudioCtx();
+      }
+      const ctx = audioCtxRef.current;
+      if (ctx.state === 'suspended') {
+        ctx.resume();
+      }
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(800, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(50, ctx.currentTime + 0.05);
+      gain.gain.setValueAtTime(0.3, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.05);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.05);
+
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        navigator.vibrate(10);
+      }
+    } catch {
+      // AudioContext failure gracefully swallowed
+    }
+  }, []);
+
+  return { playPremiumTick };
+}
+
 export default function Button({
   variant = 'primary',
   size = 'md',
@@ -73,19 +99,43 @@ export default function Button({
   className = '',
   style,
   disabled,
+  onClick,
   ...props
 }: ButtonProps) {
-  const chitiVariant = variantMap[variant] ?? 'cinematic';
+  const { playPremiumTick } = useHaptic();
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!disabled) {
+      playPremiumTick();
+    }
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   return (
-    <ChitiButton
-      variant={chitiVariant}
-      audioHapticTick={!disabled}
+    <button
       disabled={disabled}
-      style={{ ...sizeStyles[size], ...variantStyleOverrides[variant], ...style }}
+      onClick={handleClick}
+      style={{
+        fontFamily: 'Inter, sans-serif',
+        fontWeight: 600,
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        border: 'none',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '8px',
+        textDecoration: 'none',
+        outline: 'none',
+        ...sizeStyles[size],
+        ...variantStyleOverrides[variant],
+        ...style,
+      }}
       className={`font-bold flex items-center justify-center active:scale-[0.98] transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
       {...props}
     >
       {children}
-    </ChitiButton>
+    </button>
   );
 }

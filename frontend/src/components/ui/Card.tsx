@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-import { ChitiCard } from '@chiti/ui';
 
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   variant?: 'default' | 'editorial' | 'flat';
   tilt?: boolean;
+  style?: React.CSSProperties;
 }
 
 // Elevation per variant — matches Chiti Bazaar shadow-card / shadow-elevated tokens.
@@ -22,6 +22,10 @@ const variantShadow: Record<'default' | 'editorial' | 'flat', React.CSSPropertie
 const obsidianSurface: React.CSSProperties = {
   background: '#121812',
   border: '1px solid rgba(34, 197, 94, 0.15)',
+  borderRadius: '12px',
+  padding: '24px',
+  position: 'relative',
+  overflow: 'hidden',
 };
 
 export default function Card({
@@ -30,15 +34,20 @@ export default function Card({
   onClick,
   variant = 'default',
   tilt = false,
+  style = {},
 }: CardProps) {
   return (
-    <ChitiCard
-      tilt={tilt}
+    <div
       onClick={onClick}
       className={`transition-all duration-300 ease-out ${onClick ? 'cursor-pointer active:scale-[0.98]' : ''} ${className}`}
-      style={{ ...obsidianSurface, ...variantShadow[variant] }}
+      style={{
+        ...obsidianSurface,
+        ...variantShadow[variant],
+        transition: tilt ? 'transform 0.3s ease' : 'none',
+        ...style,
+      }}
     >
       {children}
-    </ChitiCard>
+    </div>
   );
 }

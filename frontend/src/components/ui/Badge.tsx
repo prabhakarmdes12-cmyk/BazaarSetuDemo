@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { ChitiBadge } from '@chiti/ui';
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -32,11 +31,10 @@ export default function Badge({
 }: BadgeProps) {
   const chitiVariant = variantMap[variant] ?? 'success';
   return (
-    <ChitiBadge
-      variant={chitiVariant}
-      className={`backdrop-blur-md ${uppercase ? 'uppercase tracking-wider' : ''} ${className}`}
+    <span
+      className={`c-badge ${chitiVariant} backdrop-blur-md ${uppercase ? 'uppercase tracking-wider' : ''} ${className}`}
     >
       {children}
-    </ChitiBadge>
+    </span>
   );
 }
