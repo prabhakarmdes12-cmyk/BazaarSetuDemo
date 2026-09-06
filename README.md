@@ -17,7 +17,7 @@ While national quick-commerce players (Blinkit, Zepto, Instamart) rely on high-b
 3. **🎙️ Paaska Sahayak (Voice Parchi)**: Multilingual conversational ordering allowing customers to speak their shopping lists in Hindi/Hinglish (*"Bhaiya, do packet doodh, aadha kilo chini aur das wali Maggi"*).
 4. **📞 Chiti Connect Dukaan Hotline**: Direct, 1-tap encrypted in-app calling connecting the shopper straight to the shop counter with an emerald 21-bar live audio visualizer and zero mobile number exposure.
 5. **📢 Merchant Audio Dispatch**: Ear-piercing two-tone urgency earcons and spoken Hinglish order summaries (*"Naya order! Ramesh ji ne 4 items mangwaye hain"*) cutting through noisy shopfronts.
-6. **📸 Studio-Grade Master Product Catalog**: 256 verified 600x600 studio pack shots on `#F8FAFC` sweep mapping to 552 SKUs across 22 categories with zero visual misattribution.
+6. **📸 Studio-Grade Master Product Catalog**: 326 verified 600x600 studio pack shots on `#F8FAFC` sweep mapping to 752 SKUs across 26 categories (0% categories: 0) with zero visual misattribution.
 7. **📒 Digital Khata (Udhaar)**: Transparent community credit ledger with one-tap WhatsApp payment balance reminders.
 
 ---

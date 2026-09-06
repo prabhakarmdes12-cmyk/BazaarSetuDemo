@@ -77,6 +77,14 @@ Before committing or pushing any change to `main` or `production`, all of the fo
 - **WP4 (Audio Dispatch)**: Implemented Web Audio 2-tone urgency earcon (880/1320 Hz) and spoken Hinglish order summaries for noisy merchant environments.
 - Added comprehensive E2E test suite `pilot.voice-and-radar.test.ts` (all 58 tests passing).
 
+
+### 2026-09-06 — Sprint 10: Batch 6 Catalog Completion (326 Assets / 752 SKUs)
+- Completed Batch 6 across the final 4 zero-coverage categories (Pet, Electronics, Beauty, Stationery).
+- Total studio pack shots increased to **326 shots covering 752 SKUs** across all 26 categories.
+- Zero-coverage categories eliminated (**0% categories: 0**).
+- Re-seeded `dev.db` with updated SKU image mappings for Bighi Brothers Mart.
+- Verified backend test suite (58/58 passing) and Next.js production build (32/32 routes compiled clean).
+
 ### 2026-09-06 — Sprint 9: Batch 5 Catalog Completion & Production Deployment
 - Completed Batch 5 covering Fresh Meat, Chocolates, Frozen Desserts, Spreads, Instant Mixes, Tea & Health Drinks, and Biscuit varieties.
 - Repository reached **256 studio pack shots covering 552 SKUs across 22 categories (0 orphans, all 600x600)**.
