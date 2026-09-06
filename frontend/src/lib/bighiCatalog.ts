@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 812 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 830 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28047,7 +28047,25 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00126": "/catalog/items/vegetables/green-peas-matar.jpg",
   "bb-00127": "/catalog/items/vegetables/green-peas-matar.jpg",
   "bb-00086": "/catalog/items/vegetables/beetroot.jpg",
-  "bb-00087": "/catalog/items/vegetables/beetroot.jpg"
+  "bb-00087": "/catalog/items/vegetables/beetroot.jpg",
+  "bb-00141": "/catalog/items/vegetables/ridge-gourd-torai.jpg",
+  "bb-00142": "/catalog/items/vegetables/ridge-gourd-torai.jpg",
+  "bb-00135": "/catalog/items/vegetables/pumpkin-kaddu.jpg",
+  "bb-00136": "/catalog/items/vegetables/pumpkin-kaddu.jpg",
+  "bb-00112": "/catalog/items/vegetables/drumstick-sahjan.jpg",
+  "bb-00113": "/catalog/items/vegetables/drumstick-sahjan.jpg",
+  "bb-00114": "/catalog/items/vegetables/french-beans.jpg",
+  "bb-00115": "/catalog/items/vegetables/french-beans.jpg",
+  "bb-00143": "/catalog/items/vegetables/sweet-corn.jpg",
+  "bb-00144": "/catalog/items/vegetables/sweet-corn.jpg",
+  "bb-00124": "/catalog/items/vegetables/green-chilli.jpg",
+  "bb-00125": "/catalog/items/vegetables/green-chilli.jpg",
+  "bb-00107": "/catalog/items/vegetables/curry-leaves-bunch.jpg",
+  "bb-00111": "/catalog/items/vegetables/button-mushroom-200g.jpg",
+  "bb-00132": "/catalog/items/vegetables/button-mushroom-200g.jpg",
+  "bb-00134": "/catalog/items/vegetables/palak-spinach-500g.jpg",
+  "bb-00140": "/catalog/items/vegetables/red-onion-5kg-sack.jpg",
+  "bb-00139": "/catalog/items/vegetables/red-onion-5kg-sack.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);

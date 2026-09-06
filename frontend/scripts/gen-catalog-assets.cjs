@@ -905,6 +905,25 @@ const SKU_ASSET_ROWS = [
   ['vegetables', "Green Peas / Matar", "500 g", 'vegetables/green-peas-matar.jpg'],
   ['vegetables', "Beetroot", "500 g", 'vegetables/beetroot.jpg'],
   ['vegetables', "Beetroot", "1 kg", 'vegetables/beetroot.jpg'],
+  // Batch 8: loose produce completion
+  ['vegetables', "Ridge Gourd / Torai", "500 g", 'vegetables/ridge-gourd-torai.jpg'],
+  ['vegetables', "Ridge Gourd / Torai", "1 kg", 'vegetables/ridge-gourd-torai.jpg'],
+  ['vegetables', "Pumpkin / Kaddu", "500 g", 'vegetables/pumpkin-kaddu.jpg'],
+  ['vegetables', "Pumpkin / Kaddu", "1 kg", 'vegetables/pumpkin-kaddu.jpg'],
+  ['vegetables', "Drumstick / Sahjan", "250 g", 'vegetables/drumstick-sahjan.jpg'],
+  ['vegetables', "Drumstick / Sahjan", "500 g", 'vegetables/drumstick-sahjan.jpg'],
+  ['vegetables', "French Beans", "250 g", 'vegetables/french-beans.jpg'],
+  ['vegetables', "French Beans", "500 g", 'vegetables/french-beans.jpg'],
+  ['vegetables', "Sweet Corn", "1 pc", 'vegetables/sweet-corn.jpg'],
+  ['vegetables', "Sweet Corn", "2 pcs", 'vegetables/sweet-corn.jpg'],
+  ['vegetables', "Green Chilli", "100 g", 'vegetables/green-chilli.jpg'],
+  ['vegetables', "Green Chilli", "250 g", 'vegetables/green-chilli.jpg'],
+  ['vegetables', "Curry Leaves", "1 bunch", 'vegetables/curry-leaves-bunch.jpg'],
+  ['vegetables', "Dole Fresh Button Mushroom", "200 g pack", 'vegetables/button-mushroom-200g.jpg'],
+  ['vegetables', "Local Farm Button Mushroom", "200 g pack", 'vegetables/button-mushroom-200g.jpg'],
+  ['vegetables', "Palak / Spinach", "500 g", 'vegetables/palak-spinach-500g.jpg'],
+  ['vegetables', "Red Onion", "5 kg sack", 'vegetables/red-onion-5kg-sack.jpg'],
+  ['vegetables', "Red Onion", "2 kg", 'vegetables/red-onion-5kg-sack.jpg'],
 ];
 
 const EXPECTED_PX = 600;

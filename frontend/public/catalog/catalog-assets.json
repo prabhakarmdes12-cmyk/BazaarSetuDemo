@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 346,
-  "totalSkus": 812,
+  "totalAssets": 356,
+  "totalSkus": 830,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -8941,6 +8941,204 @@
       "width": 600,
       "height": 600,
       "bytes": 49710,
+      "verified": true
+    },
+    "bb-00141": {
+      "skuId": "bb-00141",
+      "name": "Ridge Gourd / Torai",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/ridge-gourd-torai.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50094,
+      "verified": true
+    },
+    "bb-00142": {
+      "skuId": "bb-00142",
+      "name": "Ridge Gourd / Torai",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/ridge-gourd-torai.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50094,
+      "verified": true
+    },
+    "bb-00135": {
+      "skuId": "bb-00135",
+      "name": "Pumpkin / Kaddu",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/pumpkin-kaddu.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46539,
+      "verified": true
+    },
+    "bb-00136": {
+      "skuId": "bb-00136",
+      "name": "Pumpkin / Kaddu",
+      "unit": "1 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/pumpkin-kaddu.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 46539,
+      "verified": true
+    },
+    "bb-00112": {
+      "skuId": "bb-00112",
+      "name": "Drumstick / Sahjan",
+      "unit": "250 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/drumstick-sahjan.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39093,
+      "verified": true
+    },
+    "bb-00113": {
+      "skuId": "bb-00113",
+      "name": "Drumstick / Sahjan",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/drumstick-sahjan.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39093,
+      "verified": true
+    },
+    "bb-00114": {
+      "skuId": "bb-00114",
+      "name": "French Beans",
+      "unit": "250 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/french-beans.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 40683,
+      "verified": true
+    },
+    "bb-00115": {
+      "skuId": "bb-00115",
+      "name": "French Beans",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/french-beans.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 40683,
+      "verified": true
+    },
+    "bb-00143": {
+      "skuId": "bb-00143",
+      "name": "Sweet Corn",
+      "unit": "1 pc",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/sweet-corn.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42934,
+      "verified": true
+    },
+    "bb-00144": {
+      "skuId": "bb-00144",
+      "name": "Sweet Corn",
+      "unit": "2 pcs",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/sweet-corn.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 42934,
+      "verified": true
+    },
+    "bb-00124": {
+      "skuId": "bb-00124",
+      "name": "Green Chilli",
+      "unit": "100 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/green-chilli.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 32699,
+      "verified": true
+    },
+    "bb-00125": {
+      "skuId": "bb-00125",
+      "name": "Green Chilli",
+      "unit": "250 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/green-chilli.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 32699,
+      "verified": true
+    },
+    "bb-00107": {
+      "skuId": "bb-00107",
+      "name": "Curry Leaves",
+      "unit": "1 bunch",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/curry-leaves-bunch.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 61199,
+      "verified": true
+    },
+    "bb-00111": {
+      "skuId": "bb-00111",
+      "name": "Dole Fresh Button Mushroom",
+      "unit": "200 g pack",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/button-mushroom-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37011,
+      "verified": true
+    },
+    "bb-00132": {
+      "skuId": "bb-00132",
+      "name": "Local Farm Button Mushroom",
+      "unit": "200 g pack",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/button-mushroom-200g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 37011,
+      "verified": true
+    },
+    "bb-00134": {
+      "skuId": "bb-00134",
+      "name": "Palak / Spinach",
+      "unit": "500 g",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/palak-spinach-500g.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 75818,
+      "verified": true
+    },
+    "bb-00140": {
+      "skuId": "bb-00140",
+      "name": "Red Onion",
+      "unit": "5 kg sack",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/red-onion-5kg-sack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 90254,
+      "verified": true
+    },
+    "bb-00139": {
+      "skuId": "bb-00139",
+      "name": "Red Onion",
+      "unit": "2 kg",
+      "categoryId": "vegetables",
+      "path": "/catalog/items/vegetables/red-onion-5kg-sack.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 90254,
       "verified": true
     }
   }
