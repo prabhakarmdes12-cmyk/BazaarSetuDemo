@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 1011 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 1056 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28246,7 +28246,52 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01070": "/catalog/items/household/aluminium-foil-25m.jpg",
   "bb-01121": "/catalog/items/household/aluminium-foil-25m.jpg",
   "bb-01083": "/catalog/items/household/broom-phool-jhadu.jpg",
-  "bb-01087": "/catalog/items/household/broom-phool-jhadu.jpg"
+  "bb-01087": "/catalog/items/household/broom-phool-jhadu.jpg",
+  "bb-01093": "/catalog/items/household/room-freshener-gel-pack.jpg",
+  "bb-01024": "/catalog/items/household/room-freshener-gel-pack.jpg",
+  "bb-01057": "/catalog/items/household/room-freshener-gel-pack.jpg",
+  "bb-01123": "/catalog/items/household/detergent-washing-bar-250g.jpg",
+  "bb-01155": "/catalog/items/household/detergent-washing-bar-250g.jpg",
+  "bb-01089": "/catalog/items/household/detergent-washing-bar-250g.jpg",
+  "bb-01038": "/catalog/items/household/fabric-conditioner-220ml.jpg",
+  "bb-01045": "/catalog/items/household/fabric-conditioner-220ml.jpg",
+  "bb-01104": "/catalog/items/household/tissue-paper-box-4pack.jpg",
+  "bb-01111": "/catalog/items/household/tissue-paper-box-4pack.jpg",
+  "bb-01101": "/catalog/items/household/kitchen-towel-roll-4pack.jpg",
+  "bb-01108": "/catalog/items/household/kitchen-towel-roll-4pack.jpg",
+  "bb-01085": "/catalog/items/household/garbage-bags-30.jpg",
+  "bb-01164": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01166": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01189": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01191": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01283": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01285": "/catalog/items/personal/hair-oil-100ml.jpg",
+  "bb-01160": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01161": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01216": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01217": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01220": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01221": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01264": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01265": "/catalog/items/personal/deodorant-spray-150ml.jpg",
+  "bb-01261": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01262": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01335": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01336": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01280": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01281": "/catalog/items/personal/body-lotion-250ml.jpg",
+  "bb-01225": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01224": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01242": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01241": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01267": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01266": "/catalog/items/personal/facewash-100ml.jpg",
+  "bb-01302": "/catalog/items/personal/talcum-powder-100g.jpg",
+  "bb-01303": "/catalog/items/personal/talcum-powder-100g.jpg",
+  "bb-01193": "/catalog/items/personal/talcum-powder-100g.jpg",
+  "bb-01194": "/catalog/items/personal/talcum-powder-100g.jpg",
+  "bb-01341": "/catalog/items/personal/talcum-powder-100g.jpg",
+  "bb-01342": "/catalog/items/personal/talcum-powder-100g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
