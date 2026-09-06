@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 896 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 928 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -28131,7 +28131,39 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-00171": "/catalog/items/fruits/robusta-banana-1kg.jpg",
   "bb-00174": "/catalog/items/fruits/green-grapes-500g.jpg",
   "bb-00175": "/catalog/items/fruits/shimla-apple-1kg.jpg",
-  "bb-00177": "/catalog/items/fruits/shimla-apple-1kg.jpg"
+  "bb-00177": "/catalog/items/fruits/shimla-apple-1kg.jpg",
+  "bb-01606": "/catalog/items/frozen/chocolate-ice-cream-tub-700ml.jpg",
+  "bb-01607": "/catalog/items/frozen/chocolate-ice-cream-tub-700ml.jpg",
+  "bb-01626": "/catalog/items/frozen/chocolate-ice-cream-tub-700ml.jpg",
+  "bb-01627": "/catalog/items/frozen/chocolate-ice-cream-tub-700ml.jpg",
+  "bb-01608": "/catalog/items/frozen/cornetto-cone-single.jpg",
+  "bb-01609": "/catalog/items/frozen/cornetto-cone-single.jpg",
+  "bb-01628": "/catalog/items/frozen/cornetto-cone-single.jpg",
+  "bb-01629": "/catalog/items/frozen/cornetto-cone-single.jpg",
+  "bb-01610": "/catalog/items/frozen/kulfi-sticks-4pack.jpg",
+  "bb-01654": "/catalog/items/frozen/kulfi-sticks-4pack.jpg",
+  "bb-01614": "/catalog/items/frozen/chicken-nuggets-400g.jpg",
+  "bb-01644": "/catalog/items/frozen/chicken-nuggets-400g.jpg",
+  "bb-01655": "/catalog/items/frozen/chicken-nuggets-400g.jpg",
+  "bb-01620": "/catalog/items/frozen/veg-nuggets-400g.jpg",
+  "bb-01637": "/catalog/items/frozen/veg-nuggets-400g.jpg",
+  "bb-01615": "/catalog/items/frozen/chicken-seekh-kebab-400g.jpg",
+  "bb-01645": "/catalog/items/frozen/chicken-seekh-kebab-400g.jpg",
+  "bb-01636": "/catalog/items/frozen/smiley-potato-bites-415g.jpg",
+  "bb-01658": "/catalog/items/frozen/smiley-potato-bites-415g.jpg",
+  "bb-01621": "/catalog/items/frozen/malabar-paratha-400g.jpg",
+  "bb-01639": "/catalog/items/frozen/malabar-paratha-400g.jpg",
+  "bb-01652": "/catalog/items/frozen/malabar-paratha-400g.jpg",
+  "bb-01622": "/catalog/items/frozen/whole-wheat-chapati-30pcs.jpg",
+  "bb-01640": "/catalog/items/frozen/whole-wheat-chapati-30pcs.jpg",
+  "bb-01638": "/catalog/items/frozen/paneer-cubes-500g.jpg",
+  "bb-01650": "/catalog/items/frozen/paneer-cubes-500g.jpg",
+  "bb-01648": "/catalog/items/frozen/green-peas-frozen-500g.jpg",
+  "bb-01617": "/catalog/items/frozen/green-peas-frozen-500g.jpg",
+  "bb-01634": "/catalog/items/frozen/french-fries-frozen-400g.jpg",
+  "bb-01635": "/catalog/items/frozen/french-fries-frozen-400g.jpg",
+  "bb-01624": "/catalog/items/frozen/french-fries-frozen-400g.jpg",
+  "bb-01625": "/catalog/items/frozen/french-fries-frozen-400g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
