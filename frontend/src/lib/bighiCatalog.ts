@@ -29224,7 +29224,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 1207 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 1262 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -30434,7 +30434,62 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-01353": "/catalog/items/personal/gillette-presto-razor-5-pack.jpg",
   "bb-01352": "/catalog/items/personal/razor-cartridge-4pack.jpg",
   "bb-01282": "/catalog/items/personal/razor-cartridge-4pack.jpg",
-  "bb-01355": "/catalog/items/personal/razor-cartridge-4pack.jpg"
+  "bb-01355": "/catalog/items/personal/razor-cartridge-4pack.jpg",
+  "bb-00503": "/catalog/items/oils/haldi-turmeric-powder-100g.jpg",
+  "bb-00505": "/catalog/items/oils/haldi-turmeric-powder-100g.jpg",
+  "bb-00373": "/catalog/items/oils/haldi-turmeric-powder-100g.jpg",
+  "bb-00375": "/catalog/items/oils/haldi-turmeric-powder-100g.jpg",
+  "bb-00495": "/catalog/items/oils/deggi-mirch-chilli-powder-100g.jpg",
+  "bb-00497": "/catalog/items/oils/deggi-mirch-chilli-powder-100g.jpg",
+  "bb-00391": "/catalog/items/oils/deggi-mirch-chilli-powder-100g.jpg",
+  "bb-00393": "/catalog/items/oils/deggi-mirch-chilli-powder-100g.jpg",
+  "bb-00462": "/catalog/items/oils/deggi-mirch-chilli-powder-100g.jpg",
+  "bb-00464": "/catalog/items/oils/deggi-mirch-chilli-powder-100g.jpg",
+  "bb-00498": "/catalog/items/oils/dhania-coriander-powder-100g.jpg",
+  "bb-00500": "/catalog/items/oils/dhania-coriander-powder-100g.jpg",
+  "bb-00394": "/catalog/items/oils/dhania-coriander-powder-100g.jpg",
+  "bb-00396": "/catalog/items/oils/dhania-coriander-powder-100g.jpg",
+  "bb-00465": "/catalog/items/oils/dhania-coriander-powder-100g.jpg",
+  "bb-00467": "/catalog/items/oils/dhania-coriander-powder-100g.jpg",
+  "bb-00506": "/catalog/items/oils/jeera-cumin-seeds-100g.jpg",
+  "bb-00507": "/catalog/items/oils/jeera-cumin-seeds-100g.jpg",
+  "bb-00399": "/catalog/items/oils/jeera-cumin-seeds-100g.jpg",
+  "bb-00400": "/catalog/items/oils/jeera-cumin-seeds-100g.jpg",
+  "bb-00489": "/catalog/items/oils/black-pepper-powder-100g.jpg",
+  "bb-00490": "/catalog/items/oils/black-pepper-powder-100g.jpg",
+  "bb-00387": "/catalog/items/oils/black-pepper-powder-100g.jpg",
+  "bb-00388": "/catalog/items/oils/black-pepper-powder-100g.jpg",
+  "bb-00541": "/catalog/items/oils/black-pepper-powder-100g.jpg",
+  "bb-00542": "/catalog/items/oils/black-pepper-powder-100g.jpg",
+  "bb-00493": "/catalog/items/oils/chat-masala-100g.jpg",
+  "bb-00494": "/catalog/items/oils/chat-masala-100g.jpg",
+  "bb-00389": "/catalog/items/oils/chat-masala-100g.jpg",
+  "bb-00390": "/catalog/items/oils/chat-masala-100g.jpg",
+  "bb-00460": "/catalog/items/oils/chat-masala-100g.jpg",
+  "bb-00461": "/catalog/items/oils/chat-masala-100g.jpg",
+  "bb-00502": "/catalog/items/oils/garam-masala-200g.jpg",
+  "bb-00398": "/catalog/items/oils/garam-masala-200g.jpg",
+  "bb-00469": "/catalog/items/oils/garam-masala-200g.jpg",
+  "bb-00384": "/catalog/items/oils/extra-virgin-olive-oil-1l.jpg",
+  "bb-00383": "/catalog/items/oils/extra-virgin-olive-oil-1l.jpg",
+  "bb-00386": "/catalog/items/oils/extra-virgin-olive-oil-1l.jpg",
+  "bb-00385": "/catalog/items/oils/extra-virgin-olive-oil-1l.jpg",
+  "bb-00475": "/catalog/items/oils/extra-virgin-olive-oil-1l.jpg",
+  "bb-00474": "/catalog/items/oils/extra-virgin-olive-oil-1l.jpg",
+  "bb-00476": "/catalog/items/oils/groundnut-oil-1l.jpg",
+  "bb-00371": "/catalog/items/oils/groundnut-oil-1l.jpg",
+  "bb-00528": "/catalog/items/oils/groundnut-oil-1l.jpg",
+  "bb-00402": "/catalog/items/oils/vanaspati-1l.jpg",
+  "bb-00401": "/catalog/items/oils/vanaspati-1l.jpg",
+  "bb-00534": "/catalog/items/oils/vanaspati-1l.jpg",
+  "bb-00533": "/catalog/items/oils/vanaspati-1l.jpg",
+  "bb-00404": "/catalog/items/oils/kachi-ghani-mustard-oil-1l.jpg",
+  "bb-00531": "/catalog/items/oils/kachi-ghani-mustard-oil-1l.jpg",
+  "bb-00455": "/catalog/items/oils/kachi-ghani-mustard-oil-1l.jpg",
+  "bb-00407": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg",
+  "bb-00538": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg",
+  "bb-00520": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg",
+  "bb-00486": "/catalog/items/oils/fortune-sunflower-oil-1l.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
