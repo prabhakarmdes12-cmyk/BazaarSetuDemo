@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 752 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 791 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27987,7 +27987,46 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-02176": "/catalog/items/electronics/mobile-stand-holder.jpg",
   "bb-02190": "/catalog/items/electronics/mobile-stand-holder.jpg",
   "bb-02177": "/catalog/items/electronics/otg-adapter.jpg",
-  "bb-02191": "/catalog/items/electronics/otg-adapter.jpg"
+  "bb-02191": "/catalog/items/electronics/otg-adapter.jpg",
+  "bb-00061": "/catalog/items/dairy/fresh-toned-milk-500ml-pouch.jpg",
+  "bb-00062": "/catalog/items/dairy/fresh-toned-milk-500ml-pouch.jpg",
+  "bb-00072": "/catalog/items/dairy/fresh-toned-milk-500ml-pouch.jpg",
+  "bb-00073": "/catalog/items/dairy/fresh-toned-milk-500ml-pouch.jpg",
+  "bb-00033": "/catalog/items/dairy/fresh-toned-milk-500ml-pouch.jpg",
+  "bb-00034": "/catalog/items/dairy/fresh-toned-milk-500ml-pouch.jpg",
+  "bb-00023": "/catalog/items/dairy/fresh-toned-milk-500ml-pouch.jpg",
+  "bb-00045": "/catalog/items/dairy/fresh-farm-eggs-6pcs.jpg",
+  "bb-00046": "/catalog/items/dairy/fresh-farm-eggs-6pcs.jpg",
+  "bb-00080": "/catalog/items/dairy/fresh-farm-eggs-6pcs.jpg",
+  "bb-00081": "/catalog/items/dairy/fresh-farm-eggs-6pcs.jpg",
+  "bb-00083": "/catalog/items/dairy/fresh-farm-eggs-6pcs.jpg",
+  "bb-00084": "/catalog/items/dairy/fresh-farm-eggs-6pcs.jpg",
+  "bb-00005": "/catalog/items/dairy/cheese-block-200g.jpg",
+  "bb-00026": "/catalog/items/dairy/cheese-block-200g.jpg",
+  "bb-01773": "/catalog/items/pharma/chyawanprash-500g.jpg",
+  "bb-01756": "/catalog/items/pharma/chyawanprash-500g.jpg",
+  "bb-01833": "/catalog/items/pharma/chyawanprash-500g.jpg",
+  "bb-01760": "/catalog/items/pharma/cough-syrup-100ml.jpg",
+  "bb-01775": "/catalog/items/pharma/cough-syrup-100ml.jpg",
+  "bb-01814": "/catalog/items/pharma/cough-syrup-100ml.jpg",
+  "bb-01764": "/catalog/items/pharma/antiseptic-cream-20g.jpg",
+  "bb-01762": "/catalog/items/pharma/antiseptic-cream-20g.jpg",
+  "bb-01844": "/catalog/items/pharma/antiseptic-cream-20g.jpg",
+  "bb-01787": "/catalog/items/pharma/antacid-tablets-strip.jpg",
+  "bb-01800": "/catalog/items/pharma/antacid-tablets-strip.jpg",
+  "bb-01807": "/catalog/items/pharma/antacid-tablets-strip.jpg",
+  "bb-00227": "/catalog/items/staples/sona-masoori-rice-5kg.jpg",
+  "bb-00244": "/catalog/items/staples/sona-masoori-rice-5kg.jpg",
+  "bb-00254": "/catalog/items/staples/sona-masoori-rice-5kg.jpg",
+  "bb-00226": "/catalog/items/staples/sona-masoori-rice-5kg.jpg",
+  "bb-00243": "/catalog/items/staples/sona-masoori-rice-5kg.jpg",
+  "bb-00253": "/catalog/items/staples/sona-masoori-rice-5kg.jpg",
+  "bb-00197": "/catalog/items/staples/sharbati-wheat-atta-5kg.jpg",
+  "bb-00224": "/catalog/items/staples/sharbati-wheat-atta-5kg.jpg",
+  "bb-00256": "/catalog/items/staples/sharbati-wheat-atta-5kg.jpg",
+  "bb-01646": "/catalog/items/frozen/veg-momos-frozen-500g.jpg",
+  "bb-01653": "/catalog/items/frozen/veg-momos-frozen-500g.jpg",
+  "bb-01657": "/catalog/items/frozen/veg-momos-frozen-500g.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
