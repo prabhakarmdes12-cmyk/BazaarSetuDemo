@@ -8,6 +8,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  },
   images: {
     // Images come from user uploads / remote CDNs with unpredictable hosts.
     // Served as-is; no optimizer network calls needed.

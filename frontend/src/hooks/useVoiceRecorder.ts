@@ -298,7 +298,7 @@ export function useVoiceRecorder(options: UseVoiceRecorderOptions = {}) {
     }, maxDurationMs);
 
     return true;
-  }, [isRecording, maxDurationMs, raise, sampleRate, startMeter, startSpeechRecognition]);
+  }, [isRecording, maxDurationMs, raise, sampleRate, startMeter, startSpeechRecognition, teardown]);
 
   const stopRecording = useCallback((): Promise<VoiceRecorderResult | null> => {
     const recorder = recorderRef.current;
