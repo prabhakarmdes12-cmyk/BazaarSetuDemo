@@ -8,8 +8,8 @@
     "background": "#F8FAFC studio sweep with contact shadow",
     "root": "/catalog/items/[category]/[sku-slug].jpg"
   },
-  "totalAssets": 286,
-  "totalSkus": 645,
+  "totalAssets": 296,
+  "totalSkus": 670,
   "items": {
     "bb-00022": {
       "skuId": "bb-00022",
@@ -7104,6 +7104,281 @@
       "width": 600,
       "height": 600,
       "bytes": 46580,
+      "verified": true
+    },
+    "bb-02164": {
+      "skuId": "bb-02164",
+      "name": "boAt Tempered Glass Screen Guard",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39453,
+      "verified": true
+    },
+    "bb-02165": {
+      "skuId": "bb-02165",
+      "name": "boAt Tempered Glass Screen Guard",
+      "unit": "2 pack",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39453,
+      "verified": true
+    },
+    "bb-02178": {
+      "skuId": "bb-02178",
+      "name": "Local Tempered Glass Screen Guard",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39453,
+      "verified": true
+    },
+    "bb-02179": {
+      "skuId": "bb-02179",
+      "name": "Local Tempered Glass Screen Guard",
+      "unit": "2 pack",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 39453,
+      "verified": true
+    },
+    "bb-02163": {
+      "skuId": "bb-02163",
+      "name": "boAt Power Bank 10000mAh",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/power-bank-10000mah.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34023,
+      "verified": true
+    },
+    "bb-02183": {
+      "skuId": "bb-02183",
+      "name": "Mi Power Bank 10000mAh",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/power-bank-10000mah.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34023,
+      "verified": true
+    },
+    "bb-02157": {
+      "skuId": "bb-02157",
+      "name": "Ambrane Power Bank 10000mAh",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/power-bank-10000mah.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34023,
+      "verified": true
+    },
+    "bb-02158": {
+      "skuId": "bb-02158",
+      "name": "boAt Bluetooth Neckband",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/bluetooth-neckband.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48837,
+      "verified": true
+    },
+    "bb-02186": {
+      "skuId": "bb-02186",
+      "name": "Noise Bluetooth Neckband",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/bluetooth-neckband.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48837,
+      "verified": true
+    },
+    "bb-02194": {
+      "skuId": "bb-02194",
+      "name": "Realme Bluetooth Neckband",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/bluetooth-neckband.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 48837,
+      "verified": true
+    },
+    "bb-02166": {
+      "skuId": "bb-02166",
+      "name": "boAt TWS Earbuds",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/tws-earbuds.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34702,
+      "verified": true
+    },
+    "bb-02187": {
+      "skuId": "bb-02187",
+      "name": "Noise TWS Earbuds",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/tws-earbuds.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34702,
+      "verified": true
+    },
+    "bb-02195": {
+      "skuId": "bb-02195",
+      "name": "Realme TWS Earbuds",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/tws-earbuds.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34702,
+      "verified": true
+    },
+    "bb-02159": {
+      "skuId": "bb-02159",
+      "name": "boAt Bluetooth Speaker",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/bluetooth-speaker.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50139,
+      "verified": true
+    },
+    "bb-02173": {
+      "skuId": "bb-02173",
+      "name": "JBL Bluetooth Speaker",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/bluetooth-speaker.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 50139,
+      "verified": true
+    },
+    "bb-02162": {
+      "skuId": "bb-02162",
+      "name": "boAt Micro USB Cable",
+      "unit": "1 m",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/micro-usb-cable-1m.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 35655,
+      "verified": true
+    },
+    "bb-02182": {
+      "skuId": "bb-02182",
+      "name": "Mi Micro USB Cable",
+      "unit": "1 m",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/micro-usb-cable-1m.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 35655,
+      "verified": true
+    },
+    "bb-02161": {
+      "skuId": "bb-02161",
+      "name": "boAt Lightning Cable",
+      "unit": "1 m",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/lightning-cable-1m.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 33925,
+      "verified": true
+    },
+    "bb-02189": {
+      "skuId": "bb-02189",
+      "name": "Portronics Lightning Cable",
+      "unit": "1 m",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/lightning-cable-1m.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 33925,
+      "verified": true
+    },
+    "bb-02170": {
+      "skuId": "bb-02170",
+      "name": "Eveready Emergency LED Light",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/emergency-led-light.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34840,
+      "verified": true
+    },
+    "bb-02200": {
+      "skuId": "bb-02200",
+      "name": "Syska Emergency LED Light",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/emergency-led-light.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 34840,
+      "verified": true
+    },
+    "bb-02171": {
+      "skuId": "bb-02171",
+      "name": "Eveready Rechargeable Torch",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/rechargeable-torch.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 26899,
+      "verified": true
+    },
+    "bb-02201": {
+      "skuId": "bb-02201",
+      "name": "Syska Rechargeable Torch",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/rechargeable-torch.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 26899,
+      "verified": true
+    },
+    "bb-02156": {
+      "skuId": "bb-02156",
+      "name": "Ajanta Wall Clock",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/wall-clock.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 28570,
+      "verified": true
+    },
+    "bb-02180": {
+      "skuId": "bb-02180",
+      "name": "Local Wall Clock",
+      "unit": "1 pc",
+      "categoryId": "electronics",
+      "path": "/catalog/items/electronics/wall-clock.jpg",
+      "width": 600,
+      "height": 600,
+      "bytes": 28570,
       "verified": true
     }
   }

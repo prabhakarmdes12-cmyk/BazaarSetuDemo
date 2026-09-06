@@ -27232,7 +27232,7 @@ export const BIGHI_CATEGORY_IMAGES: Record<string, string> = {
 /**
  * Per-SKU studio pack shots from the Central Product Asset Repository
  * (600x600, /catalog/items/[category]/[sku-slug].jpg). Sourced from the
- * verified manifest public/catalog/catalog-assets.json — 645 SKUs in batch 1.
+ * verified manifest public/catalog/catalog-assets.json — 670 SKUs in batch 1.
  * Takes precedence over the category photo.
  */
 export const BIGHI_SKU_IMAGES: Record<string, string> = {
@@ -27880,7 +27880,32 @@ export const BIGHI_SKU_IMAGES: Record<string, string> = {
   "bb-02188": "/catalog/items/electronics/boat-fast-charger-20w.jpg",
   "bb-02169": "/catalog/items/electronics/boat-wired-earphones.jpg",
   "bb-02174": "/catalog/items/electronics/boat-wired-earphones.jpg",
-  "bb-02196": "/catalog/items/electronics/boat-wired-earphones.jpg"
+  "bb-02196": "/catalog/items/electronics/boat-wired-earphones.jpg",
+  "bb-02164": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+  "bb-02165": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+  "bb-02178": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+  "bb-02179": "/catalog/items/electronics/tempered-glass-screen-guard.jpg",
+  "bb-02163": "/catalog/items/electronics/power-bank-10000mah.jpg",
+  "bb-02183": "/catalog/items/electronics/power-bank-10000mah.jpg",
+  "bb-02157": "/catalog/items/electronics/power-bank-10000mah.jpg",
+  "bb-02158": "/catalog/items/electronics/bluetooth-neckband.jpg",
+  "bb-02186": "/catalog/items/electronics/bluetooth-neckband.jpg",
+  "bb-02194": "/catalog/items/electronics/bluetooth-neckband.jpg",
+  "bb-02166": "/catalog/items/electronics/tws-earbuds.jpg",
+  "bb-02187": "/catalog/items/electronics/tws-earbuds.jpg",
+  "bb-02195": "/catalog/items/electronics/tws-earbuds.jpg",
+  "bb-02159": "/catalog/items/electronics/bluetooth-speaker.jpg",
+  "bb-02173": "/catalog/items/electronics/bluetooth-speaker.jpg",
+  "bb-02162": "/catalog/items/electronics/micro-usb-cable-1m.jpg",
+  "bb-02182": "/catalog/items/electronics/micro-usb-cable-1m.jpg",
+  "bb-02161": "/catalog/items/electronics/lightning-cable-1m.jpg",
+  "bb-02189": "/catalog/items/electronics/lightning-cable-1m.jpg",
+  "bb-02170": "/catalog/items/electronics/emergency-led-light.jpg",
+  "bb-02200": "/catalog/items/electronics/emergency-led-light.jpg",
+  "bb-02171": "/catalog/items/electronics/rechargeable-torch.jpg",
+  "bb-02201": "/catalog/items/electronics/rechargeable-torch.jpg",
+  "bb-02156": "/catalog/items/electronics/wall-clock.jpg",
+  "bb-02180": "/catalog/items/electronics/wall-clock.jpg"
 };
 
 const ESSENTIAL_ID_SET = new Set(BIGHI_ESSENTIAL_IDS);
