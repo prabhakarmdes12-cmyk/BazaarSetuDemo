@@ -838,7 +838,32 @@ const SKU_ASSET_ROWS = [
   ['electronics', "Local Mobile Stand Holder", "1 pc", 'electronics/mobile-stand-holder.jpg'],
   ['electronics', "Portronics Mobile Stand Holder", "1 pc", 'electronics/mobile-stand-holder.jpg'],
   ['electronics', "Local OTG Adapter", "1 pc", 'electronics/otg-adapter.jpg'],
-  ['electronics', "Portronics OTG Adapter", "1 pc", 'electronics/otg-adapter.jpg'],
+    ['electronics', "Portronics OTG Adapter", "1 pc", 'electronics/otg-adapter.jpg'],
+
+  // Khula / White-Label High-Velocity Staples
+  ['staples', "Dukaan Fresh Chakki Fresh Atta (Khula)", "5 kg bag", 'staples/chakki-atta-5kg.jpg'],
+  ['staples', "Dukaan Fresh Chakki Fresh Atta (Khula)", "10 kg bag", 'staples/chakki-atta-10kg.jpg'],
+  ['staples', "Dukaan Fresh Desi Arhar / Toor Dal (Khula)", "1 kg", 'staples/toor-arhar-dal-1kg.jpg'],
+  ['staples', "Dukaan Fresh Chana Besan (Khula)", "1 kg", 'staples/besan-gram-flour-1kg.jpg'],
+  ['staples', "Dukaan Fresh Sooji / Rawa (Khula)", "500 g", 'staples/sooji-rawa-500g.jpg'],
+  ['staples', "Dukaan Fresh Clean White Sugar / Cheeni (Khula)", "1 kg", 'staples/madhur-sugar-1kg.jpg'],
+  ['staples', "Dukaan Fresh Usna Chawal / Parboiled Rice (Khula)", "5 kg bag", 'staples/classic-basmati-rice-1kg.jpg'],
+  ['staples', "Dukaan Fresh Chana Sattu Pure (Khula)", "500 g", 'dryfruits/roasted-chana-sattu-500g.jpg'],
+
+  // Khula Mewa & Dry Fruits
+  ['dryfruits', "Dukaan Fresh Kaju Tukda 2-Piece Splits (Khula)", "250 g", 'dryfruits/cashew-kaju-200g.jpg'],
+  ['dryfruits', "Dukaan Fresh Sabut Kaju W320 (Khula)", "250 g", 'dryfruits/cashew-kaju-200g.jpg'],
+  ['dryfruits', "Dukaan Fresh Kismis / Raisins (Khula)", "250 g", 'dryfruits/kishmish-raisins-200g.jpg'],
+  ['dryfruits', "Dukaan Fresh Badaam Giri (Khula)", "250 g", 'dryfruits/almonds-badam-200g.jpg'],
+  ['dryfruits', "Dukaan Fresh Phool Makhana Jumbo (Khula)", "250 g", 'dryfruits/phool-makhana-250g.jpg'],
+
+  // Khula Snacks & Munchies
+  ['munchies', "Dukaan Fresh Chooda / Flattened Rice Medium (Khula)", "500 g", 'dryfruits/poha-chooda-500g.jpg'],
+
+  // Khula Pooja Samagri
+  ['pooja', "Dukaan Fresh Shudh Desi Kapoor (Khula)", "50 g", 'pooja/camphor-tablets-50g.jpg'],
+  ['pooja', "Dukaan Fresh Gol Batti Cotton Wicks (Khula)", "100 pcs", 'pooja/cotton-wicks-100-pack.jpg'],
+  ['pooja', "Dukaan Fresh Hawan Samagri Packet (Khula)", "500 g", 'pooja/hawan-samagri-500g.jpg'],
 ];
 
 const EXPECTED_PX = 600;

@@ -15,9 +15,11 @@ interface ParsedItem {
 }
 
 const SAMPLE_CHIPS = [
+  { label: '🌾 5kg Khula Atta & 1kg Usna Chawal', phrase: '5 kilo khula atta aur 1 kilo usna chawal' },
   { label: '🥛 2 packet Amul milk & bread', phrase: '2 packet doodh aur ek packet bread' },
+  { label: '🥣 Aadha kilo Chana Sattu & Cheeni', phrase: 'aadha kilo chana sattu aur 1 kilo cheeni' },
   { label: '🧅 1kg Pyaaz & 2kg Aalu', phrase: '1 kilo pyaaz aur 2 kilo aalu' },
-  { label: '🍳 Fortune tel & Dettol sabun', phrase: 'Fortune tel aur Dettol sabun' },
+  { label: '🥜 250g Kaju Tukda & Makhana', phrase: '250 gram kaju tukda aur phool makhana' },
 ];
 
 export default function VoiceParchiSandbox() {
@@ -130,6 +132,76 @@ export default function VoiceParchiSandbox() {
         unit: 'pack',
         quantity: 1,
         category: 'Personal Care',
+      });
+    }
+    if (lower.includes('atta') || lower.includes('aata')) {
+      parsed.push({
+        productId: 'bb-00214',
+        name: 'Dukaan Fresh Chakki Fresh Atta (Khula) 5kg',
+        price: 180,
+        unit: '5 kg bag',
+        quantity: lower.includes('10') ? 2 : 1,
+        category: 'Atta, Rice & Dals',
+      });
+    }
+    if (lower.includes('usna') || (lower.includes('chawal') && !lower.includes('kheer'))) {
+      parsed.push({
+        productId: 'bb-00267',
+        name: 'Dukaan Fresh Usna Chawal / Parboiled Rice (Khula) 1kg',
+        price: 46,
+        unit: '1 kg',
+        quantity: lower.includes('5') ? 5 : 1,
+        category: 'Atta, Rice & Dals',
+      });
+    }
+    if (lower.includes('sattu')) {
+      parsed.push({
+        productId: 'bb-00221',
+        name: 'Dukaan Fresh Chana Sattu Pure (Khula) 500g',
+        price: 47,
+        unit: '500 g',
+        quantity: 1,
+        category: 'Atta, Rice & Dals',
+      });
+    }
+    if (lower.includes('kaju')) {
+      parsed.push({
+        productId: 'bb-01796',
+        name: 'Dukaan Fresh Kaju Tukda 2-Piece Splits (Khula) 250g',
+        price: 228,
+        unit: '250 g',
+        quantity: 1,
+        category: 'Dry Fruits & Makhana',
+      });
+    }
+    if (lower.includes('makhana')) {
+      parsed.push({
+        productId: 'bb-01804',
+        name: 'Dukaan Fresh Phool Makhana Jumbo (Khula) 250g',
+        price: 156,
+        unit: '250 g',
+        quantity: 1,
+        category: 'Dry Fruits & Makhana',
+      });
+    }
+    if (lower.includes('cheeni') || lower.includes('chini') || lower.includes('sugar')) {
+      parsed.push({
+        productId: 'bb-00223',
+        name: 'Dukaan Fresh Clean White Sugar / Cheeni (Khula) 1kg',
+        price: 45,
+        unit: '1 kg',
+        quantity: lower.includes('2') || lower.includes('do') ? 2 : 1,
+        category: 'Atta, Rice & Dals',
+      });
+    }
+    if (lower.includes('zeera') || lower.includes('jeera')) {
+      parsed.push({
+        productId: 'bb-00465',
+        name: 'Dukaan Fresh Sabut Jeera / Cumin Seeds (Khula) 100g',
+        price: 73,
+        unit: '100 g',
+        quantity: 1,
+        category: 'Oils, Ghee & Spices',
       });
     }
 
